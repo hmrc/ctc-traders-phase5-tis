@@ -3,7 +3,7 @@ title: Metatypes
 description: Details of the Metatypes
 weight: 999
 ---
-#Metatypes
+#MetaTypes
 ##METATYPE AccessCodeContentType
 ###Properties
 <table class="table width-min-100">
@@ -28,7 +28,7 @@ weight: 999
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -72,7 +72,7 @@ weight: 999
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -121,7 +121,7 @@ weight: 999
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -164,7 +164,7 @@ weight: 999
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaType">
+   <a href="metatypes.html#metatype-alphatype">
     AlphaType
    </a>
   </td>
@@ -212,7 +212,7 @@ weight: 999
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaCapitalType">
+   <a href="metatypes.html#metatype-alphacapitaltype">
     AlphaCapitalType
    </a>
   </td>
@@ -255,7 +255,7 @@ weight: 999
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaType">
+   <a href="metatypes.html#metatype-alphatype">
     AlphaType
    </a>
   </td>
@@ -298,7 +298,7 @@ weight: 999
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaNumType">
+   <a href="metatypes.html#metatype-alphanumtype">
     AlphaNumType
    </a>
   </td>
@@ -341,7 +341,7 @@ weight: 999
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_NCTSProject_templates_AlphanumericCapitalType">
+   <a href="metatypes.html#metatype-alphanumericcapitaltype">
     AlphanumericCapitalType
    </a>
   </td>
@@ -384,7 +384,7 @@ weight: 999
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaNumType">
+   <a href="metatypes.html#metatype-alphanumtype">
     AlphaNumType
    </a>
   </td>
@@ -428,7 +428,7 @@ weight: 999
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -472,7 +472,7 @@ weight: 999
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -515,7 +515,7 @@ weight: 999
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateTimeType">
+   <a href="metatypes.html#metatype-datetimetype">
     DateTimeType
    </a>
   </td>
@@ -558,7 +558,7 @@ weight: 999
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateTimeType">
+   <a href="metatypes.html#metatype-datetimetype">
     DateTimeType
    </a>
   </td>
@@ -601,7 +601,7 @@ weight: 999
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Decimal">
+   <a href="metatypes.html#metatype-decimal">
     Decimal
    </a>
   </td>
@@ -650,7 +650,7 @@ weight: 999
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Decimal">
+   <a href="metatypes.html#metatype-decimal">
     Decimal
    </a>
   </td>
@@ -700,7 +700,7 @@ CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateTimeType">
+   <a href="metatypes.html#metatype-datetimetype">
     DateTimeType
    </a>
   </td>
@@ -743,7 +743,7 @@ CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateTimeType">
+   <a href="metatypes.html#metatype-datetimetype">
     DateTimeType
    </a>
   </td>
@@ -786,7 +786,7 @@ CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -830,7 +830,7 @@ CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -873,7 +873,7 @@ CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdBoolean">
+   <a href="metatypes.html#metatype-xsdboolean">
     XsdBoolean
    </a>
   </td>
@@ -956,7 +956,7 @@ CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -1003,7 +1003,7 @@ CD038C, CD050C, CD115C, CD142C, CD150C, CD151C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_CityType">
+   <a href="metatypes.html#metatype-citytype">
     CityType
    </a>
   </td>
@@ -1047,7 +1047,7 @@ CD038C, CD050C, CD115C, CD142C, CD150C, CD151C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaNumType">
+   <a href="metatypes.html#metatype-alphanumtype">
     AlphaNumType
    </a>
   </td>
@@ -1091,7 +1091,7 @@ CD038C, CD050C, CD115C, CD142C, CD150C, CD151C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -1136,7 +1136,7 @@ CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -1181,7 +1181,7 @@ CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -1225,7 +1225,7 @@ CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Integer">
+   <a href="metatypes.html#metatype-integer">
     Integer
    </a>
   </td>
@@ -1270,7 +1270,7 @@ CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD200C, CD203C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_Alphanumeric_2">
+   <a href="metatypes.html#metatype-alphanumeric_2">
     Alphanumeric_2
    </a>
   </td>
@@ -1313,7 +1313,7 @@ CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD200C, CD203C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_NCTSProject_templates_LanguageCodeType">
+   <a href="metatypes.html#metatype-languagecodetype">
     LanguageCodeType
    </a>
   </td>
@@ -1357,7 +1357,7 @@ CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD200C, CD203C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -1402,7 +1402,7 @@ CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -1446,7 +1446,7 @@ CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaNumType">
+   <a href="metatypes.html#metatype-alphanumtype">
     AlphaNumType
    </a>
   </td>
@@ -1496,7 +1496,7 @@ CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_ContainerIdentificationNumber">
+   <a href="metatypes.html#metatype-containeridentificationnumber">
     ContainerIdentificationNumber
    </a>
   </td>
@@ -1538,7 +1538,7 @@ CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdBoolean">
+   <a href="metatypes.html#metatype-xsdboolean">
     XsdBoolean
    </a>
   </td>
@@ -1581,7 +1581,7 @@ CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Integer">
+   <a href="metatypes.html#metatype-integer">
     Integer
    </a>
   </td>
@@ -1625,7 +1625,7 @@ CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -1669,7 +1669,7 @@ CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateTimeType">
+   <a href="metatypes.html#metatype-datetimetype">
     DateTimeType
    </a>
   </td>
@@ -1711,7 +1711,7 @@ CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaNumType">
+   <a href="metatypes.html#metatype-alphanumtype">
     AlphaNumType
    </a>
   </td>
@@ -1759,7 +1759,7 @@ CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_ConveyanceReferenceNumber17">
+   <a href="metatypes.html#metatype-conveyancereferencenumber17">
     ConveyanceReferenceNumber17
    </a>
   </td>
@@ -1803,7 +1803,7 @@ CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaNumType">
+   <a href="metatypes.html#metatype-alphanumtype">
     AlphaNumType
    </a>
   </td>
@@ -1851,7 +1851,7 @@ CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaNumType">
+   <a href="metatypes.html#metatype-alphanumtype">
     AlphaNumType
    </a>
   </td>
@@ -1895,7 +1895,7 @@ CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -1939,7 +1939,7 @@ CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaType">
+   <a href="metatypes.html#metatype-alphatype">
     AlphaType
    </a>
   </td>
@@ -1992,7 +1992,7 @@ CD411D
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_CountryCodeType">
+   <a href="metatypes.html#metatype-countrycodetype">
     CountryCodeType
    </a>
   </td>
@@ -2036,7 +2036,7 @@ CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -2085,7 +2085,7 @@ CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_NCTSProject_templates_Alpha_2">
+   <a href="metatypes.html#metatype-alpha_2">
     Alpha_2
    </a>
   </td>
@@ -2128,7 +2128,7 @@ CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -2178,7 +2178,7 @@ CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD200C, CD203C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -2221,7 +2221,7 @@ CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD200C, CD203C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -2312,7 +2312,7 @@ CD038C, CD050C, CD115C, CD142C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateType">
+   <a href="metatypes.html#metatype-datetype">
     DateType
    </a>
   </td>
@@ -2401,7 +2401,7 @@ CD038C, CD050C, CD115C, CD142C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdDateTime">
+   <a href="metatypes.html#metatype-xsddatetime">
     XsdDateTime
    </a>
   </td>
@@ -2444,7 +2444,7 @@ CD038C, CD050C, CD115C, CD142C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdDate">
+   <a href="metatypes.html#metatype-xsddate">
     XsdDate
    </a>
   </td>
@@ -2533,7 +2533,7 @@ CD038C, CD050C, CD115C, CD142C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateTimeType">
+   <a href="metatypes.html#metatype-datetimetype">
     DateTimeType
    </a>
   </td>
@@ -2577,7 +2577,7 @@ CD038C, CD050C, CD115C, CD160C, CD165C, CD200C, CD203C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateType">
+   <a href="metatypes.html#metatype-datetype">
     DateType
    </a>
   </td>
@@ -2622,7 +2622,7 @@ CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Integer">
+   <a href="metatypes.html#metatype-integer">
     Integer
    </a>
   </td>
@@ -2666,7 +2666,7 @@ CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateTimeType">
+   <a href="metatypes.html#metatype-datetimetype">
     DateTimeType
    </a>
   </td>
@@ -2710,7 +2710,7 @@ CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -2755,7 +2755,7 @@ CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -2799,7 +2799,7 @@ CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateType">
+   <a href="metatypes.html#metatype-datetype">
     DateType
    </a>
   </td>
@@ -2842,7 +2842,7 @@ CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -2887,7 +2887,7 @@ CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Integer">
+   <a href="metatypes.html#metatype-integer">
     Integer
    </a>
   </td>
@@ -2932,7 +2932,7 @@ CD144C, CD145C, CD150C, CD151C, CD152C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_EmailAddressType256">
+   <a href="metatypes.html#metatype-emailaddresstype256">
     EmailAddressType256
    </a>
   </td>
@@ -2974,7 +2974,7 @@ CD144C, CD145C, CD150C, CD151C, CD152C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_StringLatin1">
+   <a href="metatypes.html#metatype-stringlatin1">
     StringLatin1
    </a>
   </td>
@@ -3022,7 +3022,7 @@ CD144C, CD145C, CD150C, CD151C, CD152C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdInt">
+   <a href="metatypes.html#metatype-xsdint">
     XsdInt
    </a>
   </td>
@@ -3066,7 +3066,7 @@ CD144C, CD145C, CD150C, CD151C, CD152C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -3110,7 +3110,7 @@ CD144C, CD145C, CD150C, CD151C, CD152C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -3154,7 +3154,7 @@ CD144C, CD145C, CD150C, CD151C, CD152C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -3198,7 +3198,7 @@ CD144C, CD145C, CD150C, CD151C, CD152C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdBoolean">
+   <a href="metatypes.html#metatype-xsdboolean">
     XsdBoolean
    </a>
   </td>
@@ -3241,7 +3241,7 @@ CD144C, CD145C, CD150C, CD151C, CD152C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaNumType">
+   <a href="metatypes.html#metatype-alphanumtype">
     AlphaNumType
    </a>
   </td>
@@ -3290,7 +3290,7 @@ CD144C, CD145C, CD150C, CD151C, CD152C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaNumType">
+   <a href="metatypes.html#metatype-alphanumtype">
     AlphaNumType
    </a>
   </td>
@@ -3340,7 +3340,7 @@ CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Integer">
+   <a href="metatypes.html#metatype-integer">
     Integer
    </a>
   </td>
@@ -3385,7 +3385,7 @@ CC229C, CC231C, CD150C, CD151C, CD200C, CD201C, CD203C, CD204C, CD205C, CD209C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_NCTSProject_templates_GRNType">
+   <a href="metatypes.html#metatype-grntype">
     GRNType
    </a>
   </td>
@@ -3429,7 +3429,7 @@ CC229C, CC231C, CD150C, CD151C, CD200C, CD201C, CD203C, CD204C, CD205C, CD209C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_NCTSProject_templates_AlphanumericCapitalType">
+   <a href="metatypes.html#metatype-alphanumericcapitaltype">
     AlphanumericCapitalType
    </a>
   </td>
@@ -3474,7 +3474,7 @@ CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Decimal">
+   <a href="metatypes.html#metatype-decimal">
     Decimal
    </a>
   </td>
@@ -3523,7 +3523,7 @@ CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_NCTSProject_templates_AlphanumericCapital1Type">
+   <a href="metatypes.html#metatype-alphanumericcapital1type">
     AlphanumericCapital1Type
    </a>
   </td>
@@ -3573,7 +3573,7 @@ CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD200C, CD203C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -3617,7 +3617,7 @@ CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD200C, CD203C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -3666,7 +3666,7 @@ CD205C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -3711,7 +3711,7 @@ CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -3756,7 +3756,7 @@ CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -3800,7 +3800,7 @@ CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateTimeType">
+   <a href="metatypes.html#metatype-datetimetype">
     DateTimeType
    </a>
   </td>
@@ -3844,7 +3844,7 @@ CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Integer">
+   <a href="metatypes.html#metatype-integer">
     Integer
    </a>
   </td>
@@ -3929,7 +3929,7 @@ CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -3973,7 +3973,7 @@ CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaType">
+   <a href="metatypes.html#metatype-alphatype">
     AlphaType
    </a>
   </td>
@@ -4023,7 +4023,7 @@ CD115C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_GNSSLatitude">
+   <a href="metatypes.html#metatype-gnsslatitude">
     GNSSLatitude
    </a>
   </td>
@@ -4066,7 +4066,7 @@ CD115C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateType">
+   <a href="metatypes.html#metatype-datetype">
     DateType
    </a>
   </td>
@@ -4109,7 +4109,7 @@ CD115C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateType">
+   <a href="metatypes.html#metatype-datetype">
     DateType
    </a>
   </td>
@@ -4153,7 +4153,7 @@ CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -4198,7 +4198,7 @@ CD115C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_GNSSLongitude">
+   <a href="metatypes.html#metatype-gnsslongitude">
     GNSSLongitude
    </a>
   </td>
@@ -4242,7 +4242,7 @@ CC190C, CC191C, CC928C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -4286,7 +4286,7 @@ CC190C, CC191C, CC928C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -4329,7 +4329,7 @@ CC190C, CC191C, CC928C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaNumType">
+   <a href="metatypes.html#metatype-alphanumtype">
     AlphaNumType
    </a>
   </td>
@@ -4372,7 +4372,7 @@ CC190C, CC191C, CC928C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaNumType">
+   <a href="metatypes.html#metatype-alphanumtype">
     AlphaNumType
    </a>
   </td>
@@ -4415,7 +4415,7 @@ CC190C, CC191C, CC928C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaNumType">
+   <a href="metatypes.html#metatype-alphanumtype">
     AlphaNumType
    </a>
   </td>
@@ -4459,7 +4459,7 @@ CC190C, CC191C, CC928C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -4504,7 +4504,7 @@ CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaCapital1Type">
+   <a href="metatypes.html#metatype-alphacapital1type">
     AlphaCapital1Type
    </a>
   </td>
@@ -4549,7 +4549,7 @@ CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Integer">
+   <a href="metatypes.html#metatype-integer">
     Integer
    </a>
   </td>
@@ -4599,7 +4599,7 @@ CD168C, CD180C, CD181C, CD200C, CD201C, CD203C, CD204C, CD205C, CD209C, CD906C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_MRNType">
+   <a href="metatypes.html#metatype-mrntype">
     MRNType
    </a>
   </td>
@@ -4642,7 +4642,7 @@ CD168C, CD180C, CD181C, CD200C, CD201C, CD203C, CD204C, CD205C, CD209C, CD906C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -4686,7 +4686,7 @@ CD168C, CD180C, CD181C, CD200C, CD201C, CD203C, CD204C, CD205C, CD209C, CD906C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaNumType">
+   <a href="metatypes.html#metatype-alphanumtype">
     AlphaNumType
    </a>
   </td>
@@ -4735,7 +4735,7 @@ CD168C, CD180C, CD181C, CD200C, CD201C, CD203C, CD204C, CD205C, CD209C, CD906C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_String">
+   <a href="metatypes.html#metatype-string">
     String
    </a>
   </td>
@@ -4784,7 +4784,7 @@ CD168C, CD180C, CD181C, CD200C, CD201C, CD203C, CD204C, CD205C, CD209C, CD906C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_String">
+   <a href="metatypes.html#metatype-string">
     String
    </a>
   </td>
@@ -4837,7 +4837,7 @@ CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -4882,7 +4882,7 @@ CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_CountryCodeType">
+   <a href="metatypes.html#metatype-countrycodetype">
     CountryCodeType
    </a>
   </td>
@@ -4926,7 +4926,7 @@ CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Decimal">
+   <a href="metatypes.html#metatype-decimal">
     Decimal
    </a>
   </td>
@@ -4975,7 +4975,7 @@ CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -5019,7 +5019,7 @@ CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -5063,7 +5063,7 @@ CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Integer">
+   <a href="metatypes.html#metatype-integer">
     Integer
    </a>
   </td>
@@ -5108,7 +5108,7 @@ CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Integer">
+   <a href="metatypes.html#metatype-integer">
     Integer
    </a>
   </td>
@@ -5153,7 +5153,7 @@ CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Integer">
+   <a href="metatypes.html#metatype-integer">
     Integer
    </a>
   </td>
@@ -5197,7 +5197,7 @@ CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -5241,7 +5241,7 @@ CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -5285,7 +5285,7 @@ CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -5337,7 +5337,7 @@ CD209C, CD411D, CD906C, CD917C, CD971C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -5351,7 +5351,7 @@ CD209C, CD411D, CD906C, CD917C, CD971C
     <tr>
      <td>
       Enumeration:
-      <a href="enums.html#UCC_Patterns_template_Enumeration_PhaseIDContentType">
+      <a href="enums.html#metatype-enumeration_phaseidcontenttype">
        Enumeration_PhaseIDContentType - Enumeration_PhaseIDContentType
       </a>
      </td>
@@ -5385,7 +5385,7 @@ CD144C, CD145C, CD150C, CD151C, CD152C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -5429,7 +5429,7 @@ CD144C, CD145C, CD150C, CD151C, CD152C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -5473,7 +5473,7 @@ CD144C, CD145C, CD150C, CD151C, CD152C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaNumType">
+   <a href="metatypes.html#metatype-alphanumtype">
     AlphaNumType
    </a>
   </td>
@@ -5520,7 +5520,7 @@ CD038C, CD050C, CD115C, CD142C, CD150C, CD151C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_PostalCodeType">
+   <a href="metatypes.html#metatype-postalcodetype">
     PostalCodeType
    </a>
   </td>
@@ -5562,7 +5562,7 @@ CD038C, CD050C, CD115C, CD142C, CD150C, CD151C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdDateTime">
+   <a href="metatypes.html#metatype-xsddatetime">
     XsdDateTime
    </a>
   </td>
@@ -5606,7 +5606,7 @@ CD115C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -5655,7 +5655,7 @@ CD115C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Decimal">
+   <a href="metatypes.html#metatype-decimal">
     Decimal
    </a>
   </td>
@@ -5704,7 +5704,7 @@ CD115C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateType">
+   <a href="metatypes.html#metatype-datetype">
     DateType
    </a>
   </td>
@@ -5747,7 +5747,7 @@ CD115C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -5790,7 +5790,7 @@ CD115C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdBoolean">
+   <a href="metatypes.html#metatype-xsdboolean">
     XsdBoolean
    </a>
   </td>
@@ -5840,7 +5840,7 @@ CD181C, CD200C, CD201C, CD203C, CD204C, CD205C, CD209C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_CORefNumType">
+   <a href="metatypes.html#metatype-corefnumtype">
     CORefNumType
    </a>
   </td>
@@ -5883,7 +5883,7 @@ CD181C, CD200C, CD201C, CD203C, CD204C, CD205C, CD209C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -5928,7 +5928,7 @@ CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -5972,7 +5972,7 @@ CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_UCRReferenceNumber35">
+   <a href="metatypes.html#metatype-ucrreferencenumber35">
     UCRReferenceNumber35
    </a>
   </td>
@@ -6015,7 +6015,7 @@ CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdInteger">
+   <a href="metatypes.html#metatype-xsdinteger">
     XsdInteger
    </a>
   </td>
@@ -6059,7 +6059,7 @@ CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateTimeType">
+   <a href="metatypes.html#metatype-datetimetype">
     DateTimeType
    </a>
   </td>
@@ -6102,7 +6102,7 @@ CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -6147,7 +6147,7 @@ CD165C, CD204C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateType">
+   <a href="metatypes.html#metatype-datetype">
     DateType
    </a>
   </td>
@@ -6190,7 +6190,7 @@ CD165C, CD204C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Integer">
+   <a href="metatypes.html#metatype-integer">
     Integer
    </a>
   </td>
@@ -6234,7 +6234,7 @@ CD165C, CD204C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateTimeType">
+   <a href="metatypes.html#metatype-datetimetype">
     DateTimeType
    </a>
   </td>
@@ -6277,7 +6277,7 @@ CD165C, CD204C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Integer">
+   <a href="metatypes.html#metatype-integer">
     Integer
    </a>
   </td>
@@ -6321,7 +6321,7 @@ CD165C, CD204C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateTimeType">
+   <a href="metatypes.html#metatype-datetimetype">
     DateTimeType
    </a>
   </td>
@@ -6364,7 +6364,7 @@ CD165C, CD204C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateType">
+   <a href="metatypes.html#metatype-datetype">
     DateType
    </a>
   </td>
@@ -6408,7 +6408,7 @@ CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -6458,7 +6458,7 @@ CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Integer">
+   <a href="metatypes.html#metatype-integer">
     Integer
    </a>
   </td>
@@ -6503,7 +6503,7 @@ CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdInt">
+   <a href="metatypes.html#metatype-xsdint">
     XsdInt
    </a>
   </td>
@@ -6551,7 +6551,7 @@ CD181C, CD200C, CD201C, CD203C, CD204C, CD205C, CD209C, CD411D, CD971C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Integer">
+   <a href="metatypes.html#metatype-integer">
     Integer
    </a>
   </td>
@@ -6596,7 +6596,7 @@ CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -6641,7 +6641,7 @@ CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -6685,7 +6685,7 @@ CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Integer">
+   <a href="metatypes.html#metatype-integer">
     Integer
    </a>
   </td>
@@ -6732,7 +6732,7 @@ CD038C, CD050C, CD115C, CD142C, CD150C, CD151C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -6779,7 +6779,7 @@ CD038C, CD050C, CD115C, CD142C, CD150C, CD151C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -6863,7 +6863,7 @@ CD038C, CD050C, CD115C, CD142C, CD150C, CD151C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_String">
+   <a href="metatypes.html#metatype-string">
     String
    </a>
   </td>
@@ -6907,7 +6907,7 @@ CD038C, CD050C, CD115C, CD142C, CD150C, CD151C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Decimal">
+   <a href="metatypes.html#metatype-decimal">
     Decimal
    </a>
   </td>
@@ -6956,7 +6956,7 @@ CD038C, CD050C, CD115C, CD142C, CD150C, CD151C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateType">
+   <a href="metatypes.html#metatype-datetype">
     DateType
    </a>
   </td>
@@ -7001,7 +7001,7 @@ CD144C, CD145C, CD150C, CD151C, CD152C, CD160C, CD165C, CD180C, CD181C, CD971C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -7045,7 +7045,7 @@ CD144C, CD145C, CD150C, CD151C, CD152C, CD160C, CD165C, CD180C, CD181C, CD971C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaNumType">
+   <a href="metatypes.html#metatype-alphanumtype">
     AlphaNumType
    </a>
   </td>
@@ -7094,7 +7094,7 @@ CD144C, CD145C, CD150C, CD151C, CD152C, CD160C, CD165C, CD180C, CD181C, CD971C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_TIRcarnetNumber">
+   <a href="metatypes.html#metatype-tircarnetnumber">
     TIRcarnetNumber
    </a>
   </td>
@@ -7139,7 +7139,7 @@ CC170C, CC928C, CD001C, CD003C, CD012C, CD038C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -7183,7 +7183,7 @@ CC170C, CC928C, CD001C, CD003C, CD012C, CD038C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -7228,7 +7228,7 @@ CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -7273,7 +7273,7 @@ CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdInt">
+   <a href="metatypes.html#metatype-xsdint">
     XsdInt
    </a>
   </td>
@@ -7317,7 +7317,7 @@ CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -7367,7 +7367,7 @@ CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -7411,7 +7411,7 @@ CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_AlphaNumType">
+   <a href="metatypes.html#metatype-alphanumtype">
     AlphaNumType
    </a>
   </td>
@@ -7460,7 +7460,7 @@ CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateType">
+   <a href="metatypes.html#metatype-datetype">
     DateType
    </a>
   </td>
@@ -7503,7 +7503,7 @@ CD018C, CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -7548,7 +7548,7 @@ CD003C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -7593,7 +7593,7 @@ CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_XsdToken">
+   <a href="metatypes.html#metatype-xsdtoken">
     XsdToken
    </a>
   </td>
@@ -7637,7 +7637,7 @@ CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#UCC_Patterns_template_DateType">
+   <a href="metatypes.html#metatype-datetype">
     DateType
    </a>
   </td>
@@ -7680,7 +7680,7 @@ CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Boolean">
+   <a href="metatypes.html#metatype-boolean">
     Boolean
    </a>
   </td>
@@ -7694,8 +7694,8 @@ CD038C, CD050C, CD115C, CD160C, CD165C
     <tr>
      <td>
       Enumeration:
-      <a href="enums.html#System_XsdBoolean_Enumeration">
-       XsdBoolean_Enumeration - Výčet pro XsdBoolean
+      <a href="enums.html#metatype-xsdboolean_enumeration">
+       XsdBoolean_Enumeration
       </a>
      </td>
     </tr>
@@ -7727,7 +7727,7 @@ CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Date">
+   <a href="metatypes.html#metatype-date">
     Date
    </a>
   </td>
@@ -7770,7 +7770,7 @@ CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_DateTime">
+   <a href="metatypes.html#metatype-datetime">
     DateTime
    </a>
   </td>
@@ -7813,7 +7813,7 @@ CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Integer">
+   <a href="metatypes.html#metatype-integer">
     Integer
    </a>
   </td>
@@ -7857,7 +7857,7 @@ CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_Integer">
+   <a href="metatypes.html#metatype-integer">
     Integer
    </a>
   </td>
@@ -7900,7 +7900,7 @@ CD038C, CD050C, CD115C, CD160C, CD165C
    Parent metatype
   </td>
   <td>
-   <a href="metatypes.html#System_String">
+   <a href="metatypes.html#metatype-string">
     String
    </a>
   </td>
