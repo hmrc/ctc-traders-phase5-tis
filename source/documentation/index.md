@@ -30,7 +30,7 @@ The following terms are important to understand in phase 5:
 
 ## Pre-lodgement message flows
 
-### Transit presentation notification valid (DDNTA section: III.II.2.1.1)
+### Transit presentation notification valid 
 
 **Applicable procedures:** normal and simplified.
 
@@ -48,7 +48,7 @@ The following terms are important to understand in phase 5:
 
 
 
-### Transit presentation not valid (DDNTA section: III.II.2.1.3)
+### Transit presentation not valid 
 
 **Applicable procedures:** normal and simplified.
 
@@ -65,7 +65,7 @@ The following terms are important to understand in phase 5:
 
 
 
-### Corrections of the pre-lodgement declaration prior to presentation of the goods (DDNTA section: III.II.2.1.2)
+### Corrections of the pre-lodgement declaration prior to presentation of the goods 
 
 **Applicable procedures:** normal and simplified.
 
@@ -88,7 +88,7 @@ The following terms are important to understand in phase 5:
 
 
 
-### Cancellation of the pre-lodged declaration (DDNTA section: III.II.2.1.4)
+### Cancellation of the pre-lodged declaration 
 
 **Applicable procedures:** normal and simplified.
 
@@ -110,7 +110,7 @@ The following terms are important to understand in phase 5:
 
 ## Departure message flows
 
-### Standard departure (DDNTA section: III.II.1.1)
+### Standard departure 
 
 **Applicable procedures:** normal and simplified.
 
@@ -127,7 +127,7 @@ The following terms are important to understand in phase 5:
 
 
 
-### Rejection of transit declaration (DDNTA section: III.II.2.3)
+### Rejection of transit declaration 
 
 **Applicable procedures:** normal and simplified.
 
@@ -143,7 +143,7 @@ The following terms are important to understand in phase 5:
 
 
 
-### Release for transit refused due to guarantee registration failure (DDNTA section: III.II.2.9.2)
+### Release for transit refused due to guarantee registration failure 
 
 **Applicable procedures:** normal and simplified.
 
@@ -161,7 +161,7 @@ The following terms are important to understand in phase 5:
 
 
 
-### Release for transit refused for safety and security reasons (DDNTA section: III.II.2.9.3)
+### Release for transit refused for safety and security reasons 
 
 
 **Applicable procedures:** normal and simplified.
@@ -177,7 +177,7 @@ The following terms are important to understand in phase 5:
 
 
 
-### Declaration amendment accepted/rejected (DDNTA section: III.II.2.4.1 & III.II.2.4.2)
+### Declaration amendment accepted/rejected 
 
 **Applicable procedures:** normal and simplified.
 
@@ -188,14 +188,14 @@ The following terms are important to understand in phase 5:
 1. The Office of Departure communicates the MRN to the Holder of the Transit Procedure with the ‘MRN Allocated’ E_MRN_ALL (IE028) message.
 1. The Holder of the Transit Procedure notifies the Office of Departure of needed changes to the original declaration with a valid ‘Declaration Amendment’ E_DEC_AMD (IE013) before the goods have been released for transit.
 1. The Office of Departure performs validation of the IE013 message with one of the following outcomes:
-    - The Office of Departure sends the ‘Rejection from Office of Departure’ E_DEP_REJ (IE056) to the Holder of the Transit Procedure, who can then send a second ‘Declaration Amendment’ E_DEC_AMD (IE013) message for validation. (Go to step 5.)
-    - The Office of Departure successfully validates the IE013 message and sends its acceptance to the Holder of the Transit Procedure with the ‘Amendment Acceptance’ E_AMD_ACC (IE004) message. (Go to step 6.)
+    - The Office of Departure sends the ‘Rejection from Office of Departure’ E_DEP_REJ (IE056) to the Holder of the Transit Procedure, who can then send a second ‘Declaration Amendment’ E_DEC_AMD (IE013) message for validation. (Go to step 3.)
+    - The Office of Departure successfully validates the IE013 message and sends its acceptance to the Holder of the Transit Procedure with the ‘Amendment Acceptance’ E_AMD_ACC (IE004) message. (Go to step 4.)
 1. The ‘Release for Transit’ E_REL_TRA (IE029) message is sent to the Holder of the Transit Procedure.
 1. The movement continues to arrivals.
 
 
 
-### Invalidation request by the holder of the transit procedure before release for transit (DDNTA section: III.II.2.10.1)
+### Invalidation request by the holder of the transit procedure before release for transit 
 
 **Applicable procedures:** normal and simplified.
 
@@ -213,7 +213,7 @@ The following terms are important to understand in phase 5:
 
 
 
-### Invalidation request by the holder of the transit procedure after release for transit (DDNTA section: III.II.2.10.2)
+### Invalidation request by the holder of the transit procedure after release for transit 
 
 **Applicable procedures:** normal and simplified.
 
@@ -230,7 +230,7 @@ The following terms are important to understand in phase 5:
 
 
 
-### Invalidation of a transit declaration after release for transit (DDNTA section: III.II.2.10.4) 
+### Invalidation of a transit declaration after release for transit  
 
 **Applicable procedures:** normal and simplified.
 
@@ -247,7 +247,7 @@ The following terms are important to understand in phase 5:
 
 
 
-### Control by Office of Departure with release for transit (DDNTA section: III.II.2.5)
+### Control by Office of Departure with release for transit 
 
 **Applicable procedures:** normal and simplified.
 
@@ -267,7 +267,7 @@ The following terms are important to understand in phase 5:
 
 
 
-### Positive release request with release for transit / negative release request (DDNTA section: III.II.2.6.1 & III.II.2.6.2 )
+### Positive release request with release for transit / negative release request 
 
 **Applicable procedures:** normal and simplified.
 
@@ -288,11 +288,11 @@ The following terms are important to understand in phase 5:
 
 
 
-### Release request rejected (DDNTA section: III.II.2.6.3) 
+### Release request rejected  
 
 **Applicable procedures:** normal and simplified.
 
-<img src="figures/release_request_rejected.svg" alt="Positive release request with release for transit / negative release request. Flow is described in this section." />
+<img src="figures/release_request_rejected.svg" alt="Release request rejected. Flow is described in this section." />
 
 <a href="figures/release_request_rejected.svg" target="_blank">Open the diagram in a new tab.</a>
 
@@ -314,7 +314,7 @@ The following terms are important to understand in phase 5:
 
 ## Arrival message flows
 
-### Standard procedure at destination (DDNTA section: III.II.1.1)
+### Standard procedure at destination 
 
 **Applicable procedures:** normal and simplified.
 
@@ -329,7 +329,7 @@ The following terms are important to understand in phase 5:
 
 
 
-### Simplified procedure at destination (DDNTA section: III.II.4.2)
+### Simplified procedure at destination 
 
 **Applicable procedures:** simplified.
 
@@ -345,7 +345,7 @@ The following terms are important to understand in phase 5:
 
 
 
-### Rejection of arrival notification (DDNTA section: III.II.4.6)
+### Rejection of arrival notification 
 
 <img src="figures/reject_arrival.svg" alt="Rejection of arrival notification. Flow is described in this section." />
 
@@ -357,13 +357,90 @@ The following terms are important to understand in phase 5:
 
 
 
-### Unloading Permission Received - Unloading Remarks (DDNTA section: III.II.4.4 )
+### Unloading Permission Received - Unloading Remarks 
 
 **Applicable procedures:** simplified.
 
 <img src="figures/unload_perm_rec_remarks.svg" alt="Unloading Permission Received - Unloading Remarks. Flow is described in this section." />
 
 <a href="figures/unload_perm_rec_remarks.svg" target="_blank">Open the diagram in a new tab.</a>
+
+1. Upon arrival of the movement at the Office of Destination, the Trader at Destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message.
+1. The ‘Unloading Permission’ E_ULD_PER (IE043) message is sent to the authorised consignee to allow the unloading at the authorised place.
+1. The authorised consignee sends the ‘Unloading Remarks’ E_ULD_REM (IE044) message to the Office of Destination.
+1. If no control is decided, or control results are satisfactory, go to step 7.
+1. If control is performed at the Office of Destination and major discrepancies are reported into the destination control results: 
+    1. The Office of Destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the Trader at Destination.
+    1. The Office of Departure notifies the Holder of the Transit Procedure that major discrepancies are reported in the destination control results with the ‘Discrepancies’ E_DIS_SND (IE019) message. Go to step 7.
+1. If unloading is not completed and the Office of Destination decides to allow unloading to continue:
+    1. The Office of Destination sends a new ‘Unloading Permission’ E_ULD_PER (IE043) message.
+    1. The authorized consignee sends the ‘Unloading Remarks’ E_ULD_REM (IE044) message to the Office of Destination.
+1. The Office of Destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the Trader at Destination in order to notify them that the transit procedure has ended successfully.
+1. The Office of Departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the Holder of the Transit Procedure.
+
+### Unloading remarks rejected 
+
+**Applicable procedures:** simplified.
+
+<img src="figures/unload_remarks_reject.svg" alt="Unloading remarks rejected. Flow is described in this section." />
+
+<a href="figures/unload_remarks_reject.svg" target="_blank">Open the diagram in a new tab.</a>
+
+1. Upon arrival of the movement at the Office of Destination, the Trader at Destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message under simplified procedure (simplified procedure flag = ‘Yes’).
+1. The Office of Destination notifies the Trader at Destination that the unloading of the goods can be started by means of ‘Unloading Permission’ E_ULD_PER (IE043).
+1. The Trader at Destination sends an invalid ‘Unloading Remarks’ E_ULD_REM (IE044) message to the Office of Destination.
+1. The Office of Destination rejects these remarks by sending back a ‘Rejection from Office of Destination’ E_DES_REJ (IE057) message.
+1. The Trader at Destination re-sends the ‘Unloading Remarks’ E_ULD_REM (IE044) message until it is acceptable to the Office of Destination.
+1. The Office of Destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the Trader at Destination in order to notify them that the transit procedure has ended successfully.
+1. The Office of Departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the Holder of the Transit Procedure.
+
+### Major Discrepancies found during control at the Office of Destination - Resolved before the expiration of resolution timer 
+
+**Applicable procedures:** normal and simplified.
+
+<img src="figures/discrep_res_before_timer_expire.svg" alt="Major Discrepancies found during control at the Office of Destination - Resolved before the expiration of resolution timer. Flow is described in this section." />
+
+<a href="figures/discrep_res_before_timer_expire.svg" target="_blank">Open the diagram in a new tab.</a>
+
+1. Upon arrival of the movement at the Office of Destination, the Trader at Destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message.
+1. The Office of Destination performs control and major discrepancies are reported.
+1. The Office of Destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the Trader at Destination.
+1. The Office of Departure notifies the Holder of the Transit Procedure that major discrepancies are reported in the destination control results with the ‘Discrepancies’ E_DIS_SND (IE019) message.
+1. The Office of Destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the Trader at Destination in order to notify them that the transit procedure has ended successfully.
+1. The Office of Departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the Holder of the Transit Procedure.
+
+### Major Discrepancies found during control at the Office of Destination - Major Discrepancies are confirmed - Recovery to be started 
+
+**Applicable procedures:** normal and simplified.
+
+<img src="figures/discrep_confirm_recovery.svg" alt="Major Discrepancies found during control at the Office of Destination - Major Discrepancies are confirmed - Recovery to be started. Flow is described in this section." />
+
+<a href="figures/discrep_confirm_recovery.svg" target="_blank">Open the diagram in a new tab.</a>
+
+1. Upon arrival of the movement at the Office of Destination, the Trader at Destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message.
+1. The Office of Destination performs control and major discrepancies are reported that justify recovery.
+1. The Office of Destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the Trader at Destination in order to notify them that the transit procedure has ended successfully.
+1. The Office of Departure notifies the Holder of the Transit Procedure that major discrepancies are reported in the destination control results with the ‘Discrepancies’ E_DIS_SND (IE019) message.
+1. The movement continues with recovery.
+
+
+
+
+### Major Discrepancies found during control at the Office of Destination - Resolved after the expiration of resolution timer 
+
+**Applicable procedures:** normal and simplified.
+
+<img src="figures/discrep_res_after_expire.svg" alt="Major Discrepancies found during control at the Office of Destination - Resolved after the expiration of resolution timer. Flow is described in this section." />
+
+<a href="figures/discrep_res_after_expire.svg" target="_blank">Open the diagram in a new tab.</a>
+
+1. Upon arrival of the movement at the Office of Destination, the Trader at Destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message.
+1. The Office of Destination performs control and major discrepancies are reported.
+1. The Office of Destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the Trader at Destination.
+1. The Office of Departure notifies the Holder of the Transit Procedure that major discrepancies are reported in the destination control results with the ‘Discrepancies’ E_DIS_SND (IE019) message.
+1. The Office of Destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the Trader at Destination in order to notify them that the transit procedure has ended successfully.
+1. The Office of Departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the Holder of the Transit Procedure.
+
 
 
 
