@@ -97,7 +97,7 @@ As a result of this, the Great Britain and Northern Ireland NCTS services will o
 - Great Britain NCTS will keep its country prefix GB
 - Northern Ireland NCTS will use the prefix XI
 
-NCTS needs region specific reference data, such as customs office codes, guarantee reference numbers and Economic Operator Registration and Identification (EORI) (also known as Trader Identification Number) to include the applicable country code.
+NCTS needs region-specific reference data to include the applicable country code. This includes reference data such as customs office codes, guarantee reference numbers and Economic Operator Registration and Identification (EORI) (also known as Trader Identification Number).
 
 Customs offices located in mainland Great Britain, pre-existing EORIs and related guarantees keep their GB prefix for the Great Britain NCTS service.
 
