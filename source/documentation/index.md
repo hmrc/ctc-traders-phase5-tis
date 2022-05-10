@@ -116,7 +116,7 @@ Traders may no longer exchange messages with both NCTS systems via the following
 
 ### New XML digital API
 
-We have released a CTC trader API channel that allows 3rd party software to send and receive arrival and departure notifications using XML language for the message payload. The EDIFACT email and XML channels have become legacy and their usage has been phased out. The CTC trader API has provide full GB and NI integration since the end of March 2021 and provides a single end point for both GB and NI declarations.
+We have released a CTC trader API channel that allows 3rd party software to send and receive arrival and departure notifications using XML language for the message payload. The EDIFACT email and XML channels have become legacy and their usage has been phased out. The CTC trader API has provided full GB and NI integration since the end of March 2021 and provides a single end point for both GB and NI declarations.
 
 ### Liability Amount for Guarantees
 
