@@ -56,13 +56,13 @@ NCTS holds two types of reference data:
 
 Reference data within CS/RD2 is made of code lists. Each code list provides data which is used for validation against specific fields within declarations submitted by users and intra NCTS system message exchange. The latest CS/RD2 data is released overnight on a daily basis. The most volatile code list contained within CS/RD2 is CL 141 Customs Offices, which holds details of all valid Customs Offices for all Common Transit Convention countries including the transit functions available per office i.e. Office of Departure (DEP), Office of Destination (DES) and Office of Transit (TRA).
 
-It is essential that the software solution you develop retrieves these updates of a daily basis to ensure any validation you code in is synchronised with UK NCTS to prevent unnecessary rejections.
+It is essential that the software solution you develop retrieves these updates on a daily basis to ensure any validation you code in is synchronised with UK NCTS to prevent unnecessary rejections.
 
 #### National Reference Data
 
 This is administered by each National Administration on its own behalf. It is used for validation against country specific data such as guarantees, and authorised location codes used by authorised consignors and consignees for simplified procedures.
 
-### The UKs approach to EU Exit
+### The UK's approach to EU Exit
 
 As a result of the UK leaving the EU and becoming a contracting party to the Common Transit in its own right, the benefits of transit usage have been retained for UK businesses.
 
@@ -99,11 +99,11 @@ As a result of this, the Great Britain and Northern Ireland NCTS services will o
 
 NCTS needs region specific reference data, such as customs office codes, guarantee reference numbers and Economic Operator Registration and Identification (EORI) (also known as Trader Identification Number) to include the applicable country code.
 
-Customs offices located in mainland Great Britain, pre-existing EORIs and related guarantees will keep their GB prefix for the Great Britain NCTS service.
+Customs offices located in mainland Great Britain, pre-existing EORIs and related guarantees keep their GB prefix for the Great Britain NCTS service.
 
 Customs offices located in Northern Ireland, new Northern Ireland specific EORIs and related guarantees will all have the prefix XI (for example, the office code for Belfast Entry Process Unit will change from GB000142 to XI000142).
 
-Additionally, existing authorised locations used by authorised consignors and consignees that are located in Northern Ireland will be migrated from the GB to XI NCTS system.
+Additionally, existing authorised locations used by authorised consignors and consignees that are located in Northern Ireland are migrated from the GB to XI NCTS system.
 
 Because authorised location codes are linked to the authorised consignor/nees EORI, and because EORIs are linked to the procedure holders guarantee, the software you develop should allow both the use of GB EORIs and their associated GB guarantee as well as XI EORIS and their associated XI guarantee.
 
@@ -116,7 +116,7 @@ Traders may no longer exchange messages with both NCTS systems via the following
 
 ### New XML digital API
 
-We have released a CTC trader API channel that allows 3rd party software to send and receive arrival and departure notifications using XML language for the message payload. The EDIFACT email and XML channels have become legacy and their usage has been phased out. The CTC trader API has provide full GB and NI integration since the end of March 2021 and will provide a single end point for both GB and NI declarations.
+We have released a CTC trader API channel that allows 3rd party software to send and receive arrival and departure notifications using XML language for the message payload. The EDIFACT email and XML channels have become legacy and their usage has been phased out. The CTC trader API has provide full GB and NI integration since the end of March 2021 and provides a single end point for both GB and NI declarations.
 
 ### Liability Amount for Guarantees
 
@@ -158,7 +158,7 @@ The ‘Calculated Liability’ can contain up to 2 decimal places. If decimal pl
 
 The ‘liability amount’ information is entered in the first 9 occurrences, starting at occurrence 1, of the ‘Special Mentions’ fields, in the first occurrence of ‘Goods Item’. Any use of the ‘Special Mentions’ field not containing ‘liability amount’ information, in the first occurrence of ‘Goods Item’, should occur **after** any ‘liability amount’ information e.g. if the ‘liability amount’ information is in occurrences 1 to 4, instances not containing liability amount information would be in occurrences 5 onwards.
 
-The IE29 (Release for Transit) message will contain the **actual** ‘CAL’ fields, if the original IE015 that has been electronically received also contains "CAL" details, so as to inform the trader of the actual guarantee amount in comparison to the original guarantee amount that was declared on the IE15 message. 
+The IE029 (Release for Transit) message will contain the **actual** ‘CAL’ fields, if the original IE015 that has been electronically received also contains "CAL" details, so as to inform the trader of the actual guarantee amount in comparison to the original guarantee amount that was declared on the IE015 message. 
 
 **Note:** The ‘liability amount’ information in the Special Mentions data group (Additional information and Additional information coded) is not printed on the TAD i.e. if ‘Additional information coded’ = ‘CAL’, do not print.
 
@@ -166,7 +166,7 @@ Note that since 1/1/2021, guarantee type 8 ‘guarantee not required for certain
 
 ### TAD (Transit Accompanying Document) / TSAD (Transit Security Accompanying Document)
 
-A TSAD is printed for declarations containing safety and security data; a TAD is printed for all other declarations. TADs/TSADs generated from the IE029 Release for Transit (E-REL_TRA) message are automatically authenticated by NCTS. **TADs/TSADs must only be printed using information on the IE029 message**.
+A TSAD is printed for declarations containing safety and security data; a TAD is printed for all other declarations. TADs/TSADs generated from the IE029 Release for Transit (E_REL_TRA) message are automatically authenticated by NCTS. **TADs/TSADs must only be printed using information on the IE029 message**.
 
 This means that the TAD/TSAD does not need to be authenticated by the Office of Departure by stamp.  The CT movement is not **legally** released from transit until the IE029 has been generated by customs and a valid TAD/TSAD subsequently printed.
 
@@ -178,11 +178,9 @@ Traders using the Normal procedure will have the option either to collect the TA
 
 Traders authorised to use Simplified NCTS Procedures as Authorised Consignors, will be able to print the TAD/TSAD at their premises. The TAD/TSAD will be directly authenticated by the system, so Authorised Consignors will not be required to hold a 'special stamp'.
 
-Fallback procedure Authorised Consignors are obliged to hold special stamps to authenticate documents in case of system failure so they can authorise their own fallback documents. Authorised Consignors additionally require a Commission approved stamp that informs the Office of Destination that fallback has been used.
+**Fallback procedure:** Authorised Consignors are obliged to hold special stamps to authenticate documents in case of system failure so they can authorise their own fallback documents. Authorised Consignors additionally require a Commission approved stamp that informs the Office of Destination that fallback has been used.
 
-For the specifications on the printing of the paper TAD, see Guidelines for printing a TAD are contained in Part IV, Chapter 2, Annexes 8.1 and 8.2 of the European Commission’s Transit Manual in the following hyperlink:
-
-- [http://ec.europa.eu/taxation_customs/resources/documents/customs/procedural_aspects/tran sit/common_community/transit_manual_consolidation_en.pdf ](http://ec.europa.eu/taxation_customs/resources/documents/customs/procedural_aspects/tran sit/common_community/transit_manual_consolidation_en.pdf)
+For the specifications on the printing of the paper TAD, see Guidelines for printing a TAD contained in Part IV, Chapter 2, Annexes 8.1 and 8.2 of the European Commission’s [Transit Manual](http://ec.europa.eu/taxation_customs/resources/documents/customs/procedural_aspects/transit/common_community/transit_manual_consolidation_en.pdf).
 
 For the specifications on the printing of the paper TSAD, see Guidelines For Print Out of TSAD, Printing Guidelines for TSAD and TSAD and LoI.
 
@@ -203,10 +201,10 @@ The messages are organised into data groups that contain data items. The data it
 The messages show:
 
 - the characteristics of the data groups belonging to the message: sequence, number of repetitions, a status value to indicate if the data group is mandatory (R: Required), optional (O: Optional) or conditional (D: Dependent)
-- the characteristics of the data items belonging to a data group : sequence, number of repetitions, type, length and a value to indicate if a data item is mandatory (R: Required), optional (O: Optional) or conditional (D: Dependent)
+- the characteristics of the data items belonging to a data group: sequence, number of repetitions, type, length and a value to indicate if a data item is mandatory (R: Required), optional (O: Optional) or conditional (D: Dependent)
 - data group indentation indicates that the data group may contain not only data items but also other groups of data
-- applicable NCTS Codelists e.g CL008 (see Appendix F for definitions)
-- applicable rules and Conditions e.g. C030 (see Appendices C, D, E for definitions)
+- applicable NCTS Codelists; for example, CL008
+- applicable rules and Conditions; for example, C030
 
 **Note:** all numeric values must be greater than zero unless R021 applies.
 
