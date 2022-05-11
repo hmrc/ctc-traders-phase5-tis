@@ -228,6 +228,8 @@ The following terms are important to understand in phase 5:
 
 **Applicable procedures:** normal and simplified.
 
+This scenario involves the submission of a valid transit declaration for goods that have not yet been presented to the Office of Departure.
+
 <img src="figures/trans_pres_notif_valid.svg" alt="Pre-lodgement message flow with presentation of a valid notification. Flow is described in this section." />
 
 <a href="figures/trans_pres_notif_valid.svg" target="_blank">Open the diagram in a new tab.</a>
@@ -246,6 +248,8 @@ The following terms are important to understand in phase 5:
 
 **Applicable procedures:** normal and simplified.
 
+This scenario involves the submission of an invalid transit declaration for goods that have not yet been presented to the Office of Departure.
+
 <img src="figures/trans_pres_notif_not_valid.svg" alt="Pre-lodgement message flow with presentation of a non-valid notification. Flow is described in this section." />
 
 <a href="figures/trans_pres_notif_not_valid.svg" target="_blank">Open the diagram in a new tab.</a>
@@ -262,6 +266,8 @@ The following terms are important to understand in phase 5:
 ### Corrections of the pre-lodgement declaration prior to presentation of the goods 
 
 **Applicable procedures:** normal and simplified.
+
+This scenario involves the holder of the transit procedure making corrections to the transit declaration prior to presentation of the goods.
 
 <img src="figures/correct_pre-lodge_dec_prior_pres_goods.svg" alt="Pre-lodgement message flow with corrections of the pre-lodgement declaration prior to presentation of the goods. Flow is described in this section." />
 
@@ -286,6 +292,8 @@ The following terms are important to understand in phase 5:
 
 **Applicable procedures:** normal and simplified.
 
+This scenario involves the holder of the transit procedure cancelling the pre-lodged transit declaration.
+
 <img src="figures/cancel_pre-lodge_dec.svg" alt="Pre-lodgement message flow with cancellation of the pre-lodgement declaration. Flow is described in this section." />
 
 <a href="figures/cancel_pre-lodge_dec.svg" target="_blank">Open the diagram in a new tab.</a>
@@ -308,6 +316,8 @@ The following terms are important to understand in phase 5:
 
 **Applicable procedures:** normal and simplified.
 
+This scenario outlines the basic standard transit procedure at departure when the goods are presented without delay by the holder of the transit procedure.
+
 <img src="figures/standard_departure.svg" alt="Standard departure message flow. Flow is described in this section." />
 
 <a href="figures/standard_departure.svg" target="_blank">Open the diagram in a new tab.</a>
@@ -325,6 +335,8 @@ The following terms are important to understand in phase 5:
 
 **Applicable procedures:** normal and simplified.
 
+This scenario shows the case when the transit declaration is rejected. Before submission of the transit declaration, the state of the movement at the Office of Departure is “None”.
+
 <img src="figures/reject_transit_declaration.svg" alt="Rejection of transit declaration. Flow is described in this section." />
 
 <a href="figures/reject_transit_declaration.svg" target="_blank">Open the diagram in a new tab.</a>
@@ -340,6 +352,8 @@ The following terms are important to understand in phase 5:
 ### Release for transit refused due to guarantee registration failure 
 
 **Applicable procedures:** normal and simplified.
+
+This scenario involves the case when the release for transit is refused because the result of the guarantee check is not successful.
 
 <img src="figures/guarantee_registration_failure.svg" alt="Release for transit refused due to guarantee registration failure. Flow is described in this section." />
 
@@ -360,6 +374,8 @@ The following terms are important to understand in phase 5:
 
 **Applicable procedures:** normal and simplified.
 
+This scenario involves the case when the release for transit is refused because of safety and security concerns.
+
 <img src="figures/release_refused_safety_security.svg" alt="Release for transit refused for safety and security reasons. Flow is described in this section." />
 
 <a href="figures/release_refused_safety_security.svg" target="_blank">Open the diagram in a new tab.</a>
@@ -374,6 +390,8 @@ The following terms are important to understand in phase 5:
 ### Declaration amendment accepted/rejected 
 
 **Applicable procedures:** normal and simplified.
+
+This scenario involves the cases when valid and invalid declaration amendments are made.
 
 <img src="figures/amendment_accepted_rejected.svg" alt="Declaration amendment accepted/rejected. Flow is described in this section." />
 
@@ -393,6 +411,8 @@ The following terms are important to understand in phase 5:
 
 **Applicable procedures:** normal and simplified.
 
+This scenario involves the case when the holder of the transit procedure makes an invalidation request before release for transit.
+
 <img src="figures/inval_request_before_release.svg" alt="Invalidation request by the holder of the transit procedure before release for transit. Flow is described in this section." />
 
 <a href="figures/inval_request_before_release.svg" target="_blank">Open the diagram in a new tab.</a>
@@ -411,6 +431,8 @@ The following terms are important to understand in phase 5:
 
 **Applicable procedures:** normal and simplified.
 
+This scenario involves the case when the holder of the transit procedure makes an invalidation request after release for transit.
+
 <img src="figures/inval_request_after_release.svg" alt="Invalidation request by the holder of the transit procedure after release for transit. Flow is described in this section." />
 
 <a href="figures/inval_request_after_release.svg" target="_blank">Open the diagram in a new tab.</a>
@@ -428,6 +450,8 @@ The following terms are important to understand in phase 5:
 
 **Applicable procedures:** normal and simplified.
 
+This scenario involves the case when a transit declaration is invalidated after the goods are released for transit.
+
 <img src="figures/inval_declar_after_release.svg" alt="Invalidation of a transit declaration after release for transit. Flow is described in this section." />
 
 <a href="figures/inval_declar_after_release.svg" target="_blank">Open the diagram in a new tab.</a>
@@ -444,6 +468,8 @@ The following terms are important to understand in phase 5:
 ### Control by Office of Departure with release for transit 
 
 **Applicable procedures:** normal and simplified.
+
+This scenario outlines what happens when the Office of Departure decides to initiate control on a transit movement.
 
 <img src="figures/control_with_release.svg" alt="Control by Office of Departure with release for transit. Flow is described in this section." />
 
@@ -465,6 +491,8 @@ The following terms are important to understand in phase 5:
 
 **Applicable procedures:** normal and simplified.
 
+This scenario outlines what happens when the holder of the transit procedure sends a release request E_REQ_REL (IE054) message.
+
 <img src="figures/positive_negative_request.svg" alt="Positive release request with release for transit / negative release request. Flow is described in this section." />
 
 <a href="figures/positive_negative_request.svg" target="_blank">Open the diagram in a new tab.</a>
@@ -485,6 +513,8 @@ The following terms are important to understand in phase 5:
 ### Release request rejected  
 
 **Applicable procedures:** normal and simplified.
+
+This scenario outlines what happens when the holder of the transit procedure sends an invalid release request E_REQ_REL (IE054) message.
 
 <img src="figures/release_request_rejected.svg" alt="Release request rejected. Flow is described in this section." />
 
@@ -512,6 +542,8 @@ The following terms are important to understand in phase 5:
 
 **Applicable procedures:** normal and simplified.
 
+This scenario outlines the basic standard transit procedure at arrival.
+
 <img src="figures/standard_arrival.svg" alt="Standard arrival message flow. Flow is described in this section." />
 
 <a href="figures/standard_arrival.svg" target="_blank">Open the diagram in a new tab.</a>
@@ -527,6 +559,8 @@ The following terms are important to understand in phase 5:
 
 **Applicable procedures:** simplified.
 
+This scenario outlines the scenario when the trader at destination sends an arrival notification E_ARR_NOT (IE007) message under simplified procedure.
+
 <img src="figures/simplified_arrival.svg" alt="Simplified arrival message flow. Flow is described in this section." />
 
 <a href="figures/simplified_arrival.svg" target="_blank">Open the diagram in a new tab.</a>
@@ -541,6 +575,8 @@ The following terms are important to understand in phase 5:
 
 ### Rejection of arrival notification 
 
+This scenario outlines what happens when the arrival notification is not valid.
+
 <img src="figures/reject_arrival.svg" alt="Rejection of arrival notification. Flow is described in this section." />
 
 <a href="figures/reject_arrival.svg" target="_blank">Open the diagram in a new tab.</a>
@@ -554,6 +590,9 @@ The following terms are important to understand in phase 5:
 ### Unloading Permission Received - Unloading Remarks 
 
 **Applicable procedures:** simplified.
+
+This scenario outlines what happens when the authorized consignee sends the
+unloading remarks E_ULD_REM (IE044) message.
 
 <img src="figures/unload_perm_rec_remarks.svg" alt="Unloading Permission Received - Unloading Remarks. Flow is described in this section." />
 
@@ -576,6 +615,8 @@ The following terms are important to understand in phase 5:
 
 **Applicable procedures:** simplified.
 
+This scenario outlines what happens when the Office of Destination rejects an invalid unloading remarks message.
+
 <img src="figures/unload_remarks_reject.svg" alt="Unloading remarks rejected. Flow is described in this section." />
 
 <a href="figures/unload_remarks_reject.svg" target="_blank">Open the diagram in a new tab.</a>
@@ -588,9 +629,11 @@ The following terms are important to understand in phase 5:
 1. The Office of Destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the Trader at Destination in order to notify them that the transit procedure has ended successfully.
 1. The Office of Departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the Holder of the Transit Procedure.
 
-### Major Discrepancies found during control at the Office of Destination - Resolved before the expiration of resolution timer 
+### Major discrepancies found during control at the Office of Destination - Resolved before the expiration of resolution timer 
 
 **Applicable procedures:** normal and simplified.
+
+This scenario outlines what happens when major discrepancies found during control at the Office of Destination are resolved before the expiration of the resolution timer.
 
 <img src="figures/discrep_res_before_timer_expire.svg" alt="Major Discrepancies found during control at the Office of Destination - Resolved before the expiration of resolution timer. Flow is described in this section." />
 
@@ -606,6 +649,8 @@ The following terms are important to understand in phase 5:
 ### Major Discrepancies found during control at the Office of Destination - Major Discrepancies are confirmed - Recovery to be started 
 
 **Applicable procedures:** normal and simplified.
+
+This scenario outlines what happens when major discrepancies found during control at the Office of Destination are confirmed and recovery is started.
 
 <img src="figures/discrep_confirm_recovery.svg" alt="Major Discrepancies found during control at the Office of Destination - Major Discrepancies are confirmed - Recovery to be started. Flow is described in this section." />
 
@@ -624,6 +669,8 @@ The following terms are important to understand in phase 5:
 
 **Applicable procedures:** normal and simplified.
 
+This scenario outlines what happens when major discrepancies found during control at the Office of Destination are resolved after the expiration of the resolution timer.
+
 <img src="figures/discrep_res_after_expire.svg" alt="Major Discrepancies found during control at the Office of Destination - Resolved after the expiration of resolution timer. Flow is described in this section." />
 
 <a href="figures/discrep_res_after_expire.svg" target="_blank">Open the diagram in a new tab.</a>
@@ -638,4 +685,3 @@ The following terms are important to understand in phase 5:
 
 
 
-## Other message flows
