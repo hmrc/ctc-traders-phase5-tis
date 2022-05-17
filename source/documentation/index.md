@@ -54,7 +54,7 @@ NCTS holds two types of reference data:
 
 #### CS/RD2
 
-Reference data within CS/RD2 is made of code lists. Each code list provides data which is used for validation against specific fields within declarations submitted by users and intra NCTS system message exchange. The latest CS/RD2 data is released overnight on a daily basis. The most volatile code list contained within CS/RD2 is CL 141 Customs Offices, which holds details of all valid Customs Offices for all Common Transit Convention countries including the transit functions available per office i.e. office of departure (DEP), Office of Destination (DES) and Office of Transit (TRA).
+Reference data within CS/RD2 is made of code lists. Each code list provides data which is used for validation against specific fields within declarations submitted by users and intra NCTS system message exchange. The latest CS/RD2 data is released overnight on a daily basis. The most volatile code list contained within CS/RD2 is CL 141 Customs Offices, which holds details of all valid Customs Offices for all Common Transit Convention countries including the transit functions available per office i.e. office of departure (DEP), office of destination (DES) and Office of Transit (TRA).
 
 It is essential that the software solution you develop retrieves these updates on a daily basis to ensure any validation you code in is synchronised with UK NCTS to prevent unnecessary rejections.
 
@@ -178,13 +178,13 @@ Traders using the Normal procedure will have the option either to collect the TA
 
 Traders authorised to use Simplified NCTS Procedures as Authorised Consignors, will be able to print the TAD/TSAD at their premises. The TAD/TSAD will be directly authenticated by the system, so Authorised Consignors will not be required to hold a 'special stamp'.
 
-**Fallback procedure:** Authorised Consignors are obliged to hold special stamps to authenticate documents in case of system failure so they can authorise their own fallback documents. Authorised Consignors additionally require a Commission approved stamp that informs the Office of Destination that fallback has been used.
+**Fallback procedure:** Authorised Consignors are obliged to hold special stamps to authenticate documents in case of system failure so they can authorise their own fallback documents. Authorised Consignors additionally require a Commission approved stamp that informs the office of destination that fallback has been used.
 
 For the specifications on the printing of the paper TAD, see Guidelines for printing a TAD contained in Part IV, Chapter 2, Annexes 8.1 and 8.2 of the European Commission’s [Transit Manual](http://ec.europa.eu/taxation_customs/resources/documents/customs/procedural_aspects/transit/common_community/transit_manual_consolidation_en.pdf).
 
 For the specifications on the printing of the paper TSAD, see Guidelines For Print Out of TSAD, Printing Guidelines for TSAD and TSAD and LoI.
 
-The IE029 will specify the number of copies required. If a return copy is required, i.e. HEADER.NCTS return copy is set, then two copies of the TAD/TSAD will be required; if not, only one needs to be printed. The return copy is required when the Office of Destination (OoDest) is not using the NCTS yet.
+The IE029 will specify the number of copies required. If a return copy is required, i.e. HEADER.NCTS return copy is set, then two copies of the TAD/TSAD will be required; if not, only one needs to be printed. The return copy is required when the office of destination (OoDest) is not using the NCTS yet.
 
 The ‘liability amount’ information in the Special Mentions data group (Additional information and Additional information coded) is not printed on the TAD/TSAD i.e. if ‘Additional information coded’ = ‘CAL’, do not print.
 
@@ -548,8 +548,8 @@ This scenario outlines the basic standard transit procedure at arrival.
 
 <a href="figures/standard_arrival.svg" target="_blank">Open the diagram in a new tab.</a>
 
-1. Upon arrival of the movement at the Office of Destination, the Trader at Destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message.
-1. The goods are released from transit. The Office of Destination sends the ‘Goods Released Notification’ E_GDS_REL (IE025) message to the Trader at Destination.
+1. Upon arrival of the movement at the office of destination, the trader at destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message.
+1. The goods are released from transit. The office of destination sends the ‘Goods Released Notification’ E_GDS_REL (IE025) message to the trader at destination.
 1. The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure.
 
 
@@ -565,10 +565,10 @@ This scenario outlines the scenario when the trader at destination sends an arri
 
 <a href="figures/simplified_arrival.svg" target="_blank">Open the diagram in a new tab.</a>
 
-1. Upon arrival of the movement at the Office of Destination, the Trader at Destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message under simplified procedure (simplified procedure flag = ‘Yes’).
-1. The Office of Destination notifies the Trader at Destination that the unloading of the goods can be started by means of ‘Unloading Permission’ E_ULD_PER (IE043).
-1. After unloading, the Trader at Destination sends the ‘Unloading Remarks’ E_ULD_REM (IE044) to the Office of Destination indicating that the unloading has been completed with no unloading remarks (i.e. the ‘Unloading Remarks’ E_ULD_REM (IE044) message contains the flags Unloading completion = ‘1-Yes’ & Conform = ‘1-Yes’).
-1. The goods are released from transit. The Office of Destination sends the ‘Goods Released Notification’ E_GDS_REL (IE025) message to the Trader at Destination.
+1. Upon arrival of the movement at the office of destination, the trader at destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message under simplified procedure (simplified procedure flag = ‘Yes’).
+1. The office of destination notifies the trader at destination that the unloading of the goods can be started by means of ‘Unloading Permission’ E_ULD_PER (IE043).
+1. After unloading, the trader at destination sends the ‘Unloading Remarks’ E_ULD_REM (IE044) to the office of destination indicating that the unloading has been completed with no unloading remarks (i.e. the ‘Unloading Remarks’ E_ULD_REM (IE044) message contains the flags Unloading completion = ‘1-Yes’ & Conform = ‘1-Yes’).
+1. The goods are released from transit. The office of destination sends the ‘Goods Released Notification’ E_GDS_REL (IE025) message to the trader at destination.
 1. The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure.
 
 
@@ -581,9 +581,9 @@ This scenario outlines what happens when the arrival notification is not valid.
 
 <a href="figures/reject_arrival.svg" target="_blank">Open the diagram in a new tab.</a>
 
-1. The Trader at Destination sends the ‘Arrival Notification’ E_ARR_NOT (IE007) to the Office of Destination and NCTS performs validation of this message. If the ‘Arrival Notification’ E_ARR_NOT (IE007) has been found invalid after validation (i.e. in terms of message structure and R/Cs), NCTS rejects it.
-1. The Office of Destination notifies the Trader at Destination by sending the ‘Rejection from Office of Destination’ E_DES_REJ (IE057) message.
-1. The Trader at Destination sends another ‘Arrival Notification’ E_ARR_NOT (IE007) to the Office of Destination and NCTS performs validation of this message. This time, the ‘Arrival Notification’ E_ARR_NOT (IE007) has been found valid after validation (i.e. in terms of message structure and R/Cs), NCTS accepts it.
+1. The trader at destination sends the ‘Arrival Notification’ E_ARR_NOT (IE007) to the office of destination and NCTS performs validation of this message. If the ‘Arrival Notification’ E_ARR_NOT (IE007) has been found invalid after validation (i.e. in terms of message structure and R/Cs), NCTS rejects it.
+1. The office of destination notifies the trader at destination by sending the ‘Rejection from Office of Destination’ E_DES_REJ (IE057) message.
+1. The trader at destination sends another ‘Arrival Notification’ E_ARR_NOT (IE007) to the office of destination and NCTS performs validation of this message. This time, the ‘Arrival Notification’ E_ARR_NOT (IE007) has been found valid after validation (i.e. in terms of message structure and R/Cs), NCTS accepts it.
 
 
 
@@ -598,88 +598,88 @@ unloading remarks E_ULD_REM (IE044) message.
 
 <a href="figures/unload_perm_rec_remarks.svg" target="_blank">Open the diagram in a new tab.</a>
 
-1. Upon arrival of the movement at the Office of Destination, the Trader at Destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message.
+1. Upon arrival of the movement at the office of destination, the trader at destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message.
 1. The ‘Unloading Permission’ E_ULD_PER (IE043) message is sent to the authorised consignee to allow the unloading at the authorised place.
-1. The authorised consignee sends the ‘Unloading Remarks’ E_ULD_REM (IE044) message to the Office of Destination.
+1. The authorised consignee sends the ‘Unloading Remarks’ E_ULD_REM (IE044) message to the office of destination.
 1. If no control is decided, or control results are satisfactory, go to step 7.
-1. If control is performed at the Office of Destination and major discrepancies are reported into the destination control results: 
-    1. The Office of Destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the Trader at Destination.
+1. If control is performed at the office of destination and major discrepancies are reported into the destination control results: 
+    1. The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination.
     1. The office of departure notifies the holder of the transit procedure that major discrepancies are reported in the destination control results with the ‘Discrepancies’ E_DIS_SND (IE019) message. Go to step 7.
-1. If unloading is not completed and the Office of Destination decides to allow unloading to continue:
-    1. The Office of Destination sends a new ‘Unloading Permission’ E_ULD_PER (IE043) message.
-    1. The authorized consignee sends the ‘Unloading Remarks’ E_ULD_REM (IE044) message to the Office of Destination.
-1. The Office of Destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the Trader at Destination in order to notify them that the transit procedure has ended successfully.
+1. If unloading is not completed and the office of destination decides to allow unloading to continue:
+    1. The office of destination sends a new ‘Unloading Permission’ E_ULD_PER (IE043) message.
+    1. The authorized consignee sends the ‘Unloading Remarks’ E_ULD_REM (IE044) message to the office of destination.
+1. The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination in order to notify them that the transit procedure has ended successfully.
 1. The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure.
 
 ### Unloading remarks rejected 
 
 **Applicable procedures:** simplified.
 
-This scenario outlines what happens when the Office of Destination rejects an invalid unloading remarks message.
+This scenario outlines what happens when the office of destination rejects an invalid unloading remarks message.
 
 <img src="figures/unload_remarks_reject.svg" alt="Unloading remarks rejected. Flow is described in this section." />
 
 <a href="figures/unload_remarks_reject.svg" target="_blank">Open the diagram in a new tab.</a>
 
-1. Upon arrival of the movement at the Office of Destination, the Trader at Destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message under simplified procedure (simplified procedure flag = ‘Yes’).
-1. The Office of Destination notifies the Trader at Destination that the unloading of the goods can be started by means of ‘Unloading Permission’ E_ULD_PER (IE043).
-1. The Trader at Destination sends an invalid ‘Unloading Remarks’ E_ULD_REM (IE044) message to the Office of Destination.
-1. The Office of Destination rejects these remarks by sending back a ‘Rejection from Office of Destination’ E_DES_REJ (IE057) message.
-1. The Trader at Destination re-sends the ‘Unloading Remarks’ E_ULD_REM (IE044) message until it is acceptable to the Office of Destination.
-1. The Office of Destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the Trader at Destination in order to notify them that the transit procedure has ended successfully.
+1. Upon arrival of the movement at the office of destination, the trader at destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message under simplified procedure (simplified procedure flag = ‘Yes’).
+1. The office of destination notifies the trader at destination that the unloading of the goods can be started by means of ‘Unloading Permission’ E_ULD_PER (IE043).
+1. The trader at destination sends an invalid ‘Unloading Remarks’ E_ULD_REM (IE044) message to the office of destination.
+1. The office of destination rejects these remarks by sending back a ‘Rejection from Office of Destination’ E_DES_REJ (IE057) message.
+1. The trader at destination re-sends the ‘Unloading Remarks’ E_ULD_REM (IE044) message until it is acceptable to the office of destination.
+1. The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination in order to notify them that the transit procedure has ended successfully.
 1. The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure.
 
-### Major discrepancies found during control at the Office of Destination - Resolved before the expiration of resolution timer 
+### Major discrepancies found during control at the office of destination - Resolved before the expiration of resolution timer 
 
 **Applicable procedures:** normal and simplified.
 
-This scenario outlines what happens when major discrepancies found during control at the Office of Destination are resolved before the expiration of the resolution timer.
+This scenario outlines what happens when major discrepancies found during control at the office of destination are resolved before the expiration of the resolution timer.
 
-<img src="figures/discrep_res_before_timer_expire.svg" alt="Major Discrepancies found during control at the Office of Destination - Resolved before the expiration of resolution timer. Flow is described in this section." />
+<img src="figures/discrep_res_before_timer_expire.svg" alt="Major Discrepancies found during control at the office of destination - Resolved before the expiration of resolution timer. Flow is described in this section." />
 
 <a href="figures/discrep_res_before_timer_expire.svg" target="_blank">Open the diagram in a new tab.</a>
 
-1. Upon arrival of the movement at the Office of Destination, the Trader at Destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message.
-1. The Office of Destination performs control and major discrepancies are reported.
-1. The Office of Destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the Trader at Destination.
+1. Upon arrival of the movement at the office of destination, the trader at destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message.
+1. The office of destination performs control and major discrepancies are reported.
+1. The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination.
 1. The office of departure notifies the holder of the transit procedure that major discrepancies are reported in the destination control results with the ‘Discrepancies’ E_DIS_SND (IE019) message.
-1. The Office of Destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the Trader at Destination in order to notify them that the transit procedure has ended successfully.
+1. The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination in order to notify them that the transit procedure has ended successfully.
 1. The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure.
 
-### Major Discrepancies found during control at the Office of Destination - Major Discrepancies are confirmed - Recovery to be started 
+### Major Discrepancies found during control at the office of destination - Major Discrepancies are confirmed - Recovery to be started 
 
 **Applicable procedures:** normal and simplified.
 
-This scenario outlines what happens when major discrepancies found during control at the Office of Destination are confirmed and recovery is started.
+This scenario outlines what happens when major discrepancies found during control at the office of destination are confirmed and recovery is started.
 
-<img src="figures/discrep_confirm_recovery.svg" alt="Major Discrepancies found during control at the Office of Destination - Major Discrepancies are confirmed - Recovery to be started. Flow is described in this section." />
+<img src="figures/discrep_confirm_recovery.svg" alt="Major Discrepancies found during control at the office of destination - Major Discrepancies are confirmed - Recovery to be started. Flow is described in this section." />
 
 <a href="figures/discrep_confirm_recovery.svg" target="_blank">Open the diagram in a new tab.</a>
 
-1. Upon arrival of the movement at the Office of Destination, the Trader at Destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message.
-1. The Office of Destination performs control and major discrepancies are reported that justify recovery.
-1. The Office of Destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the Trader at Destination in order to notify them that the transit procedure has ended successfully.
+1. Upon arrival of the movement at the office of destination, the trader at destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message.
+1. The office of destination performs control and major discrepancies are reported that justify recovery.
+1. The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination in order to notify them that the transit procedure has ended successfully.
 1. The office of departure notifies the holder of the transit procedure that major discrepancies are reported in the destination control results with the ‘Discrepancies’ E_DIS_SND (IE019) message.
 1. The movement continues with recovery.
 
 
 
 
-### Major Discrepancies found during control at the Office of Destination - Resolved after the expiration of resolution timer 
+### Major Discrepancies found during control at the office of destination - Resolved after the expiration of resolution timer 
 
 **Applicable procedures:** normal and simplified.
 
-This scenario outlines what happens when major discrepancies found during control at the Office of Destination are resolved after the expiration of the resolution timer.
+This scenario outlines what happens when major discrepancies found during control at the office of destination are resolved after the expiration of the resolution timer.
 
-<img src="figures/discrep_res_after_expire.svg" alt="Major Discrepancies found during control at the Office of Destination - Resolved after the expiration of resolution timer. Flow is described in this section." />
+<img src="figures/discrep_res_after_expire.svg" alt="Major Discrepancies found during control at the office of destination - Resolved after the expiration of resolution timer. Flow is described in this section." />
 
 <a href="figures/discrep_res_after_expire.svg" target="_blank">Open the diagram in a new tab.</a>
 
-1. Upon arrival of the movement at the Office of Destination, the Trader at Destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message.
-1. The Office of Destination performs control and major discrepancies are reported.
-1. The Office of Destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the Trader at Destination.
+1. Upon arrival of the movement at the office of destination, the trader at destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message.
+1. The office of destination performs control and major discrepancies are reported.
+1. The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination.
 1. The office of departure notifies the holder of the transit procedure that major discrepancies are reported in the destination control results with the ‘Discrepancies’ E_DIS_SND (IE019) message.
-1. After expiration of the resolution timer, the discrepancies are resolved. The Office of Destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the Trader at Destination in order to notify them that the transit procedure has ended successfully.
+1. After expiration of the resolution timer, the discrepancies are resolved. The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination in order to notify them that the transit procedure has ended successfully.
 1. The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure.
 
 ## Guarantee message flows
