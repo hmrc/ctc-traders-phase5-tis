@@ -682,6 +682,39 @@ This scenario outlines what happens when major discrepancies found during contro
 1. After expiration of the resolution timer, the discrepancies are resolved. The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination in order to notify them that the transit procedure has ended successfully.
 1. The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure.
 
+## Recovery message flows
+
+### Recovery process
+
+This scenario shows the general recovery process.
+
+<img src="figures/recovery_process.svg" alt="Recovery initiation on incident occurrence message flow. Flow is described in this section." />
+
+<a href="figures/recovery_process.svg" target="_blank">Open the diagram in a new tab.</a>
+
+1. The ‘Release for Transit’ E_REL_TRA (IE029) message is sent to the holder of the transit procedure.
+1. The competent authority of recovery at departure notifies the holder of the transit procedure with the ‘Recovery Notification’ E_REC_NOT (IE035) message.
+1. The ‘Write-off Notification’ E_WRT_NOT (IE045) message is sent to the holder of the transit procedure.
+1. The transit movement ends.
+
+### Recovery initiation on incident occurrence
+
+This scenario shows what happens when the competent authority of recovery at departure
+decides to start recovery due to the occurrence of incidents during the journey of the transit
+movement.
+
+<img src="figures/recovery_incident.svg" alt="Recovery initiation on incident occurrence message flow. Flow is described in this section." />
+
+<a href="figures/recovery_incident.svg" target="_blank">Open the diagram in a new tab.</a>
+
+1. The process continues from departures.
+1. The office of departure forwards the incident information to the holder of the transit procedure
+through the ‘Forwarded Incident Notification To ED’ E_INC_NOT (IE182) message.
+1. The officer decides to update the system to recommend recovery due to suspicion of fraud or any other irregularity.
+1. The competent authority of recovery at departure notifies the holder of the transit procedure with the ‘Recovery Notification’ E_REC_NOT (IE035) message.
+1. The ‘Write-off Notification’ E_WRT_NOT (IE045) message is sent to the holder of the transit procedure.
+1. The transit movement ends.
+
 ## Guarantee message flows
 
 ### Guarantee not valid
@@ -698,6 +731,7 @@ This scenario illustrates the consequences of an invalid guarantee registration 
 1. The movement is not released for transit and the ‘No Release for Transit’ E_REL_NOT (IE051) message is sent to the holder of the transit procedure. 
 1. The transit movement ends.
 
+
 ### Guarantee query check
 
 This scenario shows how at any point in time, the holder of the transit procedure or the guarantor can make guarantee queries to the Guarantee Management System to check the details of their
@@ -709,6 +743,5 @@ own guarantees even though no MRN may have been allocated to the transit movemen
 
 1. The holder of the transit procedure sends the ‘Query on Guarantees’ E_GUA_QUE (IE034) message to the Guarantee Management System. 
 1. The Guarantee Management System replies back to the holder of the transit procedure with the ‘Response Query on Guarantees’ E_GUA_RSP (IE037) message.
-
 
 
