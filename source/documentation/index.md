@@ -708,8 +708,7 @@ movement.
 <a href="figures/recovery_incident.svg" target="_blank">Open the diagram in a new tab.</a>
 
 1. The process continues from departures.
-1. The office of departure forwards the incident information to the holder of the transit procedure
-through the ‘Forwarded Incident Notification To ED’ E_INC_NOT (IE182) message.
+1. The office of departure forwards the incident information to the holder of the transit procedure through the ‘Forwarded Incident Notification To ED’ E_INC_NOT (IE182) message.
 1. The officer decides to update the system to recommend recovery due to suspicion of fraud or any other irregularity.
 1. The competent authority of recovery at departure notifies the holder of the transit procedure with the ‘Recovery Notification’ E_REC_NOT (IE035) message.
 1. The ‘Write-off Notification’ E_WRT_NOT (IE045) message is sent to the holder of the transit procedure.
