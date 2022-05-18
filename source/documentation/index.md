@@ -730,7 +730,6 @@ This scenario illustrates the consequences of an invalid guarantee registration 
 1. The movement is not released for transit and the ‘No Release for Transit’ E_REL_NOT (IE051) message is sent to the holder of the transit procedure. 
 1. The transit movement ends.
 
-
 ### Guarantee query check
 
 This scenario shows how at any point in time, the holder of the transit procedure or the guarantor can make guarantee queries to the Guarantee Management System to check the details of their
