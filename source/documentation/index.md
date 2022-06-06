@@ -236,11 +236,13 @@ This scenario involves the submission of a valid transit declaration for goods t
 
 1. The holder of the transit procedure submits the ‘Declaration Data’ E_DEC_DAT (IE015) message to the office of departure with ‘Additional Declaration Type’ equal to ‘D’.
 1. The office of departure validates this message successfully and sends the ‘Positive Acknowledge’ E_POS_ACK (IE928) message to the holder of the transit procedure to acknowledge receipt of the transit declaration.
-1. Following the result of the risk analysis engine, the office of departure may select the pre-lodged declaration for potential control of the goods prior to their presentation. In such a case, the office of departure notifies the holder of the transit procedure (provided that they are an AEO) about the intention to potentially control the goods, via the ‘Control Decision Notification’ E_CTR_DEC (IE060) message (having the data element TRANSIT OPERATION-Notification type equal to ‘2-Intention to Control’).
+1. Following the result of the risk analysis engine, the office of departure may select the pre-lodged declaration for potential control of the goods prior to their presentation. The following control decisions are possible: 
+    - **Yes:** the office of departure notifies the holder of the transit procedure (provided that they are an AEO) about the intention to potentially control the goods, via the ‘Control Decision Notification’ E_CTR_DEC (IE060) message (having the data element TRANSIT OPERATION-Notification type equal to ‘2-Intention to Control’). Go to step 4.
+    - **No:** Go to step 4.
 1. The office of departure receives a valid ‘Presentation Notification for the Pre-Lodged Declaration’ E_PRE_NOT (IE170) message from the holder of the transit procedure.
 1. The MRN is communicated to the holder of the transit procedure with message ‘MRN Allocated’ E_MRN_ALL (IE028).
 1. The ‘Release for Transit’ E_REL_TRA (IE029) message is sent to the holder of the transit procedure.
-1. The movement continues to arrivals.
+1. The movement arrives at the relevant office of destination and if necessary, office(s) of transit.
 
 
 
@@ -277,8 +279,8 @@ This scenario involves the holder of the transit procedure making corrections to
 1. The office of departure validates this message successfully and sends the ‘Positive Acknowledge’ E_POS_ACK (IE928) message to the holder of the transit procedure to acknowledge receipt of the transit declaration.
 1. The holder of the transit procedure decides to correct the transit declaration and submits the ‘Declaration Amendment’ E_DEC_AMD (IE013) message.
 1. The office of departure performs validation of the IE013 message with one of the following outcomes:
-    - The office of departure sends the ‘Rejection from Office of Departure’ E_DEP_REJ (IE056) to the holder of the transit procedure. The holder of the transit procedure can then send a second ‘Declaration Amendment’ E_DEC_AMD (IE013) message for validation. (Go to step 4.)
-    - The office of departure validates the IE013 message successfully and sends its acceptance to the holder of the transit procedure with the ‘Amendment Acceptance’ E_AMD_ACC (IE004) message. (Go to step 5.)
+    - The office of departure sends the ‘Rejection from Office of Departure’ E_DEP_REJ (IE056) to the holder of the transit procedure. Go to step 3.
+    - The office of departure validates the IE013 message successfully and sends its acceptance to the holder of the transit procedure with the ‘Amendment Acceptance’ E_AMD_ACC (IE004) message. Go to step 5.
 1. Following the result of the Risk Analysis engine, the office of departure may select the pre-lodged declaration for potential control of the goods prior to their presentation. In such a case, the office of departure notifies the holder of the transit procedure (provided that they are an AEO) about the intention to potentially control the goods, via the ‘Control Decision Notification’ E_CTR_DEC (IE060) message (having the data element TRANSIT OPERATION-Notification type equal to ‘2-Intention to Control’).
 1. The office of departure receives a valid ‘Presentation Notification for the Pre-Lodged Declaration’ E_PRE_NOT (IE170) message from the holder of the transit procedure.
 1. The MRN is communicated to the holder of the transit procedure with message ‘MRN Allocated’ E_MRN_ALL (IE028).
@@ -359,6 +361,7 @@ This scenario involves the case when the release for transit is refused because 
 
 <a href="figures/guarantee_registration_failure.svg" target="_blank">Open the diagram in a new tab.</a>
 
+1. The process starts when an IE015 message is received and an IE928 message is sent back.
 1. The office of departure communicates the MRN to the holder of the transit procedure with the ‘MRN Allocated’ E_MRN_ALL (IE028) message.
 1. The holder of the transit procedure is notified that the declared guarantee is not valid with the ‘Guarantee Not Valid’ E_GUA_INV (IE055) message.
 1. The holder of the transit procedure does not send a ‘Declaration Amendment’ E_DEC_AMD (IE013) within the allowed time period. The ‘No Release for Transit’ E_REL_NOT (IE051) message is sent to the holder of the transit procedure.
@@ -400,25 +403,25 @@ This scenario involves the cases when valid and invalid declaration amendments a
 1. The office of departure communicates the MRN to the holder of the transit procedure with the ‘MRN Allocated’ E_MRN_ALL (IE028) message.
 1. The holder of the transit procedure notifies the office of departure of needed changes to the original declaration with a valid ‘Declaration Amendment’ E_DEC_AMD (IE013) before the goods have been released for transit.
 1. The office of departure performs validation of the IE013 message with one of the following outcomes:
-    - The office of departure sends the ‘Rejection from Office of Departure’ E_DEP_REJ (IE056) to the holder of the transit procedure, who can then send a second ‘Declaration Amendment’ E_DEC_AMD (IE013) message for validation. (Go to step 3.)
-    - The office of departure successfully validates the IE013 message and sends its acceptance to the holder of the transit procedure with the ‘Amendment Acceptance’ E_AMD_ACC (IE004) message. (Go to step 4.)
+    - The office of departure sends the ‘Rejection from Office of Departure’ E_DEP_REJ (IE056) to the holder of the transit procedure. Go to step 2.
+    - The office of departure successfully validates the IE013 message and sends its acceptance to the holder of the transit procedure with the ‘Amendment Acceptance’ E_AMD_ACC (IE004) message. Go to step 4.
 1. The ‘Release for Transit’ E_REL_TRA (IE029) message is sent to the holder of the transit procedure.
 1. The movement continues to arrivals.
 
 
 
-### Invalidation request by the holder of the transit procedure before release for transit 
+### Cancellation request by the holder of the transit procedure before release for transit 
 
 **Applicable procedures:** normal and simplified.
 
-This scenario involves the case when the holder of the transit procedure makes an invalidation request before release for transit.
+This scenario involves the case when the holder of the transit procedure makes a cancellation request before release for transit.
 
-<img src="figures/inval_request_before_release.svg" alt="Invalidation request by the holder of the transit procedure before release for transit. Flow is described in this section." />
+<img src="figures/inval_request_before_release.svg" alt="Cancellation request by the holder of the transit procedure before release for transit. Flow is described in this section." />
 
 <a href="figures/inval_request_before_release.svg" target="_blank">Open the diagram in a new tab.</a>
 
 1. The office of departure communicates the MRN to the holder of the transit procedure with the ‘MRN Allocated’ E_MRN_ALL (IE028) message.
-1. The holder of the transit procedure decides to invalidate the transit declaration and therefore notifies the office of departure with the ‘Declaration Invalidation Request’ E_DEC_INV (IE014) message.
+1. The holder of the transit procedure decides to cancel the transit declaration and therefore notifies the office of departure with the ‘Declaration Invalidation Request’ E_DEC_INV (IE014) message.
 1. The office of departure examines the request and replies with the positive decision with the ‘Invalidation Decision’ E_INV_DEC (IE009) message (i.e. “Decision” is set to “1=Yes”).
 1. The transit movement ends.
 
@@ -426,32 +429,32 @@ This scenario involves the case when the holder of the transit procedure makes a
 
 
 
-### Invalidation request by the holder of the transit procedure after release for transit 
+### Cancellation request by the holder of the transit procedure after release for transit 
 
 **Applicable procedures:** normal and simplified.
 
-This scenario involves the case when the holder of the transit procedure makes an invalidation request after release for transit.
+This scenario involves the case when the holder of the transit procedure makes a cancellation request after release for transit.
 
-<img src="figures/inval_request_after_release.svg" alt="Invalidation request by the holder of the transit procedure after release for transit. Flow is described in this section." />
+<img src="figures/inval_request_after_release.svg" alt="Cancellation request by the holder of the transit procedure after release for transit. Flow is described in this section." />
 
 <a href="figures/inval_request_after_release.svg" target="_blank">Open the diagram in a new tab.</a>
 
 1. The office of departure communicates the MRN to the holder of the transit procedure with the ‘MRN Allocated’ E_MRN_ALL (IE028) message.
 1. The ‘Release for Transit’ E_REL_TRA (IE029) message is sent to the holder of the transit procedure.
-1. The holder of the transit procedure decides to invalidate the transit declaration and therefore notifies the office of departure with the ‘Declaration Invalidation Request’ E_DEC_INV (IE014) message.
+1. The holder of the transit procedure decides to cancel the transit declaration and therefore notifies the office of departure with the ‘Declaration Invalidation Request’ E_DEC_INV (IE014) message.
 1. The office of departure automatically rejects the ‘Declaration Invalidation Request’ E_DEC_INV (IE014) by notifying the holder of the transit procedure with the ‘Rejection from Office of Departure’ E_DEP_REJ (IE056) message containing the error code ’92-Message out of sequence’.
 1. The movement continues to arrivals.
 
 
 
 
-### Invalidation of a transit declaration after release for transit  
+### Cancellation of a transit declaration after release for transit  
 
 **Applicable procedures:** normal and simplified.
 
-This scenario involves the case when a transit declaration is invalidated by Border Force at the office of departure after the goods are released for transit.
+This scenario involves the case when a transit declaration is cancelled by Border Force at the office of departure after the goods are released for transit.
 
-<img src="figures/inval_declar_after_release.svg" alt="Invalidation of a transit declaration after release for transit. Flow is described in this section." />
+<img src="figures/inval_declar_after_release.svg" alt="Cancellation of a transit declaration after release for transit. Flow is described in this section." />
 
 <a href="figures/inval_declar_after_release.svg" target="_blank">Open the diagram in a new tab.</a>
 
@@ -477,7 +480,7 @@ This scenario outlines what happens when the office of departure decides to init
 1. The office of departure communicates the MRN to the holder of the transit procedure with the ‘MRN Allocated’ E_MRN_ALL (IE028) message.
 1. The office of departure sends the ‘Control Decision Notification’ E_CTR_DEC (IE060) message to the holder of the transit procedure to notify about the upcoming control activities (having the data element TRANSIT OPERATION-Notification type equal to ‘0-Decision to Control (and requested documents if needed)’).
 1. The control activity results in one of the following outcomes:
-    - Control results are satisfactory. (Go to step 4.) 
+    - Control results are satisfactory. Go to step 4. 
     - Control results are unsatisfactory and the ‘No Release for Transit’ E_REL_NOT (IE051) message is sent to the holder of the transit procedure. The transit movement ends here.
 1. The ‘Release for Transit’ E_REL_TRA (IE029) message is sent to the holder of the transit procedure.
 1. The movement continues to arrivals.
@@ -576,11 +579,11 @@ This scenario outlines what happens when the office of destination rejects an in
 1. The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination in order to notify them that the transit procedure has ended successfully.
 1. The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure.
 
-### Major discrepancies found during control at the office of destination - Resolved before the expiration of resolution timer 
+### Major discrepancies found during control at the office of destination
 
-**Applicable procedures:** normal and simplified.
+**Applicable procedures:** normal.
 
-This scenario outlines what happens when major discrepancies found during control at the office of destination are resolved before the expiration of the resolution timer.
+This scenario outlines how major discrepancies found during control at the office of destination are either resolved before expiration of the resolution timer or result in recovery.
 
 <img src="figures/discrep_res_before_timer_expire.svg" alt="Major Discrepancies found during control at the office of destination - Resolved before the expiration of resolution timer. Flow is described in this section." />
 
@@ -590,43 +593,10 @@ This scenario outlines what happens when major discrepancies found during contro
 1. The office of destination performs control and major discrepancies are reported.
 1. The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination.
 1. The office of departure notifies the holder of the transit procedure at departure that major discrepancies are reported in the destination control results with the ‘Discrepancies’ E_DIS_SND (IE019) message.
+1. The following outcomes are possible:
+    - The major discrepancies are resolved. Go to step 6.
+    - The major discrepancies are not resolved. Continue with the [recovery process](#recovery-process).
 1. The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination in order to notify them that the transit procedure has ended successfully.
-1. The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure.
-
-### Major Discrepancies found during control at the office of destination - Major Discrepancies are confirmed - Recovery to be started 
-
-**Applicable procedures:** normal and simplified.
-
-This scenario outlines what happens when major discrepancies found during control at the office of destination are confirmed and recovery is started.
-
-<img src="figures/discrep_confirm_recovery.svg" alt="Major Discrepancies found during control at the office of destination - Major Discrepancies are confirmed - Recovery to be started. Flow is described in this section." />
-
-<a href="figures/discrep_confirm_recovery.svg" target="_blank">Open the diagram in a new tab.</a>
-
-1. Upon arrival of the movement at the office of destination, the trader at destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message.
-1. The office of destination performs control and major discrepancies are reported that justify recovery.
-1. The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination in order to notify them that the transit procedure has ended successfully.
-1. The office of departure notifies the holder of the transit procedure at departure that major discrepancies are reported in the destination control results with the ‘Discrepancies’ E_DIS_SND (IE019) message.
-1. The movement continues with recovery.
-
-
-
-
-### Major Discrepancies found during control at the office of destination - Resolved after the expiration of resolution timer 
-
-**Applicable procedures:** normal and simplified.
-
-This scenario outlines what happens when major discrepancies found during control at the office of destination are resolved after the expiration of the resolution timer.
-
-<img src="figures/discrep_res_after_expire.svg" alt="Major Discrepancies found during control at the office of destination - Resolved after the expiration of resolution timer. Flow is described in this section." />
-
-<a href="figures/discrep_res_after_expire.svg" target="_blank">Open the diagram in a new tab.</a>
-
-1. Upon arrival of the movement at the office of destination, the trader at destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message.
-1. The office of destination performs control and major discrepancies are reported.
-1. The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination.
-1. The office of departure notifies the holder of the transit procedure at departure that major discrepancies are reported in the destination control results with the ‘Discrepancies’ E_DIS_SND (IE019) message.
-1. After expiration of the resolution timer, the discrepancies are resolved. The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination in order to notify them that the transit procedure has ended successfully.
 1. The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure.
 
 ## Recovery message flows
