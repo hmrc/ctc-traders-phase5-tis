@@ -531,7 +531,7 @@ This scenario outlines what happens when the arrival notification is not valid.
 
 <a href="figures/reject_arrival.svg" target="_blank">Open the diagram in a new tab.</a>
 
-1. The trader at destination sends the ‘Arrival Notification’ E_ARR_NOT (IE007) to the office of destination and NCTS performs validation of this message. If the ‘Arrival Notification’ E_ARR_NOT (IE007) has been found invalid after validation (i.e. in terms of message structure and R/Cs), NCTS rejects it.
+1. The trader at destination sends the ‘Arrival Notification’ E_ARR_NOT (IE007) to the office of destination and NCTS performs validation of this message. If the ‘Arrival Notification’ E_ARR_NOT (IE007) has been found to be invalid (that is, in terms of message structure and R/Cs), NCTS rejects it.
 1. The office of destination notifies the trader at destination by sending the ‘Rejection from Office of Destination’ E_DES_REJ (IE057) message.
 1. The trader at destination sends another ‘Arrival Notification’ E_ARR_NOT (IE007) to the office of destination and NCTS performs validation of this message. This time, the ‘Arrival Notification’ E_ARR_NOT (IE007) has been found valid after validation (i.e. in terms of message structure and R/Cs), NCTS accepts it.
 
