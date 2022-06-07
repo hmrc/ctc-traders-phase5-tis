@@ -499,7 +499,7 @@ This scenario outlines the basic standard transit procedure at arrival.
 <a href="figures/standard_arrival.svg" target="_blank">Open the diagram in a new tab.</a>
 
 1. Upon arrival of the movement at the office of destination, the trader at destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message.
-1. The goods are released from transit. The office of destination sends the ‘Goods Released Notification’ E_GDS_REL (IE025) message to the trader at destination.
+1. The goods are released from transit. The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination.
 1. The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure at departure.
 
 
@@ -518,7 +518,7 @@ This scenario outlines the scenario when the trader at destination sends an arri
 1. Upon arrival of the movement at the office of destination, the trader at destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message under simplified procedure (simplified procedure flag = ‘Yes’).
 1. The office of destination notifies the trader at destination that the unloading of the goods can be started by means of ‘Unloading Permission’ E_ULD_PER (IE043).
 1. After unloading, the trader at destination sends the ‘Unloading Remarks’ E_ULD_REM (IE044) to the office of destination indicating that the unloading has been completed with no unloading remarks (i.e. the ‘Unloading Remarks’ E_ULD_REM (IE044) message contains the flags Unloading completion = ‘1-Yes’ & Conform = ‘1-Yes’).
-1. The goods are released from transit. The office of destination sends the ‘Goods Released Notification’ E_GDS_REL (IE025) message to the trader at destination.
+1. The goods are released from transit. The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination.
 1. The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure at departure.
 
 
