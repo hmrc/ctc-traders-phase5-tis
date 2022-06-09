@@ -157,9 +157,26 @@ The following terms are important to understand in phase 5:
 
 - **Consignment Item:** The items information is provided (each House Consignment can contain up to 999 Consignment Items).
 
-## Pre-lodgement message flows
+## Process flows
 
-### Transit presentation notification valid 
+### Functional errors
+
+It should be noted that the following messages are used to report functional errors:
+
+- Rejection from Office of Departure (IE056: E_DEP_REJ);
+- Rejection from Office of Destination (IE057: E_DES_REJ).
+
+A functional error occurs in the following circumstances:
+
+- missing required data from an IE message
+- IE message completed incorrectly
+- missing data group(s)
+- data item(s) violates a code list
+- out of sequence message(s).
+
+### Pre-lodgement message flows
+
+#### Transit presentation notification valid 
 
 **Applicable procedures:** normal and simplified.
 
@@ -181,7 +198,7 @@ This scenario involves the submission of a valid transit declaration for goods t
 
 
 
-### Transit presentation not valid 
+#### Transit presentation not valid 
 
 **Applicable procedures:** normal and simplified.
 
@@ -201,7 +218,7 @@ This scenario involves the submission of an invalid transit declaration for good
 
 
 
-### Corrections of the pre-lodgement declaration prior to presentation of the goods 
+#### Corrections of the pre-lodgement declaration prior to presentation of the goods 
 
 **Applicable procedures:** normal and simplified.
 
@@ -228,7 +245,7 @@ This scenario involves the holder of the transit procedure making corrections to
 
 
 
-### Cancellation of the pre-lodged declaration 
+#### Cancellation of the pre-lodged declaration 
 
 **Applicable procedures:** normal and simplified.
 
@@ -251,9 +268,9 @@ This scenario involves the holder of the transit procedure cancelling the pre-lo
 
 
 
-## Departure message flows
+### Departure message flows
 
-### Standard departure 
+#### Standard departure 
 
 **Applicable procedures:** normal and simplified.
 
@@ -272,7 +289,7 @@ This scenario outlines the basic standard transit procedure at departure when th
 
 
 
-### Rejection of transit declaration 
+#### Rejection of transit declaration 
 
 **Applicable procedures:** normal and simplified.
 
@@ -290,7 +307,7 @@ This scenario shows the case when the transit declaration is rejected. Before su
 
 
 
-### Release for transit refused due to guarantee check failure 
+#### Release for transit refused due to guarantee check failure 
 
 **Applicable procedures:** normal and simplified.
 
@@ -312,7 +329,7 @@ This scenario involves the case when the release for transit is refused because 
 
 
 
-### Release for transit refused for safety and security reasons 
+#### Release for transit refused for safety and security reasons 
 
 
 **Applicable procedures:** normal and simplified.
@@ -332,7 +349,7 @@ This scenario involves the case when the release for transit is refused because 
 
 
 
-### Declaration amendment accepted/rejected 
+#### Declaration amendment accepted/rejected 
 
 **Applicable procedures:** normal and simplified.
 
@@ -353,7 +370,7 @@ This scenario involves the cases when valid and invalid declaration amendments a
 
 
 
-### Cancellation request by the holder of the transit procedure before release for transit 
+#### Cancellation request by the holder of the transit procedure before release for transit 
 
 **Applicable procedures:** normal and simplified.
 
@@ -373,7 +390,7 @@ This scenario involves the case when the holder of the transit procedure makes a
 
 
 
-### Cancellation request by the holder of the transit procedure after release for transit 
+#### Cancellation request by the holder of the transit procedure after release for transit 
 
 **Applicable procedures:** normal and simplified.
 
@@ -393,7 +410,7 @@ This scenario involves the case when the holder of the transit procedure makes a
 
 
 
-### Cancellation of a transit declaration after release for transit  
+#### Cancellation of a transit declaration after release for transit  
 
 **Applicable procedures:** normal and simplified.
 
@@ -414,7 +431,7 @@ This scenario involves the case when a transit declaration is cancelled by Borde
 
 
 
-### Control by office of departure 
+#### Control by office of departure 
 
 **Applicable procedures:** normal and simplified.
 
@@ -434,9 +451,9 @@ This scenario outlines what happens when the office of departure decides to init
 1. The departure process ends.
 
 
-## Arrival message flows
+### Arrival message flows
 
-### Normal procedure at destination 
+#### Normal procedure at destination 
 
 **Applicable procedures:** normal.
 
@@ -453,7 +470,7 @@ This scenario outlines the basic standard transit procedure at arrival.
 
 
 
-### Simplified procedure at destination 
+#### Simplified procedure at destination 
 
 **Applicable procedures:** simplified.
 
@@ -472,7 +489,7 @@ This scenario outlines the scenario when the trader at destination sends an arri
 
 
 
-### Rejection of arrival notification 
+#### Rejection of arrival notification 
 
 This scenario outlines what happens when the arrival notification is not valid.
 
@@ -495,7 +512,7 @@ This scenario outlines what happens when the arrival notification is not valid.
 
 
 
-### Unloading Permission Received - Unloading Remarks 
+#### Unloading Permission Received - Unloading Remarks 
 
 **Applicable procedures:** simplified.
 
@@ -520,7 +537,7 @@ unloading remarks E_ULD_REM (IE044) message.
 1. The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure.
 1. The arrivals process ends.
 
-### Unloading remarks rejected 
+#### Unloading remarks rejected 
 
 **Applicable procedures:** simplified.
 
@@ -540,7 +557,7 @@ This scenario outlines what happens when the office of destination rejects an in
 1. The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure.
 1. The arrivals process ends.
 
-### Major discrepancies found during control at the office of destination
+#### Major discrepancies found during control at the office of destination
 
 **Applicable procedures:** normal.
 
@@ -562,9 +579,9 @@ This scenario outlines how major discrepancies found during control at the offic
 1. The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure.
 1. The arrivals process ends.
 
-## Recovery message flows
+### Recovery message flows
 
-### Recovery process
+#### Recovery process
 
 This scenario shows the recovery process for non-arrival of goods.
 
@@ -577,7 +594,7 @@ This scenario shows the recovery process for non-arrival of goods.
 1. The ‘Write-off Notification’ E_WRT_NOT (IE045) message is sent to the holder of the transit procedure.
 1. The transit movement ends.
 
-### Recovery initiation on incident occurrence
+#### Recovery initiation on incident occurrence
 
 This scenario shows what happens when the competent authority of recovery at departure
 decides to start recovery due to the occurrence of incidents during the journey of the transit
@@ -593,9 +610,9 @@ movement.
 1. The ‘Write-off Notification’ E_WRT_NOT (IE045) message is sent to the holder of the transit procedure.
 1. The transit movement ends.
 
-## Guarantee message flows
+### Guarantee message flows
 
-### Guarantee query check
+#### Guarantee query check
 
 This scenario shows how at any point in time, the holder of the transit procedure or the guarantor can make guarantee queries to the Guarantee Management System to check the details of their
 own guarantees even though no MRN may have been allocated to the transit movement yet.
