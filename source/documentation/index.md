@@ -6,15 +6,22 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 0.0.1a issued April 2022
+Version 0.0.1a issued June 2022
+
 ***
 
+DOCUMENT SUMMARY
+This document is the first part of the Technical Interface Specification (TIS) for Direct Trader Input (DTI) to NCTS. 
+ 
+It shows the processes involved in the exchange of messages between traders and the NCTS system at departure and arrival of transit movements, and provides definitions, formats and validations of those messages.  
+
+***
 
 ## Introduction
+ 
+The New Computerised Transit System (NCTS) is a European wide system, based upon electronic declaration and processing, designed to provide better management and control of Union and Common Transit. It involves all countries comprising the EU Member States and all Common Transit Convention contracting countries.
 
-The New Computerised Transit System (NCTS) is a European-wide system, based upon electronic declaration and processing, designed to provide better management and control of Union and Common Transit. It involves all countries comprising the EU Member States and all Common Transit Convention contracting countries. 
-
-The NCTS connects each country through a central domain in Brussels, to all of the other countries, linking the European customs offices.
+The NCTS systems of all National Administrations are connected to each other via a central domain in Brussels. This allows the details and progress of a transit movement to be monitored by all actors concerned at every stage.
 
 The main objectives of the NCTS are:
 
@@ -26,7 +33,7 @@ In order to use the NCTS, traders need the facility to send and receive electron
 
 - acceptance of declaration
 - release of goods
-- notification of discharge of liability 
+- notification of discharge of liability, that is the release of the guarantee which is in place thoughout the lifespan of the movement in order to cover the duties at risk during the movement of goods
 
 Traders cannot interface directly with the NCTS to input or amend data or to access records and reference data, but simply exchange defined structured messages with the system. 
 
@@ -37,176 +44,104 @@ In certain circumstances, where Simplified NCTS Procedures are used by Authorise
 This document gives an overview of the processes involved in the exchange of NCTS messages with traders and defines the messages associated with NCTS, in particular:
 
 - the trader’s declaration for Transit and associated Customs response
-- control and release of the movement 
+- control and release of the movement at departure 
 - the trader’s notification of arrival and associated Customs response
-- control and release of the goods
-
+- control and release of the goods at destination
+- registration of any incidents that may occur en route
+ 
 These messages are developed following the Functional Transit System Specification (FTSS) and Design Documentation for National Transit Application (DDNTA) documents distributed by the EU Commission to National Administrations.
 
 ### NCTS Reference Data
 
-NCTS has been developed using the Minimal Common Core (MCC) software package provided by the EU Commission.
-
 NCTS holds two types of reference data:
 
-- common reference data which is held on a central system known as Common Services Reference Data (CS/RD2) which is applicable to all contracting parties NCTS systems
-- national reference data which applies locally to individual countries systems
+- common reference data which is held on a central system known as Common Services Reference Data (CS/RD2) which is applicable to all contracting parties’ NCTS systems. It is used to validate specific fields within trader messages and ensure that they contain acceptable data.
+- national reference data which applies locally to the systems of individual countries. This is used to validate traders’ details, guarantee information and any authorisations they may hold when submitted in traders messages.
 
 #### CS/RD2
 
-Reference data within CS/RD2 is made of code lists. Each code list provides data which is used for validation against specific fields within declarations submitted by users and intra NCTS system message exchange. The latest CS/RD2 data is released overnight on a daily basis. The most volatile code list contained within CS/RD2 is CL 141 Customs Offices, which holds details of all valid Customs Offices for all Common Transit Convention countries including the transit functions available per office i.e. office of departure (DEP), office of destination (DES) and Office of Transit (TRA).
+Reference data within CS/RD2 is made of code lists. Each code list provides data which is used for validation against specific fields within declarations submitted by users, and also within intra NCTS system message exchange. The latest CS/RD2 data is released overnight on a daily basis. The most volatile code list contained within CS/RD2 is CL 141 Customs Offices, which holds details of all valid Customs Offices for all Common Transit Convention countries and all the transit functions available per office, such as Office of Departure (DEP), Office of Destination (DES) and Office of Transit (TRA).
 
-It is essential that the software solution you develop retrieves these updates on a daily basis to ensure any validation you code in is synchronised with UK NCTS to prevent unnecessary rejections.
+It is essential that any software solution developed for traders retrieves these updates on a daily basis to ensure any validation coded in to the software is synchronised with UK NCTS to prevent unnecessary rejections.
 
 #### National Reference Data
 
-This is administered by each National Administration on its own behalf. It is used for validation against country specific data such as guarantees, and authorised location codes used by authorised consignors and consignees for simplified procedures.
+This is administered by each National Administration on its own behalf. When a trader applies to use the transit procedure, specific data is captured into NCTS which includes the trader’s name and address, their EORI number, details about guarantees for transit usage that they hold and in the case of Authorised Consignors/Consignees details of their authorised locations and their allocated code numbers. Where these details are used by the trader within their declaration they will be validated against the national reference data held by NCTS.  
 
-### The UK's approach to EU Exit
+### UK NCTS
 
-As a result of the UK leaving the EU and becoming a contracting party to the Common Transit in its own right, the benefits of transit usage have been retained for UK businesses.
+The UK NCTS system is made up of two separate NCTS cores, one processes Great Britain mainland transit movements whilst the other processes transit movements within Northern Ireland.
 
-Transit movements to and from Great Britain (GB) are no longer under Union Transit but under Common Transit. However, due to the needs of the Northern Ireland Protocol,  transit movements are treated as beginning or ending under Union Transit.
+The two cores have different modes of operation. The Great Britain mainland NCTS core operates in Common Transit mode. This means that where a rule or condition has different applicability dependent on whether the country of departure/destination/transit is a within the territory of the European Union or a separate Common Transit country, then that rule or condition will be applied to Great Britain mainland as being a common transit country. Conversely, the Northern Ireland NCTS core operates in Union Transit mode meaning that a territory dependent rule or condition will be applied to Northern Ireland as if it were part of EU territory.
 
-This means that while the declaration data sets for Union and Common Transit are identical, validation carried out against each data field is sometimes conditional. Some of these conditions are based upon the location of transit offices involved in the movement being either in or outside the EU. For example, some information that may be optional under Union Transit will be mandatory under Common Transit or the other way round, according to the conditions and rules defined by the Common Transit Convention. The condition and rule number applicable to each data field is shown in the message tables for Transit Declarations and Arrival Notifications. Full details of the conditions and rules are shown in embedded links.
+This is an important consideration if you intend to implement any rules or conditions to validate declarations for you or your customers.
 
-The condition that has the most regular impact on UK NCTS users is C030 which requires an Office of Transit to be declared where the office of departure is a common transit country i.e. outside the EU. C030 also prevents the usage of TIR within NCTS for Common Transit countries therefore a TIR type movement cannot start, end or traverse GB mainland and crown dependencies using NCTS.
+Both cores have entirely separate common and national reference data. As a result of this, the Great Britain mainland and Northern Ireland NCTS services operate with separate country codes:
 
-Because Northern Ireland needs to operate transit in alignment with the UCC i.e. Union Transit, we have introduced a separate NCTS service specifically for Northern Ireland to make sure the Common Transit Convention conditions and its rules are applied correctly. GB and NI NCTS systems are two separate instances of the same common core operating independently. The only difference between them is the identifying country code and mode of operation – GB applies data validation in alignment with Common Transit rules, NI applies validation in alignment with Union Transit rules.
+- Great Britain mainland NCTS uses **GB** as its country prefix
+- Northern Ireland NCTS uses **XI** as its country prefix
 
-### Dual NCTS implementation overview – changes from 1 January 2021
+NCTS needs region specific reference data, such as Customs Office codes, guarantee reference numbers and Economic Operator Registration and Identification (EORI) (also known as the Trader Identification Number) to include the applicable country code.
 
-#### Great Britain NCTS
+Where located in Great Britain mainland, Customs Offices, traders’ EORIs and related guarantees have the GB prefix. For example, Dover port has the office code GB000060.
 
-The Great Britain NCTS service will only accept departure and arrival declarations for Transit offices located in mainland Great Britain and Crown Dependencies (Channel Islands and Isle of Man).
+Where located in Northern Ireland, Customs Offices, traders EORIs and related guarantees have the XI prefix. For example, the Belfast Entry Process Unit has the office code XI000142.
 
-It will not accept the departure and arrival declarations for Transit offices located in Northern Ireland.
+Additionally, authorised locations used by Authorised Consignors and Consignees exist only in the NCTS appropriate to their physical location.
 
-#### Northern Ireland NCTS
+Because authorised location codes are linked to the Authorised Consignor/nees’ EORI, and because EORIs are linked to the procedure holder’s guarantee, the software you develop should allow both the use of GB EORIs and their associated GB guarantee as well as XI EORIS and their associated XI guarantee.
 
-The Northern Ireland NCTS service will operate in Union Transit mode. It will only accept departure and arrival declarations in respect of Transit offices located in Northern Ireland.
+Despite there being two separate cores in operation, there is only one submission channel used to access UK NCTS. You can submit Great Britain mainland or Northen Ireland messages without the need to add any routing information whatsoever. Your messages will automatically be routed to the correct core by a logic layer embedded in the API. 
 
-It will not accept departure and arrival declarations for Transit offices located in mainland Great Britain and Crown Dependencies (Channel Islands and Isle of Man).
+### Access to UK NCTS
 
-#### The country codes for the dual system
+Traders may exchange XML messages with both NCTS systems via the CTC trader API channel. This allows 3rd party developer software to send and receive arrival and departure notifications using XML language for the message payload. The CTC trader API provides full Great Britain mainland and Northern Ireland integration and a single endpoint for both Great Britain mainland and Northern Ireland declarations. 
 
-All Common Transit Convention members and their mode of transit operation (such as Union or Common) are identified through CS/RD2 data shared between all members’ NCTS systems. This is essential to make sure declaration data meets the applicable conditions and rules of the countries involved in any given transit movement.
-
-As a result of this, the Great Britain and Northern Ireland NCTS services will operate with separate country codes:
-
-- Great Britain NCTS will keep its country prefix GB
-- Northern Ireland NCTS will use the prefix XI
-
-NCTS needs region-specific reference data to include the applicable country code. This applies to reference data such as customs office codes, guarantee reference numbers and Economic Operator Registration and Identification (EORI) (also known as Trader Identification Number).
-
-Customs offices located in mainland Great Britain, pre-existing EORIs and related guarantees keep their GB prefix for the Great Britain NCTS service.
-
-Customs offices located in Northern Ireland, new Northern Ireland specific EORIs and related guarantees will all have the prefix XI (for example, the office code for Belfast Entry Process Unit will change from GB000142 to XI000142).
-
-Additionally, existing authorised locations used by authorised consignors and consignees that are located in Northern Ireland are migrated from the GB to XI NCTS system.
-
-Because authorised location codes are linked to the authorised consignor/nees EORI, and because EORIs are linked to the procedure holders guarantee, the software you develop should allow both the use of GB EORIs and their associated GB guarantee as well as XI EORIS and their associated XI guarantee.
-
-### No access to GB and XI NCTS via legacy channels
-
-Traders may no longer exchange messages with both NCTS systems via the following legacy channels:
-
-- By email containing EDIFACT format message
-- By XML channel whereby XML is a wrapper for an EDIFACT format message
-
-### New XML digital API
-
-We have released a CTC trader API channel that allows 3rd party software to send and receive arrival and departure notifications using XML language for the message payload. The EDIFACT email and XML channels have become legacy and their usage has been phased out. The CTC trader API has provided full GB and NI integration since the end of March 2021 and provides a single end point for both GB and NI declarations.
+Full details regarding connection to the existing submission channel and technical message formatting information are contained in the Technical Interface Specifications (TIS) Appendices.
 
 ### Liability Amount for Guarantees
 
-Guarantee Management processing in NCTS requires that a liability amount is recorded against each guarantee in a declaration.
+Guarantee usage monitoring in NCTS requires that a liability reference amount is recorded against each guarantee in a declaration.
 
-Departure declarations submitted by users (IE015) can only provide guarantee liability amounts in respect of guarantee types 0,1,2,4 and 9. For all other guarantee types, Border Force will enter the liability amount into NCTS manually prior to releasing the movement.
-
-The previous automated default liability insertion for guarantees has been removed. Departure declarations must now include an accurate guarantee reference amount for guarantee types 0, 1, 2, 4 and 9 in both Great Britain and Northern Ireland NCTS systems.
+Departure declarations submitted by users (IE015 message) can only contain guarantee reference amounts in respect of guarantee types 0,1,2,4 and 9. For all other guarantee types Border Force will enter the reference amount into NCTS manually prior to releasing the movement.
 
 In exceptional circumstances, where a declarant is unable to determine the guarantee reference amount, the Common Transit Convention allows the amount to be fixed at 10,000 euros for each transit operation.
 
-For guarantee types 0, 1, 2, 4 and 9, where no reference amount is contained within the transit declaration, the system will automatically insert 10,000 euros as the guarantee liability amount.
+If the departure declaration does not contain a guarantee reference amount and guarantee being used is either type 0, 1, 2, 4 or 9, then the system automatically inserts 10,000 euros as the guarantee liability amount.
 
-This will apply in all circumstances except for national transit movements, for example, Great Britain to Great Britain. National transit is not supported by the Common Transit Convention however, UK national legislation allows its usage as a trade facilitation.
-
-The above behaviour has been implemented in the trader test environment.
-
-The EU Commission has provided a facility for traders to input a maximum of 9 occurrences, per declaration, of liability amount into the ‘Special Mentions’ field, of the IE015 message.
-
-NCTS 4.0 can read guarantee liability records in the ‘Special Mentions’ data group whenever a declaration (IE015) is submitted.
-
-If all the guarantees are valid, and the declaration is a simplified one, then the declaration will be automatically released.
-
-In the event of a normal procedure declaration, then the customs officer will have to confirm (or amend) the liability amounts prior to release.
-
-This use of ‘Special Mentions’ can be used for both Simplified and Normal procedures and for guarantee types 0, 1, 2, 4 and 9.
-
-This ‘liability amount’ use of Special Mentions will occur in the first 9 occurrences of the first occurrence of Goods Item.
-
-The ‘Special Mentions’ fields will be used as follows:
-
-- ‘Additional Information Coded’ (an..3) will contain the 3 characters “CAL”
-- ‘Additional Information’ (an..70) will contain:
-    - ‘Calculated Liability’ (n..15,2) – liability amount in pounds sterling
-    - ‘Currency Code’ (an..3) – currency of the liability amount i.e. “GBP”
-    - ‘GRN’ (an..24) – 17 character GRN
-
-The ‘Calculated Liability’ can contain up to 2 decimal places. If decimal places are used, they should be separated from the significant figures by a decimal point e.g. 362.48.
-
-The ‘liability amount’ information is entered in the first 9 occurrences, starting at occurrence 1, of the ‘Special Mentions’ fields, in the first occurrence of ‘Goods Item’. Any use of the ‘Special Mentions’ field not containing ‘liability amount’ information, in the first occurrence of ‘Goods Item’, should occur **after** any ‘liability amount’ information e.g. if the ‘liability amount’ information is in occurrences 1 to 4, instances not containing liability amount information would be in occurrences 5 onwards.
-
-The IE029 (Release for Transit) message will contain the **actual** ‘CAL’ fields, if the original IE015 that has been electronically received also contains "CAL" details, so as to inform the trader of the actual guarantee amount in comparison to the original guarantee amount that was declared on the IE015 message. 
-
-**Note:** The ‘liability amount’ information in the Special Mentions data group (Additional information and Additional information coded) is not printed on the TAD i.e. if ‘Additional information coded’ = ‘CAL’, do not print.
-
-Note that since 1/1/2021, guarantee type 8 ‘guarantee not required for certain public bodies’ is no longer valid within GB NCTS operating in Common Transit mode. It remains valid within XI NCTS operating in Union Transit mode.
+This applies in all circumstances except for national transit movements, for example, Great Britain to Great Britain. National transit is not supported by the Common Transit Convention however, UK national legislation allows its usage as a trade facilitation.
 
 ### TAD (Transit Accompanying Document) / TSAD (Transit Security Accompanying Document)
 
-A TSAD is printed for declarations containing safety and security data; a TAD is printed for all other declarations. TADs/TSADs generated from the IE029 Release for Transit (E_REL_TRA) message are automatically authenticated by NCTS. **TADs/TSADs must only be printed using information on the IE029 message**.
+A TSAD is needed for declarations containing safety and security data. A TAD is required for all other declarations. **TADs/TSADs must only be created using information from the IE029 message.**
 
-This means that the TAD/TSAD does not need to be authenticated by the office of departure by stamp.  The CT movement is not **legally** released from transit until the IE029 has been generated by customs and a valid TAD/TSAD subsequently printed.
+TADs/TSADs are electronically authenticated by NCTS. This means that the TAD/TSAD does not need to be authenticated by the Office of Departure by stamp. The CT movement is not **legally** released from transit until the IE029 has been generated by Customs and a valid TAD/TSAD subsequently created. 
 
-**The TAD/TSAD should only be printed using data that has been validated or provided by the NCTS system. This can be achieved by printing the TAD/TSAD direct from the IE029 message or by using data from the IE029 to update a previously created and validated transit record, and then printing the TAD/TSAD.**
+**The TAD/TSAD should only be created using data that has been validated or provided by the NCTS system. This can be achieved by generating the TAD/TSAD direct from the IE029 message either electronically or through printing it manually, or by using data from the IE029 to update a previously created and validated transit record, and then creating the TAD/TSAD from that.**
 
-**Authorised Consignors who move goods before issue of the IE029 message are in breach of their approval conditions. Continued failure to observe the conditions of approval may lead to revocation of Authorised Consignor’s approval and/or civil penalty action.**
+Traders using the Normal procedure will have the option either to collect the TAD/TSAD from the Office of Departure or to generate the TAD/TSAD at their own premises. Approval to create the TAD/TSAD is granted by the CCTO, to whom the trader’s application must be submitted for consideration. The trader must provide evidence of their ability to create the TAD/TSAD in the required format.
+Traders authorised to use Simplified NCTS Procedures as Authorised Consignors can generate their own TAD/TSAD as part of their authorisation permission. 
 
-Traders using the Normal procedure will have the option either to collect the TAD/TSAD from the office of departure or to print the TAD/TSAD at their own premises. Approval to print the TAD/TSAD is granted by the CCTO, to whom the trader’s application must be submitted for consideration. The Trader must provide evidence of their ability to print the TAD/TSAD in the required format.
+####Fallback procedure  
 
-Traders authorised to use Simplified NCTS Procedures as Authorised Consignors, will be able to print the TAD/TSAD at their premises. The TAD/TSAD will be directly authenticated by the system, so Authorised Consignors will not be required to hold a 'special stamp'.
+Authorised Consignors are obliged to hold special stamps to authenticate documents in case of system failure so they can authorise their own fallback documents. Authorised Consignors additionally require a Commission approved stamp that informs the Office of Destination that fallback has been used.
 
-**Fallback procedure:** Authorised Consignors are obliged to hold special stamps to authenticate documents in case of system failure so they can authorise their own fallback documents. Authorised Consignors additionally require a Commission approved stamp that informs the office of destination that fallback has been used.
+####Manually printing TADs/TSADs
 
-For the specifications on the printing of the paper TAD, see Guidelines for printing a TAD contained in Part IV, Chapter 2, Annexes 8.1 and 8.2 of the European Commission’s [Transit Manual](http://ec.europa.eu/taxation_customs/resources/documents/customs/procedural_aspects/transit/common_community/transit_manual_consolidation_en.pdf).
+For the specifications on the printing of a paper TAD, see **Guidelines for printing a TAD** – these are contained in **Part IV, Chapter 2, Annexes 8.1 and 8.2 of the European Commission’s Transit Manual** in the following hyperlink:
 
-For the specifications on the printing of the paper TSAD, see Guidelines For Print Out of TSAD, Printing Guidelines for TSAD and TSAD and LoI.
+https://ec.europa.eu/taxation_customs/system/files/2021-06/transit_manual_june_2020_en.pdf
 
-The IE029 will specify the number of copies required. If a return copy is required, i.e. HEADER.NCTS return copy is set, then two copies of the TAD/TSAD will be required; if not, only one needs to be printed. The return copy is required when the office of destination (OoDest) is not using the NCTS yet.
+For the specifications on the printing of the paper TSAD, see **Guidelines For Print Out of TSAD, Printing Guidelines for TSAD and TSAD and LoI**.
 
-The ‘liability amount’ information in the Special Mentions data group (Additional information and Additional information coded) is not printed on the TAD/TSAD i.e. if ‘Additional information coded’ = ‘CAL’, do not print.
+The IE029 will specify the number of copies required in the case of a printed TAD/TSAD. If a return copy is required, i.e. in the case HEADER.NCTS return copy is set, then two copies of the TAD/TSAD will be required; if not, only one needs to be printed. The return copy is required when the Office of Destination (OoDest) is not using the NCTS yet.
 
-If a declaration contains only one goods item, all the information for the movement is printed on the TAD. If the declaration contains more than one goods item, all the goods items are printed on the LoI (List of Items). However, if the declaration contains safety and security data, the goods item information (even if there is only one goods item) is always printed on the TSAD LoI.
+The ‘liability amount’ information in the guarantee data group is not printed on the TAD/TSAD.
+
+If a declaration contains only one goods item, all the information for the movement is included in the TAD. If the declaration contains more than one goods item, all the goods items are included on the LoI (List of Items). However, if the declaration contains safety and security data, the goods item information (even if there is only one goods item) is always included on the TSAD LoI.  
 
 The printer and print driver, used for printing the TAD/TSAD, must be capable of printing a bar code of standard ISO code 128 set B (but not EAN128). 
-
 The font type is BC C128 Narrow (True Type) version 2.0.
-
-### Logical Structure of the IE messages
-
-The messages are organised into data groups that contain data items. The data items are grouped together in such a way that they build up coherent logical blocks within the scope of each message.
-
-The messages show:
-
-- the characteristics of the data groups belonging to the message: sequence, number of repetitions, a status value to indicate if the data group is mandatory (R: Required), optional (O: Optional) or conditional (D: Dependent)
-- the characteristics of the data items belonging to a data group: sequence, number of repetitions, type, length and a value to indicate if a data item is mandatory (R: Required), optional (O: Optional) or conditional (D: Dependent)
-- data group indentation indicates that the data group may contain not only data items but also other groups of data
-- applicable NCTS Codelists; for example, CL008
-- applicable rules and Conditions; for example, C030
-
-**Note:** all numeric values must be greater than zero unless R021 applies.
 
 ### Important phase 5 terms
 
@@ -222,9 +157,26 @@ The following terms are important to understand in phase 5:
 
 - **Consignment Item:** The items information is provided (each House Consignment can contain up to 999 Consignment Items).
 
-## Pre-lodgement message flows
+## Process flows
 
-### Transit presentation notification valid 
+### Functional errors
+
+It should be noted that the following messages are used to report functional errors:
+
+- Rejection from Office of Departure (IE056: E_DEP_REJ);
+- Rejection from Office of Destination (IE057: E_DES_REJ).
+
+A functional error occurs in the following circumstances:
+
+- missing required data from an IE message
+- IE message completed incorrectly
+- missing data group(s)
+- data item(s) violates a code list
+- out of sequence message(s).
+
+### Pre-lodgement message flows
+
+#### Transit presentation notification valid 
 
 **Applicable procedures:** normal and simplified.
 
@@ -246,7 +198,7 @@ This scenario involves the submission of a valid transit declaration for goods t
 
 
 
-### Transit presentation not valid 
+#### Transit presentation not valid 
 
 **Applicable procedures:** normal and simplified.
 
@@ -266,7 +218,7 @@ This scenario involves the submission of an invalid transit declaration for good
 
 
 
-### Corrections of the pre-lodgement declaration prior to presentation of the goods 
+#### Corrections of the pre-lodgement declaration prior to presentation of the goods 
 
 **Applicable procedures:** normal and simplified.
 
@@ -293,7 +245,7 @@ This scenario involves the holder of the transit procedure making corrections to
 
 
 
-### Cancellation of the pre-lodged declaration 
+#### Cancellation of the pre-lodged declaration 
 
 **Applicable procedures:** normal and simplified.
 
@@ -316,9 +268,9 @@ This scenario involves the holder of the transit procedure cancelling the pre-lo
 
 
 
-## Departure message flows
+### Departure message flows
 
-### Standard departure 
+#### Standard departure 
 
 **Applicable procedures:** normal and simplified.
 
@@ -337,7 +289,7 @@ This scenario outlines the basic standard transit procedure at departure when th
 
 
 
-### Rejection of transit declaration 
+#### Rejection of transit declaration 
 
 **Applicable procedures:** normal and simplified.
 
@@ -355,7 +307,7 @@ This scenario shows the case when the transit declaration is rejected. Before su
 
 
 
-### Release for transit refused due to guarantee check failure 
+#### Release for transit refused due to guarantee check failure 
 
 **Applicable procedures:** normal and simplified.
 
@@ -377,7 +329,7 @@ This scenario involves the case when the release for transit is refused because 
 
 
 
-### Release for transit refused for safety and security reasons 
+#### Release for transit refused for safety and security reasons 
 
 
 **Applicable procedures:** normal and simplified.
@@ -397,7 +349,7 @@ This scenario involves the case when the release for transit is refused because 
 
 
 
-### Declaration amendment accepted/rejected 
+#### Declaration amendment accepted/rejected 
 
 **Applicable procedures:** normal and simplified.
 
@@ -418,7 +370,7 @@ This scenario involves the cases when valid and invalid declaration amendments a
 
 
 
-### Cancellation request by the holder of the transit procedure before release for transit 
+#### Cancellation request by the holder of the transit procedure before release for transit 
 
 **Applicable procedures:** normal and simplified.
 
@@ -438,7 +390,7 @@ This scenario involves the case when the holder of the transit procedure makes a
 
 
 
-### Cancellation request by the holder of the transit procedure after release for transit 
+#### Cancellation request by the holder of the transit procedure after release for transit 
 
 **Applicable procedures:** normal and simplified.
 
@@ -458,7 +410,7 @@ This scenario involves the case when the holder of the transit procedure makes a
 
 
 
-### Cancellation of a transit declaration after release for transit  
+#### Cancellation of a transit declaration after release for transit  
 
 **Applicable procedures:** normal and simplified.
 
@@ -479,7 +431,7 @@ This scenario involves the case when a transit declaration is cancelled by Borde
 
 
 
-### Control by office of departure 
+#### Control by office of departure 
 
 **Applicable procedures:** normal and simplified.
 
@@ -499,9 +451,9 @@ This scenario outlines what happens when the office of departure decides to init
 1. The departure process ends.
 
 
-## Arrival message flows
+### Arrival message flows
 
-### Normal procedure at destination 
+#### Normal procedure at destination 
 
 **Applicable procedures:** normal.
 
@@ -518,7 +470,7 @@ This scenario outlines the basic standard transit procedure at arrival.
 
 
 
-### Simplified procedure at destination 
+#### Simplified procedure at destination 
 
 **Applicable procedures:** simplified.
 
@@ -537,7 +489,7 @@ This scenario outlines the scenario when the trader at destination sends an arri
 
 
 
-### Rejection of arrival notification 
+#### Rejection of arrival notification 
 
 This scenario outlines what happens when the arrival notification is not valid.
 
@@ -560,7 +512,7 @@ This scenario outlines what happens when the arrival notification is not valid.
 
 
 
-### Unloading Permission Received - Unloading Remarks 
+#### Unloading Permission Received - Unloading Remarks 
 
 **Applicable procedures:** simplified.
 
@@ -585,7 +537,7 @@ unloading remarks E_ULD_REM (IE044) message.
 1. The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure.
 1. The arrivals process ends.
 
-### Unloading remarks rejected 
+#### Unloading remarks rejected 
 
 **Applicable procedures:** simplified.
 
@@ -605,7 +557,7 @@ This scenario outlines what happens when the office of destination rejects an in
 1. The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure.
 1. The arrivals process ends.
 
-### Major discrepancies found during control at the office of destination
+#### Major discrepancies found during control at the office of destination
 
 **Applicable procedures:** normal.
 
@@ -627,9 +579,9 @@ This scenario outlines how major discrepancies found during control at the offic
 1. The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure.
 1. The arrivals process ends.
 
-## Recovery message flows
+### Recovery message flows
 
-### Recovery process
+#### Recovery process
 
 This scenario shows the recovery process for non-arrival of goods.
 
@@ -642,7 +594,7 @@ This scenario shows the recovery process for non-arrival of goods.
 1. The ‘Write-off Notification’ E_WRT_NOT (IE045) message is sent to the holder of the transit procedure.
 1. The transit movement ends.
 
-### Recovery initiation on incident occurrence
+#### Recovery initiation on incident occurrence
 
 This scenario shows what happens when the competent authority of recovery at departure
 decides to start recovery due to the occurrence of incidents during the journey of the transit
@@ -658,9 +610,9 @@ movement.
 1. The ‘Write-off Notification’ E_WRT_NOT (IE045) message is sent to the holder of the transit procedure.
 1. The transit movement ends.
 
-## Guarantee message flows
+### Guarantee message flows
 
-### Guarantee query check
+#### Guarantee query check
 
 This scenario shows how at any point in time, the holder of the transit procedure or the guarantor can make guarantee queries to the Guarantee Management System to check the details of their
 own guarantees even though no MRN may have been allocated to the transit movement yet.
