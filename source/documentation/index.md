@@ -198,7 +198,7 @@ This scenario involves the submission of a valid transit declaration for goods t
 
 
 
-#### Transit presentation not valid 
+#### Transit presentation notification not valid 
 
 **Applicable procedures:** normal and simplified.
 
@@ -245,11 +245,11 @@ This scenario involves the holder of the transit procedure making corrections to
 
 
 
-#### Cancellation of the pre-lodged declaration 
+#### Cancellation of the pre-lodged declaration prior to the presentation of the goods
 
 **Applicable procedures:** normal and simplified.
 
-This scenario involves the holder of the transit procedure cancelling the pre-lodged transit declaration.
+This scenario involves the holder of the transit procedure cancelling the pre-lodged transit declaration prior to the presentation of the goods.
 
 <img src="figures/cancel_pre-lodge_dec.svg" alt="Pre-lodgement message flow with cancellation of the pre-lodgement declaration. Flow is described in this section." />
 
@@ -293,7 +293,7 @@ This scenario outlines the basic standard transit procedure at departure when th
 
 **Applicable procedures:** normal and simplified.
 
-This scenario shows the case when the transit declaration is rejected. Before submission of the transit declaration, the state of the movement at the office of departure is “None”.
+This scenario shows the case when the transit declaration is rejected.
 
 <img src="figures/reject_transit_declaration.svg" alt="Rejection of transit declaration. Flow is described in this section." />
 
@@ -317,7 +317,7 @@ This scenario involves the case when the release for transit is refused because 
 
 <a href="figures/guarantee_registration_failure.svg" target="_blank">Open the diagram in a new tab.</a>
 
-1. The process starts when an IE015 message is sent and an IE928 message is sent back.
+1. The process starts when an IE015 message is sent and an IE928 message is received by the holder of the transit procedure.
 1. The office of departure communicates the MRN to the holder of the transit procedure with the ‘MRN Allocated’ E_MRN_ALL (IE028) message.
 1. The holder of the transit procedure is notified that the declared guarantee is not valid with the ‘Guarantee Not Valid’ E_GUA_INV (IE055) message.
 1. The holder of the transit procedure does not send a ‘Declaration Amendment’ E_DEC_AMD (IE013) within the allowed time period. 
@@ -340,7 +340,7 @@ This scenario involves the case when the release for transit is refused because 
 
 <a href="figures/release_refused_safety_security.svg" target="_blank">Open the diagram in a new tab.</a>
 
-1. The process starts when an IE015 message is sent and an IE928 message is sent back.
+1. The process starts when an IE015 message is sent and an IE928 message is received by the holder of the transit procedure.
 1. The office of departure communicates the MRN to the holder of the transit procedure with the ‘MRN Allocated’ E_MRN_ALL (IE028) message.
 1. A risk assessment of the transit declaration identifies a high risk with a threat to safety and security. 
 1. The ‘No Release for Transit’ E_REL_NOT (IE051) message is sent to the holder of the transit procedure.
@@ -359,7 +359,7 @@ This scenario involves the cases when valid and invalid declaration amendments a
 
 <a href="figures/amendment_accepted_rejected.svg" target="_blank">Open the diagram in a new tab.</a>
 
-1. The process starts when an IE015 message is sent and an IE928 message is sent back.
+1. The process starts when an IE015 message is sent and an IE928 message is received by the holder of the transit procedure.
 1. The office of departure communicates the MRN to the holder of the transit procedure with the ‘MRN Allocated’ E_MRN_ALL (IE028) message.
 1. The holder of the transit procedure notifies the office of departure of needed changes to the original declaration with a valid ‘Declaration Amendment’ E_DEC_AMD (IE013) before the goods have been released for transit.
 1. The office of departure performs validation of the IE013 message with one of the following outcomes:
@@ -380,7 +380,7 @@ This scenario involves the case when the holder of the transit procedure makes a
 
 <a href="figures/inval_request_before_release.svg" target="_blank">Open the diagram in a new tab.</a>
 
-1. The process starts when an IE015 message is sent and an IE928 message is sent back.
+1. The process starts when an IE015 message is sent and an IE928 message is received by the holder of the transit procedure.
 1. The office of departure communicates the MRN to the holder of the transit procedure with the ‘MRN Allocated’ E_MRN_ALL (IE028) message.
 1. The holder of the transit procedure decides to cancel the transit declaration and therefore notifies the office of departure with the ‘Declaration Invalidation Request’ E_DEC_INV (IE014) message.
 1. The office of departure examines the request and replies with the positive decision with the ‘Invalidation Decision’ E_INV_DEC (IE009) message (i.e. “Decision” is set to “1=Yes”).
@@ -400,7 +400,7 @@ This scenario involves the case when the holder of the transit procedure makes a
 
 <a href="figures/inval_request_after_release.svg" target="_blank">Open the diagram in a new tab.</a>
 
-1. The process starts when an IE015 message is sent and an IE928 message is sent back.
+1. The process starts when an IE015 message is sent and an IE928 message is received by the holder of the transit procedure.
 1. The office of departure communicates the MRN to the holder of the transit procedure with the ‘MRN Allocated’ E_MRN_ALL (IE028) message.
 1. The ‘Release for Transit’ E_REL_TRA (IE029) message is sent to the holder of the transit procedure.
 1. The holder of the transit procedure decides to cancel the transit declaration and therefore notifies the office of departure with the ‘Declaration Invalidation Request’ E_DEC_INV (IE014) message.
@@ -420,7 +420,7 @@ This scenario involves the case when a transit declaration is cancelled by Borde
 
 <a href="figures/inval_declar_after_release.svg" target="_blank">Open the diagram in a new tab.</a>
 
-1. The process starts when an IE015 message is sent and an IE928 message is sent back.
+1. The process starts when an IE015 message is sent and an IE928 message is received by the holder of the transit procedure.
 1. The office of departure communicates the MRN to the holder of the transit procedure with the ‘MRN Allocated’ E_MRN_ALL (IE028) message.
 1. The ‘Release for Transit’ E_REL_TRA (IE029) message is sent to the holder of the transit procedure.
 1. The office of departure decides to cancel the declaration.
@@ -441,7 +441,7 @@ This scenario outlines what happens when the office of departure decides to init
 
 <a href="figures/control_with_release.svg" target="_blank">Open the diagram in a new tab.</a>
 
-1. The process starts when an IE015 message is sent and an IE928 message is sent back.
+1. The process starts when an IE015 message is sent and an IE928 message is received by the holder of the transit procedure.
 1. The office of departure communicates the MRN to the holder of the transit procedure with the ‘MRN Allocated’ E_MRN_ALL (IE028) message.
 1. The office of departure sends the ‘Control Decision Notification’ E_CTR_DEC (IE060) message to the holder of the transit procedure to notify about the upcoming control activities (having the data element TRANSIT OPERATION-Notification type equal to ‘0-Decision to Control (and requested documents if needed)’).
 1. The control activity results in one of the following outcomes:
