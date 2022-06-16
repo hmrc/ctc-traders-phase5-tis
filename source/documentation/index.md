@@ -89,15 +89,13 @@ Where located in Northern Ireland, Customs Offices, traders EORIs and related gu
 
 Additionally, authorised locations used by Authorised Consignors and Consignees exist only in the NCTS appropriate to their physical location.
 
-Because authorised location codes are linked to the Authorised Consignor/nees’ EORI, and because EORIs are linked to the procedure holder’s guarantee, the software you develop should allow both the use of GB EORIs and their associated GB guarantee as well as XI EORIS and their associated XI guarantee.
+Because authorised location codes are linked to the Authorised Consignor/nees’ EORI, and because EORIs are linked to the procedure holder’s guarantee, the software you develop should allow both the use of GB EORIs and their associated GB guarantee as well as XI EORIs and their associated XI guarantee.
 
 Despite there being two separate cores in operation, there is only one submission channel used to access UK NCTS. You can submit Great Britain mainland or Northen Ireland messages without the need to add any routing information whatsoever. Your messages will automatically be routed to the correct core by a logic layer embedded in the API. 
 
 ### Access to UK NCTS
 
 Traders may exchange XML messages with both NCTS systems via the CTC trader API channel. This allows 3rd party developer software to send and receive arrival and departure notifications using XML language for the message payload. The CTC trader API provides full Great Britain mainland and Northern Ireland integration and a single endpoint for both Great Britain mainland and Northern Ireland declarations. 
-
-Full details regarding connection to the existing submission channel and technical message formatting information are contained in the Technical Interface Specifications (TIS) Appendices.
 
 ### Liability Amount for Guarantees
 
@@ -189,7 +187,7 @@ This scenario involves the submission of a valid transit declaration for goods t
 1. The process starts when the holder of the transit procedure submits the ‘Declaration Data’ E_DEC_DAT (IE015) message to the office of departure with ‘Additional Declaration Type’ equal to ‘D’.
 1. The office of departure validates this message successfully and sends the ‘Positive Acknowledgement’ E_POS_ACK (IE928) message to the holder of the transit procedure to acknowledge receipt of the transit declaration.
 1. Following the result of the risk analysis engine, the office of departure may select the pre-lodged declaration for potential control of the goods prior to their presentation. The following control decisions are possible: 
-    - **Yes** (apply control): the office of departure notifies the holder of the transit procedure (provided that they are an AEO) about the intention to potentially control the goods, via the ‘Control Decision Notification’ E_CTR_DEC (IE060) message (having the data element TRANSIT OPERATION-Notification type equal to ‘2-Intention to Control’). Go to step 4.
+    - **Yes** (apply control): the office of departure notifies the holder of the transit procedure (provided that they are an Authorised Economic Operator (AEO)) about the intention to potentially control the goods, via the ‘Control Decision Notification’ E_CTR_DEC (IE060) message (having the data element TRANSIT OPERATION-Notification type equal to ‘2-Intention to Control’). Go to step 4.
     - **No** (no control): Go to step 4.
 1. The office of departure receives a valid ‘Presentation Notification for the Pre-Lodged Declaration’ E_PRE_NOT (IE170) message from the holder of the transit procedure.
 1. The MRN is communicated to the holder of the transit procedure with message ‘MRN Allocated’ E_MRN_ALL (IE028).
