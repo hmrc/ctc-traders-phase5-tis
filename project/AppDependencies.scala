@@ -11,6 +11,6 @@ object AppDependencies {
 
   val test = Seq(
     "org.scalatest" %% "scalatest" % "3.2.11" % "test",
-    "com.vladsch.flexmark" % "flexmark-all" % "0.62.2"
+    "com.vladsch.flexmark" % "flexmark-all" % "0.62.2" % "test"
   )
 }
