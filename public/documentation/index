@@ -1,0 +1,5 @@
+<h1 id="ncts-phase-5-technical-interface-specification">NCTS Phase 5 Technical Interface Specification</h1>
+<p>Version 0.1 issued June 2022</p>
+<h2 id="document-summary">Document summary</h2>
+<p>This document is the first part of the Technical Interface Specification (TIS) for Direct Trader Input (DTI) to NCTS.</p>
+<p>It shows the processes involved in the exchange of messages between traders and the NCTS system at departure and arrival of transit movements, and provides definitions, formats and validations of those messages.</p>

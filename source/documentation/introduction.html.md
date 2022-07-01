@@ -1,6 +1,6 @@
 ---
 title: NCTS Phase 5 Technical Interface Specification
-weight: 10
+weight: 2
 description: Software developers, designers, product owners or business analysts. Integrate your software with the ERMIS service
 ---
 
