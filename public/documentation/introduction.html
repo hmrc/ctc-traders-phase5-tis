@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>NCTS Phase 5 Technical Interface Specification - HMRC Developer Hub</title>
+
+    <link href="/guides/ctc-traders-phase5-tis/stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="docs.developer.service.hmrc.gov.uk/guides/ctc-traders-phase5-tis/documentation/introduction.html">
+
+      <meta name="description" content="Software developers, designers, product owners or business analysts. Integrate your software with the ERMIS service" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:image" content="docs.developer.service.hmrc.gov.uk/images/govuk-large.png" />
+      <meta name="twitter:title" content="NCTS Phase 5 Technical Interface Specification - HMRC Developer Hub" />
+      <meta name="twitter:url" content="docs.developer.service.hmrc.gov.uk/guides/ctc-traders-phase5-tis/documentation/introduction.html" />
+
+      <meta property="og:description" content="Software developers, designers, product owners or business analysts. Integrate your software with the ERMIS service" />
+      <meta property="og:image" content="docs.developer.service.hmrc.gov.uk/images/govuk-large.png" />
+      <meta property="og:site_name" content="HMRC Developer Hub" />
+      <meta property="og:title" content="NCTS Phase 5 Technical Interface Specification" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="docs.developer.service.hmrc.gov.uk/guides/ctc-traders-phase5-tis/documentation/introduction.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="https://developer.service.hmrc.gov.uk/api-documentation" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            class="govuk-header__logotype-crown"
+            xmlns="http://www.w3.org/2000/svg"
+            viewbox="0 0 132 97"
+            height="30"
+            width="36"
+          >
+            <path
+              fill="currentColor" fill-rule="evenodd"
+              d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"
+            ></path>
+            <image src="/assets/images/govuk-logotype-crown.png" xlink:href="" class="govuk-header__logotype-crown-fallback-image" width="36" height="32"></image>
+          </svg>
+          <span class="govuk-header__logotype-text">
+            GOV.UK
+          </span>
+        </span>
+        <span class="govuk-header__product-name">
+          HMRC Developer Hub
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation govuk-header__navigation--end" aria-label="Top Level Navigation">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/guides/ncts-phase5-technical-interface-specification">NCTS Phase 5 Technical Interface Specification</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/api-documentation/docs/using-the-hub">Documentation</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/developer/applications">Applications</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/developer/support">Support</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </a>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents">
+              
+              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
+                      <ul>
+  <li>
+    <a href="/guides/ctc-traders-phase5-tis/"><span>NCTS Phase 5 Technical Interface Specification</span></a>
+    <ul>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/#document-summary"><span>Document summary</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html"><span>Introduction</span></a>
+    <ul>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#scope"><span>Scope</span></a>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#ncts-reference-data"><span>NCTS Reference Data</span></a>
+        <ul>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#cs-rd2"><span>CS/RD2</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#national-reference-data"><span>National Reference Data</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#uk-ncts"><span>UK NCTS</span></a>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#access-to-uk-ncts"><span>Access to UK NCTS</span></a>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#liability-amount-for-guarantees"><span>Liability Amount for Guarantees</span></a>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#tad-transit-accompanying-document-tsad-transit-security-accompanying-document"><span>TAD (Transit Accompanying Document) / TSAD (Transit Security Accompanying Document)</span></a>
+        <ul>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#fallback-procedure"><span>Fallback procedure</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#manually-printing-tads-tsads"><span>Manually printing TADs/TSADs</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#important-phase-5-terms"><span>Important phase 5 terms</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html"><span>Process flows</span></a>
+    <ul>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#functional-errors"><span>Functional errors</span></a>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#pre-lodgement-message-flows"><span>Pre-lodgement message flows</span></a>
+        <ul>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#transit-presentation-notification-valid"><span>Transit presentation notification valid</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#transit-presentation-notification-not-valid"><span>Transit presentation notification not valid</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#corrections-of-the-pre-lodgement-declaration-prior-to-presentation-of-the-goods"><span>Corrections of the pre-lodgement declaration prior to presentation of the goods</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#cancellation-of-the-pre-lodged-declaration-prior-to-the-presentation-of-the-goods"><span>Cancellation of the pre-lodged declaration prior to the presentation of the goods</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#departure-message-flows"><span>Departure message flows</span></a>
+        <ul>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#standard-departure"><span>Standard departure</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#rejection-of-transit-declaration"><span>Rejection of transit declaration</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#release-for-transit-refused-due-to-guarantee-check-failure"><span>Release for transit refused due to guarantee check failure</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#release-for-transit-refused-for-safety-and-security-reasons"><span>Release for transit refused for safety and security reasons</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#declaration-amendment-accepted-rejected"><span>Declaration amendment accepted/rejected</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#cancellation-request-by-the-holder-of-the-transit-procedure-before-release-for-transit"><span>Cancellation request by the holder of the transit procedure before release for transit</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#cancellation-request-by-the-holder-of-the-transit-procedure-after-release-for-transit"><span>Cancellation request by the holder of the transit procedure after release for transit</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#cancellation-of-a-transit-declaration-after-release-for-transit"><span>Cancellation of a transit declaration after release for transit</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#control-by-office-of-departure"><span>Control by office of departure</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#arrival-message-flows"><span>Arrival message flows</span></a>
+        <ul>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#normal-procedure-at-destination"><span>Normal procedure at destination</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#simplified-procedure-at-destination"><span>Simplified procedure at destination</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#rejection-of-arrival-notification"><span>Rejection of arrival notification</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#unloading-permission-received-unloading-remarks"><span>Unloading Permission Received - Unloading Remarks</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#unloading-remarks-rejected"><span>Unloading remarks rejected</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#major-discrepancies-found-during-control-at-the-office-of-destination"><span>Major discrepancies found during control at the office of destination</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#recovery-message-flows"><span>Recovery message flows</span></a>
+        <ul>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#recovery-process"><span>Recovery process</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#recovery-initiation-on-incident-occurrence"><span>Recovery initiation on incident occurrence</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#guarantee-message-flows"><span>Guarantee message flows</span></a>
+        <ul>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#guarantee-query-check"><span>Guarantee query check</span></a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            <h1 id="introduction">Introduction</h1>
+<p>The New Computerised Transit System (NCTS) is a European wide system, based upon electronic declaration and processing, designed to provide better management and control of Union and Common Transit. It involves all countries comprising the EU Member States and all Common Transit Convention contracting countries.</p>
+<p>The NCTS systems of all National Administrations are connected to each other via a central domain in Brussels. This allows the details and progress of a transit movement to be monitored by all actors concerned at every stage.</p>
+<p>The main objectives of the NCTS are:</p>
+
+<ul>
+<li>to increase the efficiency and effectiveness of transit procedures</li>
+<li>to improve both the prevention and detection of fraud</li>
+<li>to accelerate transactions carried out under a transit procedure and to offer security for them</li>
+</ul>
+<p>In order to use the NCTS, traders need the facility to send and receive electronic messages to and from the UK - NCTS. Connected traders receive electronic responses advising of key decisions during both departure and destination, such as:</p>
+
+<ul>
+<li>acceptance of declaration</li>
+<li>release of goods</li>
+<li>notification of discharge of liability, that is the release of the guarantee which is in place thoughout the lifespan of the movement in order to cover the duties at risk during the movement of goods</li>
+</ul>
+<p>Traders cannot interface directly with the NCTS to input or amend data or to access records and reference data, but simply exchange defined structured messages with the system.</p>
+<p>In certain circumstances, where Simplified NCTS Procedures are used by Authorised Consignors/Consignees, processing and release will be automatic and allow, depending upon the conditions of authorisation, for &lsquo;out of hours&rsquo; clearance. This will allow for selective, risk-based controls, and for the processing of declarations and the release of goods to become largely automatic.</p>
+<h2 id="scope">Scope</h2>
+<p>This document gives an overview of the processes involved in the exchange of NCTS messages with traders and defines the messages associated with NCTS, in particular:</p>
+
+<ul>
+<li>the trader’s declaration for Transit and associated Customs response</li>
+<li>control and release of the movement at departure </li>
+<li>the trader’s notification of arrival and associated Customs response</li>
+<li>control and release of the goods at destination</li>
+<li>registration of any incidents that may occur en route</li>
+</ul>
+<p>These messages are developed following the Functional Transit System Specification (FTSS) and Design Documentation for National Transit Application (DDNTA) documents distributed by the EU Commission to National Administrations.</p>
+<h2 id="ncts-reference-data">NCTS Reference Data</h2>
+<p>NCTS holds two types of reference data:</p>
+
+<ul>
+<li>common reference data which is held on a central system known as Common Services Reference Data (CS/RD2) which is applicable to all contracting parties’ NCTS systems. It is used to validate specific fields within trader messages and ensure that they contain acceptable data.</li>
+<li>national reference data which applies locally to the systems of individual countries. This is used to validate traders’ details, guarantee information and any authorisations they may hold when submitted in traders messages.</li>
+</ul>
+<h3 id="cs-rd2">CS/RD2</h3>
+<p>Reference data within CS/RD2 is made of code lists. Each code list provides data which is used for validation against specific fields within declarations submitted by users, and also within intra NCTS system message exchange. The latest CS/RD2 data is released overnight on a daily basis. The most volatile code list contained within CS/RD2 is CL 141 Customs Offices, which holds details of all valid Customs Offices for all Common Transit Convention countries and all the transit functions available per office, such as Office of Departure (DEP), Office of Destination (DES) and Office of Transit (TRA).</p>
+<p>It is essential that any software solution developed for traders retrieves these updates on a daily basis to ensure any validation coded in to the software is synchronised with UK NCTS to prevent unnecessary rejections.</p>
+<h3 id="national-reference-data">National Reference Data</h3>
+<p>This is administered by each National Administration on its own behalf. When a trader applies to use the transit procedure, specific data is captured into NCTS which includes the trader’s name and address, their EORI number, details about guarantees for transit usage that they hold and in the case of Authorised Consignors/Consignees details of their authorised locations and their allocated code numbers. Where these details are used by the trader within their declaration they will be validated against the national reference data held by NCTS.</p>
+<h2 id="uk-ncts">UK NCTS</h2>
+<p>The UK NCTS system is made up of two separate NCTS cores, one processes Great Britain mainland transit movements whilst the other processes transit movements within Northern Ireland.</p>
+<p>The two cores have different modes of operation. The Great Britain mainland NCTS core operates in Common Transit mode. This means that where a rule or condition has different applicability dependent on whether the country of departure/destination/transit is a within the territory of the European Union or a separate Common Transit country, then that rule or condition will be applied to Great Britain mainland as being a common transit country. Conversely, the Northern Ireland NCTS core operates in Union Transit mode meaning that a territory dependent rule or condition will be applied to Northern Ireland as if it were part of EU territory.</p>
+<p>This is an important consideration if you intend to implement any rules or conditions to validate declarations for you or your customers.</p>
+<p>Both cores have entirely separate common and national reference data. As a result of this, the Great Britain mainland and Northern Ireland NCTS services operate with separate country codes:</p>
+
+<ul>
+<li>Great Britain mainland NCTS uses <strong>GB</strong> as its country prefix</li>
+<li>Northern Ireland NCTS uses <strong>XI</strong> as its country prefix</li>
+</ul>
+<p>NCTS needs region specific reference data, such as Customs Office codes, guarantee reference numbers and Economic Operator Registration and Identification (EORI) (also known as the Trader Identification Number) to include the applicable country code.</p>
+<p>Where located in Great Britain mainland, Customs Offices, traders’ EORIs and related guarantees have the GB prefix. For example, Dover port has the office code GB000060.</p>
+<p>Where located in Northern Ireland, Customs Offices, traders EORIs and related guarantees have the XI prefix. For example, the Belfast Entry Process Unit has the office code XI000142.</p>
+<p>Additionally, authorised locations used by Authorised Consignors and Consignees exist only in the NCTS appropriate to their physical location.</p>
+<p>Because authorised location codes are linked to the Authorised Consignor/nees’ EORI, and because EORIs are linked to the procedure holder’s guarantee, the software you develop should allow both the use of GB EORIs and their associated GB guarantee as well as XI EORIs and their associated XI guarantee.</p>
+<p>Despite there being two separate cores in operation, there is only one submission channel used to access UK NCTS. You can submit Great Britain mainland or Northen Ireland messages without the need to add any routing information whatsoever. Your messages will automatically be routed to the correct core by a logic layer embedded in the API.</p>
+<h2 id="access-to-uk-ncts">Access to UK NCTS</h2>
+<p>Traders may exchange XML messages with both NCTS systems via the CTC trader API channel. This allows 3rd party developer software to send and receive arrival and departure notifications using XML language for the message payload. The CTC trader API provides full Great Britain mainland and Northern Ireland integration and a single endpoint for both Great Britain mainland and Northern Ireland declarations.</p>
+<h2 id="liability-amount-for-guarantees">Liability Amount for Guarantees</h2>
+<p>Guarantee usage monitoring in NCTS requires that a liability reference amount is recorded against each guarantee in a declaration.</p>
+<p>Departure declarations submitted by users (IE015 message) can only contain guarantee reference amounts in respect of guarantee types 0,1,2,4 and 9. For all other guarantee types Border Force will enter the reference amount into NCTS manually prior to releasing the movement.</p>
+<p>In exceptional circumstances, where a declarant is unable to determine the guarantee reference amount, the Common Transit Convention allows the amount to be fixed at 10,000 euros for each transit operation.</p>
+<p>If the departure declaration does not contain a guarantee reference amount and guarantee being used is either type 0, 1, 2, 4 or 9, then the system automatically inserts 10,000 euros as the guarantee liability amount.</p>
+<p>This applies in all circumstances except for national transit movements, for example, Great Britain to Great Britain. National transit is not supported by the Common Transit Convention however, UK national legislation allows its usage as a trade facilitation.</p>
+<h2 id="tad-transit-accompanying-document-tsad-transit-security-accompanying-document">TAD (Transit Accompanying Document) / TSAD (Transit Security Accompanying Document)</h2>
+<p>A TSAD is needed for declarations containing safety and security data. A TAD is required for all other declarations. <strong>TADs/TSADs must only be created using information from the IE029 message.</strong></p>
+<p>TADs/TSADs are electronically authenticated by NCTS. This means that the TAD/TSAD does not need to be authenticated by the Office of Departure by stamp. The CT movement is not <strong>legally</strong> released from transit until the IE029 has been generated by Customs and a valid TAD/TSAD subsequently created.</p>
+<p><strong>The TAD/TSAD should only be created using data that has been validated or provided by the NCTS system. This can be achieved by generating the TAD/TSAD direct from the IE029 message either electronically or through printing it manually, or by using data from the IE029 to update a previously created and validated transit record, and then creating the TAD/TSAD from that.</strong></p>
+<p>Traders using the Normal procedure will have the option either to collect the TAD/TSAD from the Office of Departure or to generate the TAD/TSAD at their own premises. Approval to create the TAD/TSAD is granted by the CCTO, to whom the trader’s application must be submitted for consideration. The trader must provide evidence of their ability to create the TAD/TSAD in the required format.
+Traders authorised to use Simplified NCTS Procedures as Authorised Consignors can generate their own TAD/TSAD as part of their authorisation permission.</p>
+<h3 id="fallback-procedure">Fallback procedure</h3>
+<p>Authorised Consignors are obliged to hold special stamps to authenticate documents in case of system failure so they can authorise their own fallback documents. Authorised Consignors additionally require a Commission approved stamp that informs the Office of Destination that fallback has been used.</p>
+<h3 id="manually-printing-tads-tsads">Manually printing TADs/TSADs</h3>
+<p>For the specifications on the printing of a paper TAD, see <strong>Guidelines for printing a TAD</strong> – these are contained in <strong>Part IV, Chapter 2, Annexes 8.1 and 8.2 of the European Commission’s Transit Manual</strong> in the following hyperlink:</p>
+<p>https://ec.europa.eu/taxation_customs/system/files/2021-06/transit_manual_june_2020_en.pdf</p>
+<p>For the specifications on the printing of the paper TSAD, see <strong>Guidelines For Print Out of TSAD, Printing Guidelines for TSAD and TSAD and LoI</strong>.</p>
+<p>The IE029 will specify the number of copies required in the case of a printed TAD/TSAD. If a return copy is required, i.e. in the case HEADER.NCTS return copy is set, then two copies of the TAD/TSAD will be required; if not, only one needs to be printed. The return copy is required when the Office of Destination (OoDest) is not using the NCTS yet.</p>
+<p>The ‘liability amount’ information in the guarantee data group is not printed on the TAD/TSAD.</p>
+<p>If a declaration contains only one goods item, all the information for the movement is included in the TAD. If the declaration contains more than one goods item, all the goods items are included on the LoI (List of Items). However, if the declaration contains safety and security data, the goods item information (even if there is only one goods item) is always included on the TSAD LoI.</p>
+<p>The printer and print driver, used for printing the TAD/TSAD, must be capable of printing a bar code of standard ISO code 128 set B (but not EAN128). 
+The font type is BC C128 Narrow (True Type) version 2.0.</p>
+<h2 id="important-phase-5-terms">Important phase 5 terms</h2>
+<p>The following terms are important to understand in phase 5:</p>
+
+<ul>
+<li><p><strong>Consignment:</strong> The header information is provided and applies to the whole transit declaration (up to 1 Consignment level per declaration).</p></li>
+<li><p><strong>House Consignment:</strong> The lowest transport information is provided, and this applies to all its Consignment Items (each Consignment can contain up to 99 House Consignments).</p>
+<p>The House Consignment level covers information relating to all goods that are subject to the same house transport contract. A house transport contract is a transport contract with a freight forwarder, non-vessel or aircraft operating common carrier or his agent or a postal operator. Where several house transport contracts exist, the information provided in customs declarations, notifications and proof of the customs status as Union Goods should relate to the lowest level of contracts. This is usually the contract concluded by a freight forwarder and the shipper.</p>
+<p>The new House Consignment level is introduced to give more flexibility to the Economic Operators, allowing them to lodge one declaration with several Consignors/Consignees.</p></li>
+<li><p><strong>Consignment Item:</strong> The items information is provided (each House Consignment can contain up to 999 Consignment Items).</p></li>
+</ul>
+
+            
+          </main>
+
+          <aside>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+      <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43414424-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'displayFeaturesTask', null);
+  ga('set', 'transport', 'beacon');
+  ga('set', 'page', location.pathname+location.search+location.hash);
+  ga('send', 'pageview');
+  </script>
+
+    <script src="/guides/ctc-traders-phase5-tis/javascripts/application.js"></script>
+  </body>
+</html>

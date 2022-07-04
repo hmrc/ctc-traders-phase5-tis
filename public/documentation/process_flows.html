@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>NCTS Phase 5 Technical Interface Specification - HMRC Developer Hub</title>
+
+    <link href="/guides/ctc-traders-phase5-tis/stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="docs.developer.service.hmrc.gov.uk/guides/ctc-traders-phase5-tis/documentation/process_flows.html">
+
+      <meta name="description" content="Software developers, designers, product owners or business analysts. Integrate your software with the ERMIS service" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:image" content="docs.developer.service.hmrc.gov.uk/images/govuk-large.png" />
+      <meta name="twitter:title" content="NCTS Phase 5 Technical Interface Specification - HMRC Developer Hub" />
+      <meta name="twitter:url" content="docs.developer.service.hmrc.gov.uk/guides/ctc-traders-phase5-tis/documentation/process_flows.html" />
+
+      <meta property="og:description" content="Software developers, designers, product owners or business analysts. Integrate your software with the ERMIS service" />
+      <meta property="og:image" content="docs.developer.service.hmrc.gov.uk/images/govuk-large.png" />
+      <meta property="og:site_name" content="HMRC Developer Hub" />
+      <meta property="og:title" content="NCTS Phase 5 Technical Interface Specification" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="docs.developer.service.hmrc.gov.uk/guides/ctc-traders-phase5-tis/documentation/process_flows.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="https://developer.service.hmrc.gov.uk/api-documentation" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            class="govuk-header__logotype-crown"
+            xmlns="http://www.w3.org/2000/svg"
+            viewbox="0 0 132 97"
+            height="30"
+            width="36"
+          >
+            <path
+              fill="currentColor" fill-rule="evenodd"
+              d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"
+            ></path>
+            <image src="/assets/images/govuk-logotype-crown.png" xlink:href="" class="govuk-header__logotype-crown-fallback-image" width="36" height="32"></image>
+          </svg>
+          <span class="govuk-header__logotype-text">
+            GOV.UK
+          </span>
+        </span>
+        <span class="govuk-header__product-name">
+          HMRC Developer Hub
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation govuk-header__navigation--end" aria-label="Top Level Navigation">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/guides/ncts-phase5-technical-interface-specification">NCTS Phase 5 Technical Interface Specification</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/api-documentation/docs/using-the-hub">Documentation</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/developer/applications">Applications</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/developer/support">Support</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </a>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents">
+              
+              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
+                      <ul>
+  <li>
+    <a href="/guides/ctc-traders-phase5-tis/"><span>NCTS Phase 5 Technical Interface Specification</span></a>
+    <ul>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/#document-summary"><span>Document summary</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html"><span>Introduction</span></a>
+    <ul>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#scope"><span>Scope</span></a>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#ncts-reference-data"><span>NCTS Reference Data</span></a>
+        <ul>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#cs-rd2"><span>CS/RD2</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#national-reference-data"><span>National Reference Data</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#uk-ncts"><span>UK NCTS</span></a>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#access-to-uk-ncts"><span>Access to UK NCTS</span></a>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#liability-amount-for-guarantees"><span>Liability Amount for Guarantees</span></a>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#tad-transit-accompanying-document-tsad-transit-security-accompanying-document"><span>TAD (Transit Accompanying Document) / TSAD (Transit Security Accompanying Document)</span></a>
+        <ul>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#fallback-procedure"><span>Fallback procedure</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#manually-printing-tads-tsads"><span>Manually printing TADs/TSADs</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/introduction.html#important-phase-5-terms"><span>Important phase 5 terms</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html"><span>Process flows</span></a>
+    <ul>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#functional-errors"><span>Functional errors</span></a>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#pre-lodgement-message-flows"><span>Pre-lodgement message flows</span></a>
+        <ul>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#transit-presentation-notification-valid"><span>Transit presentation notification valid</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#transit-presentation-notification-not-valid"><span>Transit presentation notification not valid</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#corrections-of-the-pre-lodgement-declaration-prior-to-presentation-of-the-goods"><span>Corrections of the pre-lodgement declaration prior to presentation of the goods</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#cancellation-of-the-pre-lodged-declaration-prior-to-the-presentation-of-the-goods"><span>Cancellation of the pre-lodged declaration prior to the presentation of the goods</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#departure-message-flows"><span>Departure message flows</span></a>
+        <ul>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#standard-departure"><span>Standard departure</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#rejection-of-transit-declaration"><span>Rejection of transit declaration</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#release-for-transit-refused-due-to-guarantee-check-failure"><span>Release for transit refused due to guarantee check failure</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#release-for-transit-refused-for-safety-and-security-reasons"><span>Release for transit refused for safety and security reasons</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#declaration-amendment-accepted-rejected"><span>Declaration amendment accepted/rejected</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#cancellation-request-by-the-holder-of-the-transit-procedure-before-release-for-transit"><span>Cancellation request by the holder of the transit procedure before release for transit</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#cancellation-request-by-the-holder-of-the-transit-procedure-after-release-for-transit"><span>Cancellation request by the holder of the transit procedure after release for transit</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#cancellation-of-a-transit-declaration-after-release-for-transit"><span>Cancellation of a transit declaration after release for transit</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#control-by-office-of-departure"><span>Control by office of departure</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#arrival-message-flows"><span>Arrival message flows</span></a>
+        <ul>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#normal-procedure-at-destination"><span>Normal procedure at destination</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#simplified-procedure-at-destination"><span>Simplified procedure at destination</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#rejection-of-arrival-notification"><span>Rejection of arrival notification</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#unloading-permission-received-unloading-remarks"><span>Unloading Permission Received - Unloading Remarks</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#unloading-remarks-rejected"><span>Unloading remarks rejected</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#major-discrepancies-found-during-control-at-the-office-of-destination"><span>Major discrepancies found during control at the office of destination</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#recovery-message-flows"><span>Recovery message flows</span></a>
+        <ul>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#recovery-process"><span>Recovery process</span></a>
+          </li>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#recovery-initiation-on-incident-occurrence"><span>Recovery initiation on incident occurrence</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#guarantee-message-flows"><span>Guarantee message flows</span></a>
+        <ul>
+          <li>
+            <a href="/guides/ctc-traders-phase5-tis/documentation/process_flows.html#guarantee-query-check"><span>Guarantee query check</span></a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            <h1 id="process-flows">Process flows</h1>
+<h2 id="functional-errors">Functional errors</h2>
+<p>It should be noted that the following messages are used to report functional errors:</p>
+
+<ul>
+<li>Rejection from Office of Departure (IE056: E_DEP_REJ);</li>
+<li>Rejection from Office of Destination (IE057: E_DES_REJ).</li>
+</ul>
+<p>A functional error occurs in the following circumstances:</p>
+
+<ul>
+<li>missing required data from an IE message</li>
+<li>IE message completed incorrectly</li>
+<li>missing data group(s)</li>
+<li>data item(s) violates a code list</li>
+<li>out of sequence message(s).</li>
+</ul>
+<h2 id="pre-lodgement-message-flows">Pre-lodgement message flows</h2>
+<h3 id="transit-presentation-notification-valid">Transit presentation notification valid</h3>
+<p><strong>Applicable procedures:</strong> normal and simplified.</p>
+<p>This scenario involves the submission of a valid transit declaration for goods that have not yet been presented to the office of departure.</p>
+<p><img src="../figures/trans_pres_notif_valid.svg" alt="Pre-lodgement message flow with presentation of a valid notification. Flow is described in this section." /></p>
+<p><a href="../figures/trans_pres_notif_valid.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>The process starts when the holder of the transit procedure submits the ‘Declaration Data’ E_DEC_DAT (IE015) message to the office of departure with ‘Additional Declaration Type’ equal to ‘D’.</li>
+<li>The office of departure validates this message successfully and sends the ‘Positive Acknowledgement’ E_POS_ACK (IE928) message to the holder of the transit procedure to acknowledge receipt of the transit declaration.</li>
+<li>Following the result of the risk analysis engine, the office of departure may select the pre-lodged declaration for potential control of the goods prior to their presentation. The following control decisions are possible: 
+
+<ul>
+<li><strong>Yes</strong> (apply control): the office of departure notifies the holder of the transit procedure (provided that they are an Authorised Economic Operator (AEO)) about the intention to potentially control the goods, via the ‘Control Decision Notification’ E_CTR_DEC (IE060) message (having the data element TRANSIT OPERATION-Notification type equal to ‘2-Intention to Control’). Go to step 4.</li>
+<li><strong>No</strong> (no control): Go to step 4.</li>
+</ul></li>
+<li>The office of departure receives a valid ‘Presentation Notification for the Pre-Lodged Declaration’ E_PRE_NOT (IE170) message from the holder of the transit procedure.</li>
+<li>The MRN is communicated to the holder of the transit procedure with message ‘MRN Allocated’ E_MRN_ALL (IE028).</li>
+<li>The ‘Release for Transit’ E_REL_TRA (IE029) message is sent to the holder of the transit procedure.</li>
+<li>The departure process ends.</li>
+</ol>
+<h3 id="transit-presentation-notification-not-valid">Transit presentation notification not valid</h3>
+<p><strong>Applicable procedures:</strong> normal and simplified.</p>
+<p>This scenario involves the submission of an invalid transit declaration for goods that have not yet been presented to the office of departure.</p>
+<p><img src="../figures/trans_pres_notif_not_valid.svg" alt="Pre-lodgement message flow with presentation of a non-valid notification. Flow is described in this section." /></p>
+<p><a href="../figures/trans_pres_notif_not_valid.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>The process starts when the holder of the transit procedure submits the ‘Declaration Data’ E_DEC_DAT (IE015) message to the office of departure with ‘Additional Declaration Type’ equal to ‘D’.</li>
+<li>The office of departure validates this message successfully and sends the ‘Positive Acknowledgement’ E_POS_ACK (IE928) message to the holder of the transit procedure to acknowledge receipt of the transit declaration.</li>
+<li>The office of departure receives an invalid ‘Presentation Notification for the Pre-Lodged Declaration’ E_PRE_NOT (IE170) message from the holder of the transit procedure.</li>
+<li>The office of departure decides to reject the E_PRE_NOT (IE170) message. </li>
+<li>The office of departure notifies the holder of the transit procedure with the ‘Rejection from Office of Departure’ E_DEP_REJ (IE056) message.</li>
+<li>If the time limit expires without the holder of the transit procedure resending a valid ‘Presentation Notification for the Pre-Lodged Declaration’ E_PRE_NOT (IE170) message, the holder of the transit procedure is notified with the message ‘Rejection from Office of Departure’ E_DEP_REJ (IE056) by the office of departure.</li>
+<li>The transit movement ends.</li>
+</ol>
+<h3 id="corrections-of-the-pre-lodgement-declaration-prior-to-presentation-of-the-goods">Corrections of the pre-lodgement declaration prior to presentation of the goods</h3>
+<p><strong>Applicable procedures:</strong> normal and simplified.</p>
+<p>This scenario involves the holder of the transit procedure making corrections to the transit declaration prior to presentation of the goods.</p>
+<p><img src="../figures/correct_pre-lodge_dec_prior_pres_goods.svg" alt="Pre-lodgement message flow with corrections of the pre-lodgement declaration prior to presentation of the goods. Flow is described in this section." /></p>
+<p><a href="../figures/correct_pre-lodge_dec_prior_pres_goods.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>The process starts when the holder of the transit procedure submits the ‘Declaration Data’ E_DEC_DAT (IE015) message to the office of departure with ‘Additional Declaration Type’ equal to ‘D’.</li>
+<li>The office of departure validates this message successfully and sends the ‘Positive Acknowledgement’ E_POS_ACK (IE928) message to the holder of the transit procedure to acknowledge receipt of the transit declaration.</li>
+<li>The holder of the transit procedure decides to correct the transit declaration and submits the ‘Declaration Amendment’ E_DEC_AMD (IE013) message.</li>
+<li>The office of departure performs validation of the IE013 message with one of the following outcomes:
+
+<ul>
+<li><strong>No</strong> (IE013 not valid): The office of departure sends the ‘Rejection from Office of Departure’ E_DEP_REJ (IE056) to the holder of the transit procedure. Go to step 3.</li>
+<li><strong>Yes</strong> (IE013 is valid): The office of departure sends its acceptance to the holder of the transit procedure with the ‘Amendment Acceptance’ E_AMD_ACC (IE004) message. Go to step 5.</li>
+</ul></li>
+<li>Following the result of the Risk Analysis engine, the office of departure may select the pre-lodged declaration for potential control of the goods prior to their presentation. The following outcomes are possible: 
+
+<ul>
+<li><strong>Yes</strong> (apply control): The office of departure notifies the holder of the transit procedure (provided that they are an AEO) about the intention to potentially control the goods, via the ‘Control Decision Notification’ E_CTR_DEC (IE060) message (having the data element TRANSIT OPERATION-Notification type equal to ‘2-Intention to Control’).</li>
+<li><strong>No</strong> (no control): Go to step 6.</li>
+</ul></li>
+<li>The office of departure receives a valid ‘Presentation Notification for the Pre-Lodged Declaration’ E_PRE_NOT (IE170) message from the holder of the transit procedure.</li>
+<li>The MRN is communicated to the holder of the transit procedure with message ‘MRN Allocated’ E_MRN_ALL (IE028).</li>
+<li>The ‘Release for Transit’ E_REL_TRA (IE029) message is sent to the holder of the transit procedure.</li>
+<li>The departure process ends.</li>
+</ol>
+<h3 id="cancellation-of-the-pre-lodged-declaration-prior-to-the-presentation-of-the-goods">Cancellation of the pre-lodged declaration prior to the presentation of the goods</h3>
+<p><strong>Applicable procedures:</strong> normal and simplified.</p>
+<p>This scenario involves the holder of the transit procedure cancelling the pre-lodged transit declaration prior to the presentation of the goods.</p>
+<p><img src="../figures/cancel_pre-lodge_dec.svg" alt="Pre-lodgement message flow with cancellation of the pre-lodgement declaration. Flow is described in this section." /></p>
+<p><a href="../figures/cancel_pre-lodge_dec.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>The process starts when the holder of the transit procedure submits the ‘Declaration Data’ E_DEC_DAT (IE015) message to the office of departure with ‘Additional Declaration Type’ equal to ‘D’.</li>
+<li>The office of departure validates this message successfully and sends the ‘Positive Acknowledgement’ E_POS_ACK (IE928) message to the holder of the transit procedure to acknowledge receipt of the transit declaration.</li>
+<li>The holder of the transit procedure decides to cancel the pre-lodged declaration. </li>
+<li>The holder of the transit procedure sends the ‘Declaration Invalidation Request’ E_DEC_INV (IE014) message to the office of departure.</li>
+<li>Assuming the ‘Declaration Invalidation Request’ E_DEC_INV (IE014) message is valid, the office of departure automatically sends a positive decision to cancel the pre-lodged declaration. The ‘Invalidation Decision’ E_INV_DEC (IE009) is sent to the holder of the transit procedure.</li>
+<li>The transit movement ends.</li>
+</ol>
+<h2 id="departure-message-flows">Departure message flows</h2>
+<h3 id="standard-departure">Standard departure</h3>
+<p><strong>Applicable procedures:</strong> normal and simplified.</p>
+<p>This scenario outlines the basic standard transit procedure at departure when the goods are presented without delay by the holder of the transit procedure.</p>
+<p><img src="../figures/standard_departure.svg" alt="Standard departure message flow. Flow is described in this section." /></p>
+<p><a href="../figures/standard_departure.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>The process starts when the holder of the transit procedure submits a transit declaration to the office of departure with the ‘Declaration Data’ E_DEC_DAT (IE015) message.</li>
+<li>If the transit declaration is valid, the office of departure acknowledges the receipt of the transit declaration with the ‘Positive Acknowledgement’ E_POS_ACK (IE928) message.</li>
+<li>The office of departure communicates the MRN to the holder of the transit procedure with the ‘MRN Allocated’ E_MRN_ALL (IE028) message.</li>
+<li>The ‘Release for Transit’ E_REL_TRA (IE029) message is sent to the holder of the transit procedure.</li>
+<li>The departure process ends.</li>
+</ol>
+<h3 id="rejection-of-transit-declaration">Rejection of transit declaration</h3>
+<p><strong>Applicable procedures:</strong> normal and simplified.</p>
+<p>This scenario shows the case when the transit declaration is rejected.</p>
+<p><img src="../figures/reject_transit_declaration.svg" alt="Rejection of transit declaration. Flow is described in this section." /></p>
+<p><a href="../figures/reject_transit_declaration.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>The process starts when the holder of the transit procedure submits a transit declaration to the office of departure with the ‘Declaration Data’ E_DEC_DAT (IE015) message.</li>
+<li>The office of departure validates the declaration data as invalid and thus rejects it by sending a response to the holder of the transit procedure the ‘Rejection from Office of Departure’ E_DEP_REJ (IE056) message.</li>
+<li>The transit movement ends.</li>
+</ol>
+<h3 id="release-for-transit-refused-due-to-guarantee-check-failure">Release for transit refused due to guarantee check failure</h3>
+<p><strong>Applicable procedures:</strong> normal and simplified.</p>
+<p>This scenario involves the case when the release for transit is refused because the result of the guarantee check is not successful.</p>
+<p><img src="../figures/guarantee_registration_failure.svg" alt="Release for transit refused due to guarantee registration failure. Flow is described in this section." /></p>
+<p><a href="../figures/guarantee_registration_failure.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>The process starts when an IE015 message is sent and an IE928 message is received by the holder of the transit procedure.</li>
+<li>The office of departure communicates the MRN to the holder of the transit procedure with the ‘MRN Allocated’ E_MRN_ALL (IE028) message.</li>
+<li>The holder of the transit procedure is notified that the declared guarantee is not valid with the ‘Guarantee Not Valid’ E_GUA_INV (IE055) message.</li>
+<li>The holder of the transit procedure does not send a ‘Declaration Amendment’ E_DEC_AMD (IE013) within the allowed time period. </li>
+<li>The ‘No Release for Transit’ E_REL_NOT (IE051) message is sent to the holder of the transit procedure.</li>
+<li>The transit movement ends.</li>
+</ol>
+<h3 id="release-for-transit-refused-for-safety-and-security-reasons">Release for transit refused for safety and security reasons</h3>
+<p><strong>Applicable procedures:</strong> normal and simplified.</p>
+<p>This scenario involves the case when the release for transit is refused because of safety and security concerns.</p>
+<p><img src="../figures/release_refused_safety_security.svg" alt="Release for transit refused for safety and security reasons. Flow is described in this section." /></p>
+<p><a href="../figures/release_refused_safety_security.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>The process starts when an IE015 message is sent and an IE928 message is received by the holder of the transit procedure.</li>
+<li>The office of departure communicates the MRN to the holder of the transit procedure with the ‘MRN Allocated’ E_MRN_ALL (IE028) message.</li>
+<li>A risk assessment of the transit declaration identifies a high risk with a threat to safety and security. </li>
+<li>The ‘No Release for Transit’ E_REL_NOT (IE051) message is sent to the holder of the transit procedure.</li>
+<li>The transit movement ends.</li>
+</ol>
+<h3 id="declaration-amendment-accepted-rejected">Declaration amendment accepted/rejected</h3>
+<p><strong>Applicable procedures:</strong> normal and simplified.</p>
+<p>This scenario involves the cases when valid and invalid declaration amendments are made.</p>
+<p><img src="../figures/amendment_accepted_rejected.svg" alt="Declaration amendment accepted/rejected. Flow is described in this section." /></p>
+<p><a href="../figures/amendment_accepted_rejected.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>The process starts when an IE015 message is sent and an IE928 message is received by the holder of the transit procedure.</li>
+<li>The office of departure communicates the MRN to the holder of the transit procedure with the ‘MRN Allocated’ E_MRN_ALL (IE028) message.</li>
+<li>The holder of the transit procedure notifies the office of departure of needed changes to the original declaration with a valid ‘Declaration Amendment’ E_DEC_AMD (IE013) before the goods have been released for transit.</li>
+<li>The office of departure performs validation of the IE013 message with one of the following outcomes:
+
+<ul>
+<li><strong>No</strong> (IE013 not valid): The office of departure sends the ‘Rejection from Office of Departure’ E_DEP_REJ (IE056) to the holder of the transit procedure. Go to step 3.</li>
+<li><strong>Yes</strong> (IE013 is valid): The office of departure sends its acceptance to the holder of the transit procedure with the ‘Amendment Acceptance’ E_AMD_ACC (IE004) message. Go to step 5.</li>
+</ul></li>
+<li>The ‘Release for Transit’ E_REL_TRA (IE029) message is sent to the holder of the transit procedure.</li>
+<li>The departure process ends.</li>
+</ol>
+<h3 id="cancellation-request-by-the-holder-of-the-transit-procedure-before-release-for-transit">Cancellation request by the holder of the transit procedure before release for transit</h3>
+<p><strong>Applicable procedures:</strong> normal and simplified.</p>
+<p>This scenario involves the case when the holder of the transit procedure makes a cancellation request before release for transit.</p>
+<p><img src="../figures/inval_request_before_release.svg" alt="Cancellation request by the holder of the transit procedure before release for transit. Flow is described in this section." /></p>
+<p><a href="../figures/inval_request_before_release.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>The process starts when an IE015 message is sent and an IE928 message is received by the holder of the transit procedure.</li>
+<li>The office of departure communicates the MRN to the holder of the transit procedure with the ‘MRN Allocated’ E_MRN_ALL (IE028) message.</li>
+<li>The holder of the transit procedure decides to cancel the transit declaration and therefore notifies the office of departure with the ‘Declaration Invalidation Request’ E_DEC_INV (IE014) message.</li>
+<li>The office of departure examines the request and replies with the positive decision with the ‘Invalidation Decision’ E_INV_DEC (IE009) message (i.e. “Decision” is set to “1=Yes”).</li>
+<li>The transit movement ends.</li>
+</ol>
+<h3 id="cancellation-request-by-the-holder-of-the-transit-procedure-after-release-for-transit">Cancellation request by the holder of the transit procedure after release for transit</h3>
+<p><strong>Applicable procedures:</strong> normal and simplified.</p>
+<p>This scenario involves the case when the holder of the transit procedure makes a cancellation request after release for transit.</p>
+<p><img src="../figures/inval_request_after_release.svg" alt="Cancellation request by the holder of the transit procedure after release for transit. Flow is described in this section." /></p>
+<p><a href="../figures/inval_request_after_release.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>The process starts when an IE015 message is sent and an IE928 message is received by the holder of the transit procedure.</li>
+<li>The office of departure communicates the MRN to the holder of the transit procedure with the ‘MRN Allocated’ E_MRN_ALL (IE028) message.</li>
+<li>The ‘Release for Transit’ E_REL_TRA (IE029) message is sent to the holder of the transit procedure.</li>
+<li>The holder of the transit procedure decides to cancel the transit declaration and therefore notifies the office of departure with the ‘Declaration Invalidation Request’ E_DEC_INV (IE014) message.</li>
+<li>The office of departure automatically rejects the ‘Declaration Invalidation Request’ E_DEC_INV (IE014) by notifying the holder of the transit procedure with the ‘Rejection from Office of Departure’ E_DEP_REJ (IE056) message containing the error code ’92-Message out of sequence’.</li>
+<li>The movement continues to arrivals.</li>
+</ol>
+<h3 id="cancellation-of-a-transit-declaration-after-release-for-transit">Cancellation of a transit declaration after release for transit</h3>
+<p><strong>Applicable procedures:</strong> normal and simplified.</p>
+<p>This scenario involves the case when a transit declaration is cancelled by Border Force at the office of departure after the goods are released for transit.</p>
+<p><img src="../figures/inval_declar_after_release.svg" alt="Cancellation of a transit declaration after release for transit. Flow is described in this section." /></p>
+<p><a href="../figures/inval_declar_after_release.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>The process starts when an IE015 message is sent and an IE928 message is received by the holder of the transit procedure.</li>
+<li>The office of departure communicates the MRN to the holder of the transit procedure with the ‘MRN Allocated’ E_MRN_ALL (IE028) message.</li>
+<li>The ‘Release for Transit’ E_REL_TRA (IE029) message is sent to the holder of the transit procedure.</li>
+<li>The office of departure decides to cancel the declaration.</li>
+<li>The ‘Invalidation Decision’ E_INV_DEC (IE009) is sent to the holder of the transit procedure.</li>
+<li>The transit movement ends.</li>
+</ol>
+<h3 id="control-by-office-of-departure">Control by office of departure</h3>
+<p><strong>Applicable procedures:</strong> normal and simplified.</p>
+<p>This scenario outlines what happens when the office of departure decides to initiate control on a transit movement.</p>
+<p><img src="../figures/control_with_release.svg" alt="Control by office of departure with release for transit. Flow is described in this section." /></p>
+<p><a href="../figures/control_with_release.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>The process starts when an IE015 message is sent and an IE928 message is received by the holder of the transit procedure.</li>
+<li>The office of departure communicates the MRN to the holder of the transit procedure with the ‘MRN Allocated’ E_MRN_ALL (IE028) message.</li>
+<li>The office of departure sends the ‘Control Decision Notification’ E_CTR_DEC (IE060) message to the holder of the transit procedure to notify about the upcoming control activities (having the data element TRANSIT OPERATION-Notification type equal to ‘0-Decision to Control (and requested documents if needed)’).</li>
+<li>The control activity results in one of the following outcomes:
+
+<ul>
+<li>Control results are satisfactory. Go to step 5. </li>
+<li>Control results are unsatisfactory and the ‘No Release for Transit’ E_REL_NOT (IE051) message is sent to the holder of the transit procedure. The transit movement ends here.</li>
+</ul></li>
+<li>The ‘Release for Transit’ E_REL_TRA (IE029) message is sent to the holder of the transit procedure.</li>
+<li>The departure process ends.</li>
+</ol>
+<h2 id="arrival-message-flows">Arrival message flows</h2>
+<h3 id="normal-procedure-at-destination">Normal procedure at destination</h3>
+<p><strong>Applicable procedures:</strong> normal.</p>
+<p>This scenario outlines the basic standard transit procedure at arrival.</p>
+<p><img src="../figures/standard_arrival.svg" alt="Standard arrival message flow. Flow is described in this section." /></p>
+<p><a href="../figures/standard_arrival.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>Upon arrival of the movement at the office of destination, the trader at destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message.</li>
+<li>The goods are released from transit. The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination.</li>
+<li>The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure at departure.</li>
+<li>The arrivals process ends.</li>
+</ol>
+<h3 id="simplified-procedure-at-destination">Simplified procedure at destination</h3>
+<p><strong>Applicable procedures:</strong> simplified.</p>
+<p>This scenario outlines the scenario when the trader at destination sends an arrival notification E_ARR_NOT (IE007) message under simplified procedure.</p>
+<p><img src="../figures/simplified_arrival.svg" alt="Simplified arrival message flow. Flow is described in this section." /></p>
+<p><a href="../figures/simplified_arrival.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>Upon arrival of the movement at the office of destination, the trader at destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message under simplified procedure (simplified procedure flag = ‘Yes’).</li>
+<li>The office of destination notifies the trader at destination that the unloading of the goods can be started by means of ‘Unloading Permission’ E_ULD_PER (IE043).</li>
+<li>After unloading, the trader at destination sends the ‘Unloading Remarks’ E_ULD_REM (IE044) to the office of destination indicating that the unloading has been completed with no unloading remarks (i.e. the ‘Unloading Remarks’ E_ULD_REM (IE044) message contains the flags Unloading completion = ‘1-Yes’ &amp; Conform = ‘1-Yes’).</li>
+<li>The goods are released from transit. The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination.</li>
+<li>The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure at departure.</li>
+<li>The arrivals process ends.</li>
+</ol>
+<h3 id="rejection-of-arrival-notification">Rejection of arrival notification</h3>
+<p>This scenario outlines what happens when the arrival notification is not valid.</p>
+<p><img src="../figures/reject_arrival.svg" alt="Rejection of arrival notification. Flow is described in this section." /></p>
+<p><a href="../figures/reject_arrival.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>The trader at destination sends the ‘Arrival Notification’ E_ARR_NOT (IE007) to the office of destination. </li>
+<li>NCTS performs validation of this message. The following outcomes are possible:
+
+<ul>
+<li><strong>Yes</strong> (the message is valid). Go to step 5.</li>
+<li><strong>No</strong> (the message is not valid). Go to step 3.</li>
+</ul></li>
+<li>If the ‘Arrival Notification’ E_ARR_NOT (IE007) has been found to be invalid (that is, in terms of message structure and R/Cs), NCTS rejects it.</li>
+<li>The office of destination notifies the trader at destination by sending the ‘Rejection from Office of Destination’ E_DES_REJ (IE057) message. Go to step 1.</li>
+<li>If the ‘Arrival Notification’ E_ARR_NOT (IE007) has been found to be valid (i.e. in terms of message structure and R/Cs), NCTS accepts it.</li>
+<li>The ‘Unloading Permission’ E_ULD_PER (IE043) message is sent to the authorised consignee to allow the unloading at the authorised place.</li>
+<li>The authorised consignee sends the ‘Unloading Remarks’ E_ULD_REM (IE044) message to the office of destination.</li>
+<li>The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination in order to notify them that the transit procedure has ended successfully.</li>
+<li>The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure.</li>
+<li>The arrivals process ends.</li>
+</ol>
+<h3 id="unloading-permission-received-unloading-remarks">Unloading Permission Received - Unloading Remarks</h3>
+<p><strong>Applicable procedures:</strong> simplified.</p>
+<p>This scenario outlines what happens when the authorized consignee sends the
+unloading remarks E_ULD_REM (IE044) message.</p>
+<p><img src="../figures/unload_perm_rec_remarks.svg" alt="Unloading Permission Received - Unloading Remarks. Flow is described in this section." /></p>
+<p><a href="../figures/unload_perm_rec_remarks.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>Upon arrival of the movement at the office of destination, the trader at destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message.</li>
+<li>The ‘Unloading Permission’ E_ULD_PER (IE043) message is sent to the authorised consignee to allow the unloading at the authorised place.</li>
+<li>The authorised consignee sends the ‘Unloading Remarks’ E_ULD_REM (IE044) message to the office of destination.</li>
+<li>If no control is decided, or control results are satisfactory, go to step 7.</li>
+<li>If control is performed at the office of destination and major discrepancies are reported into the destination control results: 
+
+<ol>
+<li>The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination.</li>
+<li>The office of departure notifies the holder of the transit procedure at departure that major discrepancies are reported in the destination control results with the ‘Discrepancies’ E_DIS_SND (IE019) message. Go to step 7.</li>
+</ol></li>
+<li>If unloading is not completed and the office of destination decides to allow unloading to continue:
+
+<ol>
+<li>The office of destination sends a new ‘Unloading Permission’ E_ULD_PER (IE043) message.</li>
+<li>The authorized consignee sends the ‘Unloading Remarks’ E_ULD_REM (IE044) message to the office of destination.</li>
+</ol></li>
+<li>The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination in order to notify them that the transit procedure has ended successfully.</li>
+<li>The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure.</li>
+<li>The arrivals process ends.</li>
+</ol>
+<h3 id="unloading-remarks-rejected">Unloading remarks rejected</h3>
+<p><strong>Applicable procedures:</strong> simplified.</p>
+<p>This scenario outlines what happens when the office of destination rejects an invalid unloading remarks message.</p>
+<p><img src="../figures/unload_remarks_reject.svg" alt="Unloading remarks rejected. Flow is described in this section." /></p>
+<p><a href="../figures/unload_remarks_reject.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>Upon arrival of the movement at the office of destination, the trader at destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message under simplified procedure (simplified procedure flag = ‘Yes’).</li>
+<li>The office of destination notifies the trader at destination that the unloading of the goods can be started by means of ‘Unloading Permission’ E_ULD_PER (IE043).</li>
+<li>The trader at destination sends an ‘Unloading Remarks’ E_ULD_REM (IE044) message to the office of destination.</li>
+<li>The office of destination checks the validity of the message. The following outcomes are possible:
+
+<ul>
+<li><strong>No</strong> (message not valid): The office of destination rejects these remarks by sending back a ‘Rejection from Office of Destination’ E_DES_REJ (IE057) message. Go to step 3.</li>
+<li><strong>Yes</strong> (message is valid): Go to step 5. </li>
+</ul></li>
+<li>The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination in order to notify them that the transit procedure has ended successfully.</li>
+<li>The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure.</li>
+<li>The arrivals process ends.</li>
+</ol>
+<h3 id="major-discrepancies-found-during-control-at-the-office-of-destination">Major discrepancies found during control at the office of destination</h3>
+<p><strong>Applicable procedures:</strong> normal.</p>
+<p>This scenario outlines how major discrepancies found during control at the office of destination are either resolved before expiration of the resolution timer or result in recovery.</p>
+<p><img src="../figures/discrep_res_before_timer_expire.svg" alt="Major Discrepancies found during control at the office of destination - Resolved before the expiration of resolution timer. Flow is described in this section." /></p>
+<p><a href="../figures/discrep_res_before_timer_expire.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>Upon arrival of the movement at the office of destination, the trader at destination announces it by submitting the ‘Arrival Notification’ E_ARR_NOT (IE007) message.</li>
+<li>The office of destination performs control and major discrepancies are reported.</li>
+<li>The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination.</li>
+<li>The office of departure notifies the holder of the transit procedure at departure that major discrepancies are reported in the destination control results with the ‘Discrepancies’ E_DIS_SND (IE019) message.</li>
+<li>The following outcomes are possible:
+
+<ul>
+<li>The major discrepancies are not resolved. Go to step 6.</li>
+<li>The major discrepancies are resolved. Go to step 7.</li>
+</ul></li>
+<li>The competent authority of recovery at departure notifies the holder of the transit procedure with the ‘Recovery Notification’ E_REC_NOT (IE035) message.</li>
+<li>The office of destination sends the ‘Goods Release Notification’ E_GDS_REL (IE025) message to the trader at destination in order to notify them that the transit procedure has ended successfully.</li>
+<li>The office of departure sends the ‘Write-Off Notification’ E_WRT_NOT (IE045) message to the holder of the transit procedure.</li>
+<li>The arrivals process ends.</li>
+</ol>
+<h2 id="recovery-message-flows">Recovery message flows</h2>
+<h3 id="recovery-process">Recovery process</h3>
+<p>This scenario shows the recovery process for non-arrival of goods.</p>
+<p><img src="../figures/recovery_process.svg" alt="Recovery initiation on incident occurrence message flow. Flow is described in this section." /></p>
+<p><a href="../figures/recovery_process.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>The process starts when the ‘Release for Transit’ E_REL_TRA (IE029) message is sent to the holder of the transit procedure.</li>
+<li>The competent authority of recovery at departure notifies the holder of the transit procedure with the ‘Recovery Notification’ E_REC_NOT (IE035) message.</li>
+<li>The ‘Write-off Notification’ E_WRT_NOT (IE045) message is sent to the holder of the transit procedure.</li>
+<li>The transit movement ends.</li>
+</ol>
+<h3 id="recovery-initiation-on-incident-occurrence">Recovery initiation on incident occurrence</h3>
+<p>This scenario shows what happens when the competent authority of recovery at departure
+decides to start recovery due to the occurrence of incidents during the journey of the transit
+movement.</p>
+<p><img src="../figures/recovery_incident.svg" alt="Recovery initiation on incident occurrence message flow. Flow is described in this section." /></p>
+<p><a href="../figures/recovery_incident.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>The process starts when the office of departure forwards the incident information to the holder of the transit procedure through the ‘Forwarded Incident Notification To ED’ E_INC_NOT (IE182) message.</li>
+<li>The officer decides to update the system to recommend recovery due to suspicion of fraud or any other irregularity.</li>
+<li>The competent authority of recovery at departure notifies the holder of the transit procedure with the ‘Recovery Notification’ E_REC_NOT (IE035) message.</li>
+<li>The ‘Write-off Notification’ E_WRT_NOT (IE045) message is sent to the holder of the transit procedure.</li>
+<li>The transit movement ends.</li>
+</ol>
+<h2 id="guarantee-message-flows">Guarantee message flows</h2>
+<h3 id="guarantee-query-check">Guarantee query check</h3>
+<p>This scenario shows how at any point in time, the holder of the transit procedure or the guarantor can make guarantee queries to the Guarantee Management System to check the details of their
+own guarantees even though no MRN may have been allocated to the transit movement yet.</p>
+<p><img src="../figures/guarantee_check.svg" alt="Guarantee query check message flow. Flow is described in this section." /></p>
+<p><a href="../figures/guarantee_check.svg" target="_blank">Open the diagram in a new tab.</a></p>
+
+<ol>
+<li>The holder of the transit procedure sends a JSON guarantee balance request. </li>
+<li>The JSON guarantee balance request is converted internally to an appropriate ‘Query on Guarantees’ E_GUA_QUE (IE034) message, which is sent to the Guarantee Management System. </li>
+<li>The Guarantee Management System replies back internally with the ‘Response Query on Guarantees’ E_GUA_RSP (IE037) message.</li>
+<li>The ‘Response Query on Guarantees’ E_GUA_RSP (IE037) message is converted internally to a JSON guarantee balance response, which is sent to the holder of the transit procedure.</li>
+</ol>
+
+            
+          </main>
+
+          <aside>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+      <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43414424-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'displayFeaturesTask', null);
+  ga('set', 'transport', 'beacon');
+  ga('set', 'page', location.pathname+location.search+location.hash);
+  ga('send', 'pageview');
+  </script>
+
+    <script src="/guides/ctc-traders-phase5-tis/javascripts/application.js"></script>
+  </body>
+</html>
