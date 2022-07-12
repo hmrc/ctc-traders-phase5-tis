@@ -4,7 +4,7 @@ import copy
 
 filename='q2.1.html'
 validMessageTypes = [
-    'IE015', 'IE007', 'IE014', 'IE044'
+    'IE004', 'IE007', 'IE009', 'IE013', 'IE014', 'IE015', 'IE017', 'IE019', 'IE022', 'IE023', 'IE025', 'IE028', 'IE029', 'IE035', 'IE040', 'IE042', 'IE043', 'IE044', 'IE045', 'IE048', 'IE051', 'IE054', 'IE055', 'IE056', 'IE057', 'IE060', 'IE140', 'IE141', 'IE170', 'IE182', 'IE190', 'IE191', 'IE228', 'IE906', 'IE917', 'IE928'
 ]
 
 def findMandatoryIndex(elements):
@@ -251,10 +251,11 @@ def getMessageName(html):
     return html.find('table').findAll('td')[2].text
 
 soup = bs.BeautifulSoup(open(filename).read(), features="html.parser")
+s = ""
 for messageTypeTag in soup.find_all('h1', text=re.compile("2. Message Structure for: (.*)")):
     messageType = messageTypeTag.text[-5:]
     messageNumber = int(messageTypeTag.text[-3:])+3
-    if messageType in validMessageTypes or True:
+    if messageType in validMessageTypes:
         html = bs.BeautifulSoup()
         tag = messageTypeTag.find_next_sibling()
         while tag is not None and not tag.name == 'h1':
@@ -277,10 +278,9 @@ for messageTypeTag in soup.find_all('h1', text=re.compile("2. Message Structure 
         indent(html)
         insertHeadings(html)
         messageName = getMessageName(html)
-        # if messageType not in validMessageTypes:
         #remove second table for Tranche 3 docs release
         html.findAll("table")[1].extract()
-        s = f"# {messageType} {messageName.title()}\n{html.prettify()}"
-        s = f"---\ntitle: NCTS Phase 5 Technical Interface Specification\nweight: {messageNumber}\ndescription: Software developers, designers, product owners or business analysts. Integrate your software with the ERMIS service\n---\n{s}"
-        with open(messageType+".html.md", "w") as file:
-            file.write(s)
+        s = f"{s}\n## {messageType} {messageName.title()}\n{html.prettify()}"
+s = f"---\ntitle: NCTS Phase 5 Technical Interface Specification\nweight: 4\ndescription: Software developers, designers, product owners or business analysts. Integrate your software with the ERMIS service\n---\n#Message types\n<%= partial 'documentation/partials/messagetypeintro' %>\n{s}"
+with open("messagetypes.html.md.erb", "w") as file:
+    file.write(s)
