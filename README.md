@@ -1,4 +1,4 @@
-# CTC Traders - Technicall interface Specification
+# CTC Traders - Technical Interface Specification
 
 ## Getting started
 
