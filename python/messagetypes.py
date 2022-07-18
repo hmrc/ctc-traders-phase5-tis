@@ -4,7 +4,7 @@ import copy
 
 filename='q2.1.html'
 validMessageTypes = [
-    'IE004', 'IE007', 'IE009', 'IE013', 'IE014', 'IE015', 'IE017', 'IE019', 'IE022', 'IE023', 'IE025', 'IE028', 'IE029', 'IE035', 'IE040', 'IE042', 'IE043', 'IE044', 'IE045', 'IE048', 'IE051', 'IE054', 'IE055', 'IE056', 'IE057', 'IE060', 'IE140', 'IE141', 'IE170', 'IE182', 'IE190', 'IE191', 'IE228', 'IE906', 'IE917', 'IE928'
+    'IE004', 'IE007', 'IE009', 'IE013', 'IE014', 'IE015', 'IE017', 'IE019', 'IE022', 'IE023', 'IE025', 'IE028', 'IE029', 'IE035', 'IE040', 'IE042', 'IE043', 'IE044', 'IE045', 'IE048', 'IE051', 'C054', 'C055', 'C056', 'IE057', 'IE060', 'IE140', 'IE141', 'IE170', 'IE182', 'IE190', 'IE191', 'IE228', 'IE906', 'IE917', 'IE928'
 ]
 
 def findMandatoryIndex(elements):
@@ -214,6 +214,8 @@ def insertHeadings(html):
     for p in table.findAll('p'):
         p['style'] = ''
 
+    return name
+
 def swapRepeatMandatory(table):
     for tr in table.findAll('tr'):
         tds = tr.findAll('td')
@@ -231,8 +233,47 @@ def fixRules(html):
 
         for rule in tds[3].text.split(' '):
             if not rule.startswith('CL'):
-                tds[4].string = rule+' '+tds[4].text
-                tds[3].string = tds[3].text.replace(rule, '')
+                tds[4].string = f"{rule} {tds[4].text}"
+                tds[3].string = f"{tds[3].text.replace(rule, '')}"
+
+def fixRepeats(html):
+    ps = html.find_all('p', text=re.compile("^([0-9]x [0-9]x)$|^([0-9]x [0-9]x [0-9]x)$"))
+    for p in ps:
+        for r in p.text.split(' '):
+            new_p = html.new_tag('p')
+            new_p.string = r
+            p.insert_after(new_p)
+        p.extract()
+
+def fixMandatories(html):
+    ps = html.find_all('p', text=re.compile("^(R R)$|^(R R R)$"))
+    for p in ps:
+        for r in p.text.split(' '):
+            new_p = html.new_tag('p')
+            new_p.string = 'R'
+            p.insert_after(new_p)
+        p.extract()
+
+def ruleLinks(html, rules):
+    links = []
+    for rule in rules.split(' '):
+        if rule is not None and rule.strip() != '':
+            a = html.new_tag('a', href=f"rules.html#{rule.lower()}")
+            a.string = rule
+            links.append(a)
+            links.append(html.new_tag('div'))
+    return links
+
+def rulesToLinks(html):
+    table = html.findAll('table')[1]
+    for tr in table.findAll('tr'):
+        tds = tr.findAll('td')
+        rules = tds[3].text
+        tds[3].string = ''
+        tds[3].extend(ruleLinks(html, rules))
+        rules = tds[4].text
+        tds[4].string = ''
+        tds[4].extend(ruleLinks(html, rules))
 
 def indent(html):
     table = html.findAll('table')[1]
@@ -250,12 +291,23 @@ def indent(html):
 def getMessageName(html):
     return html.find('table').findAll('td')[2].text
 
+def getIssueDate(soup):
+    p = soup.find('p', text=re.compile("Issue Date:(.*)"))
+    return p.text.replace("Issue Date:", '').strip()
+
+def getVersion(soup):
+    p = soup.find('p', text=re.compile("Release:(.*)"))
+    return p.text.replace("Release:", '').strip()
+
 soup = bs.BeautifulSoup(open(filename).read(), features="html.parser")
+fixRepeats(soup)
+fixMandatories(soup)
 s = ""
 for messageTypeTag in soup.find_all('h1', text=re.compile("2. Message Structure for: (.*)")):
     messageType = messageTypeTag.text[-5:]
     messageNumber = int(messageTypeTag.text[-3:])+3
     if messageType in validMessageTypes:
+        # print(messageType)
         html = bs.BeautifulSoup()
         tag = messageTypeTag.find_next_sibling()
         while tag is not None and not tag.name == 'h1':
@@ -275,12 +327,25 @@ for messageTypeTag in soup.find_all('h1', text=re.compile("2. Message Structure 
         swapRepeatMandatory(html.findAll('table')[1])
         singleStructure(html)
         fixRules(html)
+        rulesToLinks(html)
         indent(html)
-        insertHeadings(html)
+        code = insertHeadings(html)
         messageName = getMessageName(html)
-        #remove second table for Tranche 3 docs release
-        html.findAll("table")[1].extract()
-        s = f"{s}\n## {messageType} {messageName.title()}\n{html.prettify()}"
-s = f"---\ntitle: NCTS Phase 5 Technical Interface Specification\nweight: 4\ndescription: Software developers, designers, product owners or business analysts. Integrate your software with the ERMIS service\n---\n#Message types\n<%= partial 'documentation/partials/messagetypeintro' %>\n{s}"
+        if code.startswith('CC'):
+            #remove second table for Tranche 3 docs release
+            # html.findAll("table")[1].extract()
+            s = f"{s}\n## {messageType} {messageName.title()}\n{html.prettify()}"
+        # else:
+            # print(f"ignoring {messageType} ({code})")
+    # else:
+        # print(f"ignoring {messageType}")
+
+issueDate = getIssueDate(soup)
+documentVersion = getVersion(soup)
+d = f"---\ntitle: NCTS Phase 5 Technical Interface Specification\nweight: 4\ndescription: Software developers, designers, product owners or business analysts. Integrate your software with the ERMIS service\n---\n"
+d=d+f"#Message types\n"
+d=d+f"Based on document version {documentVersion} and issue date {issueDate}\n"
+d=d+f"<%= partial 'documentation/partials/messagetypeintro' %>\n"
+d=d+s
 with open("messagetypes.html.md.erb", "w") as file:
-    file.write(s)
+    file.write(d)
