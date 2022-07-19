@@ -7,6 +7,10 @@ validMessageTypes = [
     'IE004', 'IE007', 'IE009', 'IE013', 'IE014', 'IE015', 'IE017', 'IE019', 'IE022', 'IE023', 'IE025', 'IE028', 'IE029', 'IE035', 'IE040', 'IE042', 'IE043', 'IE044', 'IE045', 'IE048', 'IE051', 'C054', 'C055', 'C056', 'IE057', 'IE060', 'IE140', 'IE141', 'IE170', 'IE182', 'IE190', 'IE191', 'IE228', 'IE906', 'IE917', 'IE928'
 ]
 
+ignoredFields = [
+    'Message sender'
+]
+
 def findMandatoryIndex(elements):
     for i in range(len(elements)):
         if re.match("^(M|O|R)$", elements[i]):
@@ -204,10 +208,8 @@ def insertHeadings(html):
     td.string = 'Format / Max Repeat'
     tr.append(td)
     td = html.new_tag('th')
-    td.string = 'Transition Rules'
-    tr.append(td)
     td = html.new_tag('th')
-    td.string = 'Business Rules'
+    td.string = 'Rules'
     tr.append(td)
     for td in table.findAll('td'):
         td['style'] = ''
@@ -235,6 +237,7 @@ def fixRules(html):
             if not rule.startswith('CL'):
                 tds[4].string = f"{rule} {tds[4].text}"
                 tds[3].string = f"{tds[3].text.replace(rule, '')}"
+        tds[3].extract() #remove CL column
 
 def fixRepeats(html):
     ps = html.find_all('p', text=re.compile("^([0-9]x [0-9]x)$|^([0-9]x [0-9]x [0-9]x)$"))
@@ -271,22 +274,22 @@ def rulesToLinks(html):
         rules = tds[3].text
         tds[3].string = ''
         tds[3].extend(ruleLinks(html, rules))
-        rules = tds[4].text
-        tds[4].string = ''
-        tds[4].extend(ruleLinks(html, rules))
 
 def indent(html):
     table = html.findAll('table')[1]
     indent = '--'
     for tr in table.findAll('tr'):
         name = tr.find('td').text
-        if name == 'MESSAGE':
-            indent = '--'
-        elif name.startswith('-'):
-            count = name.count('-')
-            indent = '-' * (count+2)
+        if name.strip() in ignoredFields:
+            tr.extract()
         else:
-            tr.find('td').string = indent+name
+            if name == 'MESSAGE':
+                indent = '--'
+            elif name.startswith('-'):
+                count = name.count('-')
+                indent = '-' * (count+2)
+            else:
+                tr.find('td').string = indent+name
 
 def getMessageName(html):
     return html.find('table').findAll('td')[2].text
