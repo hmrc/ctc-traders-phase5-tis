@@ -202,12 +202,14 @@ def insertHeadings(html):
     td.string = 'Field Name'
     tr.append(td)
     td = html.new_tag('th')
-    td.string = 'Required'
+    td.string = 'Priority'
     tr.append(td)
     td = html.new_tag('th')
     td.string = 'Format / Max Repeat'
     tr.append(td)
     td = html.new_tag('th')
+    td.string = 'Code Lists'
+    tr.append(td)
     td = html.new_tag('th')
     td.string = 'Rules'
     tr.append(td)
@@ -237,7 +239,6 @@ def fixRules(html):
             if not rule.startswith('CL'):
                 tds[4].string = f"{rule} {tds[4].text}"
                 tds[3].string = f"{tds[3].text.replace(rule, '')}"
-        tds[3].extract() #remove CL column
 
 def fixRepeats(html):
     ps = html.find_all('p', text=re.compile("^([0-9]x [0-9]x)$|^([0-9]x [0-9]x [0-9]x)$"))
@@ -271,9 +272,9 @@ def rulesToLinks(html):
     table = html.findAll('table')[1]
     for tr in table.findAll('tr'):
         tds = tr.findAll('td')
-        rules = tds[3].text
-        tds[3].string = ''
-        tds[3].extend(ruleLinks(html, rules))
+        rules = tds[4].text
+        tds[4].string = ''
+        tds[4].extend(ruleLinks(html, rules))
 
 def indent(html):
     table = html.findAll('table')[1]
