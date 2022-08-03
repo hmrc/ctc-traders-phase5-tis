@@ -5,13 +5,22 @@ import json
 def findTextUntil(startTag, endRegex):
     s = ''
     tag = startTag
+
     while tag is not None:
+        
+
         if re.match(endRegex, tag.text):
             s = s+tag.text.replace("Functional Description", "")
-            return s.replace('<', "[").replace('>', "]").strip()
+            if (len(s) != 0):
+                s = s.replace("IF", "  \r\n  \r\nIF")
+            s = s.replace("*","&#42;")
+            s = s.replace('<', "&lt;").replace('>', "&gt;").strip()
+            return s
         else:
             s = s + tag.text
+            s = s + "  \r\n"
             tag = tag.findNext('p')
+
     return s
 
 def findFuncHeaderTag(startTag, endRegex):
@@ -36,13 +45,17 @@ filename='q2.1.html'
 soup = bs.BeautifulSoup(open(filename).read(), features="html.parser")
 functionalHeader = re.compile("(.*)Functional Description:(.*)")
 technicalHeader = re.compile("(.*)Technical Description:(.*)")
+
 rules = []
+
 for techDescHeaderTag in soup.findAll('p', text=technicalHeader):
+    ruleName = techDescHeaderTag.text.split()[0]
     technical = findTextUntil(techDescHeaderTag, functionalHeader)
     funcDescHeaderTag = findFuncHeaderTag(techDescHeaderTag, functionalHeader)
     functional = findTextUntil(funcDescHeaderTag, technicalHeader)
+
     rules.append( {
-        'name': techDescHeaderTag.text.split()[0],
+        'name': ruleName,
         'rules': {
             'technical': removeHeader(technical),
             'functional': removeHeader(functional)
