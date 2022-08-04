@@ -1,3 +1,4 @@
+import math
 
 ignoredFields = [
     'Message sender'
@@ -87,19 +88,22 @@ def ruleLinks(html, rules):
 # Indent message elements in rows ====
 def indent(html):
     table = html.findAll('table')[1]
-    indent = '--'
+    prefix = ''
     for tr in table.findAll('tr'):
-        name = tr.find('td').text
+        td = tr.find('td')
+        name = td.text
+        td.string = name.replace('---', '- ').strip()
         if name.strip() in ignoredFields:
             tr.extract()
         else:
             if name == 'MESSAGE':
-                indent = '--'
-            elif name.startswith('-'):
-                count = name.count('-')
-                indent = '-' * (count+2)
+                # Top level so child fields must start with a single -
+                prefix = '- '
+            elif name.startswith('--'):
+                level = math.floor(name.count('-')/3)
+                prefix = ('- ' * (level+1))
             else:
-                tr.find('td').string = indent+name
+                tr.find('td').string = prefix+name
 
 
 # Insert Headings for tables ====
