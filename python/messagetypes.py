@@ -37,7 +37,8 @@ def getVersion(soup):
 soup = bs.BeautifulSoup(open(filename).read(), features="html.parser")
 fixRepeats(soup)
 fixMandatories(soup)
-htmlStr = ""
+
+messageTypes = []
 
 # Iterate round each message type
 for messageTypeTag in soup.find_all('h1', text=re.compile("2. Message Structure for: (.*)")):
@@ -46,7 +47,11 @@ for messageTypeTag in soup.find_all('h1', text=re.compile("2. Message Structure 
 
     if messageType in validMessageTypes:
         message = messages.MessageSection(messageType)
-        htmlStr = f"{htmlStr}\n{message.process(messageTypeTag)}"
+        htmlStr = f"{message.process(messageTypeTag)}"
+        messageTypes.append(messageType)
+        with open(f"_{messageType}.md", "w") as file:
+            file.write(htmlStr)
+
     else:
         print(f"Ignoring message: {messageType}")
 
@@ -58,7 +63,8 @@ doc = f"---\ntitle: NCTS Phase 5 Technical Interface Specification\nweight: 4\nd
 doc = doc + f"#Message types\n"
 doc = doc + f"Based on document version {documentVersion} and issue date {issueDate}\n"
 doc = doc + f"<%= partial 'documentation/partials/messagetypeintro' %>\n"
-doc = doc + htmlStr
+for messageType in messageTypes:
+    doc = doc + f"<%= partial 'documentation/partials/{messageType}' %>\n"
 
 with open("messagetypes.html.md.erb", "w") as file:
     file.write(doc)
