@@ -1,6 +1,9 @@
 import csv
 from html import escape
 
+def format(text):
+    return text.replace('<', '&lt;').replace('>', '&gt;').replace('\n', '<br/>').replace('•', '- ')
+
 with open('q2.csv', newline='') as csvfile:
     reader = csv.reader(csvfile, delimiter=',', quotechar='"')
     with open("rules.html.md.erb", "w") as writer:
@@ -17,6 +20,6 @@ Based on document version 5.15.0-v0.10 and issue date 04/03/2022
             if row[0].isdigit():
                 writer.write(f"##{row[1]}\n\n")
                 writer.write(f"###Functional Description\n\n")
-                writer.write(f"{escape(row[2])}\n\n")
+                writer.write(f"{format(row[2])}\n\n")
                 writer.write(f"###Technical Description\n\n")
-                writer.write(f"{escape(row[3])}\n\n")
+                writer.write(f"{format(row[3])}\n\n")
