@@ -128,11 +128,16 @@ def createTableHeader(html, tr, title):
 
 def clearCellStyle(table):
     for td in table.findAll('td'):
-        td['style'] = ''
+        del td['style']
 
 def clearParagraphStyle(table):
     for p in table.findAll('p'):
-        p['style'] = ''
+        del p['style']
+
+def removeEmptyDivs(table):
+    for div in table.findAll('div'):
+        if div.text.strip() == '':
+            div.extract()
 
 # Message Header Table ========
 def messageHeaderTableHeadings(html, table, tr, name, xmlCell):
@@ -152,6 +157,7 @@ def messageHeaderTableHeadings(html, table, tr, name, xmlCell):
 
     clearCellStyle(table)
     clearParagraphStyle(table)
+    removeEmptyDivs(table)
 
 # Message details Table ========
 def messageDetailsTableHeadings(html, table):
