@@ -129,6 +129,9 @@ def createTableHeader(html, tr, title):
 def clearCellStyle(table):
     for td in table.findAll('td'):
         del td['style']
+    for tr in table.findAll('tr'):
+        del tr['style']
+    del table['style']
 
 def clearParagraphStyle(table):
     for p in table.findAll('p'):
