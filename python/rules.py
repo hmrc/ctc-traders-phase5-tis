@@ -19,7 +19,7 @@ Based on document version 5.15.0-v0.10 and issue date 04/03/2022
         for row in reader:
             if row[0].isdigit():
                 writer.write(f"##{row[1]}\n\n")
-                writer.write(f"###Functional Description\n\n")
+                writer.write(f"<b>Functional Description</b>\n\n")
                 writer.write(f"{format(row[2])}\n\n")
-                writer.write(f"###Technical Description\n\n")
+                writer.write(f"<b>Technical Description</b>\n\n")
                 writer.write(f"{format(row[3])}\n\n")
