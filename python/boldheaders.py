@@ -9,7 +9,6 @@ for filename in os.listdir(folder):
     for tr in soup.findAll('tr'):
         tds = tr.findAll('td')
         if len(tds) > 3 and r.match(tds[2].text.strip()):
-            print(str(tr))
             tds[0].string.wrap(soup.new_tag("b"))
     with open(filename, "w") as file:
         file.write(str(soup))
