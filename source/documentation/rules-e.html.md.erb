@@ -1,0 +1,218 @@
+---
+title: NCTS Phase 5 Technical Interface Specification
+weight: 7
+description: Software developers, designers, product owners or business analysts. Integrate your software with the ERMIS service
+---
+#Rules E
+Based on document version 5.15.0-v0.10 and issue date 04/03/2022
+<%= partial 'documentation/partials/rulesintro' %>
+##E1101
+
+<b>Functional Description</b>
+
+N/A
+
+<b>Technical Description</b>
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; <br/>THEN /*/RiskAnalysisIdentification/RiskAnalysis/RiskAnalysisResult/code<br/>format shall be set to an..5
+
+##E1102
+
+<b>Functional Description</b>
+
+N/A
+
+<b>Technical Description</b>
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; THEN<br/>/*/HolderOfTheTransitProcedure/Address/postcode AND<br/>/*/Consignment/Consignor/Address/postcode AND<br/>/*/Consignment/Consignee/Address/postcode AND<br/>/*/Consignment/LocationOfGoods/Address/postcode AND<br/>/*/Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/postcode AND<br/>/*/Consignment/ConsigneeActual/Address/postcode AND<br/>/*/GuaranteeReference/Guarantor/Address/postcode<br/><br/>format shall be set to an..9
+
+##E1103
+
+<b>Functional Description</b>
+
+N/A
+
+<b>Technical Description</b>
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; THEN <br/>/*/Consignment/ActiveBorderTransportMeans/identificationNumber AND<br/>/*/Consignment/DepartureTransportMeans/identificationNumber AND<br/>/CD038C/Consignment/Incident/Transhipment/TransportMeans/ identificationNumber<br/><br/>format shall be set to an..27
+
+##E1104
+
+<b>Functional Description</b>
+
+N/A
+
+<b>Technical Description</b>
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/>/*/HolderOfTheTransitProcedure/name AND<br/>/*/HolderOfTheTransitProcedure/Address/streetAndNumber AND<br/>/*/GuaranteeReference/Guarantor/name AND<br/>/*/GuaranteeReference/Guarantor/Address/streetAndNumber AND<br/>/*/Consignment/Consignor/name AND<br/>/*/Consignment/Consignor/Address/streetAndNumber AND<br/>/*/Consignment/Consignee/name AND<br/>/*/Consignment/Consignee/Address/streetAndNumber AND<br/>/*/Consignment/LocationOfGoods/Address/streetAndNumber AND<br/>/*/Consignment/ActiveBorderTransportmeans/conveyanceReferenceNumber AND<br/>/*/Consignment/HouseConsignment/ConsignmentItem/Consignee/name AND<br/>/*/Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/streetAndNumber AND<br/>/*/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/referenceNumber AND<br/>/*/Consignment/HouseConsignment/ConsignmentItem/SupportingDocument/referenceNumber AND<br/>/*/Consignment/HouseConsignment/ConsignmentItem/TransportDocument/referenceNumber AND<br/>/*/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/referenceNumber <br/>format shall be set to an..35<br/><br/>
+
+##E1105
+
+<b>Functional Description</b>
+
+N/A
+
+<b>Technical Description</b>
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN <br/>/*/Consignment/HouseConsignment/ConsignmentItem/Packaging/shippingMarks<br/><br/>format shall be set to an..42
+
+##E1107
+
+<b>Functional Description</b>
+
+N/A
+
+<b>Technical Description</b>
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN <br/>/*/Consignment/HouseConsignment/ConsignmentItem/Commodity/descriptionOfGoods<br/><br/>format shall be set to an..280
+
+##E1109
+
+<b>Functional Description</b>
+
+N/A
+
+<b>Technical Description</b>
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/>/*/Consignment/grossMass AND<br/>/*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass AND<br/>/*/Consignment/HouseConsignment/ConsignmentItem/ Commodity/GoodsMeasure/netMass<br/>format shall be set to n..11,3
+
+##E1111
+
+<b>Functional Description</b>
+
+N/A
+
+<b>Technical Description</b>
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN <br/>/*/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages<br/><br/>format shall be set to n..5
+
+##E1114
+
+<b>Functional Description</b>
+
+N/A
+
+<b>Technical Description</b>
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/>/*/Consignment/PlaceOfLoading/location <br/><br/>format shall be set to an..17
+
+##E1115
+
+<b>Functional Description</b>
+
+N/A
+
+<b>Technical Description</b>
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; <br/>THEN <br/>/*/Enquiry/text AND <br/>/*/Recovery/text AND <br/>/*/ResponseInformation/text AND <br/>/*/RequestedInformation/text AND <br/>/*/FunctionalError/originalAttributeValue <br/>format shall be set to an..140 
+
+##E1116
+
+<b>Functional Description</b>
+
+N/A
+
+<b>Technical Description</b>
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/>/*/TransitOperation/cancelEnquiryNotificationText AND<br/>/*/RiskAnalysisIdentification/RiskAnalysis/RiskAnalysisResult/text <br/>format shall be set to an...350<br/><br/>
+
+##E1117
+
+<b>Functional Description</b>
+
+N/A
+
+<b>Technical Description</b>
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/>/*/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/complementOfInformation<br/>/*/Consignment/HouseConsignment/ConsignmentItem/SupportingDocument/complementOfInformation<br/><br/>format shall be set to an..26.<br/>
+
+##E1118
+
+<b>Functional Description</b>
+
+N/A
+
+<b>Technical Description</b>
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/>/*/Guarantee/GuaranteeReference/accessCode<br/><br/>format shall be set to an4<br/><br/>
+
+##E1119
+
+<b>Functional Description</b>
+
+N/A
+
+<b>Technical Description</b>
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/>/CD906C/FunctionalError/errorPointer<br/>format shall be set to an..210
+
+##E1121
+
+<b>Functional Description</b>
+
+N/A
+
+<b>Technical Description</b>
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; <br/>THEN /*/Guarantee/GuaranteeReference/amountConcerned<br/><br/>format shall be set to n..15,2
+
+##E1301
+
+<b>Functional Description</b>
+
+N/A
+
+<b>Technical Description</b>
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/>/*/Consignment/PreviousDocument AND<br/>/*/Consignment/SupportingDocument AND<br/>/*/Consignment/TransportDocument AND<br/>/*/Consignment/AdditionalReference AND<br/>/*/Consignment/AdditionalInformation AND<br/>/*/Consignment/HouseConsignment/countryOfDispatch AND<br/>/*/Consignment/HouseConsignment/referenceNumberUCR AND<br/>/*/Consignment/HouseConsignment/Consignor AND<br/>/*/Consignment/HouseConsignment/Consignee AND<br/>/*/Consignment/HouseConsignment/DepartureTransportMeans AND<br/>/*/Consignment/ HouseConsignment/PreviousDocument AND<br/>/*/Consignment/HouseConsignment/SupportingDocument AND<br/>/*/Consignment/HouseConsignment/TransportDocument AND<br/>/*/Consignment/HouseConsignment/AdditionalReference AND<br/>/*/Consignment/HouseConsignment/AdditionalInformation AND<br/>/*/Consignment/HouseConsignment/TransportCharges AND<br/>/*/GuaranteeReference/Guarantor/AgentInCountryOfCompetentAuthority <br/><br/>shall not be used<br/>
+
+##E1401
+
+<b>Functional Description</b>
+
+N/A
+
+<b>Technical Description</b>
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/> /*/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument <br/>multiplicity shall be set to '9x'
+
+##E1402
+
+<b>Functional Description</b>
+
+N/A
+
+<b>Technical Description</b>
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/> /*/FunctionalError<br/> /*/RiskAnalysisIdentification/RiskAnalysis<br/><br/>multiplicity shall be set to '999x'
+
+##E1403
+
+<b>Functional Description</b>
+
+N/A
+
+<b>Technical Description</b>
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/> /*/Consignment/HouseConsignment/ConsignmentItem<br/><br/>multiplicity shall be set to '99x'<br/>
+
+##E1406
+
+<b>Functional Description</b>
+
+N/A
+
+<b>Technical Description</b>
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/>/*/RiskAnalysisIdentification/RiskAnalysis/RiskAnalysisResult AND<br/>/*/Consignment/ActiveBorderTransportMeans AND<br/>/*/Consignment/HouseConsignment AND<br/>/*/Consignment/HouseConsignment/ConsignmentItem/Commodity/DangerousGoods<br/>multiplicity shall be set to '1x'
+
+##E1407
+
+<b>Functional Description</b>
+
+N/A
+
+<b>Technical Description</b>
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; <br/>THEN<br/>for each Goods Item, the cumulated number of all instances of<br/>/*/Consignment/HouseConsignment/ConsignmentItem/SupportingDocument AND /*/Consignment/HouseConsignment/ConsignmentItem/TransportDocument AND /*/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference <br/>shall be LESS OR EQUAL to 99x<br/>
+
