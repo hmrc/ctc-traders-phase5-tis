@@ -1,4 +1,7 @@
 import csv
+import re
+import bs4 as bs
+import os
 
 def format(text):
     return text.replace('<', '&lt;').replace('>', '&gt;').replace('\n', '<br/>').replace('•', '- ')
@@ -29,3 +32,15 @@ with open('q2.csv', newline='') as csvfile:
                 writer.write(f"{format(row[2])}\n\n")
                 writer.write(f"<b>Technical Description</b>\n\n")
                 writer.write(f"{format(row[3])}\n\n")
+
+folder = os.getcwd()+'/../source/documentation/partials/'
+for filename in os.listdir(folder):
+    soup = bs.BeautifulSoup(open(folder+filename).read(), features="html.parser")
+    for a in soup.findAll('a', href = re.compile(r'rules.html#.*')):
+        href = a['href']
+        rule = href.split('#')[1]
+        href = href.replace('rules.html', f"rules-{rule[0]}.html")
+        a['href'] = href
+
+    with open(filename, 'wt') as writer:
+        writer.write(str(soup))
