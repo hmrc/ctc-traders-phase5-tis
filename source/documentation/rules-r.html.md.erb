@@ -6,26 +6,6 @@ description: Software developers, designers, product owners or business analysts
 #Rules R
 Based on document version 5.15.0-v0.10 and issue date 04/03/2022
 <%= partial 'documentation/partials/rulesintro' %>
-##R0001
-
-<b>Functional Description</b>
-
-Each &lt;CD144C-RESPONSE INFORMATION.Information code&gt; can only be used once per message
-
-<b>Technical Description</b>
-
-Each /CD144C/ResponseInformation/informationCode can only be used once per message
-
-##R0002
-
-<b>Functional Description</b>
-
-The same value of the Data Item &lt;CD145C-REQUESTED INFORMATION.Code&gt; shall be used only once in a message &lt;CD145C-ENQUIRY INFORMATION REQUEST&gt;
-
-<b>Technical Description</b>
-
-The same value of the Data Item /CD145C/RequestedInformation/code shall be used only once in a message /CD145C/EnquiryInformationRequest
-
 ##R0003
 
 <b>Functional Description</b>
@@ -85,16 +65,6 @@ Each /*/Consignment/HouseConsignment/ConsignmentItem/declarationGoodsItemNumber 
 <b>Technical Description</b>
 
 /*/correlationIdentifier shall be EQUAL to the /*/messageIdentification of the request/rejected message.
-
-##R0019
-
-<b>Functional Description</b>
-
-IF &lt;CUSTOMS OFFICE OF DESTINATION&gt; is PRESENT <br/>THEN &lt;TRANSIT OPERATION.Status&gt;is in SET CL154 (StateAtOfficeOfDestination)<br/>ELSE IF &lt;CUSTOMS OFFICE OF TRANSIT&gt; is PRESENT <br/>THEN &lt;TRANSIT OPERATION.Status&gt;is in SET CL155 (StateAtOfficeOfTransit)<br/>ELSE IF &lt;CUSTOMS OFFICE OF EXIT FOR TRANSIT&gt; is PRESENT <br/>THEN &lt;TRANSIT OPERATION.Status&gt;is in SET CL186 (StateAtOfficeOfExitForTransit)
-
-<b>Technical Description</b>
-
-IF /*/CustomsOfficeOfDestination is PRESENT <br/>THEN /*/TransitOperation/status is in SET CL154<br/>ELSE IF /*/CustomsOfficeOfTransit is PRESENT <br/>THEN /*/TransitOperation/status is in SET CL155<br/>ELSE IF /*/CustomsOfficeOfExitForTransit is PRESENT <br/>THEN /*/TransitOperation/status is in SET CL186
 
 ##R0020
 
@@ -255,36 +225,6 @@ IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-COMMODITY-GOODS MEASURE.Gr
 <b>Technical Description</b>
 
 IF /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass is GREATER THAN ‘0’ (zero)<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass must be LESS THAN OR EQUAL to /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass.
-
-##R0261
-
-<b>Functional Description</b>
-
-IF Guarantee type is in SET {2, 4}<br/>THEN &lt;GUARANTEE REFERENCE-GUARANTEE QUERY.Query identifier&gt; is in SET {1, 4}
-
-<b>Technical Description</b>
-
-IF Guarantee type is in SET {2, 4}<br/>THEN /*/GuaranteeReference/GuaranteeQuery/queryIdentifier is in SET {1, 4}
-
-##R0263
-
-<b>Functional Description</b>
-
-The Data Item can be used only with Guarantee types ‘0’ (guarantee waiver), ‘1’ (comprehensive guarantee) or ‘9’ (Individual guarantee with multiple usage), with either Query Identifier ‘1’ (usage only) or ‘3’ (usage and exposure)
-
-<b>Technical Description</b>
-
-The Data Item can be used only with Guarantee types ‘0’ (guarantee waiver), ‘1’ (comprehensive guarantee) or ‘9’ (Individual guarantee with multiple usage), with either Query Identifier ‘1’ (usage only) or ‘3’ (usage and exposure)
-
-##R0267
-
-<b>Functional Description</b>
-
-The currency used for the amount concerned is always ‘EUR’
-
-<b>Technical Description</b>
-
-The currency used for the amount concerned is always ‘EUR’
 
 ##R0315
 
@@ -466,36 +406,6 @@ IF the D.G. &lt;CC190C-CONSIGNMENT-LOCATION OF GOODS-ADDRESS&gt; is PRESENT<br/>
 
 IF the D.G. /CC190C/Consignment/LocationOfGoods/Address is PRESENT<br/>THEN /CC190C/Consignment/LocationOfGoods/Address/country shall be EQUAL to the first two characters of /CC190C/CustomsOfficeOfDeparture/referenceNumber<br/>ELSE<br/>IF the D.G. /CC190C/Consignment/LocationOfGoods/PostcodeAddress is PRESENT<br/>THEN /CC190C/Consignment/LocationOfGoods/PostcodeAddress/country shall be EQUAL to the first two characters of /CC190C/CustomsOfficeOfDeparture/referenceNumber.
 
-##R0516
-
-<b>Functional Description</b>
-
-Values of &lt;COUNTRY-ACTION-UNAVAILABILITY.Type&gt; shall be identical throughout the message (i.e: same value in all the repetitions of the "Unavailability" group).
-
-<b>Technical Description</b>
-
-Values of /*/Country/Action/Unavailability/type shall be identical throughout the message (i.e: same value in all the repetitions of the "Unavailability" group).
-
-##R0518
-
-<b>Functional Description</b>
-
-For each &lt;COUNTRY.Country&gt; only 1 occurrence of the &lt;COUNTRY-ACTION-UNAVAILABILITY&gt; having the same &lt;COUNTRY-ACTION-UNAVAILABILITY.Functionality&gt; AND &lt;COUNTRY-ACTION-UNAVAILABILITY.Start date and time&gt; AND &lt;COUNTRY-ACTION-UNAVAILABILITY.Type&gt; is allowed.
-
-<b>Technical Description</b>
-
-For each /*/Country/country only 1 occurrence of the /*/Country/Action/Unavailability having the same /*/Country/Action/Unavailability/functionality AND /*/Country/Action/Unavailability/startDateAndTime AND /*/Country/Action/Unavailability/type is allowed.
-
-##R0519
-
-<b>Functional Description</b>
-
-Within a single &lt;COUNTRY-ACTION-UNAVAILABILITY&gt; the &lt;COUNTRY-ACTION-UNAVAILABILITY.Start date and time&gt; must be prior to the &lt;COUNTRY-ACTION-UNAVAILABILITY.End date and time&gt;
-
-<b>Technical Description</b>
-
-Within a single /*/Country/Action/Unavailability the /*/Country/Action/Unavailability/startDateAndTime must be prior to the /*/Country/Action/Unavailability/endDateAndTime
-
 ##R0520
 
 <b>Functional Description</b>
@@ -525,16 +435,6 @@ IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL REFERENCE.Type&
 <b>Technical Description</b>
 
 IF /*/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/type is in SET CL234 (DocumentTypeExcise)<br/>(i.e. Export of excise goods followed by transit (EMCS&AES+NCTS))<br/>THEN<br/>IF /*/Consignment/HouseConsignment/ConsignmentItem/declarationType is <br/>PRESENT<br/>     THEN (/*/Consignment/HouseConsignment/ConsignmentItem/declarationType is<br/>      EQUAL to ‘T1’ AND /*/Consignment/HouseConsignment/PreviousDocument/type <br/>      is EQUAL to ‘N830’)<br/>ELSE (/*/TransitOperation/declarationType is in SET {‘T1’, ‘TIR’}  <br/>AND /*/Consignment/HouseConsignment/PreviousDocument/type is EQUAL to ‘N830’);<br/>IF /*/Consignment/HouseConsignment/ConsignmentItem/SupportingDocument/type is in SET CL234 (DocumentTypeExcise)<br/>(i.e. Transit movement of EU goods under excise suspension (EMCS+NCTS))<br/>THEN<br/>IF /*/Consignment/HouseConsignment/ConsignmentItem/declarationType is PRESENT<br/>      THEN /*/Consignment/HouseConsignment/ConsignmentItem/declarationType is in <br/>      SET {T2, T2F}<br/>ELSE /*/TransitOperation/declarationType is in SET {T2, T2F}
-
-##R0705
-
-<b>Functional Description</b>
-
-&lt;GUARANTEE REFERENCE-GUARANTEE QUERY.Period to date&gt; must be posterior to &lt;GUARANTEE REFERENCE-GUARANTEE QUERY.Period from date&gt;.
-
-<b>Technical Description</b>
-
-/*/GuaranteeReference/GuaranteeQuery/periodToDate must be posterior to /*/GuaranteeReference/GuaranteeQuery/periodFromDate
 
 ##R0720
 
