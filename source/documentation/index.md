@@ -13,12 +13,12 @@ Version 0.3 issued August 2022
 ## Document summary
 
 This document is the first part of the Technical Interface Specification (TIS) for Direct Trader Input (DTI) to NCTS. 
- 
+
 It shows the processes involved in the exchange of messages between traders and the NCTS system at departure and arrival of transit movements, and provides definitions, formats and validations of those messages.  
 
 
 ## Introduction
- 
+
 The New Computerised Transit System (NCTS) is a European wide system, based upon electronic declaration and processing, designed to provide better management and control of Union and Common Transit. It involves all countries comprising the EU Member States and all Common Transit Convention contracting countries.
 
 The NCTS systems of all National Administrations are connected to each other via a central domain in Brussels. This allows the details and progress of a transit movement to be monitored by all actors concerned at every stage.
@@ -33,7 +33,7 @@ In order to use the NCTS, traders need the facility to send and receive electron
 
 - acceptance of declaration
 - release of goods
-- notification of discharge of liability, that is the release of the guarantee which is in place thoughout the lifespan of the movement in order to cover the duties at risk during the movement of goods
+- notification of discharge of liability, that is the release of the guarantee which is in place throughout the lifespan of the movement in order to cover the duties at risk during the movement of goods
 
 Traders cannot interface directly with the NCTS to input or amend data or to access records and reference data, but simply exchange defined structured messages with the system. 
 
@@ -48,7 +48,7 @@ This document gives an overview of the processes involved in the exchange of NCT
 - the trader’s notification of arrival and associated Customs response
 - control and release of the goods at destination
 - registration of any incidents that may occur en route
- 
+
 These messages are developed following the Functional Transit System Specification (FTSS) and Design Documentation for National Transit Application (DDNTA) documents distributed by the EU Commission to National Administrations.
 
 ### NCTS Reference Data
@@ -72,7 +72,7 @@ This is administered by each National Administration on its own behalf. When a t
 
 The UK NCTS system is made up of two separate NCTS cores, one processes Great Britain mainland transit movements whilst the other processes transit movements within Northern Ireland.
 
-The two cores have different modes of operation. The Great Britain mainland NCTS core operates in Common Transit mode. This means that where a rule or condition has different applicability dependent on whether the country of departure/destination/transit is a within the territory of the European Union or a separate Common Transit country, then that rule or condition will be applied to Great Britain mainland as being a common transit country. Conversely, the Northern Ireland NCTS core operates in Union Transit mode meaning that a territory dependent rule or condition will be applied to Northern Ireland as if it were part of EU territory.
+The two cores have different modes of operation. The Great Britain mainland NCTS core operates in Common Transit mode. This means that where a rule or condition has different applicability dependent on whether the country of departure/destination/transit is within the territory of the European Union or a separate Common Transit country, then that rule or condition will be applied to Great Britain mainland as being a common transit country. Conversely, the Northern Ireland NCTS core operates in Union Transit mode meaning that a territory dependent rule or condition will be applied to Northern Ireland as if it were part of EU territory.
 
 This is an important consideration if you intend to implement any rules or conditions to validate declarations for you or your customers.
 
