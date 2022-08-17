@@ -16,16 +16,6 @@ Export followed by Transit & Groupage:<br/><br/>During the Transitional Period, 
 
 N/A<br/>
 
-##B1003
-
-<b>Functional Description</b>
-
-In case of 'Road Transport' if the road vehicle (and/or its road trailers) are different to those declared in the initial declaration message, then they will be reported as discrepancies and not as new transport means.
-
-<b>Technical Description</b>
-
-N/A
-
 ##B1016
 
 <b>Functional Description</b>
@@ -45,56 +35,6 @@ During the Transitional Period (TP), the native CC015C, CC013C and CC170C sent t
 <b>Technical Description</b>
 
 N/A
-
-##B1201
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; <br/>THEN<br/>/CD018C/Consignment/DepartureTransportMeans/identificationNumber<br/><br/>format shall be set to an..27
-
-##B1202
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/>/CD018C/Consignment/SupportingDocument/referenceNumber AND<br/>/CD018C/Consignment/AdditionalReference/referenceNumber AND<br/>/CD018C/Consignment/HouseConsignment/SupportingDocument/referenceNumber AND<br/>/CD018C/Consignment/HouseConsignment/TransportDocument/referenceNumber AND<br/>/CD018C/Consignment/HouseConsignment/AdditionalReference/referenceNumber AND<br/>/CD018C/Consignment/HouseConsignment/ConsignmentItem/SupportingDocument/referenceNumber AND<br/>/CD018C/Consignment/HouseConsignment/ConsignmentItem/TransportDocument/referenceNumber AND<br/>/CD018C/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/referenceNumber<br/>format shall be set to an..35
-
-##B1203
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; <br/>THEN<br/>/CD018C/Consignment/HouseConsignment/ConsignmentItem/Packaging/shippingMarks<br/><br/>format shall be set to an..42<br/>
-
-##B1206
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; <br/>THEN<br/>/CD018C/Consignment/grossMass AND<br/>/CD018C/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass AND<br/>/CD018C/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass <br/><br/>format shall be set to n..11,3<br/><br/>
-
-##B1401
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/>for each Goods Item, the cumulated number of all instances of<br/>/CD018C/Consignment/HouseConsignment/ConsignmentItem/SupportingDocument AND<br/>/CD018C/Consignment/HouseConsignment/ConsignmentItem/TransportDocument AND<br/>/CD018C/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference<br/>shall be LESS OR EQUAL to 99x
 
 ##B1804
 
@@ -246,26 +186,6 @@ N/A
 
 IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0153 attached to<br/>/*/Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode<br/>shall be disabled and the D.G. will become optional.<br/>
 
-##B1835
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN <br/>    IF /*/Consignment/TransportCharges is PRESENT <br/>    THEN <br/>    /*/Consignment/HouseConsignment/ConsignmentItem/TransportCharges = "N"<br/>    ELSE<br/>    /*/Consignment/HouseConsignment/ConsignmentItem/TransportCharges = "O"<br/>
-
-##B1836
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; <br/>THEN C0030 shall be disabled AND <br/>IF /*/TransitOperation/declarationType is EQUAL to ‘TIR’, <br/>THEN /*/CustomsOfficeOfTransitDeclared = "N"	 <br/>ELSE <br/>         IF the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is in SET <br/>         CL112 OR the first two characters of <br/>          /*/CustomsOfficeOfDestinationDeclared/referenceNumber is in SET CL112 OR <br/>          /*/TransitOperation/declarationType is in SET {T2, T}  <br/>         THEN /*/CustomsOfficeOfTransitDeclared = "R"          <br/>ELSE /*/CustomsOfficeOfTransitDeclared = “O”. 
-
 ##B1838
 
 <b>Functional Description</b>
@@ -275,26 +195,6 @@ N/A
 <b>Technical Description</b>
 
 IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN <br/>       IF /*/Consignment/ActiveBorderTransportMeans/nationality is PRESENT OR<br/>           /*/Consignment/modeOfTransportAtTheBorder is EQUAL to '2'<br/>      THEN<br/>             /*/Consignment/ActiveBorderTransportMeans/typeOfIdentification = "R" AND<br/>             /*/Consignment/ActiveBorderTransportMeans/identificationNumber = "R"<br/>       ELSE<br/>               /*/Consignment/ActiveBorderTransportMeans/typeOfIdentification = "O" AND<br/>              /*/Consignment/ActiveBorderTransportMeans/identificationNumber = "O"
-
-##B1843
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0831 will be disabled AND <br/>IF /*/CustomsOfficeOfDestination is PRESENT <br/>THEN /*/CustomsOfficeOfTransit = "N" AND /*/CustomsOfficeOfExitForTransit = "N" <br/>ELSE IF /*/CustomsOfficeOfTransit is PRESENT <br/>THEN /*/CustomsOfficeOfExitForTransit = "N" <br/>ELSE /*/CustomsOfficeOfExitForTransit = "O"<br/>
-
-##B1847
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; <br/>THEN the value of /*/Guarantee/GuaranteeReference/CustomsOfficeOfGuarantee/referenceNumber will be EQUAL for all instances of /*/GuaranteeReferences
 
 ##B1848
 
@@ -306,16 +206,6 @@ N/A
 
 IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0586 attached to /*/Consignment/CountryOfRoutingOfConsignment shall be disabled AND<br/>IF /*/Transit Operation/security is in SET {1, 2, 3}<br/>THEN /*/Consignment/CountryOfRoutingOfConsignment = "R"<br/>ELSE /*/Consignment/CountryOfRoutingOfConsignment = "N"
 
-##B1849
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/>IF /*/TransitOperation/security is in SET {1, 2, 3}<br/>THEN /*/Consignment/PlaceOfLoading = ''R''<br/>ELSE /*/Consignment/PlaceOfLoading = ''O''
-
 ##B1850
 
 <b>Functional Description</b>
@@ -325,26 +215,6 @@ N/A
 <b>Technical Description</b>
 
 IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/>IF first digit of /*/Consignment/modeOfTransportAtTheBorder is in SET {2}<br/>THEN /*/Consignment/ActiveBorderTransportMeans/nationality="O"<br/>ELSE /*/Consignment/ActiveBorderTransportMeans/nationality="R"
-
-##B1852
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0815 attached to<br/>/CD200C/Consignment<br/>/CD203C/Consignment<br/>shall be disabled AND<br/>/CD200C/Consignment AND<br/>/CD203C/Consignment<br/> will become optional.
-
-##B1854
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0812 and C0191 will be disabled<br/>AND<br/>IF /*/TransitOperation/security is EQUAL to ‘0’<br/>THEN /*/Consignment/PlaceOfUnloading = “N”<br/>ELSE<br/>IF /*/TransitOperation/specificCircumstanceIndicator is EQUAL to ‘XXX’ <br/>THEN /*/Consignment/PlaceOfUnloading = “O”<br/>ELSE /*/Consignment/PlaceOfUnloading = "R"<br/>
 
 ##B1858
 
@@ -376,16 +246,6 @@ N/A
 
 IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0223 attached to /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass will be disabled.
 
-##B1874
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN <br/>IF /*/TransitOperation/security is EQUAL to '0' OR <br/>/*/Consignment/TransportCharges is PRESENT OR<br/>the last 2 characters of /*/messageRecipient is NOT in SET CL147<br/>THEN <br/>/*/Consignment/HouseConsignment/ConsignmentItem/TransportCharges = "N"<br/>ELSE<br/>/*/Consignment/HouseConsignment/ConsignmentItem/TransportCharges = "O".<br/>
-
 ##B1875
 
 <b>Functional Description</b>
@@ -396,16 +256,6 @@ N/A
 
 IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN <br/>IF /*/TransitOperation/security is EQUAL to '0' OR <br/>/*/Consignment/TransportCharges is PRESENT <br/>THEN <br/>/*/Consignment/HouseConsignment/ConsignmentItem/TransportCharges = "N"<br/>ELSE<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/TransportCharges = "O".<br/>
 
-##B1876
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/>/CD142C/Enquiry/limitForTheEnquiryResponseDate must be equal to /CD142C/PreparationDateAndTime +28 days
-
 ##B1877
 
 <b>Functional Description</b>
@@ -415,16 +265,6 @@ N/A
 <b>Technical Description</b>
 
 IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; THEN <br/>      IF /*/Consignment/HouseConsignment/ConsignmentItem/Consignee is PRESENT <br/>      for all /*/Consignment/HouseConsignment/ConsignmentItem <br/>      THEN at least one occurrence of <br/>      /*/Consignment/HouseConsignment/ConsignmentItem/Consignee must be different <br/>      from the others;<br/><br/>IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; THEN <br/>      IF /*/Consignment/HouseConsignment/ConsignmentItem/TransportCharges is <br/>      PRESENT for all /*/Consignment/HouseConsignment/ConsignmentItem <br/>      THEN at least one occurrence of<br/>       /*/Consignment/HouseConsignment/ConsignmentItem/TransportCharges must be <br/>       different from the others.<br/>
-
-##B1888
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN the sum of iterations of /CD018C/Consignment/DepartureTransportMeans AND (/CD001C/Consignment/DepartureTransportMeans OR /CD003C/Consignment/DepartureTransportMeans) can be up to '3x'<br/>
 
 ##B1889
 
@@ -476,16 +316,6 @@ N/A
 
 IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0403 will be disabled<br/>AND <br/>IF /*/TransitOperation/security is EQUAL to ‘0’<br/>THEN /*/Consignment/PlaceOfLoading = “N”<br/>ELSE /*/Consignment/PlaceOfLoading = “R”<br/>
 
-##B1894
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0908 will be disabled AND<br/>IF /*/Consignment/modeOfTransportAtTheBorder is PRESENT<br/>THEN<br/>   IF /*/Consignment/modeOfTransportAtTheBorder is EQUAL to '5' or '2'<br/>   THEN /*/Consignment/ActiveBorderTransportMeans = “O”<br/>   ELSE /*/Consignment/ActiveBorderTransportMeans = “R”<br/>ELSE<br/>/*/Consignment/ActiveBorderTransportMeans = “O”
-
 ##B1895
 
 <b>Functional Description</b>
@@ -526,26 +356,6 @@ N/A
 
 IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; <br/>THEN<br/>IF /*/Guarantee/GuaranteeReference/amountToBeCovered is PRESENT <br/>THEN /*/Guarantee/GuaranteeReference/currency = "R"<br/>ELSE /*/Guarantee/GuaranteeReference/currency = "N’’<br/><br/><br/>
 
-##B1899
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0029 will be disabled AND<br/>IF/*/TransitOperation/security is in SET {1,2,3} AND the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is not in CL010  <br/>THEN <br/>/*/Consignment/modeOfTransportAtTheBorder = "R"<br/>ELSE <br/>/*/Consignment/modeOfTransportAtTheBorder = "O"
-
-##B1902
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN <br/>IF /CD001C/ Consignment/HouseConsignment/ConsignmentItem/Consignee is PRESENT<br/>     THEN /CD012C/ Consignment/HouseConsignment/ConsignmentItem/Consignee= "R" AND    <br/>      /CD012C/Consignment/Consignee= "N"<br/>ELSE /CD012C/ Consignment/HouseConsignment/ConsignmentItem/Consignee= "N" AND <br/>      /CD012C/Consignment/Consignee= "N"
-
 ##B1903
 
 <b>Functional Description</b>
@@ -566,56 +376,6 @@ N/A
 
 IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0005 will be disabled<br/>
 
-##B1908
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0994 shall be disabled.
-
-##B1911
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0107 shall be disabled.
-
-##B1912
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0983 shall be disabled.
-
-##B1913
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0990 shall be disabled.
-
-##B1920
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; THEN /CD018C/Consignment/DepartureTransportMeans/sequenceNumber shall be in SET {1, 2, 3}
-
 ##B1922
 
 <b>Functional Description</b>
@@ -635,26 +395,6 @@ N/A
 <b>Technical Description</b>
 
 IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/TransitOperation/arrivalDateAndTime (actual) = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/TransitOperation/recoveryCommunicationDate = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/FunctionalError/errorReason = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/GuaranteeReference/Guarantor/Address/country = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/GuaranteeReference/Guarantor/identificationNumber = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/CustomsOfficeOfDeparture = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass =<br/>"R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Recovery/text = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Guarantee/GuaranteeReference/amountToBeCovered = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /CD038C/Consignment/Incident/Endorsement/authority = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /CD038C/Consignment/Incident/Endorsement/place= "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/PlaceOfLoading = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/ActiveBorderTransportMeans/customsOfficeAtBorderReferenceNumber = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/ActiveBorderTransportMeans/nationality= "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/ActiveBorderTransportMeans/typeOfIdentification =”R”;<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/ActiveBorderTransportMeans/identificationNumber = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/DepartureTransportMeans/typeOfIdentification = “R”;<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/DepartureTransportMeans/identificationNumber = “R”;<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/DepartureTransportMeans/nationality = “R”;<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Guarantee/GuaranteeReference/currency = "R"
-
-##B2200
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN <br/>/*/Consignment/ActiveBorderTransportMeans/conveyanceReferenceNumber<br/>format shall be set to an..17
-
-##B2301
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt; <br/>THEN C0012 attached to /*/Enquiry/returnCopyReturnedDate shall be disabled
 
 ##B2400
 

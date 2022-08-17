@@ -26,16 +26,6 @@ XSD contains a non-standard regular expression for this data item.
 
 N/A
 
-##G0003
-
-<b>Functional Description</b>
-
-This Data Item is omitted if the Data Group &lt;RISK ANALYSIS RESULT&gt; does not refer to a specific Goods Item but is applicable to the whole Consignment.<br/>This Data Item has the value '0' if the Data Group &lt;RISK ANALYSIS RESULT&gt; does not refer to a specific Goods Item but is applicable to all Goods Items included in the Consignment.<br/>This Data Item has a non-zero value if the Data Group &lt;RISK ANALYSIS RESULT&gt; refer to a specific Goods Item.
-
-<b>Technical Description</b>
-
-N/A
-
 ##G0005
 
 <b>Functional Description</b>
@@ -56,16 +46,6 @@ N/A
 
 N/A
 
-##G0007
-
-<b>Functional Description</b>
-
-The Header shall be included if the field &lt;TRANSIT OPERATION.MRN&gt; is PRESENT in the rejected message, and can be included in the CD917C.
-
-<b>Technical Description</b>
-
-N/A
-
 ##G0009
 
 <b>Functional Description</b>
@@ -81,36 +61,6 @@ N/A
 <b>Functional Description</b>
 
 IF &lt;FUNCTIONAL ERROR.Error code&gt; is EQUAL to '12'<br/>THEN &lt;FUNCTIONAL ERROR.Error reason&gt; shall point to the Codelist number against which validation failed (ie CLxxx)<br/>ELSE IF &lt;FUNCTIONAL ERROR.Error code&gt; is in SET {13, 15} <br/>THEN &lt;FUNCTIONAL ERROR.Error reason&gt; shall point to the Condition/Technical Rule number against which validation failed (ie Cxxxx or Txxxx),<br/>ELSE IF &lt;FUNCTIONAL ERROR.Error code&gt; is EQUAL to '14' <br/>THEN &lt;FUNCTIONAL ERROR.Error reason&gt; shall point to the Rules/Technical Rule number against which validation failed (ie Rxxxx or Txxxx)<br/>ELSE IF &lt;FUNCTIONAL ERROR.Error code&gt; is EQUAL to '50' <br/>THEN &lt;FUNCTIONAL ERROR.Error reason&gt; shall point to the Transitional Constraint number against which validation failed (ie Exxxx or Bxxxx),<br/>ELSE IF &lt;FUNCTIONAL ERROR.Error code&gt; is in SET {51, 52} <br/>THEN the &lt;FUNCTIONAL ERROR.Error reason&gt; shall be:<br/>-  'ieCAvB' if exception is thrown by ieCA<br/>-  'NCAvB' if exception is thrown by NTA/NECA,<br/>ELSE the &lt;FUNCTIONAL ERROR.Error reason&gt; shall have the value 'N/A'
-
-<b>Technical Description</b>
-
-N/A
-
-##G0011
-
-<b>Functional Description</b>
-
-It contains the text of the error returned by the XML parser or XML validator.
-
-<b>Technical Description</b>
-
-N/A
-
-##G0012
-
-<b>Functional Description</b>
-
-It should include the XPath location of the error. If the XPath string is to be truncated (i.e. if the length of the string is greater than 512 characters long), then the data item should not be used.
-
-<b>Technical Description</b>
-
-N/A
-
-##G0013
-
-<b>Functional Description</b>
-
-It should be used when the error is an XML schema error concerning invalid values. The reasons for considering an attribute value invalid might be the format and/or a value for a technical code list. For such cases, the data item should contain the value of the invalid value in order to indicate which value was perceived invalid.
 
 <b>Technical Description</b>
 
@@ -151,16 +101,6 @@ N/A
 <b>Functional Description</b>
 
 'State of seals' = 1 in case that Seals are in good state (i.e. present and not damaged)<br/>'State of seals' = 0 in case that Seals are not in good state (i.e. not present or damaged).
-
-<b>Technical Description</b>
-
-N/A
-
-##G0018
-
-<b>Functional Description</b>
-
-IF &lt;COMPETENT CUSTOMS OFFICE AT DEPARTURE&gt; is EQUAL to &lt;CUSTOMS OFFICE OF DEPARTURE&gt;<br/>THEN &lt;CD144C-CUSTOMS OFFICE OF DEPARTURE&gt; = "O" <br/>ELSE &lt;CD144C-CUSTOMS OFFICE OF DEPARTURE&gt; = "R"
 
 <b>Technical Description</b>
 
@@ -256,16 +196,6 @@ If a consignment is moving from one Member State to another Member State via a t
 
 N/A
 
-##G0032
-
-<b>Functional Description</b>
-
-This CUSTOMS OFFICE can be the DECLARED Office or the ACTUAL Office.
-
-<b>Technical Description</b>
-
-N/A
-
 ##G0033
 
 <b>Functional Description</b>
@@ -281,66 +211,6 @@ N/A
 <b>Functional Description</b>
 
 In case of Export followed by Transit and whenever the internal transit procedure is applied, the Declared Office of Destination needs to be ‘appropriate’, otherwise the initial submission and/or subsequent amendment requests of the transit declaration data as submitted by the Holder of the Transit Procedure to the Office of Departure has to be rejected. This can be validated as follows:<br/>A/ In case the Declared Office of Destination belongs to EU MS (CL010- CountryCodesCommunity), and its Custom Office Reference Number is included in both CL172- CustomsOfficeDestination and CL294-CustomsOfficeExitDeclared, then it is considered ‘appropriate’ (otherwise is considered not ‘appropriate’);<br/>B/ In case the Declared Office of Destination belongs to CTC (CL112- CountryCodesCTC), it is considered by default ‘appropriate’.<br/>When the Declared Office of Destination is considered as not ‘appropriate’, the messages CC013C or CC015C will be responded with CC056C that will report the error code '12- Codelist violation'.<br/>
-
-<b>Technical Description</b>
-
-N/A
-
-##G0035
-
-<b>Functional Description</b>
-
-The Holders of the Transit Procedure can only request information on their own Guarantee[s].
-
-<b>Technical Description</b>
-
-N/A
-
-##G0036
-
-<b>Functional Description</b>
-
-COMPETENT CUSTOMS OFFICE AT DEPARTURE which is authorised for Enquiry communicates only with COMPETENT CUSTOMS OFFICE AT DESTINATION which is authorised for Enquiry. COMPETENT CUSTOMS OFFICE AT DEPARTURE which is authorised for Recovery communicates only with COMPETENT CUSTOMS OFFICE AT DESTINATION which is authorised for Recovery.
-
-<b>Technical Description</b>
-
-N/A
-
-##G0038
-
-<b>Functional Description</b>
-
-The Header shall be included if the field &lt;TRANSIT OPERATION.MRN&gt; or &lt;TRANSIT OPERATION.LRN&gt; is PRESENT in the rejected message and shall be included in the CC917C.
-
-<b>Technical Description</b>
-
-N/A
-
-##G0039
-
-<b>Functional Description</b>
-
-If the field &lt;TRANSIT OPERATION.LRN&gt; is PRESENT in the rejected message, this Data Item shall be filled in. 
-
-<b>Technical Description</b>
-
-N/A
-
-##G0040
-
-<b>Functional Description</b>
-
-If the field &lt;TRANSIT OPERATION.MRN&gt; is PRESENT in the rejected message, this Data Item shall be filled in. 
-
-<b>Technical Description</b>
-
-N/A
-
-##G0041
-
-<b>Functional Description</b>
-
-In a case when National risk is identified, by default, the value ‘X’ shall be included in &lt;RiskAnalysisIdentification.code&gt; when generated by the risk engine. However, if the sender would likely consider such information sent by the Office of Export /Office of Departure as useless for the recipient, then Office of Export /Office of Departure should use the value ‘N’.
 
 <b>Technical Description</b>
 
@@ -406,26 +276,6 @@ The information presented in in this D.G. is related to Safety & Security and to
 
 N/A
 
-##G0062
-
-<b>Functional Description</b>
-
-The rules R0506 and R0507 are applied on CC015C and CC013C to ensure that the declaration does not include unnecessary and repetitive information. They must be enforced by all NTA. Considering the possibility that one Goods Item is taken out from the declaration during the control, the message CC029C and CD001C may have different content from CC015C (or CC013C or CC170C). Consequently, those rules R0506 and R0507 shall not be strictly enforced on the Common Domain messages. Certainly not by the recipient of the CD message, likely not by the sender of the CD message.
-
-<b>Technical Description</b>
-
-N/A
-
-##G0064
-
-<b>Functional Description</b>
-
-The message must be sent within thirteen (13) days from the day the “Destination Control Results” C_DES_CON (IE018) message is sent to the Office of Departure
-
-<b>Technical Description</b>
-
-N/A
-
 ##G0068
 
 <b>Functional Description</b>
@@ -486,26 +336,6 @@ The Administrative Reference Code (ARC) or the fallback e-AD reference number sh
 
 N/A
 
-##G0085
-
-<b>Functional Description</b>
-
-The CD906C shall never reject another message CD906C nor a message CD917C. Action will be taken by National Help Desks.
-
-<b>Technical Description</b>
-
-N/A
-
-##G0086
-
-<b>Functional Description</b>
-
-The CD917C shall never reject a message CD917C. Action will be taken by National Help Desks.
-
-<b>Technical Description</b>
-
-N/A
-
 ##G0088
 
 <b>Functional Description</b>
@@ -561,26 +391,6 @@ N/A
 <b>Functional Description</b>
 
 Information recorded under this data group is solely for communication purposes. No legal liabilities exist upon the specific contact person.
-
-<b>Technical Description</b>
-
-N/A
-
-##G0110
-
-<b>Functional Description</b>
-
-The Data Item &lt;CONSISTENCY CHECKS WARNING.Warning pointer&gt; shall include the XPath location to point to the specific Data Group or Data Item for which a warning code is available. For the warning on CD411D, it shall include the XPath of the Data Group &lt;SERIES ELEMENTS&gt; where the inconsistency has been detected.
-
-<b>Technical Description</b>
-
-N/A
-
-##G0111
-
-<b>Functional Description</b>
-
-The Data Item &lt;CONSISTENCY CHECKS WARNING.Warning code&gt; shall include the Consistency Check code that is applicable to the &lt;EVALUATED MESSAGE.Message type&gt; (as defined in CL903).
 
 <b>Technical Description</b>
 
@@ -666,16 +476,6 @@ This Data Group must be provided when different from the ‘HOLDER OF THE TRANSI
 
 N/A
 
-##G0125
-
-<b>Functional Description</b>
-
-The D.I. ‘Limit for the enquiry response date’ is equal to ‘Preparation date and time’ of the CD142C message plus either 28 days or 40 days (no other value is acceptable). This means that the date value of the DI is based on the expiration date of the timer “Wait for Enquiry response” set manually by Officer at the Competent Authority of Enquiry at Departure as follows: <br/><br/>’28 days’ after the CD142C is sent: The Holder of the Transit Procedure was contacted and provided insufficient information or in case the Competent Authority of Enquiry suspects fraud. In this case, a reply to the enquiry request is expected within 28 days at the latest.<br/><br/>’40 days’ after the CD142C is sent: The Holder of the Transit Procedure was contacted and provided sufficient information OR the Holder of the Transit Procedure was not contacted since there is sufficient information to initiate enquiry. In this case, a reply to the enquiry request is expected within 40 days at the latest. 
-
-<b>Technical Description</b>
-
-N/A 
-
 ##G0126
 
 <b>Functional Description</b>
@@ -696,31 +496,11 @@ The Data Item shall be filled, by using the information of the &lt;TRANSIT OPERA
 
 N/A
 
-##G0130
-
-<b>Functional Description</b>
-
-IF two or more Customs offices of transit belong to the same National Administration, THEN only one CD050C is sent to that National Administration.
-
-<b>Technical Description</b>
-
-N/A
-
 ##G0131
 
 <b>Functional Description</b>
 
 IF discrepancies have been found the Data Group will be filled in with new values amending initial declaration.
-
-<b>Technical Description</b>
-
-N/A
-
-##G0137
-
-<b>Functional Description</b>
-
-The transition will be synchronized for all countries using a date that will be agreed by ECCG (national applications are expected to manage this data item as a dynamic data element). This technical rule may be replaced by a BRT.
 
 <b>Technical Description</b>
 
@@ -756,46 +536,6 @@ The data in the IE corresponds always to the current (latest) version of the Tra
 
 N/A
 
-##G0150
-
-<b>Functional Description</b>
-
-Only those without CD118C
-
-<b>Technical Description</b>
-
-N/A
-
-##G0151
-
-<b>Functional Description</b>
-
-Exceptional case of CD114C/CD115C without CD118C.
-
-<b>Technical Description</b>
-
-N/A
-
-##G0152
-
-<b>Functional Description</b>
-
-Only those without CD168C.
-
-<b>Technical Description</b>
-
-N/A
-
-##G0153
-
-<b>Functional Description</b>
-
-Exceptional case of CD164C/CD165C without CD168C.
-
-<b>Technical Description</b>
-
-N/A
-
 ##G0160
 
 <b>Functional Description</b>
@@ -821,46 +561,6 @@ N/A
 <b>Functional Description</b>
 
 In case of pre-lodged declaration, the Authorisation should be still valid until the PRESENTATION NOTIFICATION FOR THE PRE-LODGED DECLARATION message (CC170C) is submitted when it will be revalidated. 
-
-<b>Technical Description</b>
-
-N/A 
-
-##G0170
-
-<b>Functional Description</b>
-
-When the IE is transmitted to two or more Customs Offices that belong to the same National Administration, then only one IE is sent to this National Administration (the Customs Offices can be an Office of Transit or an Office of Exit for Transit or an Office of Destination or a Customs Office of Incident Registration).
-
-<b>Technical Description</b>
-
-N/A
-
-##G0171
-
-<b>Functional Description</b>
-
-This message shall not be sent to the Customs Office(s) of Transit that has(have) notified that the consignment has crossed the frontier (CD118C received); <br/>This message shall not be sent to the Customs Office(s) of Exit for Transit that has(have) notified that the consignment exited the Security Area (CD168C received).
-
-<b>Technical Description</b>
-
-N/A
-
-##G0172
-
-<b>Functional Description</b>
-
-The details filled in the Data Group, are those of the Contact person located in the country of the competent authority. 
-
-<b>Technical Description</b>
-
-N/A
-
-##G0173
-
-<b>Functional Description</b>
-
-The data filled in the Data Group (Phone number) shall be valid within the country where the competent authority is located.  
 
 <b>Technical Description</b>
 
@@ -896,31 +596,11 @@ Rule R0840 shall be validated only by MS. IF the sender is a CTC country THEN th
 
 N/A
 
-##G0203
-
-<b>Functional Description</b>
-
-The Data Group will be filled in either with the Customs Office of Destination or with the Competent Authority of Enquiry at Destination.
-
-<b>Technical Description</b>
-
-N/A
-
 ##G0205
 
 <b>Functional Description</b>
 
 &lt;UNLOADING REMARK.Conform&gt; is used as a flag and it can contain 2 possible values:<br/>       ‘0’ = ‘NO’ there are unloading remarks;<br/>       ‘1’ = ‘YES’ no unloading remarks present.<br/>
-
-<b>Technical Description</b>
-
-N/A
-
-##G0210
-
-<b>Functional Description</b>
-
-The combination of following elements uniquely identifies a system unavailability:<br/>- &lt;COUNTRY.Country&gt;<br/>- &lt;COUNTRY-ACTION-UNAVAILABILITY.Type&gt;<br/>- &lt;COUNTRY-ACTION-UNAVAILABILITY.Functionality&gt;<br/>- &lt;COUNTRY-ACTION-UNAVAILABILITY.Start date and time&gt;<br/>- &lt;COUNTRY-ACTION-UNAVAILABILITY.End date and time&gt;
 
 <b>Technical Description</b>
 
@@ -1006,16 +686,6 @@ IF discrepancies have been found in one or more Data Groups or Data Items     <b
 
 N/A
 
-##G0367
-
-<b>Functional Description</b>
-
-IF the message is a Negative CD003C/CD038C/CD115C/CD165C<br/>THEN this Data Item is Required <br/>ELSE this Data Item is not used.
-
-<b>Technical Description</b>
-
-N/A
-
 ##G0414
 
 <b>Functional Description</b>
@@ -1056,16 +726,6 @@ When the &lt;CUSTOMS OFFICE OF DESTINATION (ACTUAL)&gt; indicates the permission
 
 N/A
 
-##G0650
-
-<b>Functional Description</b>
-
-At least one of the optional Data Items of this Data Group must be present in GUARANTEE UPDATE NOTIFICATION message.
-
-<b>Technical Description</b>
-
-N/A
-
 ##G0670
 
 <b>Functional Description</b>
@@ -1085,16 +745,6 @@ The ’Customs office at border reference number’ identifies the border crossi
 <b>Technical Description</b>
 
 N/A
-
-##G0821
-
-<b>Functional Description</b>
-
-The last character of the D.I. &lt;RISK ANALYSIS IDENTIFICATION-RISK ANALYSIS-RISK ANALYSIS RESULT.Code&gt; must be one of the following values: 'D', 'E', 'Z'. 
-
-<b>Technical Description</b>
-
-N/A<br/>
 
 ##G0825
 
@@ -1135,36 +785,6 @@ The data recorded under this data group must be exactly the same as in the re
 <b>Technical Description</b>
 
 N/A<br/>
-
-##G0869
-
-<b>Functional Description</b>
-
-In case of Export Followed by Transit, the content of RISK ANALYSIS IDENTIFICATION received by the Customs Office of Exit should be forwarded via NCTS to the Customs Office of Exit for Transit (or Office of Destination at the border).  <br/>If the Customs Office of Exit for Transit (or Office of Destination at the border) belongs to the same Member State, then the exchange of risk related information is under the responsibility of the National Customs Administration. <br/><br/> 
-
-<b>Technical Description</b>
-
-N/A
-
-##G0905
-
-<b>Functional Description</b>
-
-Enter value '1' (one) if a hard copy was given to the Holder of the transit procedure
-
-<b>Technical Description</b>
-
-N/A
-
-##G0906
-
-<b>Functional Description</b>
-
-This field is domain specific and it includes the numeric values 1 for NCTS, 2 for AES.
-
-<b>Technical Description</b>
-
-N/A
 
 ##G0988
 

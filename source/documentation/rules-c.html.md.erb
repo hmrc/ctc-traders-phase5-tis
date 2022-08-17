@@ -16,66 +16,6 @@ IF &lt;CONSIGNMENT.Country of destination&gt; is in SET CL009<br/>THEN<br/>    I
 
 IF /*/Consignment/countryOfDestination is in SET CL009<br/>THEN<br/>     IF /*/Consignment/Consignee is PRESENT<br/>     THEN<br/>             /*/Consignment/HouseConsignment/Consignee = "N" <br/>           ELSE /*/Consignment/HouseConsignment/Consignee = "R"<br/>ELSE IF /*/TransitOperation/security is in SET {0,1}<br/>THEN<br/>         IF /*/Consignment/Consignee is PRESENT<br/>         THEN<br/>                   /*/Consignment/HouseConsignment/Consignee = "N" <br/>                ELSE /*/Consignment/HouseConsignment/Consignee = "O"<br/>ELSE IF at least one instance of /*/Consignment/AdditionalInformation/code is EQUAL to '30600'<br/>              THEN<br/>                      /*/Consignment/Consignee = "N" AND<br/>                      /*/Consignment/HouseConsignment/Consignee = "N" <br/>ELSE IF at least one instance of /*/Consignment/HouseConsignment/AdditionalInformation/code IS<br/>EQUAL to '30600'  <br/>THEN<br/>                       /*/Consignment/Consignee = "N" AND<br/>                       THIS /*/Consignment/HouseConsignment/Consignee = "N"<br/>ELSE<br/>              IF /*/Consignment/Consignee is PRESENT<br/>             THEN<br/>              /*/Consignment/HouseConsignment/Consignee = "N"<br/>                ELSE /*/Consignment/HouseConsignment/Consignee = "R"<br/>
 
-##C0002
-
-<b>Functional Description</b>
-
-IF &lt;CD001C- CONSIGNMENT-CONSIGNEE&gt; is PRESENT<br/>         THEN &lt;CD012C- CONSIGNMENT-CONSIGNEE&gt; = "R" AND <br/>          &lt;CD012C- CONSIGNMENT-HOUSE CONSIGNMENT -CONSIGNEE&gt; = "N"   <br/>ELSE IF &lt;CD001C- CONSIGNMENT-HOUSE CONSIGNMENT -CONSIGNEE&gt; is PRESENT<br/>          THEN &lt;CD012C- CONSIGNMENT-HOUSE CONSIGNMENT -CONSIGNEE&gt; = "R" AND                      <br/>          &lt;CD012C- CONSIGNMENT-CONSIGNEE&gt; = "N"   <br/>ELSE &lt;CD012C- CONSIGNMENT-CONSIGNEE&gt; = "N” AND <br/>          &lt;CD012C- CONSIGNMENT-HOUSE CONSIGNMENT -CONSIGNEE&gt; = "N"
-
-<b>Technical Description</b>
-
-IF /CD001C/Consignment/Consignee is PRESENT<br/>          THEN /CD012C/Consignment/Consignee = "R" AND                      <br/>          /CD012C/Consignment/HouseConsignment/Consignee = "N"   <br/>ELSE IF /CD001C/Consignment/HouseConsignment/Consignee is PRESENT<br/>          THEN /CD012C/Consignment/HouseConsignment/Consignee = "R" AND <br/>          /CD012C/Consignment/Consignee = "N"   <br/>ELSE /CD012C/Consignment/Consignee = "N” AND <br/>          /CD012C/Consignment/HouseConsignment/Consignee = "N"
-
-##C0004
-
-<b>Functional Description</b>
-
-IF the recovery request message is sent by country of departure AND <br/>&lt;CC029C-GUARANTEE.Guarantee type&gt; is in SET {1, 2, 4, 9}<br/>THEN &lt;CD150C-GUARANTEE REFERENCE&gt; = "R"<br/>ELSE &lt;CD150C-GUARANTEE REFERENCE&gt; = "O"
-
-<b>Technical Description</b>
-
-IF the recovery request message is sent by country of departure AND /CC029C/Guarantee/guaranteeType is in SET {1, 2, 4, 9}<br/>THEN /CD150C/GuaranteeReference = "R"<br/>ELSE /CD150C/GuaranteeReference = "O"
-
-##C0009
-
-<b>Functional Description</b>
-
-IF &lt;CC141C-CONSIGNMENT&gt; is PRESENT<br/>THEN &lt;CD142C-CONSIGNMENT&gt; = "R"<br/>ELSE &lt;CD142C-CONSIGNMENT&gt; = "N"
-
-<b>Technical Description</b>
-
-IF /CC141C/Consignment is PRESENT<br/>THEN /CD142C/Consignment = "R"<br/>ELSE /CD142C/Consignment = "N"
-
-##C0012
-
-<b>Functional Description</b>
-
-IF &lt;ENQUIRY.Response Code&gt; is EQUAL to '3'<br/>THEN &lt;CD143C-ENQUIRY.Return copy returned date&gt; = "R"<br/>ELSE &lt;CD143C-ENQUIRY.Return copy returned date&gt; = "N"
-
-<b>Technical Description</b>
-
-IF /*/Enquiry/responseCode is EQUAL to '3'<br/>THEN /CD143C/Enquiry/returnCopyReturnedDate = "R"<br/>ELSE /CD143C/Enquiry/returnCopyReturnedDate = "N"
-
-##C0013
-
-<b>Functional Description</b>
-
-IF &lt;ENQUIRY.Response Code&gt; is in SET {2, 4}<br/>THEN &lt;CD143C-ENQUIRY.Text&gt; = "R"<br/>ELSE &lt;CD143C-ENQUIRY.Text&gt; = "N"
-
-<b>Technical Description</b>
-
-IF /*/Enquiry/responseCode is in SET {2, 4}<br/>THEN /CD143C/Enquiry/text = "R"<br/>ELSE /CD143C/Enquiry/text = "N"
-
-##C0014
-
-<b>Functional Description</b>
-
-IF the last two characters of /*/messageSender are EQUAL to the 3rd and 4rth character of<br/>/*/GuaranteeReference/GRN AND<br/>IF &lt;CD205C-Guarantee.guaranteeType&gt; is in SET {1, 2, 4, 9}<br/>THEN &lt;GUARANTEE REFERENCE-GUARANTOR&gt; = "R"<br/>ELSE &lt;GUARANTEE REFERENCE -GUARANTOR&gt; = "O"
-
-<b>Technical Description</b>
-
-IF the last two characters of /*/messageSender are EQUAL to the 3rd and 4rth character of /*/GuaranteeReference/GRN AND<br/>IF /CD205C/Guarantee/guaranteeType is in SET {1, 2, 4, 9}<br/>THEN /*/GuaranteeReference/Guarantor = "R"<br/>ELSE /*/GuaranteeReference/Guarantor = "O"<br/>
-
 ##C0015
 
 <b>Functional Description</b>
@@ -85,16 +25,6 @@ IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL REFERENCE.Type&
 <b>Technical Description</b>
 
 IF /*/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/type is in SET CL234(DocumentTypeExcise)<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/referenceNumber = “R”<br/>ELSE /*/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/referenceNumber = “O”
-
-##C0025
-
-<b>Functional Description</b>
-
-IF the recovery acceptance notification is sent by the country of departure AND &lt;RECOVERY.Recovery acceptance&gt; flag is EQUAL to '1' AND &lt;CC029C-GUARANTEE.Guarantee type&gt; is in SET {1, 2, 4, 9} <br/>THEN &lt;CD151C-GUARANTEE REFERENCE&gt; = "R"<br/>ELSE &lt;CD151C-GUARANTEE REFERENCE&gt; = "O"
-
-<b>Technical Description</b>
-
-IF the recovery acceptance notification is sent by the country of departure AND /*/Recovery/recoveryAcceptance flag is EQUAL to '1' AND /CC029C/Guarantee/guaranteeType is in SET {1, 2, 4, 9}<br/>THEN /CD151C/GuaranteeReference = "R"<br/>ELSE /CD151C/GuaranteeReference = "O"
 
 ##C0027
 
@@ -326,46 +256,6 @@ IF &lt;CC141C-ENQUIRY.TC11 delivery date&gt; is PRESENT<br/>THEN &lt;CC141C-ENQU
 
 IF /CC141C/Enquiry/TC11DeliveryDate is PRESENT<br/>THEN /CC141C/Enquiry/text = "R"<br/>ELSE /CC141C/Enquiry/text = "O"
 
-##C0231
-
-<b>Functional Description</b>
-
-IF &lt;CC037C-GUARANTEE REFERENCE.Guarantee type&gt; is in SET {0, 1}<br/>THEN <br/>&lt;CC037C-GUARANTEE REFERENCE-USAGE.Arrival date and time&gt; = "R" AND <br/>&lt;CC037C-GUARANTEE REFERENCE-COMPREHENSIVE GUARANTEE.Reference amount = "R" AND <br/>&lt;CC037C-GUARANTEE REFERENCE-COMPREHENSIVE GUARANTEE.Percentage of reference amount&gt; = "R"<br/>ELSE<br/>&lt;CC037C-GUARANTEE REFERENCE-USAGE.Arrival date and time&gt; = "N" AND <br/>&lt;CC037C-GUARANTEE REFERENCE-COMPREHENSIVE GUARANTEE.Reference amount = "N" AND <br/>&lt;CC037C-GUARANTEE REFERENCE-COMPREHENSIVE GUARANTEE.Percentage of reference amount&gt; = "N"
-
-<b>Technical Description</b>
-
-IF /CC037C/GuaranteeReference/guaranteeType is in SET {0, 1}<br/>THEN /CC037C/GuaranteeReference/Usage/arrivalDateAndTime = "R"<br/>AND /CC037C/GuaranteeReference/ComprehensiveGuarantee/referenceAmount = "R"<br/>AND /CC037C/GuaranteeReference/ComprehensiveGuarantee/percentageOfReferenceAmount = "R"<br/>ELSE /CC037C/GuaranteeReference/Usage/arrivalDateAndTime = "N"<br/>AND /CC037C/GuaranteeReference/ComprehensiveGuarantee/referenceAmount = "N"<br/>AND /CC037C/GuaranteeReference/ComprehensiveGuarantee/percentageOfReferenceAmount ="N"
-
-##C0232
-
-<b>Functional Description</b>
-
-IF &lt;GUARANTEE REFERENCE-INDIVIDUAL GUARANTEE VOUCHER.TIR Carnet&gt; is EQUAL to ’1’<br/>THEN &lt;GUARANTEE REFERENCE-INDIVIDUAL GUARANTEE VOUCHER.Voucher amount&gt; = "R"<br/>AND &lt;GUARANTEE REFERENCE-INDIVIDUAL GUARANTEE VOUCHER.Currency&gt; = "R"<br/>ELSE &lt;GUARANTEE REFERENCE-INDIVIDUAL GUARANTEE VOUCHER.Voucher amount&gt; = "N"<br/>AND &lt;GUARANTEE REFERENCE-INDIVIDUAL GUARANTEE VOUCHER.Currency&gt; = "N";<br/><br/>IF &lt;GUARANTEE REFERENCE.TIR Carnet&gt; is EQUAL to ’1’<br/>THEN &lt;GUARANTEE REFERENCE.Voucher amount&gt; = "R"<br/>AND &lt;GUARANTEE REFERENCE.Currency&gt; = "R"<br/>ELSE &lt;GUARANTEE REFERENCE.Voucher amount&gt; = "N"<br/>AND &lt;GUARANTEE REFERENCE.Currency&gt; = "N"
-
-<b>Technical Description</b>
-
-IF /*/GuaranteeReference/IndividualGuaranteeVoucher/TIRCarnet is EQUAL to ’1’<br/>THEN /*/GuaranteeReference/IndividualGuaranteeVoucher/voucherAmount= "R"<br/>AND /*/GuaranteeReference/IndividualGuaranteeVoucher/currency = "R"<br/>ELSE /*/GuaranteeReference/IndividualGuaranteeVoucher/voucherAmount = "N"<br/>AND /*/GuaranteeReference/IndividualGuaranteeVoucher/currency = "N";<br/><br/>IF /*/GuaranteeReference/TIRCarnet is EQUAL to ’1’<br/>THEN /*/GuaranteeReference/voucherAmount= "R"<br/>AND /*/GuaranteeReference/currency = "R"<br/>ELSE /*/GuaranteeReference/voucherAmount = "N"<br/>AND /*/GuaranteeReference/currency = "N"
-
-##C0233
-
-<b>Functional Description</b>
-
-IF at least one occurrence of &lt;GUARANTEE.Guarantee type&gt; is EQUAL to ‘2’<br/>THEN &lt;CUSTOMS OFFICE OF DESTINATION (DECLARED)&gt; = "R"<br/>ELSE &lt;CUSTOMS OFFICE OF DESTINATION (DECLARED)&gt; = "N"
-
-<b>Technical Description</b>
-
-IF at least one occurrence of /*/Guarantee/guaranteeType is EQUAL to ‘2’<br/>THEN /*/CustomsOfficeOfDestinationDeclared = "R"<br/>ELSE /*/CustomsOfficeOfDestinationDeclared = "N"<br/><br/>
-
-##C0234
-
-<b>Functional Description</b>
-
-IF &lt;CC037C-GUARANTEE REFERENCE.Guarantee type&gt; is in SET {1, 2, 4, 9}<br/>THEN &lt;CC037C-GUARANTEE REFERENCE-GUARANTOR&gt; ="R"<br/>ELSE &lt;CC037C-GUARANTEE REFERENCE-GUARANTOR&gt; = "N"
-
-<b>Technical Description</b>
-
-IF /CC037C/GuaranteeReference/guaranteeType is in SET {1, 2, 4, 9}<br/>THEN /CC037C/GuaranteeReference/Guarantor = "R"<br/>ELSE /CC037C/GuaranteeReference/Guarantor = "N"
-
 ##C0240
 
 <b>Functional Description</b>
@@ -386,76 +276,6 @@ IF &lt;HOLDER OF THE TRANSIT PROCEDURE.Identification number&gt; is PRESENT<br/>
 
 IF /*/HolderOfTheTransitProcedure/identificationNumber is PRESENT AND <br/>/*/HolderOfTheTransitProcedure/identificationNumber is a valid identifier in the European EOS ((Economic Operators Systems) verified by the EU Member State receiving or sending this message), OR is a valid identifier in the DB of the CTC country receiving or sending this message<br/>THEN <br/>     /*/HolderOfTheTransitProcedure/name="N" AND<br/>     /*/HolderOfTheTransitProcedure/Address="N"<br/>ELSE <br/>      /*/HolderOfTheTransitProcedure/name="R" AND <br/>      /*/HolderOfTheTransitProcedure/Address="R";<br/><br/>IF /*/Consignment/Consignor/identificationNumber is PRESENT AND /*/Consignment/Consignor/identificationNumber is a valid identifier in in the European EOS ((Economic Operators Systems) verified by the EU Member State receiving or sending this message), OR is a valid identifier in the DB of the CTC country receiving or sending this message<br/>THEN <br/>         /*/Consignment/Consignor/name="N" AND <br/>        /*/Consignment/Consignor/Address="N"<br/>ELSE <br/>       /*/Consignment/Consignor/name="R" AND <br/>      /*/Consignment/Consignor/Address="R";<br/><br/>IF /*/Consignment/Consignee/identificationNumber is PRESENT<br/>AND /*/Consignment/Consignee/identificationNumber is a valid identifier in the European EOS (Economic Operators Systems) verified by the EU Member State receiving or sending this message), OR is a valid identifier in the DB of the CTC country receiving or sending this message<br/>THEN <br/>       /*/Consignment/Consignee/name="N" AND <br/>       /*/Consignment/Consignee/Address="N"<br/>ELSE <br/>      /*/Consignment/Consignee/name="R" AND <br/>     /*/Consignment/Consignee/Address="R";<br/><br/>IF /*/Consignment/HouseConsignment/Consignor/identificationNumber is PRESENT<br/><br/>AND /*/Consignment/HouseConsignment/Consignor/identificationNumber is a valid identifier in the European EOS ((Economic Operators Systems) verified by the EU Member State receiving or sending this message), OR is a valid identifier in the DB of the CTC country receiving or sending this message<br/>THEN <br/>       /*/Consignment/HouseConsignment/Consignor/name="N" AND<br/>      /*/Consignment/HouseConsignment/Consignor/Address="N"<br/>ELSE <br/>     /*/Consignment/HouseConsignment/Consignor/name="R" AND<br/>     /*/Consignment/HouseConsignment/Consignor/Address="R";<br/><br/><br/>IF /*/Consignment/HouseConsignment/Consignee/identificationNumber is PRESENT<br/>AND /*/Consignment/HouseConsignment/Consignee/identificationNumber is a valid identifier in the European EOS ((Economic Operators Systems) verified by the EU Member State receiving or sending this message), OR is a valid identifier in the DB of the CTC country receiving or sending this message<br/>THEN <br/>       /*/Consignment/HouseConsignment/Consignee/name="N" AND<br/>      /*/Consignment/HouseConsignment/Consignee/Address="N"<br/>ELSE <br/>     /*/Consignment/HouseConsignment/Consignee/name="R" AND<br/>    /*/Consignment/HouseConsignment/Consignee/Address="R";<br/><br/><br/>IF /*/Guarantor/identificationNumber is PRESENT AND <br/>/*/Guarantor/identificationNumber is a valid identifier in the European EOS ((Economic Operators Systems) verified by the EU Member State receiving or sending this message), OR is a valid identifier in the DB of the CTC country receiving or sending this message<br/>THEN <br/>      /*/Guarantor/name="N" AND <br/>     /*/Guarantor/Address="N"<br/>ELSE <br/>     /*/Guarantor/name="R" AND <br/>    /*/Guarantor/Address="R";<br/>
 
-##C0251
-
-<b>Functional Description</b>
-
-IF &lt;RISK ANALYSIS IDENTIFICATION.Code&gt; is in SET {R,Y} <br/>THEN &lt;RISK ANALYSIS IDENTIFICATION–RISK ANALYSIS&gt; = "R" <br/>ELSE <br/>         IF &lt;RISK ANALYSIS IDENTIFICATION.Code&gt; is EQUAL to 'X' <br/>        THEN<br/>                   IF the last two characters of &lt;Message sender&gt; is in SET CL010 (CountryCodesCommunity)  <br/>                   THEN &lt;RISK ANALYSIS IDENTIFICATION–RISK ANALYSIS&gt; = "R" <br/>                   ELSE &lt;RISK ANALYSIS IDENTIFICATION–RISK ANALYSIS&gt; = "O" <br/>         ELSE &lt;RISK ANALYSIS IDENTIFICATION–RISK ANALYSIS&gt; = "N" <br/>
-
-<b>Technical Description</b>
-
-IF /*/RiskAnalysisIdentification/code is in SET {R, Y} <br/>THEN /*/RiskAnalysisIdentification/RiskAnalysis = "R" <br/>ELSE <br/>         IF /*/RiskAnalysisIdentification/code is EQUAL to ‘X’ <br/>         THEN <br/>                  IF the last two characters of /*/messageSender is in SET CL010  <br/>                  THEN /*/RiskAnalysisIdentification/RiskAnalysis = "R" <br/>                   ELSE /*/RiskAnalysisIdentification/RiskAnalysis = "O" <br/>         ELSE /*/RiskAnalysisIdentification/RiskAnalysis = "N" <br/>
-
-##C0255
-
-<b>Functional Description</b>
-
-IF &lt;CD204C-TRANSIT OPERATION.Usage cancellation date&gt; is PRESENT <br/>THEN &lt;CD204C-TRANSIT OPERATION.Release date&gt; = "N"<br/>ELSE &lt;CD204C-TRANSIT OPERATION.Release date&gt; = "R"<br/><br/>
-
-<b>Technical Description</b>
-
-IF /CD204C/TransitOperation/usageCancellationDate is PRESENT <br/>THEN /CD204C/TransitOperation/releaseDate = "N"<br/>ELSE /CD204C/TransitOperation/releaseDate = "R"<br/><br/>
-
-##C0260
-
-<b>Functional Description</b>
-
-IF &lt;CC225C-GUARANTEE REFERENCE.Validity date&gt; is PRESENT<br/>THEN &lt;CC225C-GUARANTEE REFERENCE.Invalidity date&gt; = "N"<br/>ELSE &lt;CC225C-GUARANTEE REFERENCE.Invalidity date&gt; = "O"
-
-<b>Technical Description</b>
-
-IF /CC225C/GuaranteeReference/validityDate is PRESENT<br/>THEN /CC225C/GuaranteeReference/invalidityDate&gt; = "N"<br/>ELSE /CC225C/GuaranteeReference/invalidityDate&gt; = "O"
-
-##C0270
-
-<b>Functional Description</b>
-
-IF &lt;CC037C-GUARANTEE REFERENCE-GUARANTEE QUERY.Query identifier&gt; is EQUAL to ‘4’<br/>THEN &lt;CC037C-GUARANTEE REFERENCE.Owner&gt; = "R"<br/>ELSE &lt;CC037C-GUARANTEE REFERENCE.Owner&gt; = "N"<br/><br/>
-
-<b>Technical Description</b>
-
-IF /CC037C/GuaranteeReference/GuaranteeQuery/queryIdentifier is EQUAL to ‘4’<br/>THEN /CC037C/GuaranteeReference/Owner = "R"<br/>ELSE /CC037C/GuaranteeReference/Owner = "N"
-
-##C0280
-
-<b>Functional Description</b>
-
-IF &lt;CC037C-GUARANTEE REFERENCE-GUARANTEE QUERY.Query identifier&gt; is EQUAL to ‘4’<br/>THEN &lt;CC037C-GUARANTEE REFERENCE-COMPREHENSIVE GUARANTEE&gt; = "N" AND <br/>&lt;CC037C-GUARANTEE REFERENCE-INDIVIDUAL GUARANTEE BY GUARANTOR&gt; = "N" AND<br/>&lt;CC037C-GUARANTEE REFERENCE-INDIVIDUAL GUARANTEE VOUCHER&gt; = "N"<br/>ELSE IF &lt;CC037C-GUARANTEE REFERENCE-COMPREHENSIVE GUARANTEE&gt; is PRESENT<br/>THEN &lt;CC037C-GUARANTEE REFERENCE-INDIVIDUAL GUARANTEE BY GUARANTOR&gt; = "N" AND<br/>&lt;CC037C-GUARANTEE REFERENCE-INDIVIDUAL GUARANTEE VOUCHER&gt; = "N"<br/>ELSE IF &lt;CC037C-GUARANTEE REFERENCE-INDIVIDUAL GUARANTEE BY GUARANTOR&gt; is PRESENT<br/>THEN &lt;CC037C-GUARANTEE REFERENCE-COMPREHENSIVE GUARANTEE&gt; = "N" AND <br/>&lt;CC037C-GUARANTEE REFERENCE-INDIVIDUAL GUARANTEE VOUCHER&gt; = "N"<br/>ELSE &lt;CC037C-GUARANTEE REFERENCE-INDIVIDUAL GUARANTEE VOUCHER&gt; = "R" AND <br/>&lt;CC037C-GUARANTEE REFERENCE-COMPREHENSIVE GUARANTEE&gt; = "N" AND <br/>&lt;CC037C-GUARANTEE REFERENCE-INDIVIDUAL GUARANTEE BY GUARANTOR&gt; = "N"
-
-<b>Technical Description</b>
-
-IF /CC037C/GuaranteeReference/GuaranteeQuery/queryIdentifier is EQUAL to ‘4’<br/>THEN /CC037C/GuaranteeReference/ComprehensiveGuarantee = "N" AND /CC037C/GuaranteeReference/IndividualGuaranteeByGuarantor = "N" AND /CC037C/GuaranteeReference/IndividualGuaranteeVoucher = "N"<br/>ELSE IF /CC037C/GuaranteeReference/ComprehensiveGuarantee is PRESENT <br/>THEN /CC037C/GuaranteeReference/IndividualGuaranteeByGuarantor = "N" AND /CC037C/GuaranteeReference/IndividualGuaranteeVoucher = "N"<br/>ELSE IF /CC037C/GuaranteeReference/IndividualGuaranteeByGuarantor is PRESENT<br/>THEN /CC037C/GuaranteeReference/ComprehensiveGuarantee = "N" AND /CC037C/GuaranteeReference/IndividualGuaranteeVoucher = "N"<br/>ELSE /CC037C/GuaranteeReference/IndividualGuaranteeVoucher = "R" AND /CC037C/GuaranteeReference/ComprehensiveGuarantee = "N" AND /CC037C/GuaranteeReference/IndividualGuaranteeByGuarantor = "N"
-
-##C0285
-
-<b>Functional Description</b>
-
-IF &lt;CC037C-GUARANTEE REFERENCE-GUARANTEE QUERY.Query identifier&gt; is in SET {1,4}<br/>OR &lt;CC037C-GUARANTEE REFERENCE.Guarantee type&gt; is EQUAL to '4'<br/>THEN &lt;CC037C-GUARANTEE REFERENCE-EXPOSURE&gt; = "N"<br/>ELSE &lt;CC037C-GUARANTEE REFERENCE-EXPOSURE&gt; = "R"
-
-<b>Technical Description</b>
-
-IF /CC037C/GuaranteeReference/GuaranteeQuery/queryIdentifier is in SET {1,4}<br/>OR /CC037C/GuaranteeReference/guaranteeType is EQUAL to '4'<br/>THEN /CC037C/GuaranteeReference/Exposure = "N"<br/>ELSE /CC037C/GuaranteeReference/Exposure = "R"
-
-##C0286
-
-<b>Functional Description</b>
-
-IF &lt;CC037C-GUARANTEE REFERENCE.Guarantee monitoring code&gt; is EQUAL to ‘3’ <br/>THEN &lt;CC037C-GUARANTEE REFERENCE-EXPOSURE.Balance&gt; = "R"<br/>ELSE &lt;CC037C-GUARANTEE REFERENCE-EXPOSURE.Balance&gt; = "N"<br/>
-
-<b>Technical Description</b>
-
-IF /CC037C/GuaranteeReference/guaranteeMonitoringCode is EQUAL to ‘3’<br/>THEN /CC037C/GuaranteeReference/Exposure/balance = "R"<br/>ELSE /CC037C/GuaranteeReference/Exposure/balance = "N"
-
 ##C0298
 
 <b>Functional Description</b>
@@ -475,36 +295,6 @@ IF &lt;CC141C-ENQUIRY.TC11 delivery date&gt; is PRESENT<br/>THEN &lt;CC141C-CUST
 <b>Technical Description</b>
 
 IF /CC141C/ENQUIRY/TC11DeliveryDate is PRESENT<br/>THEN /CC141C/CustomsOfficeOfDestinationActual = "R"<br/>ELSE /CC141C/CustomsOfficeOfDestinationActual= "O"
-
-##C0320
-
-<b>Functional Description</b>
-
-IF &lt;CD144C-RESPONSE INFORMATION.Information Code&gt; is in SET {10, 40, 50}<br/>THEN &lt;CD144C-RESPONSE INFORMATION.Text&gt; = "R"<br/>ELSE &lt;CD144C-RESPONSE INFORMATION.Text&gt; = "N"<br/>
-
-<b>Technical Description</b>
-
-IF /CD144C/ResponseInformation/informationCode&gt; is in SET {10, 40, 50}<br/>THEN /CD144C/ResponseInformation/text = "R"<br/>ELSE /CD144C/ResponseInformation/text = "N"
-
-##C0330
-
-<b>Functional Description</b>
-
-IF &lt;CD145C-REQUESTED INFORMATION.Code&gt; is in SET {5, 6}<br/>THEN &lt;CD145C-REQUESTED INFORMATION.Text&gt; = "R"<br/>ELSE &lt;CD145C-REQUESTED INFORMATION.Text&gt; = "N"
-
-<b>Technical Description</b>
-
-IF /CD145C/RequestedInformation/code is in SET {5, 6}<br/>THEN /CD145C/RequestedInformation/text = "R"<br/>ELSE /CD145C/RequestedInformation/text = "N"
-
-##C0333
-
-<b>Functional Description</b>
-
-IF &lt;CC029C-CONSIGNMENT-DEPARTURE TRANSPORT MEANS&gt; is PRESENT<br/>    THEN &lt;CONSIGNMENT-DEPARTURE TRANSPORT MEANS&gt; = “R”<br/>     ELSE&lt;CONSIGNMENT-DEPARTURE TRANSPORT MEANS&gt; = “N”;<br/><br/>IF &lt;CC029C-CONSIGNMENT-HOUSE CONSIGNMENT-DEPARTURE TRANSPORT MEANS&gt; is PRESENT<br/>THEN <br/>         &lt;CONSIGNMENT-HOUSE CONSIGNMENT-DEPARTURE TRANSPORT MEANS&gt; = “R”<br/>ELSE <br/>          &lt;CONSIGNMENT-HOUSE CONSIGNMENT-DEPARTURE TRANSPORT MEANS&gt; = “N”<br/>
-
-<b>Technical Description</b>
-
-IF /CC029C/Consignment/DepartureTransportMeans is PRESENT<br/>THEN<br/>       /*/ Consignment/DepartureTransportMeans = “R”<br/>ELSE <br/>      /*/ Consignment/DepartureTransportMeans = “N”;<br/><br/>IF /CC029C/Consignment/HouseConsignment/DepartureTransportMeans is PRESENT<br/>THEN <br/>       /*/ Consignment/HouseConsignment/DepartureTransportMeans = “R”<br/>ELSE <br/>         /*/ Consignment/HouseConsignment/DepartureTransportMeans = “N”
 
 ##C0337
 
@@ -566,36 +356,6 @@ IF &lt;CONSIGNMENT.HOUSE CONSIGNMENT.Release type &gt; is EQUAL to '1' <br/>THEN
 
 IF /*/Consignment/HouseConsignment/releaseType is EQUAL to '1' <br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem = ''R''<br/>ELSE /*/Consignment/HouseConsignment/ConsignmentItem = ''N''
 
-##C0354
-
-<b>Functional Description</b>
-
-IF &lt;CD049C-TRANSIT OPERATION.Discrepancies resolved&gt; is EQUAL to ‘1’<br/>THEN &lt;CD049C-TRANSIT OPERATION.Write-off date&gt; = ''R''<br/>ELSE &lt;CD049C-TRANSIT OPERATION.Write-off date&gt; = ''N''
-
-<b>Technical Description</b>
-
-IF /CD049C/TransitOperation/discrepanciesResolved is EQUAL to ‘1’<br/>THEN /CD049C/TransitOperation/writeOffDate = ''R''<br/>ELSE /CD049C/TransitOperation/writeOffDate = ''N''
-
-##C0365
-
-<b>Functional Description</b>
-
-IF&lt;TRANSIT OPERATION. Request Rejection Reason Code&gt; is PRESENT<br/>THEN<br/>&lt;TRANSIT OPERATION.Declaration type&gt; = "N" AND<br/>&lt;TRANSIT OPERATION.Declaration acceptance date&gt; = "N" AND<br/>&lt;TRANSIT OPERATION.Release date&gt; = "N" AND<br/>&lt;TRANSIT OPERATION.Reduced dataset indicator&gt; = "N" AND<br/>&lt;TRANSIT OPERATION.Binding itinerary&gt; = "N" AND<br/>&lt;TRANSIT OPERATION.Security&gt; = "N" AND<br/>&lt;CUSTOMS OFFICE OF DESTINATION (DECLARED)&gt; = "N" AND<br/>&lt;CONTROL RESULT&gt; = "N" AND<br/>&lt;HOLDER OF THE TRANSIT PROCEDURE&gt; = "N" AND<br/>&lt;CONSIGNMENT&gt; = "N" AND <br/>&lt;CD038C/TRANSIT OPERATION.Status&gt; = "N"<br/>ELSE<br/>&lt;TRANSIT OPERATION.Declaration type&gt; = "R" AND<br/>&lt;TRANSIT OPERATION.Declaration acceptance date&gt; = "R" AND<br/>&lt;TRANSIT OPERATION.Release date&gt; = "R" AND<br/>&lt;TRANSIT OPERATION.Reduced dataset indicator&gt; = "R" AND<br/>&lt;TRANSIT OPERATION.Binding itinerary&gt; = "R" AND<br/>&lt;TRANSIT OPERATION.Security&gt; = "R" AND<br/>&lt;CUSTOMS OFFICE OF DESTINATION (DECLARED)&gt; = "R" AND<br/>&lt;CONTROL RESULT&gt; = "R" AND<br/>&lt;HOLDER OF THE TRANSIT PROCEDURE&gt; = "R" AND<br/>&lt;CONSIGNMENT&gt; = "R" AND<br/>&lt;CD038C/TRANSIT OPERATION.Status&gt; = "R"
-
-<b>Technical Description</b>
-
-IF/*/TransitOperation/requestRejectionReasonCode is PRESENT<br/>THEN /*/TransitOperation/declarationType = "N"<br/>AND /*/TransitOperation/declarationAcceptanceDate = "N"<br/>AND /*/TransitOperation/releaseDate = "N"<br/>AND /*/TransitOperation/reducedDatasetIndicator = "N"<br/>AND /*/TransitOperation/bindingItinerary = "N"<br/>AND /*/TransitOperation/security = "N"<br/>AND /*/CustomsOfficeOfDestinationDeclared = "N"<br/>AND /*/ControlResult = "N"<br/>AND /*/HolderOfTheTransitProcedure = "N"<br/>AND /*/Consignment = "N"<br/>AND /CD038C/TransitOperation/status = "N"<br/>ELSE /*/TransitOperation/declarationType = "R"<br/>AND /*/TransitOperation/declarationAcceptanceDate = "R"<br/>AND /*/TransitOperation/releaseDate = "R"<br/>AND /*/TransitOperation/reducedDatasetIndicator = "R"<br/>AND /*/TransitOperation/bindingItinerary = "R"<br/>AND /*/TransitOperation/security = "R"<br/>AND /*/CustomsOfficeOfDestinationDeclared = "R"<br/>AND /*/ControlResult = "R"<br/>AND /*/HolderOfTheTransitProcedure = "R"<br/>AND /*/Consignment = "R"<br/>AND /CD038C/TransitOperation/status = "R"
-
-##C0366
-
-<b>Functional Description</b>
-
-IF&lt;CD165C-TRANSIT OPERATION.Request rejection reason code&gt; is PRESENT<br/>THEN &lt;CD165C-TRANSIT OPERATION.Specific circumstance indicator&gt; = "N" AND <br/>&lt;CD165C-CUSTOMS OFFICE OF TRANSIT (DECLARED)&gt; = "N" AND no validation of other conditions is performed<br/>ELSE &lt;CD165C-TRANSIT OPERATION.Specific circumstance indicator&gt; = "O" AND <br/>&lt;CD165C-CUSTOMS OFFICE OF TRANSIT (DECLARED)&gt; = "O"
-
-<b>Technical Description</b>
-
-IF /CD165C/TransitOperation/requestRejectionReasonCode is PRESENT<br/>THEN /CD165C/TransitOperation/specificCircumstanceIndicator = "N" AND<br/>/CD165C/CustomsOfficeOfTransitDeclared = "N"<br/>AND no validation of other conditions is performed<br/>ELSE /CD165C/TransitOperation/specificCircumstanceIndicator = "O" AND<br/>/CD165C/CustomsOfficeOfTransitDeclared = "O"
-
 ##C0382
 
 <b>Functional Description</b>
@@ -636,16 +396,6 @@ IF &lt;CONSIGNMENT-INCIDENT.Code&gt; is EQUAL to ‘2’ <br/>THEN &lt;CONSIGNME
 
 IF /*/Consignment/Incident/code is EQUAL to ‘2’ <br/>THEN /*/Consignment/Incident/TransportEquipment/numberOfSeals = "R"<br/>ELSE /*/Consignment/Incident/TransportEquipment/numberOfSeals = "O"
 
-##C0400
-
-<b>Functional Description</b>
-
-IF &lt;COUNTRY-ACTION-UNAVAILABILITY.Type&gt; is EQUAL to ‘S’ <br/>THEN &lt;COUNTRY-ACTION-UNAVAILABILITY.End date and time&gt; = "R"<br/>ELSE &lt;COUNTRY-ACTION-UNAVAILABILITY.End date and time&gt; = "O"
-
-<b>Technical Description</b>
-
-IF /*/Country/Action/Unavailability/type is EQUAL to ‘S’<br/>THEN /*/Country/Action/Unavailability/endDateAndTime = "R"<br/>ELSE /*/Country/Action/Unavailability/endDateAndTime = "O"
-
 ##C0403
 
 <b>Functional Description</b>
@@ -675,16 +425,6 @@ IF &lt;TRANSIT OPERATION.Declaration type&gt; is EQUAL to 'TIR' <br/>THEN &lt;TR
 <b>Technical Description</b>
 
 IF /*/TransitOperation/declarationType is EQUAL to 'TIR' <br/>THEN /*/TransitOperation/TIRCarnetNumber = "R"<br/>ELSE /*/TransitOperation/TIRCarnetNumber = "N"<br/>
-
-##C0417
-
-<b>Functional Description</b>
-
-IF &lt;GUARANTEE-GUARANTEE REFERENCE-INVALID GUARANTEE REASON.Code&gt; is EQUAL to ‘G01’ <br/>THEN &lt;GUARANTEE-GUARANTEE REFERENCE-CUSTOMS OFFICE OF GUARANTEE&gt; = "O" <br/>ELSE &lt;GUARANTEE-GUARANTEE REFERENCE-CUSTOMS OFFICE OF GUARANTEE&gt; = "R"<br/>
-
-<b>Technical Description</b>
-
-IF /*/Guarantee/GuaranteeReference/InvalidGuaranteeReason/code&gt; is EQUAL to ‘G01’ <br/>THEN /*/Guarantee/GuaranteeReference/CustomsOfficeOfGuarantee = "O" <br/>ELSE /*/Guarantee/GuaranteeReference/CustomsOfficeOfGuarantee = "R"<br/><br/>
 
 ##C0440
 
@@ -745,26 +485,6 @@ IF &lt;CONSIGNMENT-INCIDENT-LOCATION.Qualifier of identification&gt; is EQUAL to
 <b>Technical Description</b>
 
 IF /*/Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'W'<br/>THEN <br/>/*/Consignment/Incident/Location/GNSS = "R" AND <br/>/*/Consignment/Incident/Location/UNLocode = "N" AND <br/>/*/Consignment/Incident/Location/Address = "N"<br/>ELSE IF /*/Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'U' <br/>THEN <br/>/*/Consignment/Incident/Location/UNLocode = "R" AND <br/>/*/Consignment/Incident/Location/GNSS = "N" AND <br/>/*/Consignment/Incident/Location/Address = "N"<br/>ELSE IF /*/Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'Z' <br/>THEN<br/>/*/Consignment/Incident/Location/Address = "R" AND <br/>/*/Consignment/Incident/Location/UNLocode = "N" AND<br/>/*/Consignment/Incident/Location/GNSS = "N"
-
-##C0461
-
-<b>Functional Description</b>
-
-IF Message type of the rejected message is in SET CL385 (MessageTypeWithoutHeader)<br/>THEN &lt;CD906C-HEADER&gt; = "N"<br/>ELSE &lt;CD906C-HEADER&gt; = "R"
-
-<b>Technical Description</b>
-
-IF Message type of the rejected message is in SET CL385 <br/>THEN /CD906C/Header = "N" 	<br/>ELSE /CD906C/Header = "R"<br/>
-
-##C0466
-
-<b>Functional Description</b>
-
-IF &lt;TRANSIT OPERATION.Request rejection reason code&gt; is PRESENT<br/>THEN  <br/>&lt;CUSTOMS OFFICE OF TRANSIT (DECLARED)&gt; = "N" AND <br/>&lt;CUSTOMS OFFICE OF EXIT FOR TRANSIT (DECLARED)&gt; = "N" AND <br/>&lt;RISK ANALYSIS IDENTIFICATION&gt; = "N" AND <br/>&lt;TRANSIT OPERATION.TIR Carnet number&gt; = "N" AND <br/>&lt;CONSIGNMENT.Mode of transport at the border&gt; = "N" AND <br/>&lt;TRANSIT OPERATION.Specific circumstance indicator&gt; = "N" AND no validation of other conditions is performed<br/>ELSE  the optionality of <br/>&lt;CUSTOMS OFFICE OF TRANSIT (DECLARED)&gt; will be derived from other conditions AND <br/>&lt;CUSTOMS OFFICE OF EXIT FOR TRANSIT (DECLARED)&gt; will be derived from other conditions AND <br/>&lt;RISK ANALYSIS IDENTIFICATION&gt; will be derived from other conditions AND <br/>&lt;TRANSIT OPERATION.TIR Carnet number&gt; will be derived from other conditions AND <br/>&lt;CONSIGNMENT.Mode of transport at the border&gt; will be derived from other conditions AND <br/>&lt;TRANSIT OPERATION.Specific circumstance indicator&gt; will be derived from other conditions
-
-<b>Technical Description</b>
-
-IF/*/TransitOperation/requestRejectionReasonCode is PRESENT<br/>THEN /*/CustomsOfficeOfTransitDeclared = "N"<br/>AND /*/CustomsOfficeOfExitForTransitDeclared = “N"<br/>AND /*/RiskAnalysisIdentification = "N"<br/>AND /*/TransitOperation/tirCarnetNumber = "N"<br/>AND /*/Consignment/modeOfTransportAtTheBorder = "N"<br/>AND /*/TransitOperation/specificCircumstanceIndicator = "N"<br/>AND no validation of other conditions is performed<br/>ELSE the optionality of <br/>/*/CustomsOfficeOfTransitDeclared will be derived from other conditions AND<br/>/*/CustomsOfficeOfExitForTransitDeclared will be derived from other conditions AND<br/>/*/RiskAnalysisIdentification will be derived from other conditions AND<br/>/*/TransitOperation/tirCarnetNumber will be derived from other conditions AND<br/>/*/Consignment/modeOfTransportAtTheBorder will be derived from other conditions AND<br/>/*/TransitOperation/specificCircumstanceIndicator will be derived from other conditions
 
 ##C0467
 
@@ -976,16 +696,6 @@ IF &lt;TRANSIT OPERATION.Additional declaration type&gt; is EQUAL to 'D'<br/>THE
 
 IF /*/TransitOperation/Additional declaration type is EQUAL to 'D'<br/>THEN /*/Consignment/LocationOfGoods = "O"<br/>ELSE IF the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is in SET CL147<br/>THEN /*/Consignment/LocationOfGoods = "O"<br/>ELSE /*/Consignment/LocationOfGoods = "R"
 
-##C0715
-
-<b>Functional Description</b>
-
-IF &lt;RISK ANALYSIS IDENTIFICATION.Code&gt; is EQUAL to ‘R’ <br/>THEN <br/>&lt;RISK ANALYSIS IDENTIFICATION-RISK ANALYSIS-RISK ANALYSIS RESULT.Code&gt; = "R" AND <br/>&lt;RISK ANALYSIS IDENTIFICATION-RISK ANALYSIS-RISK ANALYSIS RESULT.Risk area code&gt; = "O" <br/>ELSE IF &lt;RISK ANALYSIS IDENTIFICATION.Code&gt; is EQUAL to 'X' <br/>THEN <br/>&lt;RISK ANALYSIS IDENTIFICATION-RISK ANALYSIS-RISK ANALYSIS RESULT.Code&gt; = “N” AND <br/>&lt;RISK ANALYSIS IDENTIFICATION-RISK ANALYSIS-RISK ANALYSIS RESULT.Risk area code&gt; = "R" <br/>ELSE <br/>&lt;RISK ANALYSIS IDENTIFICATION-RISK ANALYSIS-RISK ANALYSIS RESULT.Code&gt;= "R" AND <br/>&lt;RISK ANALYSIS IDENTIFICATION-RISK ANALYSIS-RISK ANALYSIS RESULT.Risk area code&gt; = "R" 
-
-<b>Technical Description</b>
-
-IF /*/RiskAnalysisIdentification/code is EQUAL to ‘R’ <br/>THEN <br/>/*/RiskAnalysisIdentification/RiskAnalysis/RiskAnalysisResult/code = "R" AND <br/>/*/RiskAnalysisIdentification/RiskAnalysis/RiskAnalysisResult/riskAreaCode = "O" <br/>ELSE IF /*/RiskAnalysisIdentification/code is EQUAL to 'X' <br/>THEN <br/>/*/ RiskAnalysisIdentification/RiskAnalysis/RiskAnalysisResult/code = "N" AND <br/>/*/RiskAnalysisIdentification/RiskAnalysis/RiskAnalysisResult/riskAreaCode = "R" <br/>ELSE /*/ RiskAnalysisIdentification/RiskAnalysis/RiskAnalysisResult/code= "R" AND <br/>/*/RiskAnalysisIdentification/RiskAnalysis/RiskAnalysisResult/riskAreaCode = "R" 
-
 ##C0716
 
 <b>Functional Description</b>
@@ -995,36 +705,6 @@ IF &lt;CC906C-Message type&gt; is in SET {CC040C, CC042C, CC048C}<br/>THEN &lt;C
 <b>Technical Description</b>
 
 IF /CC906C/messageType is in SET {CC040C, CC042C, CC048C}<br/>THEN /CC906C/Header/LRN = "N" and /CC906C/Header/MRN = "R" <br/>ELSE IF /CC906C/messageType is EQUAL to 'CC190C' <br/>THEN <br/>        IF /CC190C/TransitOperation/LRN is PRESENT <br/>        THEN /CC906C/Header/LRN = "R" and /CC906C/Header/MRN = "N"<br/>        ELSE <br/>        /CC906C/Header/LRN = "N" and /CC906C/Header/MRN = "R"<br/>ELSE IF /CC906C/messageType is EQUAL to 'CC191C' THEN<br/>        IF /CC191C/TransitOperation/LRN is PRESENT <br/>       THEN CC906C/Header/LRN = "R" and /CC906C/Header/MRN = "N"<br/>        ELSE CC906C/Header/LRN = "N" and /CC906C/Header/MRN = "R"<br/>
-
-##C0803
-
-<b>Functional Description</b>
-
-IF &lt;CD903D-EVALUATED MESSAGE.Message Type&gt; is EQUAL to ‘CD411D’<br/>THEN &lt;CD903D-EVALUATED MESSAGE.Country&gt; = “R” <br/>   AND &lt;CD903D-EVALUATED MESSAGE.Year&gt; = “R” <br/>   AND &lt;CD903D-EVALUATED MESSAGE.Month&gt; = “R”<br/>ELSE &lt;CD903D-EVALUATED MESSAGE.Country&gt; = “O” <br/>   AND &lt;CD903D-EVALUATED MESSAGE.Year&gt; = “O” <br/>   AND &lt;CD903D-EVALUATED MESSAGE.Month&gt; = “O”
-
-<b>Technical Description</b>
-
-IF /CD903D/EvaluatedMessage/messageType is EQUAL to ‘CD411D’<br/>THEN /CD903D/EvaluatedMessage/country = “R” <br/>   AND /CD903D/EvaluatedMessage/year = “R” <br/>   AND /CD903D/EvaluatedMessage/month = “R”<br/>ELSE /CD903D/EvaluatedMessage/country = “O” <br/>   AND /CD903D/EvaluatedMessage/year = “O” <br/>   AND /CD903D/EvaluatedMessage/month = “O”
-
-##C0804
-
-<b>Functional Description</b>
-
-IF &lt;CD903D-CONSISTENCY CHECKS WARNING.Warning code&gt; is in SET {P1001, P2001}<br/>THEN &lt;CD903D-CONSISTENCY CHECKS WARNING.Original attribute value&gt; = "R"<br/>ELSE &lt;CD903D-CONSISTENCY CHECKS WARNING.Original attribute value&gt; = "N" 
-
-<b>Technical Description</b>
-
-IF /CD903D/ConsistencyChecksWarning/warningCode is in SET {P1001, P2001}<br/>THEN /CD903D/ConsistencyChecksWarning/originalAttributeValue = "R"<br/>ELSE /CD903D/ConsistencyChecksWarning/originalAttributeValue = "N" 
-
-##C0805
-
-<b>Functional Description</b>
-
-IF &lt;CD411D-SENDING COUNTRY-SYSTEM APPLICABILITY-STATISTICAL CHARACTERISTICS.Statistics type support&gt; is EQUAL to '1'<br/>THEN &lt;CD411D-SENDING COUNTRY-SYSTEM APPLICABILITY-STATISTICAL CHARACTERISTICS-SERIES ELEMENTS&gt; = "R"<br/>ELSE &lt;CD411D-SENDING COUNTRY-SYSTEM APPLICABILITY-STATISTICAL CHARACTERISTICS-SERIES ELEMENTS&gt; = "N"
-
-<b>Technical Description</b>
-
-IF /CD411D/SendingCountry/SystemApplicability/StatisticalCharacteristics/statisticsTypeSupport is EQUAL to '1'<br/>THEN /CD411D/SendingCountry/SystemApplicability/StatisticalCharacteristics/SeriesElements = "R"<br/>ELSE /CD411D/SendingCountry/SystemApplicability/StatisticalCharacteristics/SeriesElements = “N”
 
 ##C0806
 
@@ -1056,56 +736,6 @@ IF &lt;CC015C-TRANSIT OPERATION.Security&gt; is in SET {1,2,3}<br/>      AND <br
 
 IF /CC015C/TransitOperation/security is in SET {1,2,3}<br/>    AND <br/>      /CC170C/Consignment/modeOfTransportAtTheBorder is EQUAL to ‘4’<br/>THEN /CC170C/Consignment/ActiveBorderTransportMeans/conveyanceReferenceNumber = "R"<br/>ELSE /CC170C/Consignment/ActiveBorderTransportMeans/conveyanceReferenceNumber = "O"
 
-##C0810
-
-<b>Functional Description</b>
-
-IF &lt;CD001C-CONSIGNMEN -TRANSPORT EQUIPMENT.Number of seals is GREATER than '0'<br/>OR &lt;CD003C-CONSIGNMENT-TRANSPORT EQUIPMENT.Number of seals is GREATER than '0'<br/>OR &lt;CD003C-CONSIGNMENT-INCIDENT-TRANSPORT EQUIPMENT.Number of seals is GREATER than '0'<br/>THEN &lt;CD018C-CONTROL RESULT.State of seals&gt; = "R"<br/>ELSE &lt;CD018C-CONTROL RESULT.State of seals&gt; = "O"
-
-<b>Technical Description</b>
-
-IF /CD001C/Consignment/TransportEquipment/numberOfSeals is GREATER than '0'<br/>OR /CD003C/Consignment/TransportEquipment/numberOfSeals is GREATER than '0'<br/>OR /CD003C/Consignment/Incident/TransportEquipment/numberOfSeals is GREATER than '0'<br/>THEN /CD018C/ControlResult/stateOfSeals = "R"<br/>ELSE /CD018C/ControlResult/stateOfSeals = "O"
-
-##C0811
-
-<b>Functional Description</b>
-
-IF &lt;TRANSIT OPERATION.Request rejection reason code&gt; is EQUAL to '1'<br/>THEN &lt;CUSTOMS OFFICE OF DEPARTURE&gt; = "N"<br/>ELSE &lt;CUSTOMS OFFICE OF DEPARTURE&gt; = "R"
-
-<b>Technical Description</b>
-
-IF /*/TransitOperation/requestRejectionReasonCode is EQUAL to '1'<br/>THEN /*/CustomsOfficeOfDeparture = "N"<br/>ELSE /*/CustomsOfficeOfDeparture = "R"
-
-##C0812
-
-<b>Functional Description</b>
-
-IF the last two characters of &lt;Message recipient&gt; is NOT in SET CL147<br/>(CountryCustomsSecurityAgreementArea)<br/>THEN<br/>&lt;TRANSIT OPERATION.Specific circumstance indicator&gt; = "N" AND<br/>&lt;CUSTOMS OFFICE OF EXIT FOR TRANSIT (DECLARED)&gt; = "N" AND<br/>&lt;CUSTOMS OFFICE OF EXIT FOR TRANSIT (ACTUAL)&gt; = "N" AND<br/>&lt;CONSIGNMENT-CARRIER&gt; = "N" AND<br/>&lt;CONSIGNMENT-PLACE OF UNLOADING&gt; = "N" AND<br/>&lt;CONSIGNMENT-TRANSPORT CHARGES&gt; = "N"<br/>AND &lt;CONSIGNMENT-HOUSE CONSIGNMENT-TRANSPORT CHARGES&gt; = "N"<br/>AND no validation of other conditions is performed<br/> ELSE<br/>&lt;TRANSIT OPERATION.Specific circumstance indicator&gt; = "O" AND<br/>&lt;CUSTOMS OFFICE OF EXIT FOR TRANSIT (DECLARED)&gt; = "O" AND<br/>&lt;CUSTOMS OFFICE OF EXIT FOR TRANSIT (ACTUAL)&gt; = "O" AND<br/>&lt;CONSIGNMENT-CARRIER&gt; = "O" AND<br/>&lt;CONSIGNMENT-PLACE OF UNLOADING&gt; = "O" AND<br/>&lt;CONSIGNMENT-TRANSPORT CHARGES&gt; = "O"<br/>AND &lt;CONSIGNMENT-HOUSE CONSIGNMENT-TRANSPORT CHARGES&gt; = "O"<br/>
-
-<b>Technical Description</b>
-
-IF the last 2 characters of /*/messageRecipient is NOT in SET CL147<br/>THEN /*/TransitOperation/specificCircumstanceIndicator = "N"<br/>AND /*/CustomsOfficeOfExitForTransitDeclared = "N"<br/>AND /*/CustomsOfficeOfExitForTransitActual = "N"<br/>AND /*/Consignment/Carrier = "N"<br/>AND /*/Consignment/PlaceOfUnloading = "N"<br/>AND /*/Consignment/TransportCharges = "N"<br/>AND /*/Consignment/HouseConsignment/TransportCharges = "N"<br/>AND no validation of other conditions is performed<br/>ELSE /*/TransitOperation/specificCircumstanceIndicator = "O"<br/>AND /*/CustomsOfficeOfExitForTransitDeclared = "O"<br/>AND /*/CustomsOfficeOfExitForTransitActual = "O"<br/>AND /*/Consignment/Carrier = "O"<br/>AND /*/Consignment/PlaceOfUnloading = "O"<br/>AND /*/Consignment/TransportCharges = "O"<br/>AND /*/Consignment/HouseConsignment/TransportCharges = "O"<br/>
-
-##C0813
-
-<b>Functional Description</b>
-
-IF &lt;TRANSIT OPERATION.Security&gt; is in SET {1, 2, 3} AND the last two characters of &lt;Message sender&gt; is in SET CL147<br/> (CountryCustomsSecurityAgreementArea) AND the last two characters of &lt;Message recipient&gt; is in SET CL147<br/>(CountryCustomsSecurityAgreementArea)<br/>THEN &lt;RISK ANALYSIS IDENTIFICATION&gt;= "R"<br/>ELSE IF &lt;TRANSIT OPERATION.Security&gt; is EQUAL to ‘0’ AND the last two characters of &lt;Message sender&gt; is in SET CL010 (CountryCodesCommunity) AND the last two characters of &lt;Message recipient&gt; is in SET CL010 (CountryCodesCommunity)<br/>THEN &lt;RISK ANALYSIS IDENTIFICATION&gt;= "R"<br/>ELSE IF the last two characters of &lt;Message sender&gt; is NOT in SET CL010 (CountryCodesCommunity) OR the last two characters of &lt;Message recipient&gt; is NOT in SET CL010 (CountryCodesCommunity)<br/>THEN &lt;RISK ANALYSIS IDENTIFICATION&gt; = "N"
-
-<b>Technical Description</b>
-
-IF the /*/TransitOperation/security is in SET {1, 2, 3} AND the last two characters of /*/messageSender is in SET CL147 AND the last two characters of /*/messageRecipient is in SET CL147<br/>THEN /*/RiskAnalysisIdentification = "R"<br/>ELSE IF the /*/TransitOperation/security is EQUAL to ‘0’ AND the last two characters of /*/messageSender is in SET CL010 AND the last two characters of /*/messageRecipient is in SET CL010<br/>THEN /*/RiskAnalysisIdentification = "R"<br/> ELSE IF the last two characters of /*/messageSender is NOT in SET CL010 OR<br/> the last two characters of /*/messageRecipient is NOT in SET CL010<br/>THEN /*/RiskAnalysisIdentification = "N"<br/>
-
-##C0815
-
-<b>Functional Description</b>
-
-IF at least one occurrence of &lt;GUARANTEE.Guarantee type&gt; is in SET {2, 9}<br/>THEN &lt;CONSIGNMENT&gt; = "R"<br/>ELSE &lt;CONSIGNMENT&gt; = "N"
-
-<b>Technical Description</b>
-
-IF in at least one occurrence of /*/Guarantee/guaranteeType is in SET {2, 9}<br/>THEN /*/Consignment = "R"<br/>ELSE /*/Consignment = "N"
-
 ##C0816
 
 <b>Functional Description</b>
@@ -1115,26 +745,6 @@ IF the &lt;CUSTOMS OFFICE OF DEPARTURE&gt; (for the CC017C) or the &lt;CUSTOMS O
 <b>Technical Description</b>
 
 IF the /*/CustomsOfficeOfDeparture (for the CC017C) or the /*/CustomsOfficeOfDestinationActual [for the CD018C and CC044C] is located in a CTC country or AD or SM<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode/combinedNomenclatureCode= "N"<br/>ELSE  /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode/combinedNomenclatureCode= "O"
-
-##C0817
-
-<b>Functional Description</b>
-
-IF &lt;CC037C-GUARANTEE REFERENCE-GUARANTEE QUERY.Query identifier&gt; is in SET {2, 4}<br/>THEN &lt;CC037C-GUARANTEE REFERENCE-USAGE&gt; = "N"<br/>ELSE &lt;CC037C-GUARANTEE REFERENCE-USAGE&gt; = "O"
-
-<b>Technical Description</b>
-
-IF /CC037C/GuaranteeReference/GuaranteeQuery/queryIdentifier is in SET {2, 4}<br/>THEN /CC037C/GuaranteeReference/Usage = "N" <br/>ELSE /CC037C/GuaranteeReference/Usage = "O"
-
-##C0818
-
-<b>Functional Description</b>
-
-IF &lt;CC034C-REQUESTER.Role&gt; is EQUAL to '1'<br/>THEN &lt;CC034C-GUARANTEE REFERENCE-OWNER&gt; = "N"<br/>ELSE &lt;CC034C-GUARANTEE REFERENCE-OWNER&gt; = "R"
-
-<b>Technical Description</b>
-
-IF /CC034C/Requester/role is EQUAL to '1'<br/>THEN /CC034C/GuaranteeReference/Owner = "N"<br/>ELSE /CC034C/GuaranteeReference/Owner = "R"
 
 ##C0820
 
@@ -1195,26 +805,6 @@ IF &lt;CONSIGNMENT.Inland mode of transport&gt; is EQUAL to '5'<br/>THEN <br/>&l
 <b>Technical Description</b>
 
 IF /*/Consignment/inlandModeOfTransport is EQUAL to '5'<br/>THEN<br/>/*/Consignment/DepartureTransportMeans = “N” AND /*/Consignment/HouseConsignment/DepartureTransportMeans = "N"<br/>ELSE<br/>IF /*/Consignment/DepartureTransportMeans is PRESENT<br/>THEN /*/Consignment/HouseConsignment/DepartureTransportMeans = "N"<br/>ELSE /*/Consignment/HouseConsignment/DepartureTransportMeans = "O"
-
-##C0828
-
-<b>Functional Description</b>
-
-IF &lt;COUNTRY-ACTION-UNAVAILABILITY.Functionality&gt; is in SET CL168 (BusinessFunctionalityCode) <br/>THEN &lt;COUNTRY-ACTION-UNAVAILABILITY-FALLBACK&gt; = "O"<br/>ELSE &lt;COUNTRY-ACTION-UNAVAILABILITY-FALLBACK&gt; = "N"
-
-<b>Technical Description</b>
-
-IF /*/Country/Action/Unavailability/functionality is in SET CL168<br/>THEN /*/Country/Action/Unavailability/Fallback = "O" <br/>ELSE /*/Country/Action/Unavailability/Fallback = "N"
-
-##C0831
-
-<b>Functional Description</b>
-
-IF &lt;CUSTOMS OFFICE OF DESTINATION&gt; is PRESENT<br/>THEN<br/>&lt;CUSTOMS OFFICE OF TRANSIT&gt; = "N" AND<br/>&lt;CUSTOMS OFFICE OF EXIT FOR TRANSIT&gt; = "N"<br/>ELSE IF &lt;CUSTOMS OFFICE OF TRANSIT&gt; is PRESENT<br/>THEN<br/>&lt;CUSTOMS OFFICE OF EXIT FOR TRANSIT&gt; = "N"<br/>ELSE<br/>&lt;CUSTOMS OFFICE OF EXIT FOR TRANSIT&gt; = "R"
-
-<b>Technical Description</b>
-
-IF /*/CustomsOfficeOfDestination is PRESENT<br/>THEN /*/CustomsOfficeOfTransit = "N" AND /*/CustomsOfficeOfExitForTransit = "N"<br/>ELSE IF /*/CustomsOfficeOfTransit is PRESENT<br/>THEN /*/CustomsOfficeOfExitForTransit = "N"<br/>ELSE<br/>/*/CustomsOfficeOfExitForTransit = "R"
 
 ##C0833
 
