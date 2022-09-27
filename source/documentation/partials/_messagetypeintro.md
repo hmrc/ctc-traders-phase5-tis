@@ -15,6 +15,45 @@ Message type details are as follows:
 - Links to applicable rules and conditions. 
 - Header elements (XML fields that can contain other XML fields) are highlighted in **bold**.
 
+## Message categorisation by sender
+
+This section lists the message types that are sent by NCTS and the message types that are sent by traders.
+
+### Messages from NCTS
+
+| Code  | Message                               |
+| ----- | ------------------------------------- |
+| IE004 | Amendment Acceptance                  |
+| IE009 | Invalidation Decision                 |
+| IE019 | Discrepancies                         |
+| IE025 | Goods Release Notification            |
+| IE028 | MRN Allocated                         |
+| IE029 | Release For Transit                   |
+| IE035 | Recovery Notification                 |
+| IE043 | Unloading Permission                  |
+| IE045 | Write-Off Notification                |
+| IE051 | No Release For Transit                |
+| IE055 | Guarantee Not Valid                   |
+| IE056 | Rejection From Office Of Departure    |
+| IE057 | Rejection From Office Of Destination  |
+| IE060 | Control Decision Notification         |
+| IE140 | Request On Non-Arrived Movement       |
+| IE182 | Forwarded Incident Notification To ED |
+| IE906 | Functional Nack                       |
+| IE928 | Positive Acknowledge                  |
+
+### Messages from traders
+
+| Code  | Message                                                  |
+| ----- | -------------------------------------------------------- |
+| IE007 | Arrival Notification                                     |
+| IE013 | Declaration Amendment                                    |
+| IE014 | Declaration Invalidation Request                         |
+| IE015 | Declaration Data                                         |
+| IE044 | Unloading Remarks                                        |
+| IE141 | Information About Non-Arrived Movement                   |
+| IE170 | Presentation Notification For The Pre-Lodged Declaration |
+
 ## Accessing the XML schemas
 
 The XML schemas are available for download [here](https://github.com/hmrc/transit-movements-validator/tree/main/conf/xsd).
