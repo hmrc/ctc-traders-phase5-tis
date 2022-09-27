@@ -484,6 +484,6 @@ This scenario shows what happens when the competent authority of enquiry at depa
 <a href="../figures/enquiry_movement_unknown.svg" target="_blank">Open the diagram in a new tab.</a>
 
 1. The process starts when the ‘Release for Transit’ E_REL_TRA (IE029) message is sent to the holder of the transit procedure.
-1. The competent authority of enquiry at departure does not have sufficient information that would allow for the discharge of the transit procedure and so sends a ‘Request on Non-Arrived Movement’ E_REQ_MOV (IE140) message to the holder of the transit procedure.
+1. The competent authority of enquiry at departure does not have sufficient information that would allow for the discharge of the transit procedure, so it sends a ‘Request on Non-Arrived Movement’ E_REQ_MOV (IE140) message to the holder of the transit procedure.
 1. The holder of the transit procedure responds within the time limit with the ‘Information about Non-Arrived Movement’ E_MOV_RSP (IE141) message. 
 1. The movement is written off manually by the office of departure.
