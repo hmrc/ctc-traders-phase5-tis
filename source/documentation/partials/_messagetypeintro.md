@@ -17,9 +17,9 @@ Message type details are as follows:
 
 ## Message categorisation by sender
 
-This section lists the message types that are sent by NCTS and the message types that are sent by traders.
+Some message types are sent by the NCTS while other message types are sent by traders.
 
-### Messages from NCTS
+### Messages from the NCTS
 
 | Code  | Message                               |
 | ----- | ------------------------------------- |
