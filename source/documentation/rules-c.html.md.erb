@@ -200,7 +200,7 @@ IF /*/TransitOperation/TIRCarnetNumber is PRESENT<br/>THEN /*/Consignment/HouseC
 
 <b>Functional Description</b>
 
-IF &lt;CC015C-TRANSIT OPERATION.Reduced dataset indicator&gt; is EQUAL to '1'<br/>          OR &lt;CC013C-TRANSIT OPERATION.Reduced dataset indicator&gt; is EQUAL to '1'<br/>THEN &lt;CC170C-CONSIGNMENT.Inland mode of transport&gt; = "N"<br/>ELSE &lt;CC170C-CONSIGNMENT.Inland mode of transport&gt; = "O"<br/><br/> 
+IF &lt;CC015C-TRANSIT OPERATION.Reduced dataset indicator&gt; is EQUAL to '1'<br/>          OR &lt;CC013C-TRANSIT OPERATION.Reduced dataset indicator&gt; is EQUAL to '1'<br/>THEN &lt;CC170C-CONSIGNMENT.Inland mode of transport&gt; = "N"<br/>ELSE &lt;CC170C-CONSIGNMENT.Inland mode of transport&gt; = "O"<br/><br/>
 
 <b>Technical Description</b>
 
@@ -260,11 +260,11 @@ IF /CC141C/Enquiry/TC11DeliveryDate is PRESENT<br/>THEN /CC141C/Enquiry/text = "
 
 <b>Functional Description</b>
 
-IF &lt;CONSIGNMENT-INCIDENT.Code&gt; is in SET {2, 4} <br/>THEN &lt;CONSIGNMENT-INCIDENT-TRANSPORT EQUIPMENT&gt; = "R" AND <br/>&lt;CONSIGNMENT-INCIDENT-TRANSHIPMENT&gt; = "N" <br/>ELSE IF &lt;CONSIGNMENT-INCIDENT.Code&gt; is in SET {3, 6} <br/>THEN &lt;CONSIGNMENT-INCIDENT-TRANSPORT EQUIPMENT&gt; = "O" AND <br/>&lt;CONSIGNMENT-INCIDENT-TRANSHIPMENT&gt; = "R" <br/>ELSE <br/>&lt;CONSIGNMENT-INCIDENT-TRANSPORT EQUIPMENT&gt; = "N" AND <br/>&lt;CONSIGNMENT-INCIDENT-TRANSHIPMENT&gt; = "N" 
+IF &lt;CONSIGNMENT-INCIDENT.Code&gt; is in SET {2, 4} <br/>THEN &lt;CONSIGNMENT-INCIDENT-TRANSPORT EQUIPMENT&gt; = "R" AND <br/>&lt;CONSIGNMENT-INCIDENT-TRANSHIPMENT&gt; = "N" <br/>ELSE IF &lt;CONSIGNMENT-INCIDENT.Code&gt; is in SET {3, 6} <br/>THEN &lt;CONSIGNMENT-INCIDENT-TRANSPORT EQUIPMENT&gt; = "O" AND <br/>&lt;CONSIGNMENT-INCIDENT-TRANSHIPMENT&gt; = "R" <br/>ELSE <br/>&lt;CONSIGNMENT-INCIDENT-TRANSPORT EQUIPMENT&gt; = "N" AND <br/>&lt;CONSIGNMENT-INCIDENT-TRANSHIPMENT&gt; = "N"
 
 <b>Technical Description</b>
 
-IF /*/Consignment/Incident/code is in SET {2, 4}<br/>THEN /*/Consignment/Incident/TransportEquipment = "R" AND <br/>/*/Consignment/Incident/Transhipment = "N" <br/>ELSE IF /*/Consignment/Incident/code is in SET {3, 6} <br/>THEN /*/Consignment/Incident/TransportEquipment = "O" AND <br/>/*/Consignment/Incident/Transhipment = "R" <br/>ELSE <br/>/*/Consignment/Incident/TransportEquipment = "N" AND <br/>/*/ Consignment/Incident/Transhipment = "N" 
+IF /*/Consignment/Incident/code is in SET {2, 4}<br/>THEN /*/Consignment/Incident/TransportEquipment = "R" AND <br/>/*/Consignment/Incident/Transhipment = "N" <br/>ELSE IF /*/Consignment/Incident/code is in SET {3, 6} <br/>THEN /*/Consignment/Incident/TransportEquipment = "O" AND <br/>/*/Consignment/Incident/Transhipment = "R" <br/>ELSE <br/>/*/Consignment/Incident/TransportEquipment = "N" AND <br/>/*/ Consignment/Incident/Transhipment = "N"
 
 ##C0250
 
@@ -380,7 +380,7 @@ IF /*/Consignment/PlaceOfLoading/UNLocode is PRESENT<br/>THEN /*/Consignment/Pla
 
 <b>Functional Description</b>
 
-IF &lt;CONSIGNMENT-LOCATION OF GOODS.Qualifier of identification&gt; is EQUAL to 'Z' <br/>THEN <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ADDRESS&gt; = "R" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.UN LOCODE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CUSTOMS OFFICE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-GNSS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ECONOMIC OPERATOR&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.Authorisation number&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CONTACT PERSON&gt; = "O" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-POSTCODE ADDRESS&gt; = "N" <br/>ELSE IF &lt;CONSIGNMENT-LOCATION OF GOODS.Qualifier of identification&gt; is EQUAL to 'X' <br/>THEN <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ADDRESS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.UN LOCODE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CUSTOMS OFFICE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-GNSS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ECONOMIC OPERATOR&gt; = "R" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.Authorisation number&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CONTACT PERSON&gt; = "O" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-POSTCODE ADDRESS&gt; = "N" <br/>ELSE IF &lt;CONSIGNMENT-LOCATION OF GOODS.Qualifier of identification&gt; is EQUAL to 'Y' <br/>THEN <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ADDRESS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.UN LOCODE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CUSTOMS OFFICE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-GNSS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ECONOMIC OPERATOR&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.Authorisation number&gt; = "R" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CONTACT PERSON&gt; = "O" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-POSTCODE ADDRESS&gt; = "N" <br/>ELSE IF &lt;CONSIGNMENT-LOCATION OF GOODS.Qualifier of identification&gt; is EQUAL to 'W' <br/>THEN <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ADDRESS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.UN LOCODE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CUSTOMS OFFICE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-GNSS&gt; = "R" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ECONOMIC OPERATOR&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.Authorisation number&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CONTACT PERSON&gt; = "O" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-POSTCODE ADDRESS&gt; = "N" <br/>ELSE IF &lt;CONSIGNMENT-LOCATION OF GOODS.Qualifier of identification&gt; is EQUAL to 'V' <br/>THEN <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ADDRESS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.UN LOCODE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CUSTOMS OFFICE&gt; = "R" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-GNSS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ECONOMIC OPERATOR&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.Authorisation number&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CONTACT PERSON&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-POSTCODE ADDRESS&gt; = "N" <br/>ELSE IF &lt;CONSIGNMENT-LOCATION OF GOODS.Qualifier of identification&gt; is EQUAL to 'U' <br/>THEN <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ADDRESS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.UN LOCODE&gt; = "R" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CUSTOMS OFFICE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-GNSS&gt; = "N"AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ECONOMIC OPERATOR&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.Authorisation number&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CONTACT PERSON&gt; = "O" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-POSTCODE ADDRESS&gt; = "N" <br/>ELSE IF &lt;CONSIGNMENT-LOCATION OF GOODS.Qualifier of identification&gt; is EQUAL to 'T' <br/>THEN <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ADDRESS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.UN LOCODE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CUSTOMS OFFICE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-GNSS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ECONOMIC OPERATOR&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.Authorisation number&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CONTACT PERSON&gt; = "O" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-POSTCODE ADDRESS&gt; = "R" 
+IF &lt;CONSIGNMENT-LOCATION OF GOODS.Qualifier of identification&gt; is EQUAL to 'Z' <br/>THEN <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ADDRESS&gt; = "R" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.UN LOCODE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CUSTOMS OFFICE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-GNSS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ECONOMIC OPERATOR&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.Authorisation number&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CONTACT PERSON&gt; = "O" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-POSTCODE ADDRESS&gt; = "N" <br/>ELSE IF &lt;CONSIGNMENT-LOCATION OF GOODS.Qualifier of identification&gt; is EQUAL to 'X' <br/>THEN <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ADDRESS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.UN LOCODE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CUSTOMS OFFICE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-GNSS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ECONOMIC OPERATOR&gt; = "R" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.Authorisation number&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CONTACT PERSON&gt; = "O" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-POSTCODE ADDRESS&gt; = "N" <br/>ELSE IF &lt;CONSIGNMENT-LOCATION OF GOODS.Qualifier of identification&gt; is EQUAL to 'Y' <br/>THEN <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ADDRESS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.UN LOCODE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CUSTOMS OFFICE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-GNSS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ECONOMIC OPERATOR&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.Authorisation number&gt; = "R" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CONTACT PERSON&gt; = "O" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-POSTCODE ADDRESS&gt; = "N" <br/>ELSE IF &lt;CONSIGNMENT-LOCATION OF GOODS.Qualifier of identification&gt; is EQUAL to 'W' <br/>THEN <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ADDRESS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.UN LOCODE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CUSTOMS OFFICE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-GNSS&gt; = "R" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ECONOMIC OPERATOR&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.Authorisation number&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CONTACT PERSON&gt; = "O" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-POSTCODE ADDRESS&gt; = "N" <br/>ELSE IF &lt;CONSIGNMENT-LOCATION OF GOODS.Qualifier of identification&gt; is EQUAL to 'V' <br/>THEN <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ADDRESS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.UN LOCODE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CUSTOMS OFFICE&gt; = "R" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-GNSS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ECONOMIC OPERATOR&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.Authorisation number&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CONTACT PERSON&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-POSTCODE ADDRESS&gt; = "N" <br/>ELSE IF &lt;CONSIGNMENT-LOCATION OF GOODS.Qualifier of identification&gt; is EQUAL to 'U' <br/>THEN <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ADDRESS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.UN LOCODE&gt; = "R" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CUSTOMS OFFICE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-GNSS&gt; = "N"AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ECONOMIC OPERATOR&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.Authorisation number&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CONTACT PERSON&gt; = "O" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-POSTCODE ADDRESS&gt; = "N" <br/>ELSE IF &lt;CONSIGNMENT-LOCATION OF GOODS.Qualifier of identification&gt; is EQUAL to 'T' <br/>THEN <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ADDRESS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.UN LOCODE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CUSTOMS OFFICE&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-GNSS&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-ECONOMIC OPERATOR&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS.Authorisation number&gt; = "N" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-CONTACT PERSON&gt; = "O" AND <br/>&lt;CONSIGNMENT-LOCATION OF GOODS-POSTCODE ADDRESS&gt; = "R"
 
 <b>Technical Description</b>
 
@@ -434,7 +434,7 @@ IF &lt;CC043C-CONSIGNMENT-TRANSPORT EQUIPMENT.Number of seals&gt; is NOT EQUAL t
 
 <b>Technical Description</b>
 
-IF /CC043C/Consignment/TransportEquipment/numberOfSeals is NOT EQUAL to '0' <br/>OR /CC043C/Consignment/Incident/TransportEquipment/numberOfSeals is NOT EQUAL to '0' <br/>THEN /CC044C/UnloadingRemark/stateOfSeals = "R" <br/>ELSE /CC044C/UnloadingRemark/stateOfSeals = "N" 
+IF /CC043C/Consignment/TransportEquipment/numberOfSeals is NOT EQUAL to '0' <br/>OR /CC043C/Consignment/Incident/TransportEquipment/numberOfSeals is NOT EQUAL to '0' <br/>THEN /CC044C/UnloadingRemark/stateOfSeals = "R" <br/>ELSE /CC044C/UnloadingRemark/stateOfSeals = "N"
 
 ##C0450
 
@@ -580,11 +580,11 @@ IF /*/Consignment/Incident/TransportEquipment/numberOfSeals is GREATER than '0'<
 
 <b>Functional Description</b>
 
-IF &lt;TRANSIT OPERATION.Binding itinerary&gt; is EQUAL to ‘1’ <br/>        THEN &lt;CONSIGNMENT-COUNTRY OF ROUTING OF CONSIGNMENT&gt; = "R" <br/>ELSE IF &lt;TRANSIT OPERATION.Security&gt; is in SET {1, 2, 3} <br/>        THEN &lt;CONSIGNMENT-COUNTRY OF ROUTING OF CONSIGNMENT&gt; = "R" <br/>ELSE &lt;CONSIGNMENT-COUNTRY OF ROUTING OF CONSIGNMENT&gt; = "O" 
+IF &lt;TRANSIT OPERATION.Binding itinerary&gt; is EQUAL to ‘1’ <br/>        THEN &lt;CONSIGNMENT-COUNTRY OF ROUTING OF CONSIGNMENT&gt; = "R" <br/>ELSE IF &lt;TRANSIT OPERATION.Security&gt; is in SET {1, 2, 3} <br/>        THEN &lt;CONSIGNMENT-COUNTRY OF ROUTING OF CONSIGNMENT&gt; = "R" <br/>ELSE &lt;CONSIGNMENT-COUNTRY OF ROUTING OF CONSIGNMENT&gt; = "O"
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/bindingItinerary is EQUAL to ‘1’ <br/>        THEN /*/Consignment/CountryOfRoutingOfConsignment = "R" <br/>ELSE IF /*/Transit Operation/security is in SET {1, 2, 3} <br/>       THEN /*/Consignment/CountryOfRoutingOfConsignment = "R" <br/>ELSE /*/Consignment/CountryOfRoutingOfConsignment = "O" 
+IF /*/TransitOperation/bindingItinerary is EQUAL to ‘1’ <br/>        THEN /*/Consignment/CountryOfRoutingOfConsignment = "R" <br/>ELSE IF /*/Transit Operation/security is in SET {1, 2, 3} <br/>       THEN /*/Consignment/CountryOfRoutingOfConsignment = "R" <br/>ELSE /*/Consignment/CountryOfRoutingOfConsignment = "O"
 
 ##C0587
 
@@ -600,7 +600,7 @@ IF /*/TransitOperation/security is in SET {2, 3}<br/>THEN /*/CustomsOfficeOfExit
 
 <b>Functional Description</b>
 
-IF &lt;TRANSIT OPERATION.Security&gt; is in SET {1, 3} AND <br/>the country code (first two characters) in the &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED).Reference number&gt; is in SET CL147 (CountryCustomsSecurityAgreementArea)<br/>THEN &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED).Arrival date and time estimated&gt; = "R"<br/>ELSE &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED).Arrival date and time estimated&gt; = "O" 
+IF &lt;TRANSIT OPERATION.Security&gt; is in SET {1, 3} AND <br/>the country code (first two characters) in the &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED).Reference number&gt; is in SET CL147 (CountryCustomsSecurityAgreementArea)<br/>THEN &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED).Arrival date and time estimated&gt; = "R"<br/>ELSE &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED).Arrival date and time estimated&gt; = "O"
 
 <b>Technical Description</b>
 
@@ -720,7 +720,7 @@ IF /*/Consignment/modeOfTransportAtTheBorder is EQUAL to '5'<br/>THEN /*/Consign
 
 <b>Functional Description</b>
 
-IF &lt;CC170C-CONSIGNMENT.Mode of transport at the border&gt; is EQUAL to '5'<br/>THEN &lt;CC170C-CONSIGNMENT-ACTIVE BORDER TRANSPORT MEANS&gt; = “N” <br/>ELSE<br/>               IF &lt;CC015C-TRANSIT OPERATION.Security&gt; is in SET {1,2,3}<br/>               AND &lt;CC013C-CONSIGNMENT-ACTIVE BORDER TRANSPORT MEANS&gt; is NOT <br/>               PRESENT<br/>               AND &lt;CC015C-CONSIGNMENT-ACTIVE BORDER TRANSPORT MEANS&gt; is NOT <br/>               PRESENT<br/>              THEN &lt;CC170C-CONSIGNMENT-ACTIVE BORDER TRANSPORT MEANS&gt; =”R” <br/>              ELSE &lt;CC170C-CONSIGNMENT-ACTIVE BORDER TRANSPORT MEANS&gt; = “O” 
+IF &lt;CC170C-CONSIGNMENT.Mode of transport at the border&gt; is EQUAL to '5'<br/>THEN &lt;CC170C-CONSIGNMENT-ACTIVE BORDER TRANSPORT MEANS&gt; = “N” <br/>ELSE<br/>               IF &lt;CC015C-TRANSIT OPERATION.Security&gt; is in SET {1,2,3}<br/>               AND &lt;CC013C-CONSIGNMENT-ACTIVE BORDER TRANSPORT MEANS&gt; is NOT <br/>               PRESENT<br/>               AND &lt;CC015C-CONSIGNMENT-ACTIVE BORDER TRANSPORT MEANS&gt; is NOT <br/>               PRESENT<br/>              THEN &lt;CC170C-CONSIGNMENT-ACTIVE BORDER TRANSPORT MEANS&gt; =”R” <br/>              ELSE &lt;CC170C-CONSIGNMENT-ACTIVE BORDER TRANSPORT MEANS&gt; = “O”
 
 <b>Technical Description</b>
 
@@ -830,7 +830,7 @@ IF /*/Consignment/HouseConsignment/PreviousDocument/type is EQUAL to ‘N830’ 
 
 <b>Functional Description</b>
 
-IF &lt;AUTHORISATION.Type&gt; is NOT EQUAL to 'C521'<br/>THEN <br/>         &lt;TRANSIT OPERATION.Limit date&gt; = “N”<br/>ELSE<br/>        IF &lt;Transit Operation/Additional declaration type&gt; is EQUAL to 'D'<br/>       THEN <br/>               &lt;TRANSIT OPERATION.Limit date&gt; = “O”<br/>        ELSE <br/>              &lt;TRANSIT OPERATION.Limit date&gt; = “R” 
+IF &lt;AUTHORISATION.Type&gt; is NOT EQUAL to 'C521'<br/>THEN <br/>         &lt;TRANSIT OPERATION.Limit date&gt; = “N”<br/>ELSE<br/>        IF &lt;Transit Operation/Additional declaration type&gt; is EQUAL to 'D'<br/>       THEN <br/>               &lt;TRANSIT OPERATION.Limit date&gt; = “O”<br/>        ELSE <br/>              &lt;TRANSIT OPERATION.Limit date&gt; = “R”
 
 <b>Technical Description</b>
 
@@ -850,11 +850,11 @@ IF /CC015C/Authorisation/type is NOT EQUAL to 'C521' OR /CC013C/Authorisation/ty
 
 <b>Functional Description</b>
 
-IF &lt;CD001C-CONSIGNMENT-HOUSE CONSIGNMENT-PREVIOUS DOCUMENT.Type&gt; OR &lt;CD003C-CONSIGNMENT-HOUSE CONSIGNMENT-PREVIOUS DOCUMENT.Type&gt; is EQUAL to ‘N830’  <br/>THEN <br/>&lt;CC025C -CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-COMMODITY-GOODS MEASURE.Net mass&gt; = "R" <br/>ELSE IF &lt;CD001C- TRANSIT OPERATION.Reduced dataset indicator&gt; OR &lt;CD003C- TRANSIT OPERATION.Reduced dataset indicator&gt; is EQUAL to ‘1’ <br/>THEN  <br/>&lt;CC025C -CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-COMMODITY-GOODS MEASURE.Net mass&gt; = "N" <br/>ELSE <br/>&lt;CC025C -CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-COMMODITY-GOODS MEASURE.Net mass&gt; = "O" 
+IF &lt;CD001C-CONSIGNMENT-HOUSE CONSIGNMENT-PREVIOUS DOCUMENT.Type&gt; OR &lt;CD003C-CONSIGNMENT-HOUSE CONSIGNMENT-PREVIOUS DOCUMENT.Type&gt; is EQUAL to ‘N830’  <br/>THEN <br/>&lt;CC025C -CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-COMMODITY-GOODS MEASURE.Net mass&gt; = "R" <br/>ELSE IF &lt;CD001C- TRANSIT OPERATION.Reduced dataset indicator&gt; OR &lt;CD003C- TRANSIT OPERATION.Reduced dataset indicator&gt; is EQUAL to ‘1’ <br/>THEN  <br/>&lt;CC025C -CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-COMMODITY-GOODS MEASURE.Net mass&gt; = "N" <br/>ELSE <br/>&lt;CC025C -CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-COMMODITY-GOODS MEASURE.Net mass&gt; = "O"
 
 <b>Technical Description</b>
 
-IF /CD001C/Consignment/HouseConsignment/PreviousDocument/Type OR IF / CD003C /Consignment/HouseConsignment/PreviousDocument/Type is EQUAL to ‘N830’  <br/>THEN <br/>/CC025C/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass = "R"<br/>ELSE IF /CD001C/TransitOperation/reducedDatasetIndicator OR <br/>/CD003C/TransitOperation/reducedDatasetIndicator is EQUAL to ‘1’ <br/>THEN <br/>/CC025C/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass = "N" <br/>ELSE <br/>/CC025C/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass = "O" 
+IF /CD001C/Consignment/HouseConsignment/PreviousDocument/Type OR IF / CD003C /Consignment/HouseConsignment/PreviousDocument/Type is EQUAL to ‘N830’  <br/>THEN <br/>/CC025C/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass = "R"<br/>ELSE IF /CD001C/TransitOperation/reducedDatasetIndicator OR <br/>/CD003C/TransitOperation/reducedDatasetIndicator is EQUAL to ‘1’ <br/>THEN <br/>/CC025C/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass = "N" <br/>ELSE <br/>/CC025C/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass = "O"
 
 ##C0860
 
@@ -895,6 +895,16 @@ IF &lt;CD501C-HOLDER OF THE TRANSIT PROCEDURE&gt; is in SET CL234 (DocumentTypeE
 <b>Technical Description</b>
 
 IF /CD501C/GoodsShipment/GoodsItem/PreviousDocument/type is in SET CL234<br/>   THEN /CC191C/AESResults/ExportOperation/GoodsShipment = "R"<br/>ELSE /CC191C/AESResults/ExportOperation/GoodsShipment = "N"
+
+##C0870
+
+<b>Functional Description</b>
+
+IF the first three characters of &lt;Message recipient&gt; is EQUAL to ‘NTA’   THEN &lt;INVALIDATION.Decision date and time&gt; = "N"<br/>   ELSE &lt;INVALIDATION.Decision date and time&gt; = "R"
+
+<b>Technical Description</b>
+
+IF the first three characters of /*/messageRecipient is EQUAL to ‘NTA’   THEN /*/Invalidation/decisionDateAndTime = "N"<br/>   ELSE /*/Invalidation/decisionDateAndTime = "R"
 
 ##C0872
 
@@ -945,4 +955,3 @@ IF &lt;CONTROL RESULT.Code&gt; is in SET {B1, A5}<br/>THEN<br/>(&lt;CONSIGMENT&g
 <b>Technical Description</b>
 
 IF /*/ControlResult/code is in SET {B1, A5}<br/>THEN<br/>(/*/Consignment = “R” AND /*/TransitOperation/otherThingsToReport = “O” ) OR (/*/Consignment = “O” AND /*/TransitOperation/otherThingsToReport = “R”) <br/>ELSE<br/>/*/Consignment = “N” AND /*/TransitOperation/otherThingsToReport = “O”<br/><br/>
-
