@@ -6,21 +6,6 @@ description: Software developers, designers, product owners or business analysts
 
 # Process flows
 
-## Functional errors
-
-It should be noted that the following messages are used to report functional errors:
-
-- Rejection from Office of Departure (IE056: E_DEP_REJ);
-- Rejection from Office of Destination (IE057: E_DES_REJ).
-
-A functional error occurs in the following circumstances:
-
-- missing required data from an IE message
-- IE message completed incorrectly
-- missing data group(s)
-- data item(s) violates a code list
-- out of sequence message(s).
-
 ## Pre-lodgement message flows
 
 ### Transit presentation notification valid 
