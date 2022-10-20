@@ -26,6 +26,7 @@ Some message types are sent by the NCTS while other message types are sent by tr
 | IE004 | Amendment Acceptance                  |
 | IE009 | Invalidation Decision                 |
 | IE019 | Discrepancies                         |
+| IE022 | Notification To Amend Declaration     |
 | IE025 | Goods Release Notification            |
 | IE028 | MRN Allocated                         |
 | IE029 | Release For Transit                   |
@@ -62,6 +63,6 @@ You can view the XML schema for a particular message type as follows:
 
 1. Navigate to the required message type listed in this section.
 1. Under the **XML Root** heading in the table, click the link. 
-    
+   
     The selected XML schema is displayed in GitHub.
 
