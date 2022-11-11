@@ -40,7 +40,6 @@ Some message types are sent by the NCTS while other message types are sent by tr
 | IE060 | Control Decision Notification         |
 | IE140 | Request On Non-Arrived Movement       |
 | IE182 | Forwarded Incident Notification To ED |
-| IE906 | Functional Nack                       |
 | IE928 | Positive Acknowledge                  |
 
 ### Messages from traders
