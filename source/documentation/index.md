@@ -6,15 +6,18 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 0.3 issued August 2022
+Version 4.1 issued 14 November 2022
 
 
 ## Document summary
 
 This document is the first part of the Technical Interface Specification (TIS) for Direct Trader Input (DTI) to the New Computerised Transit System (NCTS). 
 
-It shows the processes involved in the exchange of messages between traders and the NCTS at departure and arrival of transit movements, and provides definitions, formats and validations of those messages.  
+It shows the processes involved in the exchange of messages between traders and the NCTS at departure and arrival of transit movements, and provides definitions, formats and validations of those messages.
 
+## Changelog
+
+You can find the changelog in the [ctc-traders-phase5-tis](https://github.com/hmrc/ctc-traders-phase5-tis/wiki/NCTS-Phase-5-Technical-Interface-Specification-(TIS)-changelog) GitHub wiki.
 
 ## Introduction
 
