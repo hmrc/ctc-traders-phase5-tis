@@ -415,14 +415,14 @@ This scenario outlines how major discrepancies found during control at the offic
 
 ### Recovery process
 
-This scenario shows the recovery process for non-arrival of goods.
+This scenario shows the recovery process for non-arrival of goods or when the goods are under recovery because of major discrepancies.
 
 <img src="../figures/recovery_process.svg" alt="Recovery initiation on incident occurrence message flow. Flow is described in this section." />
 
 <a href="../figures/recovery_process.svg" target="_blank">Open the diagram in a new tab.</a>
 
 1. The process starts when the ‘Release for Transit’ E_REL_TRA (IE029) message is sent to the holder of the transit procedure.
-1. The competent authority of recovery at departure notifies the holder of the transit procedure with the ‘Recovery Notification’ E_REC_NOT (IE035) message.
+1. If the goods have not arrived within seven months of the arrival date or if the goods have been placed in recovery because of major discrepancies, the competent authority of recovery at departure notifies the holder of the transit procedure with the ‘Recovery Notification’ E_REC_NOT (IE035) message.
 1. The ‘Write-off Notification’ E_WRT_NOT (IE045) message is sent to the holder of the transit procedure.
 1. The transit movement ends.
 
