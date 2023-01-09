@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 4.2 issued 25 November 2022
+Version 5.0 issued 10 January 2023
 
 
 ## Document summary
@@ -53,7 +53,7 @@ This document provides an overview of the processes involved in the exchange of 
 
 These messages comply with the Functional Transit System Specification (FTSS) and Design Documentation for National Transit Application (DDNTA) documents, which are distributed by the EU Commission to National Administrations.
 
-### NCTS Reference Data
+### NCTS reference data
 
 The NCTS holds two types of reference data:
 
@@ -66,7 +66,7 @@ Reference data within CS/RD2 comprises code lists. Each code list provides data 
 
 It is essential that any software solution developed for traders retrieves these updates on a daily basis to ensure that any validation coded into the software is synchronised with the UK NCTS to prevent unnecessary rejections.
 
-#### National Reference Data
+#### National reference data
 
 This is administered by each National Administration on its own behalf. When a trader applies to use the transit procedure, specific data is captured into the NCTS, including the trader’s name and address, their EORI number, details about guarantees for transit usage that they hold and, in the case of Authorised Consignors/Consignees, details of their authorised locations and their allocated code numbers. When traders use these details in declarations, they are validated against the national reference data held by the NCTS.
 
@@ -100,7 +100,7 @@ Because authorised location codes are linked to the Authorised Consignor/nees’
 
 Although two separate cores are in operation, only one submission channel is used to access the UK NCTS. You can submit Great Britain mainland or Northern Ireland messages without the need to add any routing information. Your messages will be routed automatically to the correct core by a logic layer embedded in the CTC Traders API. 
 
-### Access to UK NCTS
+#### Access to UK NCTS
 
 Traders can use the CTC Traders API channel to exchange XML messages with both UK NCTS cores (GB and XI). This allows 3rd party developer software to use XML for message payloads when sending and receiving arrival and departure notifications.
 
@@ -109,7 +109,7 @@ The CTC Traders API provides:
 - full Great Britain mainland and Northern Ireland integration
 - a single endpoint for both Great Britain mainland and Northern Ireland declarations
 
-### Liability Amount for Guarantees
+### Liability amount for guarantees
 
 Guarantee usage monitoring in the NCTS requires that a liability reference amount is recorded against each guarantee in a declaration.
 
@@ -152,6 +152,19 @@ If a declaration contains only one goods item, all the information for the movem
 The printer and print driver, used for printing the TAD/TSAD, must be capable of printing a bar code of standard ISO code 128 set B (but not EAN128). 
 
 The font type is BC C128 Narrow (True Type) version 2.0.
+
+### Phase 5 cutover period 
+
+UK NCTS phase 5 is due to go live on 16 November 2023. To meet the requirements of the Common Transit Convention (CTC), all member countries must transfer to phase 5 by 30 November 2023.
+
+There will be a cutover period between 16 and 30 November 2023 during which the phase 4 service will continue running to deal with in-flight requests submitted before 16 November while the phase 5 service will handle all new requests.
+
+**Note:** The phase 5 service will not hold any legacy movement message information submitted before 16 November 2023.
+
+During the cutover period, the following rules in this specification will be used to handle transit movements:
+
+- [Rules B](/guides/ctc-traders-phase5-tis/documentation/rules-b.html) (buiness rules)
+- [Rules E](/guides/ctc-traders-phase5-tis/documentation/rules-e.html)  (technical rules)
 
 ### Important phase 5 terms
 

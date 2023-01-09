@@ -5,7 +5,7 @@ description: Software developers, designers, product owners or business analysts
 ---
 #Rules B
 Based on document version 5.15.0-v0.10 and issue date 04/03/2022
-<%= partial 'documentation/partials/rulesintro' %>
+<%= partial 'documentation/partials/rules_b_intro' %>
 ##B1000
 
 <b>Functional Description</b>
@@ -84,7 +84,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; <br/>THEN R0003 and R0006 shall be disabled. 
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; <br/>THEN R0003 and R0006 shall be disabled.
 
 ##B1814
 
@@ -94,7 +94,7 @@ N/A.
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R3061 attached to /*/Consignment/HouseConsignment/ConsignmentItem/AdditionalInformation/code<br/>shall be disabled 
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R3061 attached to /*/Consignment/HouseConsignment/ConsignmentItem/AdditionalInformation/code<br/>shall be disabled
 
 ##B1815
 
@@ -164,7 +164,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;  <br/>THEN R0106 attached to /*/Consignment/TransportEquipment/numberOfSeals <br/>shall be disabled; <br/><br/>IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;  <br/>THEN R0106 attached to /CD038C/Consignment/Incident/TransportEquipment/numberOfSeals <br/>shall be disabled. 
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;  <br/>THEN R0106 attached to /*/Consignment/TransportEquipment/numberOfSeals <br/>shall be disabled; <br/><br/>IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;  <br/>THEN R0106 attached to /CD038C/Consignment/Incident/TransportEquipment/numberOfSeals <br/>shall be disabled.
 
 ##B1833
 
@@ -234,7 +234,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0221 attached to /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass shall be disabled 
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0221 attached to /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass shall be disabled
 
 ##B1862
 
@@ -334,7 +334,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; AND <br/>/*/TransitOperation/security is in SET {1, 3} <br/>THEN <br/>       IF /*/Consignment/referenceNumberUCR is NOT PRESENT AND <br/>          /*/Consignment/HouseConsignment/ConsignmentItem/referenceNumberUCR is NOT <br/>          PRESENT <br/>          AND /*/TransitOperation/declarationType is NOT EQUAL to ‘TIR’ <br/>      THEN <br/>           /*/Consignment/HouseConsignment/ConsignmentItem[1]/TransportDocument = ''R'' <br/>      ELSE /*/Consignment/HouseConsignment/ConsignmentItem/TransportDocument = ''O'' 
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; AND <br/>/*/TransitOperation/security is in SET {1, 3} <br/>THEN <br/>       IF /*/Consignment/referenceNumberUCR is NOT PRESENT AND <br/>          /*/Consignment/HouseConsignment/ConsignmentItem/referenceNumberUCR is NOT <br/>          PRESENT <br/>          AND /*/TransitOperation/declarationType is NOT EQUAL to ‘TIR’ <br/>      THEN <br/>           /*/Consignment/HouseConsignment/ConsignmentItem[1]/TransportDocument = ''R'' <br/>      ELSE /*/Consignment/HouseConsignment/ConsignmentItem/TransportDocument = ''O''
 
 ##B1897
 
@@ -405,4 +405,3 @@ N/A
 <b>Technical Description</b>
 
 IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/Incident = "N";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Enquiry/returnCopyReturnedDate = "N"; <br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/TransportDocument = "N";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/TransportCharges = "N";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/GuaranteeReference/Guarantor/contactDetailsInCountryOfCompetentAuthority  = "N”.
-
