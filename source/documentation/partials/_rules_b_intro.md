@@ -1,6 +1,6 @@
 These rules are the business rules that will be used for the cutover period between 16 and 30 November 2023 during which the NCTS phase 4 service will continue running to deal with in-flight requests submitted before 16 November while the phase 5 service will handle all new requests.
 
-During the cutover period, any business rules with Transitional Period (TP) measures will be applied to: 
+During the cutover period, any business rules **with** Transitional Period (TP) measures will be applied to: 
 
 - all electronic customs clearance (ECC) messages exchanged among national customs administrations of CTC member countries and with European Commission
 
@@ -14,4 +14,7 @@ During the cutover period, any business rules with Transitional Period (TP) meas
 
   - 'Presentation Notification For The Pre-Lodged Declaration' E_PRE_NOT (IE170)
 
-**Note:** During the cutover period, business rules without TP measures will be applied to all other ECC message types exchanged between traders and customs offices.
+**Important:** During the cutover period, business rules **without** TP measures will be applied to all other ECC message types exchanged between traders and customs offices.
+
+**Note:** `<TPendDate>` in a rule refers to 30 November 2023.
+
