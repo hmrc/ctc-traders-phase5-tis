@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 5.0 issued 10 January 2023
+Version 5.0 issued 19 January 2023
 
 
 ## Document summary
@@ -157,13 +157,13 @@ The font type is BC C128 Narrow (True Type) version 2.0.
 
 UK NCTS phase 5 is due to go live on 16 November 2023. To meet the requirements of the Common Transit Convention (CTC), all member countries must transfer to phase 5 by 30 November 2023.
 
-There will be a cutover period between 16 and 30 November 2023 during which the phase 4 service will continue running to deal with in-flight requests submitted before 16 November while the phase 5 service will handle all new requests.
+There will be a cutover period between 16 and 30 November 2023. During this period, the NCTS phase 4 service will continue running to deal with in-flight transit declarations submitted before 16 November while the phase 5 service will handle all new declarations.
 
-**Note:** The phase 5 service will not hold any legacy movement message information submitted before 16 November 2023.
+**Note:** The phase 5 service will not hold information about any declarations submitted before 16 November 2023.
 
 During the cutover period, the following rules in this specification will be used to handle transit movements:
 
-- [Rules B](/guides/ctc-traders-phase5-tis/documentation/rules-b.html) (buiness rules)
+- [Rules B](/guides/ctc-traders-phase5-tis/documentation/rules-b.html) (business rules)
 - [Rules E](/guides/ctc-traders-phase5-tis/documentation/rules-e.html)  (technical rules)
 
 ### Important phase 5 terms
