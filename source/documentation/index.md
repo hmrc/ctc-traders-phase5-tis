@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 5.0 issued 19 January 2023
+Version 6.0 issued 26 January 2023
 
 
 ## Document summary
@@ -14,10 +14,6 @@ Version 5.0 issued 19 January 2023
 This document is the first part of the Technical Interface Specification (TIS) for Direct Trader Input (DTI) to the New Computerised Transit System (NCTS). 
 
 It shows the processes involved in the exchange of messages between traders and the NCTS at departure and arrival of transit movements, and provides definitions, formats and validations of those messages.
-
-## Changelog
-
-You can find the changelog in the [ctc-traders-phase5-tis](https://github.com/hmrc/ctc-traders-phase5-tis/wiki/NCTS-Phase-5-Technical-Interface-Specification-(TIS)-changelog) GitHub wiki.
 
 ## Introduction
 
@@ -57,18 +53,29 @@ These messages comply with the Functional Transit System Specification (FTSS) an
 
 The NCTS holds two types of reference data:
 
-- common reference data that is stored in a central system, known as Common Services Reference Data (CS/RD2), and which is applicable to all contracting parties’ NCTS systems - it is used to validate specific fields within trader messages and ensure that they contain acceptable data
-- national reference data that applies locally to the systems of individual countries - it is used to validate traders’ details, guarantee information and any authorisations they may hold when submitted in traders' messages
+- common reference data:
+  - stored in a central system known as Common Services Reference Data (CS/RD2)
+  - applicable to all contracting parties’ NCTS systems 
+  - used to validate specific fields within trader messages and ensure that they contain acceptable data
+
+- national reference data:
+  - applies locally to the systems of individual countries 
+  - used to validate traders’ details, guarantee information and any authorisations they may hold when submitted in traders' messages
+
 
 #### CS/RD2
 
-Reference data within CS/RD2 comprises code lists. Each code list provides data that is used for validation against specific fields within declarations submitted by users, and also within intra-NCTS message exchange. The latest CS/RD2 data is released overnight on a daily basis. The most volatile code list contained in CS/RD2 is CL 141 Customs Offices, which holds details of all valid Customs Offices for all Common Transit Convention countries and all the transit functions available for each office, such as Office of Departure (DEP), Office of Destination (DES) and Office of Transit (TRA).
+Reference data within CS/RD2 comprises code lists. Each code list provides data that is used for validation against specific fields within declarations submitted by users, and also within intra-NCTS message exchange. 
+
+The latest CS/RD2 data is released overnight on a daily basis. The most volatile code list contained in CS/RD2 is CL 141 Customs Offices, which holds details of all valid Customs Offices for all Common Transit Convention countries and all the transit functions available for each office, such as Office of Departure (DEP), Office of Destination (DES) and Office of Transit (TRA).
 
 It is essential that any software solution developed for traders retrieves these updates on a daily basis to ensure that any validation coded into the software is synchronised with the UK NCTS to prevent unnecessary rejections.
 
+CS/RD2 is maintained by the European Commission and you can download code lists [here](https://ec.europa.eu/taxation_customs/dds2/rd/rd_download_home.jsp?Lang=en). When downloading code lists, ensure that you select **NCTS-P5** in the **Domain** list.
+
 #### National reference data
 
-This is administered by each National Administration on its own behalf. When a trader applies to use the transit procedure, specific data is captured into the NCTS, including the trader’s name and address, their EORI number, details about guarantees for transit usage that they hold and, in the case of Authorised Consignors/Consignees, details of their authorised locations and their allocated code numbers. When traders use these details in declarations, they are validated against the national reference data held by the NCTS.
+This is administered by each national customs administration on its own behalf. When a trader applies to use the transit procedure, specific data is captured into the NCTS, including the trader’s name and address, their EORI number, details about guarantees for transit usage that they hold and, in the case of Authorised Consignors/Consignees, details of their authorised locations and their allocated code numbers. When traders use these details in declarations, they are validated against the national reference data held by the NCTS.
 
 ### UK NCTS
 
@@ -179,3 +186,6 @@ The following terms are important to understand in phase 5:
 
 - **Consignment Item:** The items information is provided (each House Consignment can contain up to 999 Consignment Items).
 
+## Changelog
+
+You can find the changelog in the [ctc-traders-phase5-tis](https://github.com/hmrc/ctc-traders-phase5-tis/wiki/NCTS-Phase-5-Technical-Interface-Specification-(TIS)-changelog) GitHub wiki.
