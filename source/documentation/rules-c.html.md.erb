@@ -110,21 +110,21 @@ IF /*/Consignment/HouseConsignment/ConsignmentItem/Packaging/typeOfPackages is i
 
 <b>Functional Description</b>
 
-IF &lt;GUARANTEE.Guarantee type&gt; is in SET CL076 (GuaranteeTypeWithReference)<br/>THEN &lt;GUARANTEE.GUARANTEE REFERENCE&gt; = "R"<br/>ELSE &lt;GUARANTEE.GUARANTEE REFERENCE&gt; = "N"
+IF &lt;GUARANTEE.Guarantee type&gt; is in SET [CL076](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeTypeWithReference.zip) (GuaranteeTypeWithReference)<br/>THEN &lt;GUARANTEE.GUARANTEE REFERENCE&gt; = "R"<br/>ELSE &lt;GUARANTEE.GUARANTEE REFERENCE&gt; = "N"
 
 <b>Technical Description</b>
 
-IF /*/Guarantee/guaranteeType is in SET CL076<br/>THEN /*/Guarantee/GuaranteeReference = "R"<br/>ELSE /*/Guarantee/GuaranteeReference = "N"
+IF /*/Guarantee/guaranteeType is in SET [CL076](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeTypeWithReference.zip)<br/>THEN /*/Guarantee/GuaranteeReference = "R"<br/>ELSE /*/Guarantee/GuaranteeReference = "N"
 
 ##C0086
 
 <b>Functional Description</b>
 
-IF &lt;GUARANTEE.Guarantee type&gt; is in SET CL286 (GuaranteeTypeWithGRN)<br/>THEN <br/>&lt;GUARANTEE.GUARANTEE REFERENCE.GRN&gt; = "R" AND <br/>&lt;GUARANTEE.GUARANTEE REFERENCE.Access code&gt; = "R"<br/>ELSE <br/>&lt;GUARANTEE.GUARANTEE REFERENCE.GRN&gt; = "N" AND <br/>&lt;GUARANTEE.GUARANTEE REFERENCE.Access code&gt; = "N"
+IF &lt;GUARANTEE.Guarantee type&gt; is in SET [CL286](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeTypeWithGRN.zip) (GuaranteeTypeWithGRN)<br/>THEN <br/>&lt;GUARANTEE.GUARANTEE REFERENCE.GRN&gt; = "R" AND <br/>&lt;GUARANTEE.GUARANTEE REFERENCE.Access code&gt; = "R"<br/>ELSE <br/>&lt;GUARANTEE.GUARANTEE REFERENCE.GRN&gt; = "N" AND <br/>&lt;GUARANTEE.GUARANTEE REFERENCE.Access code&gt; = "N"
 
 <b>Technical Description</b>
 
-IF /*/Guarantee/guaranteeType is in SET CL286<br/>THEN /*/Guarantee/GuaranteeReference/GRN = "R" AND /*/Guarantee/GuaranteeReference/accessCode = "R"<br/>ELSE /*/Guarantee/GuaranteeReference/GRN = "N" AND /*/Guarantee/GuaranteeReference/accessCode = "N"
+IF /*/Guarantee/guaranteeType is in SET [CL286](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeTypeWithGRN.zip)<br/>THEN /*/Guarantee/GuaranteeReference/GRN = "R" AND /*/Guarantee/GuaranteeReference/accessCode = "R"<br/>ELSE /*/Guarantee/GuaranteeReference/GRN = "N" AND /*/Guarantee/GuaranteeReference/accessCode = "N"
 
 ##C0101
 
