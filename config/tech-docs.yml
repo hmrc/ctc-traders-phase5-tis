@@ -5,6 +5,7 @@ host: docs.developer.service.hmrc.gov.uk
 show_govuk_logo: true
 service_name: NCTS Phase 5 Technical Interface Specification
 service_link: /guides/ctc-traders-phase5-tis
+phase: Beta
 
 # Links to show on right-hand-side of header
 header_links:
