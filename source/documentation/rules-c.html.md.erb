@@ -150,11 +150,11 @@ IF /*/TransitOperation/simplifiedProcedure is EQUAL to '1'<br/>THEN /CC007C/Auth
 
 <b>Functional Description</b>
 
-IF &lt;INVALIDATION.Initiated by customs&gt; is EQUAL to ‘1’ <br/>THEN &lt;INVALIDATION.Decision&gt; = "N"<br/>ELSE &lt;INVALIDATION.Decision&gt; = "R"
+IF the first three characters of &lt;Message recipient&gt; is EQUAL to ‘NTA’<br/>THEN &lt;INVALIDATION.Decision&gt; = "N"<br/>ELSE &lt;INVALIDATION.Decision&gt; = "R"
 
 <b>Technical Description</b>
 
-IF /*/Invalidation/initiatedByCustoms is EQUAL to ‘1’ <br/>THEN /*/Invalidation/decision = "N"<br/>ELSE /*/Invalidation/decision = "R"
+IF the first three characters of /*/messageRecipient is EQUAL to ‘NTA’<br/>THEN //Invalidation/decision = "N"<br/>ELSE /*/Invalidation/decision = "R"
 
 ##C0129
 
