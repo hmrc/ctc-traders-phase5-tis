@@ -15,12 +15,12 @@
  */
 
 import org.scalatest.matchers.should.Matchers
-import org.scalatest.wordspec.AnyWordSpecLike
-import scala.language.postfixOps
+import org.scalatest.wordspec.AnyWordSpec
 
+import scala.language.postfixOps
 import scala.sys.process._
 
-class BuildSpec extends AnyWordSpecLike with Matchers {
+class BuildSpec extends AnyWordSpec with Matchers {
   "Building the content" should {
     "produce static files" in {
       val result = "bundle install" #&& Process("bundle exec middleman build --verbose --build-dir=public/ --clean", None, "BASE_PATH" -> "/guides/ctc-traders-phase5-tis/") !
