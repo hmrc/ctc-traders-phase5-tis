@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 7.0 issued 16 March 2023
+Version 7.1 issued 24 March 2023
 
 
 ## Document summary
