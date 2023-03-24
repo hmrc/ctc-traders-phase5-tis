@@ -457,18 +457,3 @@ own guarantees even though no MRN may have been allocated to the transit movemen
 1. The JSON guarantee balance request is converted internally to an appropriate ‘Query on Guarantees’ E_GUA_QUE (IE034) message, which is sent to the Guarantee Management System. 
 1. The Guarantee Management System replies back internally with the ‘Response Query on Guarantees’ E_GUA_RSP (IE037) message.
 1. The ‘Response Query on Guarantees’ E_GUA_RSP (IE037) message is converted internally to a JSON guarantee balance response, which is sent to the holder of the transit procedure.
-
-## Enquiry message flows
-
-### Enquiry with movement unknown at destination
-
-This scenario shows what happens when the competent authority of enquiry at departure has no information about a transit movement within all relevant time limits.
-
-<img src="../figures/enquiry_movement_unknown.svg" alt="Enquiry message flow. Flow is described in this section." />
-
-<a href="../figures/enquiry_movement_unknown.svg" target="_blank">Open the diagram in a new tab.</a>
-
-1. The process starts when the ‘Release for Transit’ E_REL_TRA (IE029) message is sent to the holder of the transit procedure.
-1. The competent authority of enquiry at departure does not have sufficient information that would allow for the discharge of the transit procedure, so it sends a ‘Request on Non-Arrived Movement’ E_REQ_MOV (IE140) message to the holder of the transit procedure.
-1. The holder of the transit procedure responds within the time limit with the positive ‘Information about Non-Arrived Movement’ E_MOV_RSP (IE141) message. If no information is provided within the time limit or if insufficient information has been sent, it is considered to be a negative answer and the system recommends initiation of recovery to the customs officer.
-1. The movement is written off manually by the office of departure.
