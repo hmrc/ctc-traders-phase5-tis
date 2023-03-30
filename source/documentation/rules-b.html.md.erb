@@ -44,7 +44,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0710 attached to /*/Consignment/LocationOfGoods<br/>shall be disabled AND<br/>/*/Consignment/LocationOfGoods = "O"<br/>
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0710 attached to /<span>&#42;</span>/Consignment/LocationOfGoods<br/>shall be disabled AND<br/>/<span>&#42;</span>/Consignment/LocationOfGoods = "O"<br/>
 
 ##B1805
 
@@ -54,7 +54,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0837 will be disabled AND<br/>  IF /*/ TransitOperation/reducedDatasetIndicator is EQUAL TO ‘1’<br/>     THEN<br/>     /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass = "N"<br/>  ELSE         <br/>  /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass = "O"
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0837 will be disabled AND<br/>  IF /<span>&#42;</span>/ TransitOperation/reducedDatasetIndicator is EQUAL TO ‘1’<br/>     THEN<br/>     /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass = "N"<br/>  ELSE         <br/>  /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass = "O"
 
 ##B1806
 
@@ -64,7 +64,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0806 will be disabled AND<br/>IF /*/Consignment/modeOfTransportAtTheBorder is PRESENT<br/>THEN<br/>   IF /*/Consignment/modeOfTransportAtTheBorder is EQUAL to '5' or '2'<br/>   THEN /*/Consignment/ActiveBorderTransportMeans = “O”<br/>   ELSE /*/Consignment/ActiveBorderTransportMeans = “R”<br/>ELSE<br/>/*/Consignment/ActiveBorderTransportMeans = “O”
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0806 will be disabled AND<br/>IF /<span>&#42;</span>/Consignment/modeOfTransportAtTheBorder is PRESENT<br/>THEN<br/>   IF /<span>&#42;</span>/Consignment/modeOfTransportAtTheBorder is EQUAL to '5' or '2'<br/>   THEN /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans = “O”<br/>   ELSE /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans = “R”<br/>ELSE<br/>/<span>&#42;</span>/Consignment/ActiveBorderTransportMeans = “O”
 
 ##B1811
 
@@ -74,7 +74,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0076 attached to <br/>/*/Consignment/ActiveBorderTransportMeans/identificationNumber<br/>will be disabled
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0076 attached to <br/>/<span>&#42;</span>/Consignment/ActiveBorderTransportMeans/identificationNumber<br/>will be disabled
 
 ##B1813
 
@@ -94,7 +94,7 @@ N/A.
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R3061 attached to /*/Consignment/HouseConsignment/ConsignmentItem/AdditionalInformation/code<br/>shall be disabled
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R3061 attached to /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/AdditionalInformation/code<br/>shall be disabled
 
 ##B1815
 
@@ -104,7 +104,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0473 attached to <br/>/*/Consignment/DepartureTransportMeans/identificationNumber<br/>will be disabled
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0473 attached to <br/>/<span>&#42;</span>/Consignment/DepartureTransportMeans/identificationNumber<br/>will be disabled
 
 ##B1820
 
@@ -114,7 +114,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; <br/>THEN IF /*/Consignment/countryOfDestination is in SET CL009<br/>        THEN  <br/>                 IF /*/Consignment/Consignee is PRESENT<br/>                     THEN /*/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"<br/>                 ELSE /*/Consignment/HouseConsignment/ConsignmentItem/Consignee = "R"<br/>ELSE IF /*/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is in SET<br/>CL009<br/>         THEN THIS /*/Consignment/HouseConsignment/ConsignmentItem/Consignee = "R"<br/>ELSE IF /*/TransitOperation/security is in SET {0,1}<br/>          THEN <br/>                           IF /*/Consignment/Consignee is PRESENT<br/>                           THEN <br/>                               /*/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"<br/>                           ELSE /*/Consignment/HouseConsignment/ConsignmentItem/Consignee = "O"<br/>ELSE IF at least one instance of /*/Consignment/AdditionalInformation/code is EQUAL to '30600' <br/>          THEN<br/>                     /*/Consignment/Consignee = "N" AND<br/>                     /*/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"<br/>ELSE IF at least one instance of /*/Consignment/HouseConsignment/ConsignmentItem/AdditionalInformation/code is EQUAL to '30600' <br/>         THEN<br/>                  THIS /*/Consignment/Consignee = "N" AND<br/>                  THIS /*/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"<br/>ELSE IF /*/Consignment/Consignee is PRESENT<br/>             THEN<br/>                     /*/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"<br/>ELSE /*/Consignment/HouseConsignment/ConsignmentItem/Consignee = "R"
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; <br/>THEN IF /<span>&#42;</span>/Consignment/countryOfDestination is in SET CL009<br/>        THEN  <br/>                 IF /<span>&#42;</span>/Consignment/Consignee is PRESENT<br/>                     THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"<br/>                 ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "R"<br/>ELSE IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is in SET<br/>CL009<br/>         THEN THIS /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "R"<br/>ELSE IF /<span>&#42;</span>/TransitOperation/security is in SET {0,1}<br/>          THEN <br/>                           IF /<span>&#42;</span>/Consignment/Consignee is PRESENT<br/>                           THEN <br/>                               /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"<br/>                           ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "O"<br/>ELSE IF at least one instance of /<span>&#42;</span>/Consignment/AdditionalInformation/code is EQUAL to '30600' <br/>          THEN<br/>                     /<span>&#42;</span>/Consignment/Consignee = "N" AND<br/>                     /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"<br/>ELSE IF at least one instance of /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/AdditionalInformation/code is EQUAL to '30600' <br/>         THEN<br/>                  THIS /<span>&#42;</span>/Consignment/Consignee = "N" AND<br/>                  THIS /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"<br/>ELSE IF /<span>&#42;</span>/Consignment/Consignee is PRESENT<br/>             THEN<br/>                     /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"<br/>ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "R"
 
 ##B1821
 
@@ -124,7 +124,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/>IF /*/Consignment/HouseConsignment/ConsignmentItem/Consignee/identificationNumber is<br/>PRESENT AND<br/>/*/Consignment/HouseConsignment/ConsignmentItem/Consignee/identificationNumber is a valid<br/>identifier in the European EOS ((Economic Operators Systems) verified by the EU Member State<br/>receiving or sending this message), OR is a valid identifier in the DB of the CTC country receiving or<br/>sending this message<br/>THEN<br/>         /*/Consignment/HouseConsignment/ConsignmentItem/Consignee/name="N" AND<br/>        /*/Consignment/HouseConsignment/ConsignmentItem/Consignee/Address="N"<br/>ELSE<br/>      /*/Consignment/HouseConsignment/ConsignmentItem/Consignee/name="R" AND<br/>     /*/Consignment/HouseConsignment/ConsignmentItem/Consignee/Address="R";<br/>
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/>IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee/identificationNumber is<br/>PRESENT AND<br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee/identificationNumber is a valid<br/>identifier in the European EOS ((Economic Operators Systems) verified by the EU Member State<br/>receiving or sending this message), OR is a valid identifier in the DB of the CTC country receiving or<br/>sending this message<br/>THEN<br/>         /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee/name="N" AND<br/>        /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee/Address="N"<br/>ELSE<br/>      /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee/name="R" AND<br/>     /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee/Address="R";<br/>
 
 ##B1822
 
@@ -134,7 +134,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/>IF /*/Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/country is in SET CL505<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/postcode = "O"<br/>ELSE /*/Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/postcode = "R";<br/>
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/>IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/country is in SET CL505<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/postcode = "O"<br/>ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/postcode = "R";<br/>
 
 ##B1823
 
@@ -144,7 +144,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; THEN<br/>C0001 shall be disabled AND<br/>IF /*/Consignment/countryOfDestination is in SET CL009<br/>      THEN<br/>                   IF /*/Consignment/Consignee is PRESENT<br/>                   THEN<br/>                              /*/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"<br/>                    ELSE<br/>             /*/Consignment/HouseConsignment/ConsignmentItem/Consignee = "R"<br/>ELSE IF /*/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is in SET CL009<br/>       THEN <br/>                  THIS /*/Consignment/HouseConsignment/ConsignmentItem/Consignee = "R"<br/>ELSE IF /*/TransitOperation/security is in SET {0,1}<br/>    THEN<br/>                IF /*/Consignment/Consignee is PRESENT<br/>                THEN<br/>                             /*/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"<br/>                ELSE /*/Consignment/HouseConsignment/ConsignmentItem/Consignee = "O"<br/>ELSE IF at least one instance of /*/Consignment/AdditionalInformation/code is EQUAL to '30600'<br/>     THEN<br/>                  /*/Consignment/Consignee = "N" AND<br/>                 /*/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"<br/>ELSE IF at least one instance of /*/Consignment/HouseConsignment/ConsignmentItem/AdditionalInformation/code is EQUAL to '30600' <br/>     THEN<br/>                       THIS /*/Consignment/Consignee = "N" AND<br/>                       THIS /*/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"<br/>ELSE IF /*/Consignment/Consignee is PRESENT<br/>    THEN<br/>              /*/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"<br/>ELSE /*/Consignment/HouseConsignment/ConsignmentItem/Consignee = "R"<br/>
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; THEN<br/>C0001 shall be disabled AND<br/>IF /<span>&#42;</span>/Consignment/countryOfDestination is in SET CL009<br/>      THEN<br/>                   IF /<span>&#42;</span>/Consignment/Consignee is PRESENT<br/>                   THEN<br/>                              /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"<br/>                    ELSE<br/>             /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "R"<br/>ELSE IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is in SET CL009<br/>       THEN <br/>                  THIS /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "R"<br/>ELSE IF /<span>&#42;</span>/TransitOperation/security is in SET {0,1}<br/>    THEN<br/>                IF /<span>&#42;</span>/Consignment/Consignee is PRESENT<br/>                THEN<br/>                             /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"<br/>                ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "O"<br/>ELSE IF at least one instance of /<span>&#42;</span>/Consignment/AdditionalInformation/code is EQUAL to '30600'<br/>     THEN<br/>                  /<span>&#42;</span>/Consignment/Consignee = "N" AND<br/>                 /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"<br/>ELSE IF at least one instance of /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/AdditionalInformation/code is EQUAL to '30600' <br/>     THEN<br/>                       THIS /<span>&#42;</span>/Consignment/Consignee = "N" AND<br/>                       THIS /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"<br/>ELSE IF /<span>&#42;</span>/Consignment/Consignee is PRESENT<br/>    THEN<br/>              /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"<br/>ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "R"<br/>
 
 ##B1831
 
@@ -154,7 +154,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0598 shall be disabled AND<br/>IF &lt;TRANSIT OPERATION.Security&gt; is in SET {1,2,3} AND<br/>the first two characters of the /*/CustomsOfficeOfTransitDeclared/referenceNumber is in SET CL010 AND the first two characters of<br/>/*/CustomsOfficeOfDeparture/referenceNumber is NOT in SET CL010<br/>THEN &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED).Arrival date and time estimated&gt; = "R"<br/>ELSE &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED).Arrival date and time estimated&gt; = "O"
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0598 shall be disabled AND<br/>IF &lt;TRANSIT OPERATION.Security&gt; is in SET {1,2,3} AND<br/>the first two characters of the /<span>&#42;</span>/CustomsOfficeOfTransitDeclared/referenceNumber is in SET CL010 AND the first two characters of<br/>/<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is NOT in SET CL010<br/>THEN &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED).Arrival date and time estimated&gt; = "R"<br/>ELSE &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED).Arrival date and time estimated&gt; = "O"
 
 ##B1832
 
@@ -164,7 +164,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;  <br/>THEN R0106 attached to /*/Consignment/TransportEquipment/numberOfSeals <br/>shall be disabled; <br/><br/>IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;  <br/>THEN R0106 attached to /CD038C/Consignment/Incident/TransportEquipment/numberOfSeals <br/>shall be disabled.
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;  <br/>THEN R0106 attached to /<span>&#42;</span>/Consignment/TransportEquipment/numberOfSeals <br/>shall be disabled; <br/><br/>IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;  <br/>THEN R0106 attached to /CD038C/Consignment/Incident/TransportEquipment/numberOfSeals <br/>shall be disabled.
 
 ##B1833
 
@@ -174,7 +174,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0511 attached to /*/correlationIdentifier shall be disabled<br/>AND /*/correlationIdentifier = "O"
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0511 attached to /<span>&#42;</span>/correlationIdentifier shall be disabled<br/>AND /<span>&#42;</span>/correlationIdentifier = "O"
 
 ##B1834
 
@@ -184,7 +184,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0153 attached to<br/>/*/Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode<br/>shall be disabled and the D.G. will become optional.<br/>
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0153 attached to<br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode<br/>shall be disabled and the D.G. will become optional.<br/>
 
 ##B1838
 
@@ -194,7 +194,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN <br/>       IF /*/Consignment/ActiveBorderTransportMeans/nationality is PRESENT OR<br/>           /*/Consignment/modeOfTransportAtTheBorder is EQUAL to '2'<br/>      THEN<br/>             /*/Consignment/ActiveBorderTransportMeans/typeOfIdentification = "R" AND<br/>             /*/Consignment/ActiveBorderTransportMeans/identificationNumber = "R"<br/>       ELSE<br/>               /*/Consignment/ActiveBorderTransportMeans/typeOfIdentification = "O" AND<br/>              /*/Consignment/ActiveBorderTransportMeans/identificationNumber = "O"
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN <br/>       IF /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans/nationality is PRESENT OR<br/>           /<span>&#42;</span>/Consignment/modeOfTransportAtTheBorder is EQUAL to '2'<br/>      THEN<br/>             /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans/typeOfIdentification = "R" AND<br/>             /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans/identificationNumber = "R"<br/>       ELSE<br/>               /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans/typeOfIdentification = "O" AND<br/>              /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans/identificationNumber = "O"
 
 ##B1848
 
@@ -204,7 +204,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0586 attached to /*/Consignment/CountryOfRoutingOfConsignment shall be disabled AND<br/>IF /*/Transit Operation/security is in SET {1, 2, 3}<br/>THEN /*/Consignment/CountryOfRoutingOfConsignment = "R"<br/>ELSE /*/Consignment/CountryOfRoutingOfConsignment = "N"
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0586 attached to /<span>&#42;</span>/Consignment/CountryOfRoutingOfConsignment shall be disabled AND<br/>IF /<span>&#42;</span>/Transit Operation/security is in SET {1, 2, 3}<br/>THEN /<span>&#42;</span>/Consignment/CountryOfRoutingOfConsignment = "R"<br/>ELSE /<span>&#42;</span>/Consignment/CountryOfRoutingOfConsignment = "N"
 
 ##B1850
 
@@ -214,7 +214,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/>IF first digit of /*/Consignment/modeOfTransportAtTheBorder is in SET {2}<br/>THEN /*/Consignment/ActiveBorderTransportMeans/nationality="O"<br/>ELSE /*/Consignment/ActiveBorderTransportMeans/nationality="R"
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN<br/>IF first digit of /<span>&#42;</span>/Consignment/modeOfTransportAtTheBorder is in SET {2}<br/>THEN /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans/nationality="O"<br/>ELSE /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans/nationality="R"
 
 ##B1858
 
@@ -224,7 +224,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0191 will be disabled<br/>AND<br/>IF /*/TransitOperation/security is EQUAL to ‘0’<br/>THEN /*/Consignment/PlaceOfUnloading = “N”<br/>ELSE<br/>IF /*/TransitOperation/specificCircumstanceIndicator is EQUAL to ‘XXX’<br/>THEN /*/Consignment/PlaceOfUnloading = “O”<br/>ELSE /*/Consignment/PlaceOfUnloading = "R"<br/>
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0191 will be disabled<br/>AND<br/>IF /<span>&#42;</span>/TransitOperation/security is EQUAL to ‘0’<br/>THEN /<span>&#42;</span>/Consignment/PlaceOfUnloading = “N”<br/>ELSE<br/>IF /<span>&#42;</span>/TransitOperation/specificCircumstanceIndicator is EQUAL to ‘XXX’<br/>THEN /<span>&#42;</span>/Consignment/PlaceOfUnloading = “O”<br/>ELSE /<span>&#42;</span>/Consignment/PlaceOfUnloading = "R"<br/>
 
 ##B1860
 
@@ -234,7 +234,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0221 attached to /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass shall be disabled
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0221 attached to /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass shall be disabled
 
 ##B1862
 
@@ -244,7 +244,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0223 attached to /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass will be disabled.
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0223 attached to /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass will be disabled.
 
 ##B1875
 
@@ -254,7 +254,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN <br/>IF /*/TransitOperation/security is EQUAL to '0' OR <br/>/*/Consignment/TransportCharges is PRESENT <br/>THEN <br/>/*/Consignment/HouseConsignment/ConsignmentItem/TransportCharges = "N"<br/>ELSE<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/TransportCharges = "O".<br/>
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN <br/>IF /<span>&#42;</span>/TransitOperation/security is EQUAL to '0' OR <br/>/<span>&#42;</span>/Consignment/TransportCharges is PRESENT <br/>THEN <br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/TransportCharges = "N"<br/>ELSE<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/TransportCharges = "O".<br/>
 
 ##B1877
 
@@ -264,7 +264,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; THEN <br/>      IF /*/Consignment/HouseConsignment/ConsignmentItem/Consignee is PRESENT <br/>      for all /*/Consignment/HouseConsignment/ConsignmentItem <br/>      THEN at least one occurrence of <br/>      /*/Consignment/HouseConsignment/ConsignmentItem/Consignee must be different <br/>      from the others;<br/><br/>IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; THEN <br/>      IF /*/Consignment/HouseConsignment/ConsignmentItem/TransportCharges is <br/>      PRESENT for all /*/Consignment/HouseConsignment/ConsignmentItem <br/>      THEN at least one occurrence of<br/>       /*/Consignment/HouseConsignment/ConsignmentItem/TransportCharges must be <br/>       different from the others.<br/>
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; THEN <br/>      IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee is PRESENT <br/>      for all /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem <br/>      THEN at least one occurrence of <br/>      /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee must be different <br/>      from the others;<br/><br/>IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; THEN <br/>      IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/TransportCharges is <br/>      PRESENT for all /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem <br/>      THEN at least one occurrence of<br/>       /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/TransportCharges must be <br/>       different from the others.<br/>
 
 ##B1889
 
@@ -274,7 +274,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0599 will be disabled AND<br/>       IF/*/TransitOperation/security is in SET {1,2,3} AND the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is not in CL010  <br/>       THEN <br/>                /*/Consignment/modeOfTransportAtTheBorder = "R"<br/>       ELSE <br/>        /*/Consignment/modeOfTransportAtTheBorder = "O"<br/>
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0599 will be disabled AND<br/>       IF/<span>&#42;</span>/TransitOperation/security is in SET {1,2,3} AND the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is not in CL010  <br/>       THEN <br/>                /<span>&#42;</span>/Consignment/modeOfTransportAtTheBorder = "R"<br/>       ELSE <br/>        /<span>&#42;</span>/Consignment/modeOfTransportAtTheBorder = "O"<br/>
 
 ##B1890
 
@@ -284,7 +284,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0855 will be disabled<br/>AND<br/>IF /*/Consignment/inlandModeOfTransport is EQUAL to ‘3’<br/>THEN the multiplicity of /*/Consignment/DepartureTransportMeans can be up to '3x'<br/>ELSE the multiplicity of /*/Consignment/DepartureTransportMeans is '1x'
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0855 will be disabled<br/>AND<br/>IF /<span>&#42;</span>/Consignment/inlandModeOfTransport is EQUAL to ‘3’<br/>THEN the multiplicity of /<span>&#42;</span>/Consignment/DepartureTransportMeans can be up to '3x'<br/>ELSE the multiplicity of /<span>&#42;</span>/Consignment/DepartureTransportMeans is '1x'
 
 ##B1891
 
@@ -294,7 +294,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0826 shall be disabled AND <br/>IF /*/Consignment/inlandModeOfTransport is EQUAL to '5'<br/>THEN <br/>/*/Consignment/DepartureTransportMeans = “N”<br/>ELSE IF /*/Consignment/containerIndicator is EQUAL to ‘1’<br/>THEN<br/>/*/Consignment/DepartureTransportMeans = “O”<br/>ELSE<br/>/*/Consignment/DepartureTransportMeans = “R”
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0826 shall be disabled AND <br/>IF /<span>&#42;</span>/Consignment/inlandModeOfTransport is EQUAL to '5'<br/>THEN <br/>/<span>&#42;</span>/Consignment/DepartureTransportMeans = “N”<br/>ELSE IF /<span>&#42;</span>/Consignment/containerIndicator is EQUAL to ‘1’<br/>THEN<br/>/<span>&#42;</span>/Consignment/DepartureTransportMeans = “O”<br/>ELSE<br/>/<span>&#42;</span>/Consignment/DepartureTransportMeans = “R”
 
 ##B1892
 
@@ -304,7 +304,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; <br/>THEN<br/>IF /*/Consignment/containerIndicator is EQUAL to ‘1’ <br/>THEN /*/Consignment/DepartureTransportMeans/identificationNumber = “O” AND<br/>/*/Consignment/DepartureTransportMeans/typeOfIdentification = “O”<br/>ELSE /*/Consignment/DepartureTransportMeans/identificationNumber = “R” AND<br/>/*/Consignment/DepartureTransportMeans/typeOfIdentification = “R”
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; <br/>THEN<br/>IF /<span>&#42;</span>/Consignment/containerIndicator is EQUAL to ‘1’ <br/>THEN /<span>&#42;</span>/Consignment/DepartureTransportMeans/identificationNumber = “O” AND<br/>/<span>&#42;</span>/Consignment/DepartureTransportMeans/typeOfIdentification = “O”<br/>ELSE /<span>&#42;</span>/Consignment/DepartureTransportMeans/identificationNumber = “R” AND<br/>/<span>&#42;</span>/Consignment/DepartureTransportMeans/typeOfIdentification = “R”
 
 ##B1893
 
@@ -314,7 +314,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0403 will be disabled<br/>AND <br/>IF /*/TransitOperation/security is EQUAL to ‘0’<br/>THEN /*/Consignment/PlaceOfLoading = “N”<br/>ELSE /*/Consignment/PlaceOfLoading = “R”<br/>
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0403 will be disabled<br/>AND <br/>IF /<span>&#42;</span>/TransitOperation/security is EQUAL to ‘0’<br/>THEN /<span>&#42;</span>/Consignment/PlaceOfLoading = “N”<br/>ELSE /<span>&#42;</span>/Consignment/PlaceOfLoading = “R”<br/>
 
 ##B1895
 
@@ -324,7 +324,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0502 shall be disabled AND <br/>       IF /*/Consignment/referenceNumberUCR is PRESENT<br/>        THEN<br/>             /*/Consignment/HouseConsignment/ConsignmentItem/referenceNumberUCR = "N" <br/>       ELSE <br/>            /*/Consignment/HouseConsignment/ConsignmentItem/referenceNumberUCR = "O" <br/>
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN C0502 shall be disabled AND <br/>       IF /<span>&#42;</span>/Consignment/referenceNumberUCR is PRESENT<br/>        THEN<br/>             /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/referenceNumberUCR = "N" <br/>       ELSE <br/>            /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/referenceNumberUCR = "O" <br/>
 
 ##B1896
 
@@ -334,7 +334,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; AND <br/>/*/TransitOperation/security is in SET {1, 3} <br/>THEN <br/>       IF /*/Consignment/referenceNumberUCR is NOT PRESENT AND <br/>          /*/Consignment/HouseConsignment/ConsignmentItem/referenceNumberUCR is NOT <br/>          PRESENT <br/>          AND /*/TransitOperation/declarationType is NOT EQUAL to ‘TIR’ <br/>      THEN <br/>           /*/Consignment/HouseConsignment/ConsignmentItem[1]/TransportDocument = ''R'' <br/>      ELSE /*/Consignment/HouseConsignment/ConsignmentItem/TransportDocument = ''O''
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; AND <br/>/<span>&#42;</span>/TransitOperation/security is in SET {1, 3} <br/>THEN <br/>       IF /<span>&#42;</span>/Consignment/referenceNumberUCR is NOT PRESENT AND <br/>          /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/referenceNumberUCR is NOT <br/>          PRESENT <br/>          AND /<span>&#42;</span>/TransitOperation/declarationType is NOT EQUAL to ‘TIR’ <br/>      THEN <br/>           /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem[1]/TransportDocument = ''R'' <br/>      ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/TransportDocument = ''O''
 
 ##B1897
 
@@ -344,7 +344,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN <br/>IF /*/Consignment/inlandModeOfTransport is EQUAL to ‘2’ <br/>THEN /*/Consignment/DepartureTransportMeans/nationality = "N"<br/>ELSE<br/>IF /*/Consignment/containerIndicator is EQUAL to ‘1’ <br/>THEN /*/Consignment/DepartureTransportMeans/nationality = “O”<br/>ELSE /*/Consignment/DepartureTransportMeans/nationality = “R”
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN <br/>IF /<span>&#42;</span>/Consignment/inlandModeOfTransport is EQUAL to ‘2’ <br/>THEN /<span>&#42;</span>/Consignment/DepartureTransportMeans/nationality = "N"<br/>ELSE<br/>IF /<span>&#42;</span>/Consignment/containerIndicator is EQUAL to ‘1’ <br/>THEN /<span>&#42;</span>/Consignment/DepartureTransportMeans/nationality = “O”<br/>ELSE /<span>&#42;</span>/Consignment/DepartureTransportMeans/nationality = “R”
 
 ##B1898
 
@@ -354,7 +354,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; <br/>THEN<br/>IF /*/Guarantee/GuaranteeReference/amountToBeCovered is PRESENT <br/>THEN /*/Guarantee/GuaranteeReference/currency = "R"<br/>ELSE /*/Guarantee/GuaranteeReference/currency = "N’’<br/><br/><br/>
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt; <br/>THEN<br/>IF /<span>&#42;</span>/Guarantee/GuaranteeReference/amountToBeCovered is PRESENT <br/>THEN /<span>&#42;</span>/Guarantee/GuaranteeReference/currency = "R"<br/>ELSE /<span>&#42;</span>/Guarantee/GuaranteeReference/currency = "N’’<br/><br/><br/>
 
 ##B1903
 
@@ -394,7 +394,7 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/TransitOperation/arrivalDateAndTime (actual) = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/TransitOperation/recoveryCommunicationDate = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/FunctionalError/errorReason = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/GuaranteeReference/Guarantor/Address/country = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/GuaranteeReference/Guarantor/identificationNumber = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/CustomsOfficeOfDeparture = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass =<br/>"R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Recovery/text = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Guarantee/GuaranteeReference/amountToBeCovered = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /CD038C/Consignment/Incident/Endorsement/authority = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /CD038C/Consignment/Incident/Endorsement/place= "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/PlaceOfLoading = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/ActiveBorderTransportMeans/customsOfficeAtBorderReferenceNumber = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/ActiveBorderTransportMeans/nationality= "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/ActiveBorderTransportMeans/typeOfIdentification =”R”;<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/ActiveBorderTransportMeans/identificationNumber = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/DepartureTransportMeans/typeOfIdentification = “R”;<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/DepartureTransportMeans/identificationNumber = “R”;<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/DepartureTransportMeans/nationality = “R”;<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Guarantee/GuaranteeReference/currency = "R"
+IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/TransitOperation/arrivalDateAndTime (actual) = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/TransitOperation/recoveryCommunicationDate = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/FunctionalError/errorReason = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/GuaranteeReference/Guarantor/Address/country = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/GuaranteeReference/Guarantor/identificationNumber = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/CustomsOfficeOfDeparture = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass =<br/>"R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/Recovery/text = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/Guarantee/GuaranteeReference/amountToBeCovered = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /CD038C/Consignment/Incident/Endorsement/authority = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /CD038C/Consignment/Incident/Endorsement/place= "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/Consignment/PlaceOfLoading = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans/customsOfficeAtBorderReferenceNumber = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans/nationality= "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans/typeOfIdentification =”R”;<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans/identificationNumber = "R";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/Consignment/DepartureTransportMeans/typeOfIdentification = “R”;<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/Consignment/DepartureTransportMeans/identificationNumber = “R”;<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/Consignment/DepartureTransportMeans/nationality = “R”;<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/Guarantee/GuaranteeReference/currency = "R"
 
 ##B2400
 
@@ -404,4 +404,4 @@ N/A
 
 <b>Technical Description</b>
 
-IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/Incident = "N";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Enquiry/returnCopyReturnedDate = "N"; <br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/TransportDocument = "N";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/TransportCharges = "N";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /*/GuaranteeReference/Guarantor/contactDetailsInCountryOfCompetentAuthority  = "N”.
+IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/Consignment/Incident = "N";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/Enquiry/returnCopyReturnedDate = "N"; <br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/TransportDocument = "N";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/TransportCharges = "N";<br/>IF &lt;Decisive Date&gt; is GREATER than &lt;TPendDate&gt;<br/>THEN /<span>&#42;</span>/GuaranteeReference/Guarantor/contactDetailsInCountryOfCompetentAuthority  = "N”.

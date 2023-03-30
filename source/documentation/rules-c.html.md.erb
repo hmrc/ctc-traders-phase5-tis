@@ -14,7 +14,7 @@ IF &lt;CONSIGNMENT.Country of destination&gt; is in SET CL009<br/>THEN<br/>    I
 
 <b>Technical Description</b>
 
-IF /*/Consignment/countryOfDestination is in SET CL009<br/>THEN<br/>     IF /*/Consignment/Consignee is PRESENT<br/>     THEN<br/>             /*/Consignment/HouseConsignment/Consignee = "N" <br/>           ELSE /*/Consignment/HouseConsignment/Consignee = "R"<br/>ELSE IF /*/TransitOperation/security is in SET {0,1}<br/>THEN<br/>         IF /*/Consignment/Consignee is PRESENT<br/>         THEN<br/>                   /*/Consignment/HouseConsignment/Consignee = "N" <br/>                ELSE /*/Consignment/HouseConsignment/Consignee = "O"<br/>ELSE IF at least one instance of /*/Consignment/AdditionalInformation/code is EQUAL to '30600'<br/>              THEN<br/>                      /*/Consignment/Consignee = "N" AND<br/>                      /*/Consignment/HouseConsignment/Consignee = "N" <br/>ELSE IF at least one instance of /*/Consignment/HouseConsignment/AdditionalInformation/code IS<br/>EQUAL to '30600'  <br/>THEN<br/>                       /*/Consignment/Consignee = "N" AND<br/>                       THIS /*/Consignment/HouseConsignment/Consignee = "N"<br/>ELSE<br/>              IF /*/Consignment/Consignee is PRESENT<br/>             THEN<br/>              /*/Consignment/HouseConsignment/Consignee = "N"<br/>                ELSE /*/Consignment/HouseConsignment/Consignee = "R"<br/>
+IF /<span>&#42;</span>/Consignment/countryOfDestination is in SET CL009<br/>THEN<br/>     IF /<span>&#42;</span>/Consignment/Consignee is PRESENT<br/>     THEN<br/>             /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "N" <br/>           ELSE /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "R"<br/>ELSE IF /<span>&#42;</span>/TransitOperation/security is in SET {0,1}<br/>THEN<br/>         IF /<span>&#42;</span>/Consignment/Consignee is PRESENT<br/>         THEN<br/>                   /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "N" <br/>                ELSE /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "O"<br/>ELSE IF at least one instance of /<span>&#42;</span>/Consignment/AdditionalInformation/code is EQUAL to '30600'<br/>              THEN<br/>                      /<span>&#42;</span>/Consignment/Consignee = "N" AND<br/>                      /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "N" <br/>ELSE IF at least one instance of /<span>&#42;</span>/Consignment/HouseConsignment/AdditionalInformation/code IS<br/>EQUAL to '30600'  <br/>THEN<br/>                       /<span>&#42;</span>/Consignment/Consignee = "N" AND<br/>                       THIS /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "N"<br/>ELSE<br/>              IF /<span>&#42;</span>/Consignment/Consignee is PRESENT<br/>             THEN<br/>              /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "N"<br/>                ELSE /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "R"<br/>
 
 ##C0015
 
@@ -24,7 +24,7 @@ IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL REFERENCE.Type&
 
 <b>Technical Description</b>
 
-IF /*/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/type is in SET CL234(DocumentTypeExcise)<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/referenceNumber = “R”<br/>ELSE /*/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/referenceNumber = “O”
+IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/type is in SET CL234(DocumentTypeExcise)<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/referenceNumber = “R”<br/>ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/referenceNumber = “O”
 
 ##C0027
 
@@ -34,7 +34,7 @@ IF &lt;CTL control&gt; is PRESENT<br/>THEN <br/>&lt;CC043C-HOLDER OF THE TRANSIT
 
 <b>Technical Description</b>
 
-IF /*/CTLControl is PRESENT<br/>THEN /CC043C/HolderOfTheTransitProcedure = "N" AND <br/>/CC043C/Consignment = "N" AND<br/>/CC043C/TransitOperation/declarationType = "N" AND<br/>/CC043C/TransitOperation/declarationAcceptanceDate = "N" AND<br/>/CC043C/Consignment/grossMass = "N"<br/>ELSE /CC043C/HolderOfTheTransitProcedure = "R" AND<br/>/CC043C/ Consignment = "R" AND<br/>/CC043C/TransitOperation/declarationType = "R" AND<br/>/CC043C/TransitOperation/declarationAcceptanceDate = "R" AND<br/>/CC043C/Consignment/grossMass = "R"
+IF /<span>&#42;</span>/CTLControl is PRESENT<br/>THEN /CC043C/HolderOfTheTransitProcedure = "N" AND <br/>/CC043C/Consignment = "N" AND<br/>/CC043C/TransitOperation/declarationType = "N" AND<br/>/CC043C/TransitOperation/declarationAcceptanceDate = "N" AND<br/>/CC043C/Consignment/grossMass = "N"<br/>ELSE /CC043C/HolderOfTheTransitProcedure = "R" AND<br/>/CC043C/ Consignment = "R" AND<br/>/CC043C/TransitOperation/declarationType = "R" AND<br/>/CC043C/TransitOperation/declarationAcceptanceDate = "R" AND<br/>/CC043C/Consignment/grossMass = "R"
 
 ##C0029
 
@@ -44,7 +44,7 @@ IF &lt;TRANSIT OPERATION.Security&gt; is in SET {1,2,3} <br/>THEN &lt;CONSIGNMEN
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/security is in SET {1,2,3} <br/>THEN /*/Consignment/modeOfTransportAtTheBorder = "R"<br/>ELSE /*/Consignment/modeOfTransportAtTheBorder = "O"
+IF /<span>&#42;</span>/TransitOperation/security is in SET {1,2,3} <br/>THEN /<span>&#42;</span>/Consignment/modeOfTransportAtTheBorder = "R"<br/>ELSE /<span>&#42;</span>/Consignment/modeOfTransportAtTheBorder = "O"
 
 ##C0030
 
@@ -54,7 +54,7 @@ IF &lt;TRANSIT OPERATION. Declaration type&gt; is in SET {TIR,T2SM}  <br/>     T
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/declarationType is in SET {TIR,T2SM}  <br/>     THEN /*/CustomsOfficeOfTransitDeclared = "N"  <br/>ELSE <br/>     IF (the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is in SET <br/>     CL112) AND (the first two characters of <br/>     /*/CustomsOfficeOfDestinationDeclared/referenceNumber is in SET CL112) AND (the first <br/>     two characters of /*/CustomsOfficeOfDeparture/referenceNumber is EQUAL to the first two <br/>     characters of /*/CustomsOfficeOfDestinationDeclared/referenceNumber)  <br/>            THEN /*/CustomsOfficeOfTransitDeclared = "O"  <br/>ELSE <br/>     IF /*/TransitOperation/declarationType is EQUAL to 'T2' <br/>             THEN /*/CustomsOfficeOfTransitDeclared = "R" <br/>ELSE <br/>     IF /*/TransitOperation/declarationType is EQUAL 'T' AND at least one instance of <br/>     /*/Consignment/HouseConsignment/ConsignmentItem/declarationType is EQUAL to 'T2' <br/>             THEN /*/CustomsOfficeOfTransitDeclared = "R" <br/>ELSE  <br/>     IF the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is in SET <br/>     CL112 OR the first two characters of <br/>     /*/CustomsOfficeOfDestinationDeclared/referenceNumber is in SET CL112 <br/>             THEN /*/CustomsOfficeOfTransitDeclared = "R" <br/>ELSE <br/>     IF at least one instance of /*/Consignment/CountryOfRoutingOfConsignment/country is in SET CL112 <br/>             THEN /*/CustomsOfficeOfTransitDeclared = "R" <br/>ELSE <br/>     IF the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is EQUAL to <br/>     'AD' OR IF the first two characters of <br/>     /*/CustomsOfficeOfDestinationDeclared/referenceNumber is EQUAL to 'AD' <br/>             THEN /*/CustomsOfficeOfTransitDeclared = "R"  <br/>ELSE <br/>     IF /*/CustomsOfficeOfExitForTransitDeclared is PRESENT  <br/>     THEN /*/CustomsOfficeOfTransitDeclared = "R"  <br/>ELSE  <br/>     /*/CustomsOfficeOfTransitDeclared = "O" <br/> <br/>
+IF /<span>&#42;</span>/TransitOperation/declarationType is in SET {TIR,T2SM}  <br/>     THEN /<span>&#42;</span>/CustomsOfficeOfTransitDeclared = "N"  <br/>ELSE <br/>     IF (the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET <br/>     CL112) AND (the first two characters of <br/>     /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in SET CL112) AND (the first <br/>     two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is EQUAL to the first two <br/>     characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber)  <br/>            THEN /<span>&#42;</span>/CustomsOfficeOfTransitDeclared = "O"  <br/>ELSE <br/>     IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'T2' <br/>             THEN /<span>&#42;</span>/CustomsOfficeOfTransitDeclared = "R" <br/>ELSE <br/>     IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL 'T' AND at least one instance of <br/>     /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType is EQUAL to 'T2' <br/>             THEN /<span>&#42;</span>/CustomsOfficeOfTransitDeclared = "R" <br/>ELSE  <br/>     IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET <br/>     CL112 OR the first two characters of <br/>     /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in SET CL112 <br/>             THEN /<span>&#42;</span>/CustomsOfficeOfTransitDeclared = "R" <br/>ELSE <br/>     IF at least one instance of /<span>&#42;</span>/Consignment/CountryOfRoutingOfConsignment/country is in SET CL112 <br/>             THEN /<span>&#42;</span>/CustomsOfficeOfTransitDeclared = "R" <br/>ELSE <br/>     IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is EQUAL to <br/>     'AD' OR IF the first two characters of <br/>     /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is EQUAL to 'AD' <br/>             THEN /<span>&#42;</span>/CustomsOfficeOfTransitDeclared = "R"  <br/>ELSE <br/>     IF /<span>&#42;</span>/CustomsOfficeOfExitForTransitDeclared is PRESENT  <br/>     THEN /<span>&#42;</span>/CustomsOfficeOfTransitDeclared = "R"  <br/>ELSE  <br/>     /<span>&#42;</span>/CustomsOfficeOfTransitDeclared = "O" <br/> <br/>
 
 ##C0035
 
@@ -64,7 +64,7 @@ IF (&lt;TRANSIT OPERATION.Declaration type&gt; is in SET {T2, T2F} <br/>AND the 
 
 <b>Technical Description</b>
 
-IF (/*/Transit Operation/declarationType is in SET {T2, T2F} <br/>AND the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is in SET CL112) <br/>THEN IF /*/Consignment/PreviousDocument is PRESENT<br/>   THEN /*/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument = ‘O’<br/>   ELSE /*/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument = ‘R’<br/>   for all Consignment Items<br/>ELSE /*/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument = ‘O’;<br/>IF (/*/Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2, T2F} AND the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is in SET CL112) <br/>THEN IF /*/Consignment/PreviousDocument is PRESENT<br/>   THEN /*/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument = ‘O’<br/>   ELSE /*/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument = ‘R’<br/>   for this Consignment Items<br/>ELSE /*/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument = ‘O’ <br/>for this Consignment Items
+IF (/<span>&#42;</span>/Transit Operation/declarationType is in SET {T2, T2F} <br/>AND the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL112) <br/>THEN IF /<span>&#42;</span>/Consignment/PreviousDocument is PRESENT<br/>   THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument = ‘O’<br/>   ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument = ‘R’<br/>   for all Consignment Items<br/>ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument = ‘O’;<br/>IF (/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2, T2F} AND the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL112) <br/>THEN IF /<span>&#42;</span>/Consignment/PreviousDocument is PRESENT<br/>   THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument = ‘O’<br/>   ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument = ‘R’<br/>   for this Consignment Items<br/>ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument = ‘O’ <br/>for this Consignment Items
 
 ##C0040
 
@@ -74,7 +74,7 @@ IF &lt;CONSIGNMENT-INCIDENT-TRANSHIPMENT.Container indicator&gt; is EQUAL to '1'
 
 <b>Technical Description</b>
 
-IF /*/Consignment/Incident/Transhipment/containerIndicator is EQUAL to '1' <br/>THEN<br/>/*/Consignment/Incident/TransportEquipment = "R"<br/>ELSE<br/>/*/Consignment/Incident/TransportEquipment = "O"
+IF /<span>&#42;</span>/Consignment/Incident/Transhipment/containerIndicator is EQUAL to '1' <br/>THEN<br/>/<span>&#42;</span>/Consignment/Incident/TransportEquipment = "R"<br/>ELSE<br/>/<span>&#42;</span>/Consignment/Incident/TransportEquipment = "O"
 
 ##C0045
 
@@ -84,7 +84,7 @@ IF &lt;TRANSIT OPERATION.Declaration type&gt; is EQUAL to ‘T’ <br/>THEN &lt;
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/declarationType is EQUAL to 'T'<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/declarationType = "R"<br/>ELSE /*/Consignment/HouseConsignment/ConsignmentItem/declarationType = "N"
+IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'T'<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType = "R"<br/>ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType = "N"
 
 ##C0055
 
@@ -94,7 +94,7 @@ IF &lt;CONSIGNMENT.Container indicator&gt; is EQUAL to '0' <br/>THEN &lt;CONSIGN
 
 <b>Technical Description</b>
 
-IF /*/Consignment/containerIndicator is EQUAL to '0' <br/>THEN /*/Consignment/TransportEquipment/containerIdentificationNumber = "N" <br/>ELSE at least one iteration of /*/Consignment/TransportEquipment/containerIdentificationNumber = "R" (for the rest of iterations is optional)
+IF /<span>&#42;</span>/Consignment/containerIndicator is EQUAL to '0' <br/>THEN /<span>&#42;</span>/Consignment/TransportEquipment/containerIdentificationNumber = "N" <br/>ELSE at least one iteration of /<span>&#42;</span>/Consignment/TransportEquipment/containerIdentificationNumber = "R" (for the rest of iterations is optional)
 
 ##C0060
 
@@ -104,7 +104,7 @@ IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Type of packages
 
 <b>Technical Description</b>
 
-IF /*/Consignment/HouseConsignment/ConsignmentItem/Packaging/typeOfPackages is in SET CL181<br/>THEN<br/> /*/Consignment/HouseConsignment/ConsignmentItem/Packaging/shippingMarks = "O" AND /*/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages = "N"<br/>ELSE IF /*/Consignment/HouseConsignment/ConsignmentItem/Packaging/typeOfPackages is in SET CL182<br/>THEN<br/>/*/Consignment/HouseConsignment/ConsignmentItem/Packaging/shippingMarks = "O"<br/>AND<br/>/*/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages = "R"<br/>ELSE<br/>/*/Consignment/HouseConsignment/ConsignmentItem/Packaging/shippingMarks ="R"<br/>AND<br/>/*/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages = "R"
+IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/typeOfPackages is in SET CL181<br/>THEN<br/> /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/shippingMarks = "O" AND /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages = "N"<br/>ELSE IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/typeOfPackages is in SET CL182<br/>THEN<br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/shippingMarks = "O"<br/>AND<br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages = "R"<br/>ELSE<br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/shippingMarks ="R"<br/>AND<br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages = "R"
 
 ##C0085
 
@@ -114,7 +114,7 @@ IF &lt;GUARANTEE.Guarantee type&gt; is in SET [CL076](https://ec.europa.eu/taxa
 
 <b>Technical Description</b>
 
-IF /*/Guarantee/guaranteeType is in SET [CL076](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeTypeWithReference.zip)<br/>THEN /*/Guarantee/GuaranteeReference = "R"<br/>ELSE /*/Guarantee/GuaranteeReference = "N"
+IF /<span>&#42;</span>/Guarantee/guaranteeType is in SET [CL076](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeTypeWithReference.zip)<br/>THEN /<span>&#42;</span>/Guarantee/GuaranteeReference = "R"<br/>ELSE /<span>&#42;</span>/Guarantee/GuaranteeReference = "N"
 
 ##C0086
 
@@ -124,7 +124,7 @@ IF &lt;GUARANTEE.Guarantee type&gt; is in SET [CL286](https://ec.europa.eu/taxat
 
 <b>Technical Description</b>
 
-IF /*/Guarantee/guaranteeType is in SET [CL286](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeTypeWithGRN.zip)<br/>THEN /*/Guarantee/GuaranteeReference/GRN = "R" AND /*/Guarantee/GuaranteeReference/accessCode = "R"<br/>ELSE /*/Guarantee/GuaranteeReference/GRN = "N" AND /*/Guarantee/GuaranteeReference/accessCode = "N"
+IF /<span>&#42;</span>/Guarantee/guaranteeType is in SET [CL286](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeTypeWithGRN.zip)<br/>THEN /<span>&#42;</span>/Guarantee/GuaranteeReference/GRN = "R" AND /<span>&#42;</span>/Guarantee/GuaranteeReference/accessCode = "R"<br/>ELSE /<span>&#42;</span>/Guarantee/GuaranteeReference/GRN = "N" AND /<span>&#42;</span>/Guarantee/GuaranteeReference/accessCode = "N"
 
 ##C0101
 
@@ -134,7 +134,7 @@ IF &lt;TRANSIT OPERATION.Reduced dataset indicator&gt; is EQUAL to '1'<br/>THEN 
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/reducedDatasetIndicator is EQUAL to '1'<br/>THEN /*/Authorisation = "R"<br/>ELSE /*/Authorisation = "O"
+IF /<span>&#42;</span>/TransitOperation/reducedDatasetIndicator is EQUAL to '1'<br/>THEN /<span>&#42;</span>/Authorisation = "R"<br/>ELSE /<span>&#42;</span>/Authorisation = "O"
 
 ##C0102
 
@@ -144,7 +144,7 @@ IF &lt;TRANSIT OPERATION.Simplified procedure&gt; is EQUAL to '1'<br/>THEN &lt;C
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/simplifiedProcedure is EQUAL to '1'<br/>THEN /CC007C/Authorisation = "R"<br/>ELSE /CC007C/Authorisation = "N"
+IF /<span>&#42;</span>/TransitOperation/simplifiedProcedure is EQUAL to '1'<br/>THEN /CC007C/Authorisation = "R"<br/>ELSE /CC007C/Authorisation = "N"
 
 ##C0128
 
@@ -154,7 +154,7 @@ IF the first three characters of &lt;Message recipient&gt; is EQUAL to ‘NTA’
 
 <b>Technical Description</b>
 
-IF the first three characters of /*/messageRecipient is EQUAL to ‘NTA’<br/>THEN //Invalidation/decision = "N"<br/>ELSE /*/Invalidation/decision = "R"
+IF the first three characters of /<span>&#42;</span>/messageRecipient is EQUAL to ‘NTA’<br/>THEN /<span>&#42;</span>/Invalidation/decision = "N"<br/>ELSE /<span>&#42;</span>/Invalidation/decision = "R"
 
 ##C0129
 
@@ -164,7 +164,7 @@ IF &lt;INVALIDATION.Initiated by customs&gt; is EQUAL to ‘1’<br/>THEN &lt;IN
 
 <b>Technical Description</b>
 
-IF /*/Invalidation/initiatedByCustoms is EQUAL to ‘1’<br/>THEN /*/Invalidation/requestDateAndTime = "N"<br/>ELSE /*/Invalidation/requestDateAndTime = "R"
+IF /<span>&#42;</span>/Invalidation/initiatedByCustoms is EQUAL to ‘1’<br/>THEN /<span>&#42;</span>/Invalidation/requestDateAndTime = "N"<br/>ELSE /<span>&#42;</span>/Invalidation/requestDateAndTime = "R"
 
 ##C0130
 
@@ -174,7 +174,7 @@ IF &lt;GUARANTEE.Guarantee type&gt; is EQUAL to '8' <br/>THEN &lt;GUARANTEE.Othe
 
 <b>Technical Description</b>
 
-IF /*/Guarantee/guaranteeType is EQUAL to '8' <br/>THEN /*/Guarantee/otherGuaranteeReference = "R"<br/>ELSE IF /*/Guarantee/guaranteeType is EQUAL to '3'<br/>THEN /*/Guarantee/otherGuaranteeReference = "O" <br/>ELSE /*/Guarantee/otherGuaranteeReference = "N"
+IF /<span>&#42;</span>/Guarantee/guaranteeType is EQUAL to '8' <br/>THEN /<span>&#42;</span>/Guarantee/otherGuaranteeReference = "R"<br/>ELSE IF /<span>&#42;</span>/Guarantee/guaranteeType is EQUAL to '3'<br/>THEN /<span>&#42;</span>/Guarantee/otherGuaranteeReference = "O" <br/>ELSE /<span>&#42;</span>/Guarantee/otherGuaranteeReference = "N"
 
 ##C0137
 
@@ -184,7 +184,7 @@ IF (&lt;INVALIDATION.Initiated by customs&gt; is EQUAL to ‘0’ AND &lt;INVAL
 
 <b>Technical Description</b>
 
-IF (/*/Invalidation/initiatedByCustoms is EQUAL to '0’ AND /*/Invalidation/decision is EQUAL to ‘0’) OR /*/Invalidation/initiatedByCustoms is EQUAL to ‘1’ <br/>THEN /*/Invalidation/justification = "R"<br/>ELSE /*/Invalidation/justification = "O"
+IF (/<span>&#42;</span>/Invalidation/initiatedByCustoms is EQUAL to '0’ AND /<span>&#42;</span>/Invalidation/decision is EQUAL to ‘0’) OR /<span>&#42;</span>/Invalidation/initiatedByCustoms is EQUAL to ‘1’ <br/>THEN /<span>&#42;</span>/Invalidation/justification = "R"<br/>ELSE /<span>&#42;</span>/Invalidation/justification = "O"
 
 ##C0153
 
@@ -194,7 +194,7 @@ IF &lt;TRANSIT OPERATION.TIR Carnet number&gt; is PRESENT<br/>THEN &lt;CONSIGNME
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/TIRCarnetNumber is PRESENT<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode = "O"<br/>ELSE /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode = "R"
+IF /<span>&#42;</span>/TransitOperation/TIRCarnetNumber is PRESENT<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode = "O"<br/>ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode = "R"
 
 ##C0170
 
@@ -214,7 +214,7 @@ IF &lt;TRANSIT OPERATION.Security&gt; is EQUAL to ’0'<br/>THEN<br/>&lt;CONSIGN
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/security is EQUAL to '0'<br/>THEN /*/Consignment/TransportCharges = "N" <br/>AND /*/Consignment/HouseConsignment/TransportCharges = "N"<br/>ELSE /*/Consignment/TransportCharges = "O" <br/>AND /*/Consignment/HouseConsignment/TransportCharges = "O"<br/>
+IF /<span>&#42;</span>/TransitOperation/security is EQUAL to '0'<br/>THEN /<span>&#42;</span>/Consignment/TransportCharges = "N" <br/>AND /<span>&#42;</span>/Consignment/HouseConsignment/TransportCharges = "N"<br/>ELSE /<span>&#42;</span>/Consignment/TransportCharges = "O" <br/>AND /<span>&#42;</span>/Consignment/HouseConsignment/TransportCharges = "O"<br/>
 
 ##C0190
 
@@ -234,7 +234,7 @@ IF &lt;TRANSIT OPERATION.Security&gt; is in SET {1, 3}<br/>THEN<br/>&lt;CONSIGNM
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/security is in SET {1, 3}<br/>THEN<br/>/*/Consignment/PlaceOfUnloading = "R"<br/>ELSE<br/>IF /*/TransitOperation/security is EQUAL to ‘0’<br/>THEN<br/>/*/Consignment/PlaceOfUnloading = "N"<br/>ELSE<br/>/*/Consignment/PlaceOfUnloading = "O"<br/>
+IF /<span>&#42;</span>/TransitOperation/security is in SET {1, 3}<br/>THEN<br/>/<span>&#42;</span>/Consignment/PlaceOfUnloading = "R"<br/>ELSE<br/>IF /<span>&#42;</span>/TransitOperation/security is EQUAL to ‘0’<br/>THEN<br/>/<span>&#42;</span>/Consignment/PlaceOfUnloading = "N"<br/>ELSE<br/>/<span>&#42;</span>/Consignment/PlaceOfUnloading = "O"<br/>
 
 ##C0215
 
@@ -264,7 +264,7 @@ IF &lt;CONSIGNMENT-INCIDENT.Code&gt; is in SET {2, 4} <br/>THEN &lt;CONSIGNMENT-
 
 <b>Technical Description</b>
 
-IF /*/Consignment/Incident/code is in SET {2, 4}<br/>THEN /*/Consignment/Incident/TransportEquipment = "R" AND <br/>/*/Consignment/Incident/Transhipment = "N" <br/>ELSE IF /*/Consignment/Incident/code is in SET {3, 6} <br/>THEN /*/Consignment/Incident/TransportEquipment = "O" AND <br/>/*/Consignment/Incident/Transhipment = "R" <br/>ELSE <br/>/*/Consignment/Incident/TransportEquipment = "N" AND <br/>/*/ Consignment/Incident/Transhipment = "N"
+IF /<span>&#42;</span>/Consignment/Incident/code is in SET {2, 4}<br/>THEN /<span>&#42;</span>/Consignment/Incident/TransportEquipment = "R" AND <br/>/<span>&#42;</span>/Consignment/Incident/Transhipment = "N" <br/>ELSE IF /<span>&#42;</span>/Consignment/Incident/code is in SET {3, 6} <br/>THEN /<span>&#42;</span>/Consignment/Incident/TransportEquipment = "O" AND <br/>/<span>&#42;</span>/Consignment/Incident/Transhipment = "R" <br/>ELSE <br/>/<span>&#42;</span>/Consignment/Incident/TransportEquipment = "N" AND <br/>/<span>&#42;</span>/ Consignment/Incident/Transhipment = "N"
 
 ##C0250
 
@@ -274,7 +274,7 @@ IF &lt;HOLDER OF THE TRANSIT PROCEDURE.Identification number&gt; is PRESENT<br/>
 
 <b>Technical Description</b>
 
-IF /*/HolderOfTheTransitProcedure/identificationNumber is PRESENT AND <br/>/*/HolderOfTheTransitProcedure/identificationNumber is a valid identifier in the European EOS ((Economic Operators Systems) verified by the EU Member State receiving or sending this message), OR is a valid identifier in the DB of the CTC country receiving or sending this message<br/>THEN <br/>     /*/HolderOfTheTransitProcedure/name="N" AND<br/>     /*/HolderOfTheTransitProcedure/Address="N"<br/>ELSE <br/>      /*/HolderOfTheTransitProcedure/name="R" AND <br/>      /*/HolderOfTheTransitProcedure/Address="R";<br/><br/>IF /*/Consignment/Consignor/identificationNumber is PRESENT AND /*/Consignment/Consignor/identificationNumber is a valid identifier in in the European EOS ((Economic Operators Systems) verified by the EU Member State receiving or sending this message), OR is a valid identifier in the DB of the CTC country receiving or sending this message<br/>THEN <br/>         /*/Consignment/Consignor/name="N" AND <br/>        /*/Consignment/Consignor/Address="N"<br/>ELSE <br/>       /*/Consignment/Consignor/name="R" AND <br/>      /*/Consignment/Consignor/Address="R";<br/><br/>IF /*/Consignment/Consignee/identificationNumber is PRESENT<br/>AND /*/Consignment/Consignee/identificationNumber is a valid identifier in the European EOS (Economic Operators Systems) verified by the EU Member State receiving or sending this message), OR is a valid identifier in the DB of the CTC country receiving or sending this message<br/>THEN <br/>       /*/Consignment/Consignee/name="N" AND <br/>       /*/Consignment/Consignee/Address="N"<br/>ELSE <br/>      /*/Consignment/Consignee/name="R" AND <br/>     /*/Consignment/Consignee/Address="R";<br/><br/>IF /*/Consignment/HouseConsignment/Consignor/identificationNumber is PRESENT<br/><br/>AND /*/Consignment/HouseConsignment/Consignor/identificationNumber is a valid identifier in the European EOS ((Economic Operators Systems) verified by the EU Member State receiving or sending this message), OR is a valid identifier in the DB of the CTC country receiving or sending this message<br/>THEN <br/>       /*/Consignment/HouseConsignment/Consignor/name="N" AND<br/>      /*/Consignment/HouseConsignment/Consignor/Address="N"<br/>ELSE <br/>     /*/Consignment/HouseConsignment/Consignor/name="R" AND<br/>     /*/Consignment/HouseConsignment/Consignor/Address="R";<br/><br/><br/>IF /*/Consignment/HouseConsignment/Consignee/identificationNumber is PRESENT<br/>AND /*/Consignment/HouseConsignment/Consignee/identificationNumber is a valid identifier in the European EOS ((Economic Operators Systems) verified by the EU Member State receiving or sending this message), OR is a valid identifier in the DB of the CTC country receiving or sending this message<br/>THEN <br/>       /*/Consignment/HouseConsignment/Consignee/name="N" AND<br/>      /*/Consignment/HouseConsignment/Consignee/Address="N"<br/>ELSE <br/>     /*/Consignment/HouseConsignment/Consignee/name="R" AND<br/>    /*/Consignment/HouseConsignment/Consignee/Address="R";<br/><br/><br/>IF /*/Guarantor/identificationNumber is PRESENT AND <br/>/*/Guarantor/identificationNumber is a valid identifier in the European EOS ((Economic Operators Systems) verified by the EU Member State receiving or sending this message), OR is a valid identifier in the DB of the CTC country receiving or sending this message<br/>THEN <br/>      /*/Guarantor/name="N" AND <br/>     /*/Guarantor/Address="N"<br/>ELSE <br/>     /*/Guarantor/name="R" AND <br/>    /*/Guarantor/Address="R";<br/>
+IF /<span>&#42;</span>/HolderOfTheTransitProcedure/identificationNumber is PRESENT AND <br/>/<span>&#42;</span>/HolderOfTheTransitProcedure/identificationNumber is a valid identifier in the European EOS ((Economic Operators Systems) verified by the EU Member State receiving or sending this message), OR is a valid identifier in the DB of the CTC country receiving or sending this message<br/>THEN <br/>     /<span>&#42;</span>/HolderOfTheTransitProcedure/name="N" AND<br/>     /<span>&#42;</span>/HolderOfTheTransitProcedure/Address="N"<br/>ELSE <br/>      /<span>&#42;</span>/HolderOfTheTransitProcedure/name="R" AND <br/>      /<span>&#42;</span>/HolderOfTheTransitProcedure/Address="R";<br/><br/>IF /<span>&#42;</span>/Consignment/Consignor/identificationNumber is PRESENT AND /<span>&#42;</span>/Consignment/Consignor/identificationNumber is a valid identifier in in the European EOS ((Economic Operators Systems) verified by the EU Member State receiving or sending this message), OR is a valid identifier in the DB of the CTC country receiving or sending this message<br/>THEN <br/>         /<span>&#42;</span>/Consignment/Consignor/name="N" AND <br/>        /<span>&#42;</span>/Consignment/Consignor/Address="N"<br/>ELSE <br/>       /<span>&#42;</span>/Consignment/Consignor/name="R" AND <br/>      /<span>&#42;</span>/Consignment/Consignor/Address="R";<br/><br/>IF /<span>&#42;</span>/Consignment/Consignee/identificationNumber is PRESENT<br/>AND /<span>&#42;</span>/Consignment/Consignee/identificationNumber is a valid identifier in the European EOS (Economic Operators Systems) verified by the EU Member State receiving or sending this message), OR is a valid identifier in the DB of the CTC country receiving or sending this message<br/>THEN <br/>       /<span>&#42;</span>/Consignment/Consignee/name="N" AND <br/>       /<span>&#42;</span>/Consignment/Consignee/Address="N"<br/>ELSE <br/>      /<span>&#42;</span>/Consignment/Consignee/name="R" AND <br/>     /<span>&#42;</span>/Consignment/Consignee/Address="R";<br/><br/>IF /<span>&#42;</span>/Consignment/HouseConsignment/Consignor/identificationNumber is PRESENT<br/><br/>AND /<span>&#42;</span>/Consignment/HouseConsignment/Consignor/identificationNumber is a valid identifier in the European EOS ((Economic Operators Systems) verified by the EU Member State receiving or sending this message), OR is a valid identifier in the DB of the CTC country receiving or sending this message<br/>THEN <br/>       /<span>&#42;</span>/Consignment/HouseConsignment/Consignor/name="N" AND<br/>      /<span>&#42;</span>/Consignment/HouseConsignment/Consignor/Address="N"<br/>ELSE <br/>     /<span>&#42;</span>/Consignment/HouseConsignment/Consignor/name="R" AND<br/>     /<span>&#42;</span>/Consignment/HouseConsignment/Consignor/Address="R";<br/><br/><br/>IF /<span>&#42;</span>/Consignment/HouseConsignment/Consignee/identificationNumber is PRESENT<br/>AND /<span>&#42;</span>/Consignment/HouseConsignment/Consignee/identificationNumber is a valid identifier in the European EOS ((Economic Operators Systems) verified by the EU Member State receiving or sending this message), OR is a valid identifier in the DB of the CTC country receiving or sending this message<br/>THEN <br/>       /<span>&#42;</span>/Consignment/HouseConsignment/Consignee/name="N" AND<br/>      /<span>&#42;</span>/Consignment/HouseConsignment/Consignee/Address="N"<br/>ELSE <br/>     /<span>&#42;</span>/Consignment/HouseConsignment/Consignee/name="R" AND<br/>    /<span>&#42;</span>/Consignment/HouseConsignment/Consignee/Address="R";<br/><br/><br/>IF /<span>&#42;</span>/Guarantor/identificationNumber is PRESENT AND <br/>/<span>&#42;</span>/Guarantor/identificationNumber is a valid identifier in the European EOS ((Economic Operators Systems) verified by the EU Member State receiving or sending this message), OR is a valid identifier in the DB of the CTC country receiving or sending this message<br/>THEN <br/>      /<span>&#42;</span>/Guarantor/name="N" AND <br/>     /<span>&#42;</span>/Guarantor/Address="N"<br/>ELSE <br/>     /<span>&#42;</span>/Guarantor/name="R" AND <br/>    /<span>&#42;</span>/Guarantor/Address="R";<br/>
 
 ##C0298
 
@@ -284,7 +284,7 @@ IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PREVIOUS DOCUMENT.Quantity
 
 <b>Technical Description</b>
 
-IF /*/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/quantity&gt; is PRESENT<br/>THEN  /*/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/measurementUnitAndQualifier = "R"<br/>ELSE /*/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/measurementUnitAndQualifier = "N"
+IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/quantity&gt; is PRESENT<br/>THEN  /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/measurementUnitAndQualifier = "R"<br/>ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/measurementUnitAndQualifier = "N"
 
 ##C0315
 
@@ -304,7 +304,7 @@ IF &lt;CONSIGNMENT-TRANSPORT CHARGES&gt; is PRESENT<br/>THEN<br/>&lt;CONSIGNMENT
 
 <b>Technical Description</b>
 
-IF /*/Consignment/TransportCharges is PRESENT<br/>THEN<br/>/*/Consignment/HouseConsignment/TransportCharges = "N"<br/>ELSE /*/Consignment/HouseConsignment/TransportCharges = "O"
+IF /<span>&#42;</span>/Consignment/TransportCharges is PRESENT<br/>THEN<br/>/<span>&#42;</span>/Consignment/HouseConsignment/TransportCharges = "N"<br/>ELSE /<span>&#42;</span>/Consignment/HouseConsignment/TransportCharges = "O"
 
 ##C0339
 
@@ -314,7 +314,7 @@ IF &lt;CONSIGNMENT.Inland mode of transport&gt; is EQUAL to '5'<br/>THEN<br/>&lt
 
 <b>Technical Description</b>
 
-IF /*/Consignment/inlandModeOfTransport is EQUAL to '5'<br/>THEN <br/>/*/Consignment/DepartureTransportMeans = “N” AND /*/Consignment/HouseConsignment/DepartureTransportMeans = "N"<br/>ELSE<br/>IF/*/Consignment/DepartureTransportMeans is PRESENT<br/>THEN /*/Consignment/HouseConsignment/DepartureTransportMeans = "N"<br/>ELSE /*/Consignment/HouseConsignment/DepartureTransportMeans = "O"
+IF /<span>&#42;</span>/Consignment/inlandModeOfTransport is EQUAL to '5'<br/>THEN <br/>/<span>&#42;</span>/Consignment/DepartureTransportMeans = “N” AND /<span>&#42;</span>/Consignment/HouseConsignment/DepartureTransportMeans = "N"<br/>ELSE<br/>IF/<span>&#42;</span>/Consignment/DepartureTransportMeans is PRESENT<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/DepartureTransportMeans = "N"<br/>ELSE /<span>&#42;</span>/Consignment/HouseConsignment/DepartureTransportMeans = "O"
 
 ##C0343
 
@@ -324,7 +324,7 @@ IF &lt;CONSIGNMENT.Country of destination&gt; is PRESENT<br/>THEN &lt;CONSIGNMEN
 
 <b>Technical Description</b>
 
-IF /*/Consignment/countryOfDestination is PRESENT<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination = "N"<br/>ELSE /*/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination = "R" <br/>
+IF /<span>&#42;</span>/Consignment/countryOfDestination is PRESENT<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination = "N"<br/>ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination = "R" <br/>
 
 ##C0349
 
@@ -334,7 +334,7 @@ IF &lt;CONSIGNMENT-CONSIGNOR&gt; is PRESENT<br/>  THEN<br/>         &lt;CONSIGNM
 
 <b>Technical Description</b>
 
-IF /*/Consignment/Consignor is PRESENT<br/>   THEN<br/>         /*/Consignment/HouseConsignment/Consignor = "N"<br/>   ELSE <br/>        /*/Consignment/HouseConsignment/Consignor = "O"
+IF /<span>&#42;</span>/Consignment/Consignor is PRESENT<br/>   THEN<br/>         /<span>&#42;</span>/Consignment/HouseConsignment/Consignor = "N"<br/>   ELSE <br/>        /<span>&#42;</span>/Consignment/HouseConsignment/Consignor = "O"
 
 ##C0352
 
@@ -344,7 +344,7 @@ IF &lt;TRASIT OPERATION.Release indicator&gt; is in SET {2,3}<br/>THEN &lt;CONSI
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/releaseIndicator is in SET {2,3}<br/>THEN /*/Consignment = ''R'' <br/>ESLE /*/Consignment = ''N''
+IF /<span>&#42;</span>/TransitOperation/releaseIndicator is in SET {2,3}<br/>THEN /<span>&#42;</span>/Consignment = ''R'' <br/>ESLE /<span>&#42;</span>/Consignment = ''N''
 
 ##C0353
 
@@ -354,7 +354,7 @@ IF &lt;CONSIGNMENT.HOUSE CONSIGNMENT.Release type &gt; is EQUAL to '1' <br/>THEN
 
 <b>Technical Description</b>
 
-IF /*/Consignment/HouseConsignment/releaseType is EQUAL to '1' <br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem = ''R''<br/>ELSE /*/Consignment/HouseConsignment/ConsignmentItem = ''N''
+IF /<span>&#42;</span>/Consignment/HouseConsignment/releaseType is EQUAL to '1' <br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem = ''R''<br/>ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem = ''N''
 
 ##C0382
 
@@ -364,7 +364,7 @@ IF &lt;CONSIGNMENT-LOCATION OF GOODS-POSTCODE ADDRESS.Country&gt; is in SET CL19
 
 <b>Technical Description</b>
 
-IF /*/Consignment/LocationOfGoods/PostcodeAddress/country is in SET CL198<br/>THEN /*/Consignment/LocationOfGoods/PostcodeAddress/houseNumber = ''O''<br/>ELSE /*/Consignment/LocationOfGoods/PostcodeAddress/houseNumber = ''R''<br/>
+IF /<span>&#42;</span>/Consignment/LocationOfGoods/PostcodeAddress/country is in SET CL198<br/>THEN /<span>&#42;</span>/Consignment/LocationOfGoods/PostcodeAddress/houseNumber = ''O''<br/>ELSE /<span>&#42;</span>/Consignment/LocationOfGoods/PostcodeAddress/houseNumber = ''R''<br/>
 
 ##C0387
 
@@ -374,7 +374,7 @@ IF &lt;CONSIGNMENT-PLACE OF LOADING.UN LOCODE&gt; is PRESENT<br/>THEN &lt;CONSIG
 
 <b>Technical Description</b>
 
-IF /*/Consignment/PlaceOfLoading/UNLocode is PRESENT<br/>THEN /*/Consignment/PlaceOfLoading/country = "O" AND <br/>/*/Consignment/PlaceOfLoading/location = "O"<br/>ELSE /*/Consignment/PlaceOfLoading/country = "R" AND  <br/>/*/Consignment/PlaceOfLoading/location = "R";<br/><br/>IF /*/Consignment/PlaceOfUnloading/UNLocode is PRESENT<br/>THEN /*/Consignment/PlaceOfUnloading/country = "O" AND <br/>/*/Consignment/PlaceOfUnloading/location = "O"<br/>ELSE /*/Consignment/PlaceOfUnloading/country = "R" AND  <br/>/*/Consignment/PlaceOfUnloading/location = "R"
+IF /<span>&#42;</span>/Consignment/PlaceOfLoading/UNLocode is PRESENT<br/>THEN /<span>&#42;</span>/Consignment/PlaceOfLoading/country = "O" AND <br/>/<span>&#42;</span>/Consignment/PlaceOfLoading/location = "O"<br/>ELSE /<span>&#42;</span>/Consignment/PlaceOfLoading/country = "R" AND  <br/>/<span>&#42;</span>/Consignment/PlaceOfLoading/location = "R";<br/><br/>IF /<span>&#42;</span>/Consignment/PlaceOfUnloading/UNLocode is PRESENT<br/>THEN /<span>&#42;</span>/Consignment/PlaceOfUnloading/country = "O" AND <br/>/<span>&#42;</span>/Consignment/PlaceOfUnloading/location = "O"<br/>ELSE /<span>&#42;</span>/Consignment/PlaceOfUnloading/country = "R" AND  <br/>/<span>&#42;</span>/Consignment/PlaceOfUnloading/location = "R"
 
 ##C0394
 
@@ -384,7 +384,7 @@ IF &lt;CONSIGNMENT-LOCATION OF GOODS.Qualifier of identification&gt; is EQUAL to
 
 <b>Technical Description</b>
 
-IF /*/Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'Z'<br/>THEN<br/>/*/Consignment/LocationOfGoods/Address = "R"<br/>AND /*/Consignment/LocationOfGoods/authorisationNumber = "N"<br/>AND /*/Consignment/LocationOfGoods/UNLocode = "N"<br/>AND /*/Consignment/LocationOfGoods/CustomsOffice = "N"<br/>AND /*/Consignment/LocationOfGoods/GNSS = "N"<br/>AND /*/Consignment/LocationOfGoods/EconomicOperator = "N"<br/>AND /*/Consignment/LocationOfGoods/ContactPerson = "O"<br/>AND /*/Consignment/LocationOfGoods/PostcodeAddress = "N"<br/>ELSE IF /*/Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'X'<br/>THEN<br/>/*/Consignment/LocationOfGoods/EconomicOperator = "R"<br/>AND /*/Consignment/LocationOfGoods/UNLocode = "N"<br/>AND /*/Consignment/LocationOfGoods/CustomsOffice = "N"<br/>AND /*/Consignment/LocationOfGoods/GNSS = "N"<br/>AND /*/Consignment/LocationOfGoods/authorisationNumber = "N"<br/>AND /*/Consignment/LocationOfGoods/Address = "N"<br/>AND /*/Consignment/LocationOfGoods/ContactPerson = "O"<br/>AND /*/Consignment/LocationOfGoods/PostcodeAddress = "N"<br/>ELSE IF /*/Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'Y'<br/>THEN<br/>/*/Consignment/LocationOfGoods/authorisationNumber = "R"<br/>AND /*/Consignment/LocationOfGoods/UNLocode = "N"<br/>AND /*/Consignment/LocationOfGoods/CustomsOffice = "N"<br/>AND /*/Consignment/LocationOfGoods/GNSS = "N"<br/>AND /*/Consignment/LocationOfGoods/EconomicOperator = "N"<br/>AND /*/Consignment/LocationOfGoods/Address = "N"<br/>AND /*/Consignment/LocationOfGoods/ContactPerson = "O"<br/>AND /*/Consignment/LocationOfGoods/PostcodeAddress = "N"<br/>ELSE IF /*/Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'W'<br/>THEN<br/>/*/Consignment/LocationOfGoods/GNSS = "R"<br/>AND /*/Consignment/LocationOfGoods/UNLocode = "N"<br/>AND /*/Consignment/LocationOfGoods/CustomsOffice = "N"<br/>AND /*/Consignment/LocationOfGoods/EconomicOperator = "N"<br/>AND /*/Consignment/LocationOfGoods/authorisationNumber = "N"<br/>AND /*/Consignment/LocationOfGoods/Address = "N"<br/>AND /*/Consignment/LocationOfGoods/ContactPerson = "O"<br/>AND /*/Consignment/LocationOfGoods/PostcodeAddress = "N"<br/>ELSE IF /*/Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'V'<br/>THEN<br/>/*/Consignment/LocationOfGoods/CustomsOffice = "R"<br/>AND /*/Consignment/LocationOfGoods/UNLocode = "N"<br/>AND /*/Consignment/LocationOfGoods/GNSS = "N"<br/>AND /*/Consignment/LocationOfGoods/EconomicOperator = "N"<br/>AND /*/Consignment/LocationOfGoods/authorisationNumber = "N"<br/>AND /*/Consignment/LocationOfGoods/Address = "N"<br/>AND /*/Consignment/LocationOfGoods/ContactPerson = "N"<br/>AND /*/Consignment/LocationOfGoods/PostcodeAddress = "N"<br/>ELSE IF /*/Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'U'<br/>THEN<br/>/*/Consignment/LocationOfGoods/UNLocode = "R"<br/>AND/*/Consignment/LocationOfGoods/CustomsOffice = "N"<br/>AND/*/Consignment/LocationOfGoods/GNSS = "N"<br/>AND/*/Consignment/LocationOfGoods/authorisationNumber = "N"<br/>AND/*/Consignment/LocationOfGoods/EconomicOperator = "N"<br/>AND/*/Consignment/LocationOfGoods/Address = "N"<br/>AND /*/Consignment/LocationOfGoods/ContactPerson = "O"<br/>AND /*/Consignment/LocationOfGoods/PostcodeAddress = "N"<br/>ELSE IF /*/Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'T'<br/>THEN<br/>/*/Consignment/LocationOfGoods/Address = "N"<br/>AND /*/Consignment/LocationOfGoods/authorisationNumber = "N"<br/>AND /*/Consignment/LocationOfGoods/UNLocode = "N"<br/>AND /*/Consignment/LocationOfGoods/CustomsOffice = "N"<br/>AND /*/Consignment/LocationOfGoods/GNSS = "N"<br/>AND /*/Consignment/LocationOfGoods/EconomicOperator = "N"<br/>AND /*/Consignment/LocationOfGoods/ContactPerson = "O"<br/>AND /*/Consignment/LocationOfGoods/PostcodeAddress = "R"
+IF /<span>&#42;</span>/Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'Z'<br/>THEN<br/>/<span>&#42;</span>/Consignment/LocationOfGoods/Address = "R"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/authorisationNumber = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/UNLocode = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/CustomsOffice = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/GNSS = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/EconomicOperator = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/ContactPerson = "O"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/PostcodeAddress = "N"<br/>ELSE IF /<span>&#42;</span>/Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'X'<br/>THEN<br/>/<span>&#42;</span>/Consignment/LocationOfGoods/EconomicOperator = "R"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/UNLocode = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/CustomsOffice = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/GNSS = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/authorisationNumber = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/Address = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/ContactPerson = "O"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/PostcodeAddress = "N"<br/>ELSE IF /<span>&#42;</span>/Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'Y'<br/>THEN<br/>/<span>&#42;</span>/Consignment/LocationOfGoods/authorisationNumber = "R"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/UNLocode = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/CustomsOffice = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/GNSS = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/EconomicOperator = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/Address = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/ContactPerson = "O"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/PostcodeAddress = "N"<br/>ELSE IF /<span>&#42;</span>/Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'W'<br/>THEN<br/>/<span>&#42;</span>/Consignment/LocationOfGoods/GNSS = "R"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/UNLocode = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/CustomsOffice = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/EconomicOperator = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/authorisationNumber = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/Address = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/ContactPerson = "O"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/PostcodeAddress = "N"<br/>ELSE IF /<span>&#42;</span>/Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'V'<br/>THEN<br/>/<span>&#42;</span>/Consignment/LocationOfGoods/CustomsOffice = "R"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/UNLocode = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/GNSS = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/EconomicOperator = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/authorisationNumber = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/Address = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/ContactPerson = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/PostcodeAddress = "N"<br/>ELSE IF /<span>&#42;</span>/Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'U'<br/>THEN<br/>/<span>&#42;</span>/Consignment/LocationOfGoods/UNLocode = "R"<br/>AND/<span>&#42;</span>/Consignment/LocationOfGoods/CustomsOffice = "N"<br/>AND/<span>&#42;</span>/Consignment/LocationOfGoods/GNSS = "N"<br/>AND/<span>&#42;</span>/Consignment/LocationOfGoods/authorisationNumber = "N"<br/>AND/<span>&#42;</span>/Consignment/LocationOfGoods/EconomicOperator = "N"<br/>AND/<span>&#42;</span>/Consignment/LocationOfGoods/Address = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/ContactPerson = "O"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/PostcodeAddress = "N"<br/>ELSE IF /<span>&#42;</span>/Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'T'<br/>THEN<br/>/<span>&#42;</span>/Consignment/LocationOfGoods/Address = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/authorisationNumber = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/UNLocode = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/CustomsOffice = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/GNSS = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/EconomicOperator = "N"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/ContactPerson = "O"<br/>AND /<span>&#42;</span>/Consignment/LocationOfGoods/PostcodeAddress = "R"
 
 ##C0396
 
@@ -394,7 +394,7 @@ IF &lt;CONSIGNMENT-INCIDENT.Code&gt; is EQUAL to ‘2’ <br/>THEN &lt;CONSIGNME
 
 <b>Technical Description</b>
 
-IF /*/Consignment/Incident/code is EQUAL to ‘2’ <br/>THEN /*/Consignment/Incident/TransportEquipment/numberOfSeals = "R"<br/>ELSE /*/Consignment/Incident/TransportEquipment/numberOfSeals = "O"
+IF /<span>&#42;</span>/Consignment/Incident/code is EQUAL to ‘2’ <br/>THEN /<span>&#42;</span>/Consignment/Incident/TransportEquipment/numberOfSeals = "R"<br/>ELSE /<span>&#42;</span>/Consignment/Incident/TransportEquipment/numberOfSeals = "O"
 
 ##C0403
 
@@ -404,7 +404,7 @@ IF &lt;TRANSIT OPERATION.Additional declaration type&gt; is EQUAL to “D” <br
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/additionalDeclarationType is EQUAL to “D” <br/>THEN /*/Consignment/PlaceOfLoading = “O”<br/>ELSE /*/Consignment/PlaceOfLoading = “R”<br/><br/>
+IF /<span>&#42;</span>/TransitOperation/additionalDeclarationType is EQUAL to “D” <br/>THEN /<span>&#42;</span>/Consignment/PlaceOfLoading = “O”<br/>ELSE /<span>&#42;</span>/Consignment/PlaceOfLoading = “R”<br/><br/>
 
 ##C0404
 
@@ -424,7 +424,7 @@ IF &lt;TRANSIT OPERATION.Declaration type&gt; is EQUAL to 'TIR' <br/>THEN &lt;TR
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/declarationType is EQUAL to 'TIR' <br/>THEN /*/TransitOperation/TIRCarnetNumber = "R"<br/>ELSE /*/TransitOperation/TIRCarnetNumber = "N"<br/>
+IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'TIR' <br/>THEN /<span>&#42;</span>/TransitOperation/TIRCarnetNumber = "R"<br/>ELSE /<span>&#42;</span>/TransitOperation/TIRCarnetNumber = "N"<br/>
 
 ##C0440
 
@@ -484,7 +484,7 @@ IF &lt;CONSIGNMENT-INCIDENT-LOCATION.Qualifier of identification&gt; is EQUAL to
 
 <b>Technical Description</b>
 
-IF /*/Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'W'<br/>THEN <br/>/*/Consignment/Incident/Location/GNSS = "R" AND <br/>/*/Consignment/Incident/Location/UNLocode = "N" AND <br/>/*/Consignment/Incident/Location/Address = "N"<br/>ELSE IF /*/Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'U' <br/>THEN <br/>/*/Consignment/Incident/Location/UNLocode = "R" AND <br/>/*/Consignment/Incident/Location/GNSS = "N" AND <br/>/*/Consignment/Incident/Location/Address = "N"<br/>ELSE IF /*/Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'Z' <br/>THEN<br/>/*/Consignment/Incident/Location/Address = "R" AND <br/>/*/Consignment/Incident/Location/UNLocode = "N" AND<br/>/*/Consignment/Incident/Location/GNSS = "N"
+IF /<span>&#42;</span>/Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'W'<br/>THEN <br/>/<span>&#42;</span>/Consignment/Incident/Location/GNSS = "R" AND <br/>/<span>&#42;</span>/Consignment/Incident/Location/UNLocode = "N" AND <br/>/<span>&#42;</span>/Consignment/Incident/Location/Address = "N"<br/>ELSE IF /<span>&#42;</span>/Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'U' <br/>THEN <br/>/<span>&#42;</span>/Consignment/Incident/Location/UNLocode = "R" AND <br/>/<span>&#42;</span>/Consignment/Incident/Location/GNSS = "N" AND <br/>/<span>&#42;</span>/Consignment/Incident/Location/Address = "N"<br/>ELSE IF /<span>&#42;</span>/Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'Z' <br/>THEN<br/>/<span>&#42;</span>/Consignment/Incident/Location/Address = "R" AND <br/>/<span>&#42;</span>/Consignment/Incident/Location/UNLocode = "N" AND<br/>/<span>&#42;</span>/Consignment/Incident/Location/GNSS = "N"
 
 ##C0467
 
@@ -494,7 +494,7 @@ IF &lt;CC028C-TRANSIT OPERATION.Declaration acceptance date&gt; is PRESENT<br/>T
 
 <b>Technical Description</b>
 
-IF /CC028C/TransitOperation/declarationAcceptanceDate&gt; is PRESENT<br/>THEN<br/>/*/TransitOperation/MRN = "R" AND<br/>/*/TransitOperation/LRN = "N"<br/>ELSE /*/TransitOperation/MRN = "N" AND<br/>/*/TransitOperation/LRN = "R"
+IF /CC028C/TransitOperation/declarationAcceptanceDate&gt; is PRESENT<br/>THEN<br/>/<span>&#42;</span>/TransitOperation/MRN = "R" AND<br/>/<span>&#42;</span>/TransitOperation/LRN = "N"<br/>ELSE /<span>&#42;</span>/TransitOperation/MRN = "N" AND<br/>/<span>&#42;</span>/TransitOperation/LRN = "R"
 
 ##C0489
 
@@ -514,7 +514,7 @@ IF &lt;TRANSIT OPERATION.Rejection code&gt; is EQUAL to '4'<br/>THEN &lt;TRANSIT
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/rejectionCode is EQUAL to '4'<br/>THEN /*/TransitOperation/rejectionReason = "R"<br/>ELSE /*/TransitOperation/rejectionReason = "O"<br/><br/>
+IF /<span>&#42;</span>/TransitOperation/rejectionCode is EQUAL to '4'<br/>THEN /<span>&#42;</span>/TransitOperation/rejectionReason = "R"<br/>ELSE /<span>&#42;</span>/TransitOperation/rejectionReason = "O"<br/><br/>
 
 ##C0502
 
@@ -524,7 +524,7 @@ IF /*/TransitOperation/rejectionCode is EQUAL to '4'<br/>THEN /*/TransitOperatio
 
 <b>Technical Description</b>
 
-IF /*/Consignment/referenceNumberUCR is PRESENT<br/>        THEN /*/Consignment/HouseConsignment/referenceNumberUCR = "N" AND<br/>        /*/Consignment/HouseConsignment/ConsignmentItem/referenceNumberUCR <br/>        = "N"<br/>ELSE IF /*/Consignment/HouseConsignment/referenceNumberUCR is PRESENT<br/>       THEN <br/>        /*/Consignment/HouseConsignment/ConsignmentItem/referenceNumberUCR <br/>       = "N"<br/>ELSE IF (/*/Consignment/TransportDocument is PRESENT OR<br/>/*/Consignment/HouseConsignment/TransportDocument is PRESENT)<br/>       THEN <br/>       /*/Consignment/HouseConsignment/ConsignmentItem/referenceNumberUCR <br/>       = "O" <br/>ELSE<br/>/*/Consignment/HouseConsignment/ConsignmentItem/referenceNumberUCR= "R" <br/>
+IF /<span>&#42;</span>/Consignment/referenceNumberUCR is PRESENT<br/>        THEN /<span>&#42;</span>/Consignment/HouseConsignment/referenceNumberUCR = "N" AND<br/>        /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/referenceNumberUCR <br/>        = "N"<br/>ELSE IF /<span>&#42;</span>/Consignment/HouseConsignment/referenceNumberUCR is PRESENT<br/>       THEN <br/>        /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/referenceNumberUCR <br/>       = "N"<br/>ELSE IF (/<span>&#42;</span>/Consignment/TransportDocument is PRESENT OR<br/>/<span>&#42;</span>/Consignment/HouseConsignment/TransportDocument is PRESENT)<br/>       THEN <br/>       /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/referenceNumberUCR <br/>       = "O" <br/>ELSE<br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/referenceNumberUCR= "R" <br/>
 
 ##C0505
 
@@ -534,7 +534,7 @@ IF &lt;HOLDER OF THE TRANSIT PROCEDURE-ADDRESS.Country&gt; is in SET CL505(Count
 
 <b>Technical Description</b>
 
-IF /*/HolderOfTheTransitProcedure/Address/country is in SET CL505<br/>THEN /*/HolderOfTheTransitProcedure/Address/postcode = "O"<br/>ELSE /*/HolderOfTheTransitProcedure/Address/postcode = "R";<br/><br/>IF /*/Consignment/Consignor/Address/country is in SET CL505<br/>THEN /*/Consignment/Consignor/Address/postcode = "O"<br/>ELSE /*/Consignment/Consignor/Address/postcode = "R";<br/><br/>IF /*/Consignment/Consignee/Address/country is in SET CL505<br/>THEN /*/Consignment/Consignee/Address/postcode = "O"<br/>ELSE /*/Consignment/Consignee/Address/postcode = "R";<br/><br/>IF /*/Consignment/Incident/Location/country is in SET CL505<br/>THEN /*/Consignment/Incident/Location/Address/postcode = "O"<br/>ELSE /*/Consignment/Incident/Location/Address/postcode = "R";<br/><br/>IF /*/Consignment/LocationOfGoods/Address/country is in SET CL505<br/>THEN /*/Consignment/LocationOfGoods/Address/postcode = "O"<br/>ELSE /*/Consignment/LocationOfGoods/Address/postcode = "R";<br/><br/>IF /*/Consignment/HouseConsignment/Consignor/Address/country is in SET CL505<br/>THEN /*/Consignment/HouseConsignment/Consignor/Address/postcode = "O"<br/>ELSE /*/Consignment/HouseConsignment/Consignor/Address/postcode = "R";<br/><br/>IF /*/Consignment/HouseConsignment/Consignee/Address/country is in SET CL505<br/>THEN /*/Consignment/HouseConsignment/Consignee/Address/postcode = "O"<br/>ELSE /*/Consignment/HouseConsignment/Consignee/Address/postcode = "R";<br/><br/>IF /*/Guarantor/Address/country is in SET CL505<br/>THEN /*/Guarantor/Address/postcode = "O"<br/>ELSE /*/Guarantor/Address/postcode = "R";<br/><br/>IF /*/GuaranteeReference/Guarantor/Address/country is in SET CL505<br/>THEN /*/GuaranteeReference/Guarantor/Address/postcode = "O"<br/>ELSE /*/GuaranteeReference/Guarantor/Address/postcode = "R";<br/><br/>IF /*/GuaranteeReference/Owner/Address/country is in SET CL505<br/>THEN /*/GuaranteeReference/Owner/Address/postcode = "O"<br/>ELSE /*/GuaranteeReference/Owner/Address/postcode = "R";<br/><br/>IF /*/Consignment/ConsigneeActual/Address/country is in SET CL505<br/>THEN /*/Consignment/ConsigneeActual/Address/postcode = "O"<br/>ELSE /*/Consignment/ConsigneeActual/Address/postcode = "R"
+IF /<span>&#42;</span>/HolderOfTheTransitProcedure/Address/country is in SET CL505<br/>THEN /<span>&#42;</span>/HolderOfTheTransitProcedure/Address/postcode = "O"<br/>ELSE /<span>&#42;</span>/HolderOfTheTransitProcedure/Address/postcode = "R";<br/><br/>IF /<span>&#42;</span>/Consignment/Consignor/Address/country is in SET CL505<br/>THEN /<span>&#42;</span>/Consignment/Consignor/Address/postcode = "O"<br/>ELSE /<span>&#42;</span>/Consignment/Consignor/Address/postcode = "R";<br/><br/>IF /<span>&#42;</span>/Consignment/Consignee/Address/country is in SET CL505<br/>THEN /<span>&#42;</span>/Consignment/Consignee/Address/postcode = "O"<br/>ELSE /<span>&#42;</span>/Consignment/Consignee/Address/postcode = "R";<br/><br/>IF /<span>&#42;</span>/Consignment/Incident/Location/country is in SET CL505<br/>THEN /<span>&#42;</span>/Consignment/Incident/Location/Address/postcode = "O"<br/>ELSE /<span>&#42;</span>/Consignment/Incident/Location/Address/postcode = "R";<br/><br/>IF /<span>&#42;</span>/Consignment/LocationOfGoods/Address/country is in SET CL505<br/>THEN /<span>&#42;</span>/Consignment/LocationOfGoods/Address/postcode = "O"<br/>ELSE /<span>&#42;</span>/Consignment/LocationOfGoods/Address/postcode = "R";<br/><br/>IF /<span>&#42;</span>/Consignment/HouseConsignment/Consignor/Address/country is in SET CL505<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/Consignor/Address/postcode = "O"<br/>ELSE /<span>&#42;</span>/Consignment/HouseConsignment/Consignor/Address/postcode = "R";<br/><br/>IF /<span>&#42;</span>/Consignment/HouseConsignment/Consignee/Address/country is in SET CL505<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/Consignee/Address/postcode = "O"<br/>ELSE /<span>&#42;</span>/Consignment/HouseConsignment/Consignee/Address/postcode = "R";<br/><br/>IF /<span>&#42;</span>/Guarantor/Address/country is in SET CL505<br/>THEN /<span>&#42;</span>/Guarantor/Address/postcode = "O"<br/>ELSE /<span>&#42;</span>/Guarantor/Address/postcode = "R";<br/><br/>IF /<span>&#42;</span>/GuaranteeReference/Guarantor/Address/country is in SET CL505<br/>THEN /<span>&#42;</span>/GuaranteeReference/Guarantor/Address/postcode = "O"<br/>ELSE /<span>&#42;</span>/GuaranteeReference/Guarantor/Address/postcode = "R";<br/><br/>IF /<span>&#42;</span>/GuaranteeReference/Owner/Address/country is in SET CL505<br/>THEN /<span>&#42;</span>/GuaranteeReference/Owner/Address/postcode = "O"<br/>ELSE /<span>&#42;</span>/GuaranteeReference/Owner/Address/postcode = "R";<br/><br/>IF /<span>&#42;</span>/Consignment/ConsigneeActual/Address/country is in SET CL505<br/>THEN /<span>&#42;</span>/Consignment/ConsigneeActual/Address/postcode = "O"<br/>ELSE /<span>&#42;</span>/Consignment/ConsigneeActual/Address/postcode = "R"
 
 ##C0511
 
@@ -544,7 +544,7 @@ IF &lt;Message type&gt; is in SET CL610 (MessageWithCorrelationIdentifier)<br/> 
 
 <b>Technical Description</b>
 
-IF /*/messageType is in SET CL610<br/>  THEN /*/correlationIdentifier = "R" <br/>ELSE IF /*/messageType is in SET CL385<br/>  THEN /*/correlationIdentifier = "N"<br/>ELSE /*/correlationIdentifier = "O"<br/>
+IF /<span>&#42;</span>/messageType is in SET CL610<br/>  THEN /<span>&#42;</span>/correlationIdentifier = "R" <br/>ELSE IF /<span>&#42;</span>/messageType is in SET CL385<br/>  THEN /<span>&#42;</span>/correlationIdentifier = "N"<br/>ELSE /<span>&#42;</span>/correlationIdentifier = "O"<br/>
 
 ##C0531
 
@@ -554,7 +554,7 @@ IF &lt;TRANSIT OPERATION.Security&gt; is in SET {1,2,3} <br/>AND &lt;CONSIGNMENT
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/security is in SET {1,2,3} <br/>AND /*/Consignment/modeOfTransportAtTheBorder is EQUAL to ‘4’<br/>THEN /*/Consignment/ActiveBorderTransportMeans/conveyanceReferenceNumber = "R"<br/>ELSE /*/Consignment/ActiveBorderTransportMeans/conveyanceReferenceNumber = "O"<br/>
+IF /<span>&#42;</span>/TransitOperation/security is in SET {1,2,3} <br/>AND /<span>&#42;</span>/Consignment/modeOfTransportAtTheBorder is EQUAL to ‘4’<br/>THEN /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans/conveyanceReferenceNumber = "R"<br/>ELSE /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans/conveyanceReferenceNumber = "O"<br/>
 
 ##C0542
 
@@ -564,7 +564,7 @@ IF &lt;TRANSIT OPERATION.Security&gt; is EQUAL to '0' AND &lt;TRANSIT OPERATION.
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/security is EQUAL to '0' AND /*/TransitOperation/reducedDatasetIndicator is EQUAL to '1'<br/>THEN<br/>/*/Consignment/Consignor = "N" AND /*/Consignment/HouseConsignment/Consignor = "N"<br/>ELSE<br/>      IF /*/Consignment/Consignor is PRESENT<br/>      THEN /*/Consignment/HouseConsignment/Consignor = "N"<br/>     	       ELSE /*/Consignment/HouseConsignment/Consignor = "O"
+IF /<span>&#42;</span>/TransitOperation/security is EQUAL to '0' AND /<span>&#42;</span>/TransitOperation/reducedDatasetIndicator is EQUAL to '1'<br/>THEN<br/>/<span>&#42;</span>/Consignment/Consignor = "N" AND /<span>&#42;</span>/Consignment/HouseConsignment/Consignor = "N"<br/>ELSE<br/>      IF /<span>&#42;</span>/Consignment/Consignor is PRESENT<br/>      THEN /<span>&#42;</span>/Consignment/HouseConsignment/Consignor = "N"<br/>     	       ELSE /<span>&#42;</span>/Consignment/HouseConsignment/Consignor = "O"
 
 ##C0569
 
@@ -574,7 +574,7 @@ IF &lt;CONSIGNMENT-INCIDENT-TRANSPORT EQUIPMENT.Number of seals&gt; is GREATER t
 
 <b>Technical Description</b>
 
-IF /*/Consignment/Incident/TransportEquipment/numberOfSeals is GREATER than '0'<br/>THEN<br/>/*/Consignment/Incident/TransportEquipment/Seal = "R"<br/>ELSE<br/>/*/Consignment/Incident/TransportEquipment/Seal = "N";<br/><br/>IF /*/Consignment/TransportEquipment/numberOfSeals is GREATER than '0'<br/>THEN<br/>/*/Consignment/TransportEquipment/Seal = "R"<br/>ELSE<br/>/*/Consignment/TransportEquipment/Seal = "N"
+IF /<span>&#42;</span>/Consignment/Incident/TransportEquipment/numberOfSeals is GREATER than '0'<br/>THEN<br/>/<span>&#42;</span>/Consignment/Incident/TransportEquipment/Seal = "R"<br/>ELSE<br/>/<span>&#42;</span>/Consignment/Incident/TransportEquipment/Seal = "N";<br/><br/>IF /<span>&#42;</span>/Consignment/TransportEquipment/numberOfSeals is GREATER than '0'<br/>THEN<br/>/<span>&#42;</span>/Consignment/TransportEquipment/Seal = "R"<br/>ELSE<br/>/<span>&#42;</span>/Consignment/TransportEquipment/Seal = "N"
 
 ##C0586
 
@@ -584,7 +584,7 @@ IF &lt;TRANSIT OPERATION.Binding itinerary&gt; is EQUAL to ‘1’ <br/>        
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/bindingItinerary is EQUAL to ‘1’ <br/>        THEN /*/Consignment/CountryOfRoutingOfConsignment = "R" <br/>ELSE IF /*/Transit Operation/security is in SET {1, 2, 3} <br/>       THEN /*/Consignment/CountryOfRoutingOfConsignment = "R" <br/>ELSE /*/Consignment/CountryOfRoutingOfConsignment = "O"
+IF /<span>&#42;</span>/TransitOperation/bindingItinerary is EQUAL to ‘1’ <br/>        THEN /<span>&#42;</span>/Consignment/CountryOfRoutingOfConsignment = "R" <br/>ELSE IF /<span>&#42;</span>/Transit Operation/security is in SET {1, 2, 3} <br/>       THEN /<span>&#42;</span>/Consignment/CountryOfRoutingOfConsignment = "R" <br/>ELSE /<span>&#42;</span>/Consignment/CountryOfRoutingOfConsignment = "O"
 
 ##C0587
 
@@ -594,7 +594,7 @@ IF &lt;TRANSIT OPERATION.Security&gt; is in SET {2, 3}    <br/>THEN &lt;CUSTOMS 
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/security is in SET {2, 3}<br/>THEN /*/CustomsOfficeOfExitForTransitDeclared = "O"<br/>ELSE /*/CustomsOfficeOfExitForTransitDeclared = "N"
+IF /<span>&#42;</span>/TransitOperation/security is in SET {2, 3}<br/>THEN /<span>&#42;</span>/CustomsOfficeOfExitForTransitDeclared = "O"<br/>ELSE /<span>&#42;</span>/CustomsOfficeOfExitForTransitDeclared = "N"
 
 ##C0598
 
@@ -604,7 +604,7 @@ IF &lt;TRANSIT OPERATION.Security&gt; is in SET {1, 3} AND <br/>the country code
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/security is in SET {1, 3} AND <br/>the first two characters of the /*/CustomsOfficeOfTransitDeclared/referenceNumber is in SET CL147<br/>THEN /*/CustomsOfficeOfTransitDeclared/arrivalDateAndTimeEstimated ="R"<br/>ELSE /*/CustomsOfficeOfTransitDeclared/arrivalDateAndTimeEstimated = "O"
+IF /<span>&#42;</span>/TransitOperation/security is in SET {1, 3} AND <br/>the first two characters of the /<span>&#42;</span>/CustomsOfficeOfTransitDeclared/referenceNumber is in SET CL147<br/>THEN /<span>&#42;</span>/CustomsOfficeOfTransitDeclared/arrivalDateAndTimeEstimated ="R"<br/>ELSE /<span>&#42;</span>/CustomsOfficeOfTransitDeclared/arrivalDateAndTimeEstimated = "O"
 
 ##C0599
 
@@ -614,7 +614,7 @@ IF &lt;TRANSIT OPERATION.Security&gt; is in SET {1,2,3} AND <br/>&lt;TRANSIT OPE
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/security is in SET {1,2,3} AND <br/>/*/TransitOperation/additionalDeclarationType is EQUAL to ‘A’<br/>THEN /*/Consignment/modeOfTransportAtTheBorder = "R"<br/>ELSE /*/Consignment/modeOfTransportAtTheBorder = "O"
+IF /<span>&#42;</span>/TransitOperation/security is in SET {1,2,3} AND <br/>/<span>&#42;</span>/TransitOperation/additionalDeclarationType is EQUAL to ‘A’<br/>THEN /<span>&#42;</span>/Consignment/modeOfTransportAtTheBorder = "R"<br/>ELSE /<span>&#42;</span>/Consignment/modeOfTransportAtTheBorder = "O"
 
 ##C0600
 
@@ -634,7 +634,7 @@ IF &lt;CONSIGNMENT-TRANSPORT EQUIPMENT&gt; is PRESENT only once AND &lt;CONSIGNM
 
 <b>Technical Description</b>
 
-IF /*/Consignment/TransportEquipment is PRESENT only once AND /*/Consignment/TransportEquipment/containerIdentificationNumber is PRESENT<br/>THEN /*/Consignment/TransportEquipment/GoodsReference = "O"<br/>ELSE /*/Consignment/TransportEquipment/GoodsReference = "R"
+IF /<span>&#42;</span>/Consignment/TransportEquipment is PRESENT only once AND /<span>&#42;</span>/Consignment/TransportEquipment/containerIdentificationNumber is PRESENT<br/>THEN /<span>&#42;</span>/Consignment/TransportEquipment/GoodsReference = "O"<br/>ELSE /<span>&#42;</span>/Consignment/TransportEquipment/GoodsReference = "R"
 
 ##C0671
 
@@ -644,7 +644,7 @@ IF &lt;CONSIGNMENT-LOCATION OF GOODS-ECONOMIC OPERATOR.Identification number&gt;
 
 <b>Technical Description</b>
 
-IF /*/Consignment/LocationOfGoods/EconomicOperator/identificationNumber is PRESENT<br/>OR /*/Consignment/LocationOfGoods/authorisationNumber is PRESENT<br/>THEN /*/Consignment/LocationOfGoods/additionalIdentifier = "O"<br/>ELSE /*/Consignment/LocationOfGoods/additionalIdentifier = "N"<br/><br/>
+IF /<span>&#42;</span>/Consignment/LocationOfGoods/EconomicOperator/identificationNumber is PRESENT<br/>OR /<span>&#42;</span>/Consignment/LocationOfGoods/authorisationNumber is PRESENT<br/>THEN /<span>&#42;</span>/Consignment/LocationOfGoods/additionalIdentifier = "O"<br/>ELSE /<span>&#42;</span>/Consignment/LocationOfGoods/additionalIdentifier = "N"<br/><br/>
 
 ##C0685
 
@@ -664,7 +664,7 @@ IF &lt;CC190C-TRANSIT OPERATION.AES communication purpose&gt; is EQUAL to '1' <b
 
 <b>Technical Description</b>
 
-IF /CC190C/TransitOperation/AESCommunicationPurpose is EQUAL to '1'<br/>THEN /*/TransitOperation/LRN = "R" AND /*/TransitOperation/MRN = "N"<br/>ELSE /*/TransitOperation/LRN = "N" AND /*/TransitOperation/MRN = "R"<br/>
+IF /CC190C/TransitOperation/AESCommunicationPurpose is EQUAL to '1'<br/>THEN /<span>&#42;</span>/TransitOperation/LRN = "R" AND /<span>&#42;</span>/TransitOperation/MRN = "N"<br/>ELSE /<span>&#42;</span>/TransitOperation/LRN = "N" AND /<span>&#42;</span>/TransitOperation/MRN = "R"<br/>
 
 ##C0707
 
@@ -694,7 +694,7 @@ IF &lt;TRANSIT OPERATION.Additional declaration type&gt; is EQUAL to 'D'<br/>THE
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/Additional declaration type is EQUAL to 'D'<br/>THEN /*/Consignment/LocationOfGoods = "O"<br/>ELSE IF the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is in SET CL147<br/>THEN /*/Consignment/LocationOfGoods = "O"<br/>ELSE /*/Consignment/LocationOfGoods = "R"
+IF /<span>&#42;</span>/TransitOperation/Additional declaration type is EQUAL to 'D'<br/>THEN /<span>&#42;</span>/Consignment/LocationOfGoods = "O"<br/>ELSE IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL147<br/>THEN /<span>&#42;</span>/Consignment/LocationOfGoods = "O"<br/>ELSE /<span>&#42;</span>/Consignment/LocationOfGoods = "R"
 
 ##C0716
 
@@ -714,7 +714,7 @@ IF &lt;CONSIGNMENT.Mode of transport at the border&gt; is EQUAL to '5'<br/>THEN 
 
 <b>Technical Description</b>
 
-IF /*/Consignment/modeOfTransportAtTheBorder is EQUAL to '5'<br/>THEN /*/Consignment/ActiveBorderTransportMeans = “N” <br/>ELSE <br/>IF (/*/TransitOperation/security is in SET {1,2,3} AND <br/>/*/TransitOperation/additionalDeclarationType is EQUAL to ‘A’)<br/>THEN /*/Consignment/ActiveBorderTransportMeans = “R” <br/>ELSE /*/Consignment/ActiveBorderTransportMeans = “O”<br/>
+IF /<span>&#42;</span>/Consignment/modeOfTransportAtTheBorder is EQUAL to '5'<br/>THEN /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans = “N” <br/>ELSE <br/>IF (/<span>&#42;</span>/TransitOperation/security is in SET {1,2,3} AND <br/>/<span>&#42;</span>/TransitOperation/additionalDeclarationType is EQUAL to ‘A’)<br/>THEN /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans = “R” <br/>ELSE /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans = “O”<br/>
 
 ##C0807
 
@@ -744,7 +744,7 @@ IF the &lt;CUSTOMS OFFICE OF DEPARTURE&gt; (for the CC017C) or the &lt;CUSTOMS O
 
 <b>Technical Description</b>
 
-IF the /*/CustomsOfficeOfDeparture (for the CC017C) or the /*/CustomsOfficeOfDestinationActual [for the CD018C and CC044C] is located in a CTC country or AD or SM<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode/combinedNomenclatureCode= "N"<br/>ELSE  /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode/combinedNomenclatureCode= "O"
+IF the /<span>&#42;</span>/CustomsOfficeOfDeparture (for the CC017C) or the /<span>&#42;</span>/CustomsOfficeOfDestinationActual [for the CD018C and CC044C] is located in a CTC country or AD or SM<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode/combinedNomenclatureCode= "N"<br/>ELSE  /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode/combinedNomenclatureCode= "O"
 
 ##C0820
 
@@ -754,7 +754,7 @@ IF &lt;CONSIGNMENT-INCIDENT-TRANSHIPMENT.Container indicator&gt; is EQUAL to '1
 
 <b>Technical Description</b>
 
-IF /*/Consignment/Incident/Transhipment/containerIndicator is EQUAL to '1' <br/>THEN <br/>/*/Consignment/Incident/TransportEquipment/containerIdentificationNumber = "R"<br/>ELSE <br/>/*/Consignment/Incident/TransportEquipment/containerIdentificationNumber = "O"
+IF /<span>&#42;</span>/Consignment/Incident/Transhipment/containerIndicator is EQUAL to '1' <br/>THEN <br/>/<span>&#42;</span>/Consignment/Incident/TransportEquipment/containerIdentificationNumber = "R"<br/>ELSE <br/>/<span>&#42;</span>/Consignment/Incident/TransportEquipment/containerIdentificationNumber = "O"
 
 ##C0821
 
@@ -764,7 +764,7 @@ IF country code (first two characters) in the &lt;CUSTOMS OFFICE OF DEPARTURE.Re
 
 <b>Technical Description</b>
 
-IF the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is in SET CL112<br/>THEN<br/>/*/Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode/combinedNomenclatureCode = "N"<br/>ELSE<br/>/*/Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode/combinedNomencl<br/>atureCode = "O".<br/><br/>
+IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL112<br/>THEN<br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode/combinedNomenclatureCode = "N"<br/>ELSE<br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode/combinedNomencl<br/>atureCode = "O".<br/><br/>
 
 ##C0822
 
@@ -774,7 +774,7 @@ IF &lt;TRANSIT OPERATION.Additional declaration type&gt; is EQUAL to 'D'<br/>THE
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/additionalDeclarationType is EQUAL to 'D'<br/>THEN /*/Consignment/containerIndicator = "O"<br/>ELSE /*/Consignment/containerIndicator = "R"
+IF /<span>&#42;</span>/TransitOperation/additionalDeclarationType is EQUAL to 'D'<br/>THEN /<span>&#42;</span>/Consignment/containerIndicator = "O"<br/>ELSE /<span>&#42;</span>/Consignment/containerIndicator = "R"
 
 ##C0823
 
@@ -784,7 +784,7 @@ IF &lt;CONSIGNMENT.Container indicator&gt; is PRESENT<br/>THEN<br/>     IF &lt;C
 
 <b>Technical Description</b>
 
-IF /*/Consignment/containerIndicator is PRESENT<br/>THEN<br/>     IF /*/Consignment/containerIndicator is EQUAL to ‘1’<br/>     THEN /*/Consignment/TransportEquipment = "R"<br/>     ELSE /*/Consignment/TransportEquipment = "O"<br/>ELSE /*/Consignment/TransportEquipment = "N"<br/>
+IF /<span>&#42;</span>/Consignment/containerIndicator is PRESENT<br/>THEN<br/>     IF /<span>&#42;</span>/Consignment/containerIndicator is EQUAL to ‘1’<br/>     THEN /<span>&#42;</span>/Consignment/TransportEquipment = "R"<br/>     ELSE /<span>&#42;</span>/Consignment/TransportEquipment = "O"<br/>ELSE /<span>&#42;</span>/Consignment/TransportEquipment = "N"<br/>
 
 ##C0824
 
@@ -804,7 +804,7 @@ IF &lt;CONSIGNMENT.Inland mode of transport&gt; is EQUAL to '5'<br/>THEN <br/>&l
 
 <b>Technical Description</b>
 
-IF /*/Consignment/inlandModeOfTransport is EQUAL to '5'<br/>THEN<br/>/*/Consignment/DepartureTransportMeans = “N” AND /*/Consignment/HouseConsignment/DepartureTransportMeans = "N"<br/>ELSE<br/>IF /*/Consignment/DepartureTransportMeans is PRESENT<br/>THEN /*/Consignment/HouseConsignment/DepartureTransportMeans = "N"<br/>ELSE /*/Consignment/HouseConsignment/DepartureTransportMeans = "O"
+IF /<span>&#42;</span>/Consignment/inlandModeOfTransport is EQUAL to '5'<br/>THEN<br/>/<span>&#42;</span>/Consignment/DepartureTransportMeans = “N” AND /<span>&#42;</span>/Consignment/HouseConsignment/DepartureTransportMeans = "N"<br/>ELSE<br/>IF /<span>&#42;</span>/Consignment/DepartureTransportMeans is PRESENT<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/DepartureTransportMeans = "N"<br/>ELSE /<span>&#42;</span>/Consignment/HouseConsignment/DepartureTransportMeans = "O"
 
 ##C0833
 
@@ -814,7 +814,7 @@ IF &lt;CONSIGNMENT.Inland mode of transport&gt; is EQUAL to '5'<br/>THEN &lt;CC1
 
 <b>Technical Description</b>
 
-IF /*/Consignment/inlandModeOfTransport is EQUAL to '5'<br/>THEN<br/>/CC170C/Consignment/DepartureTransportMeans = “N” AND<br/>/CC170C/Consignment/HouseConsignment/DepartureTransportMeans = “N”<br/>ELSE IF /CC015C/Consignment/DepartureTransportMeans is NOT PRESENT AND<br/>/CC015C/Consignment/HouseConsignment/DepartureTransportMeans is NOT PRESENT AND  /CC013C/Consignment/DepartureTransportMeans is NOT PRESENT AND<br/>/CC013C/Consignment/HouseConsignment/DepartureTransportMeans is NOT PRESENT<br/>THEN<br/>    IF /CC170C/Consignment/DepartureTransportMeans is PRESENT<br/>    THEN /CC170C/Consignment/HouseConsignment/DepartureTransportMeans = "N"<br/>ELSE /CC170C/Consignment/HouseConsignment/DepartureTransportMeans = "O"
+IF /<span>&#42;</span>/Consignment/inlandModeOfTransport is EQUAL to '5'<br/>THEN<br/>/CC170C/Consignment/DepartureTransportMeans = “N” AND<br/>/CC170C/Consignment/HouseConsignment/DepartureTransportMeans = “N”<br/>ELSE IF /CC015C/Consignment/DepartureTransportMeans is NOT PRESENT AND<br/>/CC015C/Consignment/HouseConsignment/DepartureTransportMeans is NOT PRESENT AND  /CC013C/Consignment/DepartureTransportMeans is NOT PRESENT AND<br/>/CC013C/Consignment/HouseConsignment/DepartureTransportMeans is NOT PRESENT<br/>THEN<br/>    IF /CC170C/Consignment/DepartureTransportMeans is PRESENT<br/>    THEN /CC170C/Consignment/HouseConsignment/DepartureTransportMeans = "N"<br/>ELSE /CC170C/Consignment/HouseConsignment/DepartureTransportMeans = "O"
 
 ##C0837
 
@@ -824,7 +824,7 @@ IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-PREVIOUS DOCUMENT. Type&gt; is EQUAL to ‘
 
 <b>Technical Description</b>
 
-IF /*/Consignment/HouseConsignment/PreviousDocument/type is EQUAL to ‘N830’ <br/>THEN<br/>/*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass = "R"<br/>ELSE IF /*/ TransitOperation/reducedDatasetIndicator is EQUAL to ‘1’<br/>THEN<br/>/*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass = "N"<br/>ELSE<br/>/*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass = "O"
+IF /<span>&#42;</span>/Consignment/HouseConsignment/PreviousDocument/type is EQUAL to ‘N830’ <br/>THEN<br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass = "R"<br/>ELSE IF /<span>&#42;</span>/ TransitOperation/reducedDatasetIndicator is EQUAL to ‘1’<br/>THEN<br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass = "N"<br/>ELSE<br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass = "O"
 
 ##C0839
 
@@ -834,7 +834,7 @@ IF &lt;AUTHORISATION.Type&gt; is NOT EQUAL to 'C521'<br/>THEN <br/>         &lt;
 
 <b>Technical Description</b>
 
-IF /*/Authorisation/type is NOT EQUAL to 'C521' <br/>THEN <br/>        /*/TransitOperation/limitDate = “N”<br/>ELSE <br/>       IF /*/TransitOperation/additionalDeclarationType is EQUAL to 'D'<br/>       THEN <br/>              /*/TransitOperation/limitDate = “O”<br/>        ELSE <br/>               /*/TransitOperation/limitDate = “R”
+IF /<span>&#42;</span>/Authorisation/type is NOT EQUAL to 'C521' <br/>THEN <br/>        /<span>&#42;</span>/TransitOperation/limitDate = “N”<br/>ELSE <br/>       IF /<span>&#42;</span>/TransitOperation/additionalDeclarationType is EQUAL to 'D'<br/>       THEN <br/>              /<span>&#42;</span>/TransitOperation/limitDate = “O”<br/>        ELSE <br/>               /<span>&#42;</span>/TransitOperation/limitDate = “R”
 
 ##C0840
 
@@ -904,7 +904,7 @@ IF the first three characters of &lt;Message recipient&gt; is EQUAL to ‘NTA’
 
 <b>Technical Description</b>
 
-IF the first three characters of /*/messageRecipient is EQUAL to ‘NTA’   THEN /*/Invalidation/decisionDateAndTime = "N"<br/>   ELSE /*/Invalidation/decisionDateAndTime = "R"
+IF the first three characters of /<span>&#42;</span>/messageRecipient is EQUAL to ‘NTA’   THEN /<span>&#42;</span>/Invalidation/decisionDateAndTime = "N"<br/>   ELSE /<span>&#42;</span>/Invalidation/decisionDateAndTime = "R"
 
 ##C0872
 
@@ -914,7 +914,7 @@ IF &lt;CONSIGNMENT.Container indicator&gt; is EQUAL to ‘1’<br/>  THEN &lt;CO
 
 <b>Technical Description</b>
 
-IF /*/Consignment/containerIndicator is EQUAL to '1'<br/>  THEN /*/Consignment/TransportEquipment = "R"<br/>   ELSE /*/Consignment/TransportEquipment = "O"
+IF /<span>&#42;</span>/Consignment/containerIndicator is EQUAL to '1'<br/>  THEN /<span>&#42;</span>/Consignment/TransportEquipment = "R"<br/>   ELSE /<span>&#42;</span>/Consignment/TransportEquipment = "O"
 
 ##C0904
 
@@ -924,7 +924,7 @@ IF &lt;TRANSIT OPERATION.Declaration type&gt; is PRESENT<br/>THEN<br/>IF &lt;TRA
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/declarationType is PRESENT<br/>THEN IF /*/TransitOperation/declarationType is EQUAL to 'TIR'<br/>           THEN /*/HolderOfTheTransitProcedure/TIRHolderIdentificationNumber = "R"<br/>           ELSE /*/HolderOfTheTransitProcedure/TIRHolderIdentificationNumber = "N"<br/>ELSE IF /CC015C/TransitOperation/declarationType is EQUAL to 'TIR' OR <br/>/CC013C/TransitOperation/declarationType is EQUAL to 'TIR'<br/>         THEN /*/HolderOfTheTransitProcedure/TIRHolderIdentificationNumber = "R"<br/>         ELSE /*/HolderOfTheTransitProcedure/TIRHolderIdentificationNumber = "N"
+IF /<span>&#42;</span>/TransitOperation/declarationType is PRESENT<br/>THEN IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'TIR'<br/>           THEN /<span>&#42;</span>/HolderOfTheTransitProcedure/TIRHolderIdentificationNumber = "R"<br/>           ELSE /<span>&#42;</span>/HolderOfTheTransitProcedure/TIRHolderIdentificationNumber = "N"<br/>ELSE IF /CC015C/TransitOperation/declarationType is EQUAL to 'TIR' OR <br/>/CC013C/TransitOperation/declarationType is EQUAL to 'TIR'<br/>         THEN /<span>&#42;</span>/HolderOfTheTransitProcedure/TIRHolderIdentificationNumber = "R"<br/>         ELSE /<span>&#42;</span>/HolderOfTheTransitProcedure/TIRHolderIdentificationNumber = "N"
 
 ##C0908
 
@@ -934,7 +934,7 @@ IF &lt;CONSIGNMENT.Mode of transport at the border&gt; is EQUAL to '5'<br/>THEN 
 
 <b>Technical Description</b>
 
-IF /*/Consignment/modeOfTransportAtTheBorder is EQUAL to '5'<br/>THEN /*/Consignment/ActiveBorderTransportMeans = “N” <br/>ELSE <br/>IF /*/TransitOperation/security is in SET {1,2,3} <br/>THEN /*/Consignment/ActiveBorderTransportMeans = “R” <br/>ELSE /*/Consignment/ActiveBorderTransportMeans = “O”<br/>
+IF /<span>&#42;</span>/Consignment/modeOfTransportAtTheBorder is EQUAL to '5'<br/>THEN /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans = “N” <br/>ELSE <br/>IF /<span>&#42;</span>/TransitOperation/security is in SET {1,2,3} <br/>THEN /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans = “R” <br/>ELSE /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans = “O”<br/>
 
 ##C0909
 
@@ -944,7 +944,7 @@ IF &lt;TRANSIT OPERATION.Declaration type&gt; is EQUAL to 'TIR'<br/>THEN<br/>   
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/declarationType is EQUAL to 'TIR'<br/>THEN<br/>    IF /*/Consignment/countryOfDispatch is PRESENT<br/>    THEN<br/>    /*/Consignment/HouseConsignment/countryOfDispatch = "N" AND<br/>    /*/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch = "N"<br/>    ELSE IF /*/Consignment/HouseConsignment/countryOfDispatch is PRESENT<br/>    THEN<br/>     /*/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch = "N" <br/>     ELSE<br/>      /*/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch = "R" <br/>ELSE<br/>    /*/Consignment/countryOfDispatch= "N" AND<br/>    /*/Consignment/HouseConsignment/countryOfDispatch = "N" AND<br/>    /*/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch = "N"
+IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'TIR'<br/>THEN<br/>    IF /<span>&#42;</span>/Consignment/countryOfDispatch is PRESENT<br/>    THEN<br/>    /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDispatch = "N" AND<br/>    /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch = "N"<br/>    ELSE IF /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDispatch is PRESENT<br/>    THEN<br/>     /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch = "N" <br/>     ELSE<br/>      /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch = "R" <br/>ELSE<br/>    /<span>&#42;</span>/Consignment/countryOfDispatch= "N" AND<br/>    /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDispatch = "N" AND<br/>    /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch = "N"
 
 ##C0930
 
@@ -954,4 +954,4 @@ IF &lt;CONTROL RESULT.Code&gt; is in SET {B1, A5}<br/>THEN<br/>(&lt;CONSIGMENT&g
 
 <b>Technical Description</b>
 
-IF /*/ControlResult/code is in SET {B1, A5}<br/>THEN<br/>(/*/Consignment = “R” AND /*/TransitOperation/otherThingsToReport = “O” ) OR (/*/Consignment = “O” AND /*/TransitOperation/otherThingsToReport = “R”) <br/>ELSE<br/>/*/Consignment = “N” AND /*/TransitOperation/otherThingsToReport = “O”<br/><br/>
+IF /<span>&#42;</span>/ControlResult/code is in SET {B1, A5}<br/>THEN<br/>(/<span>&#42;</span>/Consignment = “R” AND /<span>&#42;</span>/TransitOperation/otherThingsToReport = “O” ) OR (/<span>&#42;</span>/Consignment = “O” AND /<span>&#42;</span>/TransitOperation/otherThingsToReport = “R”) <br/>ELSE<br/>/<span>&#42;</span>/Consignment = “N” AND /<span>&#42;</span>/TransitOperation/otherThingsToReport = “O”<br/><br/>

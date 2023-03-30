@@ -14,7 +14,7 @@ Each &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED). Reference number&gt; is unique th
 
 <b>Technical Description</b>
 
-Each /*/CustomsOfficeOfTransitDeclared/referenceNumber is unique throughout the declaration. 
+Each /<span>&#42;</span>/CustomsOfficeOfTransitDeclared/referenceNumber is unique throughout the declaration. 
 
 ##R0004
 
@@ -24,7 +24,7 @@ The value of &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED).Arrival date and time esti
 
 <b>Technical Description</b>
 
-The value of /*/CustomsOfficeOfTransitDeclared/arrivalDateAndTimeEstimated field is considered valid only if it is not LESS than or EQUAL to /*/TransitOperation/releaseDate
+The value of /<span>&#42;</span>/CustomsOfficeOfTransitDeclared/arrivalDateAndTimeEstimated field is considered valid only if it is not LESS than or EQUAL to /<span>&#42;</span>/TransitOperation/releaseDate
 
 ##R0005
 
@@ -34,7 +34,7 @@ The value of &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED).Arrival date and time esti
 
 <b>Technical Description</b>
 
-The value of /*/CustomsOfficeOfTransitDeclared/arrivalDateAndTimeEstimated field is considered valid only if it is not LESS than or EQUAL to /*/Message/Preparation date and time
+The value of /<span>&#42;</span>/CustomsOfficeOfTransitDeclared/arrivalDateAndTimeEstimated field is considered valid only if it is not LESS than or EQUAL to /<span>&#42;</span>/Message/Preparation date and time
 
 ##R0006
 
@@ -44,7 +44,7 @@ IF the first two characters of &lt;CUSTOMS OFFICE OF DESTINATION (DECLARED). Ref
 
 <b>Technical Description</b>
 
-IF the first two characters of /*/CustomsOfficeOfDestinationDeclared/referenceNumber is in set CL112   <br/>THEN the first two characters of at least one instance of /*/CustomsOfficeOfTransitDeclared/referenceNumber shall be EQUAL to the first two characters of /*/CustomsOfficeOfDestinationDeclared/referenceNumber;<br/>If the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is in set CL112 AND If the<br/>first two characters of /*/CustomsOfficeOfDestinationDeclared/referenceNumber is in set CL010<br/>THEN the first two characters of at least one instance of<br/>/*/CustomsOfficeOfTransitDeclared/referenceNumber shall be in SET CL010. 
+IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in set CL112   <br/>THEN the first two characters of at least one instance of /<span>&#42;</span>/CustomsOfficeOfTransitDeclared/referenceNumber shall be EQUAL to the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber;<br/>If the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in set CL112 AND If the<br/>first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in set CL010<br/>THEN the first two characters of at least one instance of<br/>/<span>&#42;</span>/CustomsOfficeOfTransitDeclared/referenceNumber shall be in SET CL010. 
 
 ##R0007
 
@@ -54,7 +54,7 @@ Each &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Declaration goods item n
 
 <b>Technical Description</b>
 
-Each /*/Consignment/HouseConsignment/ConsignmentItem/declarationGoodsItemNumber is unique throughout the declaration. The items shall be numbered in a sequential fashion, starting from '1' for the first item and increment the numbering by '1' for each following item.
+Each /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationGoodsItemNumber is unique throughout the declaration. The items shall be numbered in a sequential fashion, starting from '1' for the first item and increment the numbering by '1' for each following item.
 
 ##R0008
 
@@ -64,17 +64,17 @@ Each /*/Consignment/HouseConsignment/ConsignmentItem/declarationGoodsItemNumber 
 
 <b>Technical Description</b>
 
-/*/correlationIdentifier shall be EQUAL to the /*/messageIdentification of the request/rejected message.
+/<span>&#42;</span>/correlationIdentifier shall be EQUAL to the /<span>&#42;</span>/messageIdentification of the request/rejected message.
 
 ##R0020
 
 <b>Functional Description</b>
 
-IF &lt;TRANSIT OPERATION.Declaration type&gt; is in SET {T2, T2F} AND the first two characters of &lt;CUSTOMS OFFICE OF DEPARTURE.Reference number&gt; is in SET CL112 (CountryCodesCTC)<br/>THEN <br/>(at least one &lt;CONSIGNMENT-PREVIOUS DOCUMENT.Type&gt; is in SET CL178 (PreviousDocumentUnionGoods)) OR<br/>(at least one &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PREVIOUS DOCUMENT.Type&gt; is in SET CL178 (PreviousDocumentUnionGoods)) <br/>for each and every Consignment Item;<br/>IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Declaration type&gt; is in SET {T2, T2F} <br/>AND the first two characters of &lt;CUSTOMS OFFICE OF DEPARTURE.Reference<br/>number&gt; is in SET CL112 (CountryCodesCTC)<br/>THEN <br/>(at least one /*/Consignment/PreviousDocument/type is in SET CL178 (PreviousDocumentUnionGoods)) OR<br/>(at least one &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PREVIOUS DOCUMENT.Type&gt; is in SET CL178 (PreviousDocumentUnionGoods) <br/>for this ‘Consignment item’)
+IF &lt;TRANSIT OPERATION.Declaration type&gt; is in SET {T2, T2F} AND the first two characters of &lt;CUSTOMS OFFICE OF DEPARTURE.Reference number&gt; is in SET CL112 (CountryCodesCTC)<br/>THEN <br/>(at least one &lt;CONSIGNMENT-PREVIOUS DOCUMENT.Type&gt; is in SET CL178 (PreviousDocumentUnionGoods)) OR<br/>(at least one &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PREVIOUS DOCUMENT.Type&gt; is in SET CL178 (PreviousDocumentUnionGoods)) <br/>for each and every Consignment Item;<br/>IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Declaration type&gt; is in SET {T2, T2F} <br/>AND the first two characters of &lt;CUSTOMS OFFICE OF DEPARTURE.Reference<br/>number&gt; is in SET CL112 (CountryCodesCTC)<br/>THEN <br/>(at least one /<span>&#42;</span>/Consignment/PreviousDocument/type is in SET CL178 (PreviousDocumentUnionGoods)) OR<br/>(at least one &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PREVIOUS DOCUMENT.Type&gt; is in SET CL178 (PreviousDocumentUnionGoods) <br/>for this ‘Consignment item’)
 
 <b>Technical Description</b>
 
-IF /*/Transit Operation/declarationType is in SET {T2, T2F}<br/>AND the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is in SET CL112<br/>THEN <br/>(at least one /*/Consignment/PreviousDocument/type is in SET CL178) OR<br/>(at least one /*/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/type is in SET CL178) for each and every Consignment Item;<br/>IF /*/Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2, T2F} <br/>AND the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is in SET CL112<br/>THEN <br/>(at least one /*/Consignment/PreviousDocument/type is in SET CL178) OR<br/>(at least one /*/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/type is in SET CL178 for this ‘Consignment item’)<br/>
+IF /<span>&#42;</span>/Transit Operation/declarationType is in SET {T2, T2F}<br/>AND the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL112<br/>THEN <br/>(at least one /<span>&#42;</span>/Consignment/PreviousDocument/type is in SET CL178) OR<br/>(at least one /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/type is in SET CL178) for each and every Consignment Item;<br/>IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2, T2F} <br/>AND the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL112<br/>THEN <br/>(at least one /<span>&#42;</span>/Consignment/PreviousDocument/type is in SET CL178) OR<br/>(at least one /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/type is in SET CL178 for this ‘Consignment item’)<br/>
 
 ##R0023
 
@@ -84,7 +84,7 @@ IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL REFERENCE.Type&
 
 <b>Technical Description</b>
 
-IF /*/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/type is in SET CL234 (DocumentTypeExcise)<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/referenceNumber shall not be ‘0’ (zero)
+IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/type is in SET CL234 (DocumentTypeExcise)<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/referenceNumber shall not be ‘0’ (zero)
 
 ##R0026
 
@@ -134,7 +134,7 @@ IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-COMMODITY-COMMODITY  CODE.
 
 <b>Technical Description</b>
 
-IF /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/<br/>CommodityCode/combinedNomenclatureCode is PRESENT <br/>THEN the concatenation of the Data Items /*/Consignment/HouseConsignment/<br/>ConsignmentItem/Commodity/CommodityCode/harmonizedSystemSubHeadingCode (an6) and /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/<br/>CommodityCode/combinedNomenclatureCode (an2) must be a valid code in the TARIC database (validated only by the EU countries).<br/>
+IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/<br/>CommodityCode/combinedNomenclatureCode is PRESENT <br/>THEN the concatenation of the Data Items /<span>&#42;</span>/Consignment/HouseConsignment/<br/>ConsignmentItem/Commodity/CommodityCode/harmonizedSystemSubHeadingCode (an6) and /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/<br/>CommodityCode/combinedNomenclatureCode (an2) must be a valid code in the TARIC database (validated only by the EU countries).<br/>
 
 ##R0076
 
@@ -144,7 +144,7 @@ IF &lt;CONSIGNMENT-ACTIVE BORDER TRANSPORT MEANS.Type of identification&gt; is i
 
 <b>Technical Description</b>
 
-IF /*/Consignment/ActiveBorderTransportMeans/typeOfIdentification is in SET {10,21,30,40,41,80}<br/>THEN /*/Consignment/ActiveBorderTransportMeans/identificationNumber shall not contain lowercase letters.
+IF /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans/typeOfIdentification is in SET {10,21,30,40,41,80}<br/>THEN /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans/identificationNumber shall not contain lowercase letters.
 
 ##R0100
 
@@ -154,7 +154,7 @@ If &lt;TRADER AT DESTINATION.Communication language at destination&gt; is PRESEN
 
 <b>Technical Description</b>
 
-If /*/TraderAtDestination/communicationLanguageAtDestination is PRESENT, then the indicated language is used as the basic language in any further communication between the Trader and the Customs system. If /*/TraderAtDestination/communicationLanguageAtDestination is not PRESENT then the Customs system will use the default language of the Office concerned;<br/>If /*/TransitOperation/communicationLanguageAtDeparture is PRESENT, then the indicated language is used as the basic language in any further communication between the Trader and the Customs system. If /*/TransitOperation/communicationLanguageAtDeparture is not PRESENT then the Customs system will use the default language of the Office concerned.
+If /<span>&#42;</span>/TraderAtDestination/communicationLanguageAtDestination is PRESENT, then the indicated language is used as the basic language in any further communication between the Trader and the Customs system. If /<span>&#42;</span>/TraderAtDestination/communicationLanguageAtDestination is not PRESENT then the Customs system will use the default language of the Office concerned;<br/>If /<span>&#42;</span>/TransitOperation/communicationLanguageAtDeparture is PRESENT, then the indicated language is used as the basic language in any further communication between the Trader and the Customs system. If /<span>&#42;</span>/TransitOperation/communicationLanguageAtDeparture is not PRESENT then the Customs system will use the default language of the Office concerned.
 
 ##R0102
 
@@ -164,7 +164,7 @@ Data item &lt;INVALIDATION.Decision&gt; can contain 2 valid values:<br/> - ‘0�
 
 <b>Technical Description</b>
 
-Data item /*/Invalidation/decision can contain 2 valid values:<br/> - ‘0’ = ‘No’: Invalidation refused by Customs: Decision<br/> - ‘1’ = ‘Yes’: Invalidation accepted by Customs: Decision
+Data item /<span>&#42;</span>/Invalidation/decision can contain 2 valid values:<br/> - ‘0’ = ‘No’: Invalidation refused by Customs: Decision<br/> - ‘1’ = ‘Yes’: Invalidation accepted by Customs: Decision
 
 ##R0103
 
@@ -174,7 +174,7 @@ IF &lt;CUSTOMS OFFICE OF EXIT FOR TRANSIT (DECLARED)&gt; is PRESENT <br/>THEN <b
 
 <b>Technical Description</b>
 
-IF /*/CustomsOfficeOfExitForTransitDeclared is PRESENT <br/>THEN <br/>/*/CustomsOfficeOfExitForTransitDeclared/referenceNumber is NOT EQUAL to <br/>/*/CustomsOfficeOfTransitDeclared/referenceNumber AND is NOT EQUAL to /*/CustomsOfficeOfDestinationDeclared/referenceNumber <br/>
+IF /<span>&#42;</span>/CustomsOfficeOfExitForTransitDeclared is PRESENT <br/>THEN <br/>/<span>&#42;</span>/CustomsOfficeOfExitForTransitDeclared/referenceNumber is NOT EQUAL to <br/>/<span>&#42;</span>/CustomsOfficeOfTransitDeclared/referenceNumber AND is NOT EQUAL to /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber <br/>
 
 ##R0106
 
@@ -184,7 +184,7 @@ IF /*/CustomsOfficeOfExitForTransitDeclared is PRESENT <br/>THEN <br/>/*/Customs
 
 <b>Technical Description</b>
 
-/*/TransportEquipment/numberOfSeals is EQUAL to the ‘maximum value of<br/>/*/TransportEquipment/Seal/sequenceNumber’ for THIS instance of Transport Equipment.<br/>
+/<span>&#42;</span>/TransportEquipment/numberOfSeals is EQUAL to the ‘maximum value of<br/>/<span>&#42;</span>/TransportEquipment/Seal/sequenceNumber’ for THIS instance of Transport Equipment.<br/>
 
 ##R0107
 
@@ -194,7 +194,7 @@ IF /*/CustomsOfficeOfExitForTransitDeclared is PRESENT <br/>THEN <br/>/*/Customs
 
 <b>Technical Description</b>
 
-/*/TransportEquipment/Seal/identifier is unique in the whole declaration.<br/>
+/<span>&#42;</span>/TransportEquipment/Seal/identifier is unique in the whole declaration.<br/>
 
 ##R0165
 
@@ -204,7 +204,7 @@ IF the declaration is submitted under simplified procedure AND the authorisation
 
 <b>Technical Description</b>
 
-IF the declaration is submitted under simplified procedure AND the authorisation of which foresees the use of seals<br/>THEN /*/Consignment/TransportEquipment/numberOfSeals&gt; is GREATER than '0'.
+IF the declaration is submitted under simplified procedure AND the authorisation of which foresees the use of seals<br/>THEN /<span>&#42;</span>/Consignment/TransportEquipment/numberOfSeals&gt; is GREATER than '0'.
 
 ##R0221
 
@@ -214,7 +214,7 @@ IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Number of packag
 
 <b>Technical Description</b>
 
-IF /*/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages is EQUAL to ‘0’ <br/>THEN <br/>      for THIS CONSIGNMENT ITEM<br/>      /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass is <br/>      EQUAL to ‘0’<br/>AND<br/>      for THIS HOUSE CONSIGNMENT at least one other CONSIGNMENT ITEM must exist with<br/>      /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass <br/>      having a value different from ‘0’<br/>ELSE for THIS CONSIGNMENT ITEM <br/>      /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass <br/>      must be different from ‘0’.
+IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages is EQUAL to ‘0’ <br/>THEN <br/>      for THIS CONSIGNMENT ITEM<br/>      /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass is <br/>      EQUAL to ‘0’<br/>AND<br/>      for THIS HOUSE CONSIGNMENT at least one other CONSIGNMENT ITEM must exist with<br/>      /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass <br/>      having a value different from ‘0’<br/>ELSE for THIS CONSIGNMENT ITEM <br/>      /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass <br/>      must be different from ‘0’.
 
 ##R0223
 
@@ -224,7 +224,7 @@ IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-COMMODITY-GOODS MEASURE.Gr
 
 <b>Technical Description</b>
 
-IF /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass is GREATER THAN ‘0’ (zero)<br/>THEN /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass must be LESS THAN OR EQUAL to /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass.
+IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass is GREATER THAN ‘0’ (zero)<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/netMass must be LESS THAN OR EQUAL to /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass.
 
 ##R0315
 
@@ -234,7 +234,7 @@ Where &lt;CONSIGNMENT.Mode of transport at the border&gt; is EQUAL to '4' the (I
 
 <b>Technical Description</b>
 
-Where /*/Consignment/modeOfTransportAtTheBorder is EQUAL to '4' the (IATA/ICAO) flight number shall be indicated and shall have a format an..8:<br/>  - an..3: mandatory prefix identifying the airline/operator<br/>  - n..4: mandatory number of the flight<br/>  - a1: optional suffix<br/>
+Where /<span>&#42;</span>/Consignment/modeOfTransportAtTheBorder is EQUAL to '4' the (IATA/ICAO) flight number shall be indicated and shall have a format an..8:<br/>  - an..3: mandatory prefix identifying the airline/operator<br/>  - n..4: mandatory number of the flight<br/>  - a1: optional suffix<br/>
 
 ##R0318
 
@@ -244,7 +244,7 @@ IF &lt;GUARANTEE.Guarantee type&gt; is EQUAL to '4'<br/>THEN the format of &lt;G
 
 <b>Technical Description</b>
 
-IF /*/Guarantee/guaranteeType is EQUAL to '4'<br/>THEN the format of /*/Guarantee/GuaranteeReference/GRN is 'an24'<br/>ELSE the format of /*/Guarantee/GuaranteeReference/GRN is 'an17'<br/>
+IF /<span>&#42;</span>/Guarantee/guaranteeType is EQUAL to '4'<br/>THEN the format of /<span>&#42;</span>/Guarantee/GuaranteeReference/GRN is 'an24'<br/>ELSE the format of /<span>&#42;</span>/Guarantee/GuaranteeReference/GRN is 'an17'<br/>
 
 ##R0324
 
@@ -254,7 +254,7 @@ The format of &lt;GUARANTEE REFERENCE.GRN&gt; is 'an17'
 
 <b>Technical Description</b>
 
-The format of /*/GuaranteeReference/GRN is 'an17' 
+The format of /<span>&#42;</span>/GuaranteeReference/GRN is 'an17' 
 
 ##R0350
 
@@ -264,7 +264,7 @@ IF &lt;TRANSIT OPERATION.Reduced dataset indicator&gt; is EQUAL to '1'<br/>AND<b
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/reducedDatasetIndicator&gt; is EQUAL to '1'<br/>AND /*/Consignment/inlandModeOfTransport is in SET {1, 2, 4} <br/>THEN <br/>at least one /*/Authorisation/type is EQUAL to 'C524' 
+IF /<span>&#42;</span>/TransitOperation/reducedDatasetIndicator&gt; is EQUAL to '1'<br/>AND /<span>&#42;</span>/Consignment/inlandModeOfTransport is in SET {1, 2, 4} <br/>THEN <br/>at least one /<span>&#42;</span>/Authorisation/type is EQUAL to 'C524' 
 
 ##R0352
 
@@ -274,7 +274,7 @@ IF &lt;TRANSIT OPERATION.Reduced dataset indicator&gt; is EQUAL to '1'<br/>AND<b
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/reducedDatasetIndicator&gt; is EQUAL to '1'<br/>AND /*/Consignment/inlandModeOfTransport is in SET {1, 2, 4}  <br/>THEN <br/>this Data Item includes at least one &lt;Authorisation number&gt; for a valid Authorisation for Reduced Data Set owned by the Holder of the Transit Procedure
+IF /<span>&#42;</span>/TransitOperation/reducedDatasetIndicator&gt; is EQUAL to '1'<br/>AND /<span>&#42;</span>/Consignment/inlandModeOfTransport is in SET {1, 2, 4}  <br/>THEN <br/>this Data Item includes at least one &lt;Authorisation number&gt; for a valid Authorisation for Reduced Data Set owned by the Holder of the Transit Procedure
 
 ##R0364
 
@@ -284,7 +284,7 @@ IF&lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Number of<br/>Pac
 
 <b>Technical Description</b>
 
-IF /*/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages is EQUAL to<br/>‘0’<br/>THEN for THIS HOUSE CONSIGNMENT at least one other CONSIGNMENT ITEM must exist with<br/>(the same /*/Consignment/HouseConsignment/ConsignmentItem/Packaging/shippingMarks AND with /*/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages having a value GREATER than ‘0’).<br/>
+IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages is EQUAL to<br/>‘0’<br/>THEN for THIS HOUSE CONSIGNMENT at least one other CONSIGNMENT ITEM must exist with<br/>(the same /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/shippingMarks AND with /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages having a value GREATER than ‘0’).<br/>
 
 ##R0410
 
@@ -294,7 +294,7 @@ IF &lt;CC015C-TRANSIT OPERATION.Security&gt; (the transit declaration includes E
 
 <b>Technical Description</b>
 
-IF /CC015C/TransitOperation/security (the transit declaration includes ENS data for safety and security purposes [only]) is EQUAL to ‘1’<br/>THEN the 17th character of MRN is EQUAL to 'L'<br/>ELSE IF /*/TransitOperation/security (the transit declaration includes EXS data for safety and security purposes [only]) is EQUAL to EQUAL to ‘2’<br/>THEN the 17th character of MRN is EQUAL to 'K'<br/>ELSE IF */TransitOperation/security (the transit declaration includes ENS and EXS data for safety and security purposes [only]) is EQUAL to ‘3’<br/>THEN the 17th character of MRN is EQUAL to 'M'<br/>ELSE the 17th character of MRN is EQUAL to 'J'
+IF /CC015C/TransitOperation/security (the transit declaration includes ENS data for safety and security purposes [only]) is EQUAL to ‘1’<br/>THEN the 17th character of MRN is EQUAL to 'L'<br/>ELSE IF /<span>&#42;</span>/TransitOperation/security (the transit declaration includes EXS data for safety and security purposes [only]) is EQUAL to EQUAL to ‘2’<br/>THEN the 17th character of MRN is EQUAL to 'K'<br/>ELSE IF <span>&#42;</span>/TransitOperation/security (the transit declaration includes ENS and EXS data for safety and security purposes [only]) is EQUAL to ‘3’<br/>THEN the 17th character of MRN is EQUAL to 'M'<br/>ELSE the 17th character of MRN is EQUAL to 'J'
 
 ##R0416
 
@@ -304,7 +304,7 @@ The Data Item &lt;CONSIGNMENT-HOUSE CONSIGNMENT-PREVIOUS DOCUMENT. Reference Num
 
 <b>Technical Description</b>
 
-The Data Item /*/Consignment/HouseConsignment/PreviousDocument/referenceNumber must include a valid export MRN. The 17th character must be in SET {A, B, E}.<br/>
+The Data Item /<span>&#42;</span>/Consignment/HouseConsignment/PreviousDocument/referenceNumber must include a valid export MRN. The 17th character must be in SET {A, B, E}.<br/>
 
 ##R0448
 
@@ -314,7 +314,7 @@ IF &lt;CONSIGNMENT-TRANSPORT EQUIPMENT.Container identification number&gt; is NO
 
 <b>Technical Description</b>
 
-IF /*/Consignment/TransportEquipment/containerIdentificationNumber is NOT PRESENT<br/>THEN the value '0' (zero) is not valid for<br/>/*/Consignment/TransportEquipment/numberOfSeals;<br/><br/>IF /*/Consignment/Incident/TransportEquipment/containerIdentificationNumber is NOT PRESENT<br/>THEN the value '0' (zero) is not valid for<br/>/*/Consignment/Incident/TransportEquipment/numberOfSeals
+IF /<span>&#42;</span>/Consignment/TransportEquipment/containerIdentificationNumber is NOT PRESENT<br/>THEN the value '0' (zero) is not valid for<br/>/<span>&#42;</span>/Consignment/TransportEquipment/numberOfSeals;<br/><br/>IF /<span>&#42;</span>/Consignment/Incident/TransportEquipment/containerIdentificationNumber is NOT PRESENT<br/>THEN the value '0' (zero) is not valid for<br/>/<span>&#42;</span>/Consignment/Incident/TransportEquipment/numberOfSeals
 
 ##R0449
 
@@ -334,7 +334,7 @@ IF &lt;CONSIGNMENT.Inland mode of transport&gt; is in SET {1,2,3,4,8} <br/>THEN 
 
 <b>Technical Description</b>
 
-IF /*/Consignment/inlandModeOfTransport is in SET {1,2,3,4,8} <br/>THEN <br/>      IF /*/Consignment/DepartureTransportMeans is PRESENT <br/>      THEN  <br/>            the first digit of /*/Consignment/DepartureTransportMeans/typeOfIdentification shall be <br/>            EQUAL to /*/Consignment/inlandModeOfTransport <br/>      ELSE IF /*/Consignment/HouseConsignment/DepartureTransportMeans is PRESENT <br/>      THEN  <br/>            the first digit of <br/>             /*/Consignment/HouseConsignment/DepartureTransportMeans/typeOfIdentification <br/>             shall be EQUAL to /*/Consignment/inlandModeOfTransport <br/>
+IF /<span>&#42;</span>/Consignment/inlandModeOfTransport is in SET {1,2,3,4,8} <br/>THEN <br/>      IF /<span>&#42;</span>/Consignment/DepartureTransportMeans is PRESENT <br/>      THEN  <br/>            the first digit of /<span>&#42;</span>/Consignment/DepartureTransportMeans/typeOfIdentification shall be <br/>            EQUAL to /<span>&#42;</span>/Consignment/inlandModeOfTransport <br/>      ELSE IF /<span>&#42;</span>/Consignment/HouseConsignment/DepartureTransportMeans is PRESENT <br/>      THEN  <br/>            the first digit of <br/>             /<span>&#42;</span>/Consignment/HouseConsignment/DepartureTransportMeans/typeOfIdentification <br/>             shall be EQUAL to /<span>&#42;</span>/Consignment/inlandModeOfTransport <br/>
 
 ##R0473
 
@@ -344,7 +344,7 @@ IF &lt;CONSIGNMENT-DEPARTURE TRANSPORT MEANS&gt; is PRESENT AND <br/>&lt;CONSIGN
 
 <b>Technical Description</b>
 
-IF /*/Consignment/DepartureTransportMeans is PRESENT AND /*/Consignment/DepartureTransportMeans/typeofIdentification is in SET {10,20,21,30,31,40,41,80}<br/>THEN /*/Consignment/DepartureTransportMeans/IdentificationNumber shall not contain lowercase letters<br/>ELSE IF /*/Consignment/HouseConsignment/DepartureTransportMeans is PRESENT AND /*/Consignment/HouseConsignment/DepartureTransportMeans/typeofIdentification is in SET {10,20,21,30,31,40,41,80}<br/>THEN /*/Consignment/HouseConsignment/DepartureTransportMeans/IdentificationNumber shall not contain lowercase letters<br/>
+IF /<span>&#42;</span>/Consignment/DepartureTransportMeans is PRESENT AND /<span>&#42;</span>/Consignment/DepartureTransportMeans/typeofIdentification is in SET {10,20,21,30,31,40,41,80}<br/>THEN /<span>&#42;</span>/Consignment/DepartureTransportMeans/IdentificationNumber shall not contain lowercase letters<br/>ELSE IF /<span>&#42;</span>/Consignment/HouseConsignment/DepartureTransportMeans is PRESENT AND /<span>&#42;</span>/Consignment/HouseConsignment/DepartureTransportMeans/typeofIdentification is in SET {10,20,21,30,31,40,41,80}<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/DepartureTransportMeans/IdentificationNumber shall not contain lowercase letters<br/>
 
 ##R0474
 
@@ -354,7 +354,7 @@ IF &lt;CONSIGNMENT.Inland mode of transport&gt; is EQUAL to '3'<br/>THEN the fir
 
 <b>Technical Description</b>
 
-IF /*/Consignment/inlandModeOfTransport is EQUAL to '3'<br/>THEN the first data group iteration /*/Consignment/DepartureTransportMeans/typeOfIdentification must be EQUAL to '30';<br/>IF /*/Consignment/inlandModeOfTransport is EQUAL to '3'<br/>AND /*/Consignment/House Consignment/DepartureTransportMeans is PRESENT<br/>THEN for THIS House Consignment, the first data group iteration   /*/Consignment/HouseConsignment/DepartureTransportMeans/typeOfIdentification must be EQUAL to '30'.<br/>
+IF /<span>&#42;</span>/Consignment/inlandModeOfTransport is EQUAL to '3'<br/>THEN the first data group iteration /<span>&#42;</span>/Consignment/DepartureTransportMeans/typeOfIdentification must be EQUAL to '30';<br/>IF /<span>&#42;</span>/Consignment/inlandModeOfTransport is EQUAL to '3'<br/>AND /<span>&#42;</span>/Consignment/House Consignment/DepartureTransportMeans is PRESENT<br/>THEN for THIS House Consignment, the first data group iteration   /<span>&#42;</span>/Consignment/HouseConsignment/DepartureTransportMeans/typeOfIdentification must be EQUAL to '30'.<br/>
 
 ##R0476
 
@@ -364,7 +364,7 @@ IF &lt;CONSIGNMENT.Inland mode of transport&gt; is EQUAL to '3'<br/>THEN <br/>  
 
 <b>Technical Description</b>
 
-IF /*/Consignment/inlandModeOfTransport is EQUAL to '3'<br/>THEN <br/>       IF the multiplicity of the data group /*/Consignment/DepartureTransportMeans is <br/>        more than 1x<br/>        THEN the iteration 2 and the iteration 3 (if present) of the data group <br/>         /*/Consignment/DepartureTransportMeans must include <br/>        /*/Consignment/DepartureTransportMeans/typeOfIdentification that is EQUAL to <br/>        '31'<br/>        ELSE IF the multiplicity of the data group <br/>        /*/Consignment/HouseConsignment/DepartureTransportMeans is more than 1x<br/>        THEN the iteration 2 and the iteration 3 (if present) of the data group <br/>        /*/Consignment/HouseConsignment/DepartureTransportMeans must include <br/>        /*/Consignment/HouseConsignment/DepartureTransportMeans/typeOfIdentification <br/>        that is EQUAL to '31'
+IF /<span>&#42;</span>/Consignment/inlandModeOfTransport is EQUAL to '3'<br/>THEN <br/>       IF the multiplicity of the data group /<span>&#42;</span>/Consignment/DepartureTransportMeans is <br/>        more than 1x<br/>        THEN the iteration 2 and the iteration 3 (if present) of the data group <br/>         /<span>&#42;</span>/Consignment/DepartureTransportMeans must include <br/>        /<span>&#42;</span>/Consignment/DepartureTransportMeans/typeOfIdentification that is EQUAL to <br/>        '31'<br/>        ELSE IF the multiplicity of the data group <br/>        /<span>&#42;</span>/Consignment/HouseConsignment/DepartureTransportMeans is more than 1x<br/>        THEN the iteration 2 and the iteration 3 (if present) of the data group <br/>        /<span>&#42;</span>/Consignment/HouseConsignment/DepartureTransportMeans must include <br/>        /<span>&#42;</span>/Consignment/HouseConsignment/DepartureTransportMeans/typeOfIdentification <br/>        that is EQUAL to '31'
 
 ##R0506
 
@@ -374,7 +374,7 @@ IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNOR&gt; is PRESENT for all &lt;CONSIG
 
 <b>Technical Description</b>
 
-IF /*/Consignment/HouseConsignment/Consignor is PRESENT for all /*/Consignment/HouseConsignment/ <br/>THEN at least one occurrence of /*/Consignment/HouseConsignment/Consignor must be different from the others;<br/><br/>IF /*/Consignment/HouseConsignment/Consignee is PRESENT for all /*/Consignment/HouseConsignment/ <br/>THEN at least one occurrence of /*/Consignment/HouseConsignment/Consignee must be different from the others;<br/><br/>IF /*/Consignment/HouseConsignment/DepartureTransportMeans is PRESENT for all /*/Consignment/HouseConsignment <br/>THEN at least one occurrence of /*/Consignment/HouseConsignment/DepartureTransportMeans must be different from the others;<br/><br/>IF /*/Consignment/HouseConsignment/TransportCharges is PRESENT for all /*/Consignment/HouseConsignment<br/>THEN at least one occurrence of /*/Consignment/HouseConsignment/TransportCharges must be different from the others;<br/><br/>IF /*/Consignment/HouseConsignment/referenceNumberUCR is PRESENT for all /*/Consignment/HouseConsignment/ <br/>THEN at least one occurrence of /*/Consignment/HouseConsignment/referenceNumberUCR must be different from the others;<br/><br/>IF /*/Consignment/HouseConsignment/countryOfDispatch is PRESENT for all /*/Consignment/HouseConsignment/ <br/>THEN at least one occurrence of /*/Consignment/HouseConsignment/countryOfDispatch must be different from the others.
+IF /<span>&#42;</span>/Consignment/HouseConsignment/Consignor is PRESENT for all /<span>&#42;</span>/Consignment/HouseConsignment/ <br/>THEN at least one occurrence of /<span>&#42;</span>/Consignment/HouseConsignment/Consignor must be different from the others;<br/><br/>IF /<span>&#42;</span>/Consignment/HouseConsignment/Consignee is PRESENT for all /<span>&#42;</span>/Consignment/HouseConsignment/ <br/>THEN at least one occurrence of /<span>&#42;</span>/Consignment/HouseConsignment/Consignee must be different from the others;<br/><br/>IF /<span>&#42;</span>/Consignment/HouseConsignment/DepartureTransportMeans is PRESENT for all /<span>&#42;</span>/Consignment/HouseConsignment <br/>THEN at least one occurrence of /<span>&#42;</span>/Consignment/HouseConsignment/DepartureTransportMeans must be different from the others;<br/><br/>IF /<span>&#42;</span>/Consignment/HouseConsignment/TransportCharges is PRESENT for all /<span>&#42;</span>/Consignment/HouseConsignment<br/>THEN at least one occurrence of /<span>&#42;</span>/Consignment/HouseConsignment/TransportCharges must be different from the others;<br/><br/>IF /<span>&#42;</span>/Consignment/HouseConsignment/referenceNumberUCR is PRESENT for all /<span>&#42;</span>/Consignment/HouseConsignment/ <br/>THEN at least one occurrence of /<span>&#42;</span>/Consignment/HouseConsignment/referenceNumberUCR must be different from the others;<br/><br/>IF /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDispatch is PRESENT for all /<span>&#42;</span>/Consignment/HouseConsignment/ <br/>THEN at least one occurrence of /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDispatch must be different from the others.
 
 ##R0507
 
@@ -384,7 +384,7 @@ IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Country of dispatch&gt; is
 
 <b>Technical Description</b>
 
-IF /*/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch is PRESENT for all <br/>           /*/Consignment/HouseConsignment/ConsignmentItem <br/>THEN at least one occurrence of <br/>           /*/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch must be different from the others; <br/>IF /*/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is PRESENT for all <br/>          /*/Consignment/HouseConsignment/ConsignmentItem <br/>THEN at least one occurrence of <br/>         /*/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination must be different from the others; <br/>IF /*/Consignment/HouseConsignment/ConsignmentItem/referenceNumberUCR is PRESENT for all <br/>         /*/Consignment/HouseConsignment/ConsignmentItem <br/>THEN at least one occurrence of <br/>         /*/Consignment/HouseConsignment/ConsignmentItem/referenceNumberUCR must be different from the others; <br/>IF /*/Consignment/HouseConsignment/ConsignmentItem/declarationType is PRESENT for all <br/>        /*/Consignment/HouseConsignment/ConsignmentItem <br/>THEN at least one occurrence of <br/>        /*/Consignment/HouseConsignment/ConsignmentItem/declarationType must be different from the others <br/>
+IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch is PRESENT for all <br/>           /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem <br/>THEN at least one occurrence of <br/>           /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch must be different from the others; <br/>IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is PRESENT for all <br/>          /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem <br/>THEN at least one occurrence of <br/>         /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination must be different from the others; <br/>IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/referenceNumberUCR is PRESENT for all <br/>         /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem <br/>THEN at least one occurrence of <br/>         /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/referenceNumberUCR must be different from the others; <br/>IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType is PRESENT for all <br/>        /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem <br/>THEN at least one occurrence of <br/>        /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType must be different from the others <br/>
 
 ##R0509
 
@@ -414,7 +414,7 @@ IF ( the Data Item &lt;TRANSIT OPERATION.Amendment type flag&gt; is EQUAL to ‘
 
 <b>Technical Description</b>
 
-IF (the Data Item /CC013C/TransitOperation/amendmentTypeFlag is EQUAL to ‘1' AND the movement is in state “Guarantee under amendment”)<br/>     (i.e. the message CC013C is used for amending the Guarantee previously declared while the movement is in state “Guarantee under amendment”)<br/>THEN <br/>the only difference between this CC013C and the CC015C (or the previous CC013C) shall be located in the Data Group /*/Guarantee<br/>ELSE<br/>     IF (the Data Item /*/TransitOperation/amendmentTypeFlag is EQUAL to ‘0' AND the movement IS NOT IN STATE “Guarantee under amendment”) <br/>     THEN   <br/>         all Data Groups and Data Items of the original declaration can be amended, with the exception of the following Data Groups:<br/>               - /*/HolderOfTheTransitProcedure<br/>               - /*/Representative<br/>               - /*/CustomsOfficeOfDeparture<br/>            and the exception of the following Data Items:<br/>               - /*/TransitOperation/additionalDeclarationType<br/>               - /*/TransitOperation/declarationType<br/>               - /*/TransitOperation/MRN<br/>               - /*/TransitOperation/LRN<br/>               -  /*/Consignment/HouseConsignment/ConsignmentItem/Commodity/<br/>                 CommodityCode/harmonizedSystemSubHeadingCode<br/>               - /*/TransitOperation/security<br/>
+IF (the Data Item /CC013C/TransitOperation/amendmentTypeFlag is EQUAL to ‘1' AND the movement is in state “Guarantee under amendment”)<br/>     (i.e. the message CC013C is used for amending the Guarantee previously declared while the movement is in state “Guarantee under amendment”)<br/>THEN <br/>the only difference between this CC013C and the CC015C (or the previous CC013C) shall be located in the Data Group /<span>&#42;</span>/Guarantee<br/>ELSE<br/>     IF (the Data Item /<span>&#42;</span>/TransitOperation/amendmentTypeFlag is EQUAL to ‘0' AND the movement IS NOT IN STATE “Guarantee under amendment”) <br/>     THEN   <br/>         all Data Groups and Data Items of the original declaration can be amended, with the exception of the following Data Groups:<br/>               - /<span>&#42;</span>/HolderOfTheTransitProcedure<br/>               - /<span>&#42;</span>/Representative<br/>               - /<span>&#42;</span>/CustomsOfficeOfDeparture<br/>            and the exception of the following Data Items:<br/>               - /<span>&#42;</span>/TransitOperation/additionalDeclarationType<br/>               - /<span>&#42;</span>/TransitOperation/declarationType<br/>               - /<span>&#42;</span>/TransitOperation/MRN<br/>               - /<span>&#42;</span>/TransitOperation/LRN<br/>               -  /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/<br/>                 CommodityCode/harmonizedSystemSubHeadingCode<br/>               - /<span>&#42;</span>/TransitOperation/security<br/>
 
 ##R0551
 
@@ -434,7 +434,7 @@ IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL REFERENCE.Type&
 
 <b>Technical Description</b>
 
-IF /*/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/type is in SET CL234 (DocumentTypeExcise)<br/>(i.e. Export of excise goods followed by transit (EMCS&AES+NCTS))<br/>THEN<br/>IF /*/Consignment/HouseConsignment/ConsignmentItem/declarationType is <br/>PRESENT<br/>     THEN (/*/Consignment/HouseConsignment/ConsignmentItem/declarationType is<br/>      EQUAL to ‘T1’ AND /*/Consignment/HouseConsignment/PreviousDocument/type <br/>      is EQUAL to ‘N830’)<br/>ELSE (/*/TransitOperation/declarationType is in SET {‘T1’, ‘TIR’}  <br/>AND /*/Consignment/HouseConsignment/PreviousDocument/type is EQUAL to ‘N830’);<br/>IF /*/Consignment/HouseConsignment/ConsignmentItem/SupportingDocument/type is in SET CL234 (DocumentTypeExcise)<br/>(i.e. Transit movement of EU goods under excise suspension (EMCS+NCTS))<br/>THEN<br/>IF /*/Consignment/HouseConsignment/ConsignmentItem/declarationType is PRESENT<br/>      THEN /*/Consignment/HouseConsignment/ConsignmentItem/declarationType is in <br/>      SET {T2, T2F}<br/>ELSE /*/TransitOperation/declarationType is in SET {T2, T2F}
+IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/type is in SET CL234 (DocumentTypeExcise)<br/>(i.e. Export of excise goods followed by transit (EMCS&AES+NCTS))<br/>THEN<br/>IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType is <br/>PRESENT<br/>     THEN (/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType is<br/>      EQUAL to ‘T1’ AND /<span>&#42;</span>/Consignment/HouseConsignment/PreviousDocument/type <br/>      is EQUAL to ‘N830’)<br/>ELSE (/<span>&#42;</span>/TransitOperation/declarationType is in SET {‘T1’, ‘TIR’}  <br/>AND /<span>&#42;</span>/Consignment/HouseConsignment/PreviousDocument/type is EQUAL to ‘N830’);<br/>IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/SupportingDocument/type is in SET CL234 (DocumentTypeExcise)<br/>(i.e. Transit movement of EU goods under excise suspension (EMCS+NCTS))<br/>THEN<br/>IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType is PRESENT<br/>      THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType is in <br/>      SET {T2, T2F}<br/>ELSE /<span>&#42;</span>/TransitOperation/declarationType is in SET {T2, T2F}
 
 ##R0720
 
@@ -454,7 +454,7 @@ IF &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED)&gt; is PRESENT <br/>THEN the multipl
 
 <b>Technical Description</b>
 
-IF/*/CustomsOfficeOfTransitDeclared is PRESENT<br/>THEN the multiplicity of /*/Consignment/ActiveBorderTransportMeans is up to 9x <br/>ELSE the multiplicity of /*/Consignment/ActiveBorderTransportMeans is 1x
+IF/<span>&#42;</span>/CustomsOfficeOfTransitDeclared is PRESENT<br/>THEN the multiplicity of /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans is up to 9x <br/>ELSE the multiplicity of /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans is 1x
 
 ##R0790
 
@@ -484,7 +484,7 @@ IF &lt;TRANSIT OPERATION. Declaration Type&gt; is EQUAL to ‘TIR’ <br/>THEN &
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/declarationType is EQUAL to ‘TIR’ <br/>THEN /*/TransitOperation/reducedDatasetIndicator = “0”
+IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to ‘TIR’ <br/>THEN /<span>&#42;</span>/TransitOperation/reducedDatasetIndicator = “0”
 
 ##R0850
 
@@ -514,7 +514,7 @@ IF &lt;CONSIGNMENT.Inland mode of transport&gt; is EQUAL to '3'<br/>THEN the mul
 
 <b>Technical Description</b>
 
-IF /*/Consignment/inlandModeOfTransport is EQUAL to ‘3’<br/>THEN the multiplicity of /*/Consignment/DepartureTransportMeans AND /*/Consignment/HouseConsignment/DepartureTransportMeans can be up to '3x'<br/>ELSE IF /*/Consignment/inlandModeOfTransport is EQUAL to ‘2’<br/>THEN the multiplicity of /*/Consignment/DepartureTransportMeans AND /*/Consignment/HouseConsignment/DepartureTransportMeans can be more than '1x'<br/>ELSE the multiplicity of /*/Consignment/DepartureTransportMeans AND /*/Consignment/HouseConsignment/DepartureTransportMeans is '1x'<br/>
+IF /<span>&#42;</span>/Consignment/inlandModeOfTransport is EQUAL to ‘3’<br/>THEN the multiplicity of /<span>&#42;</span>/Consignment/DepartureTransportMeans AND /<span>&#42;</span>/Consignment/HouseConsignment/DepartureTransportMeans can be up to '3x'<br/>ELSE IF /<span>&#42;</span>/Consignment/inlandModeOfTransport is EQUAL to ‘2’<br/>THEN the multiplicity of /<span>&#42;</span>/Consignment/DepartureTransportMeans AND /<span>&#42;</span>/Consignment/HouseConsignment/DepartureTransportMeans can be more than '1x'<br/>ELSE the multiplicity of /<span>&#42;</span>/Consignment/DepartureTransportMeans AND /<span>&#42;</span>/Consignment/HouseConsignment/DepartureTransportMeans is '1x'<br/>
 
 ##R0859
 
@@ -524,7 +524,7 @@ IF &lt;TRANSIT OPERATION. Reduced Dataset Indicator&gt; = “1” <br/>THEN at l
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/reducedDatasetIndicator = “1” <br/>THEN at least one /*/Authorisation/type is EQUAL to ‘C524’ <br/>ELSE /*/Authorisation/type shall not be EQUAL to ‘C524’ 
+IF /<span>&#42;</span>/TransitOperation/reducedDatasetIndicator = “1” <br/>THEN at least one /<span>&#42;</span>/Authorisation/type is EQUAL to ‘C524’ <br/>ELSE /<span>&#42;</span>/Authorisation/type shall not be EQUAL to ‘C524’ 
 
 ##R0860
 
@@ -564,7 +564,7 @@ IF &lt;TRANSIT OPERATION.Declaration type&gt; is EQUAL to 'TIR'<br/>THEN &lt;GUA
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/declarationType is EQUAL to 'TIR'<br/>THEN /*/Guarantee/guaranteeType is EQUAL to 'B'<br/>ELSE IF the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is in SET CL010 OR is EQUAL to 'SM' OR is EQUAL to 'AD'<br/>THEN /*/Guarantee/guaranteeType must be in SET CL230<br/>ELSE /*/Guarantee/guaranteeType must be in SET CL229<br/>
+IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'TIR'<br/>THEN /<span>&#42;</span>/Guarantee/guaranteeType is EQUAL to 'B'<br/>ELSE IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL010 OR is EQUAL to 'SM' OR is EQUAL to 'AD'<br/>THEN /<span>&#42;</span>/Guarantee/guaranteeType must be in SET CL230<br/>ELSE /<span>&#42;</span>/Guarantee/guaranteeType must be in SET CL229<br/>
 
 ##R0901
 
@@ -574,7 +574,7 @@ IF &lt;TRANSIT OPERATION.Declaration type&gt; is EQUAL to 'TIR'<br/>THEN the cou
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/declarationType is EQUAL to 'TIR'<br/>THEN the first two characters of /*/CustomsOfficeOfDestinationDeclared/referenceNumber is in SET CL010 <br/>AND the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is in SET CL010<br/>
+IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'TIR'<br/>THEN the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in SET CL010 <br/>AND the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL010<br/>
 
 ##R0904
 
@@ -584,7 +584,7 @@ IF the country code (first two characters) in the &lt;CUSTOMS OFFICE OF DEPARTUR
 
 <b>Technical Description</b>
 
-IF the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is in SET {AD, SM}<br/>THEN the first two characters of /*/CustomsOfficeOfDestinationDeclared/referenceNumber is in SET CL553<br/><br/>
+IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET {AD, SM}<br/>THEN the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in SET CL553<br/><br/>
 
 ##R0905
 
@@ -594,7 +594,7 @@ IF the country code (first two characters) in the &lt;CUSTOMS OFFICE OF DEPARTUR
 
 <b>Technical Description</b>
 
-IF the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is in SET CL112<br/>THEN the two characters of /*/CustomsOfficeOfDestinationDeclared/referenceNumber is NOT in SET{AD, SM}<br/><br/>
+IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL112<br/>THEN the two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is NOT in SET{AD, SM}<br/><br/>
 
 ##R0906
 
@@ -604,7 +604,7 @@ IF the country code (first two characters) in the &lt;CUSTOMS OFFICE OF DESTINAT
 
 <b>Technical Description</b>
 
-IF the first two characters of /*/CustomsOfficeOfDestinationDeclared/referenceNumber is EQUAL to ‘AD’<br/>THEN the first two characters of /*/CustomsOfficeOfTransitDeclared/referenceNumber is EQUAL to ‘AD’;<br/>IF the first two characters of /*/CustomsOfficeOfDestinationDeclared/referenceNumber is EQUAL to ‘AD’<br/>THEN the first two characters of /*/CustomsOfficeOfTransitActual/referenceNumber is EQUAL to ‘AD’<br/>
+IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is EQUAL to ‘AD’<br/>THEN the first two characters of /<span>&#42;</span>/CustomsOfficeOfTransitDeclared/referenceNumber is EQUAL to ‘AD’;<br/>IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is EQUAL to ‘AD’<br/>THEN the first two characters of /<span>&#42;</span>/CustomsOfficeOfTransitActual/referenceNumber is EQUAL to ‘AD’<br/>
 
 ##R0909
 
@@ -614,7 +614,7 @@ IF the country code (first two characters) in the &lt;CUSTOMS OFFICE OF DESTINAT
 
 <b>Technical Description</b>
 
-IF the first two characters of /*/CustomsOfficeOfDestinationDeclared/referenceNumber is EQUAL to 'SM'<br/>THEN<br/>        IF the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'IT',<br/>        THEN /*/TransitOperation/declarationType is EQUAL to 'T2SM' <br/>        ELSE<br/>                 IF the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is in SET CL010 <br/>                         AND NOT EQUAL to 'IT'<br/>                 THEN /*/TransitOperation/declarationType is in SET {T2, T2F} OR<br/>                           /*/Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2, T2F};<br/>IF the first two characters of /*/CustomsOfficeOfDestinationActual/referenceNumber is EQUAL to 'SM'<br/>THEN<br/>        IF the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'IT',<br/>        THEN /*/TransitOperation/declarationType is EQUAL to 'T2SM' <br/>        ELSE<br/>               IF the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is in SET CL010<br/>                          AND NOT EQUAL to 'IT'<br/>               THEN /*/TransitOperation/declarationType is in SET {T2, T2F} OR<br/>                          /*/Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2, T2F}<br/><br/>
+IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is EQUAL to 'SM'<br/>THEN<br/>        IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'IT',<br/>        THEN /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'T2SM' <br/>        ELSE<br/>                 IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL010 <br/>                         AND NOT EQUAL to 'IT'<br/>                 THEN /<span>&#42;</span>/TransitOperation/declarationType is in SET {T2, T2F} OR<br/>                           /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2, T2F};<br/>IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationActual/referenceNumber is EQUAL to 'SM'<br/>THEN<br/>        IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'IT',<br/>        THEN /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'T2SM' <br/>        ELSE<br/>               IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL010<br/>                          AND NOT EQUAL to 'IT'<br/>               THEN /<span>&#42;</span>/TransitOperation/declarationType is in SET {T2, T2F} OR<br/>                          /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2, T2F}<br/><br/>
 
 ##R0910
 
@@ -624,7 +624,7 @@ IF &lt;CC013C - AUTHORISATION.Type&gt; is NOT EQUAL to 'C521' OR &lt;CC015C - AU
 
 <b>Technical Description</b>
 
-IF /CC013C/Authorisation/type is NOT EQUAL to 'C521' OR  <br/>/CC015C/Authorisation/type is NOT EQUAL to 'C521'<br/>THEN /*/ControlResult/code is in SET CL195
+IF /CC013C/Authorisation/type is NOT EQUAL to 'C521' OR  <br/>/CC015C/Authorisation/type is NOT EQUAL to 'C521'<br/>THEN /<span>&#42;</span>/ControlResult/code is in SET CL195
 
 ##R0911
 
@@ -634,7 +634,7 @@ IF /CC013C/Authorisation/type is NOT EQUAL to 'C521' OR  <br/>/CC015C/Authorisat
 
 <b>Technical Description</b>
 
-IF the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'SM' AND <br/>         the first two characters of /*/CustomsOfficeOfDestinationDeclared/referenceNumber is in SET CL010<br/>THEN /*/TransitOperation/declarationType is in SET {T2, T2F}; <br/>IF the first two characters of /*/CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'SM' AND <br/>         the first two characters of /*/CustomsOfficeOfDestinationActual/referenceNumber is in SET CL010<br/>THEN /*/TransitOperation/declarationType is in SET {T2, T2F} <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'SM' AND <br/>         the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in SET CL010<br/>THEN /<span>&#42;</span>/TransitOperation/declarationType is in SET {T2, T2F}; <br/>IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'SM' AND <br/>         the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationActual/referenceNumber is in SET CL010<br/>THEN /<span>&#42;</span>/TransitOperation/declarationType is in SET {T2, T2F} <br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 ##R0912
 
@@ -644,7 +644,7 @@ IF &lt;TRANSIT OPERATION.Declaration type&gt; is EQUAL to 'TIR' <br/>THEN &lt;C
 
 <b>Technical Description</b>
 
-IF /*/TransitOperation/declarationType is EQUAL to 'TIR' <br/>THEN /*/ControlResult/code is in SET CL195
+IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'TIR' <br/>THEN /<span>&#42;</span>/ControlResult/code is in SET CL195
 
 ##R0983
 
@@ -654,7 +654,7 @@ IF /*/TransitOperation/declarationType is EQUAL to 'TIR' <br/>THEN /*/ControlRe
 
 <b>Technical Description</b>
 
-/*/Consignment/HouseConsignment/grossMass must be GREATER than OR EQUAL to the sum of /*/Consignment/HouseConsignmentConsignmentItem/Commodity/GoodsMeasure/grossMass available for all Consignment Items included in that House Consignment
+/<span>&#42;</span>/Consignment/HouseConsignment/grossMass must be GREATER than OR EQUAL to the sum of /<span>&#42;</span>/Consignment/HouseConsignmentConsignmentItem/Commodity/GoodsMeasure/grossMass available for all Consignment Items included in that House Consignment
 
 ##R0987
 
@@ -684,7 +684,7 @@ The &lt;TRANSIT OPERATION.TIR carnet number&gt; must have the format an10 or an1
 
 <b>Technical Description</b>
 
-The /*/TransitOperation/TIRCarnetNumber must have the format an10 or an11 and must follow the algorithm defined by IRU, see DDNTA Main Document.
+The /<span>&#42;</span>/TransitOperation/TIRCarnetNumber must have the format an10 or an11 and must follow the algorithm defined by IRU, see DDNTA Main Document.
 
 ##R0994
 
@@ -694,7 +694,7 @@ The value of &lt;CONSIGNMENT.Gross mass&gt; must be GREATER than or EQUAL to the
 
 <b>Technical Description</b>
 
-The value of /*/Consignment/grossMass must be GREATER than or EQUAL to the sum of /*/Consignment/HouseConsignment/grossMass for all house consignments.
+The value of /<span>&#42;</span>/Consignment/grossMass must be GREATER than or EQUAL to the sum of /<span>&#42;</span>/Consignment/HouseConsignment/grossMass for all house consignments.
 
 ##R0995
 
@@ -714,7 +714,7 @@ IF &lt;CONSIGNMENT.Country Of Destination&gt; is in SET CL009 (CountryCodesCommo
 
 <b>Technical Description</b>
 
-IF /*/Consignment/countryOfDestination is in SET CL009 <br/>OR<br/>at least one /*/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is in SET CL009<br/>THEN /*/Consignment/AdditionalInformation/code shall not be EQUAL to '30600'<br/>
+IF /<span>&#42;</span>/Consignment/countryOfDestination is in SET CL009 <br/>OR<br/>at least one /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is in SET CL009<br/>THEN /<span>&#42;</span>/Consignment/AdditionalInformation/code shall not be EQUAL to '30600'<br/>
 
 ##R3061
 
@@ -724,7 +724,7 @@ The Data Item &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL INFO
 
 <b>Technical Description</b>
 
-The Data Item /*/Consignment/HouseConsignment/ConsignmentItem/AdditionalInformation/code shall not be EQUAL to '30600' 
+The Data Item /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/AdditionalInformation/code shall not be EQUAL to '30600' 
 
 ##R3062
 
@@ -734,5 +734,5 @@ IF &lt;CONSIGNMENT.Country Of Destination&gt; is in SET CL009 (CountryCodesCommo
 
 <b>Technical Description</b>
 
-IF /*/Consignment/countryOfDestination is in SET CL009<br/>OR<br/>at least one /*/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is in SET<br/>CL009<br/>THEN /*/Consignment/HouseConsignment/AdditionalInformation/code shall not be EQUAL to '30600'<br/>
+IF /<span>&#42;</span>/Consignment/countryOfDestination is in SET CL009<br/>OR<br/>at least one /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is in SET<br/>CL009<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/AdditionalInformation/code shall not be EQUAL to '30600'<br/>
 
