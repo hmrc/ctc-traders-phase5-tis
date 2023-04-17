@@ -71,6 +71,9 @@ This scenario involves the holder of the transit procedure making corrections to
     - **No** (no control): Go to step 6.
 1. The office of departure receives a valid ‘Presentation Notification for the Pre-Lodged Declaration’ E_PRE_NOT (IE170) message from the holder of the transit procedure.
 1. The MRN is communicated to the holder of the transit procedure with message ‘MRN Allocated’ E_MRN_ALL (IE028).
+   
+    Further amendments may be made to the declaration by using the ‘Declaration Amendment’ E_DEC_AMD (IE013) message after the MRN is allocated with the ‘MRN Allocated’ E_MRN_ALL (IE028) message but before the ‘Release for Transit’ E_REL_TRA (IE029) message is sent. For more information, see [Declaration amendment accepted/rejected](#declaration-amendment-accepted-rejected).
+    
 1. The ‘Release for Transit’ E_REL_TRA (IE029) message is sent to the holder of the transit procedure.
 1. The departure process ends.
 
