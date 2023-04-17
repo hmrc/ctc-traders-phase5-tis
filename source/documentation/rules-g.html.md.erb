@@ -4,7 +4,6 @@ weight: 8
 description: Software developers, designers, product owners or business analysts. Integrate your software with the ERMIS service
 ---
 #Rules G
-Based on document version 5.15.0-v0.10 and issue date 04/03/2022
 <%= partial 'documentation/partials/rulesintro' %>
 ##G0001
 
@@ -721,6 +720,16 @@ N/A
 <b>Functional Description</b>
 
 When the &lt;CUSTOMS OFFICE OF DESTINATION (ACTUAL)&gt; indicates the permission to start the unloading, all the information about the Consignment is provided.<br/>When the &lt;CUSTOMS OFFICE OF DESTINATION (ACTUAL)&gt; indicates the permission to continue the unloading, the information about the Consignment is not provided, and the Data Item &lt;CTL_CONTROL.Continue unloading&gt; shall be used with an incremental value ('1', '2', '3', etc ...) in the subsequent messages CC043C (one message for each authorisation to continue the unloading). 
+
+<b>Technical Description</b>
+
+N/A
+
+##G0587
+
+<b>Functional Description</b>
+
+The Customs Office of Exit for Transit shall be provided - in case of transit declaration combined with EXS - when the goods will exit the Security Area to enter (or re-enter) a CTC country that is not in the Security Area.
 
 <b>Technical Description</b>
 
