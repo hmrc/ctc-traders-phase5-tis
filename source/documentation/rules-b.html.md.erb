@@ -4,6 +4,7 @@ weight: 5
 description: Software developers, designers, product owners or business analysts. Integrate your software with the ERMIS service
 ---
 #Rules B
+Based on document version 5.15.0-v0.10 and issue date 04/03/2022
 <%= partial 'documentation/partials/rules_b_intro' %>
 ##B1000
 
@@ -104,16 +105,6 @@ N/A
 <b>Technical Description</b>
 
 IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0473 attached to <br/>/<span>&#42;</span>/Consignment/DepartureTransportMeans/identificationNumber<br/>will be disabled
-
-##B1819
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0219 attached to <br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages<br/>shall be disabled
 
 ##B1820
 
@@ -385,16 +376,6 @@ N/A
 
 IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0005 will be disabled<br/>
 
-##B1919
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0220 attached to <br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/typeOfPackages<br/>shall be disabled
-
 ##B1922
 
 <b>Functional Description</b>
@@ -404,17 +385,6 @@ N/A
 <b>Technical Description</b>
 
 IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>THEN R0601 will be disabled AND<br/>IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL REFERENCE.Type&gt; is in SET CL234 (DocumentTypeExcise)<br/>(i.e. Export of excise goods followed by transit (EMCS&AES+NCTS))<br/>THEN<br/>        IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM. Declaration<br/>        type&gt; is PRESENT<br/>        THEN (&lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM. Declaration type&gt; is EQUAL to ‘T1’<br/>                           AND &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PREVIOUS DOCUMENT.Type&gt; is EQUAL to ‘N830’)<br/>        ELSE (&lt;TRANSIT OPERATION.Declaration type&gt; is in SET {‘T1’, ‘TIR’}  <br/>                   AND &lt;CONSIGNMENT-HOUSE CONSIGNMENT-PREVIOUS DOCUMENT.Type&gt; is EQUAL to ‘N830’);<br/>IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-SUPPORTING DOCUMENT.Type&gt; is in SET CL234 (DocumentTypeExcise)<br/>(i.e. Transit movement of EU goods under excise suspension (EMCS+NCTS))<br/>THEN<br/>        IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM. Declaration type&gt; is PRESENT<br/>        THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM. Declaration type&gt; is in SET {T2, T2F}<br/>        ELSE &lt;TRANSIT OPERATION.Declaration type&gt; is in SET {T2, T2F}
-
-##B1964
-
-<b>Functional Description</b>
-
-N/A
-
-<b>Technical Description</b>
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br/>
-THEN R0364 attached to<br/> /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages<br/>shall be disabled
 
 ##B2101
 
