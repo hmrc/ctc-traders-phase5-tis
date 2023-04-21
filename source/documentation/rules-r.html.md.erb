@@ -4,6 +4,7 @@ weight: 9
 description: Software developers, designers, product owners or business analysts. Integrate your software with the ERMIS service
 ---
 #Rules R
+Based on document version 5.15.0-v0.10 and issue date 04/03/2022
 <%= partial 'documentation/partials/rulesintro' %>
 ##R0003
 
@@ -204,30 +205,6 @@ IF the declaration is submitted under simplified procedure AND the authorisation
 <b>Technical Description</b>
 
 IF the declaration is submitted under simplified procedure AND the authorisation of which foresees the use of seals<br/>THEN /<span>&#42;</span>/Consignment/TransportEquipment/numberOfSeals&gt; is GREATER than '0'.
-
-##R0219
-
-<b>Functional Description</b>
-
-IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Number of packages&gt; is EQUAL to '0' (zero)<br/>
-THEN no further data group &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM- PACKAGING&gt; with a value not equal to '0' (zero) in the data item &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Number of packages&gt; is specified for this data group &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM&gt;.
-
-<b>Technical Description</b>
-
-IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages is EQUAL to '0' (zero)<br/>
-THEN no further data group /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging with a value not equal to '0' (zero) in the data item <br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages is specified for this data group  /<span>&#42;</span>/HouseConsignment/ConsignmentItem.
-
-##R0220
-
-<b>Functional Description</b>
-
-IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Number of packages&gt; is EQUAL to '0' (zero)<br/>
-THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Type of packages&gt; shall not be in SET CL182 (KindOfPackagesUnpacked) for this data group &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM&gt;.
-
-<b>Technical Description</b>
-
-IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages is EQUAL to '0' (zero)<br/>
-THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/typeOfPackages shall not be in SET CL182 for this data group /<span>&#42;</span>/ Consignment/HouseConsignment/ConsignmentItem.
 
 ##R0221
 
