@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 7.2 issued 17 April 2023
+Version 8.0 issued 28 April 2023
 
 
 ## Document summary
@@ -160,22 +160,22 @@ The printer and print driver, used for printing the TAD/TSAD, must be capable of
 
 The font type is BC C128 Narrow (True Type) version 2.0.
 
-### Phase 5 cutover period 
+### NCTS5 transition period 
 
-UK NCTS phase 5 is due to go live on 16 November 2023. To meet the requirements of the Common Transit Convention (CTC), all member countries must transfer to phase 5 by 30 November 2023.
+UK NCTS5 is due to go live on 16 November 2023. To meet the requirements of the Common Transit Convention (CTC), all member countries must transfer to NCTS5 by 30 November 2023.
 
-There will be a cutover period between 16 and 30 November 2023. During this period, the NCTS phase 4 service will continue running to deal with in-flight transit declarations submitted before 16 November while the phase 5 service will handle all new declarations.
+There will be a transition period between 16 and 30 November 2023. During this period, the NCTS4 service will continue running to deal with in-flight transit declarations submitted before 16 November while the NCTS5 service will handle all new declarations.
 
-**Note:** The phase 5 service will not hold information about any declarations submitted before 16 November 2023.
+**Note:** The NCTS5 service will not hold information about any declarations submitted before 16 November 2023.
 
-During the cutover period, the following rules in this specification will be used to handle transit movements:
+During the transition period, the following rules in this specification will be used to handle transit movements:
 
 - [Rules B](/guides/ctc-traders-phase5-tis/documentation/rules-b.html) (business rules)
 - [Rules E](/guides/ctc-traders-phase5-tis/documentation/rules-e.html)  (technical rules)
 
-### Important phase 5 terms
+### Important NCTS5 terms
 
-The following terms are important to understand in phase 5:
+The following terms are important to understand in NCTS5:
 
 - **Consignment:** The header information is provided and applies to the whole transit declaration (up to 1 Consignment level per declaration).
 - **House Consignment:** The lowest transport information is provided, and this applies to all its Consignment Items (each Consignment can contain up to 99 House Consignments).

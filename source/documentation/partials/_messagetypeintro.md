@@ -57,6 +57,137 @@ Some message types are sent by the NCTS while other message types are sent by tr
 | IE044 | Unloading Remarks | Phase 4 to phase 5 upgrade |
 | IE170 | Presentation Notification For The Pre-Lodged Declaration | New in phase 5 |
 
+## NCTS error codes
+
+The following error codes can be returned by the NCTS.
+
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 11%" />
+<col style="width: 68%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<th>Value</th>
+<th>Description</th>
+<th>Explanation</th>
+<th>Transition period applicablility</th>
+</tr>
+</thead>
+<tbody>
+<td>12</td>
+<td>Codelist violation</td>
+<td><p>The value of a data item is outside the predefined set of values, that is, not part of the applicable business or technical codelist.</p>
+<p>Example: The data element with CL027 (‘0’ or ‘1’) includes the value ‘2’. It violates the CL027.</p></td>
+<td><ul>
+<li><p>During</p></li>
+<li><p>After</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td>Condition violation (missing)</td>
+<td><p>A condition (Cxxxx or Txxxx) is violated due to missing data group or data item is missing (while "R").</p>
+<p>Example: Violation of C0569 - Declared number of seals is "2" and no seals are declared.</p>
+<p><em>(IF /<span>&#42;</span>/GoodsShipment/Consignment/TransportEquipment/numberOfSeals is GREATER than "0"</em></p>
+<p><em>THEN /<span>&#42;</span>/GoodsShipment/Consignment/TransportEquipment/Seal = "R"</em></p>
+<p><em>ELSE /<span>&#42;</span>/GoodsShipment/Consignment/TransportEquipment/Seal = "N".)</em></p></td>
+<td><ul>
+<li><p>During</p></li>
+<li><p>After</p></li>
+</ul></td>
+</tr>
+<td>14</td>
+<td>Rule violation</td>
+<td><p>A rule (Rxxxx or Txxxx) is violated and consequently a data group or a data item includes an invalid value.</p>
+<p>Example: Violation of R0007 - The first declared Goods item number is 2.</p>
+<p>(Each &lt;GOODS SHIPMENT - GOODS ITEM.Goods item number&gt; is unique throughout the declaration. The items shall be numbered in a sequential fashion, starting from "1" for the first item and incrementing the numbering by "1" for each following item.)</em></p></td>
+<td><ul>
+<li><p>During</p></li>
+<li><p>After</p></li>
+</ul></td>
+</tr>
+<td>15</td>
+<td>Condition violation (not allowed)</td>
+<td><p>A condition (Cxxxx or Txxxx) is violated and consequently a data group or data item is present despite it shall not be present (it is present while "N").</p>
+<p>Example: Violation of C0569 - Declared number of seals is ‘0’ and seals are declared.</p>
+<p><em>(IF /<span>&#42;</span>/GoodsShipment/Consignment/TransportEquipment/numberOfSeals is GREATER than "0"</em></p>
+<p><em>THEN /<span>&#42;</span>/GoodsShipment/Consignment/TransportEquipment/Seal = "R"</em></p>
+<p><em>ELSE /<span>&#42;</span>/GoodsShipment/Consignment/TransportEquipment/Seal = "N")</em></p></td>
+<td><ul>
+<li><p>During</p></li>
+<li><p>After</p></li>
+</ul></td>
+</tr>
+<td>26</td>
+<td>Duplicate Message ID</td>
+<td>The message includes the same 'Message identifier' as another message already received and processed.</td>
+<td><ul>
+<li><p>During</p></li>
+<li><p>After</p></li>
+</ul></td>
+</tr>
+<td>50</td>
+<td>Transitional constraint Violation</td>
+<td><p>A transitional constraint (Exxxx or Bxxxx) is violated. A data group is missing or too many repetitions are in the message. A data item is missing or is present despite it may not be present, or a data item includes an incorrect value (including violation of the format).</p>
+<p>Example: Violation of E1108 – Declaration with 10.000.000 packages.</p>
+<p><em>(IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;</em></p>
+<p><em>THEN /<span>&#42;</span>/ExportOperation/totalNumberOfPackages</em></p>
+<p><em>format shall be set to n..7)</em></p></td>
+<td><ul>
+<li><p>During</p></li>
+<li><p>After</p></li>
+</ul></td>
+</tr>
+<td>51</td>
+<td>EDI violation post downgrade</td>
+<td>After the 'downgrade' conversion (from 'Legacy' to 'To Be') the EDIFACT message is syntactically incorrect (a CD906C is generated and sent back to the application that initiated the conversion).</td>
+<td><ul>
+<li><p>During</p></li>
+</ul></td>
+</tr>
+<td>52</td>
+<td>Functional violation post downgrade</td>
+<td><p>After the 'downgrade' conversion (from 'Legacy' to 'To Be') the EDIFACT message is semantically incorrect:</p>
+<ul>
+<li><p>FMS (sequencing, optionalities, repetitions, formatting) is violated</p></li>
+<li><p>Business Validation (Rxxx, Cxxx or TRxxxx and Codelist validation) is violated</p></li>
+</ul></td>
+<td><ul>
+<li><p>During</p></li>
+</ul></td>
+</tr>
+<td>90</td>
+<td>Unknown MRN</td>
+<td><p>A message is received with MRN unknown to the destination (exception is the IEx01 messages concerning movement creation). To be used only when there is no ‘negative response’.</p>
+<p>Example: The CDx02C is received and MRN is unknown, it must be responded with negative CDx03C; not with CD906C.</p>
+<p>But: If a message CD115C is received and MRN is unknown, it must be responded with a CD906C with code "90".</p></td>
+<td><ul>
+<li><p>During</p></li>
+<li><p>After</p></li>
+</ul></td>
+</tr>
+<td>92</td>
+<td>Message out of sequence</td>
+<td><p>The message cannot be processed, because the receiver’s states machine is not in the state that does not allow to process the received message.</p>
+<p>Example: The NTA (office of departure) receives the message CD018C while the movement is still in the state 'Under control'.</p></td>
+<td><ul>
+<li><p>During</p></li>
+<li><p>After</p></li>
+</ul></td>
+</tr>
+<td>93</td>
+<td>Invalid MRN</td>
+<td><p>The message includes a value for the data item &lt;MRN&gt; that violates the structure defined in the DDCOM.</p>
+<p>Example: The ‘Check digit’ is not valid.</p></td>
+<td><ul>
+<li><p>During</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
 ## Accessing the XML schemas
 
 The XML schemas are available on [GitHub](https://github.com/hmrc/transit-movements-validator/tree/main/conf/xsd).
