@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 8.0 issued 28 April 2023
+Version 8.1 issued 22 May 2023
 
 
 ## Document summary
@@ -160,18 +160,31 @@ The printer and print driver, used for printing the TAD/TSAD, must be capable of
 
 The font type is BC C128 Narrow (True Type) version 2.0.
 
-### NCTS5 transition period 
+### UK cutover from NCTS4 to NCTS5
 
-UK NCTS5 is due to go live on 16 November 2023. To meet the requirements of the Common Transit Convention (CTC), all member countries must transfer to NCTS5 by 30 November 2023.
+After NCTS5 goes live on 16 November 2023, there will be a cutover period during which:
 
-There will be a transition period between 16 and 30 November 2023. During this period, the NCTS4 service will continue running to deal with in-flight transit declarations submitted before 16 November while the NCTS5 service will handle all new declarations.
+- the NCTS4 service will continue running only to deal with in-flight transit declarations submitted before the go-live date
+- the NCTS5 service will handle all new transit declarations submitted from the go-live date onwards
 
-**Note:** The NCTS5 service will not hold information about any declarations submitted before 16 November 2023.
+### Transition period
 
-During the transition period, the following rules in this specification will be used to handle transit movements:
+The transition period is the period of time during which countries may switch to operating NCTS5 at any point and will run until all countries have switched to operating NCTS5. NCTS operations are currently considered to be in the transition period.
 
-- [Rules B](/guides/ctc-traders-phase5-tis/documentation/rules-b.html) (business rules)
-- [Rules E](/guides/ctc-traders-phase5-tis/documentation/rules-e.html)  (technical rules)
+During the transition period, those countries that are operating NCTS5 must do so in transitional mode, which is equivalent to a ‘backwards compatibility’ mode. This is to ensure that messages can be exchanged between NCTS4 and NCTS5 countries, which is handled by an upgrade/downgrade convertor in the common domain, where messages are exchanged at country to country level. For example, notifying the country of destination that the movement has been released or notifying the country of departure that the movement has arrived, and so on.
+
+The UK’s NCTS5 service will go live during the transition period. 
+
+To ensure backwards compatibility with NCTS4 during transition, special rules and conditions have been defined to restrict/prevent usage of new data fields and some functionality until all countries are operating NCTS5. This allows downgrading of NCTS5 messages to NCTS4.
+
+The prefixes for these rules and conditions are as follows.
+
+| Rule prefix | Description |
+| ----------- | ----------- |
+| B | Restrictive business rules effective during transitional period. |
+| E | Restrictive technical rules effective during transitional period. |
+
+During the transition period, NCTS will observe and apply these business ([Rules B](/guides/ctc-traders-phase5-tis/documentation/rules-b.html)) and technical ([Rules E](/guides/ctc-traders-phase5-tis/documentation/rules-e.html)) rules as defined in this document.
 
 ### Important NCTS5 terms
 
