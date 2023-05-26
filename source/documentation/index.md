@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 8.1 issued 22 May 2023
+Version 9.0 issued 30 May 2023
 
 
 ## Document summary
@@ -185,6 +185,10 @@ The prefixes for these rules and conditions are as follows.
 | E | Restrictive technical rules effective during transitional period. |
 
 During the transition period, NCTS will observe and apply these business ([Rules B](/guides/ctc-traders-phase5-tis/documentation/rules-b.html)) and technical ([Rules E](/guides/ctc-traders-phase5-tis/documentation/rules-e.html)) rules as defined in this document.
+
+### Date-time format
+
+NCTS5 uses the [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) standard for timestamps. If the optional timezone data is omitted from the timestamp of a message sent to the NCTS, [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) is used for any responses.
 
 ### Important NCTS5 terms
 
