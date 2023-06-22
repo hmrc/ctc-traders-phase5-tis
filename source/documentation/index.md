@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 8.2 issued 13 June 2023
+Version 8.3 issued 22 June 2023
 
 
 ## Document summary
@@ -146,7 +146,7 @@ Authorised Consignors are obliged to hold special stamps to authenticate documen
 
 #### Manually printing TADs/TSADs
 
-Guidelines for printing a TAD are contained in Part IV, Chapter 2, Annex 8.1 of the [Transit Manual](https://ec.europa.eu/taxation_customs/system/files/2021-06/transit_manual_june_2020_en.pdf) (PDF) of the European Commission.
+Guidelines for printing a TAD are available in this [zip file](/guides/ctc-traders-phase5-tis/downloads/NCTS5_TAD_Printing_Guidelines_June_2023.zip) on GitHub. (Please ignore any TSAD references in any of the files in the zip file.)
 
 For specifications relating to the printing of a paper TSAD, see [Guidelines for the Printout of the Transit/Security Accompanying Document (TSAD) and the Transit/Security List of Items (TSLoI)](https://www.gov.uk/government/publications/transit-security-accompanying-document-and-list-print-format).
 
