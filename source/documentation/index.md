@@ -128,7 +128,7 @@ If the departure declaration does not contain a guarantee reference amount and t
 
 This applies in all circumstances except for national transit movements, for example, Great Britain to Great Britain. National transit is not supported by the CTC but UK national legislation allows its usage as a trade facilitation.
 
-### Transit Accompanying Document
+### Transit Accompanying Documents
 
 A Transit Accompanying Document (TAD) is required for each NCTS5 transit declaration.
 
@@ -150,7 +150,7 @@ Authorised Consignors are obliged to hold special stamps to authenticate documen
 
 #### Manually printing TADs
 
-Guidelines for printing a TAD are available in this [zip file](/guides/ctc-traders-phase5-tis/downloads/NCTS5_TAD_Printing_Guidelines_June_2023.zip) on GitHub. (Please ignore any TSAD references in any of the files in the zip file.)
+Guidelines for printing TADs are available in this [zip file](/guides/ctc-traders-phase5-tis/downloads/NCTS5_TAD_Printing_Guidelines_June_2023.zip) on GitHub. There are separate guidelines in the zip file for during and after the transition period (see below). (Please ignore any TSAD references in any of the files in the zip file.)
 
 An IE029 message will specify the number of copies required for a printed TAD. If a return copy is required, that is, HEADER.NCTS return copy is set, two copies of the TAD will be required. Otherwise, only one needs to be printed. A return copy is required if an OoDest is not yet using the NCTS.
 
