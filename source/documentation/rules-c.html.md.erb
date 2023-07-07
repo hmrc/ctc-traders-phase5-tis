@@ -180,7 +180,11 @@ IF /<span>&#42;</span>/Guarantee/guaranteeType is EQUAL to '8' <br/>THEN /<span>
 
 <b>Functional Description</b>
 
-IF (&lt;INVALIDATION.Initiated by customs&gt; is EQUAL to ‘0’ AND &lt;INVALIDATION.Decision&gt; is EQUAL to ‘0’) OR &lt;INVALIDATION.Initiated by customs&gt; is EQUAL to ‘1’ <br/>THEN &lt;INVALIDATION.Justification&gt; = "R"<br/>ELSE &lt;INVALIDATION.Justification&gt; = "O"
+IF the first three characters of /<span>&#42;</span>/messageRecipient is EQUAL to ‘NTA’
+<br/>
+THEN /<span>&#42;</span>/Invalidation/justification = "R"
+<br/>
+ELSE /<span>&#42;</span>/Invalidation/justification = "O"
 
 <b>Technical Description</b>
 
