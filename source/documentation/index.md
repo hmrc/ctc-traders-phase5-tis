@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 8.4 issued 7 July 2023
+Version 9.0 issued 12 July 2023
 
 
 ## Document summary
@@ -189,6 +189,21 @@ The prefixes for these rules and conditions are as follows.
 | E | Restrictive technical rules effective during transitional period. |
 
 During the transition period, NCTS will observe and apply these business ([Rules B](/guides/ctc-traders-phase5-tis/documentation/rules-b.html)) and technical ([Rules E](/guides/ctc-traders-phase5-tis/documentation/rules-e.html)) rules as defined in this document.
+
+### Message sender guideline
+
+When specifying the message sender of an arrival or departure message, you can enter alphanumeric format data up to 35 characters (‘an..35‘). We recommend that you should enter the EORI number of the organisation ('the declarant') that is physically sending the message.
+
+### Message recipient rules
+
+When submitting arrival and departure messages in NCTS5 Trader Test and ultimately the UK NCTS5 service when it goes live, use the following guidelines for entering message recipient details.
+
+| Message type | Rule                                                         | GB to XI messages | XI to GB messages |
+| ------------ | ------------------------------------------------------------ | ----------------- | ----------------- |
+| Arrival      | You must enter 'NTA' and the correct country code of the **actual** office of destination, which could be different from the declared office of destination. | NTA.XI            | NTA.GB            |
+| Departure    | You must enter 'NTA' and the correct country code of the office of departure. | NTA.GB            | NTA.XI            |
+
+**Note:** These rules will be enforced in Trader Test from 26 July 2023.
 
 ### Date-time format
 
