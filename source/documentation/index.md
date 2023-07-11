@@ -35,7 +35,7 @@ To use the NCTS, traders need the facility to send and receive electronic messag
 
 Traders cannot interface directly with the NCTS to input or amend data or to access records and reference data. Instead, they exchange defined structured messages with the system. 
 
-In certain circumstances, where Simplified NCTS Procedures are used by Authorised Consignors/Consignees, processing and release will be automatic and allow, depending upon the conditions of authorisation, for 'out-of-hours' clearance. This will allow for selective, risk-based controls, and for the processing of declarations and the release of goods to become largely automatic.
+In certain circumstances, where Simplified NCTS Procedures are used by Authorised Consignors/Consignees, processing and release will be automatic and allow, depending upon the conditions of authorisation, for ‘out-of-hours‘ clearance. This will allow for selective, risk-based controls, and for the processing of declarations and the release of goods to become largely automatic.
 
 ### Scope
 
@@ -97,8 +97,8 @@ The NCTS needs region-specific reference data, such as Customs Office codes, gua
 
 For example:
 
-- Dover port in Great Britain mainland has the Customs office code GB000060
-- Belfast Entry Process Unit in Northern Ireland has the Customs office code XI000142
+- Dover port in Great Britain mainland has the Customs office code ‘GB000060‘
+- Belfast Entry Process Unit in Northern Ireland has the Customs office code ‘XI000142‘
 
 
 Additionally, authorised locations used by Authorised Consignors and Consignees exist only in the NCTS appropriate to their physical location.
@@ -152,11 +152,11 @@ Authorised Consignors are obliged to hold special stamps to authenticate documen
 
 Guidelines for printing TADs are available in this [zip file](/guides/ctc-traders-phase5-tis/downloads/NCTS5_TAD_Printing_Guidelines_June_2023.zip) on GitHub. There are separate guidelines in the zip file for during and after the transition period (see below). (Please ignore any TSAD references in any of the files in the zip file.)
 
-**Note:** The current status of the post-transition period printing guidelines is 'draft'. If the guidelines change after they have been finalised, we will advise you.
+**Note:** The current status of the post-transition period printing guidelines is ‘draft‘. If the guidelines change after they have been finalised, we will advise you.
 
 An IE029 message will specify the number of copies required for a printed TAD. If a return copy is required, that is, HEADER.NCTS return copy is set, two copies of the TAD will be required. Otherwise, only one needs to be printed. A return copy is required if an OoDest is not yet using the NCTS.
 
-The 'liability amount' information in the guarantee data group is not printed on a TAD.
+The ‘liability amount‘ information in the guarantee data group is not printed on a TAD.
 
 If a declaration contains only one goods item, all the information for the movement is included in the TAD. If the declaration contains more than one goods item, all the goods items are included in the LoI (List of Items).
 
@@ -190,20 +190,28 @@ The prefixes for these rules and conditions are as follows.
 
 During the transition period, NCTS will observe and apply these business ([Rules B](/guides/ctc-traders-phase5-tis/documentation/rules-b.html)) and technical ([Rules E](/guides/ctc-traders-phase5-tis/documentation/rules-e.html)) rules as defined in this document.
 
-### Message sender guideline
+### Message sender and recipient guidelines
 
-When specifying the message sender of an arrival or departure message, you can enter alphanumeric format data up to 35 characters (‘an..35‘). We recommend that you should enter the EORI number of the organisation ('the declarant') that is physically sending the message.
+There are guidelines for entering message sender and recipient details in arrivals and departures messages in the NCTS5 Trader Test environment that will also apply to the production version of the UK NCTS5 service.
 
-### Message recipient rules
+#### Message sender
 
-When submitting arrival and departure messages in NCTS5 Trader Test and ultimately the UK NCTS5 service when it goes live, use the following guidelines for entering message recipient details.
+When specifying the message sender of an arrival or departure message, you can enter alphanumeric format data up to 35 characters (‘an..35‘).
 
-| Message type | Rule                                                         | GB to XI messages | XI to GB messages |
-| ------------ | ------------------------------------------------------------ | ----------------- | ----------------- |
-| Arrival      | You must enter 'NTA' and the correct country code of the **actual** office of destination, which could be different from the declared office of destination. | NTA.XI            | NTA.GB            |
-| Departure    | You must enter 'NTA' and the correct country code of the office of departure. | NTA.GB            | NTA.XI            |
+We recommend that you should enter the EORI number of the organisation (‘the declarant‘) that is physically sending the message. Alternatively, if you do not know the EORI number of the declarant, you can use the EORI number of the transit movement or prompt for it.
 
-**Note:** These rules will be enforced in Trader Test from 26 July 2023.
+#### Message recipient
+
+From 26 July 2023, the NCTS5 Trader Test environment will enforce the following rules for message recipient details.
+
+| Message type | Rule | GB to XI movements | XI to GB movements |
+| ------------ | ---- | ------------------ | ------------------ |
+| Arrival | You must enter ‘NTA‘ and the correct country code of the **actual** office of destination, which could be different from the declared office of destination. | NTA.XI | NTA.GB |
+| Departure | You must enter ‘NTA‘ and the correct country code of the office of departure. | NTA.GB | NTA.XI |
+
+The emphasis on GB to XI movements and XI to GB movements is specific to NCTS5 Trader Test. For the production version of the UK NCTS5 service, these rules will be applied to transit movements originating from or arriving in GB or XI. If your transit movements involve other CTC member countries, you will need to become familiar with the rules used by those countries for the message recipient field in NCTS5 arrivals and departures messages.
+
+**Note:** The rules used by other CTC members for the message recipient field might be similar to but not necessarily the same as those used by the UK.
 
 ### Date-time format
 
