@@ -1,4 +1,4 @@
-These rules are the business rules that will be used for the transition period between 16 and 30 November 2023.
+These rules are the business rules that will be used for the transition period.
 
 During the transition period:
 
@@ -11,5 +11,5 @@ During the transition period:
   - 'Presentation Notification For The Pre-Lodged Declaration' E_PRE_NOT (IE170)
 - business rules **without** TP measures will be applied to all other message types defined in this specification
 
-**Note:** 'TPendDate' in a rule refers to 30 November 2023.
+**Note:** 'TPendDate' in a rule refers to 2 December 2024.
 

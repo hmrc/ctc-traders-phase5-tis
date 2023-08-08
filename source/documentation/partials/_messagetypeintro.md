@@ -34,7 +34,7 @@ Some message types are sent by the NCTS while other message types are sent by tr
 | IE004 | Amendment Acceptance | New to UK in NCTS5 |
 | IE009 | Invalidation Decision | NCTS4 to NCTS5 upgrade |
 | IE019 | Discrepancies | New to UK in NCTS5 |
-| IE022 | Notification To Amend Declaration | New in NCTS5 (out of scope until after 30 November 2023) |
+| IE022 | Notification To Amend Declaration | New in NCTS5 (out of scope until after 2 December 2024) |
 | IE025 | Goods Release Notification | NCTS4 to NCTS5 upgrade |
 | IE028 | MRN Allocated | NCTS4 to NCTS5 upgrade |
 | IE029 | Release For Transit | NCTS4 to NCTS5 upgrade |

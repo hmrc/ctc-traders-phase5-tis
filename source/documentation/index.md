@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 10.0 issued 14 July 2023
+Version 10.1 issued 8 August 2023
 
 
 ## Document summary
@@ -174,6 +174,8 @@ After NCTS5 goes live on 16 November 2023, there will be a cutover period during
 ### Transition period
 
 The transition period is the period of time during which countries may switch to operating NCTS5 at any point and will run until all countries have switched to operating NCTS5. NCTS operations are currently considered to be in the transition period.
+
+**Note:** The end date of the transition period is 2 December 2024.
 
 During the transition period, those countries that are operating NCTS5 must do so in transitional mode, which is equivalent to a ‘backwards compatibility’ mode. This is to ensure that messages can be exchanged between NCTS4 and NCTS5 countries, which is handled by an upgrade/downgrade convertor in the common domain, where messages are exchanged at country to country level. For example, notifying the country of destination that the movement has been released or notifying the country of departure that the movement has arrived, and so on.
 
