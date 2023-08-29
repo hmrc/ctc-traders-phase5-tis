@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 11.0 issued 25 August 2023
+Version 11.1 issued 30 August 2023
 
 
 ## Document summary
@@ -152,9 +152,7 @@ Authorised Consignors are obliged to hold special stamps to authenticate documen
 
 Guidelines for printing TADs are available in this [zip file](/guides/ctc-traders-phase5-tis/downloads/NCTS5_TAD_Printing_Guidelines_June_2023.zip) on GitHub. There are separate guidelines in the zip file for during and after the transition period (see below). Note that single house consignments apply only to the transition period and multiple house consignments apply only to the post-transition period. (Please ignore any TSAD references in any of the files in the zip file.)
 
-**Note:** The current status of the post-transition period printing guidelines is ‘draft‘. If the guidelines change after they have been finalised, we will advise you. 
-
-An IE029 message will specify the number of copies required for a printed TAD. If a return copy is required, that is, HEADER.NCTS return copy is set, two copies of the TAD will be required. Otherwise, only one needs to be printed. A return copy is required if an OoDest is not yet using the NCTS.
+**Note:** The current status of the post-transition period printing guidelines is ‘draft‘. If the guidelines change after they have been finalised, we will advise you.
 
 The ‘liability amount‘ information in the guarantee data group is not printed on a TAD.
 
