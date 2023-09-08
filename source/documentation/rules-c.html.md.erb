@@ -99,11 +99,11 @@ IF /<span>&#42;</span>/Consignment/containerIndicator is EQUAL to '0' <br/>THEN 
 
 <b>Functional Description</b>
 
-IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Type of packages&gt; is in SET CL181 (KindOfPackagesBulk)<br/>THEN<br/>&lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Shipping marks&gt; = "O"<br/>AND <br/>&lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Number of packages&gt; = "N"<br/>ELSE IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Type of packages&gt; is in SET CL182 (KindOfPackagesUnpacked)<br/>THEN<br/>&lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Shipping marks&gt; = "O"<br/>AND<br/>&lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Number of packages&gt; = "R"<br/>ELSE<br/>&lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Shipping marks&gt; = "R"<br/>AND<br/>&lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Number of packages&gt; = "R"
+IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Type of packages&gt; is in SET CL181 (KindOfPackagesBulk)<br/>THEN<br/>&lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Shipping marks&gt; = "O"<br/>AND <br/>&lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Number of packages&gt; = "N"<br/>ELSE IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Type of packages&gt; is in SET [CL182](/guides/ctc-traders-phase5-tis/downloads/CL182.zip) (KindOfPackagesUnpacked)<br/>THEN<br/>&lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Shipping marks&gt; = "O"<br/>AND<br/>&lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Number of packages&gt; = "R"<br/>ELSE<br/>&lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Shipping marks&gt; = "R"<br/>AND<br/>&lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Number of packages&gt; = "R"
 
 <b>Technical Description</b>
 
-IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/typeOfPackages is in SET CL181<br/>THEN<br/> /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/shippingMarks = "O" AND /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages = "N"<br/>ELSE IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/typeOfPackages is in SET CL182<br/>THEN<br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/shippingMarks = "O"<br/>AND<br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages = "R"<br/>ELSE<br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/shippingMarks ="R"<br/>AND<br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages = "R"
+IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/typeOfPackages is in SET CL181<br/>THEN<br/> /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/shippingMarks = "O" AND /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages = "N"<br/>ELSE IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/typeOfPackages is in SET  [CL182](/guides/ctc-traders-phase5-tis/downloads/CL182.zip)<br/>THEN<br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/shippingMarks = "O"<br/>AND<br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages = "R"<br/>ELSE<br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/shippingMarks ="R"<br/>AND<br/>/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages = "R"
 
 ##C0085
 
@@ -543,11 +543,11 @@ IF /<span>&#42;</span>/HolderOfTheTransitProcedure/Address/country is in SET CL5
 
 <b>Functional Description</b>
 
-IF &lt;Message type&gt; is in SET CL610 (MessageWithCorrelationIdentifier)<br/>  THEN &lt;Correlation identifier&gt; = "R"<br/>ELSE IF &lt;Message type&gt; is in SET CL385 (MessageTypeWithoutHeader)<br/>  THEN &lt;Correlation identifier&gt; = "N"<br/>ELSE &lt;Correlation identifier&gt; = "O"<br/>
+IF &lt;Message type&gt; is in SET [CL610 (MessageWithCorrelationIdentifier)](/guides/ctc-traders-phase5-tis/downloads/CL610.zip)<br/>  THEN &lt;Correlation identifier&gt; = "R"<br/>ELSE IF &lt;Message type&gt; is in SET [CL385](/guides/ctc-traders-phase5-tis/downloads/CL385.zip) (MessageTypeWithoutHeader)<br/>  THEN &lt;Correlation identifier&gt; = "N"<br/>ELSE &lt;Correlation identifier&gt; = "O"<br/>
 
 <b>Technical Description</b>
 
-IF /<span>&#42;</span>/messageType is in SET CL610<br/>  THEN /<span>&#42;</span>/correlationIdentifier = "R" <br/>ELSE IF /<span>&#42;</span>/messageType is in SET CL385<br/>  THEN /<span>&#42;</span>/correlationIdentifier = "N"<br/>ELSE /<span>&#42;</span>/correlationIdentifier = "O"<br/>
+IF /<span>&#42;</span>/messageType is in SET [CL610](/guides/ctc-traders-phase5-tis/downloads/CL610.zip)<br/>  THEN /<span>&#42;</span>/correlationIdentifier = "R" <br/>ELSE IF /<span>&#42;</span>/messageType is in SET [CL385](/guides/ctc-traders-phase5-tis/downloads/CL385.zip)<br/>  THEN /<span>&#42;</span>/correlationIdentifier = "N"<br/>ELSE /<span>&#42;</span>/correlationIdentifier = "O"<br/>
 
 ##C0531
 
