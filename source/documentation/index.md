@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 13.0 issued 8 September 2023
+Version 13.1 issued 11 September 2023
 
 Based on NCTS5 document version 5.15.1-v1.00 and issue date 7 March 2023
 
@@ -158,8 +158,6 @@ Guidelines for printing TADs are available in this [zip file](/guides/ctc-trader
 **Note:** The current status of the post-transition period printing guidelines is ‘draft‘. If the guidelines change after they have been finalised, we will advise you.
 
 The ‘liability amount‘ information in the guarantee data group is not printed on a TAD.
-
-If a declaration contains only one goods item, all the information for the movement is included in the TAD. If the declaration contains more than one goods item, all the goods items are included in the LoI (List of Items).
 
 The printer and print driver, used for printing the TAD, must be capable of printing a bar code of standard ISO code 128 set B (but not EAN128). 
 
