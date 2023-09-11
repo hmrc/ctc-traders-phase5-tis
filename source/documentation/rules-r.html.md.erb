@@ -222,12 +222,12 @@ THEN no further data group /<span>&#42;</span>/Consignment/HouseConsignment/Cons
 <b>Functional Description</b>
 
 IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Number of packages&gt; is EQUAL to '0' (zero)<br/>
-THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Type of packages&gt; shall not be in SET CL182 (KindOfPackagesUnpacked) for this data group &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM&gt;.
+THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Type of packages&gt; shall not be in SET [CL182](/guides/ctc-traders-phase5-tis/downloads/CL182.zip) (KindOfPackagesUnpacked) for this data group &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM&gt;.
 
 <b>Technical Description</b>
 
 IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages is EQUAL to '0' (zero)<br/>
-THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/typeOfPackages shall not be in SET CL182 for this data group /<span>&#42;</span>/ Consignment/HouseConsignment/ConsignmentItem.
+THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/typeOfPackages shall not be in SET [CL182](/guides/ctc-traders-phase5-tis/downloads/CL182.zip) for this data group /<span>&#42;</span>/ Consignment/HouseConsignment/ConsignmentItem.
 
 ##R0221
 
