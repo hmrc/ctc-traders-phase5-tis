@@ -543,7 +543,7 @@ IF /<span>&#42;</span>/HolderOfTheTransitProcedure/Address/country is in SET CL5
 
 <b>Functional Description</b>
 
-IF &lt;Message type&gt; is in SET [CL610 (MessageWithCorrelationIdentifier)](/guides/ctc-traders-phase5-tis/downloads/CL610.zip)<br/>  THEN &lt;Correlation identifier&gt; = "R"<br/>ELSE IF &lt;Message type&gt; is in SET [CL385](/guides/ctc-traders-phase5-tis/downloads/CL385.zip) (MessageTypeWithoutHeader)<br/>  THEN &lt;Correlation identifier&gt; = "N"<br/>ELSE &lt;Correlation identifier&gt; = "O"<br/>
+IF &lt;Message type&gt; is in SET [CL610](/guides/ctc-traders-phase5-tis/downloads/CL610.zip) (MessageWithCorrelationIdentifier)<br/>  THEN &lt;Correlation identifier&gt; = "R"<br/>ELSE IF &lt;Message type&gt; is in SET [CL385](/guides/ctc-traders-phase5-tis/downloads/CL385.zip) (MessageTypeWithoutHeader)<br/>  THEN &lt;Correlation identifier&gt; = "N"<br/>ELSE &lt;Correlation identifier&gt; = "O"<br/>
 
 <b>Technical Description</b>
 
