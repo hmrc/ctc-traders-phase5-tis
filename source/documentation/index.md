@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 13.1 issued 11 September 2023
+Version 13.2 issued 19 September 2023
 
 Based on NCTS5 document version 5.15.1-v1.00 and issue date 7 March 2023
 
@@ -203,16 +203,13 @@ We recommend that you should enter the EORI number of the organisation (‘the d
 
 #### Message recipient
 
-From 26 July 2023, the NCTS5 Trader Test environment will enforce the following rules for message recipient details.
+When specifying the message recipient of an arrival message for a GB to XI or XI to GB transit movement, you must enter ‘NTA‘ and the correct country code of the **actual** office of destination (either NTA.GB or NTA.XI, whichever is applicable), which could be different from the declared office of destination.
 
-| Message type | Rule | GB to XI movements | XI to GB movements |
-| ------------ | ---- | ------------------ | ------------------ |
-| Arrival | You must enter ‘NTA‘ and the correct country code of the **actual** office of destination, which could be different from the declared office of destination. | NTA.XI | NTA.GB |
-| Departure | You must enter ‘NTA‘ and the correct country code of the office of departure. | NTA.GB | NTA.XI |
+When specifying the message recipient of a departure message for a GB to XI or XI to GB transit movement, you must enter ‘NTA‘ and the correct country code of the office of departure (either NTA.GB or NTA.XI, whichever is applicable).
 
-The emphasis on GB to XI movements and XI to GB movements is specific to NCTS5 Trader Test. For the production version of the UK NCTS5 service, these rules will be applied to transit movements originating from or arriving in GB or XI. If your transit movements involve other CTC member countries, you will need to become familiar with the rules used by those countries for the message recipient field in NCTS5 arrivals and departures messages.
+If any of your transit movements involve other CTC member countries, you must enter NTA and any other information advised by each member country in its NCTS5 documentation. Please note that the rules used by other CTC members for message recipient might be different from those used by the UK.
 
-**Note:** The rules used by other CTC members for the message recipient field might be similar to but not necessarily the same as those used by the UK.
+For more information entering message recipient details in messages for GB to XI or XI to GB transit movements, see [CTC Traders API phase 5 testing guide](/guides/ctc-traders-phase5-testing-guide/documentation/test-scenarios.html#message-recipient).
 
 ### Date-time format
 
