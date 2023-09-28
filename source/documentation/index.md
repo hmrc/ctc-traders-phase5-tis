@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 13.2 issued 19 September 2023
+Version 14.0 issued 29 September 2023
 
 Based on NCTS5 document version 5.15.1-v1.00 and issue date 7 March 2023
 
@@ -149,19 +149,31 @@ Traders authorised to use NCTS simplified procedures as Authorised Consignors ca
 
 #### Fallback procedure
 
-Authorised Consignors are obliged to hold special stamps to authenticate documents in case of system failure so that they can authorise their own fallback documents. Authorised Consignors also require a Commission-approved stamp that informs the Office of Destination (OoDest) that fallback has been used.
+For information about the TAD fallback procedure, see section 'Business continuity: ‘Unscheduled’ Downtime' of the [Transit Manual Supplement](https://www.gov.uk/government/publications/transit-manual-supplement).
 
 #### Manually printing TADs
 
-Guidelines for printing TADs are available in this [zip file](/guides/ctc-traders-phase5-tis/downloads/NCTS5_TAD_Printing_Guidelines_June_2023.zip) on GitHub. There are separate guidelines in the zip file for during and after the transition period (see below). Note that single house consignments apply only to the transition period and multiple house consignments apply only to the post-transition period. (Please ignore any TSAD references in any of the files in the zip file.)
+Guidelines for printing TADs are available in this [zip file](/guides/ctc-traders-phase5-tis/downloads/NCTS5_TAD_Printing_Guidelines_June_2023.zip):
+
+- there are separate guidelines in the zip file for during and after the transition period (see below)
+- single house consignments apply only to the transition period and multiple house consignments apply only to the post-transition period
 
 **Note:** The current status of the post-transition period printing guidelines is ‘draft‘. If the guidelines change after they have been finalised, we will advise you.
 
-The ‘liability amount‘ information in the guarantee data group is not printed on a TAD.
+**Note:** Please ignore any TSAD references in any of the files in the zip file.
 
-The printer and print driver, used for printing the TAD, must be capable of printing a bar code of standard ISO code 128 set B (but not EAN128). 
+The following printing guidelines are important:
 
-The font type is BC C128 Narrow (True Type) version 2.0.
+- the ‘liability amount‘ information in the guarantee data group is not printed on a TAD
+- the printer and print driver used for printing a TAD must be capable of printing a bar code of standard ISO code 128 set B (but not EAN128)
+- use the font type BC C128 Narrow (True Type) version 2.0
+
+#### Example TAD
+
+To learn more about how to create TADs for NCTS5, review the following:
+
+- [example transition period TAD](/guides/ctc-traders-phase5-tis/downloads/Example_NCTS5_Transition_Period_TAD_September_2023.pdf) (PDF), which is based on the NCTS4 TAD template (the TAD templates used for NCTS4 and NCTS5 are the same)
+- [NCTS5 Transition Period TAD Correlation Data spreadsheet](/guides/ctc-traders-phase5-tis/downloads/NCTS5_Transition_Period_TAD_Correlation_Data_September_2023.xlsx), which maps the box numbers in an NCTS4 TAD to the corresponding data elements in NCTS5 IE013, IE015, and IE029 messages
 
 ### UK cutover from NCTS4 to NCTS5
 
