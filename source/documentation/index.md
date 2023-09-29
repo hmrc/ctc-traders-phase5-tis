@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 13.2 issued 19 September 2023
+Version 14.0 issued 29 September 2023
 
 Based on NCTS5 document version 5.15.1-v1.00 and issue date 7 March 2023
 
@@ -149,19 +149,31 @@ Traders authorised to use NCTS simplified procedures as Authorised Consignors ca
 
 #### Fallback procedure
 
-Authorised Consignors are obliged to hold special stamps to authenticate documents in case of system failure so that they can authorise their own fallback documents. Authorised Consignors also require a Commission-approved stamp that informs the Office of Destination (OoDest) that fallback has been used.
+For information about the TAD fallback procedure, see section 'Business continuity: ‘Unscheduled’ Downtime' of the [Transit Manual Supplement](https://www.gov.uk/government/publications/transit-manual-supplement).
 
 #### Manually printing TADs
 
-Guidelines for printing TADs are available in this [zip file](/guides/ctc-traders-phase5-tis/downloads/NCTS5_TAD_Printing_Guidelines_June_2023.zip) on GitHub. There are separate guidelines in the zip file for during and after the transition period (see below). Note that single house consignments apply only to the transition period and multiple house consignments apply only to the post-transition period. (Please ignore any TSAD references in any of the files in the zip file.)
+Guidelines for printing TADs are available in this [zip file](/guides/ctc-traders-phase5-tis/downloads/NCTS5_TAD_Printing_Guidelines_June_2023.zip):
+
+- there are separate guidelines in the zip file for during and after the transition period (see below)
+- single house consignments apply only to the transition period and multiple house consignments apply only to the post-transition period
 
 **Note:** The current status of the post-transition period printing guidelines is ‘draft‘. If the guidelines change after they have been finalised, we will advise you.
 
-The ‘liability amount‘ information in the guarantee data group is not printed on a TAD.
+**Note:** Please ignore any TSAD references in any of the files in the zip file.
 
-The printer and print driver, used for printing the TAD, must be capable of printing a bar code of standard ISO code 128 set B (but not EAN128). 
+The following printing guidelines are important:
 
-The font type is BC C128 Narrow (True Type) version 2.0.
+- the ‘liability amount‘ information in the guarantee data group is not printed on a TAD
+- the printer and print driver used for printing a TAD must be capable of printing a bar code of standard ISO code 128 set B (but not EAN128)
+- use the font type BC C128 Narrow (True Type) version 2.0
+
+#### Example TAD
+
+To learn more about how to create TADs for NCTS5, review the following:
+
+- [example transition period TAD](/guides/ctc-traders-phase5-tis/downloads/Example_NCTS5_Transition_Period_TAD_September_2023.pdf) (PDF), which is based on the NCTS4 TAD template (the TAD templates used for NCTS4 and NCTS5 transition period are the same - more information about the NCTS5 post-transition period TAD will be provided when it becomes available)
+- [NCTS5 Transition Period TAD Correlation Data spreadsheet](/guides/ctc-traders-phase5-tis/downloads/NCTS5_Transition_Period_TAD_Correlation_Data_September_2023.xlsx), which maps the box numbers in an NCTS4 TAD to the corresponding data elements in NCTS5 IE013, IE015, and IE029 messages
 
 ### UK cutover from NCTS4 to NCTS5
 
@@ -220,13 +232,13 @@ NCTS5 uses the [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html
 The following terms are important to understand in NCTS5:
 
 - **Consignment:** The header information is provided and applies to the whole transit declaration (up to 1 Consignment level per declaration).
-- **House Consignment:** The lowest transport information is provided, and this applies to all its Consignment Items (each Consignment can contain up to 99 House Consignments).
+- **House consignment:** The lowest transport information is provided, and this applies to all its Consignment Items (each Consignment can contain up to 99 House Consignments).
 
     The House Consignment level covers information relating to all goods that are subject to the same house transport contract. A house transport contract is a transport contract with a freight forwarder, non-vessel or aircraft operating common carrier or its agent or a postal operator. Where several house transport contracts exist, the information provided in customs declarations, notifications and proof of the customs status as Union Goods should relate to the lowest level of contracts. This is usually the contract concluded by a freight forwarder and the shipper.
 
     The new House Consignment level is introduced to give more flexibility to the Economic Operators, allowing them to lodge one declaration with several Consignors/Consignees.
 
-- **Consignment Item:** The items information is provided (each House Consignment can contain up to 999 Consignment Items).
+- **Consignment item:** The items information is provided (each House Consignment can contain up to 999 Consignment Items).
 
 ## Changelog
 
