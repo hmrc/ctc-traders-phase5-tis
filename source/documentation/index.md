@@ -172,7 +172,7 @@ The following printing guidelines are important:
 
 To learn more about how to create TADs for NCTS5, review the following:
 
-- [example transition period TAD](/guides/ctc-traders-phase5-tis/downloads/Example_NCTS5_Transition_Period_TAD_September_2023.pdf) (PDF), which is based on the NCTS4 TAD template (the TAD templates used for NCTS4 and NCTS5 are the same)
+- [example transition period TAD](/guides/ctc-traders-phase5-tis/downloads/Example_NCTS5_Transition_Period_TAD_September_2023.pdf) (PDF), which is based on the NCTS4 TAD template (the TAD templates used for NCTS4 and NCTS5 transition period are the same - more information about the NCTS5 post-transition period TAD will be provided when it becomes available)
 - [NCTS5 Transition Period TAD Correlation Data spreadsheet](/guides/ctc-traders-phase5-tis/downloads/NCTS5_Transition_Period_TAD_Correlation_Data_September_2023.xlsx), which maps the box numbers in an NCTS4 TAD to the corresponding data elements in NCTS5 IE013, IE015, and IE029 messages
 
 ### UK cutover from NCTS4 to NCTS5
@@ -232,13 +232,13 @@ NCTS5 uses the [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html
 The following terms are important to understand in NCTS5:
 
 - **Consignment:** The header information is provided and applies to the whole transit declaration (up to 1 Consignment level per declaration).
-- **House Consignment:** The lowest transport information is provided, and this applies to all its Consignment Items (each Consignment can contain up to 99 House Consignments).
+- **House consignment:** The lowest transport information is provided, and this applies to all its Consignment Items (each Consignment can contain up to 99 House Consignments).
 
     The House Consignment level covers information relating to all goods that are subject to the same house transport contract. A house transport contract is a transport contract with a freight forwarder, non-vessel or aircraft operating common carrier or its agent or a postal operator. Where several house transport contracts exist, the information provided in customs declarations, notifications and proof of the customs status as Union Goods should relate to the lowest level of contracts. This is usually the contract concluded by a freight forwarder and the shipper.
 
     The new House Consignment level is introduced to give more flexibility to the Economic Operators, allowing them to lodge one declaration with several Consignors/Consignees.
 
-- **Consignment Item:** The items information is provided (each House Consignment can contain up to 999 Consignment Items).
+- **Consignment item:** The items information is provided (each House Consignment can contain up to 999 Consignment Items).
 
 ## Changelog
 
