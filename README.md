@@ -1,5 +1,6 @@
 # CTC Traders - Technical Interface Specification
 
+
 ## Getting started
 
 To preview or build the website, we need to use the terminal.
