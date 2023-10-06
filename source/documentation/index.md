@@ -6,11 +6,21 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 14.0 issued 29 September 2023
+Version 15.0 issued 11 October 2023
 
 Based on NCTS5 document version 5.15.1-v1.00 and issue date 7 March 2023
 
 ------
+
+## NCTS5 key dates
+
+The following dates are subject to change. You should monitor this section regularly.
+
+| Event                            | Date(s)                     |
+| -------------------------------- | --------------------------- |
+| UK NCTS5 service go-live         | 1 July 2024                 |
+| UK cutover from NCTS4 to NCTS5   | 1 July 2024 to 15 July 2024 |
+| NCTS5 transition period end date | 21 January 2025             |
 
 ## Document summary
 
@@ -177,16 +187,14 @@ To learn more about how to create TADs for NCTS5, review the following:
 
 ### UK cutover from NCTS4 to NCTS5
 
-After NCTS5 goes live on 16 November 2023, there will be a cutover period during which:
+After the UK NCTS5 service goes live (see [NCTS5 key dates](#ncts5-key-dates)), there will be a cutover period during which:
 
 - the NCTS4 service will continue running only to deal with in-flight transit declarations submitted before the go-live date
 - the NCTS5 service will handle all new transit declarations submitted from the go-live date onwards
 
 ### Transition period
 
-The transition period is the period of time during which countries may switch to operating NCTS5 at any point and will run until all countries have switched to operating NCTS5. NCTS operations are currently considered to be in the transition period.
-
-**Note:** The end date of the transition period is 2 December 2024.
+The transition period (see [NCTS5 key dates](#ncts5-key-dates)) is the period of time during which countries may switch to operating NCTS5 at any point and will run until all countries have switched to operating NCTS5. NCTS operations are currently considered to be in the transition period.
 
 During the transition period, those countries that are operating NCTS5 must do so in transitional mode, which is equivalent to a ‘backwards compatibility’ mode. This is to ensure that messages can be exchanged between NCTS4 and NCTS5 countries, which is handled by an upgrade/downgrade convertor in the common domain, where messages are exchanged at country to country level. For example, notifying the country of destination that the movement has been released or notifying the country of departure that the movement has arrived, and so on.
 
