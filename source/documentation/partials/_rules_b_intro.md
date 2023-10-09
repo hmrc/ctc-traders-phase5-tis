@@ -2,7 +2,7 @@ These rules are the business rules that will be used for the transition period.
 
 During the transition period:
 
-- the NCTS4 service will continue running to deal with in-flight transit declarations submitted before 16 November
+- the NCTS4 service will continue running to deal with in-flight transit declarations submitted before the go-live of the UK NCTS5 service
 - the NCTS5 service will handle all new declarations
 - business rules **with** Transitional Period (TP) measures will be applied to the following message types:
   - 'Arrival Notification' E_ARR_NOT (IE007)
@@ -11,5 +11,5 @@ During the transition period:
   - 'Presentation Notification For The Pre-Lodged Declaration' E_PRE_NOT (IE170)
 - business rules **without** TP measures will be applied to all other message types defined in this specification
 
-**Note:** 'TPendDate' in a rule refers to 2 December 2024.
+**Note:** For information about the go-live of the UK NCTS5 service and the 'TPendDate', see [NCTS5 key dates](/guides/ctc-traders-phase5-tis/#ncts5-key-dates).
 
