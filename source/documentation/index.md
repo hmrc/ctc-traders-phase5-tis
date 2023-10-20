@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 15.0 issued 11 October 2023
+Version 15.1 issued 20 October 2023
 
 Based on NCTS5 document version 5.15.1-v1.00 and issue date 7 March 2023
 
@@ -230,10 +230,6 @@ When specifying the message recipient of a departure message for a GB to XI or X
 If any of your transit movements involve other CTC member countries, you must enter NTA and any other information advised by each member country in its NCTS5 documentation. Please note that the rules used by other CTC members for message recipient might be different from those used by the UK.
 
 For more information entering message recipient details in messages for GB to XI or XI to GB transit movements, see [CTC Traders API phase 5 testing guide](/guides/ctc-traders-phase5-testing-guide/documentation/test-scenarios.html#message-recipient).
-
-### Date-time format
-
-NCTS5 uses the [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) standard for timestamps. If the optional timezone data is omitted from the timestamp of a message sent to the NCTS, [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) is used for any responses.
 
 ### Important NCTS5 terms
 
