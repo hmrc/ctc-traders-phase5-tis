@@ -189,7 +189,7 @@ N/A
 
 <b>Functional Description</b>
 
-If a consignment is moving from one Member State to another Member State via a third country which is not in set of CL009 (CountryCodesCommonTransit) then a &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED)&gt; shall be declared and located in the specific Member States. 
+If a consignment is moving from one Member State to another Member State via a third country which is not in set of [CL009](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip) (CountryCodesCommonTransit) then a &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED)&gt; shall be declared and located in the specific Member States. 
 
 <b>Technical Description</b>
 
@@ -209,7 +209,7 @@ N/A
 
 <b>Functional Description</b>
 
-In case of Export followed by Transit and whenever the internal transit procedure is applied, the Declared Office of Destination needs to be ‘appropriate’, otherwise the initial submission and/or subsequent amendment requests of the transit declaration data as submitted by the Holder of the Transit Procedure to the Office of Departure has to be rejected. This can be validated as follows:<br/>A/ In case the Declared Office of Destination belongs to EU MS (CL010- CountryCodesCommunity), and its Custom Office Reference Number is included in both CL172- CustomsOfficeDestination and CL294-CustomsOfficeExitDeclared, then it is considered ‘appropriate’ (otherwise is considered not ‘appropriate’);<br/>B/ In case the Declared Office of Destination belongs to CTC (CL112- CountryCodesCTC), it is considered by default ‘appropriate’.<br/>When the Declared Office of Destination is considered as not ‘appropriate’, the messages CC013C or CC015C will be responded with CC056C that will report the error code '12- Codelist violation'.<br/>
+In case of Export followed by Transit and whenever the internal transit procedure is applied, the Declared Office of Destination needs to be ‘appropriate’, otherwise the initial submission and/or subsequent amendment requests of the transit declaration data as submitted by the Holder of the Transit Procedure to the Office of Departure has to be rejected. This can be validated as follows:<br/>A/ In case the Declared Office of Destination belongs to EU MS ([CL010](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip) - CountryCodesCommunity), and its Custom Office Reference Number is included in both [CL172](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CustomsOfficeDestination.zip) - CustomsOfficeDestination and [CL294](downloads/CL294.zip) -CustomsOfficeExitDeclared, then it is considered ‘appropriate’ (otherwise is considered not ‘appropriate’);<br/>B/ In case the Declared Office of Destination belongs to CTC ([CL112](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip) - CountryCodesCTC), it is considered by default ‘appropriate’.<br/>When the Declared Office of Destination is considered as not ‘appropriate’, the messages CC013C or CC015C will be responded with CC056C that will report the error code '12- Codelist violation'.<br/>
 
 <b>Technical Description</b>
 
@@ -279,7 +279,7 @@ N/A
 
 <b>Functional Description</b>
 
-The Data Group &lt;CONSIGNMENT- HOUSE CONSIGNMENT- CONSIGNMENT ITEM- ADDITIONAL REFERENCE&gt; will be also used to include the information of EMCS consignment exported from one EU member state into a Non-EU-Member state, in case of Export Followed by Transit (where in messages CC013C or CC015C the &lt;CONSIGNMENT- HOUSE CONSIGNMENT- PREVIOUS DOCUMENT.Type&gt; = ‘N830’ AND &lt;CONSIGNMENT- HOUSE CONSIGNMENT- CONSIGNMENT ITEM- ADDITIONAL REFERENCE. Type&gt; is in SET CL234 (DocumentTypeExcise)).<br/>In this case, the Data Group &lt;GOODS SHIPMENT- GOODS ITEM- PREVIOUS DOCUMENT&gt; of the Export declaration, will be mapped with the Data Group &lt;CONSIGNMENT- HOUSE CONSIGNMENT- CONSIGNMENT ITEM- ADDITIONAL REFERENCE&gt; of the Transit declaration.   
+The Data Group &lt;CONSIGNMENT- HOUSE CONSIGNMENT- CONSIGNMENT ITEM- ADDITIONAL REFERENCE&gt; will be also used to include the information of EMCS consignment exported from one EU member state into a Non-EU-Member state, in case of Export Followed by Transit (where in messages CC013C or CC015C the &lt;CONSIGNMENT- HOUSE CONSIGNMENT- PREVIOUS DOCUMENT.Type&gt; = ‘N830’ AND &lt;CONSIGNMENT- HOUSE CONSIGNMENT- CONSIGNMENT ITEM- ADDITIONAL REFERENCE. Type&gt; is in SET [CL234](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DocumentTypeExcise.zip) (DocumentTypeExcise)).<br/>In this case, the Data Group &lt;GOODS SHIPMENT- GOODS ITEM- PREVIOUS DOCUMENT&gt; of the Export declaration, will be mapped with the Data Group &lt;CONSIGNMENT- HOUSE CONSIGNMENT- CONSIGNMENT ITEM- ADDITIONAL REFERENCE&gt; of the Transit declaration.   
 
 <b>Technical Description</b>
 
@@ -289,7 +289,7 @@ N/A
 
 <b>Functional Description</b>
 
-The Data Group &lt;CONSIGNMENT- HOUSE CONSIGNMENT- CONSIGNMENT ITEM- SUPPORTING DOCUMENT&gt;, can be also used to include the information related to EMCS consignment (where &lt;CONSIGNMENT- HOUSE CONSIGNMENT- CONSIGNMENT ITEM- SUPPORTING DOCUMENT.Type&gt; is in SET CL234 (DocumentTypeExcise)), transported from one EU member state into another EU member state via a CTC country.
+The Data Group &lt;CONSIGNMENT- HOUSE CONSIGNMENT- CONSIGNMENT ITEM- SUPPORTING DOCUMENT&gt;, can be also used to include the information related to EMCS consignment (where &lt;CONSIGNMENT- HOUSE CONSIGNMENT- CONSIGNMENT ITEM- SUPPORTING DOCUMENT.Type&gt; is in SET [CL234](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DocumentTypeExcise.zip) (DocumentTypeExcise)), transported from one EU member state into another EU member state via a CTC country.
 
 <b>Technical Description</b>
 
@@ -459,7 +459,7 @@ N/A
 
 <b>Functional Description</b>
 
-The Data Item ‘Identification number’ is required for the Data Group ‘HOLDER OF THE TRANSIT PROCEDURE’, except for:<br/>- economic operators residing outside of the common transit countries (outside CL009), and <br/>- private individuals for which an identification number may be used but is not required.<br/>
+The Data Item ‘Identification number’ is required for the Data Group ‘HOLDER OF THE TRANSIT PROCEDURE’, except for:<br/>- economic operators residing outside of the common transit countries (outside [CL009](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip)), and <br/>- private individuals for which an identification number may be used but is not required.<br/>
 
 <b>Technical Description</b>
 
@@ -629,7 +629,7 @@ N/A
 
 <b>Functional Description</b>
 
-NTA will pass to the NECA, the value from the Data Item &lt;CC029C-TRANSIT OPERATION.Declaration Type&gt; where the CL231 (NCTS-P5) applies.
+NTA will pass to the NECA, the value from the Data Item &lt;CC029C-TRANSIT OPERATION.Declaration Type&gt; where the [CL231](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DeclarationType.zip) (NCTS-P5) applies.
 
 <b>Technical Description</b>
 
@@ -649,7 +649,7 @@ N/A
 
 <b>Functional Description</b>
 
-The Data Item &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-COMMODITY.CUS code&gt; can be used when the CL016 (CUSCode) in CS/RD2 includes [CUS code & CN code] where the CN code matches with the &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-COMMODITY-COMMODITY CODE. Harmonized System sub-heading code&gt; & &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-COMMODITY-COMMODITY CODE.Combined nomenclature code&gt;.
+The Data Item &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-COMMODITY.CUS code&gt; can be used when the [CL016](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CUSCode.zip) (CUSCode) in CS/RD2 includes [CUS code & CN code] where the CN code matches with the &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-COMMODITY-COMMODITY CODE. Harmonized System sub-heading code&gt; & &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-COMMODITY-COMMODITY CODE.Combined nomenclature code&gt;.
 
 <b>Technical Description</b>
 
@@ -709,7 +709,7 @@ N/A
 
 <b>Functional Description</b>
 
-The exact content of the CL326 (QualifierOfTheIdentification) is defined nationally, considering -for example -that only in some NAs the value 'T' must only be used in case “House number” and “Postcode” or only “Postcode” define an exact and unique location.
+The exact content of the [CL326](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_QualifierOfTheIdentification.zip) (QualifierOfTheIdentification) is defined nationally, considering -for example -that only in some NAs the value 'T' must only be used in case “House number” and “Postcode” or only “Postcode” define an exact and unique location.
 
 <b>Technical Description</b>
 
