@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 15.1 issued 20 October 2023
+Version 16.0 issued 27 October 2023
 
 Based on NCTS5 document version 5.15.1-v1.00 and issue date 7 March 2023
 
@@ -145,7 +145,7 @@ This applies in all circumstances except for national transit movements, for exa
 
 A Transit Accompanying Document (TAD) is required for each NCTS5 transit declaration.
 
-**Note:** Transit Security Accompanying Documents (TSADs) are out of scope for NCTS5.
+**Note:** Although safety and security (S&S) data elements can be provided in an IE015 message and a Transit Security Accompanying Document (TSAD) can be printed for a UK transit departure, safety and security declarations (SSDs) must be completed separately. This means that you cannot use a TSAD to fulfil your UK entry summary declaration (ENS) and exit summary declaration (EXS) requirements.
 
 TADs must be created by using information only from IE029 messages.
 
