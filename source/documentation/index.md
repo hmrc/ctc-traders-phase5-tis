@@ -1,7 +1,7 @@
 ---
 title: NCTS Phase 5 Technical Interface Specification
 weight: 1
-description: Software developers, designers, product owners or business analysts. Integrate your software with the ERMIS service
+description: Software developers, designers, product owners or business analysts. Learn about the processes involved in the exchange of messages between traders and phase 5 of the NCTS at departure and arrival of transit movements, and about the definitions, formats and validations of those messages.
 ---
 
 # NCTS Phase 5 Technical Interface Specification

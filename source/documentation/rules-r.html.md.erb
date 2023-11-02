@@ -1,7 +1,7 @@
 ---
-title: NCTS Phase 5 Technical Interface Specification
+title: Rules R | NCTS Phase 5 Technical Interface Specification
 weight: 9
-description: Software developers, designers, product owners or business analysts. Integrate your software with the ERMIS service
+description: Software developers, designers, product owners or business analysts. Learn about the processes involved in the exchange of messages between traders and phase 5 of the NCTS at departure and arrival of transit movements, and about the definitions, formats and validations of those messages.
 ---
 #Rules R
 <%= partial 'documentation/partials/rulesintro' %>
@@ -39,11 +39,11 @@ The value of /<span>&#42;</span>/CustomsOfficeOfTransitDeclared/arrivalDateAndTi
 
 <b>Functional Description</b>
 
-IF the first two characters of &lt;CUSTOMS OFFICE OF DESTINATION (DECLARED). Reference number&gt; is in set [CL112](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip) (CountryCodesCTC)<br/>THEN the first two characters of at least one instance of &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED). Reference number&gt; shall be EQUAL to the first two characters of &lt;CUSTOMS OFFICE OF DESTINATION (DECLARED). Reference number&gt;; <br/>IF the first two characters of &lt;CUSTOMS OFFICE OF DEPARTURE.Reference number&gt; is in set [CL112](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip) (CountryCodesCTC) AND If the first two characters of &lt;CUSTOMS OFFICE OF DESTINATION (DECLARED). Reference number&gt; is in set [CL010](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip) (CountryCodesCommunity) <br/>THEN the first two characters of at least one instance of &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED). Reference number&gt; shall be in set CL010 (CountryCodesCommunity). <br/>
+IF the first two characters of &lt;CUSTOMS OFFICE OF DESTINATION (DECLARED). Reference number&gt; is in set [CL112](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip) (CountryCodesCTC)<br/>THEN the first two characters of at least one instance of &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED). Reference number&gt; shall be EQUAL to the first two characters of &lt;CUSTOMS OFFICE OF DESTINATION (DECLARED). Reference number&gt;; <br/>IF the first two characters of &lt;CUSTOMS OFFICE OF DEPARTURE.Reference number&gt; is in set CL112 (CountryCodesCTC) AND If the first two characters of &lt;CUSTOMS OFFICE OF DESTINATION (DECLARED). Reference number&gt; is in set [CL010](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip) (CountryCodesCommunity) <br/>THEN the first two characters of at least one instance of &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED). Reference number&gt; shall be in set CL010 (CountryCodesCommunity). <br/>
 
 <b>Technical Description</b>
 
-IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in set CL112   <br/>THEN the first two characters of at least one instance of /<span>&#42;</span>/CustomsOfficeOfTransitDeclared/referenceNumber shall be EQUAL to the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber;<br/>If the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in set CL112 AND If the<br/>first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in set CL010<br/>THEN the first two characters of at least one instance of<br/>/<span>&#42;</span>/CustomsOfficeOfTransitDeclared/referenceNumber shall be in SET CL010. 
+IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in set [CL112](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip)<br/>THEN the first two characters of at least one instance of /<span>&#42;</span>/CustomsOfficeOfTransitDeclared/referenceNumber shall be EQUAL to the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber;<br/>If the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in set CL112 AND If the<br/>first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in set [CL010](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip) <br/>THEN the first two characters of at least one instance of<br/>/<span>&#42;</span>/CustomsOfficeOfTransitDeclared/referenceNumber shall be in SET CL010. 
 
 ##R0007
 
@@ -69,17 +69,17 @@ Each /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declaratio
 
 <b>Functional Description</b>
 
-IF &lt;TRANSIT OPERATION.Declaration type&gt; is in SET {T2, T2F} AND the first two characters of &lt;CUSTOMS OFFICE OF DEPARTURE.Reference number&gt; is in SET [CL112](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip) (CountryCodesCTC)<br/>THEN <br/>(at least one &lt;CONSIGNMENT-PREVIOUS DOCUMENT.Type&gt; is in SET  [CL178](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentUnionGoods.zip) (PreviousDocumentUnionGoods)) OR<br/>(at least one &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PREVIOUS DOCUMENT.Type&gt; is in SET CL178 (PreviousDocumentUnionGoods)) <br/>for each and every Consignment Item;<br/>IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Declaration type&gt; is in SET {T2, T2F} <br/>AND the first two characters of &lt;CUSTOMS OFFICE OF DEPARTURE.Reference<br/>number&gt; is in SET CL112 (CountryCodesCTC)<br/>THEN <br/>(at least one /<span>&#42;</span>/Consignment/PreviousDocument/type is in SET CL178 (PreviousDocumentUnionGoods)) OR<br/>(at least one &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PREVIOUS DOCUMENT.Type&gt; is in SET CL178 (PreviousDocumentUnionGoods) <br/>for this ‘Consignment item’)
+IF &lt;TRANSIT OPERATION.Declaration type&gt; is in SET {T2, T2F} AND the first two characters of &lt;CUSTOMS OFFICE OF DEPARTURE.Reference number&gt; is in SET [CL112](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip) (CountryCodesCTC)<br/>THEN <br/>(at least one &lt;CONSIGNMENT-PREVIOUS DOCUMENT.Type&gt; is in SET [CL178](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentUnionGoods.zip) (PreviousDocumentUnionGoods)) OR<br/>(at least one &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PREVIOUS DOCUMENT.Type&gt; is in SET CL178 (PreviousDocumentUnionGoods)) <br/>for each and every Consignment Item;<br/>IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Declaration type&gt; is in SET {T2, T2F} <br/>AND the first two characters of &lt;CUSTOMS OFFICE OF DEPARTURE.Reference<br/>number&gt; is in SET CL112 (CountryCodesCTC)<br/>THEN <br/>(at least one /<span>&#42;</span>/Consignment/PreviousDocument/type is in SET CL178 (PreviousDocumentUnionGoods)) OR<br/>(at least one &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PREVIOUS DOCUMENT.Type&gt; is in SET CL178 (PreviousDocumentUnionGoods) <br/>for this ‘Consignment item’)
 
 <b>Technical Description</b>
 
-IF /<span>&#42;</span>/Transit Operation/declarationType is in SET {T2, T2F}<br/>AND the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL112<br/>THEN <br/>(at least one /<span>&#42;</span>/Consignment/PreviousDocument/type is in SET CL178) OR<br/>(at least one /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/type is in SET CL178) for each and every Consignment Item;<br/>IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2, T2F} <br/>AND the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL112<br/>THEN <br/>(at least one /<span>&#42;</span>/Consignment/PreviousDocument/type is in SET CL178) OR<br/>(at least one /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/type is in SET CL178 for this ‘Consignment item’)<br/>
+IF /<span>&#42;</span>/Transit Operation/declarationType is in SET {T2, T2F}<br/>AND the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET [CL112](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip)<br/>THEN <br/>(at least one /<span>&#42;</span>/Consignment/PreviousDocument/type is in SET [CL178](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentUnionGoods.zip) ) OR<br/>(at least one /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/type is in SET CL178) for each and every Consignment Item;<br/>IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2, T2F} <br/>AND the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL112<br/>THEN <br/>(at least one /<span>&#42;</span>/Consignment/PreviousDocument/type is in SET CL178) OR<br/>(at least one /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/type is in SET CL178 for this ‘Consignment item’)<br/>
 
 ##R0023
 
 <b>Functional Description</b>
 
-IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL REFERENCE.Type&gt; is in SET CL234 (DocumentTypeExcise)<br/>THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL REFERENCE.Reference number&gt; shall not be ‘0’ (zero)
+IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL REFERENCE.Type&gt; is in SET [CL234](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DocumentTypeExcise.zip) (DocumentTypeExcise)<br/>THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL REFERENCE.Reference number&gt; shall not be ‘0’ (zero)
 
 <b>Technical Description</b>
 
@@ -109,21 +109,75 @@ The structure of this Data Item is validated as specified in DDCOM. The check di
 
 <b>Functional Description</b>
 
-Numbering of items: <br/><br/>IF a discrepancy is identified in the Data Group THEN: <br/>  - 'Sequence number' shall be unique AND EQUAL to the sequence number of the Data <br/>     Group  defined in the declaration for which the discrepancy is reported. <br/>IF a new Data Group is identified THEN: <br/>   - 'Sequence number' shall be unique AND EQUAL to the number of the last sequence <br/>     number of the Data Group <br/>      + 1 and the rest of the Data Items contained in the Data Group and all sub–Data Groups <br/>      shall be filled in except for the Data Elements that are defined as optional or dependent <br/>      in the declaration. <br/>IF the information related to a Data Group is missing <br/>THEN: <br/>   - 'Sequence number' shall be unique AND EQUAL to the sequence number of the Data <br/>      Group defined in the declaration <br/>      and the rest of the Data Items contained in the Data Group and all sub–Data Groups <br/>      shall not be filled. <br/>Note: The Sequence number of a Data Group is unique if the XPath and the value of the sequence number of this Data Item is unique in this message. <br/>
+Numbering of items: <br/><br/>IF a discrepancy is identified in the Data Group THEN:
+
+- 'Sequence number' shall be unique AND EQUAL to the sequence number of the Data Group  defined in the declaration for which the discrepancy is reported. 
+
+IF a new Data Group is identified THEN:
+
+- 'Sequence number' shall be unique AND EQUAL to the number of the last sequence number of the Data Group + 1 and the rest of the Data Items contained in the Data Group and all sub–Data Groups shall be filled in except for the Data Elements that are defined as optional or dependent in the declaration.
+
+IF the information related to a Data Group is missing THEN:
+
+- 'Sequence number' shall be unique AND EQUAL to the sequence number of the Data Group defined in the declaration and the rest of the Data Items contained in the Data Group and all sub–Data Groups shall not be filled.
+
+**Note:** The Sequence number of a Data Group is unique if the XPath and the value of the sequence number of this Data Item is unique in this message. <br/>
 
 <b>Technical Description</b>
 
-Numbering of items: <br/><br/>IF a discrepancy is identified in the Data Group THEN: <br/>  - 'Sequence number' shall be unique AND EQUAL to the sequence number of the Data <br/>     Group  defined in the declaration for which the discrepancy is reported. <br/>IF a new Data Group is identified THEN: <br/>   - 'Sequence number' shall be unique AND EQUAL to the number of the last sequence <br/>     number of the Data Group <br/>      + 1 and the rest of the Data Items contained in the Data Group and all sub–Data Groups <br/>      shall be filled in except for the Data Elements that are defined as optional or dependent <br/>      in the declaration. <br/>IF the information related to a Data Group is missing <br/>THEN: <br/>   - 'Sequence number' shall be unique AND EQUAL to the sequence number of the Data <br/>      Group defined in the declaration <br/>      and the rest of the Data Items contained in the Data Group and all sub–Data Groups <br/>      shall not be filled. <br/>Note: The Sequence number of a Data Group is unique if the XPath and the value of the sequence number of this Data Item is unique in this message. <br/>
+Numbering of items: <br/><br/>IF a discrepancy is identified in the Data Group THEN:
+
+- 'Sequence number' shall be unique AND EQUAL to the sequence number of the Data <br/>     Group  defined in the declaration for which the discrepancy is reported.
+
+IF a new Data Group is identified THEN:
+
+- 'Sequence number' shall be unique AND EQUAL to the number of the last sequence number of the Data Group + 1 and the rest of the Data Items contained in the Data Group and all sub–Data Groups shall be filled in except for the Data Elements that are defined as optional or dependent in the declaration.
+
+IF the information related to a Data Group is missing THEN:
+
+- 'Sequence number' shall be unique AND EQUAL to the sequence number of the Data Group defined in the declaration and the rest of the Data Items contained in the Data Group and all sub–Data Groups shall not be filled.
+
+**Note:** The Sequence number of a Data Group is unique if the XPath and the value of the sequence number of this Data Item is unique in this message. <br/>
 
 ##R0055
 
 <b>Functional Description</b>
 
-Numbering of items: <br/>IF a discrepancy is identified in the Data Group THEN: <br/>  - ‘Declaration goods item number' shall be unique AND EQUAL to the declaration goods item <br/>     number defined in the declaration for which the discrepancy is reported AND <br/>  - 'Goods item number’ shall be unique AND EQUAL to the goods item number defined in the <br/>    declaration for which the discrepancy is reported. <br/>IF a new Data Group is identified THEN: <br/>   - ‘Declaration goods item number' shall be unique AND EQUAL to the last declaration goods item <br/>      number defined in the declaration + 1 AND <br/>   - 'Goods item number’ shall be unique AND EQUAL to the last goods item number defined in the <br/>      declaration + 1 AND  <br/>      the rest of the Data Items contained in the Data Group and all sub–Data Groups shall be     <br/>      filled in except for the Data Elements that are defined as optional or dependent in the <br/>      declaration. <br/>IF a Goods item is missing THEN: <br/>   - ‘Declaration goods item number' shall be unique AND EQUAL to the number of the declaration <br/>      goods item number defined in the declaration AND <br/>   - 'Goods item number’ shall be unique AND EQUAL to the  item number defined in the <br/>      declaration AND the rest of the Data Items contained in the Data Group and all sub–Data Groups <br/>      shall not be filled. <br/>Note: The Sequence number of a Data Group is unique if the XPath and the value of the sequence number of this Data Item is unique in this message. <br/>
+Numbering of items: <br/><br/>IF a discrepancy is identified in the Data Group THEN:
+
+- ‘Declaration goods item number' shall be unique AND EQUAL to the declaration goods item number defined in the declaration for which the discrepancy is reported AND
+- 'Goods item number’ shall be unique AND EQUAL to the goods item number defined in the declaration for which the discrepancy is reported.
+
+IF a new Data Group is identified THEN:
+
+- ‘Declaration goods item number' shall be unique AND EQUAL to the last declaration goods item number defined in the declaration + 1 AND
+- 'Goods item number’ shall be unique AND EQUAL to the last goods item number defined in the declaration + 1 AND  the rest of the Data Items contained in the Data Group and all sub–Data Groups shall be filled in except for the Data Elements that are defined as optional or dependent in the  declaration.
+
+IF a Goods item is missing THEN:
+
+- ‘Declaration goods item number' shall be unique AND EQUAL to the number of the declaration goods item number defined in the declaration AND
+- 'Goods item number’ shall be unique AND EQUAL to the  item number defined in the declaration AND the rest of the Data Items contained in the Data Group and all sub–Data Groups shall not be filled.
+
+**Note:** The Sequence number of a Data Group is unique if the XPath and the value of the sequence number of this Data Item is unique in this message. <br/>
 
 <b>Technical Description</b>
 
-Numbering of items: <br/>IF a discrepancy is identified in the Data Group THEN: <br/>  - ‘Declaration goods item number' shall be unique AND EQUAL to the declaration goods item <br/>     number defined in the declaration for which the discrepancy is reported AND <br/>  - 'Goods item number’ shall be unique AND EQUAL to the goods item number defined in the <br/>    declaration for which the discrepancy is reported. <br/>IF a new Data Group is identified THEN: <br/>   - ‘Declaration goods item number' shall be unique AND EQUAL to the last declaration goods item <br/>      number defined in the declaration + 1 AND <br/>   - 'Goods item number’ shall be unique AND EQUAL to the last goods item number defined in the <br/>      declaration + 1 AND  <br/>      the rest of the Data Items contained in the Data Group and all sub–Data Groups shall be     <br/>      filled in except for the Data Elements that are defined as optional or dependent in the <br/>      declaration. <br/>IF a Goods item is missing THEN: <br/>   - ‘Declaration goods item number' shall be unique AND EQUAL to the number of the declaration <br/>      goods item number defined in the declaration AND <br/>   - 'Goods item number’ shall be unique AND EQUAL to the  item number defined in the <br/>      declaration AND the rest of the Data Items contained in the Data Group and all sub–Data Groups <br/>      shall not be filled. <br/>Note: The Sequence number of a Data Group is unique if the XPath and the value of the sequence number of this Data Item is unique in this message. <br/>
+Numbering of items: <br/><br/>IF a discrepancy is identified in the Data Group THEN: 
+
+- ‘Declaration goods item number' shall be unique AND EQUAL to the declaration goods item number defined in the declaration for which the discrepancy is reported AND
+- 'Goods item number’ shall be unique AND EQUAL to the goods item number defined in the declaration for which the discrepancy is reported.
+
+IF a new Data Group is identified THEN:
+
+- ‘Declaration goods item number' shall be unique AND EQUAL to the last declaration goods item number defined in the declaration + 1 AND
+- 'Goods item number’ shall be unique AND EQUAL to the last goods item number defined in the declaration + 1 AND  the rest of the Data Items contained in the Data Group and all sub–Data Groups shall be filled in except for the Data Elements that are defined as optional or dependent in the declaration.
+
+IF a Goods item is missing THEN:
+
+- ‘Declaration goods item number' shall be unique AND EQUAL to the number of the declaration goods item number defined in the declaration AND
+- 'Goods item number’ shall be unique AND EQUAL to the  item number defined in the declaration AND the rest of the Data Items contained in the Data Group and all sub–Data Groups shall not be filled.
+
+**Note:** The Sequence number of a Data Group is unique if the XPath and the value of the sequence number of this Data Item is unique in this message. <br/>
 
 ##R0060
 
@@ -159,11 +213,17 @@ If /<span>&#42;</span>/TraderAtDestination/communicationLanguageAtDestination is
 
 <b>Functional Description</b>
 
-Data item &lt;INVALIDATION.Decision&gt; can contain 2 valid values:<br/> - ‘0’ = ‘No’: Invalidation refused by Customs: Decision<br/> - ‘1’ = ‘Yes’: Invalidation accepted by Customs: Decision
+Data item &lt;INVALIDATION.Decision&gt; can contain 2 valid values:
+
+- ‘0’ = ‘No’: Invalidation refused by Customs: Decision
+- ‘1’ = ‘Yes’: Invalidation accepted by Customs: Decision
 
 <b>Technical Description</b>
 
-Data item /<span>&#42;</span>/Invalidation/decision can contain 2 valid values:<br/> - ‘0’ = ‘No’: Invalidation refused by Customs: Decision<br/> - ‘1’ = ‘Yes’: Invalidation accepted by Customs: Decision
+Data item /<span>&#42;</span>/Invalidation/decision can contain 2 valid values:
+
+- ‘0’ = ‘No’: Invalidation refused by Customs: Decision
+- ‘1’ = ‘Yes’: Invalidation accepted by Customs: Decision
 
 ##R0103
 
@@ -253,11 +313,19 @@ IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/Go
 
 <b>Functional Description</b>
 
-Where &lt;CONSIGNMENT.Mode of transport at the border&gt; is EQUAL to '4' the (IATA/ICAO) flight number shall be indicated and shall have a format an..8:<br/>  - an..3: mandatory prefix identifying the airline/operator<br/>  - n..4: mandatory number of the flight<br/>  - a1: optional suffix 
+Where &lt;CONSIGNMENT.Mode of transport at the border&gt; is EQUAL to '4' the (IATA/ICAO) flight number shall be indicated and shall have a format an..8:
+
+- an..3: mandatory prefix identifying the airline/operator
+- n..4: mandatory number of the flight
+- a1: optional suffix 
 
 <b>Technical Description</b>
 
-Where /<span>&#42;</span>/Consignment/modeOfTransportAtTheBorder is EQUAL to '4' the (IATA/ICAO) flight number shall be indicated and shall have a format an..8:<br/>  - an..3: mandatory prefix identifying the airline/operator<br/>  - n..4: mandatory number of the flight<br/>  - a1: optional suffix<br/>
+Where /<span>&#42;</span>/Consignment/modeOfTransportAtTheBorder is EQUAL to '4' the (IATA/ICAO) flight number shall be indicated and shall have a format an..8:
+
+- an..3: mandatory prefix identifying the airline/operator
+- n..4: mandatory number of the flight
+- a1: optional suffix<br/>
 
 ##R0318
 
@@ -433,11 +501,34 @@ IF the D.G. /CC190C/Consignment/LocationOfGoods/Address is PRESENT<br/>THEN /CC1
 
 <b>Functional Description</b>
 
-IF ( the Data Item &lt;TRANSIT OPERATION.Amendment type flag&gt; is EQUAL to ‘1' and the movement is in state “Guarantee under amendment”)<br/>    (i.e. the message CC013C is used for amending the Guarantee previously declared while the movement is in   state “Guarantee under amendment”)<br/>THEN<br/>the only difference between this CC013C and the CC015C (or the previous CC013C) shall be located<br/>in the Data Group &lt;GUARANTEE&gt;<br/>ELSE<br/>   IF (the Data Item &lt;TRANSIT OPERATION.Amendment type flag&gt; is EQUAL to ‘0' AND the movement IS NOT IN STATE “Guarantee under amendment”) <br/>  THEN<br/>      all Data Groups and Data Items of the original declaration can be amended, with the exception of the following Data Groups:<br/>              - &lt;HOLDER OF THE TRANSIT PROCEDURE&gt;<br/>              - &lt;REPRESENTATIVE&gt;<br/>              - &lt;CUSTOMS OFFICE OF DEPARTURE&gt;<br/>           and the exception of the following Data Items:<br/>              - &lt;TRANSIT OPERATION.Additional declaration type&gt;<br/>              - &lt;TRANSIT OPERATION.Declaration type&gt;<br/>              - &lt;TRANSIT OPERATION.MRN&gt;<br/>              - &lt;TRANSIT OPERATION.LRN&gt;<br/>              - &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-COMMODITY-COMMODITY<br/>                  CODE. Harmonized System sub-heading code&gt;<br/>              - &lt;TRANSIT OPERATION.Security&gt;<br/>
+IF ( the Data Item &lt;TRANSIT OPERATION.Amendment type flag&gt; is EQUAL to ‘1' and the movement is in state “Guarantee under amendment”) (i.e. the message CC013C is used for amending the Guarantee previously declared while the movement is in state “Guarantee under amendment”)<br/>THEN<br/>the only difference between this CC013C and the CC015C (or the previous CC013C) shall be located<br/>in the Data Group &lt;GUARANTEE&gt;<br/>ELSE<br/>IF (the Data Item &lt;TRANSIT OPERATION.Amendment type flag&gt; is EQUAL to ‘0' AND the movement IS NOT IN STATE “Guarantee under amendment”) <br/>THEN<br/>all Data Groups and Data Items of the original declaration can be amended, with the exception of the following Data Groups:
+
+- &lt;HOLDER OF THE TRANSIT PROCEDURE&gt;
+- &lt;REPRESENTATIVE&gt;<br/>
+- &lt;CUSTOMS OFFICE OF DEPARTURE&gt;<br/><br/>and the exception of the following Data Items:
+
+- &lt;TRANSIT OPERATION.Additional declaration type&gt;
+- &lt;TRANSIT OPERATION.Declaration type&gt;
+- &lt;TRANSIT OPERATION.MRN&gt;
+- &lt;TRANSIT OPERATION.LRN&gt;
+- &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-COMMODITY-COMMODITY CODE. Harmonized System sub-heading code&gt;
+- &lt;TRANSIT OPERATION.Security&gt;<br/>
 
 <b>Technical Description</b>
 
-IF (the Data Item /CC013C/TransitOperation/amendmentTypeFlag is EQUAL to ‘1' AND the movement is in state “Guarantee under amendment”)<br/>     (i.e. the message CC013C is used for amending the Guarantee previously declared while the movement is in state “Guarantee under amendment”)<br/>THEN <br/>the only difference between this CC013C and the CC015C (or the previous CC013C) shall be located in the Data Group /<span>&#42;</span>/Guarantee<br/>ELSE<br/>     IF (the Data Item /<span>&#42;</span>/TransitOperation/amendmentTypeFlag is EQUAL to ‘0' AND the movement IS NOT IN STATE “Guarantee under amendment”) <br/>     THEN   <br/>         all Data Groups and Data Items of the original declaration can be amended, with the exception of the following Data Groups:<br/>               - /<span>&#42;</span>/HolderOfTheTransitProcedure<br/>               - /<span>&#42;</span>/Representative<br/>               - /<span>&#42;</span>/CustomsOfficeOfDeparture<br/>            and the exception of the following Data Items:<br/>               - /<span>&#42;</span>/TransitOperation/additionalDeclarationType<br/>               - /<span>&#42;</span>/TransitOperation/declarationType<br/>               - /<span>&#42;</span>/TransitOperation/MRN<br/>               - /<span>&#42;</span>/TransitOperation/LRN<br/>               -  /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/<br/>                 CommodityCode/harmonizedSystemSubHeadingCode<br/>               - /<span>&#42;</span>/TransitOperation/security<br/>
+IF (the Data Item /CC013C/TransitOperation/amendmentTypeFlag is EQUAL to ‘1' AND the movement is in state “Guarantee under amendment”) (i.e. the message CC013C is used for amending the Guarantee previously declared while the movement is in state “Guarantee under amendment”)<br/>THEN<br/>the only difference between this CC013C and the CC015C (or the previous CC013C) shall be located in the Data Group /<span>&#42;</span>/Guarantee<br/>ELSE<br/>IF (the Data Item /<span>&#42;</span>/TransitOperation/amendmentTypeFlag is EQUAL to ‘0' AND the movement IS NOT IN STATE “Guarantee under amendment”) <br/>THEN<br/>all Data Groups and Data Items of the original declaration can be amended, with the exception of the following Data Groups:
+
+- /<span>&#42;</span>/HolderOfTheTransitProcedure
+- /<span>&#42;</span>/Representative
+- /<span>&#42;</span>/CustomsOfficeOfDeparture<br/><br/>
+and the exception of the following Data Items:
+
+- /<span>&#42;</span>/TransitOperation/additionalDeclarationType
+- /<span>&#42;</span>/TransitOperation/declarationType
+- /<span>&#42;</span>/TransitOperation/MRN
+- /<span>&#42;</span>/TransitOperation/LRN
+- /<span>&#42</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode/harmonizedSystemSubHeadingCode
+-  /<span>&#42;</span>/TransitOperation/security<br/>
 
 ##R0551
 
@@ -517,7 +608,7 @@ IF sender is in EU ([CL010](https://ec.europa.eu/taxation_customs/dds2/rd/compre
 
 <b>Technical Description</b>
 
-IF sender is in EU (CL010)<br/>THEN the value must be a valid EORI or TCUIN (validated by receiver, if located in EU),<br/>ELSE (sender is not in EU) the value must be a TIN number (validated by the message sender only).<br/>The EORI/TCUIN values shall comply with the following pattern: &lt;xs:pattern value=" [A-Z]{2}[\x21-\x7E]{1,15}"/&gt;
+IF sender is in EU ([CL010](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip))<br/>THEN the value must be a valid EORI or TCUIN (validated by receiver, if located in EU),<br/>ELSE (sender is not in EU) the value must be a TIN number (validated by the message sender only).<br/>The EORI/TCUIN values shall comply with the following pattern: &lt;xs:pattern value=" [A-Z]{2}[\x21-\x7E]{1,15}"/&gt;
 
 ##R0851
 
@@ -557,7 +648,7 @@ IF sender is in EU ([CL010](https://ec.europa.eu/taxation_customs/dds2/rd/compre
 
 <b>Technical Description</b>
 
-IF sender is in EU (CL010)<br/>THEN the value must be a valid EORI or TCUIN<br/>ELSE (sender is not in EU) the value must be a valid TIN number.
+IF sender is in EU ([CL010](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip))<br/>THEN the value must be a valid EORI or TCUIN<br/>ELSE (sender is not in EU) the value must be a valid TIN number.
 
 ##R0871
 
@@ -587,17 +678,17 @@ IF &lt;TRANSIT OPERATION.Declaration type&gt; is EQUAL to 'TIR'<br/>THEN &lt;GUA
 
 <b>Technical Description</b>
 
-IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'TIR'<br/>THEN /<span>&#42;</span>/Guarantee/guaranteeType is EQUAL to 'B'<br/>ELSE IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL010 OR is EQUAL to 'SM' OR is EQUAL to 'AD'<br/>THEN /<span>&#42;</span>/Guarantee/guaranteeType must be in SET CL230<br/>ELSE /<span>&#42;</span>/Guarantee/guaranteeType must be in SET CL229<br/>
+IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'TIR'<br/>THEN /<span>&#42;</span>/Guarantee/guaranteeType is EQUAL to 'B'<br/>ELSE IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET [CL010](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip) OR is EQUAL to 'SM' OR is EQUAL to 'AD'<br/>THEN /<span>&#42;</span>/Guarantee/guaranteeType must be in SET [CL230](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeTypeEUNonTIR.zip)<br/>ELSE /<span>&#42;</span>/Guarantee/guaranteeType must be in SET [CL229](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeTypeCTC.zip)<br/>
 
 ##R0901
 
 <b>Functional Description</b>
 
-IF &lt;TRANSIT OPERATION.Declaration type&gt; is EQUAL to 'TIR'<br/>THEN the country code (first two characters) in the &lt;CUSTOMS OFFICE OF DESTINATION (DECLARED).Reference number&gt; is in SET CL010 (CountryCodesCommunity) <br/>AND the country code (first two characters) in the &lt;CUSTOMS OFFICE OF DEPARTURE.Reference number &gt; is in SET [CL010](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip) (CountryCodesCommunity).
+IF &lt;TRANSIT OPERATION.Declaration type&gt; is EQUAL to 'TIR'<br/>THEN the country code (first two characters) in the &lt;CUSTOMS OFFICE OF DESTINATION (DECLARED).Reference number&gt; is in SET [CL010](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip)  (CountryCodesCommunity) <br/>AND the country code (first two characters) in the &lt;CUSTOMS OFFICE OF DEPARTURE.Reference number &gt; is in SET CL010.
 
 <b>Technical Description</b>
 
-IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'TIR'<br/>THEN the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in SET CL010 <br/>AND the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL010<br/>
+IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'TIR'<br/>THEN the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in SET [CL010](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip) <br/>AND the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL010<br/>
 
 ##R0904
 
@@ -607,7 +698,7 @@ IF the country code (first two characters) in the &lt;CUSTOMS OFFICE OF DEPARTUR
 
 <b>Technical Description</b>
 
-IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET {AD, SM}<br/>THEN the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in SET CL553<br/><br/>
+IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET {AD, SM}<br/>THEN the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in SET [CL553](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_MSCountry.zip)<br/><br/>
 
 ##R0905
 
@@ -617,7 +708,7 @@ IF the country code (first two characters) in the &lt;CUSTOMS OFFICE OF DEPARTUR
 
 <b>Technical Description</b>
 
-IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL112<br/>THEN the two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is NOT in SET{AD, SM}<br/><br/>
+IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET [CL112](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip)<br/>THEN the two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is NOT in SET{AD, SM}<br/><br/>
 
 ##R0906
 
@@ -637,7 +728,7 @@ IF the country code (first two characters) in the &lt;CUSTOMS OFFICE OF DESTINAT
 
 <b>Technical Description</b>
 
-IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is EQUAL to 'SM'<br/>THEN<br/>        IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'IT',<br/>        THEN /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'T2SM' <br/>        ELSE<br/>                 IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL010 <br/>                         AND NOT EQUAL to 'IT'<br/>                 THEN /<span>&#42;</span>/TransitOperation/declarationType is in SET {T2, T2F} OR<br/>                           /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2, T2F};<br/>IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationActual/referenceNumber is EQUAL to 'SM'<br/>THEN<br/>        IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'IT',<br/>        THEN /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'T2SM' <br/>        ELSE<br/>               IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL010<br/>                          AND NOT EQUAL to 'IT'<br/>               THEN /<span>&#42;</span>/TransitOperation/declarationType is in SET {T2, T2F} OR<br/>                          /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2, T2F}<br/><br/>
+IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is EQUAL to 'SM'<br/>THEN<br/>        IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'IT',<br/>        THEN /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'T2SM' <br/>        ELSE<br/>                 IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET [CL010](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip)<br/>                         AND NOT EQUAL to 'IT'<br/>                 THEN /<span>&#42;</span>/TransitOperation/declarationType is in SET {T2, T2F} OR<br/>                           /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2, T2F};<br/>IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationActual/referenceNumber is EQUAL to 'SM'<br/>THEN<br/>        IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'IT',<br/>        THEN /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'T2SM' <br/>        ELSE<br/>               IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL010<br/>                          AND NOT EQUAL to 'IT'<br/>               THEN /<span>&#42;</span>/TransitOperation/declarationType is in SET {T2, T2F} OR<br/>                          /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2, T2F}<br/><br/>
 
 ##R0910
 
@@ -647,7 +738,7 @@ IF &lt;CC013C - AUTHORISATION.Type&gt; is NOT EQUAL to 'C521' OR &lt;CC015C - AU
 
 <b>Technical Description</b>
 
-IF /CC013C/Authorisation/type is NOT EQUAL to 'C521' OR  <br/>/CC015C/Authorisation/type is NOT EQUAL to 'C521'<br/>THEN /<span>&#42;</span>/ControlResult/code is in SET CL195
+IF /CC013C/Authorisation/type is NOT EQUAL to 'C521' OR  <br/>/CC015C/Authorisation/type is NOT EQUAL to 'C521'<br/>THEN /<span>&#42;</span>/ControlResult/code is in SET [CL195](downloads/CL195.zip)
 
 ##R0911
 
@@ -657,7 +748,7 @@ IF /CC013C/Authorisation/type is NOT EQUAL to 'C521' OR  <br/>/CC015C/Authorisat
 
 <b>Technical Description</b>
 
-IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'SM' AND <br/>         the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in SET CL010<br/>THEN /<span>&#42;</span>/TransitOperation/declarationType is in SET {T2, T2F}; <br/>IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'SM' AND <br/>         the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationActual/referenceNumber is in SET CL010<br/>THEN /<span>&#42;</span>/TransitOperation/declarationType is in SET {T2, T2F}
+IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'SM' AND <br/>         the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in SET  [CL010](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip)<br/>THEN /<span>&#42;</span>/TransitOperation/declarationType is in SET {T2, T2F}; <br/>IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'SM' AND <br/>         the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationActual/referenceNumber is in SET CL010<br/>THEN /<span>&#42;</span>/TransitOperation/declarationType is in SET {T2, T2F}
 
 ##R0912
 
@@ -667,7 +758,7 @@ IF &lt;TRANSIT OPERATION.Declaration type&gt; is EQUAL to 'TIR' <br/>THEN &lt;C
 
 <b>Technical Description</b>
 
-IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'TIR' <br/>THEN /<span>&#42;</span>/ControlResult/code is in SET CL195
+IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'TIR' <br/>THEN /<span>&#42;</span>/ControlResult/code is in SET [CL195](downloads/CL195.zip)
 
 ##R0983
 
@@ -737,7 +828,7 @@ IF &lt;CONSIGNMENT.Country Of Destination&gt; is in SET [CL009](https://ec.europ
 
 <b>Technical Description</b>
 
-IF /<span>&#42;</span>/Consignment/countryOfDestination is in SET CL009 <br/>OR<br/>at least one /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is in SET CL009<br/>THEN /<span>&#42;</span>/Consignment/AdditionalInformation/code shall not be EQUAL to '30600'<br/>
+IF /<span>&#42;</span>/Consignment/countryOfDestination is in SET [CL009](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip)<br/>OR<br/>at least one /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is in SET CL009<br/>THEN /<span>&#42;</span>/Consignment/AdditionalInformation/code shall not be EQUAL to '30600'<br/>
 
 ##R3061
 
@@ -757,5 +848,5 @@ IF &lt;CONSIGNMENT.Country Of Destination&gt; is in SET [CL009](https://ec.europ
 
 <b>Technical Description</b>
 
-IF /<span>&#42;</span>/Consignment/countryOfDestination is in SET CL009<br/>OR<br/>at least one /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is in SET<br/>CL009<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/AdditionalInformation/code shall not be EQUAL to '30600'<br/>
+IF /<span>&#42;</span>/Consignment/countryOfDestination is in SET [CL009](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip)<br/>OR<br/>at least one /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is in SET<br/>CL009<br/>THEN /<span>&#42;</span>/Consignment/HouseConsignment/AdditionalInformation/code shall not be EQUAL to '30600'<br/>
 
