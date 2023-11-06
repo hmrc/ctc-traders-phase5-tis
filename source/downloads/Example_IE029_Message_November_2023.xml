@@ -1,0 +1,700 @@
+<ncts:CC029C PhaseID="NCTS5.0" xmlns:ncts="http://ncts.dgtaxud.ec">
+    <messageSender>token</messageSender>
+    <messageRecipient>token</messageRecipient>
+    <preparationDateAndTime>2023-11-26T07:36:28</preparationDateAndTime>
+    <messageIdentification>token</messageIdentification>
+    <messageType>CC029C</messageType>
+    <!--Optional:-->
+    <correlationIdentifier>token</correlationIdentifier>
+    <TransitOperation>
+        <LRN>O6oJHgerHc9PnTG</LRN>
+        <MRN>23GB000246IF9W5YJ0</MRN>
+        <declarationType>T1</declarationType>
+        <additionalDeclarationType>A</additionalDeclarationType>
+        <declarationAcceptanceDate>2023-11-26+01:00</declarationAcceptanceDate>
+        <releaseDate>2023-11-27</releaseDate>
+        <security>1</security>
+        <reducedDatasetIndicator>0</reducedDatasetIndicator>
+        <!--Optional:-->
+        <specificCircumstanceIndicator>1</specificCircumstanceIndicator>
+        <bindingItinerary>1</bindingItinerary>
+    </TransitOperation>
+    <!--0 to 9 repetitions:-->
+    <Authorisation>
+        <sequenceNumber>1</sequenceNumber>
+        <type>C521</type>
+        <referenceNumber>GBDEPAUTH009</referenceNumber>
+    </Authorisation>
+    <CustomsOfficeOfDeparture>
+        <referenceNumber>GB000060</referenceNumber>
+    </CustomsOfficeOfDeparture>
+    <CustomsOfficeOfDestinationDeclared>
+        <referenceNumber>XI000142</referenceNumber>
+    </CustomsOfficeOfDestinationDeclared>
+    <CustomsOfficeOfTransitDeclared>
+        <sequenceNumber>1</sequenceNumber>
+        <referenceNumber>XI000142</referenceNumber>
+        <arrivalDateAndTimeEstimated>2023-12-14T10:19:00</arrivalDateAndTimeEstimated>
+    </CustomsOfficeOfTransitDeclared>
+    <HolderOfTheTransitProcedure>
+        <identificationNumber>GB954131544000</identificationNumber>
+        <name>GB TAD Testing</name>
+        <Address>
+            <streetAndNumber>Westfield Road, Stratford 19</streetAndNumber>
+            <postcode>K20 2HZ</postcode>
+            <city>Stratford, London</city>
+            <country>GB</country>
+        </Address>
+    </HolderOfTheTransitProcedure>
+    <!--Optional:-->
+    <ControlResult>
+        <code>A3</code>
+        <date>2023-12-14</date>
+        <controlledBy>N/A</controlledBy>
+        <text>Simplified procedure</text>
+    </ControlResult>
+    <!--1 to 9 repetitions:-->
+    <Guarantee>
+        <sequenceNumber>1</sequenceNumber>
+        <guaranteeType>1</guaranteeType>
+        <GuaranteeReference>
+            <sequenceNumber>1</sequenceNumber>
+            <GRN>01GB0000010000029</GRN>
+            <accessCode>AB01</accessCode>
+            <amountToBeCovered>10000</amountToBeCovered>
+            <currency>GBP</currency>
+        </GuaranteeReference>
+    </Guarantee>
+    <Consignment>
+        <countryOfDestination>XI</countryOfDestination>
+        <containerIndicator>1</containerIndicator>
+        <inlandModeOfTransport>3</inlandModeOfTransport>
+        <modeOfTransportAtTheBorder>2</modeOfTransportAtTheBorder>
+        <grossMass>9069</grossMass>
+        <referenceNumberUCR>AB1234</referenceNumberUCR>
+        <Carrier>
+            <identificationNumber>GB010101010</identificationNumber>
+            <ContactPerson>
+                <name>Carrier contact</name>
+                <phoneNumber>+1231231231</phoneNumber>
+            </ContactPerson>
+        </Carrier>
+        <Consignor>
+            <identificationNumber>GB954131544000</identificationNumber>
+            <name>GB TAD Testing</name>
+            <Address>
+                <streetAndNumber>Westfield Road, Stratford 19</streetAndNumber>
+                <postcode>K20 2LZ</postcode>
+                <city>Stratford, London</city>
+                <country>GB</country>
+            </Address>
+        </Consignor>
+        <Consignee>
+            <identificationNumber>XI884424248819</identificationNumber>
+            <name>---</name>
+            <Address>
+                <streetAndNumber>---</streetAndNumber>
+                <postcode>---</postcode>
+                <city>---</city>
+                <country>GB</country>
+            </Address>
+        </Consignee>
+        <TransportEquipment>
+            <sequenceNumber>1</sequenceNumber>
+            <containerIdentificationNumber>OWPRKL</containerIdentificationNumber>
+            <numberOfSeals>4</numberOfSeals>
+            <Seal>
+                <sequenceNumber>1</sequenceNumber>
+                <identifier>Seal1</identifier>
+            </Seal>
+            <Seal>
+                <sequenceNumber>2</sequenceNumber>
+                <identifier>Seal2</identifier>
+            </Seal>
+            <Seal>
+                <sequenceNumber>3</sequenceNumber>
+                <identifier>Seal3</identifier>
+            </Seal>
+            <Seal>
+                <sequenceNumber>4</sequenceNumber>
+                <identifier>Seal4</identifier>
+            </Seal>
+            <GoodsReference>
+                <sequenceNumber>1</sequenceNumber>
+                <declarationGoodsItemNumber>1</declarationGoodsItemNumber>
+            </GoodsReference>
+        </TransportEquipment>
+        <!--Optional:-->
+        <LocationOfGoods>
+            <typeOfLocation>B</typeOfLocation>
+            <qualifierOfIdentification>Y</qualifierOfIdentification>
+            <authorisationNumber>GBDEPL01KQ</authorisationNumber>
+        </LocationOfGoods>
+        <!--0 to 999 repetitions:-->
+        <DepartureTransportMeans>
+            <sequenceNumber>1</sequenceNumber>
+            <typeOfIdentification>30</typeOfIdentification>
+            <identificationNumber>NC15REG</identificationNumber>
+            <nationality>GB</nationality>
+        </DepartureTransportMeans>
+        <!--0 to 99 repetitions:-->
+        <CountryOfRoutingOfConsignment>
+            <sequenceNumber>1</sequenceNumber>
+            <country>NL</country>
+        </CountryOfRoutingOfConsignment>
+        <!--0 to 9 repetitions:-->
+        <ActiveBorderTransportMeans>
+            <sequenceNumber>1</sequenceNumber>
+            <customsOfficeAtBorderReferenceNumber>GB000246</customsOfficeAtBorderReferenceNumber>
+            <typeOfIdentification>2</typeOfIdentification>
+            <identificationNumber>NCG1341</identificationNumber>
+            <nationality>GB</nationality>
+            <!--Optional:-->
+            <conveyanceReferenceNumber>Conv1129</conveyanceReferenceNumber>
+        </ActiveBorderTransportMeans>
+        <!--0 to 9 repetitions:-->
+        <PlaceOfLoading>
+            <!--Optional:-->
+            <UNLocode>GBBEL</UNLocode>
+        </PlaceOfLoading>
+        <!--Optional:-->
+        <!--0 to 9999 repetitions:-->
+        <HouseConsignment>
+            <sequenceNumber>1</sequenceNumber>
+            <grossMass>1000</grossMass>
+            <ConsignmentItem>
+                <goodsItemNumber>1</goodsItemNumber>
+                <declarationGoodsItemNumber>1</declarationGoodsItemNumber>
+                <countryOfDestination>XI</countryOfDestination>
+                <!--Optional:-->
+                <referenceNumberUCR>UCR231231</referenceNumberUCR>
+                <!--Optional:-->
+                <Consignee>
+                    <!--Optional:-->
+                    <name>Consignee item level</name>
+                    <!--Optional:-->
+                    <Address>
+                        <streetAndNumber>Address</streetAndNumber>
+                        <!--Optional:-->
+                        <postcode>NE1AAD</postcode>
+                        <city>Newcastle</city>
+                        <country>GB</country>
+                    </Address>
+                </Consignee>
+                <!--0 to 99 repetitions:-->
+                <AdditionalSupplyChainActor>
+                    <sequenceNumber>1</sequenceNumber>
+                    <role>CS</role>
+                    <identificationNumber>GB123456789001</identificationNumber>
+                </AdditionalSupplyChainActor>
+                <Commodity>
+                    <descriptionOfGoods>Radioactive Spiders</descriptionOfGoods>
+                    <CommodityCode>
+                        <harmonizedSystemSubHeadingCode>392690</harmonizedSystemSubHeadingCode>
+                    </CommodityCode>
+                    <GoodsMeasure>
+                        <grossMass>1000</grossMass>
+                        <netMass>950</netMass>
+                    </GoodsMeasure>
+                </Commodity>
+                <!--1 to 99 repetitions:-->
+                <Packaging>
+                    <sequenceNumber>1</sequenceNumber>
+                    <typeOfPackages>BX</typeOfPackages>
+                    <numberOfPackages>1</numberOfPackages>
+                    <shippingMarks>Shipping mark item 1</shippingMarks>
+                </Packaging>
+                <!--0 to 99 repetitions:-->
+                <PreviousDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>C605</type>
+                    <referenceNumber>1234</referenceNumber>
+                    <goodsItemNumber>1</goodsItemNumber>
+                </PreviousDocument>
+                <!--0 to 99 repetitions:-->
+                <SupportingDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>N820</type>
+                    <referenceNumber>56788 CV 7732</referenceNumber>
+                    <documentLineItemNumber>17</documentLineItemNumber>
+                    <complementOfInformation>Some information</complementOfInformation>
+                </SupportingDocument>
+                <!--0 to 99 repetitions:-->
+                <TransportDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>C664</type>
+                    <referenceNumber>4785B CV</referenceNumber>
+                </TransportDocument>
+                <AdditionalInformation>
+                    <sequenceNumber>1</sequenceNumber>
+                    <code>20200</code>
+                    <text>Export from one EFTA country subject to duties or export from the Union subject to duties</text>
+                </AdditionalInformation>
+                <!--0 to 99 repetitions:-->
+                <!--Optional:-->
+                <TransportCharges>
+                    <methodOfPayment>A</methodOfPayment>
+                </TransportCharges>
+            </ConsignmentItem>
+            <ConsignmentItem>
+                <goodsItemNumber>2</goodsItemNumber>
+                <declarationGoodsItemNumber>2</declarationGoodsItemNumber>
+                <countryOfDestination>XI</countryOfDestination>
+                <!--Optional:-->
+                <referenceNumberUCR>UCR231231</referenceNumberUCR>
+                <!--Optional:-->
+                <Consignee>
+                    <!--Optional:-->
+                    <name>Consignee item 2 level</name>
+                    <!--Optional:-->
+                    <Address>
+                        <streetAndNumber>Address 2</streetAndNumber>
+                        <!--Optional:-->
+                        <postcode>NE1AAD</postcode>
+                        <city>Newcastle</city>
+                        <country>GB</country>
+                    </Address>
+                </Consignee>
+                <!--0 to 99 repetitions:-->
+                <AdditionalSupplyChainActor>
+                    <sequenceNumber>1</sequenceNumber>
+                    <role>CS</role>
+                    <identificationNumber>GB123456789001</identificationNumber>
+                </AdditionalSupplyChainActor>
+                <Commodity>
+                    <descriptionOfGoods>Radioactive Spiders</descriptionOfGoods>
+                    <CommodityCode>
+                        <harmonizedSystemSubHeadingCode>420090</harmonizedSystemSubHeadingCode>
+                    </CommodityCode>
+                    <GoodsMeasure>
+                        <grossMass>900</grossMass>
+                        <netMass>800</netMass>
+                    </GoodsMeasure>
+                </Commodity>
+                <!--1 to 99 repetitions:-->
+                <Packaging>
+                    <sequenceNumber>1</sequenceNumber>
+                    <typeOfPackages>BX</typeOfPackages>
+                    <numberOfPackages>10</numberOfPackages>
+                    <shippingMarks>This is a box shipping mark 2</shippingMarks>
+                </Packaging>
+                <Packaging>
+                    <sequenceNumber>2</sequenceNumber>
+                    <typeOfPackages>BX</typeOfPackages>
+                    <numberOfPackages>20</numberOfPackages>
+                    <shippingMarks>This is a shipping mark 2</shippingMarks>
+                </Packaging>
+                <!--0 to 99 repetitions:-->
+                <PreviousDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>C605</type>
+                    <referenceNumber>1234</referenceNumber>
+                    <goodsItemNumber>1</goodsItemNumber>
+                </PreviousDocument>
+                <!--0 to 99 repetitions:-->
+                <SupportingDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>N820</type>
+                    <referenceNumber>56788 CV 7732</referenceNumber>
+                    <documentLineItemNumber>17</documentLineItemNumber>
+                    <complementOfInformation>Some information</complementOfInformation>
+                </SupportingDocument>
+                <!--0 to 99 repetitions:-->
+                <TransportDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>C664</type>
+                    <referenceNumber>4785B CV</referenceNumber>
+                </TransportDocument>
+                <AdditionalInformation>
+                    <sequenceNumber>1</sequenceNumber>
+                    <code>20200</code>
+                    <text>Export from one EFTA country subject to duties or export from the Union subject to duties</text>
+                </AdditionalInformation>
+                <!--0 to 99 repetitions:-->
+                <!--Optional:-->
+                <TransportCharges>
+                    <methodOfPayment>A</methodOfPayment>
+                </TransportCharges>
+            </ConsignmentItem>
+            <ConsignmentItem>
+                <goodsItemNumber>3</goodsItemNumber>
+                <declarationGoodsItemNumber>3</declarationGoodsItemNumber>
+                <referenceNumberUCR>UCR342342</referenceNumberUCR>
+                <Consignee>
+                    <identificationNumber>GB123456787000</identificationNumber>
+                </Consignee>
+                <AdditionalSupplyChainActor>
+                    <sequenceNumber>1</sequenceNumber>
+                    <role>CS</role>
+                    <identificationNumber>GB123456789001</identificationNumber>
+                </AdditionalSupplyChainActor>
+                <Commodity>
+                    <descriptionOfGoods>Item 3 descr</descriptionOfGoods>
+                    <cusCode>cusc00000</cusCode>
+                    <CommodityCode>
+                        <harmonizedSystemSubHeadingCode>0G23AB</harmonizedSystemSubHeadingCode>
+                    </CommodityCode>
+                    <DangerousGoods>
+                        <sequenceNumber>1</sequenceNumber>
+                        <UNNumber>2156</UNNumber>
+                    </DangerousGoods>
+                    <GoodsMeasure>
+                        <grossMass>5000</grossMass>
+                        <netMass>400</netMass>
+                    </GoodsMeasure>
+                </Commodity>
+                <Packaging>
+                    <sequenceNumber>1</sequenceNumber>
+                    <typeOfPackages>NE</typeOfPackages>
+                    <numberOfPackages>20</numberOfPackages>
+                    <shippingMarks>shipping mark</shippingMarks>
+                </Packaging>
+                <Packaging>
+                    <sequenceNumber>2</sequenceNumber>
+                    <typeOfPackages>BG</typeOfPackages>
+                    <numberOfPackages>201</numberOfPackages>
+                    <shippingMarks>shipping mark</shippingMarks>
+                </Packaging>
+                <PreviousDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>C605</type>
+                    <referenceNumber>PrevDoc342</referenceNumber>
+                    <goodsItemNumber>1</goodsItemNumber>
+                    <typeOfPackages>8C</typeOfPackages>
+                    <numberOfPackages>20</numberOfPackages>
+                    <measurementUnitAndQualifier>GRM</measurementUnitAndQualifier>
+                    <quantity>20000</quantity>
+                    <complementOfInformation>Additional infor previ</complementOfInformation>
+                </PreviousDocument>
+                <SupportingDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>N820</type>
+                    <referenceNumber>SUpport342</referenceNumber>
+                    <documentLineItemNumber>1234</documentLineItemNumber>
+                    <complementOfInformation>Additional info</complementOfInformation>
+                </SupportingDocument>
+                <TransportDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>N740</type>
+                    <referenceNumber>TRANS53235</referenceNumber>
+                </TransportDocument>
+                <AdditionalReference>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>C651</type>
+                    <referenceNumber>ref additional ref</referenceNumber>
+                </AdditionalReference>
+                <AdditionalInformation>
+                    <sequenceNumber>1</sequenceNumber>
+                    <code>20100</code>
+                    <text>Additional information for additional information item 1</text>
+                </AdditionalInformation>
+            </ConsignmentItem>
+            <ConsignmentItem>
+                <goodsItemNumber>4</goodsItemNumber>
+                <declarationGoodsItemNumber>4</declarationGoodsItemNumber>
+                <Consignee>
+                    <name>Consignee item 4 level</name>
+                    <Address>
+                        <streetAndNumber>14 III Street</streetAndNumber>
+                        <postcode>RK192PO</postcode>
+                        <city>Newcastle upon Tyne</city>
+                        <country>IT</country>
+                    </Address>
+                </Consignee>
+                <Commodity>
+                    <descriptionOfGoods>item 4 desc</descriptionOfGoods>
+                    <CommodityCode>
+                        <harmonizedSystemSubHeadingCode>0G23AB</harmonizedSystemSubHeadingCode>
+                    </CommodityCode>
+                    <GoodsMeasure>
+                        <grossMass>300</grossMass>
+                        <netMass>200</netMass>
+                    </GoodsMeasure>
+                </Commodity>
+                <Packaging>
+                    <sequenceNumber>1</sequenceNumber>
+                    <typeOfPackages>WX</typeOfPackages>
+                    <numberOfPackages>30</numberOfPackages>
+                    <shippingMarks>WX shipping marks</shippingMarks>
+                </Packaging>
+                <PreviousDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>C605</type>
+                    <referenceNumber>PrevDoc342</referenceNumber>
+                    <goodsItemNumber>2</goodsItemNumber>
+                    <typeOfPackages>8C</typeOfPackages>
+                    <numberOfPackages>20</numberOfPackages>
+                    <measurementUnitAndQualifier>GRM</measurementUnitAndQualifier>
+                    <quantity>20000</quantity>
+                    <complementOfInformation>Additional infor previ</complementOfInformation>
+                </PreviousDocument>
+                <SupportingDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>N820</type>
+                    <referenceNumber>SUpport342</referenceNumber>
+                    <documentLineItemNumber>1234</documentLineItemNumber>
+                    <complementOfInformation>Additional info</complementOfInformation>
+                </SupportingDocument>
+                <TransportDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>N740</type>
+                    <referenceNumber>TRANS53235</referenceNumber>
+                </TransportDocument>
+            </ConsignmentItem>
+            <ConsignmentItem>
+                <goodsItemNumber>5</goodsItemNumber>
+                <declarationGoodsItemNumber>5</declarationGoodsItemNumber>
+                <Consignee>
+                    <name>Consignee item 5 level</name>
+                    <Address>
+                        <streetAndNumber>15 III Street</streetAndNumber>
+                        <postcode>WO152KK</postcode>
+                        <city>Newcastle upon Tyne</city>
+                        <country>IT</country>
+                    </Address>
+                </Consignee>
+                <Commodity>
+                    <descriptionOfGoods>item 5 desc</descriptionOfGoods>
+                    <CommodityCode>
+                        <harmonizedSystemSubHeadingCode>0G23AB</harmonizedSystemSubHeadingCode>
+                    </CommodityCode>
+                    <GoodsMeasure>
+                        <grossMass>300</grossMass>
+                        <netMass>200</netMass>
+                    </GoodsMeasure>
+                </Commodity>
+                <Packaging>
+                    <sequenceNumber>1</sequenceNumber>
+                    <typeOfPackages>WX</typeOfPackages>
+                    <numberOfPackages>30</numberOfPackages>
+                    <shippingMarks>Marks package</shippingMarks>
+                </Packaging>
+                <PreviousDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>C605</type>
+                    <referenceNumber>PrevDoc342</referenceNumber>
+                    <goodsItemNumber>2</goodsItemNumber>
+                    <typeOfPackages>8C</typeOfPackages>
+                    <numberOfPackages>20</numberOfPackages>
+                    <measurementUnitAndQualifier>GRM</measurementUnitAndQualifier>
+                    <quantity>20000</quantity>
+                    <complementOfInformation>Additional infor previ</complementOfInformation>
+                </PreviousDocument>
+                <SupportingDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>N820</type>
+                    <referenceNumber>SUpport342</referenceNumber>
+                    <documentLineItemNumber>1234</documentLineItemNumber>
+                    <complementOfInformation>Additional info</complementOfInformation>
+                </SupportingDocument>
+                <TransportDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>N740</type>
+                    <referenceNumber>TRANS53235</referenceNumber>
+                </TransportDocument>
+            </ConsignmentItem>
+            <ConsignmentItem>
+                <goodsItemNumber>6</goodsItemNumber>
+                <declarationGoodsItemNumber>6</declarationGoodsItemNumber>
+                <Consignee>
+                    <name>Consignee item 6 level</name>
+                    <Address>
+                        <streetAndNumber>16 III Street</streetAndNumber>
+                        <postcode>NS11DE</postcode>
+                        <city>Newcastle upon Tyne</city>
+                        <country>IT</country>
+                    </Address>
+                </Consignee>
+                <Commodity>
+                    <descriptionOfGoods>item 6 desc</descriptionOfGoods>
+                    <CommodityCode>
+                        <harmonizedSystemSubHeadingCode>0G23AB</harmonizedSystemSubHeadingCode>
+                    </CommodityCode>
+                    <GoodsMeasure>
+                        <grossMass>200</grossMass>
+                        <netMass>200</netMass>
+                    </GoodsMeasure>
+                </Commodity>
+                <Packaging>
+                    <sequenceNumber>1</sequenceNumber>
+                    <typeOfPackages>WX</typeOfPackages>
+                    <numberOfPackages>30</numberOfPackages>
+                    <shippingMarks>shippingMark</shippingMarks>
+                </Packaging>
+                <PreviousDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>C605</type>
+                    <referenceNumber>PrevDoc342</referenceNumber>
+                    <goodsItemNumber>2</goodsItemNumber>
+                    <typeOfPackages>8C</typeOfPackages>
+                    <numberOfPackages>20</numberOfPackages>
+                    <measurementUnitAndQualifier>GRM</measurementUnitAndQualifier>
+                    <quantity>20000</quantity>
+                    <complementOfInformation>Additional infor previ</complementOfInformation>
+                </PreviousDocument>
+                <SupportingDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>N820</type>
+                    <referenceNumber>SUpport342</referenceNumber>
+                    <documentLineItemNumber>1234</documentLineItemNumber>
+                    <complementOfInformation>Additional info</complementOfInformation>
+                </SupportingDocument>
+                <TransportDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>N740</type>
+                    <referenceNumber>TRANSP53235</referenceNumber>
+                </TransportDocument>
+            </ConsignmentItem>
+            <ConsignmentItem>
+                <goodsItemNumber>7</goodsItemNumber>
+                <declarationGoodsItemNumber>7</declarationGoodsItemNumber>
+                <Consignee>
+                    <name>Consignee item 7 level</name>
+                    <Address>
+                        <streetAndNumber>17 III Street</streetAndNumber>
+                        <postcode>NE12DE</postcode>
+                        <city>Newcastle upon Tyne</city>
+                        <country>IT</country>
+                    </Address>
+                </Consignee>
+                <Commodity>
+                    <descriptionOfGoods>item 7 desc</descriptionOfGoods>
+                    <CommodityCode>
+                        <harmonizedSystemSubHeadingCode>0G23AB</harmonizedSystemSubHeadingCode>
+                    </CommodityCode>
+                    <GoodsMeasure>
+                        <grossMass>250</grossMass>
+                        <netMass>210</netMass>
+                    </GoodsMeasure>
+                </Commodity>
+                <Packaging>
+                    <sequenceNumber>1</sequenceNumber>
+                    <typeOfPackages>WX</typeOfPackages>
+                    <numberOfPackages>30</numberOfPackages>
+                    <shippingMarks>shippingMark</shippingMarks>
+                </Packaging>
+                <PreviousDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>C605</type>
+                    <referenceNumber>PrevDoc342</referenceNumber>
+                    <goodsItemNumber>2</goodsItemNumber>
+                    <typeOfPackages>8C</typeOfPackages>
+                    <numberOfPackages>20</numberOfPackages>
+                    <measurementUnitAndQualifier>GRM</measurementUnitAndQualifier>
+                    <quantity>20000</quantity>
+                    <complementOfInformation>Additional infor previ</complementOfInformation>
+                </PreviousDocument>
+                <SupportingDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>N820</type>
+                    <referenceNumber>SUpport342</referenceNumber>
+                    <documentLineItemNumber>1234</documentLineItemNumber>
+                    <complementOfInformation>Additional info</complementOfInformation>
+                </SupportingDocument>
+                <TransportDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>N740</type>
+                    <referenceNumber>TRANSP51</referenceNumber>
+                </TransportDocument>
+            </ConsignmentItem>
+            <ConsignmentItem>
+                <goodsItemNumber>8</goodsItemNumber>
+                <declarationGoodsItemNumber>8</declarationGoodsItemNumber>
+                <Consignee>
+                    <identificationNumber>GB123456788888</identificationNumber>
+                </Consignee>
+                <Commodity>
+                    <descriptionOfGoods>item 8 desc</descriptionOfGoods>
+                    <CommodityCode>
+                        <harmonizedSystemSubHeadingCode>0G23AB</harmonizedSystemSubHeadingCode>
+                    </CommodityCode>
+                    <GoodsMeasure>
+                        <grossMass>120</grossMass>
+                        <netMass>80</netMass>
+                    </GoodsMeasure>
+                </Commodity>
+                <Packaging>
+                    <sequenceNumber>1</sequenceNumber>
+                    <typeOfPackages>WX</typeOfPackages>
+                    <numberOfPackages>30</numberOfPackages>
+                    <shippingMarks>Shipp Mark</shippingMarks>
+                </Packaging>
+                <PreviousDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>C605</type>
+                    <referenceNumber>PrevDoc342</referenceNumber>
+                    <goodsItemNumber>2</goodsItemNumber>
+                    <typeOfPackages>8C</typeOfPackages>
+                    <numberOfPackages>20</numberOfPackages>
+                    <measurementUnitAndQualifier>GRM</measurementUnitAndQualifier>
+                    <quantity>20000</quantity>
+                    <complementOfInformation>Additional infor previ</complementOfInformation>
+                </PreviousDocument>
+                <SupportingDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>N820</type>
+                    <referenceNumber>SUpport342</referenceNumber>
+                    <documentLineItemNumber>1234</documentLineItemNumber>
+                    <complementOfInformation>Additional info</complementOfInformation>
+                </SupportingDocument>
+                <TransportDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>N740</type>
+                    <referenceNumber>TRDOC35</referenceNumber>
+                </TransportDocument>
+            </ConsignmentItem>
+            <ConsignmentItem>
+                <goodsItemNumber>9</goodsItemNumber>
+                <declarationGoodsItemNumber>9</declarationGoodsItemNumber>
+                <Consignee>
+                    <name>Consignee item level 9 </name>
+                    <Address>
+                        <streetAndNumber>19 II Street</streetAndNumber>
+                        <postcode>NE12DE</postcode>
+                        <city>Newcastle upon Tyne</city>
+                        <country>IT</country>
+                    </Address>
+                </Consignee>
+                <Commodity>
+                    <descriptionOfGoods>item 9 desc</descriptionOfGoods>
+                    <CommodityCode>
+                        <harmonizedSystemSubHeadingCode>0G23AB</harmonizedSystemSubHeadingCode>
+                    </CommodityCode>
+                    <GoodsMeasure>
+                        <grossMass>999</grossMass>
+                        <netMass>909</netMass>
+                    </GoodsMeasure>
+                </Commodity>
+                <Packaging>
+                    <sequenceNumber>1</sequenceNumber>
+                    <typeOfPackages>WX</typeOfPackages>
+                    <numberOfPackages>30</numberOfPackages>
+                    <shippingMarks>Mark shipping package</shippingMarks>
+                </Packaging>
+                <PreviousDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>C605</type>
+                    <referenceNumber>PrevDoc342</referenceNumber>
+                    <goodsItemNumber>2</goodsItemNumber>
+                    <typeOfPackages>8C</typeOfPackages>
+                    <numberOfPackages>20</numberOfPackages>
+                    <measurementUnitAndQualifier>GRM</measurementUnitAndQualifier>
+                    <quantity>20000</quantity>
+                    <complementOfInformation>Additional infor previ</complementOfInformation>
+                </PreviousDocument>
+                <SupportingDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>N820</type>
+                    <referenceNumber>SUpport342</referenceNumber>
+                    <documentLineItemNumber>1234</documentLineItemNumber>
+                    <complementOfInformation>Additional info</complementOfInformation>
+                </SupportingDocument>
+                <TransportDocument>
+                    <sequenceNumber>1</sequenceNumber>
+                    <type>N740</type>
+                    <referenceNumber>T3DOC235</referenceNumber>
+                </TransportDocument>
+            </ConsignmentItem>
+        </HouseConsignment>
+    </Consignment>
+</ncts:CC029C>
