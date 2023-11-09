@@ -31,3 +31,5 @@ q2.csv
 .metals/
 /public
 /.batect
+python/env
+python/__pycache__

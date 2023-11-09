@@ -39,7 +39,7 @@
     <td>R</td>
     <td>an19</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html">G0002</a></td>
+    <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
     <td>- Message identification</td>
     <td>R</td>
@@ -57,7 +57,7 @@
     <td>D</td>
     <td>an..35</td>
     <td>&nbsp;</td>
-    <td><a href="rules-c.html">C0511</a><br /><a href="rules-r.html">R0008</a></td>
+    <td><a href="rules-c.html#c0511">C0511</a><br /><a href="rules-r.html#r0008">R0008</a></td>
 </tr><tr>
     <td><strong>- TRANSIT OPERATION</strong></td>
     <td>R</td>
@@ -69,13 +69,13 @@
     <td>R</td>
     <td>an18</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html">G0002</a></td>
+    <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
     <td>-- Amendment notification date and time</td>
     <td>R</td>
     <td>an19</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html">G0002</a></td>
+    <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
     <td><strong>- CUSTOMS OFFICE OF DEPARTURE</strong></td>
     <td>R</td>
@@ -99,25 +99,25 @@
     <td>O</td>
     <td>an..17</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html">G0120</a><br /><a href="rules-r.html">R0850</a></td>
+    <td><a href="rules-g.html#g0120">G0120</a><br /><a href="rules-r.html#r0850">R0850</a></td>
 </tr><tr>
     <td>-- TIR holder identification number</td>
     <td>D</td>
     <td>an..17</td>
     <td>&nbsp;</td>
-    <td><a href="rules-c.html">C0904</a><br /><a href="rules-g.html">G0002</a></td>
+    <td><a href="rules-c.html#c0904">C0904</a><br /><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
     <td>-- Name</td>
     <td>D</td>
     <td>an..70</td>
     <td>&nbsp;</td>
-    <td><a href="rules-c.html">C0250</a></td>
+    <td><a href="rules-c.html#c0250">C0250</a></td>
 </tr><tr>
     <td><strong>-- ADDRESS</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
-    <td><a href="rules-c.html">C0250</a></td>
+    <td><a href="rules-c.html#c0250">C0250</a></td>
 </tr><tr>
     <td>--- Street and number</td>
     <td>R</td>
@@ -129,7 +129,7 @@
     <td>D</td>
     <td>an..17</td>
     <td>&nbsp;</td>
-    <td><a href="rules-c.html">C0505</a></td>
+    <td><a href="rules-c.html#c0505">C0505</a></td>
 </tr><tr>
     <td>--- City</td>
     <td>R</td>
@@ -147,13 +147,13 @@
     <td>O</td>
     <td>9999x</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html">G0217</a></td>
+    <td><a href="rules-g.html#g0217">G0217</a></td>
 </tr><tr>
     <td>-- Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
-    <td><a href="rules-r.html">R0987</a></td>
+    <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
     <td>-- Error pointer</td>
     <td>O</td>
