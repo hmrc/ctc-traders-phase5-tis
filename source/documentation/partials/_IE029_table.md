@@ -23,1903 +23,1903 @@
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>- Message sender</td>
+    <td>-&nbsp; Message sender</td>
     <td>R</td>
     <td>an..35 (see <a href="../#message-sender-and-recipient-guidelines">Message sender and recipient guidelines</a>)</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>- Message recipient</td>
+    <td>-&nbsp; Message recipient</td>
     <td>R</td>
     <td>an..35 (see <a href="../#message-sender-and-recipient-guidelines">Message sender and recipient guidelines</a>)</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>- Preparation date and time</td>
+    <td>-&nbsp; Preparation date and time</td>
     <td>R</td>
     <td>an19</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
-    <td>- Message identification</td>
+    <td>-&nbsp; Message identification</td>
     <td>R</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>- Message type</td>
+    <td>-&nbsp; Message type</td>
     <td>R</td>
     <td>an6</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_MessageTypes.zip">CL060</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>- Correlation identifier</td>
+    <td>-&nbsp; Correlation identifier</td>
     <td>D</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0511">C0511</a><br /><a href="rules-r.html#r0008">R0008</a></td>
 </tr><tr>
-    <td><strong>- TRANSIT OPERATION</strong></td>
+    <td><strong>-&nbsp; TRANSIT OPERATION</strong></td>
     <td>R</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>-- LRN</td>
+    <td>-&nbsp;-&nbsp; LRN</td>
     <td>R</td>
     <td>an..22</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>-- MRN</td>
+    <td>-&nbsp;-&nbsp; MRN</td>
     <td>R</td>
     <td>an18</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
-    <td>-- Declaration type</td>
+    <td>-&nbsp;-&nbsp; Declaration type</td>
     <td>R</td>
     <td>an..5</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DeclarationType.zip">CL231</a></td>
     <td><a href="rules-r.html#r0601">R0601</a><br /><a href="rules-r.html#r0909">R0909</a><br /><a href="rules-r.html#r0911">R0911</a></td>
 </tr><tr>
-    <td>-- Additional declaration type</td>
+    <td>-&nbsp;-&nbsp; Additional declaration type</td>
     <td>R</td>
     <td>a1</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DeclarationTypeAdditional.zip">CL042</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>-- TIR Carnet number</td>
+    <td>-&nbsp;-&nbsp; TIR Carnet number</td>
     <td>D</td>
     <td>an..12</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0411">C0411</a><br /><a href="rules-r.html#r0990">R0990</a></td>
 </tr><tr>
-    <td>-- Declaration acceptance date</td>
+    <td>-&nbsp;-&nbsp; Declaration acceptance date</td>
     <td>R</td>
     <td>an10</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
-    <td>-- Release date</td>
+    <td>-&nbsp;-&nbsp; Release date</td>
     <td>R</td>
     <td>an10</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
-    <td>-- Security</td>
+    <td>-&nbsp;-&nbsp; Security</td>
     <td>R</td>
     <td>n1</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DeclarationTypeSecurity.zip">CL217</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>-- Reduced dataset indicator</td>
+    <td>-&nbsp;-&nbsp; Reduced dataset indicator</td>
     <td>R</td>
     <td>n1</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_Flag.zip">CL027</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>-- Specific circumstance indicator</td>
+    <td>-&nbsp;-&nbsp; Specific circumstance indicator</td>
     <td>O</td>
     <td>an3</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_SpecificCircumstanceIndicatorCode.zip">CL296</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>-- Communication language at departure</td>
+    <td>-&nbsp;-&nbsp; Communication language at departure</td>
     <td>O</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_LanguageByCustoms.zip">CL192</a></td>
     <td><a href="rules-r.html#r0100">R0100</a></td>
 </tr><tr>
-    <td>-- Binding itinerary</td>
+    <td>-&nbsp;-&nbsp; Binding itinerary</td>
     <td>R</td>
     <td>n1</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_Flag.zip">CL027</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>- AUTHORISATION</strong></td>
+    <td><strong>-&nbsp; AUTHORISATION</strong></td>
     <td>D</td>
     <td>9x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0101">C0101</a><br /><a href="rules-g.html#g0102">G0102</a></td>
 </tr><tr>
-    <td>-- Sequence number</td>
+    <td>-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>-- Type</td>
+    <td>-&nbsp;-&nbsp; Type</td>
     <td>R</td>
     <td>an..4</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_AuthorisationTypeDeparture.zip">CL235</a></td>
     <td><a href="rules-g.html#g0117">G0117</a><br /><a href="rules-r.html#r0350">R0350</a></td>
 </tr><tr>
-    <td>-- Reference number</td>
+    <td>-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0033">G0033</a><br /><a href="rules-r.html#r0352">R0352</a></td>
 </tr><tr>
-    <td><strong>- CUSTOMS OFFICE OF DEPARTURE</strong></td>
+    <td><strong>-&nbsp; CUSTOMS OFFICE OF DEPARTURE</strong></td>
     <td>R</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>-- Reference number</td>
+    <td>-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an8</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CustomsOfficeDeparture.zip">CL171</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>- CUSTOMS OFFICE OF DESTINATION (DECLARED)</strong></td>
+    <td><strong>-&nbsp; CUSTOMS OFFICE OF DESTINATION (DECLARED)</strong></td>
     <td>R</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>-- Reference number</td>
+    <td>-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an8</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CustomsOfficeDestination.zip">CL172</a></td>
     <td><a href="rules-r.html#r0871">R0871</a></td>
 </tr><tr>
-    <td><strong>- CUSTOMS OFFICE OF TRANSIT (DECLARED)</strong></td>
+    <td><strong>-&nbsp; CUSTOMS OFFICE OF TRANSIT (DECLARED)</strong></td>
     <td>D</td>
     <td>9x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0030">C0030</a><br /><a href="rules-g.html#g0030">G0030</a></td>
 </tr><tr>
-    <td>-- Sequence number</td>
+    <td>-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>-- Reference number</td>
+    <td>-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an8</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CustomsOfficeTransit.zip">CL173</a></td>
     <td><a href="rules-g.html#g0142">G0142</a><br /><a href="rules-r.html#r0003">R0003</a><br /><a href="rules-r.html#r0006">R0006</a><br /><a href="rules-r.html#r0871">R0871</a></td>
 </tr><tr>
-    <td>-- Arrival date and time (estimated)</td>
+    <td>-&nbsp;-&nbsp; Arrival date and time (estimated)</td>
     <td>D</td>
     <td>an19</td>
     <td>&nbsp;</td>
     <td><a href="rules-b.html#b1903">B1903</a><br /><a href="rules-c.html#c0598">C0598</a><br /><a href="rules-g.html#g0002">G0002</a><br /><a href="rules-r.html#r0004">R0004</a></td>
 </tr><tr>
-    <td><strong>- CUSTOMS OFFICE OF EXIT FOR TRANSIT (DECLARED)</strong></td>
+    <td><strong>-&nbsp; CUSTOMS OFFICE OF EXIT FOR TRANSIT (DECLARED)</strong></td>
     <td>D</td>
     <td>9x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0587">C0587</a></td>
 </tr><tr>
-    <td>-- Sequence number</td>
+    <td>-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>-- Reference number</td>
+    <td>-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an8</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CustomsOfficeTransitExit.zip">CL175</a></td>
     <td><a href="rules-r.html#r0103">R0103</a><br /><a href="rules-r.html#r0871">R0871</a></td>
 </tr><tr>
-    <td><strong>- HOLDER OF THE TRANSIT PROCEDURE</strong></td>
+    <td><strong>-&nbsp; HOLDER OF THE TRANSIT PROCEDURE</strong></td>
     <td>R</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>-- Identification number</td>
+    <td>-&nbsp;-&nbsp; Identification number</td>
     <td>O</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0120">G0120</a><br /><a href="rules-r.html#r0850">R0850</a></td>
 </tr><tr>
-    <td>-- TIR holder identification number</td>
+    <td>-&nbsp;-&nbsp; TIR holder identification number</td>
     <td>D</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0904">C0904</a><br /><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
-    <td>-- Name</td>
+    <td>-&nbsp;-&nbsp; Name</td>
     <td>D</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0250">C0250</a></td>
 </tr><tr>
-    <td><strong>-- ADDRESS</strong></td>
+    <td><strong>-&nbsp;-&nbsp; ADDRESS</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0250">C0250</a></td>
 </tr><tr>
-    <td>--- Street and number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Street and number</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>--- Postcode</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Postcode</td>
     <td>D</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0505">C0505</a></td>
 </tr><tr>
-    <td>--- City</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; City</td>
     <td>R</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>--- Country</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Country</td>
     <td>R</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesForAddress.zip">CL248</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>-- CONTACT PERSON</strong></td>
+    <td><strong>-&nbsp;-&nbsp; CONTACT PERSON</strong></td>
     <td>O</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0105">G0105</a></td>
 </tr><tr>
-    <td>--- Name</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Name</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>--- Phone number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Phone number</td>
     <td>R</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>--- E-mail address</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; E-mail address</td>
     <td>O</td>
     <td>an..256</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
-    <td><strong>- REPRESENTATIVE</strong></td>
+    <td><strong>-&nbsp; REPRESENTATIVE</strong></td>
     <td>O</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0860">G0860</a></td>
 </tr><tr>
-    <td>-- Identification number</td>
+    <td>-&nbsp;-&nbsp; Identification number</td>
     <td>R</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0850">R0850</a></td>
 </tr><tr>
-    <td>-- Status</td>
+    <td>-&nbsp;-&nbsp; Status</td>
     <td>R</td>
     <td>n1</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_RepresentativeStatusCode.zip">CL094</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>-- CONTACT PERSON</strong></td>
+    <td><strong>-&nbsp;-&nbsp; CONTACT PERSON</strong></td>
     <td>O</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0105">G0105</a></td>
 </tr><tr>
-    <td>--- Name</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Name</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>--- Phone number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Phone number</td>
     <td>R</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>--- E-mail address</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; E-mail address</td>
     <td>O</td>
     <td>an..256</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
-    <td><strong>- CONTROL RESULT</strong></td>
+    <td><strong>-&nbsp; CONTROL RESULT</strong></td>
     <td>O</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0160">G0160</a></td>
 </tr><tr>
-    <td>-- Code</td>
+    <td>-&nbsp;-&nbsp; Code</td>
     <td>R</td>
     <td>an2</td>
     <td>CL196</td>
     <td><a href="rules-g.html#g0126">G0126</a><br /><a href="rules-r.html#r0910">R0910</a><br /><a href="rules-r.html#r0912">R0912</a></td>
 </tr><tr>
-    <td>-- Date</td>
+    <td>-&nbsp;-&nbsp; Date</td>
     <td>R</td>
     <td>an10</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0002">G0002</a><br /><a href="rules-g.html#g0127">G0127</a></td>
 </tr><tr>
-    <td>-- Controlled by</td>
+    <td>-&nbsp;-&nbsp; Controlled by</td>
     <td>R</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>-- Text</td>
+    <td>-&nbsp;-&nbsp; Text</td>
     <td>O</td>
     <td>an..512</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>- GUARANTEE</strong></td>
+    <td><strong>-&nbsp; GUARANTEE</strong></td>
     <td>R</td>
     <td>9x</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>-- Sequence number</td>
+    <td>-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>-- Guarantee type</td>
+    <td>-&nbsp;-&nbsp; Guarantee type</td>
     <td>R</td>
     <td>an1</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeType.zip">CL251</a></td>
     <td><a href="rules-r.html#r0900">R0900</a></td>
 </tr><tr>
-    <td>-- Other guarantee reference</td>
+    <td>-&nbsp;-&nbsp; Other guarantee reference</td>
     <td>D</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0130">C0130</a></td>
 </tr><tr>
-    <td><strong>-- GUARANTEE REFERENCE</strong></td>
+    <td><strong>-&nbsp;-&nbsp; GUARANTEE REFERENCE</strong></td>
     <td>D</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0085">C0085</a></td>
 </tr><tr>
-    <td>--- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>--- GRN</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; GRN</td>
     <td>D</td>
     <td>an..24</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0086">C0086</a><br /><a href="rules-g.html#g0002">G0002</a><br /><a href="rules-r.html#r0318">R0318</a></td>
 </tr><tr>
-    <td>--- Access code</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Access code</td>
     <td>D</td>
     <td>an..4</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0086">C0086</a></td>
 </tr><tr>
-    <td>--- Amount to be covered</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Amount to be covered</td>
     <td>R</td>
     <td>n..16,2</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0021">G0021</a></td>
 </tr><tr>
-    <td>--- Currency</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Currency</td>
     <td>R</td>
     <td>a3</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CurrencyCodes.zip">CL048</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>- CONSIGNMENT</strong></td>
+    <td><strong>-&nbsp; CONSIGNMENT</strong></td>
     <td>R</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>-- Country of dispatch</td>
+    <td>-&nbsp;-&nbsp; Country of dispatch</td>
     <td>D</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesFullList.zip">CL008</a></td>
     <td><a href="rules-c.html#c0909">C0909</a><br /><a href="rules-g.html#g0988">G0988</a></td>
 </tr><tr>
-    <td>-- Country of destination</td>
+    <td>-&nbsp;-&nbsp; Country of destination</td>
     <td>D</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesFullList.zip">CL008</a></td>
     <td><a href="rules-c.html#c0343">C0343</a></td>
 </tr><tr>
-    <td>-- Container indicator</td>
+    <td>-&nbsp;-&nbsp; Container indicator</td>
     <td>R</td>
     <td>n1</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_Flag.zip">CL027</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>-- Inland mode of transport</td>
+    <td>-&nbsp;-&nbsp; Inland mode of transport</td>
     <td>O</td>
     <td>n1</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TransportModeCode.zip">CL218</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>-- Mode of transport at the border</td>
+    <td>-&nbsp;-&nbsp; Mode of transport at the border</td>
     <td>D</td>
     <td>n1</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TransportModeCode.zip">CL218</a></td>
     <td><a href="rules-c.html#c0029">C0029</a><br /><a href="rules-g.html#g0020">G0020</a><br /><a href="rules-g.html#g0115">G0115</a></td>
 </tr><tr>
-    <td>-- Gross mass</td>
+    <td>-&nbsp;-&nbsp; Gross mass</td>
     <td>R</td>
     <td>n..16,6</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0994">R0994</a></td>
 </tr><tr>
-    <td>-- Reference number UCR</td>
+    <td>-&nbsp;-&nbsp; Reference number UCR</td>
     <td>D</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0502">C0502</a><br /><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
-    <td><strong>-- CARRIER</strong></td>
+    <td><strong>-&nbsp;-&nbsp; CARRIER</strong></td>
     <td>O</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0090">G0090</a></td>
 </tr><tr>
-    <td>--- Identification number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Identification number</td>
     <td>R</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0002">G0002</a><br /><a href="rules-g.html#g0201">G0201</a><br /><a href="rules-r.html#r0840">R0840</a></td>
 </tr><tr>
-    <td><strong>--- CONTACT PERSON</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; CONTACT PERSON</strong></td>
     <td>O</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0105">G0105</a></td>
 </tr><tr>
-    <td>---- Name</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Name</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>---- Phone number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Phone number</td>
     <td>R</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>---- E-mail address</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; E-mail address</td>
     <td>O</td>
     <td>an..256</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
-    <td><strong>-- CONSIGNOR</strong></td>
+    <td><strong>-&nbsp;-&nbsp; CONSIGNOR</strong></td>
     <td>O</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>--- Identification number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Identification number</td>
     <td>O</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0850">R0850</a></td>
 </tr><tr>
-    <td>--- Name</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Name</td>
     <td>D</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0250">C0250</a></td>
 </tr><tr>
-    <td><strong>--- ADDRESS</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; ADDRESS</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0250">C0250</a></td>
 </tr><tr>
-    <td>---- Street and number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Street and number</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>---- Postcode</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Postcode</td>
     <td>D</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0505">C0505</a></td>
 </tr><tr>
-    <td>---- City</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; City</td>
     <td>R</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>---- Country</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Country</td>
     <td>R</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesForAddress.zip">CL248</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>--- CONTACT PERSON</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; CONTACT PERSON</strong></td>
     <td>O</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0105">G0105</a></td>
 </tr><tr>
-    <td>---- Name</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Name</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>---- Phone number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Phone number</td>
     <td>R</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>---- E-mail address</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; E-mail address</td>
     <td>O</td>
     <td>an..256</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
-    <td><strong>-- CONSIGNEE</strong></td>
+    <td><strong>-&nbsp;-&nbsp; CONSIGNEE</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0001">C0001</a><br /><a href="rules-g.html#g0001">G0001</a></td>
 </tr><tr>
-    <td>--- Identification number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Identification number</td>
     <td>O</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0851">R0851</a></td>
 </tr><tr>
-    <td>--- Name</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Name</td>
     <td>D</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0250">C0250</a></td>
 </tr><tr>
-    <td><strong>--- ADDRESS</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; ADDRESS</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0250">C0250</a></td>
 </tr><tr>
-    <td>---- Street and number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Street and number</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>---- Postcode</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Postcode</td>
     <td>D</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0505">C0505</a></td>
 </tr><tr>
-    <td>---- City</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; City</td>
     <td>R</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>---- Country</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Country</td>
     <td>R</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesForAddress.zip">CL248</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>-- ADDITIONAL SUPPLY CHAIN ACTOR</strong></td>
+    <td><strong>-&nbsp;-&nbsp; ADDITIONAL SUPPLY CHAIN ACTOR</strong></td>
     <td>O</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0825">G0825</a></td>
 </tr><tr>
-    <td>--- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>--- Role</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Role</td>
     <td>R</td>
     <td>a..3</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_AdditionalSupplyChainActorRoleCode.zip">CL704</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>--- Identification number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Identification number</td>
     <td>R</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0002">G0002</a><br /><a href="rules-g.html#g0201">G0201</a><br /><a href="rules-r.html#r0840">R0840</a></td>
 </tr><tr>
-    <td><strong>-- TRANSPORT EQUIPMENT</strong></td>
+    <td><strong>-&nbsp;-&nbsp; TRANSPORT EQUIPMENT</strong></td>
     <td>D</td>
     <td>9999x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0872">C0872</a><br /><a href="rules-g.html#g0103">G0103</a></td>
 </tr><tr>
-    <td>--- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>--- Container identification number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Container identification number</td>
     <td>D</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0055">C0055</a><br /><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
-    <td>--- Number of seals</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Number of seals</td>
     <td>R</td>
     <td>n..4</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0021">G0021</a><br /><a href="rules-r.html#r0106">R0106</a><br /><a href="rules-r.html#r0165">R0165</a><br /><a href="rules-r.html#r0448">R0448</a></td>
 </tr><tr>
-    <td><strong>--- SEAL</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; SEAL</strong></td>
     <td>D</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0569">C0569</a></td>
 </tr><tr>
-    <td>---- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>---- Identifier</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Identifier</td>
     <td>R</td>
     <td>an..20</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0107">R0107</a></td>
 </tr><tr>
-    <td><strong>--- GOODS REFERENCE</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; GOODS REFERENCE</strong></td>
     <td>D</td>
     <td>9999x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0670">C0670</a><br /><a href="rules-g.html#g0670">G0670</a></td>
 </tr><tr>
-    <td>---- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>---- Declaration goods item number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Declaration goods item number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0005">G0005</a><br /><a href="rules-g.html#g0006">G0006</a></td>
 </tr><tr>
-    <td><strong>-- LOCATION OF GOODS</strong></td>
+    <td><strong>-&nbsp;-&nbsp; LOCATION OF GOODS</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0489">C0489</a></td>
 </tr><tr>
-    <td>--- Type of location</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Type of location</td>
     <td>R</td>
     <td>a1</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TypeOfLocation.zip">CL347</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>--- Qualifier of identification</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Qualifier of identification</td>
     <td>R</td>
     <td>a1</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_QualifierOfTheIdentification.zip">CL326</a></td>
     <td><a href="rules-g.html#g0500">G0500</a></td>
 </tr><tr>
-    <td>--- Authorisation number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Authorisation number</td>
     <td>D</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0394">C0394</a></td>
 </tr><tr>
-    <td>--- Additional identifier</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Additional identifier</td>
     <td>D</td>
     <td>an..4</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0671">C0671</a></td>
 </tr><tr>
-    <td>--- UN LOCODE</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; UN LOCODE</td>
     <td>D</td>
     <td>an..17</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_UnLocodeExtended.zip">CL244</a></td>
     <td><a href="rules-c.html#c0394">C0394</a></td>
 </tr><tr>
-    <td><strong>--- CUSTOMS OFFICE</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; CUSTOMS OFFICE</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0394">C0394</a></td>
 </tr><tr>
-    <td>---- Reference number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an8</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CustomsOfficeDeparture.zip">CL171</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>--- GNSS</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; GNSS</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0394">C0394</a></td>
 </tr><tr>
-    <td>---- Latitude</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Latitude</td>
     <td>R</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0002">G0002</a><br /><a href="rules-g.html#g0014">G0014</a></td>
 </tr><tr>
-    <td>---- Longitude</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Longitude</td>
     <td>R</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0002">G0002</a><br /><a href="rules-g.html#g0014">G0014</a></td>
 </tr><tr>
-    <td><strong>--- ECONOMIC OPERATOR</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; ECONOMIC OPERATOR</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0394">C0394</a></td>
 </tr><tr>
-    <td>---- Identification number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Identification number</td>
     <td>R</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0850">R0850</a></td>
 </tr><tr>
-    <td><strong>--- ADDRESS</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; ADDRESS</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0394">C0394</a></td>
 </tr><tr>
-    <td>---- Street and number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Street and number</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>---- Postcode</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Postcode</td>
     <td>D</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0505">C0505</a></td>
 </tr><tr>
-    <td>---- City</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; City</td>
     <td>R</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>---- Country</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Country</td>
     <td>R</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>--- POSTCODE ADDRESS</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; POSTCODE ADDRESS</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0394">C0394</a></td>
 </tr><tr>
-    <td>---- House number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; House number</td>
     <td>D</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0382">C0382</a></td>
 </tr><tr>
-    <td>---- Postcode</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Postcode</td>
     <td>R</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>---- Country</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Country</td>
     <td>R</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryAddressPostcodeBased.zip">CL190</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>--- CONTACT PERSON</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; CONTACT PERSON</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0394">C0394</a><br /><a href="rules-g.html#g0105">G0105</a></td>
 </tr><tr>
-    <td>---- Name</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Name</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>---- Phone number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Phone number</td>
     <td>R</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>---- E-mail address</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; E-mail address</td>
     <td>O</td>
     <td>an..256</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
-    <td><strong>-- DEPARTURE TRANSPORT MEANS</strong></td>
+    <td><strong>-&nbsp;-&nbsp; DEPARTURE TRANSPORT MEANS</strong></td>
     <td>D</td>
     <td>999x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0339">C0339</a><br /><a href="rules-g.html#g0119">G0119</a><br /><a href="rules-r.html#r0855">R0855</a></td>
 </tr><tr>
-    <td>--- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>--- Type of identification</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Type of identification</td>
     <td>R</td>
     <td>n2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TypeOfIdentificationOfMeansOfTransport.zip">CL750</a></td>
     <td><a href="rules-g.html#g0112">G0112</a><br /><a href="rules-r.html#r0472">R0472</a><br /><a href="rules-r.html#r0474">R0474</a><br /><a href="rules-r.html#r0476">R0476</a></td>
 </tr><tr>
-    <td>--- Identification number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Identification number</td>
     <td>R</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0473">R0473</a></td>
 </tr><tr>
-    <td>--- Nationality</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Nationality</td>
     <td>R</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_Nationality.zip">CL165</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>-- COUNTRY OF ROUTING OF CONSIGNMENT</strong></td>
+    <td><strong>-&nbsp;-&nbsp; COUNTRY OF ROUTING OF CONSIGNMENT</strong></td>
     <td>D</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0586">C0586</a><br /><a href="rules-g.html#g0061">G0061</a></td>
 </tr><tr>
-    <td>--- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>--- Country</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Country</td>
     <td>R</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesFullList.zip">CL008</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>-- ACTIVE BORDER TRANSPORT MEANS</strong></td>
+    <td><strong>-&nbsp;-&nbsp; ACTIVE BORDER TRANSPORT MEANS</strong></td>
     <td>D</td>
     <td>9x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0908">C0908</a></td>
 </tr><tr>
-    <td>--- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>--- Customs office at border reference number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Customs office at border reference number</td>
     <td>R</td>
     <td>an8</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/COL-Generic-20230601.zip">CL141</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>--- Type of identification</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Type of identification</td>
     <td>R</td>
     <td>n2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TypeOfIdentificationofMeansOfTransportActive.zip">CL219</a></td>
     <td><a href="rules-g.html#g0112">G0112</a></td>
 </tr><tr>
-    <td>--- Identification number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Identification number</td>
     <td>R</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0076">R0076</a></td>
 </tr><tr>
-    <td>--- Nationality</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Nationality</td>
     <td>R</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_Nationality.zip">CL165</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>--- Conveyance reference number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Conveyance reference number</td>
     <td>D</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0531">C0531</a><br /><a href="rules-g.html#g0002">G0002</a><br /><a href="rules-r.html#r0315">R0315</a></td>
 </tr><tr>
-    <td><strong>-- PLACE OF LOADING</strong></td>
+    <td><strong>-&nbsp;-&nbsp; PLACE OF LOADING</strong></td>
     <td>R</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>--- UN LOCODE</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; UN LOCODE</td>
     <td>O</td>
     <td>an..17</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_UnLocodeExtended.zip">CL244</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>--- Country</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Country</td>
     <td>D</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesFullList.zip">CL008</a></td>
     <td><a href="rules-c.html#c0387">C0387</a></td>
 </tr><tr>
-    <td>--- Location</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Location</td>
     <td>D</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0387">C0387</a></td>
 </tr><tr>
-    <td><strong>-- PLACE OF UNLOADING</strong></td>
+    <td><strong>-&nbsp;-&nbsp; PLACE OF UNLOADING</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0191">C0191</a></td>
 </tr><tr>
-    <td>--- UN LOCODE</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; UN LOCODE</td>
     <td>O</td>
     <td>an..17</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_UnLocodeExtended.zip">CL244</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>--- Country</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Country</td>
     <td>D</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesFullList.zip">CL008</a></td>
     <td><a href="rules-c.html#c0387">C0387</a></td>
 </tr><tr>
-    <td>--- Location</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Location</td>
     <td>D</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0387">C0387</a></td>
 </tr><tr>
-    <td><strong>-- PREVIOUS DOCUMENT</strong></td>
+    <td><strong>-&nbsp;-&nbsp; PREVIOUS DOCUMENT</strong></td>
     <td>O</td>
     <td>9999x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0825">G0825</a></td>
 </tr><tr>
-    <td>--- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>--- Type</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Type</td>
     <td>R</td>
     <td>an4</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentType.zip">CL214</a></td>
     <td><a href="rules-g.html#g0057">G0057</a><br /><a href="rules-r.html#r0020">R0020</a></td>
 </tr><tr>
-    <td>--- Reference number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0321">G0321</a></td>
 </tr><tr>
-    <td>--- Complement of information</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Complement of information</td>
     <td>O</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>-- SUPPORTING DOCUMENT</strong></td>
+    <td><strong>-&nbsp;-&nbsp; SUPPORTING DOCUMENT</strong></td>
     <td>O</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0825">G0825</a></td>
 </tr><tr>
-    <td>--- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>--- Type</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Type</td>
     <td>R</td>
     <td>an4</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_SupportingDocumentType.zip">CL213</a></td>
     <td><a href="rules-g.html#g0057">G0057</a></td>
 </tr><tr>
-    <td>--- Reference number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0321">G0321</a></td>
 </tr><tr>
-    <td>--- Document line item number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Document line item number</td>
     <td>O</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>--- Complement of information</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Complement of information</td>
     <td>O</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>-- TRANSPORT DOCUMENT</strong></td>
+    <td><strong>-&nbsp;-&nbsp; TRANSPORT DOCUMENT</strong></td>
     <td>O</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0825">G0825</a></td>
 </tr><tr>
-    <td>--- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>--- Type</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Type</td>
     <td>R</td>
     <td>an4</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TransportDocumentType.zip">CL754</a></td>
     <td><a href="rules-g.html#g0057">G0057</a></td>
 </tr><tr>
-    <td>--- Reference number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0321">G0321</a></td>
 </tr><tr>
-    <td><strong>-- ADDITIONAL REFERENCE</strong></td>
+    <td><strong>-&nbsp;-&nbsp; ADDITIONAL REFERENCE</strong></td>
     <td>O</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0825">G0825</a></td>
 </tr><tr>
-    <td>--- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>--- Type</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Type</td>
     <td>R</td>
     <td>an4</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_AdditionalReference.zip">CL380</a></td>
     <td><a href="rules-g.html#g0057">G0057</a></td>
 </tr><tr>
-    <td>--- Reference number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Reference number</td>
     <td>O</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0321">G0321</a></td>
 </tr><tr>
-    <td><strong>-- ADDITIONAL INFORMATION</strong></td>
+    <td><strong>-&nbsp;-&nbsp; ADDITIONAL INFORMATION</strong></td>
     <td>O</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0825">G0825</a></td>
 </tr><tr>
-    <td>--- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>--- Code</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Code</td>
     <td>R</td>
     <td>an5</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_AdditionalInformation.zip">CL239</a></td>
     <td><a href="rules-g.html#g0057">G0057</a><br /><a href="rules-r.html#r3060">R3060</a></td>
 </tr><tr>
-    <td>--- Text</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Text</td>
     <td>O</td>
     <td>an..512</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>-- TRANSPORT CHARGES</strong></td>
+    <td><strong>-&nbsp;-&nbsp; TRANSPORT CHARGES</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0186">C0186</a></td>
 </tr><tr>
-    <td>--- Method of payment</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Method of payment</td>
     <td>R</td>
     <td>a1</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TransportChargesMethodOfPayment.zip">CL116</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>-- HOUSE CONSIGNMENT</strong></td>
+    <td><strong>-&nbsp;-&nbsp; HOUSE CONSIGNMENT</strong></td>
     <td>R</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>--- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>--- Country of dispatch</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Country of dispatch</td>
     <td>D</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesFullList.zip">CL008</a></td>
     <td><a href="rules-c.html#c0909">C0909</a><br /><a href="rules-g.html#g0988">G0988</a></td>
 </tr><tr>
-    <td>--- Gross mass</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Gross mass</td>
     <td>R</td>
     <td>n..16,6</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0983">R0983</a></td>
 </tr><tr>
-    <td>--- Reference number UCR</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Reference number UCR</td>
     <td>D</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0502">C0502</a><br /><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
-    <td>--- Security indicator from export declaration</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Security indicator from export declaration</td>
     <td>O</td>
     <td>n1</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DeclarationTypeSecurity.zip">CL217</a></td>
     <td><a href="rules-g.html#g0025">G0025</a><br /><a href="rules-g.html#g0026">G0026</a></td>
 </tr><tr>
-    <td><strong>--- CONSIGNOR</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; CONSIGNOR</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0349">C0349</a></td>
 </tr><tr>
-    <td>---- Identification number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Identification number</td>
     <td>O</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0850">R0850</a></td>
 </tr><tr>
-    <td>---- Name</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Name</td>
     <td>D</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0250">C0250</a></td>
 </tr><tr>
-    <td><strong>---- ADDRESS</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp; ADDRESS</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0250">C0250</a></td>
 </tr><tr>
-    <td>----- Street and number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Street and number</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>----- Postcode</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Postcode</td>
     <td>D</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0505">C0505</a></td>
 </tr><tr>
-    <td>----- City</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; City</td>
     <td>R</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>----- Country</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Country</td>
     <td>R</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesForAddress.zip">CL248</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>---- CONTACT PERSON</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp; CONTACT PERSON</strong></td>
     <td>O</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0105">G0105</a></td>
 </tr><tr>
-    <td>----- Name</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Name</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>----- Phone number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Phone number</td>
     <td>R</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>----- E-mail address</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; E-mail address</td>
     <td>O</td>
     <td>an..256</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
-    <td><strong>--- CONSIGNEE</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; CONSIGNEE</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0001">C0001</a><br /><a href="rules-g.html#g0001">G0001</a></td>
 </tr><tr>
-    <td>---- Identification number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Identification number</td>
     <td>O</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0851">R0851</a></td>
 </tr><tr>
-    <td>---- Name</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Name</td>
     <td>D</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0250">C0250</a></td>
 </tr><tr>
-    <td><strong>---- ADDRESS</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp; ADDRESS</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0250">C0250</a></td>
 </tr><tr>
-    <td>----- Street and number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Street and number</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>----- Postcode</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Postcode</td>
     <td>D</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0505">C0505</a></td>
 </tr><tr>
-    <td>----- City</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; City</td>
     <td>R</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>----- Country</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Country</td>
     <td>R</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesForAddress.zip">CL248</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>--- ADDITIONAL SUPPLY CHAIN ACTOR</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; ADDITIONAL SUPPLY CHAIN ACTOR</strong></td>
     <td>O</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0825">G0825</a></td>
 </tr><tr>
-    <td>---- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>---- Role</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Role</td>
     <td>R</td>
     <td>a..3</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_AdditionalSupplyChainActorRoleCode.zip">CL704</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>---- Identification number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Identification number</td>
     <td>R</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0002">G0002</a><br /><a href="rules-g.html#g0201">G0201</a><br /><a href="rules-r.html#r0840">R0840</a></td>
 </tr><tr>
-    <td><strong>--- DEPARTURE TRANSPORT MEANS</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; DEPARTURE TRANSPORT MEANS</strong></td>
     <td>D</td>
     <td>999x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0339">C0339</a><br /><a href="rules-g.html#g0119">G0119</a><br /><a href="rules-r.html#r0855">R0855</a></td>
 </tr><tr>
-    <td>---- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>---- Type of identification</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Type of identification</td>
     <td>R</td>
     <td>n2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TypeOfIdentificationOfMeansOfTransport.zip">CL750</a></td>
     <td><a href="rules-g.html#g0112">G0112</a><br /><a href="rules-r.html#r0472">R0472</a><br /><a href="rules-r.html#r0474">R0474</a><br /><a href="rules-r.html#r0476">R0476</a></td>
 </tr><tr>
-    <td>---- Identification number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Identification number</td>
     <td>R</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0473">R0473</a></td>
 </tr><tr>
-    <td>---- Nationality</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Nationality</td>
     <td>R</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_Nationality.zip">CL165</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>--- PREVIOUS DOCUMENT</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; PREVIOUS DOCUMENT</strong></td>
     <td>O</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0026">G0026</a></td>
 </tr><tr>
-    <td>---- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>---- Type</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Type</td>
     <td>R</td>
     <td>an4</td>
     <td>CL228</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>---- Reference number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0416">R0416</a></td>
 </tr><tr>
-    <td>---- Complement of information</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Complement of information</td>
     <td>O</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>--- SUPPORTING DOCUMENT</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; SUPPORTING DOCUMENT</strong></td>
     <td>O</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0825">G0825</a></td>
 </tr><tr>
-    <td>---- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>---- Type</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Type</td>
     <td>R</td>
     <td>an4</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_SupportingDocumentType.zip">CL213</a></td>
     <td><a href="rules-g.html#g0057">G0057</a></td>
 </tr><tr>
-    <td>---- Reference number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0321">G0321</a></td>
 </tr><tr>
-    <td>---- Document line item number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Document line item number</td>
     <td>O</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>---- Complement of information</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Complement of information</td>
     <td>O</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>--- TRANSPORT DOCUMENT</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; TRANSPORT DOCUMENT</strong></td>
     <td>O</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0825">G0825</a></td>
 </tr><tr>
-    <td>---- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>---- Type</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Type</td>
     <td>R</td>
     <td>an4</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TransportDocumentType.zip">CL754</a></td>
     <td><a href="rules-g.html#g0057">G0057</a></td>
 </tr><tr>
-    <td>---- Reference number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0321">G0321</a></td>
 </tr><tr>
-    <td><strong>--- ADDITIONAL REFERENCE</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; ADDITIONAL REFERENCE</strong></td>
     <td>O</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0825">G0825</a></td>
 </tr><tr>
-    <td>---- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>---- Type</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Type</td>
     <td>R</td>
     <td>an4</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_AdditionalReference.zip">CL380</a></td>
     <td><a href="rules-g.html#g0057">G0057</a></td>
 </tr><tr>
-    <td>---- Reference number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Reference number</td>
     <td>O</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0321">G0321</a></td>
 </tr><tr>
-    <td><strong>--- ADDITIONAL INFORMATION</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; ADDITIONAL INFORMATION</strong></td>
     <td>O</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0825">G0825</a></td>
 </tr><tr>
-    <td>---- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>---- Code</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Code</td>
     <td>R</td>
     <td>an5</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_AdditionalInformation.zip">CL239</a></td>
     <td><a href="rules-g.html#g0057">G0057</a><br /><a href="rules-r.html#r3062">R3062</a></td>
 </tr><tr>
-    <td>---- Text</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Text</td>
     <td>O</td>
     <td>an..512</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>--- TRANSPORT CHARGES</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; TRANSPORT CHARGES</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0186">C0186</a><br /><a href="rules-c.html#c0337">C0337</a></td>
 </tr><tr>
-    <td>---- Method of payment</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Method of payment</td>
     <td>R</td>
     <td>a1</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TransportChargesMethodOfPayment.zip">CL116</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>--- CONSIGNMENT ITEM</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp; CONSIGNMENT ITEM</strong></td>
     <td>R</td>
     <td>999x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0071">G0071</a></td>
 </tr><tr>
-    <td>---- Goods item number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Goods item number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0072">G0072</a><br /><a href="rules-r.html#r0988">R0988</a></td>
 </tr><tr>
-    <td>---- Declaration goods item number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Declaration goods item number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0005">G0005</a><br /><a href="rules-r.html#r0007">R0007</a></td>
 </tr><tr>
-    <td>---- Declaration type</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Declaration type</td>
     <td>D</td>
     <td>an..5</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DeclarationTypeItemLevel.zip">CL232</a></td>
     <td><a href="rules-c.html#c0045">C0045</a><br /><a href="rules-r.html#r0601">R0601</a><br /><a href="rules-r.html#r0909">R0909</a></td>
 </tr><tr>
-    <td>---- Country of dispatch</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Country of dispatch</td>
     <td>D</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesFullList.zip">CL008</a></td>
     <td><a href="rules-c.html#c0909">C0909</a><br /><a href="rules-g.html#g0988">G0988</a></td>
 </tr><tr>
-    <td>---- Country of destination</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Country of destination</td>
     <td>D</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesFullList.zip">CL008</a></td>
     <td><a href="rules-c.html#c0343">C0343</a></td>
 </tr><tr>
-    <td>---- Reference number UCR</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Reference number UCR</td>
     <td>D</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0502">C0502</a><br /><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
-    <td><strong>---- CONSIGNEE</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp; CONSIGNEE</strong></td>
     <td>O</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0001">G0001</a><br /><a href="rules-g.html#g0989">G0989</a></td>
 </tr><tr>
-    <td>----- Identification number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Identification number</td>
     <td>O</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0851">R0851</a></td>
 </tr><tr>
-    <td>----- Name</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Name</td>
     <td>O</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>----- ADDRESS</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; ADDRESS</strong></td>
     <td>O</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0989">G0989</a></td>
 </tr><tr>
-    <td>------ Street and number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Street and number</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>------ Postcode</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Postcode</td>
     <td>O</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>------ City</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; City</td>
     <td>R</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>------ Country</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Country</td>
     <td>R</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesForAddress.zip">CL248</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>---- ADDITIONAL SUPPLY CHAIN ACTOR</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp; ADDITIONAL SUPPLY CHAIN ACTOR</strong></td>
     <td>O</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0825">G0825</a></td>
 </tr><tr>
-    <td>----- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>----- Role</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Role</td>
     <td>R</td>
     <td>a..3</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_AdditionalSupplyChainActorRoleCode.zip">CL704</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>----- Identification number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Identification number</td>
     <td>R</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0002">G0002</a><br /><a href="rules-g.html#g0201">G0201</a><br /><a href="rules-r.html#r0840">R0840</a></td>
 </tr><tr>
-    <td><strong>---- COMMODITY</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp; COMMODITY</strong></td>
     <td>R</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>----- Description of goods</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Description of goods</td>
     <td>R</td>
     <td>an..512</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>----- CUS code</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; CUS code</td>
     <td>O</td>
     <td>an9</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CUSCode.zip">CL016</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>----- COMMODITY CODE</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; COMMODITY CODE</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0153">C0153</a></td>
 </tr><tr>
-    <td>------ Harmonized System sub-heading code</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Harmonized System sub-heading code</td>
     <td>R</td>
     <td>an6</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_HScode.zip">CL152</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>------ Combined nomenclature code</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Combined nomenclature code</td>
     <td>O</td>
     <td>an2</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0060">R0060</a></td>
 </tr><tr>
-    <td><strong>----- DANGEROUS GOODS</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; DANGEROUS GOODS</strong></td>
     <td>O</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0300">G0300</a></td>
 </tr><tr>
-    <td>------ Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>------ UN Number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; UN Number</td>
     <td>R</td>
     <td>an4</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_UnDangerousGoodsCode.zip">CL101</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>----- GOODS MEASURE</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; GOODS MEASURE</strong></td>
     <td>R</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>------ Gross mass</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Gross mass</td>
     <td>R</td>
     <td>n..16,6</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0021">G0021</a><br /><a href="rules-r.html#r0221">R0221</a></td>
 </tr><tr>
-    <td>------ Net mass</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Net mass</td>
     <td>D</td>
     <td>n..16,6</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0837">C0837</a><br /><a href="rules-r.html#r0223">R0223</a></td>
 </tr><tr>
-    <td><strong>---- PACKAGING</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp; PACKAGING</strong></td>
     <td>R</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>----- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>----- Type of packages</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Type of packages</td>
     <td>R</td>
     <td>an2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_KindOfPackages.zip">CL017</a></td>
     <td><a href="rules-r.html#r0220">R0220</a></td>
 </tr><tr>
-    <td>----- Number of packages</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Number of packages</td>
     <td>D</td>
     <td>n..8</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0060">C0060</a><br /><a href="rules-g.html#g0021">G0021</a><br /><a href="rules-r.html#r0219">R0219</a><br /><a href="rules-r.html#r0364">R0364</a></td>
 </tr><tr>
-    <td>----- Shipping marks</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Shipping marks</td>
     <td>D</td>
     <td>an..512</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0060">C0060</a><br /><a href="rules-g.html#g0024">G0024</a></td>
 </tr><tr>
-    <td><strong>---- PREVIOUS DOCUMENT</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp; PREVIOUS DOCUMENT</strong></td>
     <td>D</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0035">C0035</a><br /><a href="rules-g.html#g0825">G0825</a></td>
 </tr><tr>
-    <td>----- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>----- Type</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Type</td>
     <td>R</td>
     <td>an4</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentType.zip">CL214</a></td>
     <td><a href="rules-g.html#g0057">G0057</a><br /><a href="rules-r.html#r0020">R0020</a></td>
 </tr><tr>
-    <td>----- Reference number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0321">G0321</a></td>
 </tr><tr>
-    <td>----- Goods item number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Goods item number</td>
     <td>O</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0058">G0058</a></td>
 </tr><tr>
-    <td>----- Type of packages</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Type of packages</td>
     <td>O</td>
     <td>an2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_KindOfPackages.zip">CL017</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>----- Number of packages</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Number of packages</td>
     <td>O</td>
     <td>n..8</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>----- Measurement unit and qualifier</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Measurement unit and qualifier</td>
     <td>D</td>
     <td>an..4</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_Unit.zip">CL349</a></td>
     <td><a href="rules-c.html#c0298">C0298</a></td>
 </tr><tr>
-    <td>----- Quantity</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Quantity</td>
     <td>O</td>
     <td>n..16,6</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>----- Complement of information</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Complement of information</td>
     <td>O</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>---- SUPPORTING DOCUMENT</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp; SUPPORTING DOCUMENT</strong></td>
     <td>O</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0825">G0825</a></td>
 </tr><tr>
-    <td>----- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>----- Type</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Type</td>
     <td>R</td>
     <td>an4</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_SupportingDocumentType.zip">CL213</a></td>
     <td><a href="rules-g.html#g0057">G0057</a></td>
 </tr><tr>
-    <td>----- Reference number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0321">G0321</a></td>
 </tr><tr>
-    <td>----- Document line item number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Document line item number</td>
     <td>O</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>----- Complement of information</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Complement of information</td>
     <td>O</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>---- TRANSPORT DOCUMENT</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp; TRANSPORT DOCUMENT</strong></td>
     <td>O</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0825">G0825</a><br /><a href="rules-g.html#g0989">G0989</a></td>
 </tr><tr>
-    <td>----- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>----- Type</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Type</td>
     <td>R</td>
     <td>an4</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TransportDocumentType.zip">CL754</a></td>
     <td><a href="rules-g.html#g0057">G0057</a></td>
 </tr><tr>
-    <td>----- Reference number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0321">G0321</a></td>
 </tr><tr>
-    <td><strong>---- ADDITIONAL REFERENCE</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp; ADDITIONAL REFERENCE</strong></td>
     <td>O</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0825">G0825</a></td>
 </tr><tr>
-    <td>----- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>----- Type</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Type</td>
     <td>R</td>
     <td>an4</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_AdditionalReference.zip">CL380</a></td>
     <td><a href="rules-g.html#g0057">G0057</a></td>
 </tr><tr>
-    <td>----- Reference number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Reference number</td>
     <td>D</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0015">C0015</a><br /><a href="rules-g.html#g0050">G0050</a><br /><a href="rules-g.html#g0321">G0321</a><br /><a href="rules-r.html#r0023">R0023</a></td>
 </tr><tr>
-    <td><strong>---- ADDITIONAL INFORMATION</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp; ADDITIONAL INFORMATION</strong></td>
     <td>O</td>
     <td>99x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0825">G0825</a></td>
 </tr><tr>
-    <td>----- Sequence number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>----- Code</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Code</td>
     <td>R</td>
     <td>an5</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_AdditionalInformation.zip">CL239</a></td>
     <td><a href="rules-g.html#g0057">G0057</a><br /><a href="rules-r.html#r3061">R3061</a></td>
 </tr><tr>
-    <td>----- Text</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Text</td>
     <td>O</td>
     <td>an..512</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>---- TRANSPORT CHARGES</strong></td>
+    <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp; TRANSPORT CHARGES</strong></td>
     <td>O</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0989">G0989</a></td>
 </tr><tr>
-    <td>----- Method of payment</td>
+    <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Method of payment</td>
     <td>R</td>
     <td>a1</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TransportChargesMethodOfPayment.zip">CL116</a></td>

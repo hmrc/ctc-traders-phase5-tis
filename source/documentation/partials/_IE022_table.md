@@ -23,157 +23,157 @@
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>- Message sender</td>
+    <td>-&nbsp; Message sender</td>
     <td>R</td>
     <td>an..35 (see <a href="../#message-sender-and-recipient-guidelines">Message sender and recipient guidelines</a>)</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>- Message recipient</td>
+    <td>-&nbsp; Message recipient</td>
     <td>R</td>
     <td>an..35 (see <a href="../#message-sender-and-recipient-guidelines">Message sender and recipient guidelines</a>)</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>- Preparation date and time</td>
+    <td>-&nbsp; Preparation date and time</td>
     <td>R</td>
     <td>an19</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
-    <td>- Message identification</td>
+    <td>-&nbsp; Message identification</td>
     <td>R</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>- Message type</td>
+    <td>-&nbsp; Message type</td>
     <td>R</td>
     <td>an6</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_MessageTypes.zip">CL060</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>- Correlation identifier</td>
+    <td>-&nbsp; Correlation identifier</td>
     <td>D</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0511">C0511</a><br /><a href="rules-r.html#r0008">R0008</a></td>
 </tr><tr>
-    <td><strong>- TRANSIT OPERATION</strong></td>
+    <td><strong>-&nbsp; TRANSIT OPERATION</strong></td>
     <td>R</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>-- MRN</td>
+    <td>-&nbsp;-&nbsp; MRN</td>
     <td>R</td>
     <td>an18</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
-    <td>-- Amendment notification date and time</td>
+    <td>-&nbsp;-&nbsp; Amendment notification date and time</td>
     <td>R</td>
     <td>an19</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
-    <td><strong>- CUSTOMS OFFICE OF DEPARTURE</strong></td>
+    <td><strong>-&nbsp; CUSTOMS OFFICE OF DEPARTURE</strong></td>
     <td>R</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>-- Reference number</td>
+    <td>-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an8</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CustomsOfficeDeparture.zip">CL171</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>- HOLDER OF THE TRANSIT PROCEDURE</strong></td>
+    <td><strong>-&nbsp; HOLDER OF THE TRANSIT PROCEDURE</strong></td>
     <td>R</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>-- Identification number</td>
+    <td>-&nbsp;-&nbsp; Identification number</td>
     <td>O</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0120">G0120</a><br /><a href="rules-r.html#r0850">R0850</a></td>
 </tr><tr>
-    <td>-- TIR holder identification number</td>
+    <td>-&nbsp;-&nbsp; TIR holder identification number</td>
     <td>D</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0904">C0904</a><br /><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
-    <td>-- Name</td>
+    <td>-&nbsp;-&nbsp; Name</td>
     <td>D</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0250">C0250</a></td>
 </tr><tr>
-    <td><strong>-- ADDRESS</strong></td>
+    <td><strong>-&nbsp;-&nbsp; ADDRESS</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0250">C0250</a></td>
 </tr><tr>
-    <td>--- Street and number</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Street and number</td>
     <td>R</td>
     <td>an..70</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>--- Postcode</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Postcode</td>
     <td>D</td>
     <td>an..17</td>
     <td>&nbsp;</td>
     <td><a href="rules-c.html#c0505">C0505</a></td>
 </tr><tr>
-    <td>--- City</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; City</td>
     <td>R</td>
     <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>--- Country</td>
+    <td>-&nbsp;-&nbsp;-&nbsp; Country</td>
     <td>R</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesForAddress.zip">CL248</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td><strong>- FUNCTIONAL ERROR</strong></td>
+    <td><strong>-&nbsp; FUNCTIONAL ERROR</strong></td>
     <td>O</td>
     <td>9999x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0217">G0217</a></td>
 </tr><tr>
-    <td>-- Sequence number</td>
+    <td>-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
 </tr><tr>
-    <td>-- Error pointer</td>
+    <td>-&nbsp;-&nbsp; Error pointer</td>
     <td>O</td>
     <td>an..512</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>-- Error code</td>
+    <td>-&nbsp;-&nbsp; Error code</td>
     <td>R</td>
     <td>n2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_FunctionalErrorCodesIeCA.zip">CL180</a></td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>-- Error reason</td>
+    <td>-&nbsp;-&nbsp; Error reason</td>
     <td>O</td>
     <td>an..7</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
-    <td>-- Original attribute value</td>
+    <td>-&nbsp;-&nbsp; Original attribute value</td>
     <td>O</td>
     <td>an..512</td>
     <td>&nbsp;</td>
