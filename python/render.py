@@ -85,7 +85,7 @@ def render_category_row(category: MessageCategory) -> str:
     :return: The HTML
     """
     # We convert --- from the DDNTA to -.
-    cat = category.category.replace("---", "-")
+    cat = category.category.replace("---", "-&nbsp;")
     # Fields will gain hyphens for easier visualisation of hierarchy
     hyphens = cat.count("-")
     c = cleandoc(f"""
@@ -109,7 +109,7 @@ def render_children_fields(fields: list[MessageField], hyphens: int) -> str:
     :return: The HTML
     """
     r = []
-    h = "-" * hyphens
+    h = "-&nbsp;" * hyphens
     for f in fields:
         # The code list and rules will have hyperlinks added to them
         # The format field might have a special format -- this is the case for the message sender and message recipient
