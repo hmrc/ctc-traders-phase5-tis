@@ -39,7 +39,7 @@
     <td>R</td>
     <td>an19</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html">G0002</a></td>
+    <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
     <td>- Message identification</td>
     <td>R</td>
@@ -57,7 +57,7 @@
     <td>D</td>
     <td>an..35</td>
     <td>&nbsp;</td>
-    <td><a href="rules-c.html">C0511</a><br /><a href="rules-r.html">R0008</a></td>
+    <td><a href="rules-c.html#c0511">C0511</a><br /><a href="rules-r.html#r0008">R0008</a></td>
 </tr><tr>
     <td><strong>- TRANSIT OPERATION</strong></td>
     <td>R</td>
@@ -69,13 +69,13 @@
     <td>R</td>
     <td>an18</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html">G0002</a></td>
+    <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
     <td>-- Release date</td>
     <td>R</td>
     <td>an10</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html">G0002</a></td>
+    <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
     <td>-- Release indicator</td>
     <td>R</td>
@@ -105,13 +105,13 @@
     <td>R</td>
     <td>an..17</td>
     <td>&nbsp;</td>
-    <td><a href="rules-r.html">R0850</a></td>
+    <td><a href="rules-r.html#r0850">R0850</a></td>
 </tr><tr>
     <td><strong>- CONSIGNMENT</strong></td>
     <td>D</td>
     <td>1x</td>
     <td>&nbsp;</td>
-    <td><a href="rules-c.html">C0352</a></td>
+    <td><a href="rules-c.html#c0352">C0352</a></td>
 </tr><tr>
     <td><strong>-- HOUSE CONSIGNMENT</strong></td>
     <td>R</td>
@@ -123,7 +123,7 @@
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
-    <td><a href="rules-r.html">R0054</a></td>
+    <td><a href="rules-r.html#r0054">R0054</a></td>
 </tr><tr>
     <td>--- Release type</td>
     <td>R</td>
@@ -135,19 +135,19 @@
     <td>D</td>
     <td>999x</td>
     <td>&nbsp;</td>
-    <td><a href="rules-c.html">C0353</a></td>
+    <td><a href="rules-c.html#c0353">C0353</a></td>
 </tr><tr>
     <td>---- Goods item number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
-    <td><a href="rules-r.html">R0055</a></td>
+    <td><a href="rules-r.html#r0055">R0055</a></td>
 </tr><tr>
     <td>---- Declaration goods item number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html">G0005</a><br /><a href="rules-r.html">R0055</a></td>
+    <td><a href="rules-g.html#g0005">G0005</a><br /><a href="rules-r.html#r0055">R0055</a></td>
 </tr><tr>
     <td>---- Release type</td>
     <td>R</td>
@@ -159,7 +159,7 @@
     <td>R</td>
     <td>1x</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html">G0131</a></td>
+    <td><a href="rules-g.html#g0131">G0131</a></td>
 </tr><tr>
     <td>----- Description of goods</td>
     <td>R</td>
@@ -189,19 +189,19 @@
     <td>O</td>
     <td>an2</td>
     <td>&nbsp;</td>
-    <td><a href="rules-r.html">R0060</a></td>
+    <td><a href="rules-r.html#r0060">R0060</a></td>
 </tr><tr>
     <td><strong>----- DANGEROUS GOODS</strong></td>
     <td>O</td>
     <td>99x</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html">G0300</a></td>
+    <td><a href="rules-g.html#g0300">G0300</a></td>
 </tr><tr>
     <td>------ Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
-    <td><a href="rules-r.html">R0054</a></td>
+    <td><a href="rules-r.html#r0054">R0054</a></td>
 </tr><tr>
     <td>------ UN Number</td>
     <td>R</td>
@@ -219,25 +219,25 @@
     <td>R</td>
     <td>n..16,6</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html">G0021</a><br /><a href="rules-r.html">R0221</a></td>
+    <td><a href="rules-g.html#g0021">G0021</a><br /><a href="rules-r.html#r0221">R0221</a></td>
 </tr><tr>
     <td>------ Net mass</td>
     <td>D</td>
     <td>n..16,6</td>
     <td>&nbsp;</td>
-    <td><a href="rules-c.html">C0844</a><br /><a href="rules-r.html">R0223</a></td>
+    <td><a href="rules-c.html#c0844">C0844</a><br /><a href="rules-r.html#r0223">R0223</a></td>
 </tr><tr>
     <td><strong>---- PACKAGING</strong></td>
     <td>R</td>
     <td>99x</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html">G0131</a></td>
+    <td><a href="rules-g.html#g0131">G0131</a></td>
 </tr><tr>
     <td>----- Sequence number</td>
     <td>R</td>
     <td>n..5</td>
     <td>&nbsp;</td>
-    <td><a href="rules-r.html">R0054</a></td>
+    <td><a href="rules-r.html#r0054">R0054</a></td>
 </tr><tr>
     <td>----- Type of packages</td>
     <td>R</td>
@@ -249,11 +249,11 @@
     <td>D</td>
     <td>n..8</td>
     <td>&nbsp;</td>
-    <td><a href="rules-c.html">C0060</a><br /><a href="rules-g.html">G0021</a><br /><a href="rules-r.html">R0364</a></td>
+    <td><a href="rules-c.html#c0060">C0060</a><br /><a href="rules-g.html#g0021">G0021</a><br /><a href="rules-r.html#r0364">R0364</a></td>
 </tr><tr>
     <td>----- Shipping marks</td>
     <td>D</td>
     <td>an..512</td>
     <td>&nbsp;</td>
-    <td><a href="rules-c.html">C0060</a><br /><a href="rules-g.html">G0024</a></td>
+    <td><a href="rules-c.html#c0060">C0060</a><br /><a href="rules-g.html#g0024">G0024</a></td>
 </tr></table>

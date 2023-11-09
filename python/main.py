@@ -26,8 +26,16 @@ from typing import Optional, Iterator
 import re
 from PyPDF2 import PdfReader
 import render
+import sys
+from os.path import abspath, expanduser
 
-pdf_reader = PdfReader("ddnta.pdf")
+if len(sys.argv) > 1:
+    pdf_file_name = abspath(expanduser(sys.argv[1]))
+else:
+    pdf_file_name = abspath("ddnta.pdf")
+
+print(f"Reading PDF from {pdf_file_name}")
+pdf_reader = PdfReader(pdf_file_name)
 
 regex = "Message Structure for: (IE\\d{3})"
 

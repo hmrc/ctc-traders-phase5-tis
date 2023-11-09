@@ -2,10 +2,10 @@
 
 **Functional Description**
 
-Export followed by Transit & Groupage:<br />
-During the Transitional Period, in case of “Export Followed by Transit” with multiple export declarations<br />
-covered by one standard transit declaration (i.e. not a pre-lodged transit declaration), the D.G.<br />
-PREVIOUS DOCUMENT at CONSIGNMENT ITEM level can include the MRN of the related Export<br />
+Export followed by Transit & Groupage:
+During the Transitional Period, in case of “Export Followed by Transit” with multiple export declarations
+covered by one standard transit declaration (i.e. not a pre-lodged transit declaration), the D.G.<br /><br />
+PREVIOUS DOCUMENT at CONSIGNMENT ITEM level can include the MRN of the related Export
 declaration (maximum one Export MRN included per one Consignment item).
 
 **Technical Description**
@@ -17,8 +17,8 @@ N/A
 
 **Functional Description**
 
-In case of 'Road Transport' if the road vehicle (and/or its road trailers) are different to those declared in<br />
-the initial declaration message, then they will be reported as discrepancies and not as new transport<br />
+In case of 'Road Transport' if the road vehicle (and/or its road trailers) are different to those declared in
+the initial declaration message, then they will be reported as discrepancies and not as new transport
 means.
 
 **Technical Description**
@@ -30,9 +30,9 @@ N/A
 
 **Functional Description**
 
-During the Transitional Period, the data item “Customs office at border reference number”, is required<br />
-for ‘native CC015C’ and ‘native CC013C’ and optional if CC013C or CC015C is the outcome of the<br />
-upgraded CC013B or CC015B respectively. After the end of the Transitional Period, the data item will<br />
+During the Transitional Period, the data item “Customs office at border reference number”, is required
+for ‘native CC015C’ and ‘native CC013C’ and optional if CC013C or CC015C is the outcome of the
+upgraded CC013B or CC015B respectively. After the end of the Transitional Period, the data item will
 be always required.
 
 **Technical Description**
@@ -83,9 +83,9 @@ THEN C0909 shall be disabled AND<br />
 
 **Functional Description**
 
-During the Transitional Period (TP), the native CC015C, CC013C and CC170C sent to the National<br />
-Transit Application should not include the value ‘99’. This value ‘99’ is valid in <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TypeOfIdentificationOfMeansOfTransport.zip">CL750</a> during TP, only in<br />
-case the value ‘99’ is the result of the upgrade by the National Transit Application of a legacy message<br />
+During the Transitional Period (TP), the native CC015C, CC013C and CC170C sent to the National
+Transit Application should not include the value ‘99’. This value ‘99’ is valid in <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TypeOfIdentificationOfMeansOfTransport.zip">CL750</a> during TP, only in
+case the value ‘99’ is the result of the upgrade by the National Transit Application of a legacy message
 (e.g. CC015B upgraded into CC015C).
 
 **Technical Description**

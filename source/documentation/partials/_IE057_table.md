@@ -39,7 +39,7 @@
     <td>R</td>
     <td>an19</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html">G0002</a></td>
+    <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
     <td>- Message identification</td>
     <td>R</td>
@@ -57,7 +57,7 @@
     <td>D</td>
     <td>an..35</td>
     <td>&nbsp;</td>
-    <td><a href="rules-c.html">C0511</a><br /><a href="rules-r.html">R0008</a></td>
+    <td><a href="rules-c.html#c0511">C0511</a><br /><a href="rules-r.html#r0008">R0008</a></td>
 </tr><tr>
     <td><strong>- TRANSIT OPERATION</strong></td>
     <td>R</td>
@@ -69,7 +69,7 @@
     <td>R</td>
     <td>an18</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html">G0002</a></td>
+    <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
     <td>-- Business rejection type</td>
     <td>R</td>
@@ -81,7 +81,7 @@
     <td>R</td>
     <td>an19</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html">G0002</a></td>
+    <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
     <td>-- Rejection code</td>
     <td>R</td>
@@ -93,7 +93,7 @@
     <td>D</td>
     <td>an..512</td>
     <td>&nbsp;</td>
-    <td><a href="rules-c.html">C0492</a></td>
+    <td><a href="rules-c.html#c0492">C0492</a></td>
 </tr><tr>
     <td><strong>- CUSTOMS OFFICE OF DESTINATION (ACTUAL)</strong></td>
     <td>R</td>
@@ -111,25 +111,25 @@
     <td>R</td>
     <td>1x</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html">G0868</a></td>
+    <td><a href="rules-g.html#g0868">G0868</a></td>
 </tr><tr>
     <td>-- Identification number</td>
     <td>R</td>
     <td>an..17</td>
     <td>&nbsp;</td>
-    <td><a href="rules-r.html">R0850</a></td>
+    <td><a href="rules-r.html#r0850">R0850</a></td>
 </tr><tr>
     <td><strong>- FUNCTIONAL ERROR</strong></td>
     <td>O</td>
     <td>9999x</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html">G0217</a></td>
+    <td><a href="rules-g.html#g0217">G0217</a></td>
 </tr><tr>
     <td>-- Error pointer</td>
     <td>R</td>
     <td>an..512</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html">G0009</a></td>
+    <td><a href="rules-g.html#g0009">G0009</a></td>
 </tr><tr>
     <td>-- Error code</td>
     <td>R</td>
@@ -141,7 +141,7 @@
     <td>R</td>
     <td>an..7</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html">G0010</a></td>
+    <td><a href="rules-g.html#g0010">G0010</a></td>
 </tr><tr>
     <td>-- Original attribute value</td>
     <td>O</td>

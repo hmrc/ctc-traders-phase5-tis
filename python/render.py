@@ -13,11 +13,15 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 """
-from typing import Optional
-from data_types import MessageCategory, MessageField, Rule
+import os
 from inspect import cleandoc
-from os import mkdir, path
+from os import path
+from typing import Optional
+
 from code_lists import replace_code_list, replace_code_list_full_string
+from data_types import MessageCategory, MessageField, Rule
+
+save_location = path.join("..", "source", "documentation", "partials")
 
 special_formats = {
     "Message sender": """an..35 (see <a href="../#message-sender-and-recipient-guidelines">Message sender and recipient guidelines</a>)""",
@@ -49,7 +53,7 @@ tail = "</table>"
 
 
 def linkify_rule(rule: str) -> str:
-    return f"""<a href="rules-{rule.lower()[0]}.html">{rule}</a>"""
+    return f"""<a href="rules-{rule.lower()[0]}.html#{rule.lower()}">{rule}</a>"""
 
 
 def create_rules(rules: list[str]):
@@ -71,6 +75,7 @@ def render_optional_code_list(value: Optional[str]) -> str:
     else:
         return replace_code_list(value)
 
+# ---- Rendering for Message Types
 
 def render_category_row(category: MessageCategory) -> str:
     """
@@ -140,25 +145,35 @@ def write_message_type_file(message_type: str, categories: list[MessageCategory]
     :return: None
     """
     file_name = f"_{message_type}_table.md"
-    if not path.exists("messagetypes"):
-        mkdir("messagetypes")
+    if not path.exists(save_location):
+        os.makedirs(save_location)
     print(f"Writing file {file_name}")
-    with open(file=path.join("messagetypes", file_name), mode="w") as md_file:
+    with open(file=path.join(save_location, file_name), mode="w") as md_file:
         md_file.write(render_type(categories))
 
 
-# ----
+# ---- Rendering for Rules
 
 
-def process_rule_string(string: str) -> str:
-    return replace_code_list_full_string(
-        string
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-        .replace("\n", "<br />\n")
-        .replace("*", "<span>&#42;</span>")
-    )
+def process_rule_string(string: str, preserve_all_line_breaks = True) -> str:
+    string = string.replace("<", "&lt;").replace(">", "&gt;")
+    if preserve_all_line_breaks:
+        string = string.replace("\n", "<br />\n")
+    else:
+        # only preserve those preceded by a full stop -- in which case we emulate paragraphs with spacing a bit better
+        string = string.replace(".\n", ".<br /><br />\n")
 
+    return replace_code_list_full_string(string.replace("*", "<span>&#42;</span>"))
+
+specific_line_break_rules: list[str] = [
+
+]
+
+def should_replace_line_breaks(rule_code: str) -> bool:
+    if rule_code.upper().startswith("C"):
+        return True
+    else:
+        return specific_line_break_rules.__contains__(rule_code.upper())
 
 def render_rule(rule: Rule) -> str:
     """
@@ -166,7 +181,7 @@ def render_rule(rule: Rule) -> str:
     :param rule: The rule to render
     :return: The markdown
     """
-    func = process_rule_string(rule.functional_description)
+    func = process_rule_string(rule.functional_description, should_replace_line_breaks(rule.rule_code))
     tech = process_rule_string(rule.technical_description)
     return cleandoc(
         f"""## {rule.rule_code}
@@ -198,8 +213,8 @@ def write_rules_file(category: str, rules: list[Rule]):
     :return: None
     """
     file_name = f"_rules_{category}.md"
-    print(f"Writing file rules/{file_name}")
-    if not path.exists("rules"):
-        mkdir("rules")
-    with open(file=path.join("rules", file_name), mode="w") as md_file:
+    print(f"Writing file {file_name}")
+    if not path.exists(save_location):
+        os.makedirs(save_location)
+    with open(file=path.join(save_location, file_name), mode="w") as md_file:
         md_file.write(render_rules(rules))

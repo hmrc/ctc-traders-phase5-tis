@@ -30,5 +30,5 @@ q2.csv
 .vscode/
 .metals/
 
-python/rules
-python/messagetypes
+python/env
+python/__pycache__
