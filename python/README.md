@@ -1,6 +1,6 @@
 # Python 3.9 Script for converting the DDNTA Q2 PDF
 
-The Python scripts in this directory take in the DDNTA Q2 PDF file, scrapes them for appropirate message types and the rules, and converts them into TIS friendly HTML/Markdown.
+The Python scripts in this directory take in the DDNTA Q2 PDF file, scrapes them for appropriate message types and the rules, and converts them into TIS friendly HTML/Markdown.
 
 In particular, this script will:
 
@@ -65,3 +65,72 @@ The dict `special_formats` in `render.py` will take data item names, and if it m
 ### Controlling line breaks in functional rules
 
 When rendering the rules, the `C` functional rules will have line breaks added wherever seen in the PDF. Other functional rules are set up to only have line breaks added when a line break is found after a full stop -- if you need to add line breaks for specific rules wherever they are in the PDF, add them, to `specific_line_break_rules` in `render.py`
+
+# Parsing the Q2 PDF
+
+> This section explains the technical detail of what the script expects and how it parses it. If you are just running the script, feel free to ignore this section.
+
+This script makes use of the `PyPDF 3` library, specifically the `extract_text` function. This allows us to get rid of the various bits of formatting, but does give us a slightly mangled output. Thankfully, this output is also consistent across multiple versions of the DDNTA and so we can exploit this fact in our parsing.
+
+## Message types, data groups, data items
+
+In the Q2 PDF, the data groups and data items are separated, and usefully, are separated by a page break. We use this to great effect, as:
+
+* the headers on the pages are not exposed by `extract_text`
+* the data item page **always** begins with `MESSAGE`
+* the data groups page starts with a title containing the message type -- this might split over two lines so we also look for `E_` to ensure we don't accidently parse a title line improperly.
+
+We use this to be able to build up a picture of what is a data group, and what is a data item. Both have their own challenges in parsing however. In all cases, we ignore headers and complete parsing of a page when we see the "Page X" identifier.
+
+**For data groups**, we know that either the first non-title line, or a line that begins with a hyphen, is a data group, so we then parse it as such. The line will look something like:
+
+```
+------TRANSPORT CHARGES 1xDC0186
+```
+
+The title is up to the last space, while we can extract:
+
+* multiplicity up to and including the `x` (regex: `\d+x`)
+* the next letter is the requirement status (will be R, D or O)
+* the last five letters, if they exist, will be a rule (regex `[BCEGRST](\d{4})`)
+
+Any additional rows below that don't contain hyphens will just contain additional rules for this data group.
+
+**For data item**, we know that a category starts with a hyphen or `MESSAGE`. As the categories are in the same order here as they are in their own section, we just take our parsed categories in order and start attaching rules (see `main.py` for how we do this).
+
+The line for data items will look something like one of the following:
+
+```
+Reference number Ran8CL172R0901 (Everything)
+Binding itinerary Rn1CL027 (no rule)
+Release date Ran10 G0002 (no code list)
+Message recipient Ran..35 (no rule, no codelist)
+```
+
+Taking the top example, we have:
+
+* the name of the item, followed by a space
+* the next letter is the requirement status (will be R, D or O)
+* a set of characters defining the format
+* a code list, starting CL followed by three digits (regex `CL\d{3}`)
+* the last five letters, if they exist, will be a rule (regex `[BCEGRST](\d{4})`)
+
+Other formats exist based on the fact that code lists and rules are optional. The parser takes care of this baed on what it sees.
+
+Like with data groups, there is the potential for multiple rules for a given item. They are presented and parsed in the same way.
+
+**For rules**, we start parsing the rules from section 3 (List of Rules, Conditions and Guidelines). Each rule will be presented in text as 
+
+```
+B1000 Technical Description:
+```
+
+so we know the rule, and that we start with the techncial decription. We categorise based on the letter, and then store the rule details. The lines below the technical description are stored, with line breaks, as the technical description. We will then come across
+
+```
+Functional Description:
+```
+
+where we read until we come across the next rule, again storing line breaks.
+
+This continues to the end of the file.
