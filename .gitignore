@@ -32,3 +32,5 @@ q2.csv
 
 python/env
 python/__pycache__
+
+.batect
