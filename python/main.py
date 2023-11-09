@@ -18,7 +18,7 @@
 
 This script takes the DDNTA Q2 PDF and turns it into a series of markdown files for rendering on the HMRC CTC Phase 5 TIS
 
-Place the DDNTA file in the current working directory and name it "ddnta.pdf". Run this script.
+Read the included README.md file to understand usage of this script.
 """
 
 from data_types import MessageField, MessageCategory, Rule
