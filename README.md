@@ -2,16 +2,8 @@
 
 ## Getting started
 
-To preview or build the website, we need to use the terminal.
-
-Install Ruby 3.0.x with Rubygems, perferably with a [Ruby version manager][rvm],
-and the [Bundler gem][bundler].
-
-In the application folder type the following to install the required gems:
-
-```
-bundle install
-```
+To preview or build the website, we can either use Batect, or the terminal. See the
+respective sections below for requirements.
 
 ## Making changes
 
@@ -45,9 +37,6 @@ For example, `source/about.html.md` will be accessible on <http://localhost:4567
 
 #### Option 1 - Using Docker (recommended)
 
-Requirements:
-* [Docker](https://www.docker.com/)
-
 To live preview:
 ```
 ./batect preview
@@ -79,6 +68,15 @@ Requirements:
 ```
 ./batect build
 ```
+
+If you don't wish to use batect and have Ruby 3.0.2 installed:
+```
+bundle install
+bundle exec middleman build --build-dir=public/ --clean
+```
+
+`bundle inst`
+
 ### Run the Scala Application
 ```
 sbt run
