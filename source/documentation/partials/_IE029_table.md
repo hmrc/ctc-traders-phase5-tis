@@ -972,7 +972,7 @@
     <td><a href="rules-c.html#c0531">C0531</a><br /><a href="rules-g.html#g0002">G0002</a><br /><a href="rules-r.html#r0315">R0315</a></td>
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp; PLACE OF LOADING</strong></td>
-    <td>R</td>
+    <td>O</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -1698,7 +1698,7 @@
     <td>&nbsp;</td>
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; GOODS MEASURE</strong></td>
-    <td>R</td>
+    <td>O</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>

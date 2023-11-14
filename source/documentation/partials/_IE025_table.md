@@ -210,7 +210,7 @@
     <td>&nbsp;</td>
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; GOODS MEASURE</strong></td>
-    <td>R</td>
+    <td>O</td>
     <td>1x</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
