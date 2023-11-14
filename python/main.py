@@ -20,7 +20,7 @@ This script takes the DDNTA Q2 PDF and turns it into a series of markdown files 
 
 Read the included README.md file to understand usage of this script.
 """
-
+import hmrc_exceptions
 from data_types import MessageField, MessageCategory, Rule
 from typing import Optional, Iterator
 import re
@@ -171,7 +171,7 @@ def read_message(reader: PdfReader, start: int, end: int, message_type: str) -> 
                 # If we don't have this condition, we've got a rule to add to the existing category, so we add it
                 if line.startswith("-") or category is None:
                     # new category
-                    category = MessageCategory()
+                    category = MessageCategory(message_type)
                     categories.append(category)
                     category.parse_line(line)
                 else:
@@ -200,6 +200,12 @@ def read_message(reader: PdfReader, start: int, end: int, message_type: str) -> 
                     # so we just add that
                     field.add_rule(line)
 
+    return categories
+
+
+def read_and_transform(reader: PdfReader, start: int, end: int, message_type: str) -> list[MessageCategory]:
+    categories: list[MessageCategory] = read_message(reader, start, end, message_type)
+    hmrc_exceptions.message_category_transformation(message_type, categories)
     return categories
 
 
@@ -244,7 +250,7 @@ def extract_rules(reader: PdfReader, start_page: int) -> dict[str, list[Rule]]:
 entries, rules_start_page = find_pages(pdf_reader)
 
 for e in entries:
-    render.write_message_type_file(e[0], read_message(pdf_reader, e[1], e[2], e[0]))
+    render.write_message_type_file(e[0], read_and_transform(pdf_reader, e[1], e[2], e[0]))
 
 extracted_rules = extract_rules(pdf_reader, rules_start_page)
 

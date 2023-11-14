@@ -64,17 +64,22 @@ class MessageCategory:
 
     hyphen_pattern = re.compile("^(-+)")
 
-    def __init__(self):
+    def __init__(self, message_type: str):
+        self.message_type: str = message_type
         self.category: str = ""
+        self.category_name_only: str = ""
         self.multiplicity: str = ""
         self.required: str = ""
         self.rules: list[str] = list()
         self.children: list[MessageField] = list()
+        self.level = 0
 
     def parse_line(self, line: str):
         # "------TRANSPORT CHARGES 1xDC0186"
         category_tup = line.rpartition(" ")
         self.category = re.sub(self.hyphen_pattern, lambda x: f"{x.group(0)} ", category_tup[0])
+        self.category_name_only = category_tup[0].strip().replace("-", "")
+        self.level = int(category_tup[0].count("-") / 3)
         # we then parse the line as 1xD[potential rule]
         metadata_tup = category_tup[2].partition("x")
         self.multiplicity = f"{metadata_tup[0]}x"
