@@ -20,8 +20,6 @@ from data_types import MessageCategory
 
 def find_category(message_type: str, path: list[str], categories: list[MessageCategory]) -> MessageCategory:
     # we iterate through the list to find the various categories
-    for i in categories:
-        print(f"{i.level}: {i.category_name_only}")
     iterable_category = iter(categories)
     next(iterable_category)
     current: Optional[MessageCategory] = None
