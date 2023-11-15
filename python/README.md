@@ -66,6 +66,12 @@ The dict `special_formats` in `render.py` will take data item names, and if it m
 
 When rendering the rules, the `C` functional rules will have line breaks added wherever seen in the PDF. Other functional rules are set up to only have line breaks added when a line break is found after a full stop -- if you need to add line breaks for specific rules wherever they are in the PDF, add them, to `specific_line_break_rules` in `render.py`
 
+### Adding HMRC specific changes
+
+In the `hmrc_exceptions.py` file, the `message_category_transformation` function will take the current message type being processed and perform the transformations it needs to. Right now, only changing the priority to optional is supported, but should other differences be needed, they should be added here.
+
+There is a `find_category` function, use this to find a specific data group based on its hierarchy should you need to create an additional transformation.
+
 # Parsing the Q2 PDF
 
 > This section explains the technical detail of what the script expects and how it parses it. If you are just running the script, feel free to ignore this section.
