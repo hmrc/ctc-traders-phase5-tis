@@ -61,6 +61,7 @@ print(f"Parsing NEW data {new_pdf}")
 new = get_data_from_pdf(new_pdf)
 print("------")
 
+
 class TreeNode:
 
     @classmethod
@@ -117,6 +118,15 @@ def flatten_rules(r: dict[str, list[Rule]]):
     return flattened_rules
 
 
+def create_rule_tuple(rule: str):
+    rule_code = rule.replace("root['", "").replace("']", "").replace("[0]", "").replace("[1]", "")
+    if rule.__contains__("[0]"):
+        rule_type = "Technical"
+    else:
+        rule_type = "Functional"
+    return rule_code, rule_type
+
+
 result: list[str] = []
 
 # To support the diffing engine and to remove order (it matters less for the TIS), we'll turn the list of categories
@@ -145,12 +155,28 @@ if diff.keys().__contains__("dictionary_item_added"):
     result.append(f"Rules added: {added_rules}")
 
 if diff.keys().__contains__("dictionary_item_removed"):
-    removed_rules = list(sorted(map(lambda x: x.replace("root['", "").replace("']", ""), diff['dictionary_item_removed'])))
+    removed_rules = list(
+        sorted(map(lambda x: x.replace("root['", "").replace("']", ""), diff['dictionary_item_removed'])))
     result.append(f"Rules removed: {removed_rules}")
 
 if diff.keys().__contains__("values_changed"):
-    changed_rules = list(sorted(map(lambda x: x.replace("root['", "").replace("']", "").replace("[0]", " - Technical").replace("[1]", " - Functional"), diff['values_changed'])))
-    result.append(f"""Rules changed: {changed_rules}""")
+    changed_rules = list(sorted(map(create_rule_tuple, diff['values_changed']), key=lambda x: x[0]))
+    result.append(f"""Rules changed: {changed_rules[0]} - {changed_rules[1]}""")
+    result.append("-- --")
+    result.append("-- Rule diffs --")
+    for rule_code, rule_type in changed_rules:
+        if rule_type == "Technical":
+            index = 0
+        else:
+            index = 1
+        result.append(f"""Rule {rule_code} - {rule_type}:
+        
+        Old rule:
+        {old_rules[rule_code][index]}
+        
+        New rule:
+        {new_rules[rule_code][index]}
+        ------""".replace("        ", ""))
 
 result.append("--------------------------------")
 result.append("------------- END --------------")

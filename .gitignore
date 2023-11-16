@@ -34,3 +34,4 @@ python/env
 python/__pycache__
 
 .batect
+diff_result.txt
