@@ -1,8 +1,8 @@
-# Python 3.9 Script for converting the DDNTA Q2 PDF
+# Python 3.9 Scripts for converting the DDNTA Q2 PDF and diffing two DDNTA Q2 PDFs
 
 The Python scripts in this directory take in the DDNTA Q2 PDF file, scrapes them for appropriate message types and the rules, and converts them into TIS friendly HTML/Markdown.
 
-In particular, this script will:
+In particular, the conversion script will:
 
 * read the selected message type data groups and data items and extract:
   * formatting notes
@@ -20,7 +20,9 @@ This script will also perform a few other transformations, including
 
 * adding a note about message sender/recipient entries for each message type
 
-## Running the script
+The diffing script will take two DDNTA Q2 sections and perform a diff using DeepDiff.
+
+## Running the script - conversion
 
 The `.gitignore` file contains an entry for `python/env`, if you create a specific virtual env for this script, use the name `env`.
 
@@ -48,7 +50,7 @@ If additional code lists need to be linked in the TIS, add them to the `code_lis
 
 Ensure that all three bits of information are added. The script will then pick up the change and add links as appropriate.
 
-## Customising the behaviour of this script
+## Customising the behaviour of the conversion script
 
 This script has been designed to be semi-modular and extensible, such that the rendering logic is separate(ish) from the main code -- it's just a case of swapping out rendering functions for whatever format you wish to use -- for example, a CSV file writer. It is currently set up to only handle external domain messages.
 
@@ -71,6 +73,67 @@ When rendering the rules, the `C` functional rules will have line breaks added w
 In the `hmrc_exceptions.py` file, the `message_category_transformation` function will take the current message type being processed and perform the transformations it needs to. Right now, only changing the priority to optional is supported, but should other differences be needed, they should be added here.
 
 There is a `find_category` function, use this to find a specific data group based on its hierarchy should you need to create an additional transformation.
+
+## Running the script - diffing
+
+The `.gitignore` file contains an entry for `python/env`, if you create a specific virtual env for this script, use the name `env`.
+
+Ensure you install the requirements using `pip`:
+
+```bash
+pip install -r requirements.txt
+```
+
+then run the script with a single argument pointing to the DDNTA Q2 PDF you wish to use to update the TIS (on macOS or Linux, if you use Windows adjust accordingly):
+
+```bash
+python ./diff.py "/path/to/old/pdf/q2.pdf" "/path/to/new/pdf/q2.pdf"
+```
+
+This will generate a `diff_result.txt` file in the working directory containing the output.
+
+### Reading the diff results.
+
+The results are separated into the message types and the rules. The rules are self-explanatory, it tells you:
+
+* which rules have been added
+* which rules have been removed
+* whicb rules have been changed
+
+For added and changed rules, the script will print out the old and new rules where changed.
+
+For the message types, you'll get a slightly more Json like output that looks like this:
+
+```text
+Diff for IE015
+{'dictionary_item_added': [root.node['CONSIGNMENT'].node['HOUSE CONSIGNMENT'].node['Country of destination']],
+ 'iterable_item_added': {"root.node['CONSIGNMENT'].node['Country of destination'].field.rules[1]": 'G0113',
+                         "root.node['CONSIGNMENT'].node['Country of dispatch'].field.rules[0]": 'B2104',
+                         "root.node['CONSIGNMENT'].node['HOUSE CONSIGNMENT'].node['CONSIGNMENT ITEM'].node['Country of destination'].field.rules[1]": 'G0113',
+                         "root.node['CONSIGNMENT'].node['HOUSE CONSIGNMENT'].node['CONSIGNMENT ITEM'].node['Country of dispatch'].field.rules[0]": 'B2104',
+                         "root.node['CONSIGNMENT'].node['HOUSE CONSIGNMENT'].node['CONSIGNMENT ITEM'].node['PREVIOUS DOCUMENT'].node['Type'].field.rules[1]": 'G0991',
+                         "root.node['CONSIGNMENT'].node['HOUSE CONSIGNMENT'].node['Country of dispatch'].field.rules[0]": 'B2104',
+                         "root.node['CONSIGNMENT'].node['HOUSE CONSIGNMENT'].node['PREVIOUS DOCUMENT'].node['Type'].field.rules[0]": 'G0991',
+                         "root.node['CUSTOMS OFFICE OF EXIT FOR TRANSIT (DECLARED)'].category.rules[0]": 'B2102'},
+ 'values_changed': {"root.node['CONSIGNMENT'].node['HOUSE CONSIGNMENT'].category.multiplicity": {'new_value': '1999x',
+                                                                                                 'old_value': '99x'}}}
+```
+
+This block says, for the IE015:
+
+* under `dictionary_item_added`, the data field "CONSIGNMENT" > "HOUSE CONSIGNMENT" > "Country of destination" was added
+* under `iterable_item_added`, multiple rules were added to fields and categories, for example:
+  * the data item "CONSIGNMENT" > "Country of destination" now has the rule "G0113" added
+  * the data group "CUSTOMS OFFICE OF EXIT FOR TRANSIT (DECLARED)" has the rule "B2102" added
+* under `values_changed`, the multiplicity of the data group "CONSIGNMENT" > "HOUSE CONSIGNMENT" has changed from 99x to 1999x
+
+You may find that code lists are also updated, these would also be under `values_changed`.
+
+### Generating the diffs -- a note on lists vs dicts
+
+In order to remove any potential issue with ordering, the script will turn the list of rules and list of data groups into dicts. By doing so, the diff will generate against the name of a data item/group, rather than its index, and will avoid generating false diffs when things have changed in order.
+
+It should be noted that order is indeed important, but that'll be handled by the XSDs rather than the TIS.
 
 # Parsing the Q2 PDF
 
