@@ -153,6 +153,22 @@ diff = DeepDiff(old_rules, new_rules, ignore_order=True)
 if diff.keys().__contains__("dictionary_item_added"):
     added_rules = list(sorted(map(lambda x: x.replace("root['", "").replace("']", ""), diff['dictionary_item_added'])))
     result.append(f"Rules added: {added_rules}")
+    result.append("-- --")
+    for rule_code in added_rules:
+        result.append(f"""Rule {rule_code} - Technical:
+        
+        New rule:
+        {new_rules[rule_code][0]}
+        
+        ------
+        
+        Rule {rule_code} - Functional:
+        
+        New rule:
+        {new_rules[rule_code][1]}
+        
+        ------
+        """.replace("        ", ""))
 
 if diff.keys().__contains__("dictionary_item_removed"):
     removed_rules = list(
