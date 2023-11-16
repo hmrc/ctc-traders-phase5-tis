@@ -33,3 +33,4 @@ q2.csv
 /.batect
 python/env
 python/__pycache__
+diff_result.txt
