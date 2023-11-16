@@ -182,3 +182,8 @@ def extract_rules(reader: PdfReader, start_page: int) -> dict[str, list[Rule]]:
     rules.setdefault(rule.rule_category, []).append(rule)
     print(f"Rule extraction complete")
     return rules
+
+
+def filter_rules(reader: PdfReader, start_page: int, categories: list[list[MessageCategory]]) -> list[Rule]:
+    list_of_ed_rules: set[Rule] = set()
+    

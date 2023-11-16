@@ -1,26 +1,3 @@
-## R0001
-
-**Functional Description**
-
-Each &lt;CD144C-RESPONSE INFORMATION.Information code&gt; can only be used once per message
-
-**Technical Description**
-
-Each /CD144C/ResponseInformation/informationCode can only be used once per message
-
-## R0002
-
-**Functional Description**
-
-The same value of the Data Item &lt;CD145C-REQUESTED INFORMATION.Code&gt; shall be used only
-once in a message &lt;CD145C-ENQUIRY INFORMATION REQUEST&gt;
-
-**Technical Description**
-
-The same value of the Data Item /CD145C/RequestedInformation/code shall be used only once in a<br />
-message /CD145C/EnquiryInformationRequest
-
-
 ## R0003
 
 **Functional Description**
@@ -113,27 +90,6 @@ message.
 /<span>&#42;</span>/correlationIdentifier shall be EQUAL to the /<span>&#42;</span>/messageIdentification of the request/rejected message.
 
 
-## R0019
-
-**Functional Description**
-
-IF &lt;CUSTOMS OFFICE OF DESTINATION&gt; is PRESENT
-THEN &lt;TRANSIT OPERATION.Status&gt;is in SET CL154 (StateAtOfficeOfDestination)
-ELSE IF &lt;CUSTOMS OFFICE OF TRANSIT&gt; is PRESENT
-THEN &lt;TRANSIT OPERATION.Status&gt;is in SET CL155 (StateAtOfficeOfTransit)
-ELSE IF &lt;CUSTOMS OFFICE OF EXIT FOR TRANSIT&gt; is PRESENT
-THEN &lt;TRANSIT OPERATION.Status&gt;is in SET CL186 (StateAtOfficeOfExitForTransit)
-
-**Technical Description**
-
-IF /<span>&#42;</span>/CustomsOfficeOfDestination is PRESENT<br />
-THEN /<span>&#42;</span>/TransitOperation/status is in SET CL154<br />
-ELSE IF /<span>&#42;</span>/CustomsOfficeOfTransit is PRESENT<br />
-THEN /<span>&#42;</span>/TransitOperation/status is in SET CL155<br />
-ELSE IF /<span>&#42;</span>/CustomsOfficeOfExitForTransit is PRESENT<br />
-THEN /<span>&#42;</span>/TransitOperation/status is in SET CL186
-
-
 ## R0020
 
 **Functional Description**
@@ -188,20 +144,6 @@ IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/AdditionalRe
 (DocumentTypeExcise)<br />
 THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/referenceNumber<br />
 shall not be ‘0’ (zero)
-
-
-## R0026
-
-**Functional Description**
-
-This Data Group must include the same values as in the equivalent Data Group from the 'Transit
-Presentation Notification' (CC190C).
-
-**Technical Description**
-
-/CC191C/TransitOperation/ must be EQUAL to /CC190C/TransitOperation/ AND<br />
-/CC191C/CustomsOfficeOfExit/ must be EQUAL to /CC190C/CustomsOfficeOfExit/ AND<br />
-/CC191C/CustomsOfficeOfDeparture/ must be EQUAL to /CC190C/CustomsOfficeOfDeparture
 
 
 ## R0028
@@ -544,44 +486,6 @@ must be LESS THAN OR EQUAL to<br />
 /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Commodity/GoodsMeasure/grossMass.
 
 
-## R0261
-
-**Functional Description**
-
-IF Guarantee type is in SET {2, 4}
-THEN &lt;GUARANTEE REFERENCE-GUARANTEE QUERY.Query identifier&gt; is in SET {1, 4}
-
-**Technical Description**
-
-IF Guarantee type is in SET {2, 4}<br />
-THEN /<span>&#42;</span>/GuaranteeReference/GuaranteeQuery/queryIdentifier is in SET {1, 4}
-
-
-## R0263
-
-**Functional Description**
-
-The Data Item can be used only with Guarantee types ‘0’ (guarantee waiver), ‘1’ (comprehensive
-guarantee) or ‘9’ (Individual guarantee with multiple usage), with either Query Identifier ‘1’ (usage only)
-or ‘3’ (usage and exposure)
-
-**Technical Description**
-
-The Data Item can be used only with Guarantee types ‘0’ (guarantee waiver), ‘1’ (comprehensive<br />
-guarantee) or ‘9’ (Individual guarantee with multiple usage), with either Query Identifier ‘1’ (usage only)<br />
-or ‘3’ (usage and exposure)
-
-
-## R0267
-
-**Functional Description**
-
-The currency used for the amount concerned is always ‘EUR’
-
-**Technical Description**
-
-The currency used for the amount concerned is always ‘EUR’
-
 ## R0315
 
 **Functional Description**
@@ -615,16 +519,6 @@ IF /<span>&#42;</span>/Guarantee/guaranteeType is EQUAL to '4'<br />
 THEN the format of /<span>&#42;</span>/Guarantee/GuaranteeReference/GRN is 'an24'<br />
 ELSE the format of /<span>&#42;</span>/Guarantee/GuaranteeReference/GRN is 'an17'
 
-
-## R0324
-
-**Functional Description**
-
-The format of &lt;GUARANTEE REFERENCE.GRN&gt; is 'an17'
-
-**Technical Description**
-
-The format of /<span>&#42;</span>/GuaranteeReference/GRN is 'an17'
 
 ## R0350
 
@@ -752,21 +646,6 @@ THEN the value '0' (zero) is not valid for<br />
 IF /<span>&#42;</span>/Consignment/Incident/TransportEquipment/containerIdentificationNumber is NOT PRESENT<br />
 THEN the value '0' (zero) is not valid for<br />
 /<span>&#42;</span>/Consignment/Incident/TransportEquipment/numberOfSeals
-
-
-## R0449
-
-**Functional Description**
-
-The value of &lt;CC042C-EXPORT OPERATION.MRN&gt; must be one of the values &lt;CC191C-AES
-RESULTS-EXPORT OPERATION.MRN&gt; included in the last message 'Transit Presentation
-Notification Response' (CC191C) received from AES by NCTS
-
-**Technical Description**
-
-The value of /CC042C/ExportOperation/MRN must be one of the values<br />
-/CC191C/AESResults/ExportOperation/MRN included in the last message 'Transit Presentation<br />
-Notification Response' (CC191C) received from AES by NCTS
 
 
 ## R0472
@@ -999,88 +878,6 @@ THEN at least one occurrence of<br />
 others
 
 
-## R0509
-
-**Functional Description**
-
-The &lt;CC190C-CUSTOMS OFFICE OF DEPARTURE.Reference number&gt; shall be EQUAL to the
-&lt;CC190C-CUSTOMS OFFICE OF EXIT.Reference number&gt;.
-
-**Technical Description**
-
-The /CC190C/CustomsOfficeOfDeparture/referenceNumber shall be EQUAL to the<br />
-/CC190C/CustomsOfficeOfExit/referenceNumber.
-
-
-## R0510
-
-**Functional Description**
-
-IF the D.G. &lt;CC190C-CONSIGNMENT-LOCATION OF GOODS-ADDRESS&gt; is PRESENT
-THEN &lt;CC190C-CONSIGNMENT-LOCATION OF GOODS-ADDRESS.Country shall be EQUAL to the
-country code (first two characters) in the &lt;CC190-CUSTOMS OFFICE OF DEPARTURE.Reference
-number&gt;
-ELSE
-IF the D.G. &lt;CC190C-CONSIGNMENT-LOCATION OF GOODS-POSTCODE ADDRESS&gt; is
-PRESENT
-THEN &lt;CC190C-CONSIGNMENT-LOCATION OF GOODS-POSTCODE ADDRESS.Country&gt; shall be
-EQUAL to the country code (first two characters) in the &lt;CC190-CUSTOMS OFFICE OF
-DEPARTURE.Reference number&gt;
-
-**Technical Description**
-
-IF the D.G. /CC190C/Consignment/LocationOfGoods/Address is PRESENT<br />
-THEN /CC190C/Consignment/LocationOfGoods/Address/country shall be EQUAL to the first two<br />
-characters of /CC190C/CustomsOfficeOfDeparture/referenceNumber<br />
-ELSE<br />
-IF the D.G. /CC190C/Consignment/LocationOfGoods/PostcodeAddress is PRESENT<br />
-THEN /CC190C/Consignment/LocationOfGoods/PostcodeAddress/country shall be EQUAL to the first<br />
-two characters of /CC190C/CustomsOfficeOfDeparture/referenceNumber.
-
-
-## R0516
-
-**Functional Description**
-
-Values of &lt;COUNTRY-ACTION-UNAVAILABILITY.Type&gt; shall be identical throughout the message
-(i.e: same value in all the repetitions of the "Unavailability" group).
-
-**Technical Description**
-
-Values of /<span>&#42;</span>/Country/Action/Unavailability/type shall be identical throughout the message (i.e: same<br />
-value in all the repetitions of the "Unavailability" group).
-
-
-## R0518
-
-**Functional Description**
-
-For each &lt;COUNTRY.Country&gt; only 1 occurrence of the &lt;COUNTRY-ACTION-UNAVAILABILITY&gt;
-having the same &lt;COUNTRY-ACTION-UNAVAILABILITY.Functionality&gt; AND &lt;COUNTRY-ACTION-
-UNAVAILABILITY.Start date and time&gt; AND &lt;COUNTRY-ACTION-UNAVAILABILITY.Type&gt; is
-allowed.
-
-**Technical Description**
-
-For each /<span>&#42;</span>/Country/country only 1 occurrence of the /<span>&#42;</span>/Country/Action/Unavailability having the same<br />
-/<span>&#42;</span>/Country/Action/Unavailability/functionality AND /<span>&#42;</span>/Country/Action/Unavailability/startDateAndTime<br />
-AND /<span>&#42;</span>/Country/Action/Unavailability/type is allowed.
-
-
-## R0519
-
-**Functional Description**
-
-Within a single &lt;COUNTRY-ACTION-UNAVAILABILITY&gt; the &lt;COUNTRY-ACTION-
-UNAVAILABILITY.Start date and time&gt; must be prior to the &lt;COUNTRY-ACTION-
-UNAVAILABILITY.End date and time&gt;
-
-**Technical Description**
-
-Within a single /<span>&#42;</span>/Country/Action/Unavailability the /<span>&#42;</span>/Country/Action/Unavailability/startDateAndTime<br />
-must be prior to the /<span>&#42;</span>/Country/Action/Unavailability/endDateAndTime
-
-
 ## R0520
 
 **Functional Description**
@@ -1139,21 +936,6 @@ the following Data Groups:<br />
    - /<span>&#42;</span>/TransitOperation/security
 
 
-## R0551
-
-**Functional Description**
-
-IF at least one iteration of &lt;CC191C-AES RESULTS-EXPORT OPERATION.Result indicator&gt; is in
-SET {N1, N2, N3, N4}
-THEN &lt;CC191C-AES RESULTS.Global validation response&gt; is EQUAL to '0'
-
-**Technical Description**
-
-IF at least one iteration of /CC191C/AESResults/ExportOperation/resultIndicator is in SET {N1, N2, N3,<br />
-N4}<br />
-THEN /CC191C/AESResults/globalValidationResponse is EQUAL to '0'
-
-
 ## R0601
 
 **Functional Description**
@@ -1202,46 +984,6 @@ THEN<br />
   THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2,<br />
 T2F}<br />
   ELSE /<span>&#42;</span>/TransitOperation/declarationType is in SET {T2, T2F}
-
-
-## R0705
-
-**Functional Description**
-
-&lt;GUARANTEE REFERENCE-GUARANTEE QUERY.Period to date&gt; must be posterior to
-&lt;GUARANTEE REFERENCE-GUARANTEE QUERY.Period from date&gt;.
-
-**Technical Description**
-
-/<span>&#42;</span>/GuaranteeReference/GuaranteeQuery/periodToDate must be posterior to<br />
-/<span>&#42;</span>/GuaranteeReference/GuaranteeQuery/periodFromDate
-
-
-## R0720
-
-**Functional Description**
-
-IF &lt;CC015C-TransitOperation.declarationType&gt; is in SET {T1, TIR}
-THEN &lt;CC190C-TransitOperation-ExportOperation.Transit procedure category&gt; is EQUAL to ‘1’
-ELSE IF &lt;CC015C-TransitOperation.declarationType&gt; is in SET {T2, T2F, T2SM}
-THEN &lt;CC190C-TransitOperation-ExportOperation.Transit procedure category&gt; is EQUAL to ‘2’
-ELSE IF at least one consignment item for the specific &lt;CC190C-TransitOperation-
-ExportOperation.MRN&gt; has &lt;CC015C-Consignment-HouseConsignment-
-ConsignmentItem.declarationType&gt; EQUAL to ’T1’
-THEN &lt;CC190C-TransitOperation-ExportOperation.Transit procedure category&gt; is EQUAL to ‘1’
-ELSE &lt;CC190C-TransitOperation-ExportOperation.Transit procedure category&gt; is EQUAL to ‘2’
-
-**Technical Description**
-
-IF /CC015C/TransitOperation/declarationType is in SET {T1, TIR}<br />
-THEN /CC190C/TransitOperation/ExportOperation/transitProcedureCategory is EQUAL to ‘1’<br />
-ELSE IF /CC015C/TransitOperation/declarationType is in SET {T2, T2F, T2SM}<br />
-THEN /CC190C/TransitOperation/ExportOperation/transitProcedureCategory is EQUAL to ‘2’<br />
-ELSE IF at least one consignment item for the specific<br />
-/CC190C/TransitOperation/ExportOperation/MRN has<br />
-/CC015C/Consignment/HouseConsignment/ConsignmentItem/declarationType EQUAL to ’T1’<br />
-THEN /CC190C/TransitOperation/ExportOperation/transitProcedureCategory is EQUAL to ‘1’<br />
-ELSE /CC190C/TransitOperation/ExportOperation/transitProcedureCategory is EQUAL to ‘2’
 
 
 ## R0789
@@ -1405,22 +1147,6 @@ CC015C, CD050C, CD115C, CD160C OR CD165C.
 
 Reference number assigned must be equal to the one included in CD001C, CD003C, CC013C,<br />
 CC015C, CD050C, CD115C, CD160C OR CD165C.
-
-
-## R0875
-
-**Functional Description**
-
-IF &lt;CC191C-AES RESULTS.Global validation response&gt; is EQUAL to '1'
-THEN all iterations of &lt;CC191C-EXPORT OPERATION.Result indicator&gt; is EQUAL to 'P1'
-ELSE at least one iteration of &lt;CC191C-EXPORT OPERATION.Result indicator&gt; is in SET {N1, N2,
-N3, N4}
-
-**Technical Description**
-
-IF /CC191C/AESResults/globalValidationResponse is EQUAL to '1'<br />
-THEN all iterations of /CC191C/ExportOperation/resultIndicator is EQUAL to 'P1'<br />
-ELSE at least one iteration of /CC191C/ExportOperation/resultIndicator is in SET {N1, N2, N3, N4}
 
 
 ## R0900
@@ -1707,16 +1433,6 @@ The value of &lt;CONSIGNMENT.Gross mass&gt; must be GREATER than or EQUAL to the
 The value of /<span>&#42;</span>/Consignment/grossMass must be GREATER than or EQUAL to the sum of<br />
 /<span>&#42;</span>/Consignment/HouseConsignment/grossMass for all house consignments.
 
-
-## R0995
-
-**Functional Description**
-
-For this data item only an EORI number is valid.
-
-**Technical Description**
-
-For this data item only an EORI number is valid.
 
 ## R3060
 

@@ -1,16 +1,3 @@
-## E1101
-
-**Functional Description**
-
-N/A
-
-**Technical Description**
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br />
-THEN /<span>&#42;</span>/RiskAnalysisIdentification/RiskAnalysis/RiskAnalysisResult/code<br />
-format shall be set to an..5
-
-
 ## E1102
 
 **Functional Description**
@@ -146,39 +133,6 @@ THEN<br />
 format shall be set to an..17
 
 
-## E1115
-
-**Functional Description**
-
-N/A
-
-**Technical Description**
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br />
-THEN<br />
-/<span>&#42;</span>/Enquiry/text AND<br />
-/<span>&#42;</span>/Recovery/text AND<br />
-/<span>&#42;</span>/ResponseInformation/text AND<br />
-/<span>&#42;</span>/RequestedInformation/text AND<br />
-/<span>&#42;</span>/FunctionalError/originalAttributeValue<br />
-format shall be set to an..140
-
-
-## E1116
-
-**Functional Description**
-
-N/A
-
-**Technical Description**
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br />
-THEN<br />
-/<span>&#42;</span>/TransitOperation/cancelEnquiryNotificationText AND<br />
-/<span>&#42;</span>/RiskAnalysisIdentification/RiskAnalysis/RiskAnalysisResult/text<br />
-format shall be set to an...350
-
-
 ## E1117
 
 **Functional Description**
@@ -206,33 +160,6 @@ IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br />
 THEN<br />
 /<span>&#42;</span>/Guarantee/GuaranteeReference/accessCode<br />
 format shall be set to an4
-
-
-## E1119
-
-**Functional Description**
-
-N/A
-
-**Technical Description**
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br />
-THEN<br />
-/CD906C/FunctionalError/errorPointer<br />
-format shall be set to an..210
-
-
-## E1121
-
-**Functional Description**
-
-N/A
-
-**Technical Description**
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br />
-THEN /<span>&#42;</span>/Guarantee/GuaranteeReference/amountConcerned<br />
-format shall be set to n..15,2
 
 
 ## E1301
@@ -277,35 +204,6 @@ IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br />
 THEN<br />
  /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument<br />
 multiplicity shall be set to '9x'
-
-
-## E1402
-
-**Functional Description**
-
-N/A
-
-**Technical Description**
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br />
-THEN<br />
- /<span>&#42;</span>/FunctionalError<br />
- /<span>&#42;</span>/RiskAnalysisIdentification/RiskAnalysis<br />
-multiplicity shall be set to '999x'
-
-
-## E1403
-
-**Functional Description**
-
-N/A
-
-**Technical Description**
-
-IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br />
-THEN<br />
- /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem<br />
-multiplicity shall be set to '99x'
 
 
 ## E1406
