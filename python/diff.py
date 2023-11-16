@@ -127,15 +127,15 @@ def create_rule_tuple(rule: str):
     return rule_code, rule_type
 
 
-result: list[str] = []
+result: list[str] = ["--------------------------------",
+                     "--- MESSAGE TYPE DIFFERENCES ---",
+                     "--------------------------------"]
 
 # To support the diffing engine and to remove order (it matters less for the TIS), we'll turn the list of categories
 # into dict trees.
-result.append("--------------------------------")
-result.append("--- MESSAGE TYPE DIFFERENCES ---")
-result.append("--------------------------------")
 
 for message_type in expected_message_types:
+    print(f"Generating diff for message type {message_type}")
     result.append(f"Diff for {message_type}")
     old_tree = old[0][message_type]
     new_tree = new[0][message_type]
@@ -146,23 +146,29 @@ result.append("--------------------------------")
 result.append("------- RULE DIFFERENCES -------")
 result.append("--------------------------------")
 
+print(f"Generating diff for message rules...")
+
 old_rules = flatten_rules(old[1])
 new_rules = flatten_rules(new[1])
 diff = DeepDiff(old_rules, new_rules, ignore_order=True)
 
+rules_to_print: list[str] = [
+    "-- --",
+    "-- Rule diffs --"
+]
+
 if diff.keys().__contains__("dictionary_item_added"):
     added_rules = list(sorted(map(lambda x: x.replace("root['", "").replace("']", ""), diff['dictionary_item_added'])))
     result.append(f"Rules added: {added_rules}")
-    result.append("-- --")
     for rule_code in added_rules:
-        result.append(f"""Rule {rule_code} - Technical:
+        rules_to_print.append(f"""Added rule {rule_code} - Technical:
         
         New rule:
         {new_rules[rule_code][0]}
         
         ------
         
-        Rule {rule_code} - Functional:
+        Added rule {rule_code} - Functional:
         
         New rule:
         {new_rules[rule_code][1]}
@@ -177,15 +183,14 @@ if diff.keys().__contains__("dictionary_item_removed"):
 
 if diff.keys().__contains__("values_changed"):
     changed_rules = list(sorted(map(create_rule_tuple, diff['values_changed']), key=lambda x: x[0]))
-    result.append(f"""Rules changed: {changed_rules[0]} - {changed_rules[1]}""")
-    result.append("-- --")
-    result.append("-- Rule diffs --")
+    fmt_change_rules = f"Rules changed: {list(dict.fromkeys(map(lambda x: x[0], changed_rules)))}"
+    result.append(fmt_change_rules)
     for rule_code, rule_type in changed_rules:
         if rule_type == "Technical":
             index = 0
         else:
             index = 1
-        result.append(f"""Rule {rule_code} - {rule_type}:
+        rules_to_print.append(f"""Rule {rule_code} - {rule_type}:
         
         Old rule:
         {old_rules[rule_code][index]}
@@ -193,6 +198,10 @@ if diff.keys().__contains__("values_changed"):
         New rule:
         {new_rules[rule_code][index]}
         ------""".replace("        ", ""))
+
+if len(rules_to_print) > 2:
+    for r in rules_to_print:
+        result.append(r)
 
 result.append("--------------------------------")
 result.append("------------- END --------------")
