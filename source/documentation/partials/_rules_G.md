@@ -82,7 +82,7 @@ ELSE IF &lt;FUNCTIONAL ERROR.Error code&gt; is EQUAL to '50'
 THEN &lt;FUNCTIONAL ERROR.Error reason&gt; shall point to the Transitional Constraint number against
 which validation failed (ie Exxxx or Bxxxx),
 ELSE IF &lt;FUNCTIONAL ERROR.Error code&gt; is in SET {51, 52}
-THEN the &lt;FUNCTIONAL ERROR.Error reason&gt; shall be:
+THEN the &lt;FUNCTIONAL ERROR.Error reason&gt; shall be:<br /><br />
 • 'ieCAvB' if exception is thrown by ieCA
 • 'NCAvB' if exception is thrown by NTA/NECA,
 ELSE the &lt;FUNCTIONAL ERROR.Error reason&gt; shall have the value 'N/A'
@@ -263,13 +263,13 @@ N/A
 In case of Export followed by Transit and whenever the internal transit procedure is applied, the
 Declared Office of Destination needs to be ‘appropriate’, otherwise the initial submission and/or
 subsequent amendment requests of the transit declaration data as submitted by the Holder of the
-Transit Procedure to the Office of Departure has to be rejected. This can be validated as follows:
+Transit Procedure to the Office of Departure has to be rejected. This can be validated as follows:<br /><br />
 A/ In case the Declared Office of Destination belongs to EU MS (<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a>- CountryCodesCommunity),
 and its Custom Office Reference Number is included in both <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CustomsOfficeDestination.zip">CL172</a>- CustomsOfficeDestination and
 <a href="../downloads/CL294.zip">CL294</a>-CustomsOfficeExitDeclared, then it is considered ‘appropriate’ (otherwise is considered not
 ‘appropriate’);
 B/ In case the Declared Office of Destination belongs to CTC (<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DocumentTypeExcise.zip">CL112</a>- CountryCodesCTC), it is
-considered by default ‘appropriate’.<br /><br />
+considered by default ‘appropriate’.
 When the Declared Office of Destination is considered as not ‘appropriate’, the messages CC013C or
 CC015C will be responded with CC056C that will report the error code '12- Codelist violation'.
 
@@ -363,7 +363,7 @@ REFERENCE&gt; will be also used to include the information of EMCS consignment e
 EU member state into a Non-EU-Member state, in case of Export Followed by Transit (where in
 messages CC013C or CC015C the &lt;CONSIGNMENT- HOUSE CONSIGNMENT- PREVIOUS
 DOCUMENT.Type&gt; = ‘N830’ AND &lt;CONSIGNMENT- HOUSE CONSIGNMENT- CONSIGNMENT
-ITEM- ADDITIONAL REFERENCE.Type&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DocumentTypeExcise.zip">CL234</a> (DocumentTypeExcise)).<br /><br />
+ITEM- ADDITIONAL REFERENCE.Type&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DocumentTypeExcise.zip">CL234</a> (DocumentTypeExcise)).
 In this case, the Data Group &lt;GOODS SHIPMENT- GOODS ITEM- PREVIOUS DOCUMENT&gt; of the
 Export declaration, will be mapped with the Data Group &lt;CONSIGNMENT- HOUSE CONSIGNMENT-
 CONSIGNMENT ITEM- ADDITIONAL REFERENCE&gt; of the Transit declaration.
@@ -439,7 +439,7 @@ N/A
 **Functional Description**
 
 The Data Group ‘Carrier’ shall be provided if the value is different from the ‘Holder of the transit
-procedure’.<br /><br />
+procedure’.
 The Data Group ‘Carrier’ should not be present if the ‘Holder of the transit procedure’ is also the
 ‘Carrier’.
 
@@ -478,7 +478,7 @@ N/A
 
 **Functional Description**
 
-Each iteration of this data group shall include:
+Each iteration of this data group shall include:<br /><br />
 -Either the transport equipment information for the containerised goods with seals OR without seals
 with reference to those goods;
 -OR the transport equipment information for the non containerised but sealed goods (e.g. goods
@@ -554,7 +554,7 @@ N/A
 
 **Functional Description**
 
-IF the declaration is lodged without Safety and Security data then:
+IF the declaration is lodged without Safety and Security data then:<br /><br />
 -where goods are carried in multimodal transport units, such as containers, swap bodies and semi
 trailers, the customs authorities may authorise the holder of the transit procedure not to provide this
 information where the logistical pattern at the point of departure may prevent the identity and
@@ -563,7 +563,7 @@ providing multimodal transport units bear unique numbers and such numbers are in
 07 063 000 Container identification number
 -In the following cases, Member States shall waive the obligation to enter this information on a transit
 declaration lodged at the office of departure in relation with the means of transport on which the goods
-are directly loaded:
+are directly loaded:<br /><br />
   -where the logistical pattern does not allow this data element to be provided and the holder of the
 transit procedure has the AEOC status and
    -where the relevant information may be traced where needed by the customs authorities via the
@@ -578,7 +578,7 @@ N/A
 
 **Functional Description**
 
-This Data Group is “Required” except where one of the following conditions apply:
+This Data Group is “Required” except where one of the following conditions apply:<br /><br />
 -For the declaration that include Inland Mode Of Transport with the value ‘5’;
 -Where goods are carried in multimodal transport units, such as containers, swap bodies and semi
 trailers, the customs authorities may authorise the holder of the transit procedure not to provide this
@@ -586,7 +586,7 @@ information where the logistical pattern at the point of departure may prevent t
 nationality of the means of transport from being provided at the time the goods are released for transit,
 providing multimodal transport units bear unique numbers and such numbers are indicated in the Data
 Item ‘Container identification number’;
--For the means of transport on which the goods are directly loaded:
+-For the means of transport on which the goods are directly loaded:<br /><br />
 -the logistical pattern does not allow this data element to be provided and the holder of the transit
 procedure has the appropriate status (AEOC in EU) and
 -the relevant information may be traced where needed by the customs authorities via the records of
@@ -602,7 +602,7 @@ N/A
 **Functional Description**
 
 The Data Item ‘Identification number’ is required for the Data Group ‘HOLDER OF THE TRANSIT
-PROCEDURE’, except for:
+PROCEDURE’, except for:<br /><br />
 - economic operators residing outside of the common transit countries (outside <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a>), and
 - private individuals for which an identification number may be used but is not required.
 
@@ -616,7 +616,7 @@ N/A
 **Functional Description**
 
 This Data Group must be provided when different from the ‘HOLDER OF THE TRANSIT
-PROCEDURE’.<br /><br />
+PROCEDURE’.
 IF the unique ‘CONSIGNOR’ of the consignment is different from the ‘HOLDER OF THE TRANSIT
 PROCEDURE’
 THEN the Data Group &lt;CONSIGNMENT -CONSIGNOR&gt; must include this ‘CONSIGNOR’;
@@ -634,7 +634,7 @@ N/A
 
 **Functional Description**
 
-The value of this Data Item should be:
+The value of this Data Item should be:<br /><br />
 ‘A1’ (Satisfactory): When the goods are released for transit after physical control (full or partial) and no
 discrepancies were detected;
 ‘A2’ (Considered satisfactory): When the goods are released for transit after documentary control only
@@ -652,7 +652,7 @@ N/A
 **Functional Description**
 
 The Data Item shall be filled, by using the information of the &lt;TRANSIT OPERATION. Limit date&gt;,
-included either:
+included either:<br /><br />
 - in the initial declaration CC015C message or
 - in any possible amendments CC013C or
 - using the revised expected arrival date entered by the Officer at the Office Of Departure when the
@@ -739,7 +739,7 @@ N/A
 
 **Functional Description**
 
-&lt;UNLOADING REMARK.Unloading completion&gt; is used as a flag and it can contain 2 possible values:
+&lt;UNLOADING REMARK.Unloading completion&gt; is used as a flag and it can contain 2 possible values:<br /><br />
  ‘0’ = ‘NO’ This means that the unloading of the goods is not yet completed;
  ‘1’ = ‘YES’ This means that the goods are completely unloaded.
 
@@ -777,7 +777,7 @@ N/A
 
 **Functional Description**
 
-&lt;UNLOADING REMARK.Conform&gt; is used as a flag and it can contain 2 possible values:
+&lt;UNLOADING REMARK.Conform&gt; is used as a flag and it can contain 2 possible values:<br /><br />
    ‘0’ = ‘NO’ there are unloading remarks;
    ‘1’ = ‘YES’ no unloading remarks present.
 
@@ -829,9 +829,9 @@ N/A
 
 **Functional Description**
 
-This Data Item can take the value '0' (zero) in the following cases:
+This Data Item can take the value '0' (zero) in the following cases:<br /><br />
 a. a document number is missing (i.e. it shall not be filled in with a dummy number);
-b. the length of a document number exceeds the allowed 70 characters (i.e. it shall not be truncated).<br /><br />
+b. the length of a document number exceeds the allowed 70 characters (i.e. it shall not be truncated).
 A missing document reference number (due to the above or any other case) is not a valid reason for
 the rejection of this message.
 
