@@ -163,18 +163,18 @@ ISO 6346 standard.
 
 **Functional Description**
 
-Numbering of items:
-IF a discrepancy is identified in the Data Group THEN:
+Numbering of items:<br /><br />
+IF a discrepancy is identified in the Data Group THEN:<br /><br />
   - 'Sequence number' shall be unique AND EQUAL to the sequence number of the Data
  Group defined in the declaration for which the discrepancy is reported.<br /><br />
-IF a new Data Group is identified THEN:
+IF a new Data Group is identified THEN:<br /><br />
    - 'Sequence number' shall be unique AND EQUAL to the number of the last sequence
  number of the Data Group
   + 1 and the rest of the Data Items contained in the Data Group and all sub–Data Groups
   shall be filled in except for the Data Elements that are defined as optional or dependent
   in the declaration.<br /><br />
 IF the information related to a Data Group is missing
-THEN:
+THEN:<br /><br />
    - 'Sequence number' shall be unique AND EQUAL to the sequence number of the Data
   Group defined in the declaration
   and the rest of the Data Items contained in the Data Group and all sub–Data Groups
@@ -208,13 +208,13 @@ number of this Data Item is unique in this message.
 
 **Functional Description**
 
-Numbering of items:
-IF a discrepancy is identified in the Data Group THEN:
+Numbering of items:<br /><br />
+IF a discrepancy is identified in the Data Group THEN:<br /><br />
   - ‘Declaration goods item number' shall be unique AND EQUAL to the declaration goods item
  number defined in the declaration for which the discrepancy is reported AND
   - 'Goods item number’ shall be unique AND EQUAL to the goods item number defined in the
 declaration for which the discrepancy is reported.<br /><br />
-IF a new Data Group is identified THEN:
+IF a new Data Group is identified THEN:<br /><br />
    - ‘Declaration goods item number' shall be unique AND EQUAL to the last declaration goods item
   number defined in the declaration + 1 AND
    - 'Goods item number’ shall be unique AND EQUAL to the last goods item number defined in the
@@ -222,7 +222,7 @@ IF a new Data Group is identified THEN:
   the rest of the Data Items contained in the Data Group and all sub–Data Groups shall be
   filled in except for the Data Elements that are defined as optional or dependent in the
   declaration.<br /><br />
-IF a Goods item is missing THEN:
+IF a Goods item is missing THEN:<br /><br />
    - ‘Declaration goods item number' shall be unique AND EQUAL to the number of the declaration
   goods item number defined in the declaration AND
    - 'Goods item number’ shall be unique AND EQUAL to the item number defined in the
@@ -325,7 +325,7 @@ system will use the default language of the Office concerned.
    
    **Functional Description**
    
-   Data item &lt;INVALIDATION.Decision&gt; can contain 2 valid values:
+   Data item &lt;INVALIDATION.Decision&gt; can contain 2 valid values:<br /><br />
 - ‘0’ = ‘No’: Invalidation refused by Customs: Decision
 - ‘1’ = ‘Yes’: Invalidation accepted by Customs: Decision
    
@@ -472,7 +472,7 @@ ELSE for THIS CONSIGNMENT ITEM<br />
 **Functional Description**
 
 IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-COMMODITY-GOODS
-MEASURE.Gross mass&gt; is GREATER THAN '0' (zero value).<br /><br />
+MEASURE.Gross mass&gt; is GREATER THAN '0' (zero value).
 THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-COMMODITY-GOODS
 MEASURE.Net mass&gt; must be LESS THAN OR EQUAL to &lt;CONSIGNMENT-HOUSE
 CONSIGNMENT-CONSIGNMENT ITEM-COMMODITY-GOODS MEASURE.Gross mass&gt;.
@@ -894,11 +894,11 @@ ELSE
 movement IS NOT IN STATE “Guarantee under amendment”)
   THEN
   all Data Groups and Data Items of the original declaration can be amended, with the exception of
-the following Data Groups:
+the following Data Groups:<br /><br />
   - &lt;HOLDER OF THE TRANSIT PROCEDURE&gt;
   - &lt;REPRESENTATIVE&gt;
   - &lt;CUSTOMS OFFICE OF DEPARTURE&gt;
-  and the exception of the following Data Items:
+  and the exception of the following Data Items:<br /><br />
   - &lt;TRANSIT OPERATION.Additional declaration type&gt;
   - &lt;TRANSIT OPERATION.Declaration type&gt;
   - &lt;TRANSIT OPERATION.MRN&gt;
@@ -1054,7 +1054,7 @@ THEN /<span>&#42;</span>/TransitOperation/reducedDatasetIndicator = “0”
 
 IF sender is in EU (<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a> (CountryCodesCommunity))
 THEN the value must be a valid EORI or TCUIN (validated by receiver, if located in EU),
-ELSE (sender is not in EU) the value must be a TIN number (validated by the message sender only).<br /><br />
+ELSE (sender is not in EU) the value must be a TIN number (validated by the message sender only).
 The EORI/TCUIN values shall comply with the following pattern: &lt;xs:pattern value=" [A-Z]{2}[\x21-
 \x7E]{1,15}"/&gt;
 

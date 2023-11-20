@@ -14,6 +14,7 @@
  limitations under the License.
 """
 import os
+import re
 from inspect import cleandoc
 from os import path
 from typing import Optional
@@ -154,6 +155,8 @@ def write_message_type_file(message_type: str, categories: list[MessageCategory]
 
 # ---- Rendering for Rules
 
+_replace_line_break_regex = re.compile(r"([A-Za-z0-9]{2}[:.])\n")
+
 
 def process_rule_string(string: str, preserve_all_line_breaks = True) -> str:
     string = string.replace("<", "&lt;").replace(">", "&gt;")
@@ -161,19 +164,20 @@ def process_rule_string(string: str, preserve_all_line_breaks = True) -> str:
         string = string.replace("\n", "<br />\n")
     else:
         # only preserve those preceded by a full stop -- in which case we emulate paragraphs with spacing a bit better
-        string = string.replace(".\n", ".<br /><br />\n")
+        string = re.sub(_replace_line_break_regex, r"\1<br /><br />\n", string)
 
     return replace_code_list_full_string(string.replace("*", "<span>&#42;</span>"))
 
-specific_line_break_rules: list[str] = [
 
-]
+specific_line_break_rules: list[str] = []
+
 
 def should_replace_line_breaks(rule_code: str) -> bool:
     if rule_code.upper().startswith("C"):
         return True
     else:
         return specific_line_break_rules.__contains__(rule_code.upper())
+
 
 def render_rule(rule: Rule) -> str:
     """

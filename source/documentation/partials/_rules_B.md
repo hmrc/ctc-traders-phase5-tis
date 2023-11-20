@@ -2,9 +2,9 @@
 
 **Functional Description**
 
-Export followed by Transit & Groupage:
+Export followed by Transit & Groupage:<br /><br />
 During the Transitional Period, in case of “Export Followed by Transit” with multiple export declarations
-covered by one standard transit declaration (i.e. not a pre-lodged transit declaration), the D.G.<br /><br />
+covered by one standard transit declaration (i.e. not a pre-lodged transit declaration), the D.G.
 PREVIOUS DOCUMENT at CONSIGNMENT ITEM level can include the MRN of the related Export
 declaration (maximum one Export MRN included per one Consignment item).
 
