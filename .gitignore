@@ -29,4 +29,5 @@ q2.csv
 .bsp/
 .vscode/
 .metals/
-
+/public
+/.batect
