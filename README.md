@@ -2,16 +2,8 @@
 
 ## Getting started
 
-To preview or build the website, we need to use the terminal.
-
-Install Ruby 2.7.x with Rubygems, perferably with a [Ruby version manager][rvm],
-and the [Bundler gem][bundler].
-
-In the application folder type the following to install the required gems:
-
-```
-bundle install
-```
+To preview or build the website, we can either use Batect, or the terminal. See the
+respective sections below for requirements.
 
 ## Making changes
 
@@ -41,48 +33,57 @@ To add a completely new page, create a file with a `.html.md` extension in the `
 
 For example, `source/about.html.md` will be accessible on <http://localhost:4567/about.html>.
 
-## Preview
+## Previewing
 
-Whilst writing documentation we can run a middleman server to preview how the
-published version will look in the browser. After saving a change the preview in
-the browser will automatically refresh.
+#### Option 1 - Using Docker (recommended)
 
-The preview is only available on our own computer. Others won't be able to
-access it if they are given the link.
-
-Type the following to start the server:
-
+To live preview:
 ```
-bundle exec middleman server
+./batect preview
+```
+The local URL and port where the files can be previewed will be output, this is normally http://localhost:4567.
+
+NB The first time this is run it builds the Docker image and installs dependencies so may take 5 mins.
+Subsequent runs will be much quicker.
+
+#### Option 2 - Local install (Not recommended)
+
+Requirements:
+* [Ruby Version Manager][rbenv]
+* [Node Version Manager][nodenv]
+
+To live preview:
+```
+bundle install
+bundle exec middleman serve
+```
+The local URL and port where the files can be previewed will be output, this is normally http://localhost:4567.
+
+## Running the Scala Application
+
+Requirements:
+* Scala/sbt
+
+### Build the HTML files
+```
+./batect build
 ```
 
-If all goes well something like the following output will be displayed:
-
+If you don't wish to use batect and have Ruby 3.0.2 installed:
 ```
-== The Middleman is loading
-== LiveReload accepting connections from ws://192.168.0.8:35729
-== View your site at "http://Laptop.local:4567", "http://192.168.0.8:4567"
-== Inspect your site configuration at "http://Laptop.local:4567/__middleman", "http://192.168.0.8:4567/__middleman"
+bundle install
+bundle exec middleman build --build-dir=public/ --clean
 ```
 
-You should now be able to view a live preview at http://localhost:4567.
+`bundle inst`
 
-## Build
-
-If you want to publish the website without using a build script you may need to
-build the static HTML files.
-
-Type the following to build the HTML:
-
+### Run the Scala Application
 ```
-bundle exec middleman build
+sbt run
 ```
 
-This will create a `build` subfolder in the application folder which contains
-the HTML and asset files ready to be published.
+The local URL and port where the files can be previewed will be output, this is normally http://localhost:9000.
 
-[rvm]: https://www.ruby-lang.org/en/documentation/installation/#managers
-[bundler]: http://bundler.io/
 
 ### License
 

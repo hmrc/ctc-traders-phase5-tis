@@ -31,3 +31,6 @@ q2.csv
 .metals/
 /public
 /.batect
+python/env
+python/__pycache__
+diff_result.txt
