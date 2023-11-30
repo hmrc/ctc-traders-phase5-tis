@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 16.0 issued 27 October 2023
+Version 17.0 issued 30 November 2023
 
 Based on NCTS5 document version 5.15.1-v1.00 and issue date 7 March 2023
 
@@ -178,12 +178,18 @@ The following printing guidelines are important:
 - the printer and print driver used for printing a TAD must be capable of printing a bar code of standard ISO code 128 set B (but not EAN128)
 - use the font type BC C128 Narrow (True Type) version 2.0
 
-#### Example TAD
+#### Example TADs
 
 To learn more about how to create TADs for NCTS5, review the following:
 
-- [example transition period TAD](/guides/ctc-traders-phase5-tis/downloads/Example_NCTS5_Transition_Period_TAD_September_2023.pdf) (PDF), which is based on the NCTS4 TAD template (the TAD templates used for NCTS4 and NCTS5 transition period are the same - more information about the NCTS5 post-transition period TAD will be provided when it becomes available)
+- [example transition period TAD without safety and security (S&S) details](/guides/ctc-traders-phase5-tis/downloads/Example_NCTS5_Transition_Period_TAD_Without_Safety_Security_Data_November_2023.pdf) (PDF)
+- [example transition period TAD with S&S details](/guides/ctc-traders-phase5-tis/downloads/Example_NCTS5_Transition_Period_TAD_With_Safety_Security_Data_November_2023.pdf) (PDF)
 - [NCTS5 Transition Period TAD Correlation Data spreadsheet](/guides/ctc-traders-phase5-tis/downloads/NCTS5_Transition_Period_TAD_Correlation_Data_September_2023.xlsx), which maps the box numbers in an NCTS4 TAD to the corresponding data elements in NCTS5 IE013, IE015, and IE029 messages
+
+Both example TADs are
+
+- based on the NCTS4 TAD template because the TAD templates used for NCTS4 and the NCTS5 transition period are the same - more information about the NCTS5 post-transition period TAD will be provided when it becomes available
+- generated from the same example [IE029 message](/guides/ctc-traders-phase5-tis/downloads/Example_IE029_Message_November_2023.xml) (XML) - the only difference is the setting ('0' or '1') of the 'Security' data item in the 'Transit Operation' data group of the message
 
 ### UK cutover from NCTS4 to NCTS5
 
