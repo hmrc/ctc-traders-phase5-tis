@@ -51,7 +51,6 @@ THEN<br />
 /<span>&#42;</span>/Consignment/Consignee/name AND<br />
 /<span>&#42;</span>/Consignment/Consignee/Address/streetAndNumber AND<br />
 /<span>&#42;</span>/Consignment/LocationOfGoods/Address/streetAndNumber AND<br />
-/<span>&#42;</span>/Consignment/ActiveBorderTransportmeans/conveyanceReferenceNumber AND<br />
 /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee/name AND<br />
 /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/streetAndNumber AND<br />
 /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/referenceNumber AND<br />

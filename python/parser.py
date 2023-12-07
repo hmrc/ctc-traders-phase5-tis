@@ -195,6 +195,13 @@ def extract_rules(reader: PdfReader, start_page: int) -> dict[str, list[Rule]]:
     rule = Rule(current_buffer)
     print(f" ... ... {rule.rule_code}")
     rules.setdefault(rule.rule_category, []).append(rule)
+
+    # Now we loop the rules and transform anything that needs transforming
+    for value in rules.values():
+        for r in value:
+            # check and transform the rule if necessary
+            hmrc_exceptions.rule_transformation(r)
+
     print(f"Rule extraction complete")
     return rules
 
