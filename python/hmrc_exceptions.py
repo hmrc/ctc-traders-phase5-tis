@@ -15,7 +15,7 @@
 """
 from typing import Optional
 
-from data_types import MessageCategory
+from data_types import MessageCategory, Rule
 
 
 def find_category(message_type: str, path: list[str], categories: list[MessageCategory]) -> MessageCategory:
@@ -61,3 +61,8 @@ def message_category_transformation(message_type: str, message_category: list[Me
 
     if message_type == "IE043":
         set_to_optional(message_type, ["CONSIGNMENT", "HOUSE CONSIGNMENT", "CONSIGNMENT ITEM", "COMMODITY", "GOODS MEASURE"], message_category)
+
+
+def rule_transformation(rule: Rule):
+    if rule.rule_code == "E1104":
+        rule.technical_description = rule.technical_description.replace("/*/Consignment/ActiveBorderTransportmeans/conveyanceReferenceNumber AND\n", "")
