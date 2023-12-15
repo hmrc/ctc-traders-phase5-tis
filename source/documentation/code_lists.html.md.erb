@@ -1,0 +1,87 @@
+---
+title: Code lists | NCTS Phase 5 Technical Interface Specification
+weight: 11
+description: Software developers, designers, product owners or business analysts. Learn about the processes involved in the exchange of messages between traders and phase 5 of the NCTS at departure and arrival of transit movements, and about the definitions, formats and validations of those messages.
+---
+# Code lists
+
+Catalogue of all code lists inciuded in this document.
+
+| Code list | Title |
+| --------- | ----- |
+| CL008 | [CountryCodesFullList](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesFullList.zip) |
+| CL009 | [CountryCodesCommonTransit](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip) |
+| CL010 | [CountryCodesCommunity](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip) |
+| CL016 | [CUSCode](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CUSCode.zip) |
+| CL017 | [KindOfPackages](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_KindOfPackages.zip) |
+| CL019 | [IncidentCode](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_IncidentCode.zip) |
+| CL027 | [Flag](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_Flag.zip) |
+| CL038 | [QualifierOfIdentificationIncident](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_QualifierOfIdentificationIncident.zip) |
+| CL042 | [DeclarationTypeAdditional](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DeclarationTypeAdditional.zip) |
+| CL048 | [CurrencyCodes](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CurrencyCodes.zip) |
+| CL060 | [MessageTypes](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_MessageTypes.zip) |
+| CL070 | [CountryCodesCustomsOfficeLists](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCustomsOfficeLists.zip) |
+| CL076 | [GuaranteeTypeWithReference](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeTypeWithReference.zip) |
+| CL094 | [RepresentativeStatusCode](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_RepresentativeStatusCode.zip) |
+| CL101 | [UnDangerousGoodsCode](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_UnDangerousGoodsCode.zip) |
+| CL112 | [DocumentTypeExcise](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DocumentTypeExcise.zip) |
+| CL116 | [TransportChargesMethodOfPayment](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TransportChargesMethodOfPayment.zip) |
+| CL141 | [CustomsOffices](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/COL-Generic-20230601.zip) |
+| CL147 | [CountryCustomsSecurityAgreementArea](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCustomsSecurityAgreementArea.zip) |
+| CL152 | [HScode](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_HScode.zip) |
+| CL160 | [MessageWithCorrelationIdentifier](downloads/CL160.zip) |
+| CL163 | [ReleaseType](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_ReleaseType.zip) |
+| CL164 | [ReleaseNotification](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_ReleaseNotification.zip) |
+| CL165 | [Nationality](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_Nationality.zip) |
+| CL171 | [CustomsOfficeDeparture](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CustomsOfficeDeparture.zip) |
+| CL172 | [CustomsOfficeDestination](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CustomsOfficeDestination.zip) |
+| CL173 | [CustomsOfficeTransit](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CustomsOfficeTransit.zip) |
+| CL175 | [CustomsOfficeTransitExit](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CustomsOfficeTransitExit.zip) |
+| CL177 | [CustomsOfficeRecovery](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CustomsOfficeRecovery.zip) |
+| CL178 | [PreviousDocumentUnionGoods](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentUnionGoods.zip) |
+| CL180 | [FunctionalErrorCodesIeCA](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_FunctionalErrorCodesIeCA.zip) |
+| CL181 | [KindOfPackagesBulk](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_KindOfPackagesBulk.zip) |
+| CL182 | [KindOfPackagesUnpacked](downloads/CL182.zip) |
+| CL190 | [CountryAddressPostcodeBased](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryAddressPostcodeBased.zip) |
+| CL192 | [LanguageByCustoms](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_LanguageByCustoms.zip) |
+| CL195 | [ControlResultCodeDepartureSimplifiedExcluded](downloads/CL195.zip) |
+| CL198 | [CountryAddressPostcodeOnly](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryAddressPostcodeOnly.zip) |
+| CL211 | [NoReleaseMotivation](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_NoReleaseMotivation.zip) |
+| CL213 | [SupportingDocumentType](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_SupportingDocumentType.zip) |
+| CL214 | [PreviousDocumentType](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentType.zip) |
+| CL215 | [RequestedDocumentType](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_RequestedDocumentType.zip) |
+| CL217 | [DeclarationTypeSecurity](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DeclarationTypeSecurity.zip) |
+| CL218 | [TransportModeCode](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TransportModeCode.zip) |
+| CL219 | [TypeOfIdentificationofMeansOfTransportActive](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TypeOfIdentificationofMeansOfTransportActive.zip) |
+| CL226 | [RejectionCodeDepartureExport](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_RejectionCodeDepartureExport.zip) |
+| CL227 | [RejectionCodeDepartureExport](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_RejectionCodeDepartureExport.zip) |
+| CL229 | [GuaranteeTypeCTC](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeTypeCTC.zip) |
+| CL230 | [GuaranteeTypeEUNonTIR](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeTypeEUNonTIR.zip) |
+| CL231 | [DeclarationType](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DeclarationType.zip) |
+| CL232 | [DeclarationTypeItemLevel](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DeclarationTypeItemLevel.zip) |
+| CL234 | [DocumentTypeExcise](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DocumentTypeExcise.zip) |
+| CL235 | [AuthorisationTypeDeparture](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_AuthorisationTypeDeparture.zip) |
+| CL236 | [AuthorisationTypeDestination](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_AuthorisationTypeDestination.zip) |
+| CL239 | [AdditionalInformation](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_AdditionalInformation.zip) |
+| CL244 | [UnLocodeExtended](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_UnLocodeExtended.zip) |
+| CL248 | [CountryCodesForAddress](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesForAddress.zip) |
+| CL251 | [GuaranteeType](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeType.zip) |
+| CL252 | [InvalidGuaranteeReason](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_InvalidGuaranteeReason.zip) |
+| CL286 | [GuaranteeTypeWithGRN](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeTypeWithGRN.zip) |
+| CL294 | [CustomsOfficeExitDeclared](downloads/CL294.zip) |
+| CL296 | [SpecificCircumstanceIndicatorCode](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_SpecificCircumstanceIndicatorCode.zip) |
+| CL326 | [QualifierOfTheIdentification](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_QualifierOfTheIdentification.zip) |
+| CL347 | [TypeOfLocation](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TypeOfLocation.zip) |
+| CL349 | [Unit](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_Unit.zip) |
+| CL380 | [AdditionalReference](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_AdditionalReference.zip) |
+| CL384 | [NotificationType](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_NotificationType.zip) |
+| CL385 | [MessageTypeWithoutHeader](downloads/CL385.zip) |
+| CL505 | [CountryWithoutZip](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryWithoutZip.zip) |
+| CL553 | [MSCountry](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_MSCountry.zip) |
+| CL560 | [BusinessRejectionTypeDepExp](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_BusinessRejectionTypeDepExp.zip) |
+| CL570 | [BusinessRejectionTypeDesExt](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_BusinessRejectionTypeDesExt.zip) |
+| CL610 | [MessageWithCorrelationIdentifier](downloads/CL610.zip) |
+| CL704 | [AdditionalSupplyChainActorRoleCode](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_AdditionalSupplyChainActorRoleCode.zip) |
+| CL716 | [ControlType](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_ControlType.zip) |
+| CL750 | [TypeOfIdentificationOfMeansOfTransport](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TypeOfIdentificationOfMeansOfTransport.zip) |
+| CL754 | [TransportDocumentType](https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TransportDocumentType.zip) |
