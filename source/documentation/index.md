@@ -168,10 +168,6 @@ Guidelines for printing TADs are available in this [zip file](/guides/ctc-trader
 - there are separate guidelines in the zip file for during and after the transition period (see below)
 - single house consignments apply only to the transition period and multiple house consignments apply only to the post-transition period
 
-**Note:** The current status of the post-transition period printing guidelines is ‘draft‘. If the guidelines change after they have been finalised, we will advise you.
-
-**Note:** Please ignore any TSAD references in any of the files in the zip file.
-
 The following printing guidelines are important:
 
 - the ‘liability amount‘ information in the guarantee data group is not printed on a TAD
