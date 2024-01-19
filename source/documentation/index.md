@@ -166,7 +166,7 @@ For information about the TAD fallback procedure, see section 'Business continui
 Guidelines for printing TADs are available in this [zip file](/guides/ctc-traders-phase5-tis/downloads/NCTS5_TAD_Printing_Guidelines_June_2023.zip):
 
 - there are separate guidelines in the zip file for during and after the transition period (see below)
-- single house consignments apply only to the transition period and multiple house consignments apply only to the post-transition period
+- single house consignments apply only to the transition period. Multiple house consignments apply only to the post-transition period
 
 The following printing guidelines are important:
 
