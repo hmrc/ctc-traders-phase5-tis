@@ -163,7 +163,7 @@ For information about the TAD fallback procedure, see section 'Business continui
 
 #### Manually printing TADs
 
-Guidelines for printing TADs are available in this [zip file](https://github.com/hmrc/ctc-traders-phase5-tis/blob/CTCP-4765-Update-Prnt-Guidelines/source/downloads/NTCS-P5%20Printing%20Guidelines%20TAD%20and%20TLoI%20-%20v.1.2.zip):
+Guidelines for printing TADs are available in this [zip file](</guides/ctc-traders-phase5-tis/downloads/NTCS-P5 Printing Guidelines TAD and TLoI - v.1.2.zip>):
 
 There are separate guidelines in the zip file for during and after the transition period (see below)
 - single house consignments apply only to the transition period
