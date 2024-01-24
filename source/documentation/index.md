@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 18.1 issued 17 January 2024
+Version 18.2 issued 24 January 2024
 
 Based on NCTS5 document version 5.15.1-v1.00 and issue date 7 March 2023
 
@@ -163,14 +163,11 @@ For information about the TAD fallback procedure, see section 'Business continui
 
 #### Manually printing TADs
 
-Guidelines for printing TADs are available in this [zip file](/guides/ctc-traders-phase5-tis/downloads/NCTS5_TAD_Printing_Guidelines_June_2023.zip):
+Guidelines for printing TADs are available in this [zip file](/guides/ctc-traders-phase5-tis/downloads/NTCS_P5_Printing_Guidelines_TAD_and_TLoI_v.1.2.zip):
 
-- there are separate guidelines in the zip file for during and after the transition period (see below)
-- single house consignments apply only to the transition period and multiple house consignments apply only to the post-transition period
-
-**Note:** The current status of the post-transition period printing guidelines is ‘draft‘. If the guidelines change after they have been finalised, we will advise you.
-
-**Note:** Please ignore any TSAD references in any of the files in the zip file.
+There are separate guidelines in the zip file for during and after the transition period (see below)
+- single house consignments apply only to the transition period
+- multiple house consignments apply only to the post-transition period
 
 The following printing guidelines are important:
 
