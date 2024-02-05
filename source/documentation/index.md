@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 18.2 issued 24 January 2024
+Version 18.3 issued 5th February 2024
 
 Based on NCTS5 document version 5.15.1-v1.00 and issue date 7 March 2023
 
