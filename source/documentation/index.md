@@ -163,7 +163,8 @@ For information about the TAD fallback procedure, see section 'Business continui
 
 #### Manually printing TADs
 
-Guidelines for printing TADs are available in this [zip file](source/downloads/NTCS_P5_Printing_Guidelines_TAD_and_TLoI_v.1.2.zip):
+Guidelines for printing TADs are available in this [zip file](https://github.com/hmrc/ctc-traders-phase5-tis/blob/CTCP-4765_newTAD_zip/source/downloads/NCTS5_TAD_Printing_Guidelines_Feb_2024.zip):
+
 
 There are separate guidelines in the zip file for during and after the transition period:
 
