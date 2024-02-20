@@ -187,7 +187,7 @@ To learn more about how to create TADs for NCTS5, review the following:
 - [example transition period TAD with S&S details](/guides/ctc-traders-phase5-tis/downloads/Example_NCTS5_Transition_Period_TAD_With_Safety_Security_Data_November_2023.pdf) (PDF)
 - [NCTS5 Transition Period TAD Correlation Data spreadsheet](/guides/ctc-traders-phase5-tis/downloads/NCTS5_Transition_Period_TAD_Correlation_Data_September_2023.xlsx), which maps the box numbers in an NCTS4 TAD to the corresponding data elements in NCTS5 IE013, IE015, and IE029 messages
 
-Both example TADs are
+Both example TADs are:
 
 - based on the NCTS4 TAD template because the TAD templates used for NCTS4 and the NCTS5 transition period are the same - more information about the NCTS5 post-transition period TAD will be provided when it becomes available
 - generated from the same example [IE029 message](/guides/ctc-traders-phase5-tis/downloads/Example_IE029_Message_November_2023.xml) (XML) - the only difference is the setting ('0' or '1') of the 'Security' data item in the 'Transit Operation' data group of the message
