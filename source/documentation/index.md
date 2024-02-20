@@ -179,6 +179,8 @@ The following printing guidelines are important:
 
 #### Example TADs
 
+##### Transition Period:
+
 To learn more about how to create TADs for NCTS5, review the following:
 
 - [example transition period TAD without safety and security (S&S) details](/guides/ctc-traders-phase5-tis/downloads/Example_NCTS5_Transition_Period_TAD_Without_Safety_Security_Data_November_2023.pdf) (PDF)
@@ -189,6 +191,11 @@ Both example TADs are
 
 - based on the NCTS4 TAD template because the TAD templates used for NCTS4 and the NCTS5 transition period are the same - more information about the NCTS5 post-transition period TAD will be provided when it becomes available
 - generated from the same example [IE029 message](/guides/ctc-traders-phase5-tis/downloads/Example_IE029_Message_November_2023.xml) (XML) - the only difference is the setting ('0' or '1') of the 'Security' data item in the 'Transit Operation' data group of the message
+
+##### Post Transition Period:
+
+- the NCTS5 Post Transition Period TAD/TOI Template is available [here](/guides/ctc-traders-phase5-tis/downloads/)
+- the NTCS5 Post Transition Period TAD Correlation Data spreadsheet is available [here](/guides/ctc-traders-phase5-tis/downloads/).
 
 ### UK cutover from NCTS4 to NCTS5
 
