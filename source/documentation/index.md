@@ -192,7 +192,7 @@ Both example TADs are:
 - based on the NCTS4 TAD template because the TAD templates used for NCTS4 and the NCTS5 transition period are the same - more information about the NCTS5 post-transition period TAD will be provided when it becomes available
 - generated from the same example [IE029 message](/guides/ctc-traders-phase5-tis/downloads/Example_IE029_Message_November_2023.xml) (XML) - the only difference is the setting ('0' or '1') of the 'Security' data item in the 'Transit Operation' data group of the message
 
-##### Post Transition Period:
+##### Post-Transition Period:
 
 - the NCTS5 post-transition period TAD/TOI Template is available [here](/guides/ctc-traders-phase5-tis/downloads/Template_TAD_TLoI_Post-Transition_Period_v1.2.xlsx)
 
