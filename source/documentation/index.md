@@ -194,8 +194,8 @@ Both example TADs are
 
 ##### Post Transition Period:
 
-- the NCTS5 Post Transition Period TAD/TOI Template is available [here](/guides/ctc-traders-phase5-tis/downloads/)
-- the NTCS5 Post Transition Period TAD Correlation Data spreadsheet is available [here](/guides/ctc-traders-phase5-tis/downloads/).
+- the NCTS5 Post Transition Period TAD/TOI Template is available [here](/guides/ctc-traders-phase5-tis/downloads/Template_TAD_TLoI_Post-Transition Period_v1.2.xlsx)
+- the NTCS5 Post Transition Period TAD Correlation Data spreadsheet is available [here](/guides/ctc-traders-phase5-tis/downloads/Correlation_Table_TAD_and_TLoI_V1.2_Post-Transition.xlsx).
 
 ### UK cutover from NCTS4 to NCTS5
 
