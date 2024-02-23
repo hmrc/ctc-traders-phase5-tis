@@ -242,7 +242,7 @@ When specifying the message recipient of a departure message for a GB to XI or X
 
 If any of your transit movements involve other CTC member countries, you must enter NTA and any other information advised by each member country in its NCTS5 documentation. Please note that the rules used by other CTC members for message recipient might be different from those used by the UK.
 
-For more information entering message recipient details in messages for GB to XI or XI to GB transit movements, see [CTC Traders API phase 5 testing guide](/guides/test-scenarios-guidelines.html#message-sender-and-recipient-guidelines.)
+For more information entering message recipient details in messages for GB to XI or XI to GB transit movements, see [CTC Traders API phase 5 testing guide](/guides/ctc-traders-phase5-testing-guide/documentation/test-scenarios-guidelines.html#message-sender-and-recipient-guidelines)
 
 ### Important NCTS5 terms
 
