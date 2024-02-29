@@ -28,6 +28,8 @@ This document is the first part of the Technical Interface Specification (TIS) f
 
 It shows the processes involved in the exchange of messages between traders and the NCTS at departure and arrival of transit movements, and provides definitions, formats and validations of those messages.
 
+See [here](/guides/ctc-traders-phase5-tis/downloads/NCTS5_TAD_Printing_Guidelines_February_2024.zip)
+
 ## Introduction
 
 The NCTS is a Europe-wide system that is based on electronic declaration and processing and is designed to provide better management and control of Union and Common Transit. It involves all European Union (EU) member states and all Common Transit Convention (CTC) member countries.
