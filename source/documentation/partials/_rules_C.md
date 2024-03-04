@@ -321,7 +321,7 @@ AND<br />
 &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Number of<br />
 packages&gt; = "N"<br />
 ELSE IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Type of<br />
-packages&gt; is in SET <a href="../downloads/CL182.zip">CL182</a> (KindOfPackagesUnpacked)<br />
+packages&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_KindOfPackagesUnpacked.zip">CL182</a> (KindOfPackagesUnpacked)<br />
 THEN<br />
 &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Shipping marks&gt; =<br />
 "O"<br />
@@ -342,7 +342,7 @@ THEN<br />
  /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/shippingMarks = "O" AND<br />
 /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages = "N"<br />
 ELSE IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/typeOfPackages is in SET<br />
-<a href="../downloads/CL182.zip">CL182</a><br />
+<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_KindOfPackagesUnpacked.zip">CL182</a><br />
 THEN<br />
 /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/shippingMarks = "O"<br />
 AND<br />
@@ -1407,17 +1407,17 @@ ELSE /<span>&#42;</span>/Consignment/ConsigneeActual/Address/postcode = "R"
 
 **Functional Description**
 
-IF &lt;Message type&gt; is in SET <a href="../downloads/CL610.zip">CL610</a> (MessageWithCorrelationIdentifier)<br />
+IF &lt;Message type&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_MessageWithCorrelationIdentifier.zip">CL610</a> (MessageWithCorrelationIdentifier)<br />
   THEN &lt;Correlation identifier&gt; = "R"<br />
-ELSE IF &lt;Message type&gt; is in SET <a href="../downloads/CL385.zip">CL385</a> (MessageTypeWithoutHeader)<br />
+ELSE IF &lt;Message type&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_MessageTypeWithoutHeader.zip">CL385</a> (MessageTypeWithoutHeader)<br />
   THEN &lt;Correlation identifier&gt; = "N"<br />
 ELSE &lt;Correlation identifier&gt; = "O"
 
 **Technical Description**
 
-IF /<span>&#42;</span>/messageType is in SET <a href="../downloads/CL610.zip">CL610</a><br />
+IF /<span>&#42;</span>/messageType is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_MessageWithCorrelationIdentifier.zip">CL610</a><br />
   THEN /<span>&#42;</span>/correlationIdentifier = "R"<br />
-ELSE IF /<span>&#42;</span>/messageType is in SET <a href="../downloads/CL385.zip">CL385</a><br />
+ELSE IF /<span>&#42;</span>/messageType is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_MessageTypeWithoutHeader.zip">CL385</a><br />
   THEN /<span>&#42;</span>/correlationIdentifier = "N"<br />
 ELSE /<span>&#42;</span>/correlationIdentifier = "O"
 
