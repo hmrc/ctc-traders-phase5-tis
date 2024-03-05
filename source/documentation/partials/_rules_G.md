@@ -266,7 +266,7 @@ subsequent amendment requests of the transit declaration data as submitted by th
 Transit Procedure to the Office of Departure has to be rejected. This can be validated as follows:<br /><br />
 A/ In case the Declared Office of Destination belongs to EU MS (<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a>- CountryCodesCommunity),
 and its Custom Office Reference Number is included in both <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CustomsOfficeDestination.zip">CL172</a>- CustomsOfficeDestination and
-<a href="../downloads/CL294.zip">CL294</a>-CustomsOfficeExitDeclared, then it is considered ‘appropriate’ (otherwise is considered not
+<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_AES_CustomsOfficeExitDeclared.zip">CL294</a>-CustomsOfficeExitDeclared, then it is considered ‘appropriate’ (otherwise is considered not
 ‘appropriate’);
 B/ In case the Declared Office of Destination belongs to CTC (<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DocumentTypeExcise.zip">CL112</a>- CountryCodesCTC), it is
 considered by default ‘appropriate’.

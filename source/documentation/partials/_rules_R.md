@@ -421,7 +421,7 @@ this data group /<span>&#42;</span>/HouseConsignment/ConsignmentItem.
 IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Number of
 packages&gt; is EQUAL to '0' (zero)
 THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Type of
-packages&gt; shall not be in SET <a href="../downloads/CL182.zip">CL182</a> (KindOfPackagesUnpacked) for this data group
+packages&gt; shall not be in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_KindOfPackagesUnpacked.zip">CL182</a> (KindOfPackagesUnpacked) for this data group
 &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM&gt;.
 
 **Technical Description**
@@ -429,7 +429,7 @@ packages&gt; shall not be in SET <a href="../downloads/CL182.zip">CL182</a> (Kin
 IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages is EQUAL to<br />
 '0' (zero)<br />
 THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/typeOfPackages shall not be<br />
-in SET <a href="../downloads/CL182.zip">CL182</a> for this data group /<span>&#42;</span>/ Consignment/HouseConsignment/ConsignmentItem.
+in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_KindOfPackagesUnpacked.zip">CL182</a> for this data group /<span>&#42;</span>/ Consignment/HouseConsignment/ConsignmentItem.
 
 
 ## R0221
@@ -569,7 +569,7 @@ THEN for THIS HOUSE CONSIGNMENT at least one other CONSIGNMENT ITEM must exist w
 marks&gt; AND with &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-
 PACKAGING.Number of packages&gt; having a value GREATER than ‘0’ (zero) AND
 &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Type of packages&gt;
-having a value NOT IN SET {<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_KindOfPackagesBulk.zip">CL181</a>(KindOfPackagesBulk), <a href="../downloads/CL182.zip">CL182</a>(KindOfPackagesUnpacked)}).
+having a value NOT IN SET {<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_KindOfPackagesBulk.zip">CL181</a>(KindOfPackagesBulk), <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_KindOfPackagesUnpacked.zip">CL182</a>(KindOfPackagesUnpacked)}).
 
 **Technical Description**
 
@@ -580,7 +580,7 @@ THEN for THIS HOUSE CONSIGNMENT at least one other CONSIGNMENT ITEM must exist w
 /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages having a value<br />
 GREATER than ‘0’ (zero) AND<br />
 /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/typeOfPackages having a value<br />
-NOT IN SET {<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_KindOfPackagesBulk.zip">CL181</a>, <a href="../downloads/CL182.zip">CL182</a>}).
+NOT IN SET {<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_KindOfPackagesBulk.zip">CL181</a>, <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_KindOfPackagesUnpacked.zip">CL182</a>}).
 
 
 ## R0410
@@ -1308,14 +1308,14 @@ T2F}
 
 IF &lt;CC013C - AUTHORISATION.Type&gt; is NOT EQUAL to 'C521' OR &lt;CC015C -
 AUTHORISATION.Type&gt; is NOT EQUAL to 'C521'
-THEN &lt;CONTROL RESULT.Code&gt; is in SET <a href="../downloads/CL195.zip">CL195</a>
+THEN &lt;CONTROL RESULT.Code&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_ControlResultCodeDepartureSimplifiedExcluded.zip">CL195</a>
 (ControlResultCodeDepartureSimplifiedExcluded)
 
 **Technical Description**
 
 IF /CC013C/Authorisation/type is NOT EQUAL to 'C521' OR<br />
 /CC015C/Authorisation/type is NOT EQUAL to 'C521'<br />
-THEN /<span>&#42;</span>/ControlResult/code is in SET <a href="../downloads/CL195.zip">CL195</a>
+THEN /<span>&#42;</span>/ControlResult/code is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_ControlResultCodeDepartureSimplifiedExcluded.zip">CL195</a>
 
 
 ## R0911
@@ -1354,13 +1354,13 @@ THEN /<span>&#42;</span>/TransitOperation/declarationType is in SET {T2, T2F}
 **Functional Description**
 
 IF &lt;TRANSIT OPERATION.Declaration type&gt; is EQUAL to 'TIR'
-THEN &lt;CONTROL RESULT.Code&gt; is in SET <a href="../downloads/CL195.zip">CL195</a>
+THEN &lt;CONTROL RESULT.Code&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_ControlResultCodeDepartureSimplifiedExcluded.zip">CL195</a>
 (ControlResultCodeDepartureSimplifiedExcluded)
 
 **Technical Description**
 
 IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'TIR'<br />
-THEN /<span>&#42;</span>/ControlResult/code is in SET <a href="../downloads/CL195.zip">CL195</a>
+THEN /<span>&#42;</span>/ControlResult/code is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_ControlResultCodeDepartureSimplifiedExcluded.zip">CL195</a>
 
 
 ## R0983
