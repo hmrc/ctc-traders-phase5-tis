@@ -320,7 +320,7 @@ The order in you which you might read these documents can depend on whether you 
 | 4 | Reference | Testing guide |
 | 5 | Testing guide | Roadmap |
 
-**Note:** If you have NCTS4 experience,  it is important that you read the NCTS5 service guide and API reference carefully to understand all of the differences between NCTS4 and NCTS5. Reading only the NCTS5 technical interface specification will NOT guide you about all of the differences between the 2 NCTS phases.
+**Note:** If you have NCTS4 experience,  it is important that you read the NCTS5 service guide and API reference carefully to understand all of the differences between NCTS4 and NCTS5. Reading only the NCTS5 technical interface specification(TIS) will NOT guide you about all of the differences between the 2 NCTS phases.
 
 ## Related documentation
 
