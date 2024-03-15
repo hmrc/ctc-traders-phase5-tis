@@ -14,7 +14,7 @@ CL070,CountryCodesCustomsOfficeLists,https://ec.europa.eu/taxation_customs/dds2/
 CL076,GuaranteeTypeWithReference,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeTypeWithReference.zip
 CL094,RepresentativeStatusCode,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_RepresentativeStatusCode.zip
 CL101,UnDangerousGoodsCode,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_UnDangerousGoodsCode.zip
-CL112,DocumentTypeExcise,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DocumentTypeExcise.zip
+CL112,CountryCodesCTC,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip
 CL116,TransportChargesMethodOfPayment,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TransportChargesMethodOfPayment.zip
 CL141,CustomsOffices,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/COL-Generic-20230601.zip
 CL147,CountryCustomsSecurityAgreementArea,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCustomsSecurityAgreementArea.zip
