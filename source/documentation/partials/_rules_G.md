@@ -268,7 +268,7 @@ A/ In case the Declared Office of Destination belongs to EU MS (<a href="https:/
 and its Custom Office Reference Number is included in both <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CustomsOfficeDestination.zip">CL172</a>- CustomsOfficeDestination and
 <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_AES_CustomsOfficeExitDeclared.zip">CL294</a>-CustomsOfficeExitDeclared, then it is considered ‘appropriate’ (otherwise is considered not
 ‘appropriate’);
-B/ In case the Declared Office of Destination belongs to CTC (<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DocumentTypeExcise.zip">CL112</a>- CountryCodesCTC), it is
+B/ In case the Declared Office of Destination belongs to CTC (<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip">CL112</a>- CountryCodesCTC), it is
 considered by default ‘appropriate’.
 When the Declared Office of Destination is considered as not ‘appropriate’, the messages CC013C or
 CC015C will be responded with CC056C that will report the error code '12- Codelist violation'.

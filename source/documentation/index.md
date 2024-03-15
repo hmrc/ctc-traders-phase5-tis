@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 18.4 issued 21st February 2024
+Version 18.5 issued 15 March 2024
 
 Based on NCTS5 document version 5.15.1-v1.00 and issue date 7 March 2023
 
@@ -16,11 +16,11 @@ Based on NCTS5 document version 5.15.1-v1.00 and issue date 7 March 2023
 
 The following dates are subject to change. You should monitor this section regularly.
 
-| Event                            | Date(s)                     |
-| -------------------------------- | --------------------------- |
-| UK NCTS5 service go-live         | 1 July 2024                 |
-| UK cutover from NCTS4 to NCTS5   | 1 July 2024 to 15 July 2024 |
-| NCTS5 transition period end date | 21 January 2025             |
+| Event                                              | Date(s)              |
+|----------------------------------------------------|----------------------|
+| UK NCTS5 Transition period start date (Go-Live)    | 1 July 2024          |
+| UK NCTS5 Transition period end date                | 21 January 2025      |
+| NCTS5 Post-Transition period (final state) Go-Live | 21 January 2025      |
 
 ## Document summary
 
