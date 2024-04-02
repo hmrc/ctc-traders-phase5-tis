@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 18.6 issued 15 March 2024
+Version 18.7 issued 2 April 2024
 
 Based on NCTS5 document version 5.15.1-v1.00 and issue date 7 March 2023
 
@@ -224,9 +224,15 @@ The prefixes for these rules and conditions are as follows.
 
 During the transition period, NCTS will observe and apply these business ([Rules B](/guides/ctc-traders-phase5-tis/documentation/rules-b.html)) and technical ([Rules E](/guides/ctc-traders-phase5-tis/documentation/rules-e.html)) rules as defined in this document.
 
-### Message sender and recipient guidelines
+### Message identification, sender and recipient guidelines
 
 There are guidelines for entering message sender and recipient details in arrivals and departures messages in the NCTS5 Trader Test environment that will also apply to the production version of the UK NCTS5 service.
+
+#### Message identification
+
+When submitting a declaration (IE015) using the same LRN as a previously submitted declaration (IE015), please ensure a unique reference is provided in the Message Identification field (IE015). This is to ensure that NCTS5 can correctly distinguish between movements when sending response messages (and movements are not conflated in error). 
+
+A unique reference is any string of alphanumeric characters within the 35 character limit which has not been supplied in this data field for another IE015.
 
 #### Message sender
 
