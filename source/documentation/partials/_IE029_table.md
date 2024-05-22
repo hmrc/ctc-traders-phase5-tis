@@ -356,7 +356,7 @@
     <td>-&nbsp;-&nbsp; Code</td>
     <td>R</td>
     <td>an2</td>
-    <td>CL196</td>
+    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_ControlResultCodeDeparture.zip">CL196</a></td>
     <td><a href="rules-g.html#g0126">G0126</a><br /><a href="rules-r.html#r0910">R0910</a><br /><a href="rules-r.html#r0912">R0912</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp; Date</td>
@@ -1394,7 +1394,7 @@
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Type</td>
     <td>R</td>
     <td>an4</td>
-    <td>CL228</td>
+    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentExportType.zip">CL228</a></td>
     <td>&nbsp;</td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Reference number</td>

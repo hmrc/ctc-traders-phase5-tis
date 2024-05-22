@@ -1352,7 +1352,7 @@
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Type</td>
     <td>R</td>
     <td>an4</td>
-    <td>CL228</td>
+    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentExportType.zip">CL228</a></td>
     <td>&nbsp;</td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Reference number</td>

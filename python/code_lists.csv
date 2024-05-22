@@ -35,6 +35,7 @@ CL182,KindOfPackagesUnpacked,https://ec.europa.eu/taxation_customs/dds2/rd/compr
 CL190,CountryAddressPostcodeBased,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryAddressPostcodeBased.zip
 CL192,LanguageByCustoms,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_LanguageByCustoms.zip
 CL195,ControlResultCodeDepartureSimplifiedExcluded,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_ControlResultCodeDepartureSimplifiedExcluded.zip
+CL196,ControlResultCodeDeparture,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_ControlResultCodeDeparture.zip
 CL198,CountryAddressPostcodeOnly,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryAddressPostcodeOnly.zip
 CL211,NoReleaseMotivation,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_NoReleaseMotivation.zip
 CL213,SupportingDocumentType,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_SupportingDocumentType.zip
@@ -45,6 +46,7 @@ CL218,TransportModeCode,https://ec.europa.eu/taxation_customs/dds2/rd/compressed
 CL219,TypeOfIdentificationofMeansOfTransportActive,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TypeOfIdentificationofMeansOfTransportActive.zip
 CL226,RejectionCodeDepartureExport,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_RejectionCodeDepartureExport.zip
 CL227,RejectionCodeDepartureExport,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_RejectionCodeDepartureExport.zip
+CL228,PreviousDocumentExportType,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentExportType.zip
 CL229,GuaranteeTypeCTC,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeTypeCTC.zip
 CL230,GuaranteeTypeEUNonTIR,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeTypeEUNonTIR.zip
 CL231,DeclarationType,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DeclarationType.zip
