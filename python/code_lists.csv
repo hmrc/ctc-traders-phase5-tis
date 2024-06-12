@@ -16,7 +16,7 @@ CL094,RepresentativeStatusCode,https://ec.europa.eu/taxation_customs/dds2/rd/com
 CL101,UnDangerousGoodsCode,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_UnDangerousGoodsCode.zip
 CL112,CountryCodesCTC,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip
 CL116,TransportChargesMethodOfPayment,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TransportChargesMethodOfPayment.zip
-CL141,CustomsOffices,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/COL-Generic-20230601.zip
+CL141,CustomsOffices,https://github.com/hmrc/ctc-traders-phase5-tis/blob/main/source/downloads/COL-Generic-20240612.zip
 CL147,CountryCustomsSecurityAgreementArea,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCustomsSecurityAgreementArea.zip
 CL152,HScode,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_HScode.zip
 CL160,MessageWithCorrelationIdentifier,https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_MessageWithCorrelationIdentifier.zip

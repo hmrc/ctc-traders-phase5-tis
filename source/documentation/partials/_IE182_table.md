@@ -98,7 +98,7 @@
     <td>-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an8</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/COL-Generic-20230601.zip">CL141</a></td>
+    <td><a href="https://github.com/hmrc/ctc-traders-phase5-tis/blob/main/source/downloads/COL-Generic-20240612.zip">CL141</a></td>
     <td>&nbsp;</td>
 </tr><tr>
     <td><strong>-&nbsp; CONSIGNMENT</strong></td>
