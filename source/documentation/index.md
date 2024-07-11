@@ -137,7 +137,7 @@ Departure declarations submitted by users (IE015 message) can contain guarantee 
 
 In exceptional circumstances, if a declarant is unable to determine the guarantee reference amount, the CTC allows the amount to be fixed at 10,000 euros for each transit operation.
 
-If the departure declaration does not contain a guarantee reference amount and the guarantee being used is either type 0, 1, 2, 4 or 9, the system inserts 10,000 euros as the guarantee liability amount automatically.
+This 10,000 EUR amount must be provided as the 'amount to be covered' in the declaration when used in these exceptional circumstances. The 10,000 EUR amount is **not** automatically entered for the declaration by the NCTS where no value has been provided. 
 
 This applies in all circumstances except for national transit movements, for example, Great Britain to Great Britain. National transit is not supported by the CTC but UK national legislation allows its usage as a trade facilitation.
 
