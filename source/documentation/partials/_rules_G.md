@@ -343,11 +343,28 @@ N/A
 
 **Functional Description**
 
-The information presented in in this D.G. is related to Safety & Security and to the Binding Itinerary. In
+The information presented in this D.G. is related to Safety & Security and to the Binding Itinerary. In
 case of Binding itinerary, the information entered must include the list of codes of the countries
 between the Office of Departure and the Office of Destination. If more information is available about
 the countries visited by the means of transport since it's first place of loading until the last place of
 unloading, it should also be added for Safety & Security purpose only.
+
+**Technical Description**
+
+N/A
+
+
+## G0062
+
+**Functional Description**
+
+The rules R0506 and R0507 are applied on CC015C and CC013C to ensure that the declaration does
+not include unnecessary and repetitive information. They must be enforced by all NTA. Considering the
+possibility that one Goods Item is taken out from the declaration during the control, the message
+CC029C and CD001C may have different content from CC015C (or CC013C or CC170C).
+Consequently, those rules R0506 and R0507 shall not be strictly enforced on the Common Domain
+messages. Certainly not by the recipient of the CD message, likely not by the sender of the CD
+message.
 
 **Technical Description**
 
@@ -508,6 +525,18 @@ N/A
 
 If IMO ship identification number (type ‘10’) exists for that ship, it must be used and the Name of the
 sea-going vessel (type ‘11’) shall not be used.
+
+**Technical Description**
+
+N/A
+
+
+## G0113
+
+**Functional Description**
+
+The country code used to define the ‘Country of destination’ can be different from the country code
+used in the data item ‘Country’ included in the address of the ‘Consignee’.
 
 **Technical Description**
 
@@ -1061,6 +1090,20 @@ the movements during the Transitional Period.<br /><br />
 This Guideline aims to draw the attention on the potential need for Technical Rules for Transition
 (Exxxx) or Business Rules for Transition (B1xxx and B2xxx) as defined in the section “1. Introduction”
 of DDNTA APPENDIX Q2.
+
+**Technical Description**
+
+N/A
+
+
+## G0991
+
+**Functional Description**
+
+During the Transitional Period, the value ‘N830’ (Goods declaration for exportation) is defined as valid
+in codelist <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentType.zip">CL214</a> (PreviousDocumentType). From the end date of the Transitional Period, the value
+‘N830’ will become valid ONLY in the <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentExportType.zip">CL228</a> (PreviousDocumentExportType) to indicate the “Export
+Followed by Transit” procedure in the Data Group &lt;CONSIGNMENT-HOUSE CONSIGNMENT&gt;.
 
 **Technical Description**
 
