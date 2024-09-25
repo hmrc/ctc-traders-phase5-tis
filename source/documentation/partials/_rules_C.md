@@ -3,61 +3,69 @@
 **Functional Description**
 
 IF &lt;CONSIGNMENT.Country of destination&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a><br />
-THEN<br />
-IF &lt;CONSIGNMENT-CONSIGNEE&gt; is PRESENT<br />
-THEN<br />
- &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNEE&gt; = "N"<br />
+THEN IF &lt;CONSIGNMENT-CONSIGNEE&gt; is PRESENT<br />
+  THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNEE&gt; = "N"<br />
   ELSE &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNEE&gt; ="R"<br />
+ELSE IF at least one iteration of &lt;CONSIGNMENT-HOUSE CONSIGNMENT.Country of destination&gt;<br />
+is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a><br />
+THEN IF &lt;CONSIGNMENT-CONSIGNEE&gt; is PRESENT<br />
+  THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNEE&gt;= "N"<br />
+  ELSE &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNEE&gt;= "R" for THIS House<br />
+Consignment<br />
+ELSE IF at least one iteration of &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT<br />
+ITEM.Country of destination is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a><br />
+THEN IF &lt;CONSIGNMENT-CONSIGNEE&gt; is PRESENT<br />
+  THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNEE&gt;= "N"<br />
+  ELSE &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNEE&gt;= "R" for THIS House<br />
+Consignment that includes THIS Consignment Item<br />
 ELSE IF &lt;TRANSIT OPERATION.Security&gt; is in SET {0,1}<br />
-THEN<br />
-   IF &lt;CONSIGNMENT-CONSIGNEE&gt; is PRESENT<br />
-  THEN<br />
-&lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNEE&gt; = "N"<br />
- ELSE &lt;CONSIGNMENT-HOUSE CONSIGNMENT -CONSIGNEE&gt;= "O"<br />
+THEN IF &lt;CONSIGNMENT-CONSIGNEE&gt; is PRESENT<br />
+  THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNEE&gt; = "N"<br />
+  ELSE &lt;CONSIGNMENT-HOUSE CONSIGNMENT -CONSIGNEE&gt;= "O"<br />
+ELSE IF at least one instance of &lt;CONSIGNMENT-ADDITIONAL INFORMATION.Code&gt; is EQUAL to<br />
+'30600'<br />
+  THEN &lt;CONSIGNMENT-CONSIGNEE&gt; = "N"<br />
+  AND &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNEE&gt; = "N"<br />
+ELSE IF at least one instance of &lt;CONSIGNMENT-HOUSE CONSIGNMENT- ADDITIONAL<br />
+INFORMATION.Code&gt; is EQUAL to '30600'<br />
+THEN &lt;CONSIGNMENT-CONSIGNEE&gt; = "N" AND &lt;CONSIGNMENT-HOUSE CONSIGNMENT-<br />
+CONSIGNEE&gt; = "N"<br />
 ELSE<br />
-  IF &lt;CONSIGNMENT-ADDITIONAL INFORMATION.Code&gt; is EQUAL to '30600'<br />
-  THEN<br />
- &lt;CONSIGNMENT-CONSIGNEE&gt; = "N" AND<br />
- &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNEE&gt; = "N"<br />
-ELSE IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT- ADDITIONAL INFORMATION.Code&gt; is EQUAL<br />
-to '30600'<br />
-THEN<br />
- &lt;CONSIGNMENT-CONSIGNEE&gt; = "N" AND<br />
- &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNEE&gt; = "N"<br />
-ELSE<br />
-   IF &lt;CONSIGNMENT-CONSIGNEE&gt; is PRESENT<br />
-   THEN<br />
-&lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNEE&gt; = "N"<br />
-  ELSE &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNEE&gt;= "R"
+ IF &lt;CONSIGNMENT-CONSIGNEE&gt; is PRESENT<br />
+ THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNEE&gt; = "N"<br />
+ ELSE &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNEE&gt;= "O"
 
 **Technical Description**
 
 IF /<span>&#42;</span>/Consignment/countryOfDestination is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a><br />
-THEN<br />
- IF /<span>&#42;</span>/Consignment/Consignee is PRESENT<br />
- THEN<br />
- /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "N"<br />
-   ELSE /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "R"<br />
+THEN IF /<span>&#42;</span>/Consignment/Consignee is PRESENT<br />
+  THEN /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "N"<br />
+  ELSE /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "R"<br />
+ELSE IF at least one iteration of /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDestination is in SET<br />
+<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a><br />
+THEN IF /<span>&#42;</span>/Consignment/Consignee is PRESENT<br />
+  THEN /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "N"<br />
+  ELSE /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "R" for THIS House Consignment<br />
+ELSE IF at least one iteration of<br />
+  /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a><br />
+THEN IF /<span>&#42;</span>/Consignment/Consignee is PRESENT<br />
+ THEN /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "N"<br />
+ ELSE /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "R" for THIS House Consignment that<br />
+includes THIS Consignment Item<br />
 ELSE IF /<span>&#42;</span>/TransitOperation/security is in SET {0,1}<br />
-THEN<br />
- IF /<span>&#42;</span>/Consignment/Consignee is PRESENT<br />
- THEN<br />
-   /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "N"<br />
-ELSE /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "O"<br />
-ELSE IF at least one instance of /<span>&#42;</span>/Consignment/AdditionalInformation/code is EQUAL to '30600'<br />
-  THEN<br />
-  /<span>&#42;</span>/Consignment/Consignee = "N" AND<br />
-  /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "N"<br />
+THEN IF /<span>&#42;</span>/Consignment/Consignee is PRESENT<br />
+ THEN /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "N"<br />
+ ELSE /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "O"<br />
+ELSE IF at least one instance of /<span>&#42;</span>/Consignment/AdditionalInformation/code is EQUAL to ‘30600’<br />
+THEN /<span>&#42;</span>/Consignment/Consignee = "N" AND /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "N"<br />
 ELSE IF at least one instance of /<span>&#42;</span>/Consignment/HouseConsignment/AdditionalInformation/code IS<br />
 EQUAL to '30600'<br />
-THEN<br />
-   /<span>&#42;</span>/Consignment/Consignee = "N" AND<br />
-   THIS /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "N"<br />
+THEN /<span>&#42;</span>/Consignment/Consignee = "N" AND THIS /<span>&#42;</span>/Consignment/HouseConsignment/Consignee =<br />
+"N"<br />
 ELSE<br />
-  IF /<span>&#42;</span>/Consignment/Consignee is PRESENT<br />
- THEN<br />
-  /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "N"<br />
-ELSE /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "R"
+ IF /<span>&#42;</span>/Consignment/Consignee is PRESENT<br />
+ THEN /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "N"<br />
+ ELSE /<span>&#42;</span>/Consignment/HouseConsignment/Consignee = "O"
 
 
 ## C0015
@@ -235,9 +243,9 @@ THEN IF &lt;CONSIGNMENT-PREVIOUS DOCUMENT&gt; is PRESENT<br />
    DOCUMENT&gt; = ‘O’<br />
    ELSE &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PREVIOUS<br />
    DOCUMENT&gt; = ‘R’<br />
-   for this Consignment Items<br />
+   for this Consignment Item<br />
 ELSE &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PREVIOUS DOCUMENT&gt;<br />
-= ‘O’ for this Consignment Items
+= ‘O’ for this Consignment Item
 
 **Technical Description**
 
@@ -253,9 +261,9 @@ the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referen
 THEN IF /<span>&#42;</span>/Consignment/PreviousDocument is PRESENT<br />
    THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument = ‘O’<br />
    ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument = ‘R’<br />
-   for this Consignment Items<br />
+   for this Consignment Item<br />
 ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument = ‘O’<br />
-for this Consignment Items
+for this Consignment Item
 
 
 ## C0040
@@ -797,16 +805,23 @@ ELSE /<span>&#42;</span>/Consignment/HouseConsignment/DepartureTransportMeans = 
 **Functional Description**
 
 IF &lt;CONSIGNMENT.Country of destination&gt; is PRESENT<br />
-THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Country of destination&gt; =<br />
+THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT.Country of destination&gt; = "N" AND<br />
+&lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Country of destination&gt; =<br />
 "N"<br />
-ELSE &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Country of destination&gt; =<br />
-"R"
+ELSE IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT.Country of destination&gt; is PRESENT<br />
+   THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Country of<br />
+destination&gt; = "N"<br />
+   ELSE &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Country of<br />
+destination&gt; = "R"
 
 **Technical Description**
 
 IF /<span>&#42;</span>/Consignment/countryOfDestination is PRESENT<br />
-THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination = "N"<br />
-ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination = "R"
+THEN  /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDestination = "N" AND<br />
+   /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination = "N"<br />
+ELSE IF /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDestination is PRESENT<br />
+  THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination = "N"<br />
+   ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination = "R"
 
 
 ## C0349
@@ -847,9 +862,9 @@ ELSE /<span>&#42;</span>/Consignment = ''N''
 
 **Functional Description**
 
-IF &lt;CONSIGNMENT.HOUSE CONSIGNMENT.Release type &gt; is EQUAL to '1'<br />
-THEN &lt;CONSIGNMENT.HOUSE CONSIGNMENT.CONSIGNMENT ITEM&gt; = ''R''<br />
-ELSE &lt;CONSIGNMENT.HOUSE CONSIGNMENT.CONSIGNMENT ITEM&gt; = ''N''
+IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT.Release type &gt; is EQUAL to '1'<br />
+THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM&gt; = ''R''<br />
+ELSE &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM&gt; = ''N''
 
 **Technical Description**
 
@@ -1516,18 +1531,16 @@ ELSE /<span>&#42;</span>/Consignment/CountryOfRoutingOfConsignment = "O"
 
 **Functional Description**
 
-IF &lt;TRANSIT OPERATION.Declaration type&gt;is in SET {2,3}<br />
-THEN   <br />
- IF the first two characters of at least one iteration of the &lt;CUSTOMS OFFICE OF TRANSIT<br />
+IF &lt;TRANSIT OPERATION.Declaration type&gt;is in SET {2,3} AND<br />
+the first two characters of at least one iteration of the &lt;CUSTOMS OFFICE OF TRANSIT<br />
 DECLARED.Reference number&gt; is NOT in <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCustomsSecurityAgreementArea.zip">CL147</a>   <br />
- THEN &lt;CUSTOMS OFFICE OF EXIT FOR TRANSIT DECLARED&gt; = "O"   <br />
+THEN &lt;CUSTOMS OFFICE OF EXIT FOR TRANSIT DECLARED&gt; = "O"   <br />
  ELSE &lt;CUSTOMS OFFICE OF EXIT FOR TRANSIT DECLARED&gt; = "N"
 
 **Technical Description**
 
-IF /<span>&#42;</span>/TransitOperation/security is in SET {2,3}<br />
-THEN<br />
-IF the first two characters of at least one iteration of the<br />
+IF /<span>&#42;</span>/TransitOperation/security is in SET {2,3} AND<br />
+the first two characters of at least one iteration of the<br />
 /<span>&#42;</span>/CustomsOfficeOfTransitDeclared/referenceNumber is NOT in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCustomsSecurityAgreementArea.zip">CL147</a><br />
 THEN /<span>&#42;</span>/CustomsOfficeOfExitForTransitDeclared = "O"<br />
 ELSE /<span>&#42;</span>/CustomsOfficeOfExitForTransitDeclared = "N"
@@ -2115,38 +2128,25 @@ ELSE /<span>&#42;</span>/Consignment/ActiveBorderTransportMeans = “O”
 
 **Functional Description**
 
-IF &lt;TRANSIT OPERATION.Declaration type&gt; is EQUAL to 'TIR'<br />
-THEN<br />
 IF &lt;CONSIGNMENT.Country of dispatch&gt; is PRESENT<br />
 THEN<br />
- &lt;CONSIGNMENT-HOUSE CONSIGNMENT.Country of dispatch&gt; = "N" AND<br />
+&lt;CONSIGNMENT-HOUSE CONSIGNMENT.Country of dispatch&gt; = "N" AND<br />
 &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Country of<br />
 dispatch&gt; = "N"<br />
 ELSE IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT.Country of dispatch&gt; is<br />
 PRESENT<br />
-THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Country of dispatch&gt; =<br />
-"N"<br />
- ELSE<br />
- &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Country of dispatch&gt; = "R"<br />
+THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Country of dispatch&gt; = "N"<br />
 ELSE<br />
- &lt;CONSIGNMENT.Country of dispatch&gt; = "N" AND<br />
- &lt;CONSIGNMENT-HOUSE CONSIGNMENT.Country of dispatch&gt; = "N" AND<br />
- &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Country of dispatch&gt; = "N"
+&lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Country of dispatch&gt; = "R"
 
 **Technical Description**
 
-IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'TIR'<br />
-THEN<br />
 IF /<span>&#42;</span>/Consignment/countryOfDispatch is PRESENT<br />
 THEN<br />
-/<span>&#42;</span>/Consignment/HouseConsignment/countryOfDispatch = "N" AND<br />
-/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch = "N"<br />
-ELSE IF /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDispatch is PRESENT<br />
-THEN<br />
+ /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDispatch = "N" AND<br />
+ /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch = "N"<br />
+ ELSE IF /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDispatch is PRESENT<br />
+ THEN<br />
  /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch = "N"<br />
  ELSE<br />
-  /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch = "R"<br />
-ELSE<br />
-/<span>&#42;</span>/Consignment/countryOfDispatch= "N" AND<br />
-/<span>&#42;</span>/Consignment/HouseConsignment/countryOfDispatch = "N" AND<br />
-/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch = "N"
+ /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch = "R"

@@ -171,12 +171,14 @@ N/A
 
 IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br />
 THEN<br />
+/<span>&#42;</span>/Consignment/countryOfDispatch AND<br />
 /<span>&#42;</span>/Consignment/PreviousDocument AND<br />
 /<span>&#42;</span>/Consignment/SupportingDocument AND<br />
 /<span>&#42;</span>/Consignment/TransportDocument AND<br />
 /<span>&#42;</span>/Consignment/AdditionalReference AND<br />
 /<span>&#42;</span>/Consignment/AdditionalInformation AND<br />
 /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDispatch AND<br />
+/<span>&#42;</span>/Consignment/HouseConsignment/countryOfDestination AND<br />
 /<span>&#42;</span>/Consignment/HouseConsignment/referenceNumberUCR AND<br />
 /<span>&#42;</span>/Consignment/HouseConsignment/Consignor AND<br />
 /<span>&#42;</span>/Consignment/HouseConsignment/Consignee AND<br />
@@ -187,6 +189,7 @@ THEN<br />
 /<span>&#42;</span>/Consignment/HouseConsignment/AdditionalReference AND<br />
 /<span>&#42;</span>/Consignment/HouseConsignment/AdditionalInformation AND<br />
 /<span>&#42;</span>/Consignment/HouseConsignment/TransportCharges AND<br />
+/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch AND<br />
 /<span>&#42;</span>/GuaranteeReference/Guarantor/AgentInCountryOfCompetentAuthority<br />
 shall not be used
 
