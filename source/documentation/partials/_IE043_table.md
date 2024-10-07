@@ -195,7 +195,7 @@
     <td>D</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesFullList.zip">CL008</a></td>
-    <td><a href="rules-c.html#c0343">C0343</a></td>
+    <td><a href="rules-c.html#c0343">C0343</a><br /><a href="rules-g.html#g0113">G0113</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp; Container indicator</td>
     <td>R</td>
@@ -751,7 +751,7 @@
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp; HOUSE CONSIGNMENT</strong></td>
     <td>R</td>
-    <td>99x</td>
+    <td>1999x</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
@@ -760,6 +760,12 @@
     <td>n..5</td>
     <td>&nbsp;</td>
     <td><a href="rules-r.html#r0987">R0987</a></td>
+</tr><tr>
+    <td>-&nbsp;-&nbsp;-&nbsp; Country of destination</td>
+    <td>D</td>
+    <td>a2</td>
+    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesFullList.zip">CL008</a></td>
+    <td><a href="rules-c.html#c0343">C0343</a><br /><a href="rules-g.html#g0042">G0042</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp; Gross mass</td>
     <td>R</td>
@@ -915,7 +921,7 @@
     <td>R</td>
     <td>an4</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentExportType.zip">CL228</a></td>
-    <td>&nbsp;</td>
+    <td><a href="rules-g.html#g0991">G0991</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
@@ -1059,7 +1065,7 @@
     <td>D</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesFullList.zip">CL008</a></td>
-    <td><a href="rules-c.html#c0343">C0343</a></td>
+    <td><a href="rules-c.html#c0343">C0343</a><br /><a href="rules-g.html#g0113">G0113</a></td>
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp; CONSIGNEE</strong></td>
     <td>O</td>
@@ -1227,7 +1233,7 @@
     <td>R</td>
     <td>an4</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentType.zip">CL214</a></td>
-    <td><a href="rules-g.html#g0057">G0057</a><br /><a href="rules-r.html#r0020">R0020</a></td>
+    <td><a href="rules-g.html#g0057">G0057</a><br /><a href="rules-g.html#g0991">G0991</a><br /><a href="rules-r.html#r0020">R0020</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>

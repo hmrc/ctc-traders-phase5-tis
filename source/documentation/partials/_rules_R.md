@@ -360,7 +360,7 @@ THEN<br />
 **Functional Description**
 
 &lt;TRANSPORT EQUIPMENT.Number of seals&gt; is EQUAL to the ‘maximum value of &lt;TRANSPORT
-EQUIPMENT- SEAL.Sequence number&gt;’ for THIS instance of Transport Equipment.
+EQUIPMENT-SEAL.Sequence number&gt;’ for THIS instance of Transport Equipment.
 
 **Technical Description**
 
@@ -793,6 +793,10 @@ IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT.Reference number UCR&gt; is PRESENT for all
 &lt;CONSIGNMENT-HOUSE CONSIGNMENT&gt;
 THEN at least one occurrence of &lt;CONSIGNMENT-HOUSE CONSIGNMENT.Reference number
 UCR&gt; must be different from the others;
+IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT.Country of destination&gt; is PRESENT for all
+&lt;CONSIGNMENT-HOUSE CONSIGNMENT&gt;
+THEN at least one occurrence of &lt;CONSIGNMENT-HOUSE CONSIGNMENT.Country of destination&gt;
+must be different from the others;
 IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT.Country of dispatch&gt; is PRESENT for all
 &lt;CONSIGNMENT-HOUSE CONSIGNMENT&gt;
 THEN at least one occurrence of &lt;CONSIGNMENT-HOUSE CONSIGNMENT.Country of dispatch&gt;
@@ -819,6 +823,10 @@ different from the others;<br />
 IF /<span>&#42;</span>/Consignment/HouseConsignment/referenceNumberUCR is PRESENT for all<br />
 /<span>&#42;</span>/Consignment/HouseConsignment/<br />
 THEN at least one occurrence of /<span>&#42;</span>/Consignment/HouseConsignment/referenceNumberUCR must be<br />
+different from the others;<br />
+IF /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDestination is PRESENT for all<br />
+/<span>&#42;</span>/Consignment/HouseConsignment/<br />
+THEN at least one occurrence of /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDestination must be<br />
 different from the others;<br />
 IF /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDispatch is PRESENT for all<br />
 /<span>&#42;</span>/Consignment/HouseConsignment/<br />
@@ -1119,21 +1127,6 @@ ELSE &lt;AUTHORISATION. Type&gt; shall not be EQUAL to ‘C524’
 IF /<span>&#42;</span>/TransitOperation/reducedDatasetIndicator = “1”<br />
 THEN at least one /<span>&#42;</span>/Authorisation/type is EQUAL to ‘C524’<br />
 ELSE /<span>&#42;</span>/Authorisation/type shall not be EQUAL to ‘C524’
-
-
-## R0860
-
-**Functional Description**
-
-IF sender is in EU (<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a> (CountryCodesCommunity)),
-THEN the value must be a valid EORI or TCUIN,
-ELSE (sender is not in EU) the value must be a valid TIN number.
-
-**Technical Description**
-
-IF sender is in EU (<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a>)<br />
-THEN the value must be a valid EORI or TCUIN<br />
-ELSE (sender is not in EU) the value must be a valid TIN number.
 
 
 ## R0871
@@ -1439,6 +1432,8 @@ The value of /<span>&#42;</span>/Consignment/grossMass must be GREATER than or E
 **Functional Description**
 
 IF &lt;CONSIGNMENT.Country Of Destination&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a> (CountryCodesCommonTransit)
+OR at least one &lt;CONSIGNMENT-HOUSE CONSIGNMENT.Country of Destination&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a>
+(CountryCodesCommonTransit)
 OR
 at least one &lt; CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Country Of
 Destination&gt; are in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a>
@@ -1448,7 +1443,8 @@ THEN &lt;CONSIGNMENT-ADDITIONAL INFORMATION.Code&gt; shall not be EQUAL to '3060
 
 IF /<span>&#42;</span>/Consignment/countryOfDestination is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a><br />
 OR<br />
-at least one /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is in SET<br />
+at least one /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDestination is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a><br />
+OR at least one /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is in SET<br />
 <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a><br />
 THEN /<span>&#42;</span>/Consignment/AdditionalInformation/code shall not be EQUAL to '30600'
 
@@ -1470,9 +1466,10 @@ not be EQUAL to '30600'
 
 **Functional Description**
 
-IF &lt;CONSIGNMENT.Country Of Destination&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a> (CountryCodesCommonTransit)
-OR
-at least one &lt; CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Country Of
+IF &lt;CONSIGNMENT.Country Of Destination&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a>
+OR at least one &lt;CONSIGNMENT-HOUSE CONSIGNMENT.Country Of Destination&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a>
+(CountryCodesCommonTransit)
+OR at least one &lt; CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Country Of
 Destination&gt; are in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a>
 THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT- ADDITIONAL INFORMATION.Code&gt; shall not be
 EQUAL to '30600'
@@ -1480,6 +1477,7 @@ EQUAL to '30600'
 **Technical Description**
 
 IF /<span>&#42;</span>/Consignment/countryOfDestination is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a><br />
+OR at least one /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDestination is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a><br />
 OR<br />
 at least one /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is in SET<br />
 <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a><br />

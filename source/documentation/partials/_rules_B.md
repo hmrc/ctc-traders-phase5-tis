@@ -2,11 +2,11 @@
 
 **Functional Description**
 
-Export followed by Transit & Groupage:<br /><br />
-During the Transitional Period, in case of “Export Followed by Transit” with multiple export declarations
+Guideline for Export followed by Transit & Groupage:<br /><br />
+During the Transitional Period, in case of "Export Followed by Transit" with multiple export declarations
 covered by one standard transit declaration (i.e. not a pre-lodged transit declaration), the D.G.
-PREVIOUS DOCUMENT at CONSIGNMENT ITEM level can include the MRN of the related Export
-declaration (maximum one Export MRN included per one Consignment item).
+SUPPORTING DOCUMENT at CONSIGNMENT ITEM level can include the MRN of the related Export
+declaration (maximum one Export MRN included per on Consignment item).
 
 **Technical Description**
 
@@ -685,6 +685,52 @@ IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br />
 THEN R0364 attached to<br />
 /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages<br />
 shall be disabled
+
+
+## B1965
+
+**Functional Description**
+
+N/A
+
+**Technical Description**
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br />
+THEN C0909 attached to /<span>&#42;</span>/Consignment/countryOfDispatch AND<br />
+to /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDispatch AND<br />
+to /<span>&#42;</span>/ConsignmentHouseConsignment/ConsignmentItem/countryOfDispatch<br />
+shall be disabled<br />
+AND<br />
+IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'TIR'<br />
+THEN<br />
+IF /<span>&#42;</span>/Consignment/countryOfDispatch is PRESENT<br />
+THEN /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDispatch = "N" AND<br />
+/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch = "N"<br />
+ELSEIF /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDispatch is PRESENT<br />
+THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch = "N"<br />
+ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch = "R"<br />
+ELSE<br />
+/<span>&#42;</span>/Consignment/countryOfDispatch= "N" AND<br />
+/<span>&#42;</span>/Consignment/HouseConsignment/countryOfDispatch = "N" AND<br />
+/<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDispatch = "N"
+
+
+## B1966
+
+**Functional Description**
+
+N/A
+
+**Technical Description**
+
+IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br />
+THEN C0587 will be disabled<br />
+IF /<span>&#42;</span>/TransitOperation/security is in SET {2,3}<br />
+THEN<br />
+  IF the first two characters of at least one iteration of the<br />
+/<span>&#42;</span>/CustomsOfficeOfTransitDeclared/referenceNumber is NOT in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCustomsSecurityAgreementArea.zip">CL147</a><br />
+  THEN /<span>&#42;</span>/CustomsOfficeOfExitForTransitDeclared = "O"<br />
+   ELSE /<span>&#42;</span>/CustomsOfficeOfExitForTransitDeclared = "N"
 
 
 ## B2101

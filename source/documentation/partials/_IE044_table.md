@@ -319,7 +319,7 @@
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp; HOUSE CONSIGNMENT</strong></td>
     <td>O</td>
-    <td>99x</td>
+    <td>1999x</td>
     <td>&nbsp;</td>
     <td><a href="rules-g.html#g0360">G0360</a></td>
 </tr><tr>
@@ -333,7 +333,7 @@
     <td>O</td>
     <td>n..16,6</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html#g0360">G0360</a></td>
+    <td><a href="rules-g.html#g0021">G0021</a><br /><a href="rules-g.html#g0360">G0360</a></td>
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp;-&nbsp; DEPARTURE TRANSPORT MEANS</strong></td>
     <td>O</td>
