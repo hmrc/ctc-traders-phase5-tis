@@ -156,10 +156,10 @@
     <td>&nbsp;</td>
 </tr><tr>
     <td>-&nbsp;-&nbsp; Identification number</td>
-    <td>R</td>
+    <td>O</td>
     <td>an..17</td>
     <td>&nbsp;</td>
-    <td><a href="rules-g.html#g0002">G0002</a><br /><a href="rules-r.html#r0860">R0860</a></td>
+    <td><a href="rules-g.html#g0002">G0002</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp; Name</td>
     <td>D</td>
