@@ -32,5 +32,6 @@ q2.csv
 /public
 /.batect
 python/env
+python/*.pdf
 python/__pycache__
 diff_result.txt
