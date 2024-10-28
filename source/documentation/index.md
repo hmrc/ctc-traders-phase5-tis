@@ -6,9 +6,9 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 18.8 issued 22 May 2024
+Version 19.0 issued on 28 October 2024
 
-Based on NCTS5 document version 5.15.1-v1.00 and issue date 7 March 2023
+Based on NCTS5 document version 5.15.2-v2.00 and issue date 1 December 2023
 
 ------
 
@@ -18,7 +18,6 @@ The following dates are subject to change. You should monitor this section regul
 
 | Event                                              | Date(s)         |
 |----------------------------------------------------|-----------------|
-| UK NCTS5 Transition period start date (Go-Live)    | 1 July 2024     |
 | NCTS5 Transition period end date                | 21 January 2025 |
 | NCTS5 Post-Transition period (final state) Go-Live | 22 January 2025 |
 
@@ -198,12 +197,12 @@ Both example TADs are:
 
 - the NTCS5 post-transition period TAD Correlation Data spreadsheet is available [here](/guides/ctc-traders-phase5-tis/downloads/Correlation_Table_TAD_and_TLoI_V1.2_Post-Transition.xlsx)
 
-### UK cutover from NCTS4 to NCTS5
+### UK moving to NCTS5 - Final state
 
-After the UK NCTS5 service goes live (see [NCTS5 key dates](#ncts5-key-dates)), there will be a cutover period during which:
+Following the launch of the UK NCTS5 (final state) service (see [NCTS5 key dates](#ncts5-key-dates)), a period will follow where:
+- The NCTS5 service (API v2.0) will continue running ONLY to manage in-flight declarations submitted before the go-live date.
+- The NCTS5 service (API v2.1) will handle all new final state transit declarations submitted from the go-live date onwards."
 
-- the NCTS4 service will continue running only to deal with in-flight transit declarations submitted before the go-live date
-- the NCTS5 service will handle all new transit declarations submitted from the go-live date onwards
 
 ### Transition period
 
@@ -255,17 +254,17 @@ For more information entering message recipient details in messages for GB to XI
 The following terms are important to understand in NCTS5:
 
 - **Consignment:** The header information is provided and applies to the whole transit declaration (up to 1 Consignment level per declaration).
-- **House consignment:** The lowest transport information is provided, and this applies to all its Consignment Items (each Consignment can contain up to 99 House Consignments).
 
-    The House Consignment level covers information relating to all goods that are subject to the same house transport contract. A house transport contract is a transport contract with a freight forwarder, non-vessel or aircraft operating common carrier or its agent or a postal operator. Where several house transport contracts exist, the information provided in customs declarations, notifications and proof of the customs status as Union Goods should relate to the lowest level of contracts. This is usually the contract concluded by a freight forwarder and the shipper.
+- **House consignment:** The lowest transport information is provided, and this applies to all its Consignment Items (each Consignment can contain up to 1999 House Consignments).
+  The House Consignment level covers information relating to all goods that are subject to the same consignor to consignee itinerary. Information relevant to all goods moving from one consignor to one consignee can be input at this level and will be considered applicable to all goods items attributed to this house consignment.The new House Consignment level is introduced to give more flexibility to the Economic Operators, allowing them to lodge one declaration with several Consignors/Consignees without specifying consignor/nee at goods item level. It also aims to align NCTS data structure with that of other EU systems for better cross communication and integration.
 
-    The new House Consignment level is introduced to give more flexibility to the Economic Operators, allowing them to lodge one declaration with several Consignors/Consignees.
+- **Multiple House Consignments:** This is the terminology often used to describe a transit declaration (IE015) containing more than one House Consignment data group. Multiple House Consignments are used when the declaration contains movements of goods from multiple consignors to a single consignee, a single consignor to multiple consignees, or multiple consignors to multiple consignees. The rules applicable to the data group and data elements must be considered to ensure proper use and avoid declaration rejection. If goods are moving from a single consignor to a single consignee, multiple house consignments cannot be used.
 
-- **Consignment item:** The items information is provided (each House Consignment can contain up to 999 Consignment Items).
+- **Consignment item:** The items information is provided (each House Consignment can contain up to 999 Consignment Items, to a declaration maximum of 1999 goods items).
 
-## Navigating CTC Traders API v2.0 documentation
+## Navigating CTC Traders API v2.1 documentation
 
-The following table lists the documents for CTC Traders API v2.0 and outlines the content and intended readers of each document.
+The following table lists the documents for CTC Traders API v2.1 and outlines the content and intended readers of each document.
 
 <table>
     <thead>
@@ -303,7 +302,14 @@ The following table lists the documents for CTC Traders API v2.0 and outlines th
             <td><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/common-transit-convention-traders/2.0/oas/page">CTC Traders API v2.0 reference</a></td>
             <td>Technical</td>
             <td>Low level</td>
-            <td>How to use each API endpoint</td>
+            <td>How to use each API endpoint for P5 Transition phase</td>
+            <td><p>Software developers</p> <p>Technical architects</p></td>
+        </tr>
+        <tr>
+            <td><a href="https://developer.qa.tax.service.gov.uk/api-documentation/docs/api/service/common-transit-convention-traders/2.1/oas/page">CTC Traders API v2.1 reference</a></td>
+            <td>Technical</td>
+            <td>Low level</td>
+            <td>How to use each API endpoint for P5 Transition phase</td>
             <td><p>Software developers</p> <p>Technical architects</p></td>
         </tr>
         <tr>
@@ -318,22 +324,23 @@ The following table lists the documents for CTC Traders API v2.0 and outlines th
 
 The order in you which you might read these documents can depend on whether you have previous NCTS experience. The following table recommends 2 possible reading orders but you can read the documents in any order you want.
 
-| Suggested reading order | New NCTS users | NCTS4 users migrating to NCTS5 |
-| --- | --- | --- |
-| 1 | Roadmap | Service guide |
+| Suggested reading order | New NCTS users | Existing NCTS5 users     |
+| --- | --- |-------------------------------|
+| 1 | Roadmap | Service guide                 |
 | 2 | Service guide | Technical interface specification |
-| 3 | Technical interface specification | Reference |
-| 4 | Reference | Testing guide |
-| 5 | Testing guide | Roadmap |
+| 3 | Technical interface specification | Reference                     |
+| 4 | Reference | Testing guide                 |
+| 5 | Testing guide | Roadmap                       |
 
-**Note:** If you have NCTS4 experience,  it is important that you read the NCTS5 service guide and API reference carefully to understand all of the differences between NCTS4 and NCTS5. Reading only the NCTS5 technical interface specification will NOT guide you about all of the differences between the 2 NCTS phases.
+**Note:** It is crucial to thoroughly read both the NCTS5 service guide and the API reference documentation to gain a full understanding of NCTS5. Relying solely on the NCTS5 technical interface specification will not provide sufficient guidance for implementation.
 
 ## Related documentation
 
-- [CTC Traders API v2.0 documentation](/api-documentation/docs/api/service/common-transit-convention-traders/2.0)
+- [CTC Traders API v2.1 documentation](/api-documentation/docs/api/service/common-transit-convention-traders/2.1)
 - [CTC Traders API v2.0 changelog](https://github.com/hmrc/common-transit-convention-traders/wiki/CTC-Traders-API-v2.0-changelog) (GitHub)
 - [NCTS phase 4-phase 5 data mapping spreadsheet](downloads/NCTS-P5_Datamapping_R5_111023_v1.0.xlsx) (GitHub)
 - [Transit Manual Supplement](https://www.gov.uk/government/publications/transit-manual-supplement) - UK transit procedures (OpenDocument Text document)
+- [CTC Traders API v2.0 documentation](/api-documentation/docs/api/service/common-transit-convention-traders/2.0)
 
 ## Changelog
 
