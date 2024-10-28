@@ -207,7 +207,7 @@
     <td>D</td>
     <td>9x</td>
     <td>&nbsp;</td>
-    <td><a href="rules-c.html#c0587">C0587</a><br /><a href="rules-g.html#g0587">G0587</a></td>
+    <td><a href="rules-b.html#b1966">B1966</a><br /><a href="rules-c.html#c0587">C0587</a><br /><a href="rules-g.html#g0587">G0587</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp; Sequence number</td>
     <td>R</td>
@@ -411,13 +411,13 @@
     <td>D</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesFullList.zip">CL008</a></td>
-    <td><a href="rules-c.html#c0909">C0909</a><br /><a href="rules-g.html#g0988">G0988</a></td>
+    <td><a href="rules-b.html#b1965">B1965</a><br /><a href="rules-c.html#c0909">C0909</a><br /><a href="rules-g.html#g0988">G0988</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp; Country of destination</td>
     <td>D</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesFullList.zip">CL008</a></td>
-    <td><a href="rules-c.html#c0343">C0343</a></td>
+    <td><a href="rules-c.html#c0343">C0343</a><br /><a href="rules-g.html#g0113">G0113</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp; Container indicator</td>
     <td>D</td>
@@ -908,7 +908,7 @@
     <td>-&nbsp;-&nbsp;-&nbsp; Customs office at border reference number</td>
     <td>O</td>
     <td>an8</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/COL-Generic-20230601.zip">CL141</a></td>
+    <td><a href="../downloads/COL-Generic-20240612.zip">CL141</a></td>
     <td><a href="rules-b.html#b1016">B1016</a><br /><a href="rules-b.html#b2101">B2101</a><br /><a href="rules-g.html#g0789">G0789</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp; Type of identification</td>
@@ -1135,7 +1135,7 @@
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp; HOUSE CONSIGNMENT</strong></td>
     <td>R</td>
-    <td>99x</td>
+    <td>1999x</td>
     <td>&nbsp;</td>
     <td><a href="rules-e.html#e1406">E1406</a></td>
 </tr><tr>
@@ -1149,7 +1149,13 @@
     <td>D</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesFullList.zip">CL008</a></td>
-    <td><a href="rules-c.html#c0909">C0909</a><br /><a href="rules-e.html#e1301">E1301</a><br /><a href="rules-g.html#g0988">G0988</a><br /><a href="rules-r.html#r0506">R0506</a></td>
+    <td><a href="rules-b.html#b1965">B1965</a><br /><a href="rules-c.html#c0909">C0909</a><br /><a href="rules-e.html#e1301">E1301</a><br /><a href="rules-g.html#g0988">G0988</a><br /><a href="rules-r.html#r0506">R0506</a></td>
+</tr><tr>
+    <td>-&nbsp;-&nbsp;-&nbsp; Country of destination</td>
+    <td>D</td>
+    <td>a2</td>
+    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesFullList.zip">CL008</a></td>
+    <td><a href="rules-c.html#c0343">C0343</a><br /><a href="rules-e.html#e1301">E1301</a><br /><a href="rules-g.html#g0062">G0062</a><br /><a href="rules-g.html#g0113">G0113</a><br /><a href="rules-r.html#r0506">R0506</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp; Gross mass</td>
     <td>R</td>
@@ -1353,7 +1359,7 @@
     <td>R</td>
     <td>an4</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentExportType.zip">CL228</a></td>
-    <td>&nbsp;</td>
+    <td><a href="rules-g.html#g0991">G0991</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
@@ -1515,13 +1521,13 @@
     <td>D</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesFullList.zip">CL008</a></td>
-    <td><a href="rules-c.html#c0909">C0909</a><br /><a href="rules-g.html#g0988">G0988</a><br /><a href="rules-r.html#r0507">R0507</a></td>
+    <td><a href="rules-b.html#b1965">B1965</a><br /><a href="rules-c.html#c0909">C0909</a><br /><a href="rules-g.html#g0988">G0988</a><br /><a href="rules-r.html#r0507">R0507</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Country of destination</td>
     <td>D</td>
     <td>a2</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesFullList.zip">CL008</a></td>
-    <td><a href="rules-c.html#c0343">C0343</a><br /><a href="rules-r.html#r0507">R0507</a></td>
+    <td><a href="rules-c.html#c0343">C0343</a><br /><a href="rules-g.html#g0113">G0113</a><br /><a href="rules-r.html#r0507">R0507</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Reference number UCR</td>
     <td>D</td>
@@ -1725,7 +1731,7 @@
     <td>R</td>
     <td>an4</td>
     <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentType.zip">CL214</a></td>
-    <td><a href="rules-g.html#g0057">G0057</a><br /><a href="rules-r.html#r0020">R0020</a></td>
+    <td><a href="rules-g.html#g0057">G0057</a><br /><a href="rules-g.html#g0991">G0991</a><br /><a href="rules-r.html#r0020">R0020</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>

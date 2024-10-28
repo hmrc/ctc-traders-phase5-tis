@@ -115,7 +115,7 @@
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp; HOUSE CONSIGNMENT</strong></td>
     <td>R</td>
-    <td>99x</td>
+    <td>1999x</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>

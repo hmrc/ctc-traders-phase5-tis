@@ -470,7 +470,7 @@
     <td>-&nbsp;-&nbsp;-&nbsp; Customs office at border reference number</td>
     <td>R</td>
     <td>an8</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/COL-Generic-20230601.zip">CL141</a></td>
+    <td><a href="../downloads/COL-Generic-20240612.zip">CL141</a></td>
     <td><a href="rules-g.html#g0789">G0789</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp; Type of identification</td>
@@ -523,7 +523,7 @@
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp; HOUSE CONSIGNMENT</strong></td>
     <td>R</td>
-    <td>99x</td>
+    <td>1999x</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
