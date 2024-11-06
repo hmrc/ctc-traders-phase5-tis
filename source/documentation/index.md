@@ -162,6 +162,7 @@ For information about the TAD fallback procedure, see section 'Business continui
 
 #### Manually printing TADs
 
+
 Guidelines for printing TADs are available in this [zip file](/guides/ctc-traders-phase5-tis/downloads/NCTS5_TAD_Printing_Guidelines_Oct_2024.zip)
 
 
