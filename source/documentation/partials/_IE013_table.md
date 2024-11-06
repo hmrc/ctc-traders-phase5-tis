@@ -920,7 +920,7 @@
     <td>-&nbsp;-&nbsp;-&nbsp; Customs office at border reference number</td>
     <td>O</td>
     <td>an8</td>
-    <td><a href="../downloads/COL-Generic-20240612.zip">CL141</a></td>
+    <td><a href="https://github.com/hmrc/ctc-traders-phase5-tis/blob/main/source/downloads/COL-Generic-20241105.zip">CL141</a></td>
     <td><a href="rules-b.html#b1016">B1016</a><br /><a href="rules-b.html#b2101">B2101</a><br /><a href="rules-g.html#g0789">G0789</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp; Type of identification</td>

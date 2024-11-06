@@ -1699,12 +1699,8 @@ IF &lt;CC170C-CONSIGNMENT.Mode of transport at the border&gt; is EQUAL to '5'<br
 THEN &lt;CC170C-CONSIGNMENT-ACTIVE BORDER TRANSPORT MEANS&gt; = “N”<br />
 ELSE<br />
    IF &lt;CC015C-TRANSIT OPERATION.Security&gt; is in SET {1,2,3}<br />
-   AND &lt;CC013C-CONSIGNMENT-ACTIVE BORDER TRANSPORT MEANS&gt; is NOT<br />
-   PRESENT<br />
-   AND &lt;CC015C-CONSIGNMENT-ACTIVE BORDER TRANSPORT MEANS&gt; is NOT<br />
-   PRESENT<br />
-  THEN &lt;CC170C-CONSIGNMENT-ACTIVE BORDER TRANSPORT MEANS&gt; =”R”<br />
-  ELSE &lt;CC170C-CONSIGNMENT-ACTIVE BORDER TRANSPORT MEANS&gt; = “O”
+THEN &lt;CC170C-CONSIGNMENT-ACTIVE BORDER TRANSPORT MEANS&gt; =”R”<br />
+ELSE &lt;CC170C-CONSIGNMENT-ACTIVE BORDER TRANSPORT MEANS&gt; = “O”
 
 **Technical Description**
 
@@ -1712,8 +1708,6 @@ IF /CC170C/Consignment/modeOfTransportAtTheBorder is EQUAL to '5'<br />
 THEN /CC170C/Consignment/ActiveBorderTransportMeans = “N”<br />
 ELSE<br />
 IF /CC015C/TransitOperation/security is in SET {1,2,3}<br />
-AND /CC013C/Consignment/ActiveBorderTransportMeans is NOT PRESENT<br />
-AND /CC015C/Consignment/ActiveBorderTransportMeans is NOT PRESENT<br />
 THEN /CC170C/Consignment/ActiveBorderTransportMeans = “R”<br />
 ELSE /CC170C/Consignment/ActiveBorderTransportMeans = “O”
 
