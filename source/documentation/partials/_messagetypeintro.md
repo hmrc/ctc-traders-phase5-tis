@@ -191,7 +191,7 @@ The following error codes can be returned by the NCTS.
 </tbody>
 </table>
 
-**Note:** Messages such as IE906 and IE917 that reports functional errors or err0rs in XML are not supported in NCTS Phase 5. Please ensure the correct environment is being used to test your system.
+**Note:** Messages such as IE906 and IE917 that reports functional errors or errors in XML are not supported in NCTS Phase 5. Please ensure the correct environment is being used to test your system.
 
 ## Accessing the XML schemas
 
