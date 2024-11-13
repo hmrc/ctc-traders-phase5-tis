@@ -32,7 +32,7 @@ N/A
 **Functional Description**
 
 During the Transitional Period (TP), the native CC015C, CC013C and CC170C sent to the National
-Transit Application should not include the value ‘99’. This value ‘99’ is valid in <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TypeOfIdentificationOfMeansOfTransport.zip">CL750</a> during TP, only in
+Transit Application should not include the value ‘99’. This value ‘99’ is valid in CL750 during TP, only in
 case the value ‘99’ is the result of the upgrade by the National Transit Application of a legacy message
 (e.g. CC015B upgraded into CC015C).
 
@@ -169,12 +169,12 @@ N/A
 
 IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br />
 THEN<br />
-IF /<span>&#42;</span>/Consignment/countryOfDestination is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a><br />
+IF /<span>&#42;</span>/Consignment/countryOfDestination is in SET CL009<br />
 THEN IF /<span>&#42;</span>/Consignment/Consignee is PRESENT<br />
 THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"<br />
 ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "R"<br />
 ELSE IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is in SET<br />
-<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a><br />
+CL009<br />
 THEN THIS /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee = "R"<br />
 ELSE IF /<span>&#42;</span>/TransitOperation/security is in SET {0,1}<br />
 THEN IF /<span>&#42;</span>/Consignment/Consignee is PRESENT<br />
@@ -224,7 +224,7 @@ N/A
 
 IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br />
 THEN<br />
-IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/country is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryWithoutZip.zip">CL505</a><br />
+IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/country is in SET CL505<br />
 THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/postcode = "O"<br />
 ELSE /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/postcode = "R";
 
@@ -239,7 +239,7 @@ N/A
 
 IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br />
 THEN C0001 shall be disabled AND<br />
-IF /<span>&#42;</span>/Consignment/countryOfDestination is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a><br />
+IF /<span>&#42;</span>/Consignment/countryOfDestination is in SET CL009<br />
 THEN IF at least one /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Consignee is present<br />
 THEN /<span>&#42;</span>/Consignment/Consignee = "N"<br />
 ELSE /<span>&#42;</span>/Consignment/Consignee = "R"<br />
@@ -261,9 +261,9 @@ N/A
 IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br />
 THEN C0598 shall be disabled AND<br />
 IF &lt;TRANSIT OPERATION.Security&gt; is in SET {1,2,3} AND<br />
-the first two characters of the /<span>&#42;</span>/CustomsOfficeOfTransitDeclared/referenceNumber is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a><br />
+the first two characters of the /<span>&#42;</span>/CustomsOfficeOfTransitDeclared/referenceNumber is in SET CL010<br />
 AND the first two characters of<br />
-/<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is NOT in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a><br />
+/<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is NOT in SET CL010<br />
 THEN &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED).Arrival date and time estimated&gt; = "R"<br />
 ELSE &lt;CUSTOMS OFFICE OF TRANSIT (DECLARED).Arrival date and time estimated&gt; = "O"
 
@@ -459,7 +459,7 @@ N/A
 IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br />
 THEN C0599 will be disabled AND<br />
    IF/<span>&#42;</span>/TransitOperation/security is in SET {1,2,3} AND the first two characters of<br />
-/<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is not in <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a><br />
+/<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is not in CL010<br />
    THEN<br />
 /<span>&#42;</span>/Consignment/modeOfTransportAtTheBorder = "R"<br />
    ELSE<br />
@@ -654,7 +654,7 @@ N/A
 
 IF &lt;Decisive Date&gt; is LESS than or EQUAL to &lt;TPendDate&gt;<br />
 THEN R0601 will be disabled AND<br />
-IF /<span>&#42;</span>/Consignment/HouseConsingment/ConsignmentItem/AdditionalReference/type is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DocumentTypeExcise.zip">CL234</a><br />
+IF /<span>&#42;</span>/Consignment/HouseConsingment/ConsignmentItem/AdditionalReference/type is in SET CL234<br />
 (DocumentTypeExcise) (i.e. Export of excise goods followed by transit (EMCS&AES+NCTS))<br />
 THEN<br />
    IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/type is EQUAL to<br />
@@ -665,7 +665,7 @@ THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declaratio
 ELSE /<span>&#42;</span>/TransitOperation/declarationType is in SET {T1,TIR}<br />
    ELSE // no further constraints on ‘Declaration type’ data items<br />
 ELSE<br />
-   IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/SupportingDocument/type is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DocumentTypeExcise.zip">CL234</a><br />
+   IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/SupportingDocument/type is in SET CL234<br />
 (DocumentTypeExcise) (i.e. Transit movement of EU goods under excise suspension (EMCS+NCTS))<br />
    THEN<br />
 IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/SupportingDocument/type is PRESENT<br />
@@ -728,7 +728,7 @@ THEN C0587 will be disabled<br />
 IF /<span>&#42;</span>/TransitOperation/security is in SET {2,3}<br />
 THEN<br />
   IF the first two characters of at least one iteration of the<br />
-/<span>&#42;</span>/CustomsOfficeOfTransitDeclared/referenceNumber is NOT in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCustomsSecurityAgreementArea.zip">CL147</a><br />
+/<span>&#42;</span>/CustomsOfficeOfTransitDeclared/referenceNumber is NOT in SET CL147<br />
   THEN /<span>&#42;</span>/CustomsOfficeOfExitForTransitDeclared = "O"<br />
    ELSE /<span>&#42;</span>/CustomsOfficeOfExitForTransitDeclared = "N"
 

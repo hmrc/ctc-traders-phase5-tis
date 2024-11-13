@@ -25,13 +25,13 @@
 </tr><tr>
     <td>-&nbsp; Message sender</td>
     <td>R</td>
-    <td>an..35 (see <a href="../#message-sender-and-recipient-guidelines">Message sender and recipient guidelines</a>)</td>
+    <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td>-&nbsp; Message recipient</td>
     <td>R</td>
-    <td>an..35 (see <a href="../#message-sender-and-recipient-guidelines">Message sender and recipient guidelines</a>)</td>
+    <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
@@ -50,7 +50,7 @@
     <td>-&nbsp; Message type</td>
     <td>R</td>
     <td>an6</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_MessageTypes.zip">CL060</a></td>
+    <td>CL060</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td>-&nbsp; Correlation identifier</td>
@@ -86,7 +86,7 @@
     <td>-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an8</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CustomsOfficeDeparture.zip">CL171</a></td>
+    <td>CL171</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td><strong>-&nbsp; HOLDER OF THE TRANSIT PROCEDURE</strong></td>
@@ -140,7 +140,7 @@
     <td>-&nbsp;-&nbsp;-&nbsp; Country</td>
     <td>R</td>
     <td>a2</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesForAddress.zip">CL248</a></td>
+    <td>CL248</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td><strong>-&nbsp; REPRESENTATIVE</strong></td>
@@ -158,7 +158,7 @@
     <td>-&nbsp;-&nbsp; Status</td>
     <td>R</td>
     <td>n1</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_RepresentativeStatusCode.zip">CL094</a></td>
+    <td>CL094</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp; CONTACT PERSON</strong></td>
@@ -194,19 +194,19 @@
     <td>-&nbsp;-&nbsp; Container indicator</td>
     <td>D</td>
     <td>n1</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_Flag.zip">CL027</a></td>
+    <td>CL027</td>
     <td><a href="rules-c.html#c0824">C0824</a><br /><a href="rules-g.html#g0332">G0332</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp; Inland mode of transport</td>
     <td>D</td>
     <td>n1</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TransportModeCode.zip">CL218</a></td>
+    <td>CL218</td>
     <td><a href="rules-c.html#c0170">C0170</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp; Mode of transport at the border</td>
     <td>D</td>
     <td>n1</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TransportModeCode.zip">CL218</a></td>
+    <td>CL218</td>
     <td><a href="rules-c.html#c0600">C0600</a><br /><a href="rules-g.html#g0020">G0020</a><br /><a href="rules-g.html#g0115">G0115</a></td>
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp; TRANSPORT EQUIPMENT</strong></td>
@@ -278,13 +278,13 @@
     <td>-&nbsp;-&nbsp;-&nbsp; Type of location</td>
     <td>R</td>
     <td>a1</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TypeOfLocation.zip">CL347</a></td>
+    <td>CL347</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp; Qualifier of identification</td>
     <td>R</td>
     <td>a1</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_QualifierOfTheIdentification.zip">CL326</a></td>
+    <td>CL326</td>
     <td><a href="rules-g.html#g0500">G0500</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp; Authorisation number</td>
@@ -302,7 +302,7 @@
     <td>-&nbsp;-&nbsp;-&nbsp; UN LOCODE</td>
     <td>D</td>
     <td>an..17</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_UnLocodeExtended.zip">CL244</a></td>
+    <td>CL244</td>
     <td><a href="rules-c.html#c0394">C0394</a></td>
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp;-&nbsp; CUSTOMS OFFICE</strong></td>
@@ -314,7 +314,7 @@
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an8</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CustomsOfficeDeparture.zip">CL171</a></td>
+    <td>CL171</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp;-&nbsp; GNSS</strong></td>
@@ -374,7 +374,7 @@
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Country</td>
     <td>R</td>
     <td>a2</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a></td>
+    <td>CL009</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp;-&nbsp; POSTCODE ADDRESS</strong></td>
@@ -398,7 +398,7 @@
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Country</td>
     <td>R</td>
     <td>a2</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryAddressPostcodeBased.zip">CL190</a></td>
+    <td>CL190</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp;-&nbsp; CONTACT PERSON</strong></td>
@@ -440,7 +440,7 @@
     <td>-&nbsp;-&nbsp;-&nbsp; Type of identification</td>
     <td>R</td>
     <td>n2</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TypeOfIdentificationOfMeansOfTransport.zip">CL750</a></td>
+    <td>CL750</td>
     <td><a href="rules-b.html#b1091">B1091</a><br /><a href="rules-r.html#r0472">R0472</a><br /><a href="rules-r.html#r0474">R0474</a><br /><a href="rules-r.html#r0476">R0476</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp; Identification number</td>
@@ -452,7 +452,7 @@
     <td>-&nbsp;-&nbsp;-&nbsp; Nationality</td>
     <td>R</td>
     <td>a2</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_Nationality.zip">CL165</a></td>
+    <td>CL165</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp; ACTIVE BORDER TRANSPORT MEANS</strong></td>
@@ -470,13 +470,13 @@
     <td>-&nbsp;-&nbsp;-&nbsp; Customs office at border reference number</td>
     <td>R</td>
     <td>an8</td>
-    <td><a href="https://github.com/hmrc/ctc-traders-phase5-tis/blob/main/source/downloads/COL-Generic-20241105.zip">CL141</a></td>
+    <td>CL141</td>
     <td><a href="rules-g.html#g0789">G0789</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp; Type of identification</td>
     <td>R</td>
     <td>n2</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TypeOfIdentificationofMeansOfTransportActive.zip">CL219</a></td>
+    <td>CL219</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp; Identification number</td>
@@ -488,7 +488,7 @@
     <td>-&nbsp;-&nbsp;-&nbsp; Nationality</td>
     <td>R</td>
     <td>a2</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_Nationality.zip">CL165</a></td>
+    <td>CL165</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp; Conveyance reference number</td>
@@ -506,13 +506,13 @@
     <td>-&nbsp;-&nbsp;-&nbsp; UN LOCODE</td>
     <td>O</td>
     <td>an..17</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_UnLocodeExtended.zip">CL244</a></td>
+    <td>CL244</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp; Country</td>
     <td>D</td>
     <td>a2</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesFullList.zip">CL008</a></td>
+    <td>CL008</td>
     <td><a href="rules-c.html#c0387">C0387</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp; Location</td>
@@ -548,7 +548,7 @@
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Type of identification</td>
     <td>R</td>
     <td>n2</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_TypeOfIdentificationOfMeansOfTransport.zip">CL750</a></td>
+    <td>CL750</td>
     <td><a href="rules-r.html#r0472">R0472</a><br /><a href="rules-r.html#r0474">R0474</a><br /><a href="rules-r.html#r0476">R0476</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Identification number</td>
@@ -560,6 +560,6 @@
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Nationality</td>
     <td>R</td>
     <td>a2</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_Nationality.zip">CL165</a></td>
+    <td>CL165</td>
     <td>&nbsp;</td>
 </tr></table>

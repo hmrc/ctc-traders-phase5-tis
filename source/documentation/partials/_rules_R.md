@@ -41,26 +41,26 @@ only if it is not LESS than or EQUAL to /<span>&#42;</span>/Message/Preparation 
 **Functional Description**
 
 IF the first two characters of &lt;CUSTOMS OFFICE OF DESTINATION (DECLARED). Reference
-number&gt; is in set <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip">CL112</a> (CountryCodesCTC)
+number&gt; is in set CL112 (CountryCodesCTC)
 THEN the first two characters of at least one instance of &lt;CUSTOMS OFFICE OF TRANSIT
 (DECLARED). Reference number&gt; shall be EQUAL to the first two characters of &lt;CUSTOMS OFFICE
 OF DESTINATION (DECLARED). Reference number&gt;;
 IF the first two characters of &lt;CUSTOMS OFFICE OF DEPARTURE.Reference number&gt; is in set
-<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip">CL112</a> (CountryCodesCTC) AND If the first two characters of &lt;CUSTOMS OFFICE OF DESTINATION
-(DECLARED). Reference number&gt; is in set <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a> (CountryCodesCommunity)
+CL112 (CountryCodesCTC) AND If the first two characters of &lt;CUSTOMS OFFICE OF DESTINATION
+(DECLARED). Reference number&gt; is in set CL010 (CountryCodesCommunity)
 THEN the first two characters of at least one instance of &lt;CUSTOMS OFFICE OF TRANSIT
-(DECLARED). Reference number&gt; shall be in set <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a> (CountryCodesCommunity).
+(DECLARED). Reference number&gt; shall be in set CL010 (CountryCodesCommunity).
 
 **Technical Description**
 
-IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in set <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip">CL112</a><br />
+IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in set CL112<br />
 THEN the first two characters of at least one instance of<br />
 /<span>&#42;</span>/CustomsOfficeOfTransitDeclared/referenceNumber shall be EQUAL to the first two characters of<br />
 /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber;<br />
-If the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in set <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip">CL112</a> AND If the<br />
-first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in set <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a><br />
+If the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in set CL112 AND If the<br />
+first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in set CL010<br />
 THEN the first two characters of at least one instance of<br />
-/<span>&#42;</span>/CustomsOfficeOfTransitDeclared/referenceNumber shall be in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a>.
+/<span>&#42;</span>/CustomsOfficeOfTransitDeclared/referenceNumber shall be in SET CL010.
 
 
 ## R0007
@@ -95,38 +95,38 @@ message.
 **Functional Description**
 
 IF &lt;TRANSIT OPERATION.Declaration type&gt; is in SET {T2, T2F} AND the first two characters of
-&lt;CUSTOMS OFFICE OF DEPARTURE.Reference number&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip">CL112</a> (CountryCodesCTC)
+&lt;CUSTOMS OFFICE OF DEPARTURE.Reference number&gt; is in SET CL112 (CountryCodesCTC)
 THEN
-(at least one &lt;CONSIGNMENT-PREVIOUS DOCUMENT.Type&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentUnionGoods.zip">CL178</a>
+(at least one &lt;CONSIGNMENT-PREVIOUS DOCUMENT.Type&gt; is in SET CL178
 (PreviousDocumentUnionGoods)) OR
 (at least one &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PREVIOUS
-DOCUMENT.Type&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentUnionGoods.zip">CL178</a> (PreviousDocumentUnionGoods))
+DOCUMENT.Type&gt; is in SET CL178 (PreviousDocumentUnionGoods))
 for each and every Consignment Item
 IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Declaration type&gt; is in SET
 {T2, T2F}
 AND the first two characters of &lt;CUSTOMS OFFICE OF DEPARTURE.Reference
-number&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip">CL112</a> (CountryCodesCTC)
+number&gt; is in SET CL112 (CountryCodesCTC)
 THEN
-(at least one &lt;CONSIGNMENT-PREVIOUS DOCUMENT.Type&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentUnionGoods.zip">CL178</a>
+(at least one &lt;CONSIGNMENT-PREVIOUS DOCUMENT.Type&gt; is in SET CL178
 (PreviousDocumentUnionGoods)) OR
 (at least one &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PREVIOUS
-DOCUMENT.Type&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentUnionGoods.zip">CL178</a> (PreviousDocumentUnionGoods)
+DOCUMENT.Type&gt; is in SET CL178 (PreviousDocumentUnionGoods)
 for this ‘Consignment item’)
 
 **Technical Description**
 
 IF /<span>&#42;</span>/Transit Operation/declarationType is in SET {T2, T2F}<br />
-AND the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip">CL112</a><br />
+AND the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL112<br />
 THEN<br />
-(at least one /<span>&#42;</span>/Consignment/PreviousDocument/type is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentUnionGoods.zip">CL178</a>) OR<br />
+(at least one /<span>&#42;</span>/Consignment/PreviousDocument/type is in SET CL178) OR<br />
 (at least one /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/type is in SET<br />
-<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentUnionGoods.zip">CL178</a>) for each and every Consignment Item<br />
+CL178) for each and every Consignment Item<br />
 IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2, T2F}<br />
-AND the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip">CL112</a><br />
+AND the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL112<br />
 THEN<br />
-(at least one /<span>&#42;</span>/Consignment/PreviousDocument/type is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentUnionGoods.zip">CL178</a>) OR<br />
+(at least one /<span>&#42;</span>/Consignment/PreviousDocument/type is in SET CL178) OR<br />
 (at least one /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/type is in SET<br />
-<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentUnionGoods.zip">CL178</a> for this ‘Consignment item’)
+CL178 for this ‘Consignment item’)
 
 
 ## R0023
@@ -134,13 +134,13 @@ THEN<br />
 **Functional Description**
 
 IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL
-REFERENCE.Type&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DocumentTypeExcise.zip">CL234</a> (DocumentTypeExcise)
+REFERENCE.Type&gt; is in SET CL234 (DocumentTypeExcise)
 THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL
 REFERENCE.Reference number&gt; shall not be ‘0’ (zero)
 
 **Technical Description**
 
-IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/type is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DocumentTypeExcise.zip">CL234</a><br />
+IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/type is in SET CL234<br />
 (DocumentTypeExcise)<br />
 THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/referenceNumber<br />
 shall not be ‘0’ (zero)
@@ -421,7 +421,7 @@ this data group /<span>&#42;</span>/HouseConsignment/ConsignmentItem.
 IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Number of
 packages&gt; is EQUAL to '0' (zero)
 THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Type of
-packages&gt; shall not be in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_KindOfPackagesUnpacked.zip">CL182</a> (KindOfPackagesUnpacked) for this data group
+packages&gt; shall not be in SET CL182 (KindOfPackagesUnpacked) for this data group
 &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM&gt;.
 
 **Technical Description**
@@ -429,7 +429,7 @@ packages&gt; shall not be in SET <a href="https://ec.europa.eu/taxation_customs/
 IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages is EQUAL to<br />
 '0' (zero)<br />
 THEN /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/typeOfPackages shall not be<br />
-in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_KindOfPackagesUnpacked.zip">CL182</a> for this data group /<span>&#42;</span>/ Consignment/HouseConsignment/ConsignmentItem.
+in SET CL182 for this data group /<span>&#42;</span>/ Consignment/HouseConsignment/ConsignmentItem.
 
 
 ## R0221
@@ -569,7 +569,7 @@ THEN for THIS HOUSE CONSIGNMENT at least one other CONSIGNMENT ITEM must exist w
 marks&gt; AND with &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-
 PACKAGING.Number of packages&gt; having a value GREATER than ‘0’ (zero) AND
 &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PACKAGING.Type of packages&gt;
-having a value NOT IN SET {<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_KindOfPackagesBulk.zip">CL181</a>(KindOfPackagesBulk), <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_KindOfPackagesUnpacked.zip">CL182</a>(KindOfPackagesUnpacked)}).
+having a value NOT IN SET {CL181(KindOfPackagesBulk), CL182(KindOfPackagesUnpacked)}).
 
 **Technical Description**
 
@@ -580,7 +580,7 @@ THEN for THIS HOUSE CONSIGNMENT at least one other CONSIGNMENT ITEM must exist w
 /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages having a value<br />
 GREATER than ‘0’ (zero) AND<br />
 /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/Packaging/typeOfPackages having a value<br />
-NOT IN SET {<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_KindOfPackagesBulk.zip">CL181</a>, <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_KindOfPackagesUnpacked.zip">CL182</a>}).
+NOT IN SET {CL181, CL182}).
 
 
 ## R0410
@@ -949,7 +949,7 @@ the following Data Groups:<br />
 **Functional Description**
 
 IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL
-REFERENCE.Type&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DocumentTypeExcise.zip">CL234</a> (DocumentTypeExcise) (i.e. Export of excise goods followed by
+REFERENCE.Type&gt; is in SET CL234 (DocumentTypeExcise) (i.e. Export of excise goods followed by
 transit (EMCS&AES+NCTS)
 THEN
    IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-PREVIOUS DOCUMENT.Type&gt; is EQUAL to ‘N830’
@@ -961,7 +961,7 @@ EQUAL to ‘T1’
  ELSE &lt;TRANSIT OPERATION.Declaration type&gt; is in SET {T1, TIR}
    ELSE
 IF &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-SUPPORTING
-DOCUMENT.Type&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DocumentTypeExcise.zip">CL234</a>
+DOCUMENT.Type&gt; is in SET CL234
   (DocumentTypeExcise)   (i.e. Transit movement of EU goods under excise suspension
 (EMCS+NCTS))
 THEN
@@ -973,7 +973,7 @@ is in SET {T2, T2F}
 
 **Technical Description**
 
-IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/type is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DocumentTypeExcise.zip">CL234</a><br />
+IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/type is in SET CL234<br />
 (DocumentTypeExcise)<br />
 (i.e. Export of excise goods followed by transit (EMCS&AES+NCTS))<br />
 THEN<br />
@@ -984,7 +984,7 @@ THEN<br />
  ELSE /<span>&#42;</span>/TransitOperation/declarationType is in SET {T1, TIR}<br />
    ELSE<br />
 IF /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/SupportingDocument/type is in SET<br />
-<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DocumentTypeExcise.zip">CL234</a><br />
+CL234<br />
   (DocumentTypeExcise) (i.e. Transit movement of EU goods under excise suspension<br />
 (EMCS+NCTS))<br />
 THEN<br />
@@ -1060,7 +1060,7 @@ THEN /<span>&#42;</span>/TransitOperation/reducedDatasetIndicator = “0”
 
 **Functional Description**
 
-IF sender is in EU (<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a> (CountryCodesCommunity))
+IF sender is in EU (CL010 (CountryCodesCommunity))
 THEN the value must be a valid EORI or TCUIN (validated by receiver, if located in EU),
 ELSE (sender is not in EU) the value must be a TIN number (validated by the message sender only).
 The EORI/TCUIN values shall comply with the following pattern: &lt;xs:pattern value=" [A-Z]{2}[\x21-
@@ -1068,7 +1068,7 @@ The EORI/TCUIN values shall comply with the following pattern: &lt;xs:pattern va
 
 **Technical Description**
 
-IF sender is in EU (<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a>)<br />
+IF sender is in EU (CL010)<br />
 THEN the value must be a valid EORI or TCUIN (validated by receiver, if located in EU),<br />
 ELSE (sender is not in EU) the value must be a TIN number (validated by the message sender only).<br />
 The EORI/TCUIN values shall comply with the following pattern: &lt;xs:pattern value=" [A-Z]{2}[\x21-<br />
@@ -1149,19 +1149,19 @@ CC015C, CD050C, CD115C, CD160C OR CD165C.
 IF &lt;TRANSIT OPERATION.Declaration type&gt; is EQUAL to 'TIR'
 THEN &lt;GUARANTEE.Guarantee type&gt; is EQUAL to 'B'
 ELSE IF the country code (first two characters) in the &lt;CUSTOMS OFFICE OF
-DEPARTURE.Reference number&gt; is in SET of <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a> (CountryCodesCommunity) OR is EQUAL to
+DEPARTURE.Reference number&gt; is in SET of CL010 (CountryCodesCommunity) OR is EQUAL to
 'SM' OR is EQUAL to 'AD'
-THEN &lt;GUARANTEE.Guarantee type&gt; must be in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeTypeEUNonTIR.zip">CL230</a> (GuaranteeTypeEUNonTIR)
-ELSE &lt;GUARANTEE.Guarantee type&gt; must be in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeTypeCTC.zip">CL229</a> (GuaranteeTypeCTC)
+THEN &lt;GUARANTEE.Guarantee type&gt; must be in SET CL230 (GuaranteeTypeEUNonTIR)
+ELSE &lt;GUARANTEE.Guarantee type&gt; must be in SET CL229 (GuaranteeTypeCTC)
 
 **Technical Description**
 
 IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'TIR'<br />
 THEN /<span>&#42;</span>/Guarantee/guaranteeType is EQUAL to 'B'<br />
-ELSE IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a><br />
+ELSE IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL010<br />
 OR is EQUAL to 'SM' OR is EQUAL to 'AD'<br />
-THEN /<span>&#42;</span>/Guarantee/guaranteeType must be in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeTypeEUNonTIR.zip">CL230</a><br />
-ELSE /<span>&#42;</span>/Guarantee/guaranteeType must be in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_GuaranteeTypeCTC.zip">CL229</a>
+THEN /<span>&#42;</span>/Guarantee/guaranteeType must be in SET CL230<br />
+ELSE /<span>&#42;</span>/Guarantee/guaranteeType must be in SET CL229
 
 
 ## R0901
@@ -1170,16 +1170,16 @@ ELSE /<span>&#42;</span>/Guarantee/guaranteeType must be in SET <a href="https:/
 
 IF &lt;TRANSIT OPERATION.Declaration type&gt; is EQUAL to 'TIR'
 THEN the country code (first two characters) in the &lt;CUSTOMS OFFICE OF DESTINATION
-(DECLARED).Reference number&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a> (CountryCodesCommunity)
+(DECLARED).Reference number&gt; is in SET CL010 (CountryCodesCommunity)
 AND the country code (first two characters) in the &lt;CUSTOMS OFFICE OF DEPARTURE.Reference
-number &gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a> (CountryCodesCommunity).
+number &gt; is in SET CL010 (CountryCodesCommunity).
 
 **Technical Description**
 
 IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'TIR'<br />
 THEN the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in SET<br />
-<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a><br />
-AND the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a>
+CL010<br />
+AND the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL010
 
 
 ## R0904
@@ -1189,13 +1189,13 @@ AND the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/ref
 IF the country code (first two characters) in the &lt;CUSTOMS OFFICE OF DEPARTURE.Reference
 number&gt; is in SET {AD, SM}
 THEN the country code (first two characters) in the &lt;CUSTOMS OFFICE OF DESTINATION
-(DECLARED).Reference number&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_MSCountry.zip">CL553</a> (MSCountry)
+(DECLARED).Reference number&gt; is in SET CL553 (MSCountry)
 
 **Technical Description**
 
 IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET {AD, SM}<br />
 THEN the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in SET<br />
-<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_MSCountry.zip">CL553</a>
+CL553
 
 
 ## R0905
@@ -1203,13 +1203,13 @@ THEN the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationD
 **Functional Description**
 
 IF the country code (first two characters) in the &lt;CUSTOMS OFFICE OF DEPARTURE.Reference
-number&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip">CL112</a> (CountryCodesCTC)
+number&gt; is in SET CL112 (CountryCodesCTC)
 THEN the country code (first two characters) in the &lt;CUSTOMS OFFICE OF DESTINATION
 (DECLARED).Reference number&gt; is NOT in SET {AD, SM}
 
 **Technical Description**
 
-IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip">CL112</a><br />
+IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL112<br />
 THEN the two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is NOT in<br />
 SET{AD, SM}
 
@@ -1250,7 +1250,7 @@ DEPARTURE.Reference number&gt; is EQUAL to 'IT'
   THEN &lt;TRANSIT OPERATION.Declaration type&gt; is EQUAL to 'T2SM'
   ELSE
  IF the country code (first two characters) in the &lt;CUSTOMS OFFICE OF
-DEPARTURE.Reference number&gt; is in set <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a> (CountryCodesCommunity) AND NOT EQUAL to
+DEPARTURE.Reference number&gt; is in set CL010 (CountryCodesCommunity) AND NOT EQUAL to
 'IT'
  THEN &lt;TRANSIT OPERATION.Declaration type&gt; is in SET {T2, T2F} OR
   &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Declaration type&gt; is
@@ -1263,7 +1263,7 @@ DEPARTURE.Reference number&gt; is EQUAL to 'IT'
 THEN &lt;TRANSIT OPERATION.Declaration type&gt; is EQUAL to 'T2SM'
 ELSE
  IF the country code (first two characters) in the &lt;CUSTOMS OFFICE OF
-DEPARTURE.Reference number&gt; is in set <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a> (CountryCodesCommunity) AND NOT EQUAL to
+DEPARTURE.Reference number&gt; is in set CL010 (CountryCodesCommunity) AND NOT EQUAL to
 'IT'
  THEN &lt;TRANSIT OPERATION.Declaration type&gt; is in SET {T2, T2F} OR
 &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Declaration type&gt; is in SET {T2,
@@ -1278,7 +1278,7 @@ IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/refe
 THEN /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'T2SM'<br />
 ELSE<br />
  IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET<br />
-<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a><br />
+CL010<br />
  AND NOT EQUAL to 'IT'<br />
  THEN /<span>&#42;</span>/TransitOperation/declarationType is in SET {T2, T2F} OR<br />
    /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2,<br />
@@ -1288,7 +1288,7 @@ THEN<br />
 IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'IT',<br />
 THEN /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'T2SM'<br />
 ELSE<br />
-   IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a><br />
+   IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is in SET CL010<br />
   AND NOT EQUAL to 'IT'<br />
    THEN /<span>&#42;</span>/TransitOperation/declarationType is in SET {T2, T2F} OR<br />
   /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2,<br />
@@ -1301,14 +1301,14 @@ T2F}
 
 IF &lt;CC013C - AUTHORISATION.Type&gt; is NOT EQUAL to 'C521' OR &lt;CC015C -
 AUTHORISATION.Type&gt; is NOT EQUAL to 'C521'
-THEN &lt;CONTROL RESULT.Code&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_ControlResultCodeDepartureSimplifiedExcluded.zip">CL195</a>
+THEN &lt;CONTROL RESULT.Code&gt; is in SET CL195
 (ControlResultCodeDepartureSimplifiedExcluded)
 
 **Technical Description**
 
 IF /CC013C/Authorisation/type is NOT EQUAL to 'C521' OR<br />
 /CC015C/Authorisation/type is NOT EQUAL to 'C521'<br />
-THEN /<span>&#42;</span>/ControlResult/code is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_ControlResultCodeDepartureSimplifiedExcluded.zip">CL195</a>
+THEN /<span>&#42;</span>/ControlResult/code is in SET CL195
 
 
 ## R0911
@@ -1320,25 +1320,25 @@ number&gt; is
   EQUAL to 'SM' AND
   the country code (first two characters) in the &lt;CUSTOMS OFFICE OF
 DESTINATION
-  (DECLARED).Reference&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a> (CountryCodesCommunity)
+  (DECLARED).Reference&gt; is in SET CL010 (CountryCodesCommunity)
 THEN &lt;TRANSIT OPERATION.Declaration type&gt; is in SET {T2, T2F};
 IF the country code (first two characters) in the &lt;CUSTOMS OFFICE OF DEPARTURE.Reference
 number&gt; is
   EQUAL to 'SM' AND
   the country code (first two characters) in the &lt;CUSTOMS OFFICE OF
 DESTINATION
-  (ACTUAL).Reference&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a> (CountryCodesCommunity)
+  (ACTUAL).Reference&gt; is in SET CL010 (CountryCodesCommunity)
 THEN &lt;TRANSIT OPERATION.Declaration type&gt; is in SET {T2, T2F}
 
 **Technical Description**
 
 IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'SM' AND<br />
  the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationDeclared/referenceNumber is in SET<br />
-<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a><br />
+CL010<br />
 THEN /<span>&#42;</span>/TransitOperation/declarationType is in SET {T2, T2F};<br />
 IF the first two characters of /<span>&#42;</span>/CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'SM' AND<br />
  the first two characters of /<span>&#42;</span>/CustomsOfficeOfDestinationActual/referenceNumber is in SET<br />
-<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a><br />
+CL010<br />
 THEN /<span>&#42;</span>/TransitOperation/declarationType is in SET {T2, T2F}
 
 
@@ -1347,13 +1347,13 @@ THEN /<span>&#42;</span>/TransitOperation/declarationType is in SET {T2, T2F}
 **Functional Description**
 
 IF &lt;TRANSIT OPERATION.Declaration type&gt; is EQUAL to 'TIR'
-THEN &lt;CONTROL RESULT.Code&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_ControlResultCodeDepartureSimplifiedExcluded.zip">CL195</a>
+THEN &lt;CONTROL RESULT.Code&gt; is in SET CL195
 (ControlResultCodeDepartureSimplifiedExcluded)
 
 **Technical Description**
 
 IF /<span>&#42;</span>/TransitOperation/declarationType is EQUAL to 'TIR'<br />
-THEN /<span>&#42;</span>/ControlResult/code is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_ControlResultCodeDepartureSimplifiedExcluded.zip">CL195</a>
+THEN /<span>&#42;</span>/ControlResult/code is in SET CL195
 
 
 ## R0983
@@ -1431,21 +1431,21 @@ The value of /<span>&#42;</span>/Consignment/grossMass must be GREATER than or E
 
 **Functional Description**
 
-IF &lt;CONSIGNMENT.Country Of Destination&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a> (CountryCodesCommonTransit)
-OR at least one &lt;CONSIGNMENT-HOUSE CONSIGNMENT.Country of Destination&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a>
+IF &lt;CONSIGNMENT.Country Of Destination&gt; is in SET CL009 (CountryCodesCommonTransit)
+OR at least one &lt;CONSIGNMENT-HOUSE CONSIGNMENT.Country of Destination&gt; is in SET CL009
 (CountryCodesCommonTransit)
 OR
 at least one &lt; CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Country Of
-Destination&gt; are in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a>
+Destination&gt; are in SET CL009
 THEN &lt;CONSIGNMENT-ADDITIONAL INFORMATION.Code&gt; shall not be EQUAL to '30600'
 
 **Technical Description**
 
-IF /<span>&#42;</span>/Consignment/countryOfDestination is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a><br />
+IF /<span>&#42;</span>/Consignment/countryOfDestination is in SET CL009<br />
 OR<br />
-at least one /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDestination is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a><br />
+at least one /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDestination is in SET CL009<br />
 OR at least one /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is in SET<br />
-<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a><br />
+CL009<br />
 THEN /<span>&#42;</span>/Consignment/AdditionalInformation/code shall not be EQUAL to '30600'
 
 
@@ -1466,19 +1466,19 @@ not be EQUAL to '30600'
 
 **Functional Description**
 
-IF &lt;CONSIGNMENT.Country Of Destination&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a>
-OR at least one &lt;CONSIGNMENT-HOUSE CONSIGNMENT.Country Of Destination&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a>
+IF &lt;CONSIGNMENT.Country Of Destination&gt; is in SET CL009
+OR at least one &lt;CONSIGNMENT-HOUSE CONSIGNMENT.Country Of Destination&gt; is in SET CL009
 (CountryCodesCommonTransit)
 OR at least one &lt; CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM.Country Of
-Destination&gt; are in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a>
+Destination&gt; are in SET CL009
 THEN &lt;CONSIGNMENT-HOUSE CONSIGNMENT- ADDITIONAL INFORMATION.Code&gt; shall not be
 EQUAL to '30600'
 
 **Technical Description**
 
-IF /<span>&#42;</span>/Consignment/countryOfDestination is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a><br />
-OR at least one /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDestination is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a><br />
+IF /<span>&#42;</span>/Consignment/countryOfDestination is in SET CL009<br />
+OR at least one /<span>&#42;</span>/Consignment/HouseConsignment/countryOfDestination is in SET CL009<br />
 OR<br />
 at least one /<span>&#42;</span>/Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is in SET<br />
-<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a><br />
+CL009<br />
 THEN /<span>&#42;</span>/Consignment/HouseConsignment/AdditionalInformation/code shall not be EQUAL to '30600'
