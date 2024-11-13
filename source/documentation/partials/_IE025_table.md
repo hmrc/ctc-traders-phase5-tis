@@ -25,13 +25,13 @@
 </tr><tr>
     <td>-&nbsp; Message sender</td>
     <td>R</td>
-    <td>an..35 (see <a href="../#message-sender-and-recipient-guidelines">Message sender and recipient guidelines</a>)</td>
+    <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td>-&nbsp; Message recipient</td>
     <td>R</td>
-    <td>an..35 (see <a href="../#message-sender-and-recipient-guidelines">Message sender and recipient guidelines</a>)</td>
+    <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
@@ -50,7 +50,7 @@
     <td>-&nbsp; Message type</td>
     <td>R</td>
     <td>an6</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_MessageTypes.zip">CL060</a></td>
+    <td>CL060</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td>-&nbsp; Correlation identifier</td>
@@ -80,7 +80,7 @@
     <td>-&nbsp;-&nbsp; Release indicator</td>
     <td>R</td>
     <td>n1</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_ReleaseNotification.zip">CL164</a></td>
+    <td>CL164</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td><strong>-&nbsp; CUSTOMS OFFICE OF DESTINATION (ACTUAL)</strong></td>
@@ -92,7 +92,7 @@
     <td>-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an8</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CustomsOfficeDestination.zip">CL172</a></td>
+    <td>CL172</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td><strong>-&nbsp; TRADER AT DESTINATION</strong></td>
@@ -128,7 +128,7 @@
     <td>-&nbsp;-&nbsp;-&nbsp; Release type</td>
     <td>R</td>
     <td>n1</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_ReleaseType.zip">CL163</a></td>
+    <td>CL163</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp;-&nbsp; CONSIGNMENT ITEM</strong></td>
@@ -152,7 +152,7 @@
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp; Release type</td>
     <td>R</td>
     <td>n1</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_ReleaseType.zip">CL163</a></td>
+    <td>CL163</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp; COMMODITY</strong></td>
@@ -170,7 +170,7 @@
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; CUS code</td>
     <td>O</td>
     <td>an9</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CUSCode.zip">CL016</a></td>
+    <td>CL016</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; COMMODITY CODE</strong></td>
@@ -182,7 +182,7 @@
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Harmonized System sub-heading code</td>
     <td>R</td>
     <td>an6</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_HScode.zip">CL152</a></td>
+    <td>CL152</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Combined nomenclature code</td>
@@ -206,7 +206,7 @@
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; UN Number</td>
     <td>R</td>
     <td>an4</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_UnDangerousGoodsCode.zip">CL101</a></td>
+    <td>CL101</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; GOODS MEASURE</strong></td>
@@ -242,7 +242,7 @@
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Type of packages</td>
     <td>R</td>
     <td>an2</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_KindOfPackages.zip">CL017</a></td>
+    <td>CL017</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td>-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp; Number of packages</td>

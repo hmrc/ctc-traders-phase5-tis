@@ -25,8 +25,8 @@ from data_types import MessageCategory, MessageField, Rule
 save_location = path.join("..", "source", "documentation", "partials")
 
 special_formats = {
-    "Message sender": """an..35 (see <a href="../#message-sender-and-recipient-guidelines">Message sender and recipient guidelines</a>)""",
-    "Message recipient": """an..35 (see <a href="../#message-sender-and-recipient-guidelines">Message sender and recipient guidelines</a>)"""
+    "Message sender": """an..35""",
+    "Message recipient": """an..35"""
 }
 
 head_tag = """<table cellspacing="0">"""

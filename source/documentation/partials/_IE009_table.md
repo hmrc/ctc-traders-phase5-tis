@@ -25,13 +25,13 @@
 </tr><tr>
     <td>-&nbsp; Message sender</td>
     <td>R</td>
-    <td>an..35 (see <a href="../#message-sender-and-recipient-guidelines">Message sender and recipient guidelines</a>)</td>
+    <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td>-&nbsp; Message recipient</td>
     <td>R</td>
-    <td>an..35 (see <a href="../#message-sender-and-recipient-guidelines">Message sender and recipient guidelines</a>)</td>
+    <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
@@ -50,7 +50,7 @@
     <td>-&nbsp; Message type</td>
     <td>R</td>
     <td>an6</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_MessageTypes.zip">CL060</a></td>
+    <td>CL060</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td>-&nbsp; Correlation identifier</td>
@@ -98,13 +98,13 @@
     <td>-&nbsp;-&nbsp; Decision</td>
     <td>D</td>
     <td>n1</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_Flag.zip">CL027</a></td>
+    <td>CL027</td>
     <td><a href="rules-c.html#c0128">C0128</a><br /><a href="rules-r.html#r0102">R0102</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp; Initiated by customs</td>
     <td>R</td>
     <td>n1</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_Flag.zip">CL027</a></td>
+    <td>CL027</td>
     <td><a href="rules-g.html#g0101">G0101</a></td>
 </tr><tr>
     <td>-&nbsp;-&nbsp; Justification</td>
@@ -122,7 +122,7 @@
     <td>-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an8</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CustomsOfficeDeparture.zip">CL171</a></td>
+    <td>CL171</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td><strong>-&nbsp; HOLDER OF THE TRANSIT PROCEDURE</strong></td>
@@ -176,7 +176,7 @@
     <td>-&nbsp;-&nbsp;-&nbsp; Country</td>
     <td>R</td>
     <td>a2</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesForAddress.zip">CL248</a></td>
+    <td>CL248</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td><strong>-&nbsp;-&nbsp; CONTACT PERSON</strong></td>

@@ -25,13 +25,13 @@
 </tr><tr>
     <td>-&nbsp; Message sender</td>
     <td>R</td>
-    <td>an..35 (see <a href="../#message-sender-and-recipient-guidelines">Message sender and recipient guidelines</a>)</td>
+    <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td>-&nbsp; Message recipient</td>
     <td>R</td>
-    <td>an..35 (see <a href="../#message-sender-and-recipient-guidelines">Message sender and recipient guidelines</a>)</td>
+    <td>an..35</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr><tr>
@@ -50,7 +50,7 @@
     <td>-&nbsp; Message type</td>
     <td>R</td>
     <td>an6</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_MessageTypes.zip">CL060</a></td>
+    <td>CL060</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td>-&nbsp; Correlation identifier</td>
@@ -74,7 +74,7 @@
     <td>-&nbsp;-&nbsp; Business rejection type</td>
     <td>R</td>
     <td>an3</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_BusinessRejectionTypeDesExt.zip">CL570</a></td>
+    <td>CL570</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td>-&nbsp;-&nbsp; Rejection date and time</td>
@@ -86,7 +86,7 @@
     <td>-&nbsp;-&nbsp; Rejection code</td>
     <td>R</td>
     <td>n..2</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_RejectionCodeDepartureExport.zip">CL227</a></td>
+    <td>CL227</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td>-&nbsp;-&nbsp; Rejection reason</td>
@@ -104,7 +104,7 @@
     <td>-&nbsp;-&nbsp; Reference number</td>
     <td>R</td>
     <td>an8</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CustomsOfficeDestination.zip">CL172</a></td>
+    <td>CL172</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td><strong>-&nbsp; TRADER AT DESTINATION</strong></td>
@@ -134,7 +134,7 @@
     <td>-&nbsp;-&nbsp; Error code</td>
     <td>R</td>
     <td>n2</td>
-    <td><a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_FunctionalErrorCodesIeCA.zip">CL180</a></td>
+    <td>CL180</td>
     <td>&nbsp;</td>
 </tr><tr>
     <td>-&nbsp;-&nbsp; Error reason</td>

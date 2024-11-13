@@ -24,7 +24,6 @@ class CodeList:
     def __init__(self, dictionary: dict):
         self.code_list = dictionary["Code List"]
         self.title = dictionary["Title"]
-        self.url = dictionary["Link"]
 
 
 def load_code_list() -> dict[str, CodeList]:
@@ -48,11 +47,7 @@ def replace_code_list(cl: str) -> str:
     :param cl: The codelist
     :return: The codelist, with or without a hyperlink wrapping
     """
-    item = load_code_list().get(cl, None)
-    if item is not None:
-        return f"""<a href="{item.url}">{cl}</a>"""
-    else:
-        return cl
+    return cl
 
 
 def replace_code_list_full_string(string: str) -> str:

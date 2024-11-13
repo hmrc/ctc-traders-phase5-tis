@@ -236,7 +236,7 @@ N/A
 **Functional Description**
 
 If a consignment is moving from one Member State to another Member State via a third country which
-is not in set of <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a> (CountryCodesCommonTransit) then a &lt;CUSTOMS OFFICE OF TRANSIT
+is not in set of CL009 (CountryCodesCommonTransit) then a &lt;CUSTOMS OFFICE OF TRANSIT
 (DECLARED)&gt; shall be declared and located in the specific Member States.
 
 **Technical Description**
@@ -264,11 +264,11 @@ In case of Export followed by Transit and whenever the internal transit procedur
 Declared Office of Destination needs to be ‘appropriate’, otherwise the initial submission and/or
 subsequent amendment requests of the transit declaration data as submitted by the Holder of the
 Transit Procedure to the Office of Departure has to be rejected. This can be validated as follows:<br /><br />
-A/ In case the Declared Office of Destination belongs to EU MS (<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommunity.zip">CL010</a>- CountryCodesCommunity),
-and its Custom Office Reference Number is included in both <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CustomsOfficeDestination.zip">CL172</a>- CustomsOfficeDestination and
-<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_AES_CustomsOfficeExitDeclared.zip">CL294</a>-CustomsOfficeExitDeclared, then it is considered ‘appropriate’ (otherwise is considered not
+A/ In case the Declared Office of Destination belongs to EU MS (CL010- CountryCodesCommunity),
+and its Custom Office Reference Number is included in both CL172- CustomsOfficeDestination and
+CL294-CustomsOfficeExitDeclared, then it is considered ‘appropriate’ (otherwise is considered not
 ‘appropriate’);
-B/ In case the Declared Office of Destination belongs to CTC (<a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCTC.zip">CL112</a>- CountryCodesCTC), it is
+B/ In case the Declared Office of Destination belongs to CTC (CL112- CountryCodesCTC), it is
 considered by default ‘appropriate’.
 When the Declared Office of Destination is considered as not ‘appropriate’, the messages CC013C or
 CC015C will be responded with CC056C that will report the error code '12- Codelist violation'.
@@ -380,7 +380,7 @@ REFERENCE&gt; will be also used to include the information of EMCS consignment e
 EU member state into a Non-EU-Member state, in case of Export Followed by Transit (where in
 messages CC013C or CC015C the &lt;CONSIGNMENT- HOUSE CONSIGNMENT- PREVIOUS
 DOCUMENT.Type&gt; = ‘N830’ AND &lt;CONSIGNMENT- HOUSE CONSIGNMENT- CONSIGNMENT
-ITEM- ADDITIONAL REFERENCE.Type&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DocumentTypeExcise.zip">CL234</a> (DocumentTypeExcise)).
+ITEM- ADDITIONAL REFERENCE.Type&gt; is in SET CL234 (DocumentTypeExcise)).
 In this case, the Data Group &lt;GOODS SHIPMENT- GOODS ITEM- PREVIOUS DOCUMENT&gt; of the
 Export declaration, will be mapped with the Data Group &lt;CONSIGNMENT- HOUSE CONSIGNMENT-
 CONSIGNMENT ITEM- ADDITIONAL REFERENCE&gt; of the Transit declaration.
@@ -397,7 +397,7 @@ N/A
 The Data Group &lt;CONSIGNMENT- HOUSE CONSIGNMENT- CONSIGNMENT ITEM- SUPPORTING
 DOCUMENT&gt;, can be also used to include the information related to EMCS consignment (where
 &lt;CONSIGNMENT- HOUSE CONSIGNMENT- CONSIGNMENT ITEM- SUPPORTING
-DOCUMENT.Type&gt; is in SET <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_DocumentTypeExcise.zip">CL234</a> (DocumentTypeExcise)), transported from one EU member state
+DOCUMENT.Type&gt; is in SET CL234 (DocumentTypeExcise)), transported from one EU member state
 into another EU member state via a CTC country.
 
 **Technical Description**
@@ -632,7 +632,7 @@ N/A
 
 The Data Item ‘Identification number’ is required for the Data Group ‘HOLDER OF THE TRANSIT
 PROCEDURE’, except for:<br /><br />
-- economic operators residing outside of the common transit countries (outside <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CountryCodesCommonTransit.zip">CL009</a>), and
+- economic operators residing outside of the common transit countries (outside CL009), and
 - private individuals for which an identification number may be used but is not required.
 
 **Technical Description**
@@ -843,7 +843,7 @@ N/A
 **Functional Description**
 
 The Data Item &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-
-COMMODITY.CUS code&gt; can be used when the <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_CUSCode.zip">CL016</a> (CUSCode) in CS/RD2 includes [CUS code &
+COMMODITY.CUS code&gt; can be used when the CL016 (CUSCode) in CS/RD2 includes [CUS code &
 CN code] where the CN code matches with the &lt;CONSIGNMENT-HOUSE CONSIGNMENT-
 CONSIGNMENT ITEM-COMMODITY-COMMODITY CODE. Harmonized System sub-heading code&gt;
 & &lt;CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-COMMODITY-COMMODITY
@@ -934,7 +934,7 @@ N/A
 
 **Functional Description**
 
-The exact content of the <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_QualifierOfTheIdentification.zip">CL326</a> (QualifierOfTheIdentification) is defined nationally, considering -for
+The exact content of the CL326 (QualifierOfTheIdentification) is defined nationally, considering -for
 example -that only in some NAs the value 'T' must only be used in case “House number” and
 “Postcode” or only “Postcode” define an exact and unique location.
 
@@ -1101,8 +1101,8 @@ N/A
 **Functional Description**
 
 During the Transitional Period, the value ‘N830’ (Goods declaration for exportation) is defined as valid
-in codelist <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentType.zip">CL214</a> (PreviousDocumentType). From the end date of the Transitional Period, the value
-‘N830’ will become valid ONLY in the <a href="https://ec.europa.eu/taxation_customs/dds2/rd/compressed_file/data_download/RD_NCTS-P5_PreviousDocumentExportType.zip">CL228</a> (PreviousDocumentExportType) to indicate the “Export
+in codelist CL214 (PreviousDocumentType). From the end date of the Transitional Period, the value
+‘N830’ will become valid ONLY in the CL228 (PreviousDocumentExportType) to indicate the “Export
 Followed by Transit” procedure in the Data Group &lt;CONSIGNMENT-HOUSE CONSIGNMENT&gt;.
 
 **Technical Description**

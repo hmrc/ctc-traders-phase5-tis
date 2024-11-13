@@ -107,7 +107,7 @@ for cat, ruleset in extracted_rules.items():
 missing_cls: dict[str, list[str]] = {}
 
 # lists that have a Europa download
-available_lists = [cl.code_list for cl in code_lists.load_code_list().values() if cl.url.__contains__("europa.eu")]
+available_lists = [cl.code_list for cl in code_lists.load_code_list().values()]
 
 cl_regex = re.compile("CL\\d{3}")
 
@@ -119,13 +119,5 @@ for rule_list in extracted_rules.values():
 
         # deduplicate
         found_set = set(found)
-        cls_without_eu_link = found_set.difference(available_lists)
-        if len(cls_without_eu_link) > 0:
-            missing_cls[rule.rule_code] = sorted(list(cls_without_eu_link))
-
-if len(missing_cls) > 0:
-    print("WARNING: some code lists do not have links to the Europa site")
-    for rule, cls in missing_cls.items():
-        print(f"Rule {rule}, missing code lists are {cls}")
 
 print("Generation complete")
