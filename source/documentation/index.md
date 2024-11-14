@@ -337,11 +337,13 @@ The order in you which you might read these documents can depend on whether you 
 
 ## Related documentation
 
-- [CTC Traders API v2.1 documentation](/api-documentation/docs/api/service/common-transit-convention-traders/2.1)
-- [CTC Traders API v2.0 changelog](https://github.com/hmrc/common-transit-convention-traders/wiki/CTC-Traders-API-v2.0-changelog) (GitHub)
+
 - [NCTS phase 4-phase 5 data mapping spreadsheet](downloads/NCTS-P5_Datamapping_R5_111023_v1.0.xlsx) (GitHub)
 - [Transit Manual Supplement](https://www.gov.uk/government/publications/transit-manual-supplement) - UK transit procedures (OpenDocument Text document)
+- [CTC Traders API v2.0 changelog](https://github.com/hmrc/common-transit-convention-traders/wiki/CTC-Traders-API-v2.0-changelog) (GitHub)
+- [CTC Traders API v2.1 changelog](https://github.com/hmrc/common-transit-convention-traders/wiki/CTC-Traders-API-v2.1-changelog) (GitHub)
 - [CTC Traders API v2.0 documentation](/api-documentation/docs/api/service/common-transit-convention-traders/2.0)
+- [CTC Traders API v2.1 documentation](/api-documentation/docs/api/service/common-transit-convention-traders/2.1)
 
 ## Changelog
 
