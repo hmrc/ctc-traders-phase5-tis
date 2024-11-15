@@ -14,8 +14,6 @@ Based on NCTS5 document version 5.15.2-v2.00 and issue date 1 December 2023
 
 ## NCTS5 key dates
 
-The following dates are subject to change. You should monitor this section regularly.
-
 | Event                                              | Date(s)                  |
 |----------------------------------------------------|--------------------------|
 | NCTS5 Transition period end date                   | 21 January 2025 00:00:00 |
@@ -196,9 +194,11 @@ Both example TADs are:
 
 ##### Post-Transition Period:
 
-- the NCTS5 post-transition period TAD/TLoI Template is available [here](/guides/ctc-traders-phase5-tis/downloads/Template_TAD_TLoI_Post-Transition_Period_v1.21.xlsx)
+**Note** The example NCTS5 post-transition period TAD/TLOI will not include the safety and security (S&S) details.
 
-- the NTCS5 post-transition period TAD Correlation Data spreadsheet is available [here](/guides/ctc-traders-phase5-tis/downloads/Correlation_Table_TAD_and_TLoI_V1.2_Post-Transition.xlsx)
+- the NCTS5 post-transition period TAD/TLoI Template is available [here](/guides/ctc-traders-phase5-tis/downloads/Template_TAD_TLoI_Post-Transition_Period_v1.4.xlsx)
+
+- the NCTS5 post-transition period TAD Correlation Data spreadsheet is available [here](/guides/ctc-traders-phase5-tis/downloads/Correlation_Table_TAD_and_TLoI_V2.4_Post-Transition.xlsx)
 
 ### UK moving to NCTS5 - Final state
 
