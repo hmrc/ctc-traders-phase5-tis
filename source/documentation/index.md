@@ -203,11 +203,34 @@ Both example TADs are:
 ### UK moving to NCTS5 - Final state
 
 Following the launch of the UK NCTS5 (final state) service (see [NCTS5 key dates](#ncts5-key-dates)), a period will follow where:
+
 - The NCTS5 service (API v2.0) will continue running ONLY to manage in-flight declarations submitted before the go-live date.
-- The NCTS5 service (API v2.1) will handle all new final state transit declarations submitted from the go-live date onwards."
+
+- The NCTS5 service (API v2.1) will handle all new final state transit declarations submitted from the go-live date onwards.
 
 
 ### Transition period
+
+The **transition period** (refer to NCTS5 key dates) is the phase during which countries 
+progressively switch to operating **NCTS5**. This period will continue until all participating 
+countries have fully transitioned to **NCTS5** operations.
+
+Currently, NCTS operations remain in the transition period. During this time, countries operating **NCTS5** 
+are doing so in **transitional mode**, which ensures backwards compatibility with **NCTS4**. This mode facilitates 
+message exchanges between NCTS4 and NCTS5 countries via an **upgrade/downgrade converter** in the common domain. 
+This converter allows messages to be exchanged at the country-to-country level, for actions such as notifying the 
+destination country when a movement is released or informing the departure country when a movement arrives.
+
+**The NCTS5 transition phase went live during the summer of this year.**
+
+To maintain compatibility during the transition, specific rules 
+and conditions have been established to restrict or prevent the 
+use of new data fields and certain functionality unique to NCTS5. 
+These restrictions ensure that NCTS5 messages can be downgraded 
+to NCTS4 format until all countries complete their transition to NCTS5.
+
+
+
 
 The transition period (see [NCTS5 key dates](#ncts5-key-dates)) is the period of time during which countries may switch to operating NCTS5 at any point and will run until all countries have switched to operating NCTS5. NCTS operations are currently considered to be in the transition period.
 
@@ -219,10 +242,10 @@ To ensure backwards compatibility with NCTS4 during transition, special rules an
 
 The prefixes for these rules and conditions are as follows.
 
-| Rule prefix | Description |
-| ----------- | ----------- |
-| B | Restrictive business rules effective during transitional period. |
-| E | Restrictive technical rules effective during transitional period. |
+| Rule prefix | Description                                                       |
+|-------------|-------------------------------------------------------------------|
+| B           | Restrictive business rules effective during transitional period.  |
+| E           | Restrictive technical rules effective during transitional period. |
 
 During the transition period, NCTS will observe and apply these business ([Rules B](/guides/ctc-traders-phase5-tis/documentation/rules-b.html)) and technical ([Rules E](/guides/ctc-traders-phase5-tis/documentation/rules-e.html)) rules as defined in this document.
 
@@ -305,14 +328,14 @@ The following table lists the documents for CTC Traders API v2.1 and outlines th
             <td><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/common-transit-convention-traders/2.0/oas/page">CTC Traders API v2.0 reference</a></td>
             <td>Technical</td>
             <td>Low level</td>
-            <td>How to use each API endpoint for P5 Transition phase</td>
+            <td>How to use each API endpoint for P5 Transition state</td>
             <td><p>Software developers</p> <p>Technical architects</p></td>
         </tr>
         <tr>
-            <td><a href="https://developer.qa.tax.service.gov.uk/api-documentation/docs/api/service/common-transit-convention-traders/2.1/oas/page">CTC Traders API v2.1 reference</a></td>
+            <td><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/common-transit-convention-traders/2.1/oas/page">CTC Traders API v2.1 reference</a></td>
             <td>Technical</td>
             <td>Low level</td>
-            <td>How to use each API endpoint for P5 Transition phase</td>
+            <td>How to use each API endpoint for P5 Final state</td>
             <td><p>Software developers</p> <p>Technical architects</p></td>
         </tr>
         <tr>
@@ -327,13 +350,13 @@ The following table lists the documents for CTC Traders API v2.1 and outlines th
 
 The order in you which you might read these documents can depend on whether you have previous NCTS experience. The following table recommends 2 possible reading orders but you can read the documents in any order you want.
 
-| Suggested reading order | New NCTS users | Existing NCTS5 users     |
-| --- | --- |-------------------------------|
-| 1 | Roadmap | Service guide                 |
-| 2 | Service guide | Technical interface specification |
-| 3 | Technical interface specification | Reference                     |
-| 4 | Reference | Testing guide                 |
-| 5 | Testing guide | Roadmap                       |
+| Suggested reading order | New NCTS users                    | Existing NCTS5 users              |
+|-------------------------|-----------------------------------|-----------------------------------|
+| 1                       | Roadmap                           | Service guide                     |
+| 2                       | Service guide                     | Technical interface specification |
+| 3                       | Technical interface specification | Reference                         |
+| 4                       | Reference                         | Testing guide                     |
+| 5                       | Testing guide                     | Roadmap                           |
 
 **Note:** It is crucial to thoroughly read both the NCTS5 service guide and the API reference documentation to gain a full understanding of NCTS5. Relying solely on the NCTS5 technical interface specification will not provide sufficient guidance for implementation.
 
