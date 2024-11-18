@@ -195,7 +195,7 @@ The following error codes can be returned by the NCTS.
 
 ## Accessing the XML schemas
 
-The XML schemas are available on [GitHub](https://github.com/hmrc/transit-movements-validator/tree/main/conf/xsd).
+The XML schemas are available on [GitHub](https://github.com/hmrc/transit-movements-validator/tree/main/conf/v2_1/xsd).
 
 You can view the XML schema for a particular message type as follows:
 
