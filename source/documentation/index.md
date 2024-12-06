@@ -200,12 +200,15 @@ Both example TADs are:
 
 - the NCTS5 post-transition period TAD Correlation Data spreadsheet is available [here](/guides/ctc-traders-phase5-tis/downloads/Correlation_Table_TAD_and_TLoI_V2.4_Post-Transition.xlsx)
 
+- the NCTS5 post-transition period [example TAD](/guides/ctc-traders-phase5-tis/downloads/Post-Transition_Example_TAD-populated.pdf)(PDF) generated from the example [IE029 message](/guides/ctc-traders-phase5-tis/downloads/Post-Transition_IE029_TAD.xml)(XML).
+
+
 ### UK moving to NCTS5 - Final state
 
 Following the launch of the UK NCTS5 (final state) service (see [NCTS5 key dates](#ncts5-key-dates)), a period will follow where:
 
 - The NCTS5 service (API v2.0) will continue running ONLY to manage in-flight declarations submitted before the go-live date.
-
+ 
 - The NCTS5 service (API v2.1) will handle all new final state transit declarations submitted from the go-live date onwards.
 
 
