@@ -194,8 +194,6 @@ Both example TADs are:
 
 ##### Post-Transition Period:
 
-**Note** The example NCTS5 post-transition period TAD/TLOI will not include the safety and security (S&S) details. The example TADs will be published as and when it is available.
-
 - the NCTS5 post-transition period TAD/TLoI Template is available [here](/guides/ctc-traders-phase5-tis/downloads/Template_TAD_TLoI_Post-Transition_Period_v1.4.xlsx)
 
 - the NCTS5 post-transition period TAD Correlation Data spreadsheet is available [here](/guides/ctc-traders-phase5-tis/downloads/Correlation_Table_TAD_and_TLoI_V2.4_Post-Transition.xlsx)
