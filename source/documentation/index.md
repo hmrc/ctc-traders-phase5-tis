@@ -369,7 +369,3 @@ The order in you which you might read these documents can depend on whether you 
 - [CTC Traders API v2.1 changelog](https://github.com/hmrc/common-transit-convention-traders/wiki/CTC-Traders-API-v2.1-changelog) (GitHub)
 - [CTC Traders API v2.0 documentation](/api-documentation/docs/api/service/common-transit-convention-traders/2.0)
 - [CTC Traders API v2.1 documentation](/api-documentation/docs/api/service/common-transit-convention-traders/2.1)
-
-## Changelog
-
-You can find the changelog in the [ctc-traders-phase5-tis](https://github.com/hmrc/ctc-traders-phase5-tis/wiki/NCTS-Phase-5-Technical-Interface-Specification-(TIS)-changelog) GitHub wiki.
