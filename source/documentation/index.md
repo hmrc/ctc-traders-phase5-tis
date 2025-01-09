@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # NCTS Phase 5 Technical Interface Specification
 
-Version 19.0 issued on 15 November 2024
+Version 19.3 issued on 02 January 2025
 
 Based on NCTS5 document version 5.15.2-v2.00 and issue date 1 December 2023
 
@@ -194,18 +194,19 @@ Both example TADs are:
 
 ##### Post-Transition Period:
 
-**Note** The example NCTS5 post-transition period TAD/TLOI will not include the safety and security (S&S) details. The example TADs will be published as and when it is available.
-
 - the NCTS5 post-transition period TAD/TLoI Template is available [here](/guides/ctc-traders-phase5-tis/downloads/Template_TAD_TLoI_Post-Transition_Period_v1.4.xlsx)
 
 - the NCTS5 post-transition period TAD Correlation Data spreadsheet is available [here](/guides/ctc-traders-phase5-tis/downloads/Correlation_Table_TAD_and_TLoI_V2.4_Post-Transition.xlsx)
+
+- the NCTS5 post-transition period [example TAD](/guides/ctc-traders-phase5-tis/downloads/Post-Transition_Example_TAD-populated.pdf)(PDF) generated from the example [IE029 message](/guides/ctc-traders-phase5-tis/downloads/Post-Transition_IE029_TAD.xml)(XML).
+
 
 ### UK moving to NCTS5 - Final state
 
 Following the launch of the UK NCTS5 (final state) service (see [NCTS5 key dates](#ncts5-key-dates)), a period will follow where:
 
 - The NCTS5 service (API v2.0) will continue running ONLY to manage in-flight declarations submitted before the go-live date.
-
+ 
 - The NCTS5 service (API v2.1) will handle all new final state transit declarations submitted from the go-live date onwards.
 
 
