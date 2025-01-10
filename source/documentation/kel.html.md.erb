@@ -1,0 +1,238 @@
+---
+title: Known error logs | NCTS Phase 5 Technical Interface Specification
+weight: 12
+description: Software developers, designers, product owners or business analysts. Learn about the processes involved in the exchange of messages between traders and phase 5 of the NCTS at departure and arrival of transit movements, and about the definitions, formats and validations of those messages.
+---
+
+# Known error logs
+
+## General
+
+### Export MRN / Previous Documents
+
+<table cellspacing="0">
+<tr>
+<th>
+   Impact
+  </th>
+<th>
+   Background
+  </th>
+<th>
+   Workaround
+  </th>
+</tr>
+<tr>
+<td>
+<p class="s3">
+Using document type 'N830' in the Previous Document data group at any declaration level restricts the Office of Destination options to only those which also function as an 'Office of Exit' (from the customs territory of the EU).
+</p>
+</td>
+<td>
+<p class="s3">
+The TAXUD EU Export Followed by Transit process for goods being exported from the customs territory of the union is triggered by provision of document type N830 in the Previous Document data group at any declaration level. From January 21st 2025, post TPendDate (final state), the N830 code can only be provided at House Consignment level. The code N830 shoud only be used at the House Consignment level in the Previous Documents/Type data element if intending to indirectly export goods from XI. Identified as an issue in July 2024.
+</p>
+</td>
+<td>
+<p class="s3">
+The UK requirement for provision of the Export MRN in the Transit declaration does not necessitate that document type 'N830' be used. Instead, please use either Previous Document Type 'NMRN' or Supporting Document Type 'NZZZ'. These should be provided at the appropriate declaration level according to condition G0825.
+</p>
+
+<p class="s3">
+Unfortunately, at House Consignment level, only N830 will be an applicable document type post TPendDate (final state)  -
+and so House Consignment level, Supporting Document type NZZZ, or another declaration level must be used to provide the
+UK Export MRN. To avoid possible delays in locating the Export MRN on the transit declaration, we advise that it is
+given at the highest applicale declaration level (according to G0825) wherever possible.
+</p>
+</td>
+</tr>
+</table>
+
+
+## System
+
+### BST
+
+<table cellspacing="0">
+<tr>
+<th>
+   Impact
+  </th>
+<th>
+   Background
+  </th>
+<th>
+   Workaround
+  </th>
+</tr>
+<tr>
+<td>
+<p class="s3">Unloading Remarks are blocked between 00:01 and 01:00 during BST. </p>
+</td>
+<td>
+<p class="s3">NCTS is aligned with Co-ordinated Universal Time (UTC) which is one hour behind BST. Due ot this, any unloading remarks completed between 00:01 and 01:00 during BST are blocked, as they are considered by the NCTS service to be made in the future.</p>
+</td>
+<td>
+<p class="s3">*Please Note: This issue will be resolved 21st of January 2025 alongside the change to Final State rules (TPendDate)</p>
+
+<p class="s3">Enter the previous day’s date when entering unloading remarks between the hours of 00:01 and 01:00.</p>
+
+<p class="s3">This workaround should be disabled on the day from 02:00 when the UK reverts back to Greenwich Mean time which will naturally align with UTC.</p>
+</p>
+</td>
+</tr>
+</table>
+
+## Transitional Rules
+
+### B1890/R0855
+
+<table cellspacing="0">
+<tr>
+<th>
+   Impact
+  </th>
+<th>
+   Background
+  </th>
+<th>
+   Workaround
+  </th>
+</tr>
+<tr>
+<td>
+<p class="s3">If B1890 (R0855 in final state) is not followed as described in the NCTS5 Technical Interface Specification, the NCTS will still release the transit without rejection. However, the movement could fail at subsequent offices of transit or destination in other national administrations.</p>
+</td>
+<td>
+<p class="s3">Due to a TAXUD reported error with the NCTS specification, B1890 is to be disabled by all administrations until it and R0855 can be modified. The two rules (one during transition, one in final state) render it impossible to submit a declaration with Departure Transport Means greater than 1x, unless an appropriate Inland Mode of Transport has been declared. This is contrary to Taxud's instruction that Departure Transport Means should be declarable over 1x even if Inland Mode of Transport is not declared. Unfortunately, as the rules B1890 and R0855 appear to still be active in other National Administrations, they must be followed when submitting declarations in the UK to avoid rejections at the office of transit and destination. </p>
+</td>
+<td>
+<p class="s3">To avoid errors caused by this rule please either follow the rule as defined in the TIS (unmodified from the Taxud specification), or, even if inappropriate to the logistics of the declaration provide an Inland Mode of Transport type 3 (Road) to ensure that Departure Transport Means multiplicity (up to 3x) may be used for all declarations. This has been agreed by TAXUD as acceptable until the rules are modified and Inland Mode of Transport is not essential for Departure Transport Means multiplicity. </p>
+</td>
+</tr>
+</table>
+
+### B1892
+
+<table cellspacing="0">
+<tr>
+<th>
+   Impact
+  </th>
+<th>
+   Background
+  </th>
+<th>
+   Workaround
+  </th>
+</tr>
+<tr>
+<td>
+<p class="s3">Two data elements in data group: 'departure transport means' which are: 'type' and 'identification' are optional in IE015 but mandatory in IE029. This conflict means that the goods won’t be released for transit if they are not provided in the IE015.</p>
+</td>
+<td>
+<p class="s3">Due to a misalignment in the technical specification for NCTS, the IE015 and IE029 messages contain these contradictions. During the transition period, where the rules B1892 and B1897 are applicable, we have previously advised workarounds in column D. Note these will no longer be required from January 21st 2025 (TPendDate). </p>
+</td>
+<td>
+<p class="s3">During the Transition Period (until TPendDate):</p>
+
+<p class="s3">Ensure data elements 'Type' and 'Identification' are considered 'R' (required) during the transition period in the Departure Means of Transport data group. These must be provided.</p>
+
+<p class="s3">Post TPendDate:</p>
+
+<p class="s3">The data elements are considered R by default and the B rule B1892 is no longer applicable. (See B2101 for post TPendDate requirements).</p>
+</td>
+</tr>
+</table>
+
+### B1897
+
+<table cellspacing="0">
+<tr>
+<th>
+   Impact
+  </th>
+<th>
+   Background
+  </th>
+<th>
+   Workaround
+  </th>
+</tr>
+<tr>
+<td>
+<p class="s3">When the user selects ‘rail’ as their 'inland mode of transport', the 'nationality' for the 'departure transport means' cannot be supplied in the IE015 due to condition B1897, but the data element is mandatory in IE029. This conflict means that the goods won’t be released for transit if the data element Nationality is not provided in the departure transport means data group in the IE015; ad the declaration will be rejected if it is included when inland mode of tranpsort is type 2 (rail).</p>
+</td>
+<td>
+<p class="s3">Due to a misalignment in the technical specification for NCTS, the IE015 and IE029 messages contain these contradictions. During the transition period, where the rules B1892 and B1897 are applicable, we have previously advised the workarounds in column D. Note these will no longer be required from January 21st 2025 (TPendDate).
+</p>
+</td>
+<td>
+<p class="s3">During the Transition Period (until TPendDate):</p>
+
+<p class="s3">Ensure Nationality data element in Departure Transport Means data group is provided.</p>
+
+<p class="s3">When Inland mode of Transport is type 2 (Rail), instead, omit the Inland Mode of Transport data element to ensure Nationality data element in Departure Transport Means data group can be provided.</p>
+
+<p class="s3">Post TPendDate:</p>
+
+<p class="s3">The data element Departure Means of Transport: Nationality is considered R by default and the B rule B1897 is no longer applicable. (See B2101 for post TPendDate requirements)</p>
+</td>
+</tr>
+</table>
+
+## Pre Lodgement
+
+### C0807
+
+<table cellspacing="0">
+<tr>
+<th>
+   Impact
+  </th>
+<th>
+   Background
+  </th>
+<th>
+   Workaround
+  </th>
+</tr>
+<tr>
+<td>
+<p class="s3">Active Border Transport Means must be provided in the IE170 if it is required according to C0807; it cannot be sourced from the IE015 or IE013 by the UK NCTS. Failure to provide the data group will result in IE056 rejection of the IE170.</p>
+</td>
+<td>
+<p class="s3">Rule C0807 originally specified that Active Border Transport means; when required; could exist in either the IE015, IE013, or IE170. This functionality has not been implemented to the UK NCTS due to possible complications when other data is changed in the IE170.</p>
+</td>
+<td>
+<p class="s3">The definition of C0807 has been modified in the TIS to reflect this position. The Active Border Transport Means data group; if required in the IE170, must be provided in the IE170 regardless of whether it has been provided previously in the IE015 or IE013.</p>
+</td>
+</tr>
+</table>
+
+### C0404
+
+<table cellspacing="0">
+<tr>
+<th>
+   Impact
+  </th>
+<th>
+   Background
+  </th>
+<th>
+   Workaround
+  </th>
+</tr>
+<tr>
+<td>
+<p class="s3">Consignment - Place of Loading must be provided in the IE170 in all pre-lodged (additional declaration type D) declarations. It cannot be sourced from the IE015 or IE013 by the UK NCTS. Failure to provide the data element will presently result in movement release, but failure at the office of transit and destination.</p>
+</td>
+<td>
+<p class="s3">Rule C0404 originally specified that Consignment - Place of Loading could exist in either the IE015, IE013, or IE170. This functionality has not been implemented to the UK NCTS.</p>
+</td>
+<td>
+<p class="s3">The definition of C0404 has been modified in the TIS to reflect this position. The data element, Consignmnet - Place of Loading, must be provided in the IE170 in all instances, regardless of it being provided in a previous IE015 or IE013. If the data element is not provided, currently no IE056 will be produced to prevent the declaration from being released. If it is released, the electronic process will not function at the office of transit or destination. This behaviour will be altered in the near future so that failing to provide the data element in the IE170 will result in an IE056 rejection citing rule C0404.</p>
+</td>
+</tr>
+</table>
