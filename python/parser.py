@@ -16,6 +16,7 @@
 import hmrc_exceptions
 from data_types import MessageField, MessageCategory, Rule
 from typing import Optional, Iterator
+from message_reference import expected_message_references
 import re
 from PyPDF2 import PdfReader
 
@@ -36,6 +37,7 @@ def find_pages(reader: PdfReader, expected_message_types: list[str]) -> tuple[li
         page = reader.pages[x]
         text = page.extract_text()
         match = re.search(regex, text)
+
         if match is not None and match.group(1) != current_message_type:
             # We found a header that refers to a message type that is not the current one (e.g. IE001 to IE002)
             # We start the scan from this page for the new type, and we now have the range for the previous message type
@@ -157,9 +159,28 @@ def read_message(reader: PdfReader, start: int, end: int, message_type: str) -> 
 
 
 def read_and_transform(reader: PdfReader, start: int, end: int, message_type: str) -> list[MessageCategory]:
-    categories: list[MessageCategory] = read_message(reader, start, end, message_type)
+    valid_references = expected_message_references()
+    actual_start, actual_end = extract_reference_pages(reader, start, end, message_type, valid_references)
+    categories: list[MessageCategory] = read_message(reader, actual_start, actual_end, message_type)
     hmrc_exceptions.message_category_transformation(message_type, categories)
     return categories
+
+def extract_reference_pages(reader: PdfReader, start, end, message_type, valid_references) -> (int, int):
+    actual_start = 0
+    actual_end = end
+
+    for page in range(start, end):
+        for line in reader.pages[page].extract_text().splitlines():
+            r = ".*" + message_type + ".*\\(([A-Z]{2}[0-9]{3}[A-Z]{1})\\).*"
+            matched = re.match(r, line)
+            if matched:
+                reference = matched.group(1)
+                if reference in valid_references:
+                    actual_start = page
+                else:
+                    if (actual_start != 0):
+                        actual_end = page -1
+    return actual_start, actual_end
 
 
 def extract_rules(reader: PdfReader, start_page: int) -> dict[str, list[Rule]]:

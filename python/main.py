@@ -73,6 +73,11 @@ expected_rules = ["B", "C", "E", "G", "R", "S"]
 entries, rules_start_page = find_pages(pdf_reader, expected_message_types)
 
 transformed_entries: dict[str, list[MessageCategory]] = dict()
+
+print(entries)
+print(rules_start_page)
+
+
 rule_set: set[str] = set()
 for e in entries:
     # Here, we're getting the rules associated with data groups and items
