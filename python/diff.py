@@ -41,7 +41,6 @@ def get_data_from_pdf(filename: str) -> tuple[dict[str, list[MessageCategory]], 
 
     message_type_data: dict[str, list[MessageCategory]] = {}
     for e in entries:
-        print(e)
         message_type_data[e[0]] = read_and_transform(pdf_reader, e[1], e[2], e[0])
 
     extracted_rules = extract_rules(pdf_reader, rules_start_page)

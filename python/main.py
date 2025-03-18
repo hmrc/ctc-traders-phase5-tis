@@ -27,6 +27,7 @@ from PyPDF2 import PdfReader
 import code_lists
 from parser import find_pages, read_and_transform, extract_rules
 from data_types import MessageCategory, MessageField, Rule
+from message_reference import expected_message_types
 import render
 import sys
 import re
@@ -40,31 +41,7 @@ else:
 print(f"Reading PDF from {pdf_file_name}")
 pdf_reader = PdfReader(pdf_file_name)
 
-expected_message_types = [
-    "IE004",
-    "IE007",
-    "IE009",
-    "IE013",
-    "IE014",
-    "IE015",
-    "IE019",
-    "IE022",
-    "IE025",
-    "IE028",
-    "IE029",
-    "IE035",
-    "IE043",
-    "IE044",
-    "IE045",
-    "IE051",
-    "IE055",
-    "IE056",
-    "IE057",
-    "IE060",
-    "IE170",
-    "IE182",
-    "IE928"
-]
+expected_message_types = expected_message_types()
 
 # There are also T rules, but we don't publish them
 expected_rules = ["B", "C", "E", "G", "R", "S"]
@@ -73,10 +50,6 @@ expected_rules = ["B", "C", "E", "G", "R", "S"]
 entries, rules_start_page = find_pages(pdf_reader, expected_message_types)
 
 transformed_entries: dict[str, list[MessageCategory]] = dict()
-
-print(entries)
-print(rules_start_page)
-
 
 rule_set: set[str] = set()
 for e in entries:
