@@ -1,0 +1,25 @@
+Code,Message,Reference
+IE004,Amendment Acceptance,CC004C
+IE009,Invalidation Decision,CC009C
+IE019,Discrepancies,CC019C
+IE022,Notification To Amend Declaration,CC022C
+IE025,Goods Release Notification,CC025C
+IE028,MRN Allocated,CC028C
+IE029,Release For Transit,CC029C
+IE035,Recovery Notification,CC035C
+IE043,Unloading Permission,CC043C
+IE045,Write-Off Notification,CC045C
+IE051,No Release For Transit,CC051C
+IE055,Guarantee Not Valid,CC055C
+IE056,Rejection From Office Of Departure,CC056C
+IE057,Rejection From Office Of Destination,CC057C
+IE060,Control Decision Notification,CC060C
+IE182,Forwarded Incident Notification To ED,CC182C
+IE928,Positive Acknowledge,CC928C
+IE007,Arrival Notification,CC007C
+IE013,Declaration Amendment,CC013C
+IE014,Declaration Invalidation Request,CC014C
+IE015,Declaration Data,CC015C
+IE044,Unloading Remarks,CC044C
+IE141,Information About Non-Arrived Movement,CC141C
+IE170,Presentation Notification For The Pre-Lodged Declaration,CC170C

@@ -21,34 +21,11 @@ from parser import find_pages, read_and_transform, extract_rules
 from PyPDF2 import PdfReader
 import sys
 from os.path import abspath, expanduser
+from message_reference import expected_message_types
 from deepdiff import DeepDiff
 from typing import Optional
 
-expected_message_types = [
-    "IE004",
-    "IE007",
-    "IE009",
-    "IE013",
-    "IE014",
-    "IE015",
-    "IE019",
-    "IE022",
-    "IE025",
-    "IE028",
-    "IE029",
-    "IE035",
-    "IE043",
-    "IE044",
-    "IE045",
-    "IE051",
-    "IE055",
-    "IE056",
-    "IE057",
-    "IE060",
-    "IE170",
-    "IE182",
-    "IE928"
-]
+expected_message_types = expected_message_types()
 
 if len(sys.argv) != 3:
     print("Expected two arguments -- 'python ./diff.py <old file> <new file>'")
