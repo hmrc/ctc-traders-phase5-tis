@@ -25,40 +25,38 @@ Message type details are as follows:
 
 Some message types are sent by the NCTS while other message types are sent by traders.
 
-**Note:** The 'Status' column in each table indicates whether a message type is new in NCTS5, or new to the United Kingdom (UK) in NCTS5, or upgraded from NCTS4 to NCTS5.
-
 ### Messages from the NCTS
 
-| Code  | Message | Status |
-| ----- | ------- | ------ |
-| IE004 | Amendment Acceptance | New to UK in NCTS5 |
-| IE009 | Invalidation Decision | NCTS4 to NCTS5 upgrade |
-| IE019 | Discrepancies | New to UK in NCTS5 |
-| IE022 | Notification To Amend Declaration | New in NCTS5 (out of scope until after 2 December 2024) |
-| IE025 | Goods Release Notification | NCTS4 to NCTS5 upgrade |
-| IE028 | MRN Allocated | NCTS4 to NCTS5 upgrade |
-| IE029 | Release For Transit | NCTS4 to NCTS5 upgrade |
-| IE035 | Recovery Notification | New to UK in NCTS5 |
-| IE043 | Unloading Permission | NCTS4 to NCTS5 upgrade |
-| IE045 | Write-Off Notification | NCTS4 to NCTS5 upgrade |
-| IE051 | No Release For Transit | NCTS4 to NCTS5 upgrade |
-| IE055 | Guarantee Not Valid | NCTS4 to NCTS5 upgrade |
-| IE056 | Rejection From Office Of Departure    | New in NCTS5 |
-| IE057 | Rejection From Office Of Destination  | New in NCTS5 |
-| IE060 | Control Decision Notification | NCTS4 to NCTS5 upgrade |
-| IE182 | Forwarded Incident Notification To ED | New in NCTS5 |
-| IE928 | Positive Acknowledge | NCTS4 to NCTS5 upgrade |
+| Code  | Message                               |
+|-------|---------------------------------------|
+| IE004 | Amendment Acceptance                  |
+| IE009 | Invalidation Decision                 |
+| IE019 | Discrepancies                         |
+| IE022 | Notification To Amend Declaration     |
+| IE025 | Goods Release Notification            |
+| IE028 | MRN Allocated                         |
+| IE029 | Release For Transit                   |
+| IE035 | Recovery Notification                 |
+| IE043 | Unloading Permission                  |
+| IE045 | Write-Off Notification                |
+| IE051 | No Release For Transit                |
+| IE055 | Guarantee Not Valid                   |
+| IE056 | Rejection From Office Of Departure    |
+| IE057 | Rejection From Office Of Destination  |
+| IE060 | Control Decision Notification         |
+| IE182 | Forwarded Incident Notification To ED |
+| IE928 | Positive Acknowledge                  |
 
 ### Messages from traders
 
-| Code  | Message | Status |
-| ----- | ------- | ------ |
-| IE007 | Arrival Notification | NCTS4 to NCTS5 upgrade |
-| IE013 | Declaration Amendment | New to UK in NCTS5 |
-| IE014 | Declaration Invalidation Request | NCTS4 to NCTS5 upgrade |
-| IE015 | Declaration Data | NCTS4 to NCTS5 upgrade |
-| IE044 | Unloading Remarks | NCTS4 to NCTS5 upgrade |
-| IE170 | Presentation Notification For The Pre-Lodged Declaration | New in NCTS5 |
+| Code  | Message                                                  |
+|-------|----------------------------------------------------------|
+| IE007 | Arrival Notification                                     |
+| IE013 | Declaration Amendment                                    |
+| IE014 | Declaration Invalidation Request                         |
+| IE015 | Declaration Data                                         |
+| IE044 | Unloading Remarks                                        |
+| IE170 | Presentation Notification For The Pre-Lodged Declaration |
 
 ## Accessing the XML schemas
 

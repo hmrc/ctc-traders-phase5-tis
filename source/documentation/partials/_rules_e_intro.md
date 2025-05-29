@@ -2,7 +2,6 @@ These rules are the technical rules that will be used for the transition period.
 
 During the transition period:
 
-- the NCTS4 service will continue running to deal with in-flight transit declarations submitted before the go-live of the UK NCTS5 service
 - the NCTS5 service will handle all new declarations
 - technical rules **with** Transitional Period (TP) measures will be applied to the following message types: 
   - 'Arrival Notification' E_ARR_NOT (IE007)
