@@ -68,13 +68,6 @@ The following table lists the documents for CTC Traders API v2.1 and outlines th
             <td><p>Software developers</p> <p>Technical architects</p></td>
         </tr>
         <tr>
-            <td><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/common-transit-convention-traders/2.0/oas/page">CTC Traders API v2.0 reference</a></td>
-            <td>Technical</td>
-            <td>Low level</td>
-            <td>How to use each API endpoint for P5 Transition state</td>
-            <td><p>Software developers</p> <p>Technical architects</p></td>
-        </tr>
-        <tr>
             <td><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/common-transit-convention-traders/2.1/oas/page">CTC Traders API v2.1 reference</a></td>
             <td>Technical</td>
             <td>Low level</td>
