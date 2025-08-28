@@ -1,0 +1,110 @@
+---
+title: UK Specific Rules | NCTS Phase 5 Technical Interface Specification
+weight: 6
+description: Software developers, designers, product owners or business analysts. Learn about the processes involved in the exchange of messages between traders and phase 5 of the NCTS at departure and arrival of transit movements, and about the definitions, formats and validations of those messages.
+---
+
+# UK Specific Rules
+
+## GB001
+
+Transit movements involving goods which are being **xported** from GB or XI must be
+associated with an Export Declaration MRN made to **CDS - Customs Declaration Service.**
+
+This **Export Declaration MRN** should be referenced in the Transit Declaration at the most
+appropriate declaration level: Consignment, House Consignment, or Consignment Item, in
+either the **'Previous Document'** or **'Supporting Document'** data groups.
+
+If using the Previous Document data group, the **Type** data element derived from **CL214**
+(Previous Document Type) should be **NMRN** - Declaration/Notification MRN, or an
+established alternative which does not confuse the nature of the previous document in
+countries of destination.
+
+If using the Supporting Document data group, the **Type** data element derived from **CL213**
+(Supporting Document Type) should be **NZZZ** - Document equivalent to ‘ZZZ’ defined in
+Commission Delegated Regulation (EU) 2016/341 (Appendix D2: Additional codes for the
+computerised transit system).
+
+Use of these codes is part of a workaround to bypass the actual export declaration MRN
+reference **N830** (Goods declaration for exportation) which, due to overlap with specific AES
+(Automated Export System) functionality, cannot currently be used for goods exported from
+the UK moving via transit without restricting the Office of Destination able to be declared to
+only those which double as an EU **Office of Exit** (a customs office at the border of the EU
+which handles EU Export Declarations).
+
+If your intended Office of Destination for the transit procedure, is, an office of exit - Previous
+Document reference N830 may be used without issue.
+
+When AES functionality is established in XI - N830 may be used for transit movements
+containing EU export goods departing from an XI (Northern Ireland) Office of Departure and
+will be necessary to ensure proper interaction between NCTS and AES on outbound EU
+export goods.
+
+## GB002
+
+From TPendDate for NCTS phase 6: **01/09/2025**, Transit Declaration IE015 **Security-Type**
+cannot include ENS data.
+
+Data group - **Transit Operation**, data element -- **Security**, values from CL217 (Declaration
+Type Security) should be restricted to only values 0 (not used for safety and security
+purposes) and 2 (EXS - Exit Summary Declaration data).
+Values 1 (ENS - Entry Summary Declaration data) and 3 (Combined EXS &amp; ENS) include ENS
+data and are no longer allowable as they may confound the correct processes for **NCTS 6
+opt-in** countries receiving declarations containing these values.
+
+This is a temporary measure - the options will be removed from the codelist (or a new
+codelist used instead) as we approach NCTS 6 operations in the future. There will be a rule
+validation in place shortly after 01/09/2025 to reject IE015s which do not consider the
+above and are submitted with Security Type 1 or 3, more information will follow.
+
+## XI001
+
+Transit movements involving goods which are being **exported** from GB or XI must be
+associated with an Export Declaration MRN made to **CDS - Customs Declaration Service.**
+
+This **Export Declaration MRN** should be referenced in the Transit Declaration at the most
+appropriate declaration level: Consignment, House Consignment, or Consignment Item, in
+either the **'Previous Document'** or **'Supporting Document'** data groups.
+
+If using the Previous Document data group, the **Type** data element derived from **CL214**
+(Previous Document Type) should be **NMRN** - Declaration/Notification MRN, or an
+established alternative which does not confuse the nature of the previous document in
+countries of destination.
+
+If using the Supporting Document data group, the **Type** data element derived from **CL213**
+(Supporting Document Type) should be **NZZZ** - Document equivalent to ‘ZZZ’ defined in
+Commission Delegated Regulation (EU) 2016/341 (Appendix D2: Additional codes for the
+computerised transit system).
+
+Use of these codes is part of a workaround to bypass the actual export declaration MRN
+reference **N830** (Goods declaration for exportation) which, due to overlap with specific AES
+(Automated Export System) functionality, cannot currently be used for goods exported from
+the UK moving via transit without restricting the Office of Destination able to be declared to
+only those which double as an EU **Office of Exit** (a customs office at the border of the EU
+which handles EU Export Declarations).
+
+If your intended Office of Destination for the transit procedure, is, an office of exit - Previous
+Document reference N830 may be used without issue.
+
+When AES functionality is established in XI - N830 may be used for transit movements
+containing EU export goods departing from an XI (Northern Ireland) Office of Departure and
+will be necessary to ensure proper interaction between NCTS and AES on outbound EU
+export goods.
+
+## XI002
+
+From TPendDate for NCTS phase 6: **01/09/2025**, Transit Declaration IE015 **Security-Type**
+cannot include ENS data.
+
+Data group - **Transit Operation**, data element -- **Security**, values from CL217 (Declaration
+Type Security) should be restricted to only values 0 (not used for safety and security
+purposes) and 2 (EXS - Exit Summary Declaration data).
+
+Values 1 (ENS - Entry Summary Declaration data) and 3 (Combined EXS &amp; ENS) include ENS
+data and are no longer allowable as they may confound the correct processes for **NCTS 6
+opt-in** countries receiving declarations containing these values.
+
+This is a temporary measure - the options will be removed from the codelist (or a new
+codelist used instead) as we approach NCTS 6 operations in the future. There will be a rule
+validation in place shortly after 01/09/2025 to reject IE015s which do not consider the
+above and are submitted with Security Type 1 or 3, more information will follow.
