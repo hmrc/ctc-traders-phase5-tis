@@ -3,15 +3,15 @@ import sbt._
 
 object AppDependencies {
 
-  val bootStrapPlayVersion = "10.1.0"
+  lazy val bootStrapPlayVersion = "10.4.0"
 
-  val compile = Seq(
+  lazy val compile: Seq[ModuleID] = Seq(
     ws,
     "uk.gov.hmrc" %% "bootstrap-frontend-play-30" % bootStrapPlayVersion)
 
-  val test = Seq(
-    "org.scalatest"       %% "scalatest"              % "3.2.11"             % "test",
-    "com.vladsch.flexmark" % "flexmark-all"           % "0.62.2"             % "test",
+  lazy val test: Seq[ModuleID] = Seq(
+    "org.scalatest"       %% "scalatest"              % "3.2.19"             % "test",
+    "com.vladsch.flexmark" % "flexmark-all"           % "0.64.8"             % "test",
     "uk.gov.hmrc"         %% "bootstrap-test-play-30" % bootStrapPlayVersion % "test"
   )
 }

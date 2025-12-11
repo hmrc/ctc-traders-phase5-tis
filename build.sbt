@@ -14,6 +14,3 @@ lazy val microservice = Project(appName, file("."))
       "-Wconf:msg=Flag.*repeatedly:s"
     )
   )
-  .settings(
-    resolvers += Resolver.jcenterRepo
-  )
